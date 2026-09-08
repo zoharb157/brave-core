@@ -4,6 +4,7 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
+import("//build/buildflag_header.gni")
 if (is_mac) {
   import("//build/config/mac/rules.gni")
   import("//build/util/branding.gni")
@@ -14,6 +15,28 @@ if (is_win) {
 }
 
 assert(enable_brave_vpn_v2_apps)
+
+vpn_agent_executable_name = "brave_vpn_agent_app"
+if (is_mac) {
+  vpn_agent_product_full_name = "$chrome_product_full_name VPN Agent"
+  vpn_agent_bundle_id = "$chrome_mac_bundle_id.vpn.agent"
+}
+
+buildflag_header("branding_buildflags") {
+  header = "branding_buildflags.h"
+  if (is_mac) {
+    flags = [ "VPN_AGENT_APP_NAME=\"$vpn_agent_product_full_name.app\"" ]
+  } else if (is_win) {
+    flags = [ "VPN_AGENT_EXE_NAME=\"$vpn_agent_executable_name.exe\"" ]
+  } else {
+    flags = [ "VPN_AGENT_EXE_NAME=\"$vpn_agent_executable_name\"" ]
+  }
+
+  visibility = [
+    ":*",
+    "//brave/components/brave_vpn/browser/v2/agent:*",
+  ]
+}
 
 source_set("core") {
   sources = [
@@ -73,12 +96,12 @@ source_set("core") {
 if (is_win) {
   process_version_rc_template("version_resources") {
     sources = [ "win/agent.ver" ]
-    output = "$target_gen_dir/brave_vpn_agent_app.rc"
+    output = "$target_gen_dir/$vpn_agent_executable_name.rc"
   }
 }
 
 executable("agent") {
-  output_name = "brave_vpn_agent_app"
+  output_name = vpn_agent_executable_name
 
   configs += [ "//build/config/compiler:wexit_time_destructors" ]
   sources = [ "main.cc" ]
