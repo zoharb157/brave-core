@@ -34,6 +34,7 @@ class BraveAccountUIIOS
   using BraveAccountUIBase::BindInterface;
 
   // brave_account::mojom::DialogController:
+  void GetDialogMode(GetDialogModeCallback callback) override;
   void CloseDialog() override;
 
   void BindInterface(

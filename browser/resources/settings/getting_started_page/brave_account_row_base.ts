@@ -8,7 +8,7 @@ import { CrLitElement } from '//resources/lit/v3_0/lit.rollup.js'
 import { I18nMixinLit } from '//resources/cr_elements/i18n_mixin_lit.js'
 
 import { BraveAccountBrowserProxy } from './brave_account_browser_proxy.js'
-import { VerificationIntent } from '../brave_account.mojom-webui.js'
+import { DialogMode, VerificationIntent } from '../brave_account.mojom-webui.js'
 import { showError, showSuccess } from '../brave_account_shared.js'
 
 // Shared by the logged-out and logged-in rows, which differ only in their
@@ -64,8 +64,18 @@ export abstract class BraveAccountRowBaseElement<
       this.makeVerificationIntent(this.state.verification.intent))
   }
 
+  // Bound directly to `@click` in the row templates, so it must take no
+  // meaningful first argument: the handler receives a `MouseEvent`.
   protected openBraveAccountDialog() {
-    this.browserProxy.rowHandler.openDialog(this.initiatingServiceName)
+    this.openDialog(DialogMode.kDefault)
+  }
+
+  protected openAccountDeletionDialog() {
+    this.openDialog(DialogMode.kAccountDeletion)
+  }
+
+  private openDialog(mode: DialogMode) {
+    this.browserProxy.rowHandler.openDialog(this.initiatingServiceName, mode)
   }
 
 }

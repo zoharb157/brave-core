@@ -9,6 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "brave/components/password_strength_meter/password_strength_meter.mojom.h"
+#include "brave/ios/browser/ui/webui/brave_account/dialog_mode_holder.h"
 #include "ios/chrome/browser/shared/model/profile/profile_ios.h"
 #include "ios/web/public/web_state.h"
 #include "ios/web/public/webui/web_ui_ios.h"
@@ -26,6 +27,13 @@ BraveAccountUIIOS::~BraveAccountUIIOS() {
   RemoveInterface<brave_account::mojom::Authentication>();
   RemoveInterface<brave_account::mojom::DialogController>();
   RemoveInterface<password_strength_meter::mojom::PasswordStrengthMeter>();
+}
+
+void BraveAccountUIIOS::GetDialogMode(GetDialogModeCallback callback) {
+  auto* holder =
+      brave_account::DialogModeHolder::FromWebState(web_ui()->GetWebState());
+  std::move(callback).Run(holder ? holder->mode()
+                                 : brave_account::mojom::DialogMode::kDefault);
 }
 
 void BraveAccountUIIOS::CloseDialog() {

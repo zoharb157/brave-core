@@ -235,7 +235,24 @@ interface Authentication {
     => result<GetServiceTokenResult, GetServiceTokenError>;
 };
 
+// What the page was opened to do. Not derivable from account state: account
+// deletion is reachable from the same logged-in state as everything else, so
+// the host has to say which surface the user came from.
+//
+// The mode travels as host state attached to the page's WebContents/WebState
+// before navigation, not as a query parameter, because it is a command rather
+// than a property of the address. `initiating-service-name` stays in the URL
+// precisely because it *is* a property of the navigation - a page can link to
+// it (see brave_account_constants.h).
+enum DialogMode {
+  kDefault,
+  kAccountDeletion,
+};
+
 // Interface for controlling the Brave Account dialog.
 interface DialogController {
   CloseDialog();
+  // The mode this page was opened in. Resolved once, before the page
+  // subscribes to account state.
+  GetDialogMode() => (DialogMode dialog_mode);
 };

@@ -6,6 +6,7 @@
 import {
   AccountState,
   AccountStateFieldTags,
+  DialogMode,
   VerificationIntent,
   whichAccountState,
 } from './brave_account.mojom-webui.js'
@@ -44,6 +45,7 @@ export type Dialog =
   | { type: 'ENTRY' | 'PASSWORD_RESET' | 'SIGN_IN' }
   | { type: 'OTP'; intent: VerificationIntent }
   | { type: 'CREDENTIALS'; verification?: CredentialsVerification }
+  | { type: 'ACCOUNT_DELETION' }
 
 export class BraveAccountDialogsElement extends CrLitElement {
   static get is() {
@@ -75,6 +77,9 @@ export class BraveAccountDialogsElement extends CrLitElement {
   private browserProxy: BraveAccountBrowserProxy =
     BraveAccountBrowserProxyImpl.getInstance()
 
+  // Requested once, at construction, and awaited by the state handler below.
+  private dialogMode: Promise<DialogMode> = this.browserProxy.getDialogMode()
+
   protected accessor dialog: Dialog | undefined = undefined
   protected accessor isCapsLockOn: boolean = false
 
@@ -92,6 +97,16 @@ export class BraveAccountDialogsElement extends CrLitElement {
     // </if>
 
     // Handle account state changes.
+    //
+    // Registered synchronously: `BraveAccountBrowserProxyImpl`'s constructor
+    // already called `addObserver()`, so the reply carrying the current state
+    // is in flight by now. Awaiting anything before this would let that first
+    // reply arrive unlistened and be dropped, leaving the page blank.
+    //
+    // `kAccountDeletion` mode is handled on its own, ahead of the mapping
+    // below: such a page only ever shows the deletion dialog, so the mapping
+    // never has to know the mode exists.
+    //
     // LOGGED_OUT (no verification): show the ENTRY dialog
     // LOGGED_OUT (with verification, email not yet verified): show OTP
     // LOGGED_OUT (with verification, email verified): show CREDENTIALS
@@ -103,7 +118,19 @@ export class BraveAccountDialogsElement extends CrLitElement {
     // across all tabs.
     this.accountStateListenerId =
       this.browserProxy.authenticationObserverCallbackRouter.onAccountStateChanged.addListener(
-        (state: AccountState) => {
+        async (state: AccountState) => {
+          if ((await this.dialogMode) === DialogMode.kAccountDeletion) {
+            if (
+              whichAccountState(state) === AccountStateFieldTags.LOGGED_IN
+              && !state.loggedIn!.verification
+            ) {
+              this.dialog = { type: 'ACCOUNT_DELETION' }
+            } else {
+              this.onCloseDialog()
+            }
+            return
+          }
+
           switch (whichAccountState(state)) {
             case AccountStateFieldTags.LOGGED_OUT: {
               const verification = state.loggedOut!.verification
