@@ -402,10 +402,12 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     }
   }
 
-  private func openBraveAccountDialog() {
+  private func openBraveAccountDialog(mode: BraveAccount.DialogMode = .default) {
     let controller = ChromeWebUIController(braveCore: braveCore, isPrivateBrowsing: false)
     let container = UINavigationController(rootViewController: controller)
     controller.title = L10nUtils.string(messageId: .BRAVE_ACCOUNT_TITLE)
+    // Set before loading: the page reads it back via `DialogController`.
+    controller.webView.braveAccountDialogMode = mode
     controller.webView.load(URLRequest(url: URL(string: "brave://account")!))
     controller.navigationItem.rightBarButtonItem = .doneButton { [unowned container] in
       container.dismiss(animated: true)
@@ -562,6 +564,20 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
               cellClass: BraveAccountIconCell.self,
               context: [
                 BraveAccountIconCell.textColor: view.tintColor
+              ]
+            ),
+            Row(
+              text: L10nUtils.string(
+                messageId: .SETTINGS_BRAVE_ACCOUNT_DELETE_ACCOUNT_BUTTON_LABEL
+              ),
+              selection: { [unowned self] in
+                openBraveAccountDialog(mode: .accountDeletion)
+              },
+              cellClass: BraveAccountIconCell.self,
+              context: [
+                BraveAccountIconCell.textColor: UIColor(
+                  braveSystemName: .systemfeedbackErrorText
+                )
               ]
             ),
           ],
