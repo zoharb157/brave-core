@@ -25,18 +25,23 @@ import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.content.ContextCompat;
 
 import org.chromium.base.IntentUtils;
+import org.chromium.brave_account.mojom.DialogMode;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveSwipeRefreshHandler;
 import org.chromium.chrome.browser.IntentHandler;
 import org.chromium.chrome.browser.SwipeRefreshHandler;
+import org.chromium.chrome.browser.brave_account.BraveAccountDialogMode;
 import org.chromium.chrome.browser.tab.Tab;
+import org.chromium.content_public.browser.WebContents;
 import org.chromium.ui.base.PageTransition;
 import org.chromium.ui.util.ColorUtils;
 
 @NullMarked
 public class BraveAccountCustomTabActivity extends CustomTabActivity {
     private static final int HORIZONTAL_MARGIN_DP = 12;
+    private static final String EXTRA_DIALOG_MODE =
+            "org.chromium.chrome.browser.customtabs.BRAVE_ACCOUNT_DIALOG_MODE";
 
     @Override
     public void performPostInflationStartup() {
@@ -44,6 +49,17 @@ public class BraveAccountCustomTabActivity extends CustomTabActivity {
 
         Tab tab = getActivityTab();
         assert tab != null;
+
+        // Runs before finishNativeInitialization() loads the URL, so the mode is
+        // in place before the page can ask for it.
+        WebContents webContents = tab.getWebContents();
+        if (webContents != null) {
+            BraveAccountDialogMode.set(
+                    webContents,
+                    IntentUtils.safeGetIntExtra(
+                            getIntent(), EXTRA_DIALOG_MODE, DialogMode.DEFAULT));
+        }
+
         // Due to bytecode manipulation, SwipeRefreshHandler instances
         // are actually BraveSwipeRefreshHandler at runtime.
         BraveSwipeRefreshHandler handler = (BraveSwipeRefreshHandler) SwipeRefreshHandler.get(tab);
@@ -101,8 +117,13 @@ public class BraveAccountCustomTabActivity extends CustomTabActivity {
     }
 
     public static void show(Activity activity) {
+        show(activity, DialogMode.DEFAULT);
+    }
+
+    public static void show(Activity activity, @DialogMode.EnumType int mode) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("brave://account"));
         intent.setClassName(activity, BraveAccountCustomTabActivity.class.getName());
+        intent.putExtra(EXTRA_DIALOG_MODE, mode);
         intent.putExtra(Browser.EXTRA_APPLICATION_ID, activity.getPackageName());
         intent.putExtra(
                 CustomTabsIntent.EXTRA_COLOR_SCHEME,
