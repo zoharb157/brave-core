@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/ui/browser_commands.cc b/chrome/browser/ui/browser_commands.cc
-index 24dd8897dfefe61b3b8893b4b0228cb61e86236a..30021fc869bd1b5096b064b0cd5e739d763f6052 100644
+index bd8bbbcd744bc5e307e1e48783cace3e0b1b913a..a052f54f4c59beef1e834ff704b778c14bc5072e 100644
 --- a/chrome/browser/ui/browser_commands.cc
 +++ b/chrome/browser/ui/browser_commands.cc
 @@ -495,7 +495,12 @@ void MoveTabsToWindowImpl(BrowserWindowInterface* source,

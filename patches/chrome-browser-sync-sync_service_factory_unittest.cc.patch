@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/sync/sync_service_factory_unittest.cc b/chrome/browser/sync/sync_service_factory_unittest.cc
-index ef4981b24a3613003f64bfbcb714a2ea2557341a..2312b978e5433026378b21a887b1af1eb8026860 100644
+index 8879e919ed4e05092007b06d7f77e26a52e875cd..fc4e2d0dc79abb5e97a98bc39c0705a5adb5a84d 100644
 --- a/chrome/browser/sync/sync_service_factory_unittest.cc
 +++ b/chrome/browser/sync/sync_service_factory_unittest.cc
 @@ -118,7 +118,7 @@ class SyncServiceFactoryTest : public testing::Test {

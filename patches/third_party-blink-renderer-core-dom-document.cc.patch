@@ -1,8 +1,8 @@
 diff --git a/third_party/blink/renderer/core/dom/document.cc b/third_party/blink/renderer/core/dom/document.cc
-index 75eb3217dd706a8898e4f8cd35a1d69b7e352e02..54d8ccbc220476e34d38ba0c4127e7d55414efe0 100644
+index 98ca018e11556ed2eb1dddef76195411866afbd2..27c7ada0ce2f95bcf5b0bf7a27318b6393dd8b40 100644
 --- a/third_party/blink/renderer/core/dom/document.cc
 +++ b/third_party/blink/renderer/core/dom/document.cc
-@@ -7684,6 +7684,7 @@ KURL Document::CompleteURLWithOverride(
+@@ -7702,6 +7702,7 @@ KURL Document::CompleteURLWithOverride(
    if (result.IsEmpty()) {
      result = Encoding().IsValid() ? KURL(base_url_override, url, Encoding())
                                    : KURL(base_url_override, url);
