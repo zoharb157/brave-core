@@ -37,7 +37,7 @@ BravePsstDialogUI::BravePsstDialogUI(content::WebUI* web_ui)
   source->AddLocalizedStrings(webui::kPsstStrings);
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::ImgSrc,
-      "img-src 'self' chrome://favicon2;");
+      "img-src 'self' chrome://resources chrome://favicon2;");
 
   Profile* profile = Profile::FromWebUI(web_ui);
   content::URLDataSource::Add(
