@@ -4,6 +4,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
+import Shared
 import Foundation
 import Preferences
 
@@ -11,6 +12,7 @@ extension PrefService {
   /// Whether or not the Brave News feature in general is available to use and the UI should display
   /// buttons/settings for it.
   public var isBraveNewsAvailable: Bool {
+    guard ScoutFeatures.braveNews else { return false }
     // The feature is only unavailable when disabled by policy
     let isDisabledByPolicy =
       isManagedPreference(forPath: kBraveNewsDisabledByPolicyPrefName)

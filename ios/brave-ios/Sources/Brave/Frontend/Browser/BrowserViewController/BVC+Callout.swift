@@ -232,8 +232,8 @@ extension BrowserViewController {
   func presentVPNInAppEventCallout() {
     // If the onboarding has not completed or VPN is not available we do not show any promo screens.
     // This will most likely be the case for users who have not installed the app yet.
-    if profileController.profile.prefs.isBraveVPNAvailable,
-      Preferences.Onboarding.basicOnboardingCompleted.value != OnboardingState.completed.rawValue
+    if !profileController.profile.prefs.isBraveVPNAvailable
+      || Preferences.Onboarding.basicOnboardingCompleted.value != OnboardingState.completed.rawValue
     {
       return
     }

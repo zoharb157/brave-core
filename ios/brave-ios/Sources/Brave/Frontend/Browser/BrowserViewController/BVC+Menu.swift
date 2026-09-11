@@ -503,7 +503,7 @@ extension BrowserViewController {
         }
       )
     }
-    if AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs) {
+    if AIChatUtils.isEnabledInScout(for: profileController.profile.prefs) {
       actions.append(
         .init(
           id: .braveLeo,

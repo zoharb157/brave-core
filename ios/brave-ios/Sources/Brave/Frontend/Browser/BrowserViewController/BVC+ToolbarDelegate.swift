@@ -353,7 +353,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       privateBrowsingManager: privateBrowsingManager,
       speechRecognizer: speechRecognizer,
       isAIChatAvailable: !isPrivate && Preferences.AIChat.leoInQuickSearchBarEnabled.value
-        && AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs),
+        && AIChatUtils.isEnabledInScout(for: profileController.profile.prefs),
       isPlaylistAvailable: profileController.profile.prefs.isPlaylistAvailable,
       searchDelegate: self,
       delegate: self,

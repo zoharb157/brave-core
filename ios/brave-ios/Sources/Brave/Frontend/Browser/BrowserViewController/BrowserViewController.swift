@@ -3347,6 +3347,9 @@ extension BrowserViewController {
 
 extension BrowserViewController {
   func openBraveLeo(with query: String? = nil) {
+    // Scout doesn't ship AI Chat: ignore deep links/shortcuts silently rather
+    // than showing an alert that names a feature the user never saw.
+    guard ScoutFeatures.aiChat else { return }
     if !AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs) {
       let alert = UIAlertController(
         title: Strings.AIChat.leoDisabledMessageTitle,

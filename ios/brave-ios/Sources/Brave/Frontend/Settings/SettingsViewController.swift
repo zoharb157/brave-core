@@ -877,7 +877,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     }
 
     if !tabManager.privateBrowsingManager.isPrivateBrowsing
-      && AIChatUtils.isAIChatEnabled(for: braveCore.profile.prefs)
+      && AIChatUtils.isEnabledInScout(for: braveCore.profile.prefs)
     {
       section.rows.append(leoSettingsRow)
     }

@@ -40,7 +40,7 @@ public enum ScoutInterstitial {
         chipText = type == .block ? "NOT SAFE" : "CAUTION"
         title = v.title
         summary = v.summary
-        reasons = v.reasons
+        reasons = v.reasons.compactMap(sentenceCased)
       } else {
         // Shouldn't happen (a .security reason implies a verdict was
         // resolved), but fall back to the offline copy rather than blank text.
@@ -319,4 +319,12 @@ public enum ScoutInterstitial {
   }
   """
 
+}
+
+/// The service's reasons are model-written and inconsistently cased
+/// ("common phishing tactics"); show each as a sentence, and drop empties.
+private func sentenceCased(_ reason: String) -> String? {
+  let trimmed = reason.trimmingCharacters(in: .whitespacesAndNewlines)
+  guard let first = trimmed.first else { return nil }
+  return first.uppercased() + trimmed.dropFirst()
 }

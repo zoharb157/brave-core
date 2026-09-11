@@ -4,6 +4,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
+import Shared
 import Foundation
 import Preferences
 
@@ -11,6 +12,7 @@ extension PrefService {
   /// Whether or not the Brave VPN feature in general is available to use and the UI should display
   /// buttons/settings for it.
   public var isBraveVPNAvailable: Bool {
+    guard ScoutFeatures.vpn else { return false }
     // Right now this feature is always available unless its managed/forced by policy
     let isDisabledByPolicy =
       isManagedPreference(forPath: kManagedBraveVPNDisabledPrefName)

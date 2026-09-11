@@ -8,16 +8,22 @@ public struct NetworkSafetyTransport: SafetyTransport {
     self.endpoint = endpoint; self.session = session
   }
 
-  public func send(_ url: URL, timeout: TimeInterval) async -> CheckResult {
+  /// `audience: general` asks the service for copy addressed to the user
+  /// themselves. The default (`kids`) is the Kid Safe app's parent framing.
+  func request(for url: URL, timeout: TimeInterval) -> URLRequest {
     var request = URLRequest(url: endpoint)
     request.httpMethod = "POST"
     request.timeoutInterval = timeout
     request.setValue("kid-safe", forHTTPHeaderField: "x-app-id")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     request.httpBody = try? JSONSerialization.data(
-      withJSONObject: ["url": url.absoluteString])
+      withJSONObject: ["url": url.absoluteString, "audience": "general"])
+    return request
+  }
+
+  public func send(_ url: URL, timeout: TimeInterval) async -> CheckResult {
     do {
-      let (data, response) = try await session.data(for: request)
+      let (data, response) = try await session.data(for: request(for: url, timeout: timeout))
       guard let http = response as? HTTPURLResponse, http.statusCode == 200,
             let verdict = Verdict.parse(data) else {
         return CheckResult(status: .error, verdict: nil)

@@ -37,7 +37,7 @@ extension WidgetShortcut {
     if !isWalletAvailable {
       options.remove(.wallet)
     }
-    if !AIChatUtils.isAIChatEnabled(for: prefs) {
+    if !AIChatUtils.isEnabledInScout(for: prefs) {
       options.remove(.braveLeo)
       options.remove(.braveLeoVoiceInput)
     }
@@ -60,7 +60,7 @@ extension WidgetShortcut {
     if !isWalletAvailable {
       disabled.insert(.wallet)
     }
-    if !AIChatUtils.isAIChatEnabled(for: prefs) {
+    if !AIChatUtils.isEnabledInScout(for: prefs) {
       disabled.insert(.braveLeo)
       disabled.insert(.braveLeoVoiceInput)
     }
