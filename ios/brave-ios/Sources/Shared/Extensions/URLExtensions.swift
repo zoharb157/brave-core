@@ -354,6 +354,8 @@ public struct InternalURL {
     case blocked
     case httpBlocked = "http-blocked"
     case basicAuth = "basic-auth"
+    /// Scout's checking and block pages (`internal://local/scout?url=<site>`).
+    case scout
 
     func matches(_ string: String) -> Bool {
       return string.range(
@@ -411,6 +413,10 @@ public struct InternalURL {
 
   public var isHTTPBlockedPage: Bool {
     return InternalURL.Path.httpBlocked.matches(url.path)
+  }
+
+  public var isScoutPage: Bool {
+    return InternalURL.Path.scout.matches(url.path)
   }
 
   public var isReaderModePage: Bool {

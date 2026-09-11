@@ -24,15 +24,6 @@ extension TabDataValues {
   }
 }
 
-/// The generated pages post to a fixed channel name; rewrite it to the script
-/// handler's real (UUID-suffixed) name so the buttons reach native.
-@MainActor
-private func channelled(_ html: String) -> String {
-  html.replacingOccurrences(
-    of: "webkit.messageHandlers.scout",
-    with: "webkit.messageHandlers.\(ScoutScriptHandler.messageHandlerName)")
-}
-
 @MainActor
 public class ScoutTabHelper: TabPolicyDecider {
   weak var tab: (any TabState)?
@@ -76,32 +67,38 @@ public class ScoutTabHelper: TabPolicyDecider {
       return .allow
     }
 
-    let host = requestURL.host ?? requestURL.absoluteString
     let services = ScoutServices.shared
 
     // Known already (policy list or cached verdict): no checking page at all.
     if let decision = services.guard_.decideImmediately(requestURL) {
       if decision.type == .allow { return .allow }
-      showResult(decision, for: requestURL, host: host, in: tab)
+      ScoutPages.record(decision, for: requestURL)
+      showScoutPage(for: requestURL, in: tab)
       return .cancel
     }
 
     // The service fetches and AI-analyses the page, which takes seconds. Show
-    // that work rather than freezing the tab and then producing a verdict out
-    // of nowhere: cancel now, show the checking page, and resolve when the
-    // decision lands.
-    tab.loadHTMLString(channelled(ScoutInterstitial.checkingHTML(host: host)), baseURL: nil)
+    // that work rather than freezing the tab: cancel, show the checking page,
+    // and resolve when the decision lands.
+    ScoutPages.beginCheck(requestURL)
+    showScoutPage(for: requestURL, in: tab)
 
     Task { @MainActor [weak self, weak tab] in
       let decision = await services.guard_.decide(requestURL)
-      guard let self, let tab else { return }
+      ScoutPages.record(decision, for: requestURL)
+      // Only act if the tab is still showing this site's checking page; if the
+      // user has moved on, the recorded decision just waits in the cache.
+      guard let self, let tab, ScoutPages.siteURL(fromPageURL: tab.visibleURL) == requestURL
+      else { return }
 
       if decision.type == .allow {
         approvedURL = requestURL
-        tab.loadRequest(URLRequest(url: requestURL))
-        return
+        replaceCheckingPage(with: requestURL, in: tab)
+      } else {
+        // Same URL as the checking page, so it replaces it in history; the
+        // page handler now serves the recorded result.
+        showScoutPage(for: requestURL, in: tab)
       }
-      showResult(decision, for: requestURL, host: host, in: tab)
     }
     return .cancel
   }
@@ -109,32 +106,23 @@ public class ScoutTabHelper: TabPolicyDecider {
   /// One-shot pass for the navigation this helper re-issues after an allow.
   private var approvedURL: URL?
 
-  private func showResult(_ decision: Scout.Decision, for url: URL, host: String, in tab: some TabState) {
-    let matched = decision.verdict?.categories
-      .intersection(ScoutServices.shared.policy.blockedCategories) ?? []
-    let html = ScoutInterstitial.html(
-      type: decision.type,
-      verdict: decision.verdict,
-      reason: decision.reason,
-      matchedCategories: matched,
-      host: host)
-    ScoutInterstitialState.shared.record(blockedURL: url, in: tab)
-    tab.loadHTMLString(channelled(html), baseURL: nil)
+  private func showScoutPage(for siteURL: URL, in tab: some TabState) {
+    guard let request = ScoutPages.pageRequest(for: siteURL) else { return }
+    tab.loadRequest(request)
+  }
+
+  /// Hand the allowed site over in place of the checking page, so Back skips
+  /// the checking page.
+  private func replaceCheckingPage(with siteURL: URL, in tab: some TabState) {
+    guard
+      let data = try? JSONSerialization.data(
+        withJSONObject: siteURL.absoluteString, options: .fragmentsAllowed),
+      let literal = String(data: data, encoding: .utf8)
+    else {
+      tab.loadRequest(URLRequest(url: siteURL))
+      return
+    }
+    tab.evaluateJavaScriptUnsafe("location.replace(\(literal))")
   }
 }
 
-/// Remembers which URL a tab's interstitial is standing in for, so "continue
-/// anyway" knows where to go. Keyed by tab identity and deliberately tiny.
-@MainActor
-public final class ScoutInterstitialState {
-  public static let shared = ScoutInterstitialState()
-  private var blocked: [ObjectIdentifier: URL] = [:]
-
-  public func record(blockedURL: URL, in tab: some TabState) {
-    blocked[ObjectIdentifier(tab)] = blockedURL
-  }
-
-  public func take(for tab: some TabState) -> URL? {
-    blocked.removeValue(forKey: ObjectIdentifier(tab))
-  }
-}

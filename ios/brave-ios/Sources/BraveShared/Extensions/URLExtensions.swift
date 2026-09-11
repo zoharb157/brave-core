@@ -71,7 +71,7 @@ extension URL {
 
     if let internalUrl = InternalURL(self),
       internalUrl.isWeb3URL || internalUrl.isHTTPBlockedPage
-        || internalUrl.isBlockedPage
+        || internalUrl.isBlockedPage || internalUrl.isScoutPage
     {
       return internalUrl.extractedUrlParam?.displayURL
     }

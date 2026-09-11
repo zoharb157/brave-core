@@ -27,11 +27,16 @@ class ScoutScriptHandler: TabContentScript {
   ) {
     defer { replyHandler(nil, nil) }
 
-    guard let action = message.body as? String else { return }
+    // Only Scout's own pages may drive these actions, and the page's address
+    // names the site it stands in for.
+    guard let action = message.body as? String,
+      message.frameInfo.isMainFrame,
+      let siteURL = ScoutPages.siteURL(fromPageURL: message.frameInfo.request.url)
+    else { return }
 
     switch action {
     case "proceed":
-      proceed(tab: tab)
+      proceed(to: siteURL, tab: tab)
     case "back":
       goBack(tab: tab)
     default:
@@ -39,19 +44,17 @@ class ScoutScriptHandler: TabContentScript {
     }
   }
 
-  private func proceed(tab: some TabState) {
+  private func proceed(to siteURL: URL, tab: some TabState) {
     MainActor.assumeIsolated {
-      guard let url = ScoutInterstitialState.shared.take(for: tab) else { return }
-      if let etldP1 = url.baseDomain {
+      if let etldP1 = siteURL.baseDomain {
         tab.proceedAnywaysDomainList?.insert(etldP1)
       }
-      tab.loadRequest(URLRequest(url: url))
+      tab.loadRequest(URLRequest(url: siteURL))
     }
   }
 
   private func goBack(tab: some TabState) {
     MainActor.assumeIsolated {
-      _ = ScoutInterstitialState.shared.take(for: tab)
       if tab.canGoBack {
         tab.goBack()
       }

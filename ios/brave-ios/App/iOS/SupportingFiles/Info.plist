@@ -36,7 +36,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.brave.ios</string>
+			<string>$(MOZ_BUNDLE_ID)</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>http</string>
