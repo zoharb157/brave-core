@@ -67,7 +67,7 @@ public struct DefaultBrowserOnboardingStep: OnboardingStep {
     )
   }
   public func makeGraphic() -> some View {
-    DefaultBrowserGraphicView()
+    ScoutDefaultBrowserIllustration()
   }
   public func makeActions(continueHandler: @escaping () -> Void) -> some View {
     DefaultBrowserActions(continueHandler: continueHandler)

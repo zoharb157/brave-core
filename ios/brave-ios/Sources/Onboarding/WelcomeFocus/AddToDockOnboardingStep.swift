@@ -36,7 +36,7 @@ public struct AddToDockOnboardingStep: OnboardingStep {
     )
   }
   public func makeGraphic() -> some View {
-    AddToDockGraphicView()
+    ScoutAddToDockIllustration()
   }
   public func makeActions(continueHandler: @escaping () -> Void) -> some View {
     Button {

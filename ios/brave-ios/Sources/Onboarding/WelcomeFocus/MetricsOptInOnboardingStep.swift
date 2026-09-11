@@ -27,9 +27,7 @@ struct MetricsOptInGraphicsView: View {
   var body: some View {
     VStack(spacing: 0) {
       Spacer()
-      Image("focus-product-insight", bundle: .module)
-        .resizable()
-        .aspectRatio(contentMode: .fit)
+      ScoutInsightsIllustration()
         .frame(maxHeight: 250)
       Spacer()
       VStack(spacing: 16) {
@@ -88,8 +86,9 @@ struct MetricsOptInActionsView: View {
 
 public struct MetricsOptInOnboardingStep: OnboardingStep {
   @Observable class State {
-    var isCrashReportingEnabled: Bool = true
-    var isP3AEnabled: Bool = true
+    // Scout: off unless the user opts in — both report to Brave's servers.
+    var isCrashReportingEnabled: Bool = false
+    var isP3AEnabled: Bool = false
   }
   public var id: String = "metrics-opt-in"
   private var state: State = .init()
