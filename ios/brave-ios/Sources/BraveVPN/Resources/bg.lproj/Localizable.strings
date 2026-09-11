@@ -17,7 +17,7 @@
 "vpn.checkboxGeoLocation" = "Изберете вашето географско местоположение или държава";
 
 /* Text for a checkbox to present the user benefits for using Brave VPN */
-"vpn.checkboxNoIPLog" = "Brave никога не записва вашата активност.";
+"vpn.checkboxNoIPLog" = "Scout никога не записва вашата активност.";
 
 /* Text for a checkbox to present the user benefits for using Brave VPN */
 "vpn.checkboxProtectYourDevices" = "Защитете всяко приложение и цялото си устройство.";
@@ -44,7 +44,7 @@
 "vpn.contactFormCarrier" = "Мобилен оператор";
 
 /* Text to tell user to not modify support info below email's body. */
-"vpn.contactFormDoNotEditText" = "Brave не те следи и не знае как използваш приложението ни, така че не знаем как си настроил VPN. Моля, сподели информация за проблема, който си срещнал, и ще направим всичко възможно, за да го разрешим възможно най-скоро.";
+"vpn.contactFormDoNotEditText" = "Scout не те следи и не знае как използваш приложението ни, така че не знаем как си настроил VPN. Моля, сподели информация за проблема, който си срещнал, и ще направим всичко възможно, за да го разрешим възможно най-скоро.";
 
 /* Button name to send contact form. */
 "vpn.contactFormEmailNotConfiguredBody" = "Не може да се изпрати имейл. Моля, провери настройките на електронната си поща.";
@@ -101,7 +101,7 @@
 "vpn.contactFormTimezone" = "Часова зона на iOS";
 
 /* Title for contact form email. */
-"vpn.contactFormTitle" = "Проблем с Brave VPN";
+"vpn.contactFormTitle" = "Проблем с Scout VPN";
 
 /* Button text to enable Brave VPN */
 "vpn.enableButton" = "Активиране";
@@ -119,13 +119,13 @@
 "vpn.iapDisclaimer" = "Всички абонаменти се подновяват автоматично, но могат да бъдат отменени преди подновяването.";
 
 /* Text explaining how the VPN works. */
-"vpn.installProfileBody" = "Този профил позволява на VPN да се свързва автоматично и да защитава трафика на устройството ти през цялото време. VPN връзката ще бъде криптирана и насочена през интелигентната защитна стена на Brave, за да блокира потенциално вредни реклами и инавзивни връзки.";
+"vpn.installProfileBody" = "Този профил позволява на VPN да се свързва автоматично и да защитава трафика на устройството ти през цялото време. VPN връзката ще бъде криптирана и насочена през интелигентната защитна стена на Scout, за да блокира потенциално вредни реклами и инавзивни връзки.";
 
 /* Text for 'install vpn profile' button */
 "vpn.installProfileButtonText" = "Инсталиране на профил за VPN";
 
 /* No comment provided by engineer. */
-"vpn.installProfileTitle" = "Brave сега ще инсталира профил за VPN.";
+"vpn.installProfileTitle" = "Scout сега ще инсталира профил за VPN.";
 
 /* Popup that shows after user installs the vpn for the first time. */
 "vpn.installSuccessPopup" = "VPN вече е активирана";
@@ -149,7 +149,7 @@
 "vpn.multipleServerCountTitle" = "%ld сървъра";
 
 /* The text that briefly explains how Brave VPN subscription is going to be charged and managed. */
-"vpn.paywallDisclaimer" = "Абонаментите ще бъдат таксувани чрез вашия профил в Apple. Всяка неизползвана част от безплатния пробен период, ако такава е предложена, се губи, когато закупите абонамент.\n\nАбонаментът ви ще се поднови автоматично, освен ако не бъде анулиран поне 24 часа преди края на текущия период.\n\nМожете да управлявате своите абонаменти в Настройки.\\nИзползвайки Brave, вие се съгласявате с Условията за ползване и Политиката за поверителност.";
+"vpn.paywallDisclaimer" = "Абонаментите ще бъдат таксувани чрез вашия профил в Apple. Всяка неизползвана част от безплатния пробен период, ако такава е предложена, се губи, когато закупите абонамент.\n\nАбонаментът ви ще се поднови автоматично, освен ако не бъде анулиран поне 24 часа преди края на текущия период.\n\nМожете да управлявате своите абонаменти в Настройки.\\nИзползвайки Scout, вие се съгласявате с Условията за ползване и Политиката за поверителност.";
 
 /* The text which will be used to indicate period of payments like 10 / month */
 "vpn.paywallMonthlyPriceDividend" = "месец";
@@ -227,7 +227,7 @@
 "vpn.serverTitle" = "%ld сървър";
 
 /* VPN Banner Description */
-"vpn.settingHeaderBody" = "Защити всяко приложение с Brave VPN. Защити до 10 устройства с един план.";
+"vpn.settingHeaderBody" = "Защити всяко приложение с Scout VPN. Защити до 10 устройства с един план.";
 
 /* Button to contact tech support */
 "vpn.settingsContactSupport" = "Свързване с техническата поддръжка";
@@ -239,10 +239,10 @@
 "vpn.settingsFAQ" = "Поддръжка на VPN";
 
 /* Button to link your VPN receipt to other devices. */
-"vpn.settingsLinkReceipt" = "Свържете покупката с вашия акаунт в Brave";
+"vpn.settingsLinkReceipt" = "Свържете покупката с вашия акаунт в Scout";
 
 /* Footer text to link your VPN receipt to other devices. */
-"vpn.settingsLinkReceiptFooter" = "Свържи покупката си от App Store със своя акаунт в Brave, за да използваш Brave VPN на други устройства.";
+"vpn.settingsLinkReceiptFooter" = "Свържи покупката си от App Store със своя акаунт в Scout, за да използваш Scout VPN на други устройства.";
 
 /* Button to manage your VPN subscription */
 "vpn.settingsManageSubscription" = "Управление на абонамент";
@@ -293,10 +293,10 @@
 "vpn.vpnActionUpdatePaymentMethodSettingsText" = "Актуализиране на начина на плащане";
 
 /* Notification title to tell user that the vpn is turned on even in background */
-"vpn.vpnBackgroundNotificationBody" = "Brave ще продължи да те защитава дори във фонов режим.";
+"vpn.vpnBackgroundNotificationBody" = "Scout ще продължи да те защитава дори във фонов режим.";
 
 /* Notification title to tell user that the vpn is turned on even in background */
-"vpn.vpnBackgroundNotificationTitle" = "Brave VPN е ВКЛЮЧЕН";
+"vpn.vpnBackgroundNotificationTitle" = "Scout VPN е ВКЛЮЧЕН";
 
 /* Text for description of list item which chooses the optimal server for the country region */
 "vpn.vpnCityRegionOptimalDescription" = "Използвай най-добрия наличен сървър";
@@ -311,7 +311,7 @@
 "vpn.vpnConfigGenericErrorTitle" = "Грешка";
 
 /* Title for an alert when the user didn't allow to install VPN profile */
-"vpn.vpnConfigPermissionDeniedErrorBody" = "За да работи Brave VPN, трябва да имаш инсталиран VPN профил на устройството си. ";
+"vpn.vpnConfigPermissionDeniedErrorBody" = "За да работи Scout VPN, трябва да имаш инсталиран VPN профил на устройството си. ";
 
 /* Title for an alert when the user didn't allow to install VPN profile */
 "vpn.vpnConfigPermissionDeniedErrorTitle" = "Разрешението е отказано";
@@ -326,7 +326,7 @@
 "vpn.vpnErrorPurchaseFailedTitle" = "Грешка";
 
 /* Disclaimer for user purchasing the VPN plan. */
-"vpn.vpnIAPBoilerPlate" = "Абонаментите ще бъдат таксувани чрез вашия профил в iTunes. Всяка неизползвана част от безплатния пробен период, ако такава е предложена, се губи, когато закупите абонамент.\n\nАбонаментът ви ще се поднови автоматично, освен ако не бъде анулиран поне 24 часа преди края на текущия период.\n\nМожете да управлявате своите абонаменти в Настройки.\\nИзползвайки Brave, вие се съгласявате с Условията за ползване и Политиката за поверителност.";
+"vpn.vpnIAPBoilerPlate" = "Абонаментите ще бъдат таксувани чрез вашия профил в iTunes. Всяка неизползвана част от безплатния пробен период, ако такава е предложена, се губи, когато закупите абонамент.\n\nАбонаментът ви ще се поднови автоматично, освен ако не бъде анулиран поне 24 часа преди края на текущия период.\n\nМожете да управлявате своите абонаменти в Настройки.\\nИзползвайки Scout, вие се съгласявате с Условията за ползване и Политиката за поверителност.";
 
 /* The title shown on the menu when the VPN connection is disconnected */
 "vpn.vpnOffMenuButtonTitle" = "VPN е изключен";
@@ -341,7 +341,7 @@
 "vpn.vpnRegionChangedTitle" = "Регионът на VPN е променен";
 
 /* Message for alert to reset vpn configuration */
-"vpn.vpnResetAlertBody" = "Това ще възстанови конфигурацията на Brave VPN и ще поправи всички грешки. Този процес може да отнеме около минута.";
+"vpn.vpnResetAlertBody" = "Това ще възстанови конфигурацията на Scout VPN и ще поправи всички грешки. Този процес може да отнеме около минута.";
 
 /* Title for alert to reset vpn configuration */
 "vpn.vpnResetAlertTitle" = "Нулиране на конфигурацията";

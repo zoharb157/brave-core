@@ -1,5 +1,5 @@
 /* The description for the error message when the user's session has expired */
-"aichat.accountSessionExpiredDescription" = "Sesi akaun Brave anda telah tamat tempoh. Sila lawati halaman akaun anda untuk memuatkan semula, kemudian kembali untuk menggunakan ciri premium.";
+"aichat.accountSessionExpiredDescription" = "Sesi akaun Scout anda telah tamat tempoh. Sila lawati halaman akaun anda untuk memuatkan semula, kemudian kembali untuk menggunakan ciri premium.";
 
 /* The title for button that submits feedback */
 "aichat.addFeedbackActionTitle" = "Tambah Maklum Balas";
@@ -14,10 +14,10 @@
 "aichat.advancedSettingsHeaderTitle" = "Leo ialah pembantu pintar dikuasakan AI, dibina terus dalam pelayar.";
 
 /* The subtitle for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Pautkan pembelian App Store anda pada akaun Brave anda untuk menggunakan Leo pada peranti lain.";
+"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Pautkan pembelian App Store anda pada akaun Scout anda untuk menggunakan Leo pada peranti lain.";
 
 /* The title for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionTitle" = "Pautkan pembelian ke akaun Brave anda";
+"aichat.advancedSettingsLinkPurchaseActionTitle" = "Pautkan pembelian ke akaun Scout anda";
 
 /* The description for the settings to show Leo in Quick Search Engines Bar. */
 "aichat.advancedSettingsShowInQSEBarDescription" = "Bolehkan jalan pintas untuk lancarkan Leo dari ruang enjin carian pantas.";
@@ -59,7 +59,7 @@
 "aichat.byomEmptyStateTitle" = "Anda belum menyambungkan model";
 
 /* The section header description explaining the Bring Your Own Model feature with a link to learn more. The text inside square brackets should be translated. */
-"aichat.byomSectionHeaderDescription" = "Sambungkan LLM yang dihos sendiri atau dihos pihak ketiga ke Leo dan gunakannya dalam penyemak imbas. Gunakan sebarang rangka kerja yang serasi dengan Protokol Sembang OpenAI seperti Ollama. [Ketahui lebih lanjut](https://support.brave.app/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo)";
+"aichat.byomSectionHeaderDescription" = "Sambungkan LLM yang dihos sendiri atau dihos pihak ketiga ke Leo dan gunakannya dalam penyemak imbas. Gunakan sebarang rangka kerja yang serasi dengan Protokol Sembang OpenAI seperti Ollama. [Ketahui lebih lanjut](https://zaatar-scout.fly.dev/support)";
 
 /* The section header title for the Bring Your Own Model feature */
 "aichat.byomSectionHeaderTitle" = "Bawa Model Anda Sendiri";
@@ -71,7 +71,7 @@
 "aichat.chatIntroJustTalkTitle" = "Hanya mahu bersembang?";
 
 /* The subtitle for intro view */
-"aichat.chatIntroSubTitle" = "Pembantu pintar dikuasakan AI, dibina terus dalam Brave.";
+"aichat.chatIntroSubTitle" = "Pembantu pintar dikuasakan AI, dibina terus dalam Scout.";
 
 /* The title for intro view */
 "aichat.chatIntroTitle" = "Hai, saya Leo!";
@@ -137,7 +137,7 @@
 "aichat.customModelFormLabelFieldTitle" = "Label";
 
 /* The error message shown when trying to use a private network address, explaining why it's blocked and how to enable it */
-"aichat.customModelFormPrivateEndpointErrorMessage" = "Alamat yang anda masukkan kelihatan berasal dari rangkaian persendirian—seperti penolak anda atau pelayan tempatan. Brave menyekat ini secara automatik untuk menjaga keselamatan anda, tetapi anda boleh mengaktifkannya jika anda yakin ia selamat.\n\nUntuk meneruskan, lawati brave://flags/, cari \"brave-ai-chat-allow-private-ips,\" dan aktifkan ciri ini. Setelah diaktifkan, anda boleh menggunakan alamat rangkaian persendirian dalam tetapan Leo.";
+"aichat.customModelFormPrivateEndpointErrorMessage" = "Alamat yang anda masukkan kelihatan berasal dari rangkaian persendirian—seperti penolak anda atau pelayan tempatan. Scout menyekat ini secara automatik untuk menjaga keselamatan anda, tetapi anda boleh mengaktifkannya jika anda yakin ia selamat. Setelah diaktifkan, anda boleh menggunakan alamat rangkaian persendirian dalam tetapan Leo.";
 
 /* The footer text explaining what the model request name is used for and providing an example */
 "aichat.customModelFormRequestNameFieldFooter" = "Nama model sebagaimana yang sepatutnya dipaparkan dalam permintaan kepada rangka kerja penyediaan, contohnya, phi-3 (harap maklum bahawa jika nama ini tidak betul-betul sepadan dengan nama yang dijangkakan oleh rangka kerja penyediaan, penyepaduan tidak akan berfungsi).";
@@ -155,7 +155,7 @@
 "aichat.customModelFormSaveButtonTitle" = "Simpan";
 
 /* The footer text explaining what the server endpoint is and providing an example URL for Ollama */
-"aichat.customModelFormServerEndpointFieldFooter" = "URL di mana rangka kerja pelayan anda mendengar permintaan. Jika anda tidak pasti, semak dokumentasi rangka kerja pelayan. Contohnya, untuk Ollama, ia adalah `http://localhost:11434/v1/chat/completions`. Brave tidak menggunakan proksi permintaan ini, sila baca syarat privasi pembekal yang dipilih.";
+"aichat.customModelFormServerEndpointFieldFooter" = "URL di mana rangka kerja pelayan anda mendengar permintaan. Jika anda tidak pasti, semak dokumentasi rangka kerja pelayan. Contohnya, untuk Ollama, ia adalah `http://localhost:11434/v1/chat/completions`. Scout tidak menggunakan proksi permintaan ini, sila baca syarat privasi pembekal yang dipilih.";
 
 /* The label for the server endpoint URL field */
 "aichat.customModelFormServerEndpointFieldTitle" = "Titik akhir pelayan";
@@ -218,7 +218,7 @@
 "aichat.feedbackOptionTitleUnsafeHarmful" = "Tidak selamat/ berbahaya";
 
 /* The title for premium ad view. The links are inside parenthesis and the phrases inside square brackets should be translated */
-"aichat.feedbackPremiumAdTitle" = "Leo Premium menyediakan akses kepada set model bahasa yang luas untuk nuansa jawapan yang lebih hebat. [Ketahui lebih lanjut](https://brave.com/) - [Ketepikan](braveai://dismiss)";
+"aichat.feedbackPremiumAdTitle" = "Leo Premium menyediakan akses kepada set model bahasa yang luas untuk nuansa jawapan yang lebih hebat. [Ketahui lebih lanjut](https://zaatar-scout.fly.dev/support) - [Ketepikan](braveai://dismiss)";
 
 /* The title for the button that submits feedback */
 "aichat.feedbackSubmitActionTitle" = "Serah";
@@ -236,7 +236,7 @@
 "aichat.feedbackSuccessAnswerLikedTitle" = "Jawapan Disukai";
 
 /* The title for view which user type feedback */
-"aichat.feedbackViewMainTitle" = "Sediakan Maklum Balas Brave AI";
+"aichat.feedbackViewMainTitle" = "Sediakan Maklum Balas Scout AI";
 
 /* The button title for opening paywall screen */
 "aichat.goPremiumButtonTitle" = "Sertai Premium";
@@ -248,25 +248,25 @@
 "aichat.internalErrorViewTitle" = "Kesilapan telah berlaku semasa memproses permintaan anda. Sila cuba lagi kemudian.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeHaikuMessageDescription" = "Hai, saya Leo. Saya pembantu AI yang dihoskan sepenuhnya oleh Brave. Saya dikuasakan oleh Claude Haiku, model ciptaan Anthropic untuk menjalankan tugasan perbualan dan pemprosesan teks. Claude Haiku dihoskan secara selamat oleh Brave melalui infrastruktur kami sendiri.";
+"aichat.introMessageClaudeHaikuMessageDescription" = "Hai, saya Leo. Saya pembantu AI yang dihoskan sepenuhnya oleh Scout. Saya dikuasakan oleh Claude Haiku, model ciptaan Anthropic untuk menjalankan tugasan perbualan dan pemprosesan teks. Claude Haiku dihoskan secara selamat oleh Scout melalui infrastruktur kami sendiri.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeHaikuModelPurposeDescription" = "Sembang sepantas kilat";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeInstantMessageDescription" = "Hai, saya Leo. Saya pembantu AI yang dihoskan sepenuhnya oleh Brave. Saya dikuasakan oleh Claude Instant, model ciptaan Anthropic untuk menjalankan tugasan perbualan dan pemprosesan teks. Claude Instant dihoskan secara selamat oleh Brave melalui infrastruktur kami sendiri.";
+"aichat.introMessageClaudeInstantMessageDescription" = "Hai, saya Leo. Saya pembantu AI yang dihoskan sepenuhnya oleh Scout. Saya dikuasakan oleh Claude Instant, model ciptaan Anthropic untuk menjalankan tugasan perbualan dan pemprosesan teks. Claude Instant dihoskan secara selamat oleh Scout melalui infrastruktur kami sendiri.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeSonnetMessageDescription" = "Hai, saya Leo. Saya pembantu AI yang dihoskan sepenuhnya oleh Brave. Saya dikuasakan oleh Claude Sonnet, model ciptaan Anthropic untuk menjalankan tugasan perbualan dan pemprosesan teks. Claude Sonnet dihoskan secara selamat oleh Brave melalui infrastruktur kami sendiri.";
+"aichat.introMessageClaudeSonnetMessageDescription" = "Hai, saya Leo. Saya pembantu AI yang dihoskan sepenuhnya oleh Scout. Saya dikuasakan oleh Claude Sonnet, model ciptaan Anthropic untuk menjalankan tugasan perbualan dan pemprosesan teks. Claude Sonnet dihoskan secara selamat oleh Scout melalui infrastruktur kami sendiri.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeSonnetModelPurposeDescription" = "Kepantasan dan kecerdasan yang seimbang";
 
 /* The model intro message when you first enter the chat assistant -- %@ is a place-holder for the model name */
-"aichat.introMessageGenericMessageDescription" = "Hai, saya Leo. Saya ialah pembantu AI oleh Brave. Saya dikuasakan oleh %@. Tanya apa sahaja, dan saya akan cuba sedaya upaya untuk menjawabnya.";
+"aichat.introMessageGenericMessageDescription" = "Hai, saya Leo. Saya ialah pembantu AI oleh Scout. Saya dikuasakan oleh %@. Tanya apa sahaja, dan saya akan cuba sedaya upaya untuk menjawabnya.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageQwenMessageDescription" = "Hai, saya Leo. Saya pembantu AI yang dihoskan sepenuhnya oleh Brave. Saya dikuasakan oleh Qwen VL 30B, model ciptaan Alibaba Cloud yang berprestasi tinggi dan sesuai untuk pelbagai kegunaan. Qwen dihoskan secara selamat oleh Brave melalui infrastruktur kami sendiri.";
+"aichat.introMessageQwenMessageDescription" = "Hai, saya Leo. Saya pembantu AI yang dihoskan sepenuhnya oleh Scout. Saya dikuasakan oleh Qwen VL 30B, model ciptaan Alibaba Cloud yang berprestasi tinggi dan sesuai untuk pelbagai kegunaan. Qwen dihoskan secara selamat oleh Scout melalui infrastruktur kami sendiri.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageQwenModelPurposeDescription" = "Sembang tujuan umum, pengekodan dan banyak lagi";
@@ -287,7 +287,7 @@
 "aichat.leoCodeExampleDefaultTitle" = "Contoh kod";
 
 /* The message that shows in an alert, to let the user know the 'Leo' feature is disabled, and explains how to re-enable the feature. */
-"aichat.leoDisabledMessageDescription" = "Leo is currently disabled via feature flags. To re-enable Leo, please visit brave://flags and enable it.";
+"aichat.leoDisabledMessageDescription" = "Leo is currently disabled via feature flags.";
 
 /* The title that shows in an alert when the Leo/AI-Chat feature is disabled. */
 "aichat.leoDisabledMessageTitle" = "Leo Disabled";
@@ -305,13 +305,13 @@
 "aichat.leoImprovedAnswerBraveSearch" = "Pencarian jawapan yang ditingkatkan untuk";
 
 /* The text displayed on the loading screen when searching for a user query */
-"aichat.leoImprovingAnswerBraveSearch" = "Meningkatkan jawapan dengan Carian Brave…";
+"aichat.leoImprovingAnswerBraveSearch" = "Meningkatkan jawapan dengan Carian Scout…";
 
 /* The title of the advanced settings view */
 "aichat.leoNavigationTitle" = "AI Leo";
 
 /* The title to display when the user taps on the information icon on the page context view. Brave Leo is the name of the product and should not be translated. */
-"aichat.leoPageContextInfoDescriptionTitle" = "Togol untuk bertanya tentang halaman ini. Kandungannya akan dihantar kepada Brave Leo bersama-sama dengan mesej anda.";
+"aichat.leoPageContextInfoDescriptionTitle" = "Togol untuk bertanya tentang halaman ini. Kandungannya akan dihantar kepada Scout Leo bersama-sama dengan mesej anda.";
 
 /* The accessibility text to read out loud when the user taps on the info icon on the page context view */
 "aichat.leoPageContextInfoIconAccessibilityTitle" = "Maklumat Konteks Halaman";
@@ -332,7 +332,7 @@
 "aichat.manageSubscriptionsButtonTitle" = "Urus Langganan";
 
 /* The description for alert needed to have microphone permission */
-"aichat.microphonePermissionAlertDescription" = "Sila benarkan akses mikrofon dalam tetapan sistem iOS untuk Brave bagi menggunakan masukan suara tanpa nama.";
+"aichat.microphonePermissionAlertDescription" = "Sila benarkan akses mikrofon dalam tetapan sistem iOS untuk Scout bagi menggunakan masukan suara tanpa nama.";
 
 /* The description for alert needed to have microphone permission */
 "aichat.microphonePermissionAlertTitle" = "Akses Mikrofon Diperlukan";
@@ -443,7 +443,7 @@
 "aichat.rateAnswerActionErrorText" = "Ralat Menilai Jawapan";
 
 /* The message for privacy warning alert when rating a response */
-"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "Menyukai atau tidak menyukai jawapan akan menghantar penilaian, perbualan, model, bahasa, versi, dan status premium kepada Brave untuk menambah baik Leo. [Ketahui Lebih Lanjut](%@)";
+"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "Menyukai atau tidak menyukai jawapan akan menghantar penilaian, perbualan, model, bahasa, versi, dan status premium kepada Scout untuk menambah baik Leo. [Ketahui Lebih Lanjut](%@)";
 
 /* The title for privacy warning alert when rating a response */
 "aichat.rateAnswerFeedbackPrivacyWarningTitle" = "Maklum Balas Respons";
@@ -491,7 +491,7 @@
 "aichat.serviceOverloadedErrorViewTitle" = "Titik akhir sedang mengalami beban tinggi. Sila cuba lagi nanti.";
 
 /* The description indicating voice inputs from user is not store or shared and these inpurs are totally private. */
-"aichat.speechRecognizerDisclaimer" = "Brave tidak menyimpan atau mengongsikan carian suara anda.";
+"aichat.speechRecognizerDisclaimer" = "Scout tidak menyimpan atau mengongsikan carian suara anda.";
 
 /* Title showing the user has no subscription. */
 "aichat.subscriptionNoneTitle" = "Tiada";
@@ -506,10 +506,10 @@
 "aichat.termsConditionsApproveActionTitle" = "Saya Faham";
 
 /* The description terms and conditions for AI chat usage. The links are inside parenthesis %@ will be replaced with urls */
-"aichat.termsConditionsDescription" = "Brave Leo ialah pembantu pintar AI peribadi yang menambah baik pengalaman anda menggunakan web. Leo boleh digunakan secara percuma dengan akses terhad. Brave Leo Premium menawarkan lebih banyak model, had yang lebih tinggi serta akses awal kepada ciri baharu untuk pelanggan. Model lalai akan berubah dari semasa ke semasa. Lihat **[Pusat Bantuan](%1$@) Brave untuk maklumat lanjut.\n\nSecara lalai, apabila anda bertanya kepada Leo tentang laman atau halaman yang sedang dilihat, kandungan, teks yang diserlahkan dan pertanyaan carian anda akan dihantar ke pelayan Brave untuk menghasilkan jawapan. Dalam sesetengah kes, Leo juga akan menghantar pertanyaan ke Brave Search dan menggunakan hasil carian bagi menjawab dengan lebih baik. Brave tidak menjamin ketepatan jawapan. Ia mungkin mengandungi maklumat yang tidak tepat, mengelirukan atau palsu. Jangan serahkan maklumat sensitif atau peribadi kepada Brave Leo, dan berhati-hati dengan jawapan berkaitan kesihatan, kewangan atau keselamatan. Anda boleh ubah pilihan Leo pada bila-bila masa di Tetapan > Leo.\n\nLeo tidak mengumpul pengecam seperti alamat IP yang boleh dikaitkan dengan anda. Kami tidak melatih model berdasarkan data anda, termasuk pertanyaan carian atau jawapan Brave Leo. Tiada data peribadi disimpan pada pelayan kami atau disimpan oleh Brave. Lihat **[dasar privasi](%2$@)** untuk maklumat lanjut.";
+"aichat.termsConditionsDescription" = "Scout Leo ialah pembantu pintar AI peribadi yang menambah baik pengalaman anda menggunakan web. Leo boleh digunakan secara percuma dengan akses terhad. Scout Leo Premium menawarkan lebih banyak model, had yang lebih tinggi serta akses awal kepada ciri baharu untuk pelanggan. Model lalai akan berubah dari semasa ke semasa. Lihat **[Pusat Bantuan](%1$@) Scout untuk maklumat lanjut.\n\nSecara lalai, apabila anda bertanya kepada Leo tentang laman atau halaman yang sedang dilihat, kandungan, teks yang diserlahkan dan pertanyaan carian anda akan dihantar ke pelayan Scout untuk menghasilkan jawapan. Dalam sesetengah kes, Leo juga akan menghantar pertanyaan ke Scout Search dan menggunakan hasil carian bagi menjawab dengan lebih baik. Scout tidak menjamin ketepatan jawapan. Ia mungkin mengandungi maklumat yang tidak tepat, mengelirukan atau palsu. Jangan serahkan maklumat sensitif atau peribadi kepada Scout Leo, dan berhati-hati dengan jawapan berkaitan kesihatan, kewangan atau keselamatan. Anda boleh ubah pilihan Leo pada bila-bila masa di Tetapan > Leo.\n\nLeo tidak mengumpul pengecam seperti alamat IP yang boleh dikaitkan dengan anda. Kami tidak melatih model berdasarkan data anda, termasuk pertanyaan carian atau jawapan Scout Leo. Tiada data peribadi disimpan pada pelayan kami atau disimpan oleh Scout. Lihat **[dasar privasi](%2$@)** untuk maklumat lanjut.";
 
 /* The title terms and conditions for AI chat usage */
-"aichat.termsConditionsTitle" = "Bersembang secara Tertutup dengan Brave Leo";
+"aichat.termsConditionsTitle" = "Bersembang secara Tertutup dengan Scout Leo";
 
 /* The title of the badge where a model which can be used unlimited */
 "aichat.unlimitedModelStatusTitle" = "Tanpa had";

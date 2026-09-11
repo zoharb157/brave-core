@@ -2,7 +2,7 @@
 "adsHeader" = "Ads";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "har du allerede kjøpt på Brave.com?";
+"alreadyPurchasedTitle" = "har du allerede kjøpt på web?";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Analyse";
@@ -11,25 +11,25 @@
 "buyNowButton" = "Kjøp nå";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Aktivering eller deaktivering av en Brave-funksjon krever en omstart av nettleseren for å bruke endringene. Vennligst lukk (sveip opp i appbytteren) og åpne Brave på nytt.";
+"featureEnabledToastMessage" = "Aktivering eller deaktivering av en Scout-funksjon krever en omstart av nettleseren for å bruke endringene. Vennligst lukk (sveip opp i appbytteren) og åpne Scout på nytt.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Endrer Brave-funksjoner";
+"featureEnabledToastTitle" = "Endrer Scout-funksjoner";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Tilpass nettleseren din samtidig som du støtter Brave**\n\nBrave Origin er en betalt versjon av nettleseren for brukere som ikke trenger alle funksjonene som støtter Brave som en bedrift, men som fortsatt ønsker personvernet som bare Brave tilbyr. Origin-brukere vil fortsette å dra nytte av vår bransjeledende personvern, annonseblokkering og hastighet (via Shields), samt regelmessige programvareoppdateringer, Chromium-oppdateringer og sikkerhet og personvernforbedringer. Origin vil fjerne de fleste andre funksjonene fra nettleseren.";
+"featuresFooter" = "**Tilpass nettleseren din samtidig som du støtter Scout**\n\nScout Origin er en betalt versjon av nettleseren for brukere som ikke trenger alle funksjonene som støtter Scout som en bedrift, men som fortsatt ønsker personvernet som bare Scout tilbyr. Origin-brukere vil fortsette å dra nytte av vår bransjeledende personvern, annonseblokkering og hastighet (via Shields), samt regelmessige programvareoppdateringer, Chromium-oppdateringer og sikkerhet og personvernforbedringer. Origin vil fjerne de fleste andre funksjonene fra nettleseren.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Funksjoner";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Bekreft Brave Origin-kjøp";
+"getLoginCodeButton" = "Bekreft Scout Origin-kjøp";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Leo AI";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Koble kjøpet til Brave-kontoen din";
+"linkPurchase" = "Koble kjøpet til Scout-kontoen din";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "Nyheter";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Kan ikke fullføre kjøpet. Vennligst prøv igjen, eller sjekk betalingsinformasjonen din på Apple og prøv igjen.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Koble App Store-kjøpet til Brave-kontoen din for å bruke Brave Origin på andre enheter";
+"purchaseSectionFooter" = "Koble App Store-kjøpet til Scout-kontoen din for å bruke Scout Origin på andre enheter";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Kjøp";

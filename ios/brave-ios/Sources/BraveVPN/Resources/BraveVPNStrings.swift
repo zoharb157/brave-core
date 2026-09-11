@@ -12,7 +12,7 @@ extension Strings {
       "vpn.buyVPNTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave VPN",
+      value: "Scout VPN",
       comment: "Title for screen to buy the VPN."
     )
 
@@ -180,7 +180,7 @@ extension Strings {
       "vpn.autoRenewSoonExpireTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Oh no! Your Brave VPN subscription is about to expire.",
+      value: "Oh no! Your Scout VPN subscription is about to expire.",
       comment: "Pop up title for VPN subscription is about expire"
     )
 
@@ -188,7 +188,7 @@ extension Strings {
       "vpn.autoRenewDiscountPopOverTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Auto-renew your Brave VPN Subscription now and get 20% off for 3 months!",
+      value: "Auto-renew your Scout VPN Subscription now and get 20% off for 3 months!",
       comment: "Pop up title for renewing VPN subscription with discount"
     )
 
@@ -196,7 +196,7 @@ extension Strings {
       "vpn.autoRenewFreeMonthPopOverTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Auto-renew your Brave VPN Subscription now and get 1 month free!",
+      value: "Auto-renew your Scout VPN Subscription now and get 1 month free!",
       comment: "Pop up title for renewing VPN subscription with month free"
     )
 
@@ -205,7 +205,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "There's a billing issue with your account, which means your Brave VPN subscription is about to expire.",
+        "There's a billing issue with your account, which means your Scout VPN subscription is about to expire.",
       comment: "Pop up title for billing issue for subcription VPN about to expire"
     )
 
@@ -213,7 +213,7 @@ extension Strings {
       "vpn.updateBillingExpiredPopOverTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Update your payment info to stay protected with Brave VPN.",
+      value: "Update your payment info to stay protected with Scout VPN.",
       comment: "Pop up title for billing issue for subcription VPN already expired"
     )
 
@@ -221,7 +221,7 @@ extension Strings {
       "vpn.autoRenewSoonExpirePopOverDescription",
       tableName: "BraveShared",
       bundle: .module,
-      value: "That means you'll lose Brave's extra protections for every app on your phone.",
+      value: "That means you'll lose Scout's extra protections for every app on your phone.",
       comment: "Pop up description for VPN subscription is about expire"
     )
 
@@ -246,7 +246,7 @@ extension Strings {
       "vpn.subscribeVPNDiscountPopOverTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Give Brave VPN another try and get 20% off for 3 months!",
+      value: "Give Scout VPN another try and get 20% off for 3 months!",
       comment: "Pop up title for subscribing VPN with discount"
     )
 
@@ -254,7 +254,7 @@ extension Strings {
       "vpn.subscribeVPNProtectionPopOverTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Did you know that Brave VPN protects you outside of Brave Browser?",
+      value: "Did you know that Scout VPN protects you outside of Scout Browser?",
       comment: "Pop up title for subscribing VPN explaning VPN protects user outside the Brave"
     )
 
@@ -262,7 +262,7 @@ extension Strings {
       "vpn.subscribeVPNAllDevicesPopOverTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Now, use Brave VPN on all your devices for the same price!",
+      value: "Now, use Scout VPN on all your devices for the same price!",
       comment: "Pop up title the subscription for VPN can be used for all platforms"
     )
 
@@ -271,7 +271,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "Brave VPN has always blocked trackers on every app, even outside the Brave browser. Now you can see who tried to track you, with the Brave Privacy Hub.",
+        "Scout VPN has always blocked trackers on every app, even outside the Scout browser. Now you can see who tried to track you, with the Scout Privacy Hub.",
       comment:
         "Pop up description for subscribing VPN explaning VPN protects user outside the Brave"
     )
@@ -281,7 +281,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "That’s right. Your Brave VPN subscription is now good on up to 5 devices. So you can subscribe on iOS and use it on your Mac, Windows and Android devices for free.",
+        "That’s right. Your Scout VPN subscription is now good on up to 5 devices. So you can subscribe on iOS and use it on your Mac, Windows and Android devices for free.",
       comment: "Pop up description the subscription for VPN can be used for all platforms"
     )
 
@@ -290,7 +290,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "Ready to safeguard every app on your phone? Come back to Brave VPN and get 20% off for the next 3 months.",
+        "Ready to safeguard every app on your phone? Come back to Scout VPN and get 20% off for the next 3 months.",
       comment: "Pop up sub description the subscription for VPN can be used for all platforms"
     )
 
@@ -306,7 +306,7 @@ extension Strings {
       "vpn.sessionExpiredDescription",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Please login to your Brave Account to refresh your VPN session.",
+      value: "Please login to your Scout Account to refresh your VPN session.",
       comment: "Alert description to show when the VPN session has expired"
     )
 
@@ -516,7 +516,7 @@ extension Strings {
     public static let checkboxNoIPLog = NSLocalizedString(
       "vpn.checkboxNoIPLog",
       bundle: .module,
-      value: "Brave never logs your activity",
+      value: "Scout never logs your activity",
       comment: "Text for a checkbox to present the user benefits for using Brave VPN"
     )
 
@@ -537,7 +537,7 @@ extension Strings {
     public static let installProfileTitle = NSLocalizedString(
       "vpn.installProfileTitle",
       bundle: .module,
-      value: "Brave will now install a VPN profile.",
+      value: "Scout will now install a VPN profile.",
       comment: ""
     )
 
@@ -545,7 +545,7 @@ extension Strings {
       "vpn.installProfileBody",
       bundle: .module,
       value:
-        "This profile allows the VPN to automatically connect and secure traffic across your device all the time. This VPN connection will be encrypted and routed through Brave's intelligent firewall to block potentially harmful and invasive connections.",
+        "This profile allows the VPN to automatically connect and secure traffic across your device all the time. This VPN connection will be encrypted and routed through Scout's intelligent firewall to block potentially harmful and invasive connections.",
       comment: "Text explaining how the VPN works."
     )
 
@@ -601,7 +601,7 @@ extension Strings {
     public static let settingsLinkReceipt = NSLocalizedString(
       "vpn.settingsLinkReceipt",
       bundle: .module,
-      value: "Link purchase to your Brave account",
+      value: "Link purchase to your Scout account",
       comment: "Button to link your VPN receipt to other devices."
     )
 
@@ -609,7 +609,7 @@ extension Strings {
       "vpn.settingsLinkReceiptFooter",
       bundle: .module,
       value:
-        "Link your App Store purchase to your Brave account to use Brave VPN on other devices.",
+        "Link your App Store purchase to your Scout account to use Scout VPN on other devices.",
       comment: "Footer text to link your VPN receipt to other devices."
     )
 
@@ -725,7 +725,7 @@ extension Strings {
       "vpn.vpnConfigPermissionDeniedErrorBody",
       bundle: .module,
       value:
-        "The Brave VPN requires a VPN profile to be installed on your device to work. ",
+        "The Scout VPN requires a VPN profile to be installed on your device to work. ",
       comment: "Title for an alert when the user didn't allow to install VPN profile"
     )
 
@@ -777,7 +777,7 @@ extension Strings {
       "vpn.vpnResetAlertBody",
       bundle: .module,
       value:
-        "This will reset your Brave VPN configuration and fix any errors. This process may take a minute.",
+        "This will reset your Scout VPN configuration and fix any errors. This process may take a minute.",
       comment: "Message for alert to reset vpn configuration"
     )
 
@@ -977,14 +977,14 @@ extension Strings {
       "vpn.contactFormDoNotEditText",
       bundle: .module,
       value:
-        "Brave doesn’t track you or know how you use our app, so we don’t know how you've set up VPN. Please share info about the issue you're experiencing and we'll do our best to resolve it as soon as we can.",
+        "Scout doesn’t track you or know how you use our app, so we don’t know how you've set up VPN. Please share info about the issue you're experiencing and we'll do our best to resolve it as soon as we can.",
       comment: "Text to tell user to not modify support info below email's body."
     )
 
     public static let contactFormTitle = NSLocalizedString(
       "vpn.contactFormTitle",
       bundle: .module,
-      value: "Brave VPN Issue",
+      value: "Scout VPN Issue",
       comment: "Title for contact form email."
     )
 
@@ -1005,14 +1005,14 @@ extension Strings {
     public static let vpnBackgroundNotificationTitle = NSLocalizedString(
       "vpn.vpnBackgroundNotificationTitle",
       bundle: .module,
-      value: "Brave VPN is ON",
+      value: "Scout VPN is ON",
       comment: "Notification title to tell user that the vpn is turned on even in background"
     )
 
     public static let vpnBackgroundNotificationBody = NSLocalizedString(
       "vpn.vpnBackgroundNotificationBody",
       bundle: .module,
-      value: "Even in the background, Brave will continue to protect you.",
+      value: "Even in the background, Scout will continue to protect you.",
       comment: "Notification title to tell user that the vpn is turned on even in background"
     )
 
@@ -1020,7 +1020,7 @@ extension Strings {
       "vpn.vpnIAPBoilerPlate",
       bundle: .module,
       value:
-        "Subscriptions will be charged via your iTunes account.\n\nAny unused portion of the free trial, if offered, is forfeited when you buy a subscription.\n\nYour subscription will renew automatically unless it is cancelled at least 24 hours before the end of the current period.\n\nYou can manage your subscriptions in Settings.\n\nBy using Brave, you agree to the Terms of Use and Privacy Policy.",
+        "Subscriptions will be charged via your iTunes account.\n\nAny unused portion of the free trial, if offered, is forfeited when you buy a subscription.\n\nYour subscription will renew automatically unless it is cancelled at least 24 hours before the end of the current period.\n\nYou can manage your subscriptions in Settings.\n\nBy using Scout, you agree to the Terms of Use and Privacy Policy.",
       comment: "Disclaimer for user purchasing the VPN plan."
     )
 
@@ -1248,7 +1248,7 @@ extension Strings {
       "vpn.paywallDisclaimer",
       bundle: .module,
       value:
-        "Subscriptions will be charged via your Apple account. Any unused portion of the free trial, if offered, is forfeited when you buy a subscription.\n\nYour subscription will renew automatically unless it is canceled at least 24 hours before the end of the current period.\n\nYou can manage your subscriptions in Settings.\n\nBy using Brave, you agree to the Terms of Use and Privacy Policy.",
+        "Subscriptions will be charged via your Apple account. Any unused portion of the free trial, if offered, is forfeited when you buy a subscription.\n\nYour subscription will renew automatically unless it is canceled at least 24 hours before the end of the current period.\n\nYou can manage your subscriptions in Settings.\n\nBy using Scout, you agree to the Terms of Use and Privacy Policy.",
       comment:
         "The text that briefly explains how Brave VPN subscription is going to be charged and managed."
     )

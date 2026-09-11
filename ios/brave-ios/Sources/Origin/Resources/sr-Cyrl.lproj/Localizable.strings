@@ -2,7 +2,7 @@
 "adsHeader" = "Огласи";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "Већ сте куповали на сајту brave.com?";
+"alreadyPurchasedTitle" = "Већ сте куповали на сајту web?";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Аналитика";
@@ -11,25 +11,25 @@
 "buyNowButton" = "Купи сада";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Омогућавање или искључивање Brave функције захтева рестартовање прегледача да би се промене примениле. Молимо вас да затворите (превуците нагоре у Прекидачу апликација) и затим поново отворите Brave.";
+"featureEnabledToastMessage" = "Омогућавање или искључивање Scout функције захтева рестартовање прегледача да би се промене примениле. Молимо вас да затворите (превуците нагоре у Прекидачу апликација) и затим поново отворите Scout.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Промена Brave функција";
+"featureEnabledToastTitle" = "Промена Scout функција";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Прилагодите свој прегледач док и даље подржавате Brave**\n\nBrave Origin је плаћена верзија прегледача за кориснике којима нису потребне све функције које подржавају Brave као посао, али и даље желе приватност коју само Brave нуди. Корисници Origin-а наставиће да имају користи од наше водеће заштите приватности, адблока и брзине (путем штитова), као и редовних ажурирања софтвера, Chromium исправки и унапређења безбедности и приватности. Origin ће уклонити већину других функција из прегледача.";
+"featuresFooter" = "**Прилагодите свој прегледач док и даље подржавате Scout**\n\nScout Origin је плаћена верзија прегледача за кориснике којима нису потребне све функције које подржавају Scout као посао, али и даље желе приватност коју само Scout нуди. Корисници Origin-а наставиће да имају користи од наше водеће заштите приватности, адблока и брзине (путем штитова), као и редовних ажурирања софтвера, Chromium исправки и унапређења безбедности и приватности. Origin ће уклонити већину других функција из прегледача.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Функције";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Верификуј Brave Origin куповину";
+"getLoginCodeButton" = "Верификуј Scout Origin куповину";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Leo AI";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Повежите куповину са својим налогом на Brave-у";
+"linkPurchase" = "Повежите куповину са својим налогом на Scout-у";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "Вести";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Куповина није успешно обављена. Пробајте поново или проверите детаље за плаћање у Apple-у и пробајте поново.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Повежите куповину у App Store-у са својим налогом на Brave-у да бисте користили Brave Origin на другим уређајима";
+"purchaseSectionFooter" = "Повежите куповину у App Store-у са својим налогом на Scout-у да бисте користили Scout Origin на другим уређајима";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Куповина";
@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "Одржавање основног блокирања огласа, приватности и брзине";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "Минималан кориснички интерфејс браузера фокусиран на Brave штитове";
+"upsellMinimalUI" = "Минималан кориснички интерфејс браузера фокусиран на Scout штитове";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "Једнократна куповина се може активирати више пута на свим вашим уређајима";

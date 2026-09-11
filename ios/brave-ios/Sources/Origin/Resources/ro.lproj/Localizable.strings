@@ -2,7 +2,7 @@
 "adsHeader" = "Reclame";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "Deja achiziționat pe brave.com?";
+"alreadyPurchasedTitle" = "Deja achiziționat pe web?";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Analiză";
@@ -11,25 +11,25 @@
 "buyNowButton" = "Cumpără acum";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Activarea sau dezactivarea unei caracteristici Brave necesită o repornire a browserului pentru a aplica modificările. Te rog să închizi (glisează în sus în App Switcher) și apoi să redeschizi Brave.";
+"featureEnabledToastMessage" = "Activarea sau dezactivarea unei caracteristici Scout necesită o repornire a browserului pentru a aplica modificările. Te rog să închizi (glisează în sus în App Switcher) și apoi să redeschizi Scout.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Modificarea funcțiilor Brave";
+"featureEnabledToastTitle" = "Modificarea funcțiilor Scout";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Personalizează-ți browserul susținând în continuare Brave**\n\nBrave Origin este o versiune plătită a browserului pentru utilizatorii care nu au nevoie de toate funcțiile care susțin Brave ca business, dar care doresc totuși confidențialitatea pe care doar Brave o oferă. Utilizatorii Origin vor continua să beneficieze de confidențialitate de top din industrie, blocare de reclame și viteză (prin Shields), precum și actualizări regulate ale software-ului, patch-uri Chromium și îmbunătățiri de securitate și confidențialitate. Origin va elimina majoritatea celorlalte funcții din browser.";
+"featuresFooter" = "**Personalizează-ți browserul susținând în continuare Scout**\n\nScout Origin este o versiune plătită a browserului pentru utilizatorii care nu au nevoie de toate funcțiile care susțin Scout ca business, dar care doresc totuși confidențialitatea pe care doar Scout o oferă. Utilizatorii Origin vor continua să beneficieze de confidențialitate de top din industrie, blocare de reclame și viteză (prin Shields), precum și actualizări regulate ale software-ului, patch-uri Chromium și îmbunătățiri de securitate și confidențialitate. Origin va elimina majoritatea celorlalte funcții din browser.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Funcționalități";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Verifică achiziția Brave Origin";
+"getLoginCodeButton" = "Verifică achiziția Scout Origin";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Leo IA";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Conectează achiziția la contul tău Brave";
+"linkPurchase" = "Conectează achiziția la contul tău Scout";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "Știri";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Nu s-a putut finaliza achiziția. Te rog să încerci din nou sau să verifici detaliile de plată în Apple și apoi să încerci din nou.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Conectează achiziția App Store la contul tău Brave pentru a putea utiliza Brave Origin și pe alte dispozitive";
+"purchaseSectionFooter" = "Conectează achiziția App Store la contul tău Scout pentru a putea utiliza Scout Origin și pe alte dispozitive";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Achiziție";

@@ -11,6 +11,7 @@ import Combine
 import Data
 import DesignSystem
 import Favicon
+import Shared
 import SnapKit
 import Strings
 import SwiftUI
@@ -185,14 +186,16 @@ struct ShieldsPanelView: View {
         .font(.caption)
         .foregroundStyle(Color(braveSystemName: .textSecondary))
         .multilineTextAlignment(.leading)
-      Button {
-        actionCallback(.navigate(.reportBrokenSite, dismiss: true))
-      } label: {
-        Text(Strings.Shields.reportABrokenSite)
-          .foregroundStyle(Color(braveSystemName: .textPrimary))
+      if ScoutFeatures.webcompatReporter {
+        Button {
+          actionCallback(.navigate(.reportBrokenSite, dismiss: true))
+        } label: {
+          Text(Strings.Shields.reportABrokenSite)
+            .foregroundStyle(Color(braveSystemName: .textPrimary))
+        }
+        .buttonStyle(.outline)
+        .frame(maxWidth: .infinity, alignment: .center)
       }
-      .buttonStyle(.outline)
-      .frame(maxWidth: .infinity, alignment: .center)
     }
     .padding(.horizontal)
     .padding(.bottom)

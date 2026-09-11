@@ -35,7 +35,7 @@
 "importStateFailureTitle" = "Uvoz neuspješan";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user keep your existing Brave passwords. */
-"importStatePasswordConflictKeepExistingPasswordsTitle" = "Zadrži lozinke iz Bravea";
+"importStatePasswordConflictKeepExistingPasswordsTitle" = "Zadrži lozinke iz Scouta";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user use the passwords that were imported, overwriting your existing passwords. */
 "importStatePasswordConflictKeepImportedPasswordsTitle" = "Uvezi lozinke iz Safarija";
@@ -50,7 +50,7 @@
 "importStateSuccessContinueTitle" = "Nastavite";
 
 /* The message shown on the import data screen when importing the data from the browser profile succeeded. */
-"importStateSuccessMessage" = "Vaši su podaci uspješno uvezeni.\nSpremni ste za pregledavanje interneta u Braveu.";
+"importStateSuccessMessage" = "Vaši su podaci uspješno uvezeni.\nSpremni ste za pregledavanje interneta u Scoutu.";
 
 /* The title shown on the import data screen when importing the data from the browser profile succeeded. */
 "importStateSuccessTitle" = "Spremno!";

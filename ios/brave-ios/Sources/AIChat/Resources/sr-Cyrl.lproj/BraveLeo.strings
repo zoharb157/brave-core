@@ -1,5 +1,5 @@
 /* The description for the error message when the user's session has expired */
-"aichat.accountSessionExpiredDescription" = "Ваша сесија налога на Brave-у је истекла. Посетите страницу налога да бисте освежили, а затим се вратите да користите премијум функције.";
+"aichat.accountSessionExpiredDescription" = "Ваша сесија налога на Scout-у је истекла. Посетите страницу налога да бисте освежили, а затим се вратите да користите премијум функције.";
 
 /* The title for button that submits feedback */
 "aichat.addFeedbackActionTitle" = "Дајте повратне информације";
@@ -14,10 +14,10 @@
 "aichat.advancedSettingsHeaderTitle" = "Leo је паметни асистент заснован на вештачкој интелигенцији, уграђен директно у прегледач.";
 
 /* The subtitle for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Повежите куповину у App Store-у са својим налогом на Brave-у да бисте користили асистента Leo на другим уређајима.";
+"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Повежите куповину у App Store-у са својим налогом на Scout-у да бисте користили асистента Leo на другим уређајима.";
 
 /* The title for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionTitle" = "Повежите куповину са својим налогом на Brave-у";
+"aichat.advancedSettingsLinkPurchaseActionTitle" = "Повежите куповину са својим налогом на Scout-у";
 
 /* The description for the settings to show Leo in Quick Search Engines Bar. */
 "aichat.advancedSettingsShowInQSEBarDescription" = "Активира пречицу за покретање асистента Leo из брзе траке за претраживаче.";
@@ -59,7 +59,7 @@
 "aichat.byomEmptyStateTitle" = "Још увек нисте повезали модел";
 
 /* The section header description explaining the Bring Your Own Model feature with a link to learn more. The text inside square brackets should be translated. */
-"aichat.byomSectionHeaderDescription" = "Повежите свој сопствени или модел хостован од трећих страна LLM са Leo и користите их унутар прегледача. Користите било који оквир компатибилан са OpenAI Chat Protocol као што је Ollama. [Сазнајте више](https://support.brave.app/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo)";
+"aichat.byomSectionHeaderDescription" = "Повежите свој сопствени или модел хостован од трећих страна LLM са Leo и користите их унутар прегледача. Користите било који оквир компатибилан са OpenAI Chat Protocol као што је Ollama. [Сазнајте више](https://zaatar-scout.fly.dev/support)";
 
 /* The section header title for the Bring Your Own Model feature */
 "aichat.byomSectionHeaderTitle" = "Донесите свој модел";
@@ -71,7 +71,7 @@
 "aichat.chatIntroJustTalkTitle" = "Само желите да ћаскате?";
 
 /* The subtitle for intro view */
-"aichat.chatIntroSubTitle" = "Интелигентни асистент заснован на вештачкој интелигенцији, уграђен директно у Brave.";
+"aichat.chatIntroSubTitle" = "Интелигентни асистент заснован на вештачкој интелигенцији, уграђен директно у Scout.";
 
 /* The title for intro view */
 "aichat.chatIntroTitle" = "Здраво, зовем се Leo!";
@@ -137,7 +137,7 @@
 "aichat.customModelFormLabelFieldTitle" = "Ознака";
 
 /* The error message shown when trying to use a private network address, explaining why it's blocked and how to enable it */
-"aichat.customModelFormPrivateEndpointErrorMessage" = "Адреса коју сте унели изгледа да је из приватне мреже—као што су рутер или локални сервер. Brave их блокира аутоматски да вас штити, али можете их активирати ако сте сигурни да је безбедна.\n\nДа бисте наставили, посетите brave://flags/, потражите „brave-ai-chat-allow-private-ips,";
+"aichat.customModelFormPrivateEndpointErrorMessage" = "Адреса коју сте унели изгледа да је из приватне мреже—као што су рутер или локални сервер. Scout их блокира аутоматски да вас штити, али можете их активирати ако сте сигурни да је безбедна.";
 
 /* The footer text explaining what the model request name is used for and providing an example */
 "aichat.customModelFormRequestNameFieldFooter" = "Назив модела који би требало да се појави у захтеву за оквир за имплементацију, нпр. phi-3 (имајте у виду да интеграција неће радити ако овај назив не одговара тачно ономе што се очекује у оквиру за имплементацију).";
@@ -155,7 +155,7 @@
 "aichat.customModelFormSaveButtonTitle" = "Сачувај";
 
 /* The footer text explaining what the server endpoint is and providing an example URL for Ollama */
-"aichat.customModelFormServerEndpointFieldFooter" = "URL адреса на којој ваш оквир за имплементацију слуша захтеве. Ако нисте сигурни, проверите документацију оквира за имплементацију. Нпр. код модела Ollama, то је увек http://localhost:11434/v1/chat/completions. Brave не проследјује ове захтеве, молимо прочитајте услове приватности изабраног добављача.";
+"aichat.customModelFormServerEndpointFieldFooter" = "URL адреса на којој ваш оквир за имплементацију слуша захтеве. Ако нисте сигурни, проверите документацију оквира за имплементацију. Нпр. код модела Ollama, то је увек http://localhost:11434/v1/chat/completions. Scout не проследјује ове захтеве, молимо прочитајте услове приватности изабраног добављача.";
 
 /* The label for the server endpoint URL field */
 "aichat.customModelFormServerEndpointFieldTitle" = "Крајња тачка сервера";
@@ -218,7 +218,7 @@
 "aichat.feedbackOptionTitleUnsafeHarmful" = "Небезбедно/штетно";
 
 /* The title for premium ad view. The links are inside parenthesis and the phrases inside square brackets should be translated */
-"aichat.feedbackPremiumAdTitle" = "Leo Premium пружа приступ проширеном скупу језичких модела који пружа прецизније одговоре. [Сазнајте више](https://brave.com/) - [Одбаци](braveai://dismiss)";
+"aichat.feedbackPremiumAdTitle" = "Leo Premium пружа приступ проширеном скупу језичких модела који пружа прецизније одговоре. [Сазнајте више](https://zaatar-scout.fly.dev/support) - [Одбаци](braveai://dismiss)";
 
 /* The title for the button that submits feedback */
 "aichat.feedbackSubmitActionTitle" = "Пошаљи";
@@ -236,7 +236,7 @@
 "aichat.feedbackSuccessAnswerLikedTitle" = "Одговор вам се свиђа";
 
 /* The title for view which user type feedback */
-"aichat.feedbackViewMainTitle" = "Пошаљите повратне информације о Brave AI-у";
+"aichat.feedbackViewMainTitle" = "Пошаљите повратне информације о Scout AI-у";
 
 /* The button title for opening paywall screen */
 "aichat.goPremiumButtonTitle" = "Пређите на Premium";
@@ -248,25 +248,25 @@
 "aichat.internalErrorViewTitle" = "Дошло је до грешке приликом обраде вашег захтева. Пробајте поново касније.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeHaikuMessageDescription" = "Здраво, зовем се Leo. Ја сам асистент заснован на вештачкој интелигенцији у потпуности хостован од стране компаније Brave. Покреће ме Claude Haiku, модел који је креирала компанија Anthropic како би омогућила разговорне задатке и задатке обраде текста. Claude Haiku се хостује на Brave-овој сопственој безбедној инфраструктури.";
+"aichat.introMessageClaudeHaikuMessageDescription" = "Здраво, зовем се Leo. Ја сам асистент заснован на вештачкој интелигенцији у потпуности хостован од стране компаније Scout. Покреће ме Claude Haiku, модел који је креирала компанија Anthropic како би омогућила разговорне задатке и задатке обраде текста. Claude Haiku се хостује на Scout-овој сопственој безбедној инфраструктури.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeHaikuModelPurposeDescription" = "Муњевито брзо ћаскање";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeInstantMessageDescription" = "Здраво, зовем се Leo. Ја сам асистент заснован на вештачкој интелигенцији у потпуности хостован од стране компаније Brave. Покреће ме Claude Instant, модел који је креирала компанија Anthropic како би омогућила разговорне задатке и задатке обраде текста. Claude Instant се хостује на Brave-овој сопственој безбедној инфраструктури.";
+"aichat.introMessageClaudeInstantMessageDescription" = "Здраво, зовем се Leo. Ја сам асистент заснован на вештачкој интелигенцији у потпуности хостован од стране компаније Scout. Покреће ме Claude Instant, модел који је креирала компанија Anthropic како би омогућила разговорне задатке и задатке обраде текста. Claude Instant се хостује на Scout-овој сопственој безбедној инфраструктури.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeSonnetMessageDescription" = "Здраво, зовем се Leo. Ја сам асистент заснован на вештачкој интелигенцији у потпуности хостован од стране компаније Brave. Покреће ме Claude Sonnet, модел који је креирала компанија Anthropic како би омогућила разговорне задатке и задатке обраде текста. Claude Sonnet се хостује на Brave-овој сопственој безбедној инфраструктури.";
+"aichat.introMessageClaudeSonnetMessageDescription" = "Здраво, зовем се Leo. Ја сам асистент заснован на вештачкој интелигенцији у потпуности хостован од стране компаније Scout. Покреће ме Claude Sonnet, модел који је креирала компанија Anthropic како би омогућила разговорне задатке и задатке обраде текста. Claude Sonnet се хостује на Scout-овој сопственој безбедној инфраструктури.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeSonnetModelPurposeDescription" = "Балансирана брзина и интелигенција";
 
 /* The model intro message when you first enter the chat assistant -- %@ is a place-holder for the model name */
-"aichat.introMessageGenericMessageDescription" = "Здраво, зовем се Leo. Ја сам асистент заснован на вештачкој интелигенцији којег је креирао Brave. Покреће ме %@. Питајте ме било шта и потрудићу се да одговорим.";
+"aichat.introMessageGenericMessageDescription" = "Здраво, зовем се Leo. Ја сам асистент заснован на вештачкој интелигенцији којег је креирао Scout. Покреће ме %@. Питајте ме било шта и потрудићу се да одговорим.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageQwenMessageDescription" = "Здраво, зовем се Leo. Ја сам асистент заснован на вештачкој интелигенцији у потпуности хостован од стране компаније Brave. Покреће ме Qwen VL 30B, модел који је креирала компанија Alibaba Cloud како бих био ефикасан и применљив на многе случајеве употребе. Qwen се хостује на Brave-овој сопственој безбедној инфраструктури.";
+"aichat.introMessageQwenMessageDescription" = "Здраво, зовем се Leo. Ја сам асистент заснован на вештачкој интелигенцији у потпуности хостован од стране компаније Scout. Покреће ме Qwen VL 30B, модел који је креирала компанија Alibaba Cloud како бих био ефикасан и применљив на многе случајеве употребе. Qwen се хостује на Scout-овој сопственој безбедној инфраструктури.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageQwenModelPurposeDescription" = "Ћаскање за општу сврху, кодирање и још тога";
@@ -287,7 +287,7 @@
 "aichat.leoCodeExampleDefaultTitle" = "Пример шифре";
 
 /* The message that shows in an alert, to let the user know the 'Leo' feature is disabled, and explains how to re-enable the feature. */
-"aichat.leoDisabledMessageDescription" = "Leo је тренутно искључен помоћу прекидача за функције. Да бисте га поново укључили, посетите brave://flags и укључите га.";
+"aichat.leoDisabledMessageDescription" = "Leo је тренутно искључен помоћу прекидача за функције.";
 
 /* The title that shows in an alert when the Leo/AI-Chat feature is disabled. */
 "aichat.leoDisabledMessageTitle" = "Leo је искључен";
@@ -305,13 +305,13 @@
 "aichat.leoImprovedAnswerBraveSearch" = "Одговор је побољшан помоћу претраге";
 
 /* The text displayed on the loading screen when searching for a user query */
-"aichat.leoImprovingAnswerBraveSearch" = "Побољшавамо одговор помоћу Brave претраге...";
+"aichat.leoImprovingAnswerBraveSearch" = "Побољшавамо одговор помоћу Scout претраге...";
 
 /* The title of the advanced settings view */
 "aichat.leoNavigationTitle" = "Leo AI";
 
 /* The title to display when the user taps on the information icon on the page context view. Brave Leo is the name of the product and should not be translated. */
-"aichat.leoPageContextInfoDescriptionTitle" = "Укључите да бисте поставили питања о овој страници. Његов садржај ће бити послат асистенту Brave Leo заједно са вашим порукама.";
+"aichat.leoPageContextInfoDescriptionTitle" = "Укључите да бисте поставили питања о овој страници. Његов садржај ће бити послат асистенту Scout Leo заједно са вашим порукама.";
 
 /* The accessibility text to read out loud when the user taps on the info icon on the page context view */
 "aichat.leoPageContextInfoIconAccessibilityTitle" = "Информације о контексту странице";
@@ -332,7 +332,7 @@
 "aichat.manageSubscriptionsButtonTitle" = "Управљање претплатама";
 
 /* The description for alert needed to have microphone permission */
-"aichat.microphonePermissionAlertDescription" = "Дозволите приступ микрофону у системским подешавањима iOS-а за Brave да бисте користили анонимни унос гласа.";
+"aichat.microphonePermissionAlertDescription" = "Дозволите приступ микрофону у системским подешавањима iOS-а за Scout да бисте користили анонимни унос гласа.";
 
 /* The description for alert needed to have microphone permission */
 "aichat.microphonePermissionAlertTitle" = "Неопходан је приступ микрофону";
@@ -491,7 +491,7 @@
 "aichat.serviceOverloadedErrorViewTitle" = "Краја тачка је тренутно преоптерећена. Пробајте поново касније.";
 
 /* The description indicating voice inputs from user is not store or shared and these inpurs are totally private. */
-"aichat.speechRecognizerDisclaimer" = "Brave не чува нити уступа ваше гласовне команде.";
+"aichat.speechRecognizerDisclaimer" = "Scout не чува нити уступа ваше гласовне команде.";
 
 /* Title showing the user has no subscription. */
 "aichat.subscriptionNoneTitle" = "Ништа";
@@ -506,10 +506,10 @@
 "aichat.termsConditionsApproveActionTitle" = "Разумем";
 
 /* The description terms and conditions for AI chat usage. The links are inside parenthesis %@ will be replaced with urls */
-"aichat.termsConditionsDescription" = "Brave Leo је приватни паметни асистент заснован на вештачкој интелигенцији који побољшава ваше коришћење веба. Leo је бесплатан за коришћење уз ограничен приступ. Brave Leo Premium нуди више модела, веће лимите и даје претплатницима рани приступ новим функцијама. Подразумевани модел ће се повремено мењати. Посетите Brave-ов **[Центар за помоћ](%1$@)** ако желите више детаља.\n\nПодразумевано, када поставите питање асистенту Leo о веб-сајту или страници коју гледате, садржај веб-странице коју гледате или текст који истакнете на страници, као и упит за претрагу, биће послати Brave серверима како би Leo могао да вам пружи одговор. У неким случајевима, Leo шаље упите изведене из вашег уноса у Brave претрагу и користи резултате претраге да би боље одговорио на ваше питање. Brave не гарантује тачност одговора и одговори могу да садрже нетачне, обмањујуће или лажне информације. Не шаљите осетљиве или приватне информације асистенту Brave Leo и будите опрезни са одговорима који се односе на здравље, финансије, личну безбедност и слично. Опције за асистента Leo можете променити у подешавањима у било ком тренутку. Идите на Подешавања > Leo.\n\nLeo не прикупља идентификаторе, као што је ваша IP адреса, који се могу повезати са вама. Не тренирамо наше моделе на основу ваших података, укључујући ваше упите за претрагу или одговоре асистента Brave Leo. Никакви подаци о личности се не складиште на нашим серверима, нити их Brave чува. Више информација потражите у **[правилима за заштиту приватности](%2$@)**.";
+"aichat.termsConditionsDescription" = "Scout Leo је приватни паметни асистент заснован на вештачкој интелигенцији који побољшава ваше коришћење веба. Leo је бесплатан за коришћење уз ограничен приступ. Scout Leo Premium нуди више модела, веће лимите и даје претплатницима рани приступ новим функцијама. Подразумевани модел ће се повремено мењати. Посетите Scout-ов **[Центар за помоћ](%1$@)** ако желите више детаља.\n\nПодразумевано, када поставите питање асистенту Leo о веб-сајту или страници коју гледате, садржај веб-странице коју гледате или текст који истакнете на страници, као и упит за претрагу, биће послати Scout серверима како би Leo могао да вам пружи одговор. У неким случајевима, Leo шаље упите изведене из вашег уноса у Scout претрагу и користи резултате претраге да би боље одговорио на ваше питање. Scout не гарантује тачност одговора и одговори могу да садрже нетачне, обмањујуће или лажне информације. Не шаљите осетљиве или приватне информације асистенту Scout Leo и будите опрезни са одговорима који се односе на здравље, финансије, личну безбедност и слично. Опције за асистента Leo можете променити у подешавањима у било ком тренутку. Идите на Подешавања > Leo.\n\nLeo не прикупља идентификаторе, као што је ваша IP адреса, који се могу повезати са вама. Не тренирамо наше моделе на основу ваших података, укључујући ваше упите за претрагу или одговоре асистента Scout Leo. Никакви подаци о личности се не складиште на нашим серверима, нити их Scout чува. Више информација потражите у **[правилима за заштиту приватности](%2$@)**.";
 
 /* The title terms and conditions for AI chat usage */
-"aichat.termsConditionsTitle" = "Ћаскајте приватно са асистентом Brave Leo";
+"aichat.termsConditionsTitle" = "Ћаскајте приватно са асистентом Scout Leo";
 
 /* The title of the badge where a model which can be used unlimited */
 "aichat.unlimitedModelStatusTitle" = "Неограничено";

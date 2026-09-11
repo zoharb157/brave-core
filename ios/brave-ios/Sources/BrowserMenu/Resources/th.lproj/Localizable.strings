@@ -1,8 +1,8 @@
 /* A button title shown on the menu that presents the Brave News feature. */
-"ActionTitles.braveNews" = "ข่าว Brave";
+"ActionTitles.braveNews" = "ข่าว Scout";
 
 /* A button title shown on the menu that opens a link to the Brave Talk feature. */
-"ActionTitles.braveTalk" = "Brave Talk";
+"ActionTitles.braveTalk" = "Scout Talk";
 
 /* A button title shown on the menu that presents the Brave Leo AI feature. */
 "ActionTitles.leoAIChat" = "แชท AI";

@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Tanya Brave";
+"widgets.askBrave" = "Tanya Scout";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Markah";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "AI Leo";
 
 /* The name of the feature */
-"widgets.braveNews" = "Brave News";
+"widgets.braveNews" = "News";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Unduhan";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "Berita Terpopuler";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Brave Berita Dinonaktifkan";
+"widgets.newsUnavailableByPolicy" = "Berita Dinonaktifkan";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "Dinonaktifkan oleh kebijakan organisasi Anda";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "Statistik Kerahasiaan";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Dompet Brave";
+"widgets.walletShortcutTitle" = "Dompet";
 

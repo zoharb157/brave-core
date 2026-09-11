@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Brave'e Sor";
+"widgets.askBrave" = "Scout'a Sor";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Yer işaretleri";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo Yapay Zeka";
 
 /* The name of the feature */
-"widgets.braveNews" = "Brave News";
+"widgets.braveNews" = "News";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "İndirilenler";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "Önemli Haberler";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Brave Haberler Devre Dışı";
+"widgets.newsUnavailableByPolicy" = "Haberler Devre Dışı";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "Kuruluşunuzun politikası tarafından kapatıldı";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "Gizlilik İstatistiği";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Brave Cüzdanı";
+"widgets.walletShortcutTitle" = "Cüzdan";
 

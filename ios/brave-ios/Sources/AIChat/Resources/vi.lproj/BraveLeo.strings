@@ -1,5 +1,5 @@
 /* The description for the error message when the user's session has expired */
-"aichat.accountSessionExpiredDescription" = "Phiên tài khoản Brave của bạn đã hết hạn. Vui lòng truy cập trang tài khoản của bạn để làm mới, sau đó quay lại để sử dụng các tính năng cao cấp.";
+"aichat.accountSessionExpiredDescription" = "Phiên tài khoản Scout của bạn đã hết hạn. Vui lòng truy cập trang tài khoản của bạn để làm mới, sau đó quay lại để sử dụng các tính năng cao cấp.";
 
 /* The title for button that submits feedback */
 "aichat.addFeedbackActionTitle" = "Thêm phản hồi";
@@ -14,10 +14,10 @@
 "aichat.advancedSettingsHeaderTitle" = "Leo là trợ lý thông minh được hỗ trợ bởi AI, được tích hợp ngay trên trình duyệt.";
 
 /* The subtitle for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Liên kết giao dịch mua trên App Store với tài khoản Brave của bạn để sử dụng Leo trên các thiết bị khác.";
+"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Liên kết giao dịch mua trên App Store với tài khoản Scout của bạn để sử dụng Leo trên các thiết bị khác.";
 
 /* The title for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionTitle" = "Liên kết mua hàng với tài khoản Brave của bạn";
+"aichat.advancedSettingsLinkPurchaseActionTitle" = "Liên kết mua hàng với tài khoản Scout của bạn";
 
 /* The description for the settings to show Leo in Quick Search Engines Bar. */
 "aichat.advancedSettingsShowInQSEBarDescription" = "Bật phím tắt để bắt đầu Leo từ thanh công cụ tìm kiếm nhanh.";
@@ -59,7 +59,7 @@
 "aichat.byomEmptyStateTitle" = "Bạn vẫn chưa kết nối mô hình";
 
 /* The section header description explaining the Bring Your Own Model feature with a link to learn more. The text inside square brackets should be translated. */
-"aichat.byomSectionHeaderDescription" = "Kết nối LLM tự lưu trữ hoặc được lưu trữ bởi bên thứ ba của bạn với Leo và sử dụng chúng trong trình duyệt. Sử dụng bất kỳ khung công tác tương thích với Giao thức Trò chuyện OpenAI nào như Ollama. [Tìm hiểu thêm](https://support.brave.app/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo)";
+"aichat.byomSectionHeaderDescription" = "Kết nối LLM tự lưu trữ hoặc được lưu trữ bởi bên thứ ba của bạn với Leo và sử dụng chúng trong trình duyệt. Sử dụng bất kỳ khung công tác tương thích với Giao thức Trò chuyện OpenAI nào như Ollama. [Tìm hiểu thêm](https://zaatar-scout.fly.dev/support)";
 
 /* The section header title for the Bring Your Own Model feature */
 "aichat.byomSectionHeaderTitle" = "Mang theo mô hình của riêng bạn";
@@ -71,7 +71,7 @@
 "aichat.chatIntroJustTalkTitle" = "Chỉ muốn trò chuyện?";
 
 /* The subtitle for intro view */
-"aichat.chatIntroSubTitle" = "Trợ lý thông minh được hỗ trợ bởi AI, tích hợp ngay trong Brave.";
+"aichat.chatIntroSubTitle" = "Trợ lý thông minh được hỗ trợ bởi AI, tích hợp ngay trong Scout.";
 
 /* The title for intro view */
 "aichat.chatIntroTitle" = "Xin chào, tôi là Leo!";
@@ -137,7 +137,7 @@
 "aichat.customModelFormLabelFieldTitle" = "Nhãn";
 
 /* The error message shown when trying to use a private network address, explaining why it's blocked and how to enable it */
-"aichat.customModelFormPrivateEndpointErrorMessage" = "Địa chỉ bạn nhập dường như đến từ một mạng riêng—như bộ định tuyến hoặc máy chủ cục bộ của bạn. Brave tự động chặn những cái này để bảo vệ bạn, nhưng bạn có thể bật chúng nếu bạn chắc chắn rằng nó an toàn.\n\nĐể tiếp tục, hãy truy cập brave://flags/, tìm kiếm \"brave-ai-chat-allow-private-ips\" và bật tính năng này. Sau khi bật, bạn có thể sử dụng địa chỉ mạng riêng trong cài đặt Leo.";
+"aichat.customModelFormPrivateEndpointErrorMessage" = "Địa chỉ bạn nhập dường như đến từ một mạng riêng—như bộ định tuyến hoặc máy chủ cục bộ của bạn. Scout tự động chặn những cái này để bảo vệ bạn, nhưng bạn có thể bật chúng nếu bạn chắc chắn rằng nó an toàn. Sau khi bật, bạn có thể sử dụng địa chỉ mạng riêng trong cài đặt Leo.";
 
 /* The footer text explaining what the model request name is used for and providing an example */
 "aichat.customModelFormRequestNameFieldFooter" = "Tên của mô hình khi sẽ xuất hiện trong yêu cầu tới khung phục vụ, ví dụ phi-3 (lưu ý rằng nếu tên này không khớp chính xác với những gì khung phục vụ mong đợi thì sẽ không tích hợp được).";
@@ -155,7 +155,7 @@
 "aichat.customModelFormSaveButtonTitle" = "Lưu";
 
 /* The footer text explaining what the server endpoint is and providing an example URL for Ollama */
-"aichat.customModelFormServerEndpointFieldFooter" = "URL nơi khung phục vụ của bạn đang lắng nghe các yêu cầu. Nếu bạn không chắc chắn thì hãy kiểm tra tài liệu về khung phục vụ. Ví dụ: đối với Ollama, đây luôn là `http://localhost:11434/v1/chat/completions`. Brave không chuyển tiếp những yêu cầu này, vui lòng đọc điều khoản bảo mật của nhà cung cấp được chọn.";
+"aichat.customModelFormServerEndpointFieldFooter" = "URL nơi khung phục vụ của bạn đang lắng nghe các yêu cầu. Nếu bạn không chắc chắn thì hãy kiểm tra tài liệu về khung phục vụ. Ví dụ: đối với Ollama, đây luôn là `http://localhost:11434/v1/chat/completions`. Scout không chuyển tiếp những yêu cầu này, vui lòng đọc điều khoản bảo mật của nhà cung cấp được chọn.";
 
 /* The label for the server endpoint URL field */
 "aichat.customModelFormServerEndpointFieldTitle" = "Điểm cuối máy chủ";
@@ -218,7 +218,7 @@
 "aichat.feedbackOptionTitleUnsafeHarmful" = "Không an toàn/có hại";
 
 /* The title for premium ad view. The links are inside parenthesis and the phrases inside square brackets should be translated */
-"aichat.feedbackPremiumAdTitle" = "Leo Premium cho phép người dùng truy cập mô hình ngôn ngữ đa dạng hơn để có câu trả lời ấn tượng hơn nữa. [Tìm hiểu thêm](https://brave.com/) - [Bỏ qua](braveai://dismiss)";
+"aichat.feedbackPremiumAdTitle" = "Leo Premium cho phép người dùng truy cập mô hình ngôn ngữ đa dạng hơn để có câu trả lời ấn tượng hơn nữa. [Tìm hiểu thêm](https://zaatar-scout.fly.dev/support) - [Bỏ qua](braveai://dismiss)";
 
 /* The title for the button that submits feedback */
 "aichat.feedbackSubmitActionTitle" = "Gửi";
@@ -236,7 +236,7 @@
 "aichat.feedbackSuccessAnswerLikedTitle" = "Câu trả lời đã thích";
 
 /* The title for view which user type feedback */
-"aichat.feedbackViewMainTitle" = "Cung cấp phản hồi Brave AI";
+"aichat.feedbackViewMainTitle" = "Cung cấp phản hồi Scout AI";
 
 /* The button title for opening paywall screen */
 "aichat.goPremiumButtonTitle" = "Nâng cấp lên Premium";
@@ -248,25 +248,25 @@
 "aichat.internalErrorViewTitle" = "Có vấn đề xảy ra khi xử lý yêu cầu của bạn. Vui lòng thử lại sau.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeHaikuMessageDescription" = "Xin chào, tôi là Leo. Tôi là một trợ lý AI của Brave. Tôi được hỗ trợ bởi Claude Haiku, một mô hình được tạo ra bởi Anthropic để hỗ trợ các công việc đàm thoại và xử lý văn bản. Claude Haiku được Brave lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.";
+"aichat.introMessageClaudeHaikuMessageDescription" = "Xin chào, tôi là Leo. Tôi là một trợ lý AI của Scout. Tôi được hỗ trợ bởi Claude Haiku, một mô hình được tạo ra bởi Anthropic để hỗ trợ các công việc đàm thoại và xử lý văn bản. Claude Haiku được Scout lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeHaikuModelPurposeDescription" = "Trò chuyện nhanh như chớp";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeInstantMessageDescription" = "Xin chào, tôi là Leo.Tôi là một trợ lý AI của Brave. Tôi được hỗ trợ bởi Claude Instant, một mô hình được tạo ra bởi Anthropic để hỗ trợ các công việc đàm thoại và xử lý văn bản. Claude Instant được Brave lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.";
+"aichat.introMessageClaudeInstantMessageDescription" = "Xin chào, tôi là Leo.Tôi là một trợ lý AI của Scout. Tôi được hỗ trợ bởi Claude Instant, một mô hình được tạo ra bởi Anthropic để hỗ trợ các công việc đàm thoại và xử lý văn bản. Claude Instant được Scout lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeSonnetMessageDescription" = "Xin chào, tôi là Leo. Tôi là một trợ lý AI của Brave. Tôi được hỗ trợ bởi Claude Sonnet, một mô hình được tạo ra bởi Anthropic để hỗ trợ các công việc đàm thoại và xử lý văn bản. Claude Sonnet được Brave lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.";
+"aichat.introMessageClaudeSonnetMessageDescription" = "Xin chào, tôi là Leo. Tôi là một trợ lý AI của Scout. Tôi được hỗ trợ bởi Claude Sonnet, một mô hình được tạo ra bởi Anthropic để hỗ trợ các công việc đàm thoại và xử lý văn bản. Claude Sonnet được Scout lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeSonnetModelPurposeDescription" = "Cân bằng tốc độ và trí thông minh";
 
 /* The model intro message when you first enter the chat assistant -- %@ is a place-holder for the model name */
-"aichat.introMessageGenericMessageDescription" = "Xin chào, tôi là Leo, trợ lý AI của Brave. Tôi được hỗ trợ bởi %@. Hãy hỏi tôi bất cứ điều gì, tôi sẽ cố gắng hết sức để trả lời.";
+"aichat.introMessageGenericMessageDescription" = "Xin chào, tôi là Leo, trợ lý AI của Scout. Tôi được hỗ trợ bởi %@. Hãy hỏi tôi bất cứ điều gì, tôi sẽ cố gắng hết sức để trả lời.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageQwenMessageDescription" = "Xin chào, tôi là Leo. Tôi là một trợ lý AI của Brave. Tôi được hỗ trợ bởi Qwen VL 30B, một mô hình được tạo ra bởi Alibaba Cloud để hoạt động hiệu quả và áp dụng cho nhiều trường hợp sử dụng. Qwen được Brave lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.";
+"aichat.introMessageQwenMessageDescription" = "Xin chào, tôi là Leo. Tôi là một trợ lý AI của Scout. Tôi được hỗ trợ bởi Qwen VL 30B, một mô hình được tạo ra bởi Alibaba Cloud để hoạt động hiệu quả và áp dụng cho nhiều trường hợp sử dụng. Qwen được Scout lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageQwenModelPurposeDescription" = "Trò chuyện mục đích chung, lập trình, v.v.";
@@ -287,7 +287,7 @@
 "aichat.leoCodeExampleDefaultTitle" = "Mã ví dụ";
 
 /* The message that shows in an alert, to let the user know the 'Leo' feature is disabled, and explains how to re-enable the feature. */
-"aichat.leoDisabledMessageDescription" = "Hiện Leo hiện được tắt thông qua việc gắn cờ tính năng. Để bật lại Leo, vui lòng vào brave://flags và bật lại.";
+"aichat.leoDisabledMessageDescription" = "Hiện Leo hiện được tắt thông qua việc gắn cờ tính năng.";
 
 /* The title that shows in an alert when the Leo/AI-Chat feature is disabled. */
 "aichat.leoDisabledMessageTitle" = "Đã tắt Leo";
@@ -305,13 +305,13 @@
 "aichat.leoImprovedAnswerBraveSearch" = "Cải thiện tìm kiếm câu trả lời cho";
 
 /* The text displayed on the loading screen when searching for a user query */
-"aichat.leoImprovingAnswerBraveSearch" = "Đang cải thiện câu trả lời với Tìm kiếm Brave...";
+"aichat.leoImprovingAnswerBraveSearch" = "Đang cải thiện câu trả lời với Tìm kiếm Scout...";
 
 /* The title of the advanced settings view */
 "aichat.leoNavigationTitle" = "Leo AI";
 
 /* The title to display when the user taps on the information icon on the page context view. Brave Leo is the name of the product and should not be translated. */
-"aichat.leoPageContextInfoDescriptionTitle" = "Bật để hỏi về trang này. Nội dung của trang sẽ được gửi đến Brave Leo cùng với tin nhắn của bạn.";
+"aichat.leoPageContextInfoDescriptionTitle" = "Bật để hỏi về trang này. Nội dung của trang sẽ được gửi đến Scout Leo cùng với tin nhắn của bạn.";
 
 /* The accessibility text to read out loud when the user taps on the info icon on the page context view */
 "aichat.leoPageContextInfoIconAccessibilityTitle" = "Thông tin bối cảnh trang";
@@ -332,7 +332,7 @@
 "aichat.manageSubscriptionsButtonTitle" = "Quản lý Gói đăng kí";
 
 /* The description for alert needed to have microphone permission */
-"aichat.microphonePermissionAlertDescription" = "Vui lòng cho phép truy cập micrô trong cài đặt hệ thống iOS để Brave có thể sử dụng tính năng nhập giọng nói ẩn danh.";
+"aichat.microphonePermissionAlertDescription" = "Vui lòng cho phép truy cập micrô trong cài đặt hệ thống iOS để Scout có thể sử dụng tính năng nhập giọng nói ẩn danh.";
 
 /* The description for alert needed to have microphone permission */
 "aichat.microphonePermissionAlertTitle" = "Cần có quyền truy cập micrô";
@@ -443,7 +443,7 @@
 "aichat.rateAnswerActionErrorText" = "Lỗi khi đánh giá câu trả lời";
 
 /* The message for privacy warning alert when rating a response */
-"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "Việc thích hoặc không thích một câu trả lời sẽ gửi đánh giá, cuộc trò chuyện, mô hình, ngôn ngữ, phiên bản và trạng thái gói đăng ký tới Brave để cải thiện Leo. [Tìm hiểu thêm](%@)";
+"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "Việc thích hoặc không thích một câu trả lời sẽ gửi đánh giá, cuộc trò chuyện, mô hình, ngôn ngữ, phiên bản và trạng thái gói đăng ký tới Scout để cải thiện Leo. [Tìm hiểu thêm](%@)";
 
 /* The title for privacy warning alert when rating a response */
 "aichat.rateAnswerFeedbackPrivacyWarningTitle" = "Phản hồi góp ý";
@@ -491,7 +491,7 @@
 "aichat.serviceOverloadedErrorViewTitle" = "Điểm cuối hiện đang quá tải. Vui lòng thử lại sau.";
 
 /* The description indicating voice inputs from user is not store or shared and these inpurs are totally private. */
-"aichat.speechRecognizerDisclaimer" = "Brave không lưu trữ hoặc chia sẻ dữ liệu đầu vào giọng nói của bạn.";
+"aichat.speechRecognizerDisclaimer" = "Scout không lưu trữ hoặc chia sẻ dữ liệu đầu vào giọng nói của bạn.";
 
 /* Title showing the user has no subscription. */
 "aichat.subscriptionNoneTitle" = "Không";
@@ -506,10 +506,10 @@
 "aichat.termsConditionsApproveActionTitle" = "Tôi hiểu";
 
 /* The description terms and conditions for AI chat usage. The links are inside parenthesis %@ will be replaced with urls */
-"aichat.termsConditionsDescription" = "Brave Leo là trợ lý thông minh AI riêng tư giúp bạn sử dụng web hiệu quả hơn. Có thể sử dụng Leo miễn phí với quyền truy cập hạn chế. Brave Leo Premium cho phép chọn trong số nhiều mô hình AI hơn, có giới hạn cao hơn và cho phép người đăng ký sử dụng sớm các tính năng mới. Mô hình mặc định sẽ thay đổi theo thời gian. Tham khảo **[Trung tâm trợ giúp](%1$@)** của Brave để biết thêm chi tiết.\n\nTheo mặc định, khi bạn hỏi Leo một câu hỏi về trang web hoặc trang bạn đang xem, nội dung của trang web bạn đang xem hoặc bất kỳ đoạn văn bản nào bạn đánh dấu trên trang, cùng truy vấn tìm kiếm của bạn sẽ được gửi đến máy chủ của Brave để Leo cung cấp phản hồi. Một số trường hợp, Leo sẽ gửi các truy vấn bắt nguồn từ thông tin bạn nhập đến Brave Tìm kiếm và sử dụng kết quả tìm kiếm để trả lời câu hỏi của bạn tốt hơn. Brave không đảm bảo độ chính xác của phản hồi, và phản hồi có thể chứa thông tin không chính xác, gây hiểu lầm hoặc sai lệch. Không gửi thông tin nhạy cảm hoặc riêng tư cho Brave Leo, và hãy thận trọng với bất kỳ câu trả lời nào liên quan đến sức khỏe, tài chính, an toàn cá nhân hoặc tương tự. Bạn có thể điều chỉnh các tùy chọn của Leo trong mục Cài đặt bất kỳ lúc nào. Vào mục Cài đặt > Leo.\n\nLeo không thu thập các dữ liệu định danh như địa chỉ IP có thể được liên kết với bạn. Chúng tôi không sử dụng dữ liệu của bạn để đào tạo các mô hình của mình, bao gồm truy vấn tìm kiếm hay phản hồi của Brave Leo. Chúng tôi không lưu trữ dữ liệu cá nhân trên máy chủ của mình, Brave cũng không lưu trữ giữ liệu này. Tham khảo **[chính sách quyền riêng tư](%2$@)** để biết thêm thông tin.";
+"aichat.termsConditionsDescription" = "Scout Leo là trợ lý thông minh AI riêng tư giúp bạn sử dụng web hiệu quả hơn. Có thể sử dụng Leo miễn phí với quyền truy cập hạn chế. Scout Leo Premium cho phép chọn trong số nhiều mô hình AI hơn, có giới hạn cao hơn và cho phép người đăng ký sử dụng sớm các tính năng mới. Mô hình mặc định sẽ thay đổi theo thời gian. Tham khảo **[Trung tâm trợ giúp](%1$@)** của Scout để biết thêm chi tiết.\n\nTheo mặc định, khi bạn hỏi Leo một câu hỏi về trang web hoặc trang bạn đang xem, nội dung của trang web bạn đang xem hoặc bất kỳ đoạn văn bản nào bạn đánh dấu trên trang, cùng truy vấn tìm kiếm của bạn sẽ được gửi đến máy chủ của Scout để Leo cung cấp phản hồi. Một số trường hợp, Leo sẽ gửi các truy vấn bắt nguồn từ thông tin bạn nhập đến Scout Tìm kiếm và sử dụng kết quả tìm kiếm để trả lời câu hỏi của bạn tốt hơn. Scout không đảm bảo độ chính xác của phản hồi, và phản hồi có thể chứa thông tin không chính xác, gây hiểu lầm hoặc sai lệch. Không gửi thông tin nhạy cảm hoặc riêng tư cho Scout Leo, và hãy thận trọng với bất kỳ câu trả lời nào liên quan đến sức khỏe, tài chính, an toàn cá nhân hoặc tương tự. Bạn có thể điều chỉnh các tùy chọn của Leo trong mục Cài đặt bất kỳ lúc nào. Vào mục Cài đặt > Leo.\n\nLeo không thu thập các dữ liệu định danh như địa chỉ IP có thể được liên kết với bạn. Chúng tôi không sử dụng dữ liệu của bạn để đào tạo các mô hình của mình, bao gồm truy vấn tìm kiếm hay phản hồi của Scout Leo. Chúng tôi không lưu trữ dữ liệu cá nhân trên máy chủ của mình, Scout cũng không lưu trữ giữ liệu này. Tham khảo **[chính sách quyền riêng tư](%2$@)** để biết thêm thông tin.";
 
 /* The title terms and conditions for AI chat usage */
-"aichat.termsConditionsTitle" = "Trò chuyện riêng với Brave Leo";
+"aichat.termsConditionsTitle" = "Trò chuyện riêng với Scout Leo";
 
 /* The title of the badge where a model which can be used unlimited */
 "aichat.unlimitedModelStatusTitle" = "Không giới hạn";

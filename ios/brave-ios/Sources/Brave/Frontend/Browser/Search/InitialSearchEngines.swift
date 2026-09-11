@@ -99,9 +99,8 @@ class InitialSearchEngines {
     engines.filter { !$0.id.excludedFromOnboarding(for: locale) }
   }
 
-  let braveSearchDefaultRegions = [
-    "US", "CA", "GB", "FR", "DE", "AU", "AT", "ES", "MX", "BR", "AR", "IN", "IT",
-  ]
+  /// Scout doesn't make Brave's own search engine the default anywhere.
+  let braveSearchDefaultRegions: [String] = []
   let yandexDefaultRegions = ["AM", "AZ", "BY", "KG", "KZ", "MD", "RU", "TJ", "TM", "UZ"]
   let ecosiaEnabledRegions = [
     "AT", "AU", "BE", "CA", "DK", "ES", "FI", "GR", "HU", "IT",
@@ -148,8 +147,8 @@ class InitialSearchEngines {
     self.locale = locale
 
     // Default order and available search engines, applies to all locales
+    // Scout: Brave Search is not offered as a built-in engine.
     engines = [
-      .init(id: .braveSearch),
       .init(id: .google),
       .init(id: .bing),
       .init(id: .duckduckgo),

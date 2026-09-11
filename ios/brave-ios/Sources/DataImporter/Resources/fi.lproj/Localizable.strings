@@ -17,7 +17,7 @@
 "importDataFileSelectorButtonTitle" = "Valitse tiedosto...";
 
 /* The message of a Text on screen that explains to the user what type of data can be imported. */
-"importDataFileSelectorMessage" = "Tuo kirjanmerkkisi, historiasi ja muut selaimen tiedot Braveen.";
+"importDataFileSelectorMessage" = "Tuo kirjanmerkkisi, historiasi ja muut selaimen tiedot Scoutiin.";
 
 /* The title of the main screen that lets the user import data. The title is shown in the navigation bar. */
 "importDataFileSelectorNavigationTitle" = "Tuo selaustiedot";
@@ -35,7 +35,7 @@
 "importStateFailureTitle" = "Tuonti epäonnistui";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user keep your existing Brave passwords. */
-"importStatePasswordConflictKeepExistingPasswordsTitle" = "Säilytä Bravessa olevat salasanat";
+"importStatePasswordConflictKeepExistingPasswordsTitle" = "Säilytä Scoutissa olevat salasanat";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user use the passwords that were imported, overwriting your existing passwords. */
 "importStatePasswordConflictKeepImportedPasswordsTitle" = "Käytä Safarin salasanoja";
@@ -50,7 +50,7 @@
 "importStateSuccessContinueTitle" = "Jatka";
 
 /* The message shown on the import data screen when importing the data from the browser profile succeeded. */
-"importStateSuccessMessage" = "Tietosi on tuotu onnistuneesti.\nOlet valmis aloittamaan selailun Bravella.";
+"importStateSuccessMessage" = "Tietosi on tuotu onnistuneesti.\nOlet valmis aloittamaan selailun Scoutilla.";
 
 /* The title shown on the import data screen when importing the data from the browser profile succeeded. */
 "importStateSuccessTitle" = "Onnistui!";

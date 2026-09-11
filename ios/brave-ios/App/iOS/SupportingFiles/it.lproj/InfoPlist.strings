@@ -14,7 +14,7 @@
 "NSLocationWhenInUseUsageDescription" = "I siti web che visiti potrebbero richiedere la tua posizione.";
 
 /* Privacy - Microphone Usage Description */
-"NSMicrophoneUsageDescription" = "Questo permette a brave di effettuare ricerche usando la tua voce.";
+"NSMicrophoneUsageDescription" = "Questo permette a Scout di effettuare ricerche usando la tua voce.";
 
 /* Privacy - Photo Library Additions Usage Description */
 "NSPhotoLibraryAddUsageDescription" = "Questa impostazione ti permette di salvare le foto.";

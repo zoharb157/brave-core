@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Hỏi Brave";
+"widgets.askBrave" = "Hỏi Scout";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Dấu trang";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo AI";
 
 /* The name of the feature */
-"widgets.braveNews" = "Tin tức Brave";
+"widgets.braveNews" = "Tin tức";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Tải xuống";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "Tin tức hàng đầu";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Tin tức Brave đã bị tắt";
+"widgets.newsUnavailableByPolicy" = "Tin tức đã bị tắt";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "Đã bị tắt bởi chính sách của tổ chức bạn";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "Thống kê Quyền riêng tư";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Ví Brave";
+"widgets.walletShortcutTitle" = "Ví";
 

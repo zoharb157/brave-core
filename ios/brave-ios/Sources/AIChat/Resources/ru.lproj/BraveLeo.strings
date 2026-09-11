@@ -1,5 +1,5 @@
 /* The description for the error message when the user's session has expired */
-"aichat.accountSessionExpiredDescription" = "Срок действия сеанса в Brave истек. Чтобы получить доступ к премиум-функциям, обновите страницу аккаунта.";
+"aichat.accountSessionExpiredDescription" = "Срок действия сеанса в Scout истек. Чтобы получить доступ к премиум-функциям, обновите страницу аккаунта.";
 
 /* The title for button that submits feedback */
 "aichat.addFeedbackActionTitle" = "Оставить отзыв";
@@ -14,10 +14,10 @@
 "aichat.advancedSettingsHeaderTitle" = "Leo — это ИИ-помощник, встроенный в браузер";
 
 /* The subtitle for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Привяжите покупку в App Store к аккаунту Brave, чтобы использовать Leo на других устройствах.";
+"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Привяжите покупку в App Store к аккаунту Scout, чтобы использовать Leo на других устройствах.";
 
 /* The title for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionTitle" = "Привязать покупку к аккаунту Brave";
+"aichat.advancedSettingsLinkPurchaseActionTitle" = "Привязать покупку к аккаунту Scout";
 
 /* The description for the settings to show Leo in Quick Search Engines Bar. */
 "aichat.advancedSettingsShowInQSEBarDescription" = "Включить ярлык для запуска Leo из панели быстрых поисковых систем.";
@@ -59,7 +59,7 @@
 "aichat.byomEmptyStateTitle" = "У вас нет подключенных моделей";
 
 /* The section header description explaining the Bring Your Own Model feature with a link to learn more. The text inside square brackets should be translated. */
-"aichat.byomSectionHeaderDescription" = "Подключите свою локальную или размещенную у третьей стороны LLM к Лео и используйте их в Браузере. Используйте любую совместимую с протоколом OpenAI Chat структуру, такую как Ollama. [Узнайте больше](https://support.brave.app/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo)";
+"aichat.byomSectionHeaderDescription" = "Подключите свою локальную или размещенную у третьей стороны LLM к Лео и используйте их в Браузере. Используйте любую совместимую с протоколом OpenAI Chat структуру, такую как Ollama. [Узнайте больше](https://zaatar-scout.fly.dev/support)";
 
 /* The section header title for the Bring Your Own Model feature */
 "aichat.byomSectionHeaderTitle" = "Воспользуйтесь своей моделью";
@@ -71,7 +71,7 @@
 "aichat.chatIntroJustTalkTitle" = "Просто нужен чат?";
 
 /* The subtitle for intro view */
-"aichat.chatIntroSubTitle" = "Умный ассистент, работающий на основе ИИ и встроенный в Brave.";
+"aichat.chatIntroSubTitle" = "Умный ассистент, работающий на основе ИИ и встроенный в Scout.";
 
 /* The title for intro view */
 "aichat.chatIntroTitle" = "Привет, я Лео!";
@@ -137,7 +137,7 @@
 "aichat.customModelFormLabelFieldTitle" = "Ярлык";
 
 /* The error message shown when trying to use a private network address, explaining why it's blocked and how to enable it */
-"aichat.customModelFormPrivateEndpointErrorMessage" = "Введённый адрес, похоже, относится к приватной сети — например, вашему маршрутизатору или локальному серверу. Brave блокирует их автоматически для вашей безопасности, но вы можете их включить, если уверены в их надёжности.\n\nДля продолжения перейдите в brave://flags/, найдите «brave-ai-chat-allow-private-ips» и включите эту функцию. После включения вы сможете использовать приватные адреса сети в настройках Лео.";
+"aichat.customModelFormPrivateEndpointErrorMessage" = "Введённый адрес, похоже, относится к приватной сети — например, вашему маршрутизатору или локальному серверу. Scout блокирует их автоматически для вашей безопасности, но вы можете их включить, если уверены в их надёжности. После включения вы сможете использовать приватные адреса сети в настройках Лео.";
 
 /* The footer text explaining what the model request name is used for and providing an example */
 "aichat.customModelFormRequestNameFieldFooter" = "Название модели, как оно должно появляться в запросе к обслуживающему фреймворку, например phi-3 (обратите внимание, что если это название не совпадает точно с тем, что ожидает обслуживающий фреймворк, интеграция не будет работать).";
@@ -155,7 +155,7 @@
 "aichat.customModelFormSaveButtonTitle" = "Сохранить";
 
 /* The footer text explaining what the server endpoint is and providing an example URL for Ollama */
-"aichat.customModelFormServerEndpointFieldFooter" = "URL-адрес, по которому ваш обслуживающий фреймворк прослушивает запросы. Если вы не уверены, проверьте документацию обслуживающего фреймворка. Например, для Ollama это всегда `http://localhost:11434/v1/chat/completions`. Brave не проксирует эти запросы, пожалуйста, прочитайте условия конфиденциальности выбранного поставщика.";
+"aichat.customModelFormServerEndpointFieldFooter" = "URL-адрес, по которому ваш обслуживающий фреймворк прослушивает запросы. Если вы не уверены, проверьте документацию обслуживающего фреймворка. Например, для Ollama это всегда `http://localhost:11434/v1/chat/completions`. Scout не проксирует эти запросы, пожалуйста, прочитайте условия конфиденциальности выбранного поставщика.";
 
 /* The label for the server endpoint URL field */
 "aichat.customModelFormServerEndpointFieldTitle" = "Конечная точка сервера";
@@ -218,7 +218,7 @@
 "aichat.feedbackOptionTitleUnsafeHarmful" = "Информация небезопасна или может нанести вред";
 
 /* The title for premium ad view. The links are inside parenthesis and the phrases inside square brackets should be translated */
-"aichat.feedbackPremiumAdTitle" = "Премиум-подписка Leo предоставляет доступ к расширенной подборке языковых моделей с еще более точными ответами. [Подробнее](https://brave.com/) - [Пропустить](braveai://dismiss)";
+"aichat.feedbackPremiumAdTitle" = "Премиум-подписка Leo предоставляет доступ к расширенной подборке языковых моделей с еще более точными ответами. [Подробнее](https://zaatar-scout.fly.dev/support) - [Пропустить](braveai://dismiss)";
 
 /* The title for the button that submits feedback */
 "aichat.feedbackSubmitActionTitle" = "Отправить";
@@ -236,7 +236,7 @@
 "aichat.feedbackSuccessAnswerLikedTitle" = "Вам понравился ответ";
 
 /* The title for view which user type feedback */
-"aichat.feedbackViewMainTitle" = "Оставьте отзыв о Brave VPN";
+"aichat.feedbackViewMainTitle" = "Оставьте отзыв о Scout VPN";
 
 /* The button title for opening paywall screen */
 "aichat.goPremiumButtonTitle" = "Премиум-подписка";
@@ -248,25 +248,25 @@
 "aichat.internalErrorViewTitle" = "Что-то пошло не так во время обработки вашего запроса. Пожалуйста, повторите попытку позже.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeHaikuMessageDescription" = "Привет, я Лео. Я использую прокси-сервер от Brave и работаю на Claude Haiku, модели, созданной Anthropic для решения задач, связанных с общением и обработкой текста. Claude Haiku размещается на хостинге Brave в рамках нашей собственной безопасной инфраструктуры.";
+"aichat.introMessageClaudeHaikuMessageDescription" = "Привет, я Лео. Я использую прокси-сервер от Scout и работаю на Claude Haiku, модели, созданной Anthropic для решения задач, связанных с общением и обработкой текста. Claude Haiku размещается на хостинге Scout в рамках нашей собственной безопасной инфраструктуры.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeHaikuModelPurposeDescription" = "Сверхбыстрый чат";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeInstantMessageDescription" = "Привет, я Лео. Я использую прокси-сервер от Brave и работаю на Claude Instant, модели, созданной Anthropic для решения задач, связанных с общением и обработкой текста. Claude Instant размещается на хостинге Brave в рамках нашей собственной безопасной инфраструктуры.";
+"aichat.introMessageClaudeInstantMessageDescription" = "Привет, я Лео. Я использую прокси-сервер от Scout и работаю на Claude Instant, модели, созданной Anthropic для решения задач, связанных с общением и обработкой текста. Claude Instant размещается на хостинге Scout в рамках нашей собственной безопасной инфраструктуры.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeSonnetMessageDescription" = "Привет, я Лео. Я использую прокси-сервер от Brave и работаю на Claude Sonnet, модели, созданной Anthropic для решения задач, связанных с общением и обработкой текста. Claude Sonnet размещается на хостинге Brave в рамках нашей собственной безопасной инфраструктуры.";
+"aichat.introMessageClaudeSonnetMessageDescription" = "Привет, я Лео. Я использую прокси-сервер от Scout и работаю на Claude Sonnet, модели, созданной Anthropic для решения задач, связанных с общением и обработкой текста. Claude Sonnet размещается на хостинге Scout в рамках нашей собственной безопасной инфраструктуры.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeSonnetModelPurposeDescription" = "Баланс между скоростью и интеллектом";
 
 /* The model intro message when you first enter the chat assistant -- %@ is a place-holder for the model name */
-"aichat.introMessageGenericMessageDescription" = "Привет, я Leo, ИИ-помощник от Brave на базе %@. Спросите меня о чем угодно, и я постараюсь ответить как можно точнее.";
+"aichat.introMessageGenericMessageDescription" = "Привет, я Leo, ИИ-помощник от Scout на базе %@. Спросите меня о чем угодно, и я постараюсь ответить как можно точнее.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageQwenMessageDescription" = "Привет, я Лео. Я — ИИ-ассистент от Brave. Я работаю на базе Qwen VL 30B, модели, созданной Alibaba Cloud для высокой производительности и широкого спектра применений. Qwen размещается на хостинге Brave в нашей собственной защищённой инфраструктуре.";
+"aichat.introMessageQwenMessageDescription" = "Привет, я Лео. Я — ИИ-ассистент от Scout. Я работаю на базе Qwen VL 30B, модели, созданной Alibaba Cloud для высокой производительности и широкого спектра применений. Qwen размещается на хостинге Scout в нашей собственной защищённой инфраструктуре.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageQwenModelPurposeDescription" = "Чат для общего назначения, кодирование и многое другое";
@@ -287,7 +287,7 @@
 "aichat.leoCodeExampleDefaultTitle" = "Пример кода";
 
 /* The message that shows in an alert, to let the user know the 'Leo' feature is disabled, and explains how to re-enable the feature. */
-"aichat.leoDisabledMessageDescription" = "В настоящее время Leo отключен через флаги функций. Чтобы снова включить Leo, перейдите по адресу brave://flags и включите его.";
+"aichat.leoDisabledMessageDescription" = "В настоящее время Leo отключен через флаги функций.";
 
 /* The title that shows in an alert when the Leo/AI-Chat feature is disabled. */
 "aichat.leoDisabledMessageTitle" = "Leo отключен";
@@ -305,13 +305,13 @@
 "aichat.leoImprovedAnswerBraveSearch" = "Улучшенный ответ на запрос";
 
 /* The text displayed on the loading screen when searching for a user query */
-"aichat.leoImprovingAnswerBraveSearch" = "Улучшаем ответ с помощью Brave Поиска…";
+"aichat.leoImprovingAnswerBraveSearch" = "Улучшаем ответ с помощью Scout Поиска…";
 
 /* The title of the advanced settings view */
 "aichat.leoNavigationTitle" = "ИИ-помощник Leo";
 
 /* The title to display when the user taps on the information icon on the page context view. Brave Leo is the name of the product and should not be translated. */
-"aichat.leoPageContextInfoDescriptionTitle" = "Включите, чтобы спросить об этой странице. Ее содержимое будет отправлено ассистенту Лео от Brave вместе с вашими сообщениями.";
+"aichat.leoPageContextInfoDescriptionTitle" = "Включите, чтобы спросить об этой странице. Ее содержимое будет отправлено ассистенту Лео от Scout вместе с вашими сообщениями.";
 
 /* The accessibility text to read out loud when the user taps on the info icon on the page context view */
 "aichat.leoPageContextInfoIconAccessibilityTitle" = "Информация о контексте страницы";
@@ -332,7 +332,7 @@
 "aichat.manageSubscriptionsButtonTitle" = "Управление подписками";
 
 /* The description for alert needed to have microphone permission */
-"aichat.microphonePermissionAlertDescription" = "Чтобы использовать анонимный голосовой ввод в Brave, разрешите доступ к микрофону в системных настройках iOS.";
+"aichat.microphonePermissionAlertDescription" = "Чтобы использовать анонимный голосовой ввод в Scout, разрешите доступ к микрофону в системных настройках iOS.";
 
 /* The description for alert needed to have microphone permission */
 "aichat.microphonePermissionAlertTitle" = "Требуется доступ к микрофону";
@@ -443,7 +443,7 @@
 "aichat.rateAnswerActionErrorText" = "Ошибка оценки ответа";
 
 /* The message for privacy warning alert when rating a response */
-"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "Оценка ответа — «нравится» или «не нравится» — отправляет Brave информацию о рейтинге, содержании беседы, используемой модели, языке, версии и статусе подписки, чтобы улучшить работу Лео. [Узнайте больше](%@)";
+"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "Оценка ответа — «нравится» или «не нравится» — отправляет Scout информацию о рейтинге, содержании беседы, используемой модели, языке, версии и статусе подписки, чтобы улучшить работу Лео. [Узнайте больше](%@)";
 
 /* The title for privacy warning alert when rating a response */
 "aichat.rateAnswerFeedbackPrivacyWarningTitle" = "Обратная связь";
@@ -491,7 +491,7 @@
 "aichat.serviceOverloadedErrorViewTitle" = "Конечная точка в настоящее время перегружена. Пожалуйста, повторите попытку позже.";
 
 /* The description indicating voice inputs from user is not store or shared and these inpurs are totally private. */
-"aichat.speechRecognizerDisclaimer" = "Brave не хранит и не передает данные о голосовом поиске.";
+"aichat.speechRecognizerDisclaimer" = "Scout не хранит и не передает данные о голосовом поиске.";
 
 /* Title showing the user has no subscription. */
 "aichat.subscriptionNoneTitle" = "Нет";
@@ -506,10 +506,10 @@
 "aichat.termsConditionsApproveActionTitle" = "Все понятно";
 
 /* The description terms and conditions for AI chat usage. The links are inside parenthesis %@ will be replaced with urls */
-"aichat.termsConditionsDescription" = "Brave Leo - это частный интеллектуальный помощник с искусственным интеллектом, который улучшает Ваше пользование Интернетом. Leo можно использовать бесплатно с ограниченным доступом. Brave Leo Premium предлагает больше моделей, более высокие лимиты и дает подписчикам ранний доступ к новым функциям. Модель по умолчанию будет время от времени меняться. Более подробную информацию см. в Brave **[Справочный центр](%1$@)**.\n\nПо умолчанию, когда Вы задаете Leo вопрос о просматриваемом сайте или странице, содержимое просматриваемой страницы или любой текст, который Вы выделили на странице, а также Ваш поисковый запрос будут отправлены на серверы Brave, чтобы Leo смог предоставить ответ. В некоторых случаях Leo будет отправлять запросы, полученные на основе Ваших данных, на Brave Search и использовать результаты поиска, чтобы лучше ответить на Ваш вопрос. Brave не гарантирует точность ответов, и ответы могут содержать неточную, вводящую в заблуждение или ложную информацию. Не сообщайте Brave Leo конфиденциальную или частную информацию, и будьте осторожны с ответами, касающимися здоровья, финансов, личной безопасности и т.п. Вы можете в любой момент изменить параметры Leo в Настройках. Перейдите в Настройки > Leo.\n\nLeo не собирает идентификаторы, такие как Ваш IP-адрес, которые могут быть связаны с Вами. Мы не обучаем наши модели на основе Ваших данных, включая Ваши поисковые запросы или ответы Brave Leo. Никакие личные данные не хранятся на наших серверах и не сохраняются Brave. Более подробную информацию см. в **[политике конфиденциальности](%2$@)**.";
+"aichat.termsConditionsDescription" = "Scout Leo - это частный интеллектуальный помощник с искусственным интеллектом, который улучшает Ваше пользование Интернетом. Leo можно использовать бесплатно с ограниченным доступом. Scout Leo Premium предлагает больше моделей, более высокие лимиты и дает подписчикам ранний доступ к новым функциям. Модель по умолчанию будет время от времени меняться. Более подробную информацию см. в Scout **[Справочный центр](%1$@)**.\n\nПо умолчанию, когда Вы задаете Leo вопрос о просматриваемом сайте или странице, содержимое просматриваемой страницы или любой текст, который Вы выделили на странице, а также Ваш поисковый запрос будут отправлены на серверы Scout, чтобы Leo смог предоставить ответ. В некоторых случаях Leo будет отправлять запросы, полученные на основе Ваших данных, на Scout Search и использовать результаты поиска, чтобы лучше ответить на Ваш вопрос. Scout не гарантирует точность ответов, и ответы могут содержать неточную, вводящую в заблуждение или ложную информацию. Не сообщайте Scout Leo конфиденциальную или частную информацию, и будьте осторожны с ответами, касающимися здоровья, финансов, личной безопасности и т.п. Вы можете в любой момент изменить параметры Leo в Настройках. Перейдите в Настройки > Leo.\n\nLeo не собирает идентификаторы, такие как Ваш IP-адрес, которые могут быть связаны с Вами. Мы не обучаем наши модели на основе Ваших данных, включая Ваши поисковые запросы или ответы Scout Leo. Никакие личные данные не хранятся на наших серверах и не сохраняются Scout. Более подробную информацию см. в **[политике конфиденциальности](%2$@)**.";
 
 /* The title terms and conditions for AI chat usage */
-"aichat.termsConditionsTitle" = "Общайтесь с Brave Leo в приватном чате";
+"aichat.termsConditionsTitle" = "Общайтесь с Scout Leo в приватном чате";
 
 /* The title of the badge where a model which can be used unlimited */
 "aichat.unlimitedModelStatusTitle" = "Без ограничений";

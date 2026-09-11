@@ -8,6 +8,7 @@ Actions to run before every build in the brave-ios Xcode project
 """
 
 import argparse
+import glob
 import os
 import platform
 import sys
@@ -68,6 +69,7 @@ def main():
     else:
         BuildCore(options.configuration, target_arch, target_environment)
         PackJavaScript()
+    RebrandLocalePaks(output_dir)
     UpdateSymlink(options.configuration, target_arch, target_environment)
 
 
@@ -97,6 +99,18 @@ def PackJavaScript():
     webpack_config = os.path.join(brave_root_dir, 'ios', 'brave-ios',
                                   'webpack.config.js')
     node.RunNode([webpack_cli, '--config', webpack_config])
+
+
+def RebrandLocalePaks(output_dir):
+    """Scout: renames Brave in BraveCore's compiled strings before embedding"""
+    import scout_rebrand_locale_paks
+    # The app embeds BraveCore.xcframework, a separate copy of the framework.
+    frameworks = [os.path.join(output_dir, 'BraveCore.framework')]
+    frameworks += glob.glob(
+        os.path.join(output_dir, 'BraveCore.xcframework', '*', 'BraveCore.framework'))
+    for framework in filter(os.path.isdir, frameworks):
+        count = scout_rebrand_locale_paks.rebrand(framework)
+        print(f'Scout: rebranded {count} locale paks in {framework}')
 
 
 def BuildCore(config, target_arch, target_environment):

@@ -50,7 +50,7 @@
 "importStateSuccessContinueTitle" = "Devam";
 
 /* The message shown on the import data screen when importing the data from the browser profile succeeded. */
-"importStateSuccessMessage" = "Verileriniz başarıyla içe aktarıldı.\nBrave ile gezinmeye başlamak için hazırsınız.";
+"importStateSuccessMessage" = "Verileriniz başarıyla içe aktarıldı.\nScout ile gezinmeye başlamak için hazırsınız.";
 
 /* The title shown on the import data screen when importing the data from the browser profile succeeded. */
 "importStateSuccessTitle" = "Başarılı!";

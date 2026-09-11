@@ -2,7 +2,7 @@
 "adsHeader" = "Ads";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "Sudah membeli di brave.com?";
+"alreadyPurchasedTitle" = "Sudah membeli di web?";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Analisis";
@@ -11,25 +11,25 @@
 "buyNowButton" = "Beli Sekarang";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Mengaktifkan atau menonaktifkan fitur Brave memerlukan restart browser untuk menerapkan perubahan. Harap tutup (geser ke atas di App Switcher) lalu buka kembali Brave.";
+"featureEnabledToastMessage" = "Mengaktifkan atau menonaktifkan fitur Scout memerlukan restart browser untuk menerapkan perubahan. Harap tutup (geser ke atas di App Switcher) lalu buka kembali Scout.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Mengubah fitur Brave";
+"featureEnabledToastTitle" = "Mengubah fitur Scout";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Sesuaikan browser Anda sambil tetap mendukung Brave**\n\nBrave Origin adalah versi berbayar dari browser untuk pengguna yang tidak memerlukan semua fitur yang mendukung Brave sebagai bisnis, tetapi masih menginginkan privasi yang hanya Brave tawarkan. Pengguna Origin akan terus mendapatkan keuntungan dari privasi terdepan industri kami, adblock, dan kecepatan (melalui Perisai), serta pembaruan perangkat lunak rutin, patch Chromium, dan peningkatan keamanan dan privasi. Origin akan menghapus sebagian besar fitur lainnya dari browser.";
+"featuresFooter" = "**Sesuaikan browser Anda sambil tetap mendukung Scout**\n\nScout Origin adalah versi berbayar dari browser untuk pengguna yang tidak memerlukan semua fitur yang mendukung Scout sebagai bisnis, tetapi masih menginginkan privasi yang hanya Scout tawarkan. Pengguna Origin akan terus mendapatkan keuntungan dari privasi terdepan industri kami, adblock, dan kecepatan (melalui Perisai), serta pembaruan perangkat lunak rutin, patch Chromium, dan peningkatan keamanan dan privasi. Origin akan menghapus sebagian besar fitur lainnya dari browser.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Fitur";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Verifikasi Pembelian Brave Origin";
+"getLoginCodeButton" = "Verifikasi Pembelian Scout Origin";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "AI Leo";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Tautkan Pembelian ke Akun Brave Anda";
+"linkPurchase" = "Tautkan Pembelian ke Akun Scout Anda";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "Berita";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Tidak dapat menyelesaikan pembelian. Silakan coba lagi, atau periksa detail pembayaran Anda di akun Apple dan coba lagi.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Tautkan pembelian App Store Anda ke akun Brave Anda untuk menggunakan Brave Origin di perangkat lain";
+"purchaseSectionFooter" = "Tautkan pembelian App Store Anda ke akun Scout Anda untuk menggunakan Scout Origin di perangkat lain";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Beli";
@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "Pertahankan adblock inti, privasi, & kecepatan";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "UI browser minimalis yang berpusat pada Brave Perisai";
+"upsellMinimalUI" = "UI browser minimalis yang berpusat pada Scout Perisai";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "Pembelian sekali jadi dapat diaktifkan beberapa kali di semua perangkat Anda";

@@ -5,7 +5,7 @@
 "widgets.braveLeo" = "AI Leo";
 
 /* The name of the feature */
-"widgets.braveNews" = "Berita Brave";
+"widgets.braveNews" = "Berita";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Unduhan";
@@ -74,5 +74,5 @@
 "widgets.singleStatTitle" = "Statistik Kerahasiaan";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Dompet Brave";
+"widgets.walletShortcutTitle" = "Dompet";
 

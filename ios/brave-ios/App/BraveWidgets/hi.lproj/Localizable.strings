@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Brave से पूछें";
+"widgets.askBrave" = "Scout से पूछें";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "बुकमार्क";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "लियो AI";
 
 /* The name of the feature */
-"widgets.braveNews" = "Brave News";
+"widgets.braveNews" = "News";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "डाउनलोड";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "बड़ी ख़बरें";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Brave News अक्षम है";
+"widgets.newsUnavailableByPolicy" = "News अक्षम है";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "आपके संगठन की पॉलिसी द्वारा बंद कर दिया गया";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "प्राइवेसी से जुड़े आँकड़े";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Brave वॉलेट";
+"widgets.walletShortcutTitle" = "वॉलेट";
 

@@ -14,33 +14,9 @@ struct AltIcon: Identifiable {
     assetName
   }
 
-  static let threeDee = AltIcon(assetName: "3d", displayName: "3D")
-  static let retro = AltIcon(assetName: "80s", displayName: "80s")
-  static let aqua = AltIcon(assetName: "aqua", displayName: "Aqua")
-  static let bat = AltIcon(assetName: "bat", displayName: "BAT")
-  static let holo = AltIcon(assetName: "holo", displayName: "Holo")
-  static let neon = AltIcon(assetName: "neon", displayName: "Neon")
-  static let netscape = AltIcon(assetName: "netscape", displayName: "Netscape")
-  static let popart = AltIcon(assetName: "popart", displayName: "Origin Light")
-  static let popartDark = AltIcon(assetName: "popart-dark", displayName: "Origin Dark")
-  static let supernova = AltIcon(assetName: "supernova", displayName: "Supernova")
-  static let terminal = AltIcon(assetName: "terminal", displayName: "Terminal")
-  static let windows = AltIcon(assetName: "windows", displayName: "Windows")
-
-  static let allBraveIcons: [AltIcon] = [
-    .threeDee,
-    .retro,
-    .aqua,
-    .bat,
-    .holo,
-    .neon,
-    .netscape,
-    .popart,
-    .popartDark,
-    .supernova,
-    .terminal,
-    .windows,
-  ]
+  /// Brave's alternate icons were all variants of the Brave lion; Scout ships
+  /// none (the "Change App Icon" row is gated by `ScoutFeatures.alternateAppIcons`).
+  static let allBraveIcons: [AltIcon] = []
 }
 
 class AltIconsModel: ObservableObject {

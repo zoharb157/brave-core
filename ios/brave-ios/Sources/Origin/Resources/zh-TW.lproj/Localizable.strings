@@ -2,7 +2,7 @@
 "adsHeader" = "Ads";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "已在 brave.com 上購買？";
+"alreadyPurchasedTitle" = "已在 web 上購買？";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "分析";
@@ -11,25 +11,25 @@
 "buyNowButton" = "立即購買";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "啟用或停用 Brave 功能需要重新啟動瀏覽器才能套用變更。請關閉（在應用程式切換器中向上滑動），然後重新開啟 Brave。";
+"featureEnabledToastMessage" = "啟用或停用 Scout 功能需要重新啟動瀏覽器才能套用變更。請關閉（在應用程式切換器中向上滑動），然後重新開啟 Scout。";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "改變 Brave 功能";
+"featureEnabledToastTitle" = "改變 Scout 功能";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**在繼續支持 Brave 的同時自訂您的瀏覽器**\n\nBrave Origin 是瀏覽器的付費版本，適合不需要支持 Brave 業務所有功能，但仍想要只有 Brave 提供的隱私保護的用戶。Origin 用戶將繼續受益於我們業界領先的隱私保護、廣告攔截和速度（透過 Brave 盾牌），以及定期軟件更新、Chromium 補丁和安全與隱私改進。Origin 將從瀏覽器中移除大多數其他功能。";
+"featuresFooter" = "**在繼續支持 Scout 的同時自訂您的瀏覽器**\n\nScout Origin 是瀏覽器的付費版本，適合不需要支持 Scout 業務所有功能，但仍想要只有 Scout 提供的隱私保護的用戶。Origin 用戶將繼續受益於我們業界領先的隱私保護、廣告攔截和速度（透過 Scout 盾牌），以及定期軟件更新、Chromium 補丁和安全與隱私改進。Origin 將從瀏覽器中移除大多數其他功能。";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "功能";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "驗證 Brave Origin 購買";
+"getLoginCodeButton" = "驗證 Scout Origin 購買";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Leo 人工智能";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "將購買交易連結至您的 Brave 帳戶";
+"linkPurchase" = "將購買交易連結至您的 Scout 帳戶";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "News";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "無法完成購買。請再試一次，或到 Apple 帳戶查看付款詳細資訊後重試。";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "將您的 App Store 購買交易連結至 Brave 帳戶，以便在其他裝置上使用 Brave Origin";
+"purchaseSectionFooter" = "將您的 App Store 購買交易連結至 Scout 帳戶，以便在其他裝置上使用 Scout Origin";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "購買";
@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "維持核心廣告攔截、隱私權、 & 速度";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "以 Brave 盾牌為中心的極簡瀏覽器 UI";
+"upsellMinimalUI" = "以 Scout 盾牌為中心的極簡瀏覽器 UI";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "一次性購買可在您所有的裝置上多次啟用";

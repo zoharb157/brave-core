@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Vprašaj Brave";
+"widgets.askBrave" = "Vprašaj Scout";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Zaznamki";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo AI";
 
 /* The name of the feature */
-"widgets.braveNews" = "Brave novice";
+"widgets.braveNews" = "Novice";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Prenosi";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "Glavne novice";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Brave Novice so onemogočene";
+"widgets.newsUnavailableByPolicy" = "Novice so onemogočene";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "Izklopljeno s pravilnikom vaše organizacije";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "Statistika zasebnosti";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Denarnica Brave";
+"widgets.walletShortcutTitle" = "Denarnica";
 

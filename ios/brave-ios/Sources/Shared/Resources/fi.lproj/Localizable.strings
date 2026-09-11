@@ -92,7 +92,7 @@
 "ScanQRCodeInvalidDataErrorMessage" = "Tiedot ovat virheellisiä";
 
 /* Text of the prompt user to setup the camera authorization. */
-"ScanQRCodePermissionErrorMessage" = "Anna Braven käyttää laitteesi kameraa kohdassa Asetukset -> Tietosuoja -> Kamera.";
+"ScanQRCodePermissionErrorMessage" = "Anna Scoutin käyttää laitteesi kameraa kohdassa Asetukset -> Tietosuoja -> Kamera.";
 
 /* Title for the QR code scanner view. */
 "ScanQRCodeViewTitle" = "Lue QR-koodi";

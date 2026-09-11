@@ -268,14 +268,14 @@ extension Strings {
       "aichat.advancedSettingsLinkPurchaseActionTitle",
       tableName: "BraveLeo",
       bundle: .module,
-      value: "Link purchase to your Brave account",
+      value: "Link purchase to your Scout account",
       comment: "The title for the button which links purchase to Brave Account"
     )
     public static let advancedSettingsLinkPurchaseActionSubTitle = NSLocalizedString(
       "aichat.advancedSettingsLinkPurchaseActionSubTitle",
       tableName: "BraveLeo",
       bundle: .module,
-      value: "Link your App Store purchase to your Brave account to use Leo on other devices.",
+      value: "Link your App Store purchase to your Scout account to use Leo on other devices.",
       comment: "The subtitle for the button which links purchase to Brave Account"
     )
     public static let advancedSettingsSubscriptionHeaderTitle = NSLocalizedString(
@@ -355,7 +355,7 @@ extension Strings {
       tableName: "BraveLeo",
       bundle: .module,
       value:
-        "Leo is currently disabled via feature flags. To re-enable Leo, please visit brave://flags and enable it.",
+        "Leo is currently disabled via feature flags.",
       comment:
         "The message that shows in an alert, to let the user know the 'Leo' feature is disabled, and explains how to re-enable the feature."
     )
@@ -447,7 +447,7 @@ extension Strings {
       tableName: "BraveLeo",
       bundle: .module,
       value:
-        "The URL where your serving framework is listening for requests. If you're not sure, check the serving framework documentation. E.g. for Ollama, it is always `http://localhost:11434/v1/chat/completions`. Brave doesn't proxy these requests, please read privacy terms of the chosen provider.",
+        "The URL where your serving framework is listening for requests. If you're not sure, check the serving framework documentation. E.g. for Ollama, it is always `http://localhost:11434/v1/chat/completions`. Scout doesn't proxy these requests, please read privacy terms of the chosen provider.",
       comment:
         "The footer text explaining what the server endpoint is and providing an example URL for Ollama"
     )
@@ -586,9 +586,7 @@ extension Strings {
       tableName: "BraveLeo",
       bundle: .module,
       value: """
-        The address you entered appears to be from a private network—like your router or a local server. Brave blocks these automatically to keep you safe, but you can enable them if you're confident it's secure.
-
-        To proceed, visit brave://flags/, search for "brave-ai-chat-allow-private-ips," and enable the feature. Once enabled, you can use private network addresses in Leo settings.
+        The address you entered appears to be from a private network—like your router or a local server. Scout blocks these automatically to keep you safe, but you can enable them if you're confident it's secure."brave-ai-chat-allow-private-ips," and enable the feature. Once enabled, you can use private network addresses in Leo settings.
         """,
       comment:
         "The error message shown when trying to use a private network address, explaining why it's blocked and how to enable it"
@@ -605,7 +603,7 @@ extension Strings {
       tableName: "BraveLeo",
       bundle: .module,
       value: """
-        Connect your self-hosted or third-party hosted LLM to Leo and use them within the browser. Use any OpenAI Chat Protocol compatible framework such as Ollama. [Learn more](https://support.brave.app/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo)
+        Connect your self-hosted or third-party hosted LLM to Leo and use them within the browser. Use any OpenAI Chat Protocol compatible framework such as Ollama. [Learn more](https://zaatar-scout.fly.dev/support)
         """,
       comment:
         "The section header description explaining the Bring Your Own Model feature with a link to learn more. The text inside square brackets should be translated."

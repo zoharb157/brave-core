@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Ρωτήστε το Brave";
+"widgets.askBrave" = "Ρωτήστε το Scout";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Γραμμή σελιδοδεικτών";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "AI Leo";
 
 /* The name of the feature */
-"widgets.braveNews" = "Brave News";
+"widgets.braveNews" = "News";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Λήψεις";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "Κορυφαίες ειδήσεις";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Τα Νέα Brave είναι απενεργοποιημένα";
+"widgets.newsUnavailableByPolicy" = "Τα Νέα είναι απενεργοποιημένα";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "Απενεργοποιήθηκε από την πολιτική του οργανισμού σας";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "Στατιστικό απορρήτου";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Πορτοφόλι Brave";
+"widgets.walletShortcutTitle" = "Πορτοφόλι";
 

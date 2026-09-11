@@ -11,6 +11,7 @@ import Data
 import Growth
 import OSLog
 import Preferences
+import Shared
 import Strings
 import SwiftUI
 
@@ -159,21 +160,21 @@ struct OtherPrivacySettingsSectionView: View {
           option: Preferences.Privacy.screenTimeEnabled
         )
       }
-      if !settings.isP3AManaged {
+      if ScoutFeatures.braveTelemetry, !settings.isP3AManaged {
         ToggleView(
           title: Strings.P3A.settingTitle,
           subtitle: Strings.P3A.settingSubtitle,
           toggle: $settings.isP3AEnabled
         )
       }
-      if !settings.isStatsReportingManaged {
+      if ScoutFeatures.braveTelemetry, !settings.isStatsReportingManaged {
         ToggleView(
           title: Strings.Settings.sendUsagePingTitle,
           subtitle: Strings.Settings.sendUsagePingDescription,
           toggle: $settings.isStatsReportingEnabled
         )
       }
-      if !settings.isMetricsReportingManaged {
+      if ScoutFeatures.braveTelemetry, !settings.isMetricsReportingManaged {
         ToggleView(
           title: Strings.Settings.sendCrashReportsTitle,
           subtitle: Strings.Settings.sendCrashReportsDescription,
@@ -192,7 +193,9 @@ struct OtherPrivacySettingsSectionView: View {
           )
         )
       }
-      if FeatureList.kBraveNTPBrandedWallpaperSurveyPanelist.enabled {
+      if ScoutFeatures.braveTelemetry,
+        FeatureList.kBraveNTPBrandedWallpaperSurveyPanelist.enabled
+      {
         ToggleView(
           title: Strings.Settings.surveyPanelistTitle,
           subtitle: String.localizedStringWithFormat(

@@ -85,9 +85,9 @@ extension Strings {
       "featuresFooter",
       bundle: .module,
       value: """
-        **Customize your browser while still supporting Brave**
+        **Customize your browser while still supporting Scout**
 
-        Brave Origin is a paid version of the browser for users who don't need all the features that support Brave as a business, but still want the privacy that only Brave offers. Origin users will continue to benefit from our industry-leading privacy, adblock, and speed (via Shields), as well as regular software updates, Chromium patches, and security and privacy improvements. Origin will remove most other features from the browser.
+        Scout Origin is a paid version of the browser for users who don't need all the features that support Scout as a business, but still want the privacy that only Scout offers. Origin users will continue to benefit from our industry-leading privacy, adblock, and speed (via Shields), as well as regular software updates, Chromium patches, and security and privacy improvements. Origin will remove most other features from the browser.
         """,
       comment:
         "A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated."
@@ -101,7 +101,7 @@ extension Strings {
     public static let featureEnabledToastTitle = NSLocalizedString(
       "featureEnabledToastTitle",
       bundle: .module,
-      value: "Changing Brave features",
+      value: "Changing Scout features",
       comment:
         "A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings"
     )
@@ -109,20 +109,20 @@ extension Strings {
       "featureEnabledToastMessage",
       bundle: .module,
       value:
-        "Enabling or disabling a Brave feature requires a browser restart to apply changes. Please close (swipe up in the App Switcher) and then re-open Brave.",
+        "Enabling or disabling a Scout feature requires a browser restart to apply changes. Please close (swipe up in the App Switcher) and then re-open Scout.",
       comment:
         "A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect"
     )
     public static let alreadyPurchasedTitle = NSLocalizedString(
       "alreadyPurchasedTitle",
       bundle: .module,
-      value: "Already purchased on brave.com?",
+      value: "Already purchased on the web?",
       comment: "A title asking if the user already purchased on brave.com"
     )
     public static let getLoginCodeButton = NSLocalizedString(
       "getLoginCodeButton",
       bundle: .module,
-      value: "Verify Brave Origin Purchase",
+      value: "Verify Scout Origin Purchase",
       comment: "A button label to get a login code for users who purchased on brave.com"
     )
     public static let promoCodeTitle = NSLocalizedString(
@@ -195,7 +195,7 @@ extension Strings {
     public static let linkPurchase = NSLocalizedString(
       "linkPurchase",
       bundle: .module,
-      value: "Link Purchase To Your Brave Account",
+      value: "Link Purchase To Your Scout Account",
       comment:
         "A button title that when triggered will allow a user to link their App Store purchase with Brave Account"
     )
@@ -216,7 +216,7 @@ extension Strings {
       "purchaseSectionFooter",
       bundle: .module,
       value:
-        "Link your App Store Purchase to your Brave account to use Brave Origin on other devices",
+        "Link your App Store Purchase to your Scout account to use Scout Origin on other devices",
       comment: "The footer shown below the Purchase section of the settings page"
     )
   }

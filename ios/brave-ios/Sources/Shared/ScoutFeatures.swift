@@ -31,6 +31,18 @@ public enum ScoutFeatures {
   /// Brave's alternate app icons are all variants of the Brave lion.
   /// Gated where Settings adds its "Change App Icon" row.
   public static let alternateAppIcons = false
+  /// "Report a Broken Site" files the report with Brave's webcompat service.
+  /// Gated in the page menu (`ShareActivity`) and the Shields panel.
+  public static let webcompatReporter = false
+  /// Brave Sync runs through Brave's sync servers. Gated in Settings, the
+  /// synced-tabs Siri shortcut and the tab tray's synced-tabs panel.
+  public static let sync = false
+  /// P3A, the daily usage ping, crash reports and the survey panel all report
+  /// to Brave. Their Settings toggles, the metrics onboarding step and its
+  /// callout are gated (the prefs themselves default to off).
+  public static let braveTelemetry = false
+  /// Brave Search's promotion card in the URL bar's suggestions.
+  public static let braveSearchPromotion = false
 }
 
 /// Where Scout users reach Zaatar Tech.

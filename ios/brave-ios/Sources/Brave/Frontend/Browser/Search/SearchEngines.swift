@@ -162,9 +162,9 @@ public class SearchEngines {
   func setInitialDefaultEngine(_ engine: String) {
     // update engine
     DefaultEngineType.standard.option.value = engine
-    // set Brave Search as the DSE for private mode
+    // Scout: DuckDuckGo is the DSE for private mode (Brave used Brave Search)
     DefaultEngineType.privateMode.option.value =
-      InitialSearchEngines.SearchEngineID.braveSearch.rawValue
+      InitialSearchEngines.SearchEngineID.duckduckgo.rawValue
 
     let priorityEngine = initialSearchEngines.priorityEngine?.rawValue
     let defEngine = defaultEngine(forType: .standard)

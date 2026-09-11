@@ -2,7 +2,7 @@
 "adsHeader" = "Ads";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "Har du redan köpt på brave.com?";
+"alreadyPurchasedTitle" = "Har du redan köpt på web?";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Analys";
@@ -11,25 +11,25 @@
 "buyNowButton" = "Köp nu";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Aktivering eller inaktivering av en Brave-funktion kräver att webbläsaren startas om för att ändringar ska tillämpas. Stäng (svep uppåt i appväxlaren) och öppna sedan Brave igen.";
+"featureEnabledToastMessage" = "Aktivering eller inaktivering av en Scout-funktion kräver att webbläsaren startas om för att ändringar ska tillämpas. Stäng (svep uppåt i appväxlaren) och öppna sedan Scout igen.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Ändra Brave-funktioner";
+"featureEnabledToastTitle" = "Ändra Scout-funktioner";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Anpassa din webbläsare och stöd samtidigt Brave**\n\nBrave Origin är en betald version av webbläsaren för användare som inte behöver alla funktioner som stöder Brave som en verksamhet, men som fortfarande vill ha den sekretess som bara Brave erbjuder. Origin-användare kommer att fortsätta att dra nytta av vår branschledande sekretess, annonsblockering och hastighet (via Skydd), samt regelbundna programuppdateringar, Chromium-patchar och säkerhets- och sekretessförbättringar. Origin tar bort de flesta andra funktioner från webbläsaren.";
+"featuresFooter" = "**Anpassa din webbläsare och stöd samtidigt Scout**\n\nScout Origin är en betald version av webbläsaren för användare som inte behöver alla funktioner som stöder Scout som en verksamhet, men som fortfarande vill ha den sekretess som bara Scout erbjuder. Origin-användare kommer att fortsätta att dra nytta av vår branschledande sekretess, annonsblockering och hastighet (via Skydd), samt regelbundna programuppdateringar, Chromium-patchar och säkerhets- och sekretessförbättringar. Origin tar bort de flesta andra funktioner från webbläsaren.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Funktioner";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Verifiera Brave Origin-köp";
+"getLoginCodeButton" = "Verifiera Scout Origin-köp";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Leo AI";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Länka köp till ditt Brave-konto";
+"linkPurchase" = "Länka köp till ditt Scout-konto";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "Nyheter";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Kunde inte slutföra köp. Vänligen försök igen eller kontrollera din betalningsinformation på Apple och försök igen.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Länka ditt App Store-köp till ditt Brave-konto för att använda Brave Origin på andra enheter";
+"purchaseSectionFooter" = "Länka ditt App Store-köp till ditt Scout-konto för att använda Scout Origin på andra enheter";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Köp";
@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "Behåll kärnan adblock, integritet, & hastighet";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "Minimalistiskt webbläsargränssnitt med fokus på Brave Skydd";
+"upsellMinimalUI" = "Minimalistiskt webbläsargränssnitt med fokus på Scout Skydd";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "Engångsköp kan aktiveras flera gånger på alla dina enheter";

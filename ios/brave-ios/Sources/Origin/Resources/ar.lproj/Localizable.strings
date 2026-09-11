@@ -2,7 +2,7 @@
 "adsHeader" = "الإعلانات";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "هل اشتريت بالفعل عبر الموقع الإلكتروني Brave.com؟";
+"alreadyPurchasedTitle" = "هل اشتريت بالفعل عبر الموقع الإلكتروني web؟";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "التحليلات";
@@ -11,25 +11,25 @@
 "buyNowButton" = "شراء الآن";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "يتطلب تفعيل أو تعطيل ميزة Brave إعادة تشغيل المتصفح لتطبيق التغييرات. يرجى إغلاق Brave (اسحب للأعلى في مبدّل التطبيقات) ثم إعادة فتحه.";
+"featureEnabledToastMessage" = "يتطلب تفعيل أو تعطيل ميزة Scout إعادة تشغيل المتصفح لتطبيق التغييرات. يرجى إغلاق Scout (اسحب للأعلى في مبدّل التطبيقات) ثم إعادة فتحه.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "تغيير ميزات Brave";
+"featureEnabledToastTitle" = "تغيير ميزات Scout";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**خصّص متصفحك مع الاستمرار في دعم Brave**\n\nBrave Origin هي نسخة مدفوعة من المتصفح للمستخدمين الذين لا يحتاجون إلى جميع الميزات التي تدعم Brave كعمل تجاري، لكنهم لا يزالون يريدون الخصوصية التي يوفرها Brave فقط. سيستمر مستخدمو Origin في الاستفادة من خصوصيتنا الرائدة في الصناعة وحظر الإعلانات والسرعة (عبر Shields)، بالإضافة إلى تحديثات البرامج العادية وتصحيحات Chromium وتحسينات الأمان والخصوصية. سيزيل Origin معظم الميزات الأخرى من المتصفح.";
+"featuresFooter" = "**خصّص متصفحك مع الاستمرار في دعم Scout**\n\nScout Origin هي نسخة مدفوعة من المتصفح للمستخدمين الذين لا يحتاجون إلى جميع الميزات التي تدعم Scout كعمل تجاري، لكنهم لا يزالون يريدون الخصوصية التي يوفرها Scout فقط. سيستمر مستخدمو Origin في الاستفادة من خصوصيتنا الرائدة في الصناعة وحظر الإعلانات والسرعة (عبر Shields)، بالإضافة إلى تحديثات البرامج العادية وتصحيحات Chromium وتحسينات الأمان والخصوصية. سيزيل Origin معظم الميزات الأخرى من المتصفح.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "الميزات";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "التحقق من عملية شراء Brave Origin";
+"getLoginCodeButton" = "التحقق من عملية شراء Scout Origin";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Leo الذكاء الاصطناعي";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "ربط عملية الشراء بحسابك على Brave";
+"linkPurchase" = "ربط عملية الشراء بحسابك على Scout";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "أخبار";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "يتعذر إكمال عملية الشراء. يرجى المحاولة مرة أخرى، أو التحقق من تفاصيل الدفع الخاصة بك على Apple والمحاولة مرة أخرى.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "اربط مشترياتك من App Store بحسابك على Brave لاستخدام Brave Origin على الأجهزة الأخرى";
+"purchaseSectionFooter" = "اربط مشترياتك من App Store بحسابك على Scout لاستخدام Scout Origin على الأجهزة الأخرى";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "شراء";

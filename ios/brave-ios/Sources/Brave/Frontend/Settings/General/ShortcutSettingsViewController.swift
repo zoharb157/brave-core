@@ -7,6 +7,7 @@ import BraveShared
 import BraveStrings
 import IntentsUI
 import OrderedCollections
+import Shared
 import SwiftUI
 
 struct ShortcutSettingsView: View {
@@ -41,6 +42,9 @@ struct ShortcutSettingsView: View {
     }
     if !isBraveNewsAvailable {
       types.remove(.openBraveNews)
+    }
+    if !ScoutFeatures.sync {
+      types.remove(.openSyncedTabs)
     }
     return Array(types)
   }

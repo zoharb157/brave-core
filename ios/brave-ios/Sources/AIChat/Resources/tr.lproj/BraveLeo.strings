@@ -1,5 +1,5 @@
 /* The description for the error message when the user's session has expired */
-"aichat.accountSessionExpiredDescription" = "Brave hesap oturumunuzun süresi doldu. Premium özellikleri kullanmak için lütfen hesap sayfasına giderek yenileyin ve ardından geri dönün.";
+"aichat.accountSessionExpiredDescription" = "Scout hesap oturumunuzun süresi doldu. Premium özellikleri kullanmak için lütfen hesap sayfasına giderek yenileyin ve ardından geri dönün.";
 
 /* The title for button that submits feedback */
 "aichat.addFeedbackActionTitle" = "Geri Bildirim Ekle";
@@ -14,10 +14,10 @@
 "aichat.advancedSettingsHeaderTitle" = "Leo, doğrudan tarayıcınıza dâhil edilmiş, gücünü yapay zekâdan alan bir akıllı asistandır.";
 
 /* The subtitle for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Leo'yu başka cihazlarda kullanmaya devam etmek için App Store satın alma işleminizi Brave hesabınıza bağlayın.";
+"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Leo'yu başka cihazlarda kullanmaya devam etmek için App Store satın alma işleminizi Scout hesabınıza bağlayın.";
 
 /* The title for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionTitle" = "Satın alımı Brave hesabınıza bağlayın";
+"aichat.advancedSettingsLinkPurchaseActionTitle" = "Satın alımı Scout hesabınıza bağlayın";
 
 /* The description for the settings to show Leo in Quick Search Engines Bar. */
 "aichat.advancedSettingsShowInQSEBarDescription" = "Leo'yu hızlı arama motorları çubuğundan başlatmak için bir kısayol etkinleştirir.";
@@ -59,7 +59,7 @@
 "aichat.byomEmptyStateTitle" = "Henüz bir model bağlamadınız";
 
 /* The section header description explaining the Bring Your Own Model feature with a link to learn more. The text inside square brackets should be translated. */
-"aichat.byomSectionHeaderDescription" = "Kendi kendine barındırılan veya üçüncü taraf tarafından barındırılan LLM'nizi Leo'ya bağlayın ve bunları tarayıcı içinde kullanın. Ollama gibi OpenAI Chat Protocol uyumlu herhangi bir çerçeveyi kullanın. [Daha fazla bilgi edinin](https://support.brave.app/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo)";
+"aichat.byomSectionHeaderDescription" = "Kendi kendine barındırılan veya üçüncü taraf tarafından barındırılan LLM'nizi Leo'ya bağlayın ve bunları tarayıcı içinde kullanın. Ollama gibi OpenAI Chat Protocol uyumlu herhangi bir çerçeveyi kullanın. [Daha fazla bilgi edinin](https://zaatar-scout.fly.dev/support)";
 
 /* The section header title for the Bring Your Own Model feature */
 "aichat.byomSectionHeaderTitle" = "Kendi Modelinizi Getirin";
@@ -71,7 +71,7 @@
 "aichat.chatIntroJustTalkTitle" = "Sadece sohbet etmek mi istiyorsunuz?";
 
 /* The subtitle for intro view */
-"aichat.chatIntroSubTitle" = "Doğrudan Brave'in içine inşa edilen, Yapay Zeka destekli akıllı bir asistanım.";
+"aichat.chatIntroSubTitle" = "Doğrudan Scout'un içine inşa edilen, Yapay Zeka destekli akıllı bir asistanım.";
 
 /* The title for intro view */
 "aichat.chatIntroTitle" = "Merhaba, ben Leo!";
@@ -137,7 +137,7 @@
 "aichat.customModelFormLabelFieldTitle" = "Etiket";
 
 /* The error message shown when trying to use a private network address, explaining why it's blocked and how to enable it */
-"aichat.customModelFormPrivateEndpointErrorMessage" = "Girdiğiniz adres, yönlendiriciniz veya yerel bir sunucu gibi özel bir ağdan gibi görünüyor. Brave, sizi korumak için bunları otomatik olarak engeller, ancak güvenli olduğundan eminseniz bunları etkinleştirebilirsiniz.\n\nDevam etmek için brave://flags/ adresini ziyaret edin, \"brave-ai-chat-allow-private-ips\" ifadesini arayın ve özelliği etkinleştirin. Etkinleştirildikten sonra, Leo ayarlarında özel ağ adreslerini kullanabilirsiniz.";
+"aichat.customModelFormPrivateEndpointErrorMessage" = "Girdiğiniz adres, yönlendiriciniz veya yerel bir sunucu gibi özel bir ağdan gibi görünüyor. Scout, sizi korumak için bunları otomatik olarak engeller, ancak güvenli olduğundan eminseniz bunları etkinleştirebilirsiniz. Etkinleştirildikten sonra, Leo ayarlarında özel ağ adreslerini kullanabilirsiniz.";
 
 /* The footer text explaining what the model request name is used for and providing an example */
 "aichat.customModelFormRequestNameFieldFooter" = "Modelin hizmet çerçevesine giden istekte yazılması gereken adı, örneğin phi-3 (bu ad hizmet çerçevesinin beklediği formatla tam olarak uyuşmazsa entegrasyon çalışmayacağını unutmayın).";
@@ -155,7 +155,7 @@
 "aichat.customModelFormSaveButtonTitle" = "Kaydet";
 
 /* The footer text explaining what the server endpoint is and providing an example URL for Ollama */
-"aichat.customModelFormServerEndpointFieldFooter" = "Hizmet çerçevenizin istekleri dinlediği URL. Emin değilseniz, hizmet çerçevesi belgelerini kontrol edin. Örneğin Ollama için bu her zaman `http://localhost:11434/v1/chat/completions` adresidir. Brave bu istekleri vekil olarak işlemez, lütfen seçtiğiniz sağlayıcının gizlilik koşullarını okuyun.";
+"aichat.customModelFormServerEndpointFieldFooter" = "Hizmet çerçevenizin istekleri dinlediği URL. Emin değilseniz, hizmet çerçevesi belgelerini kontrol edin. Örneğin Ollama için bu her zaman `http://localhost:11434/v1/chat/completions` adresidir. Scout bu istekleri vekil olarak işlemez, lütfen seçtiğiniz sağlayıcının gizlilik koşullarını okuyun.";
 
 /* The label for the server endpoint URL field */
 "aichat.customModelFormServerEndpointFieldTitle" = "Sunucu uç noktası";
@@ -218,7 +218,7 @@
 "aichat.feedbackOptionTitleUnsafeHarmful" = "Güvenli değil/zararlı";
 
 /* The title for premium ad view. The links are inside parenthesis and the phrases inside square brackets should be translated */
-"aichat.feedbackPremiumAdTitle" = "Leo Premium, daha yüksek yanıt nüansı için genişletilmiş dil modellerine erişim sunmaktadır. [Daha fazla bilgi](https://brave.com/) - [Kapat](braveai://dismiss)";
+"aichat.feedbackPremiumAdTitle" = "Leo Premium, daha yüksek yanıt nüansı için genişletilmiş dil modellerine erişim sunmaktadır. [Daha fazla bilgi](https://zaatar-scout.fly.dev/support) - [Kapat](braveai://dismiss)";
 
 /* The title for the button that submits feedback */
 "aichat.feedbackSubmitActionTitle" = "Gönder";
@@ -236,7 +236,7 @@
 "aichat.feedbackSuccessAnswerLikedTitle" = "Yanıt beğenildi";
 
 /* The title for view which user type feedback */
-"aichat.feedbackViewMainTitle" = "Brave Yapay Zeka Geri Bildirimi Verin";
+"aichat.feedbackViewMainTitle" = "Scout Yapay Zeka Geri Bildirimi Verin";
 
 /* The button title for opening paywall screen */
 "aichat.goPremiumButtonTitle" = "Premium olun";
@@ -248,25 +248,25 @@
 "aichat.internalErrorViewTitle" = "İsteğiniz işlenirken bir sorun oluştu. Lütfen daha sonra tekrar deneyin.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeHaikuMessageDescription" = "Merhaba, ben Leo. Brave tarafından tamamen yerel olarak barındırılan bir yapay zeka asistanıyım. Anthropic'in sohbet ve metin işleme görevleri için geliştirdiği Claude Haiku modeliyle çalışıyorum. Claude Haiku, Brave'in kendi güvenli altyapısı üzerinde barındırılmaktadır.";
+"aichat.introMessageClaudeHaikuMessageDescription" = "Merhaba, ben Leo. Scout tarafından tamamen yerel olarak barındırılan bir yapay zeka asistanıyım. Anthropic'in sohbet ve metin işleme görevleri için geliştirdiği Claude Haiku modeliyle çalışıyorum. Claude Haiku, Scout'un kendi güvenli altyapısı üzerinde barındırılmaktadır.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeHaikuModelPurposeDescription" = "Şimşek hızlı sohbet";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeInstantMessageDescription" = "Merhaba, ben Leo. Brave tarafından tamamen yerel olarak barındırılan bir yapay zeka asistanıyım. Anthropic'in sohbet ve metin işleme görevleri için geliştirdiği Claude Instant modeliyle çalışıyorum. Claude Instant, Brave'in kendi güvenli altyapısı üzerinde barındırılmaktadır.";
+"aichat.introMessageClaudeInstantMessageDescription" = "Merhaba, ben Leo. Scout tarafından tamamen yerel olarak barındırılan bir yapay zeka asistanıyım. Anthropic'in sohbet ve metin işleme görevleri için geliştirdiği Claude Instant modeliyle çalışıyorum. Claude Instant, Scout'un kendi güvenli altyapısı üzerinde barındırılmaktadır.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeSonnetMessageDescription" = "Merhaba, ben Leo. Brave tarafından tamamen yerel olarak barındırılan bir yapay zeka asistanıyım. Anthropic'in sohbet ve metin işleme görevleri için geliştirdiği Claude Sonnet modeliyle çalışıyorum. Claude Sonnet, Brave'in kendi güvenli altyapısı üzerinde barındırılmaktadır.";
+"aichat.introMessageClaudeSonnetMessageDescription" = "Merhaba, ben Leo. Scout tarafından tamamen yerel olarak barındırılan bir yapay zeka asistanıyım. Anthropic'in sohbet ve metin işleme görevleri için geliştirdiği Claude Sonnet modeliyle çalışıyorum. Claude Sonnet, Scout'un kendi güvenli altyapısı üzerinde barındırılmaktadır.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeSonnetModelPurposeDescription" = "Dengeli hız ve zeka";
 
 /* The model intro message when you first enter the chat assistant -- %@ is a place-holder for the model name */
-"aichat.introMessageGenericMessageDescription" = "Merhaba, ben Leo. Brave tarafından geliştirilmiş bir Yapay Zeka asistanıyım. %@ tarafından destekleniyorum. Bana istediğinizi sorun, yanıtlamak için elimden geleni yapacağım.";
+"aichat.introMessageGenericMessageDescription" = "Merhaba, ben Leo. Scout tarafından geliştirilmiş bir Yapay Zeka asistanıyım. %@ tarafından destekleniyorum. Bana istediğinizi sorun, yanıtlamak için elimden geleni yapacağım.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageQwenMessageDescription" = "Merhaba, ben Leo. Brave tarafından tamamen yerel olarak barındırılan bir yapay zeka asistanıyım. Alibaba Cloud tarafından birçok alanda yüksek performans göstermesi ve uygulanabilir olması için geliştirilen Qwen VL 30B modeliyle çalışıyorum. Qwen, Brave'in kendi güvenli altyapısı üzerinde barındırılmaktadır.";
+"aichat.introMessageQwenMessageDescription" = "Merhaba, ben Leo. Scout tarafından tamamen yerel olarak barındırılan bir yapay zeka asistanıyım. Alibaba Cloud tarafından birçok alanda yüksek performans göstermesi ve uygulanabilir olması için geliştirilen Qwen VL 30B modeliyle çalışıyorum. Qwen, Scout'un kendi güvenli altyapısı üzerinde barındırılmaktadır.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageQwenModelPurposeDescription" = "Genel amaçlı sohbet, kodlama ve daha fazlası";
@@ -287,7 +287,7 @@
 "aichat.leoCodeExampleDefaultTitle" = "Kod örneği";
 
 /* The message that shows in an alert, to let the user know the 'Leo' feature is disabled, and explains how to re-enable the feature. */
-"aichat.leoDisabledMessageDescription" = "Leo şu anda özellik bayrakları aracılığıyla devre dışı bırakılmıştır. Leo'yu yeniden etkinleştirmek için lütfen brave://flags adresini ziyaret edin ve etkinleştirin.";
+"aichat.leoDisabledMessageDescription" = "Leo şu anda özellik bayrakları aracılığıyla devre dışı bırakılmıştır.";
 
 /* The title that shows in an alert when the Leo/AI-Chat feature is disabled. */
 "aichat.leoDisabledMessageTitle" = "Leo Engelli";
@@ -305,13 +305,13 @@
 "aichat.leoImprovedAnswerBraveSearch" = "Şu arama için geliştirilmiş yanıt:";
 
 /* The text displayed on the loading screen when searching for a user query */
-"aichat.leoImprovingAnswerBraveSearch" = "Brave Arama ile yanıt geliştiriliyor...";
+"aichat.leoImprovingAnswerBraveSearch" = "Scout Arama ile yanıt geliştiriliyor...";
 
 /* The title of the advanced settings view */
 "aichat.leoNavigationTitle" = "Leo Yapay Zeka";
 
 /* The title to display when the user taps on the information icon on the page context view. Brave Leo is the name of the product and should not be translated. */
-"aichat.leoPageContextInfoDescriptionTitle" = "Bu sayfa hakkında soru sormak için bu ayarı açın. Sayfanın içerikleri mesajlarınızla birlikte Brave Leo'ya gönderilecektir.";
+"aichat.leoPageContextInfoDescriptionTitle" = "Bu sayfa hakkında soru sormak için bu ayarı açın. Sayfanın içerikleri mesajlarınızla birlikte Scout Leo'ya gönderilecektir.";
 
 /* The accessibility text to read out loud when the user taps on the info icon on the page context view */
 "aichat.leoPageContextInfoIconAccessibilityTitle" = "Sayfa Bağlamı Bilgisi";
@@ -443,7 +443,7 @@
 "aichat.rateAnswerActionErrorText" = "Yanıtı Puanlama Hatası";
 
 /* The message for privacy warning alert when rating a response */
-"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "Bir cevabı beğenmek veya beğenmemek, Leo'yu geliştirmek için Brave'e derecelendirme, konuşma, model, dil, sürüm ve premium durumu gönderecektir. [Daha Fazla Bilgi] (%@)";
+"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "Bir cevabı beğenmek veya beğenmemek, Leo'yu geliştirmek için Scout'a derecelendirme, konuşma, model, dil, sürüm ve premium durumu gönderecektir. [Daha Fazla Bilgi] (%@)";
 
 /* The title for privacy warning alert when rating a response */
 "aichat.rateAnswerFeedbackPrivacyWarningTitle" = "Yanıt Geri Bildirimi";
@@ -491,7 +491,7 @@
 "aichat.serviceOverloadedErrorViewTitle" = "Uç nokta şu anda aşırı yüklenmiş durumda. Lütfen daha sonra tekrar deneyin.";
 
 /* The description indicating voice inputs from user is not store or shared and these inpurs are totally private. */
-"aichat.speechRecognizerDisclaimer" = "Brave, sesli aramalarınızı kaydetmez veya paylaşmaz.";
+"aichat.speechRecognizerDisclaimer" = "Scout, sesli aramalarınızı kaydetmez veya paylaşmaz.";
 
 /* Title showing the user has no subscription. */
 "aichat.subscriptionNoneTitle" = "Hiçbiri";
@@ -506,10 +506,10 @@
 "aichat.termsConditionsApproveActionTitle" = "Anladım";
 
 /* The description terms and conditions for AI chat usage. The links are inside parenthesis %@ will be replaced with urls */
-"aichat.termsConditionsDescription" = "Brave Leo, web kullanımınızı iyileştiren özel bir YZ akıllı asistanıdır. Leo'yu sınırlı erişimle kullanmak ücretsizdir. Brave Leo Premium daha fazla model, daha yüksek limitler sunar ve abonelere yeni özelliklere erken erişim sağlar. Varsayılan model zaman zaman değişecektir. Daha fazla ayrıntı için Brave **[Yardım Merkezi](%1$@)**'ni ziyaret edin.\n\nVarsayılan olarak, Leo'ya görüntülediğiniz bir web sitesi veya sayfa hakkında bir soru sorduğunuzda, görüntülediğiniz web sayfasının içeriği veya sayfada vurguladığınız herhangi bir metin ve arama sorgunuz, Leo'nun bir yanıt vermesi için Brave sunucularına gönderilir. Bazı durumlarda Leo, girdilerinizden türetilen sorguları Brave Arama'ya gönderir ve sorunuzu daha iyi yanıtlamak için arama sonuçlarını kullanır. Brave, yanıtların doğruluğunu garanti etmez ve yanıtlar eksik, yanıltıcı veya hatalı bilgiler içerebilir. Brave Leo'ya hassas veya gizli bilgiler göndermeyin ve sağlık, finans, kişisel güvenlik veya benzeri konularla ilgili yanıtlarda dikkatli olun. Leo'nun seçeneklerini istediğiniz zaman Ayarlar'dan değiştirebilirsiniz. Ayarlar'a gidin > Leo.\n\nLeo, IP adresiniz gibi sizinle ilişkilendirilebilecek tanımlayıcıları toplamaz. Arama sorgularınız veya Brave Leo'nun yanıtları dahil olmak üzere, modellerimizi verilerinize dayalı olarak eğitmiyoruz. Hiçbir kişisel veri sunucularımızda saklanmaz veya Brave tarafından tutulmaz. Daha fazla bilgi için **[gizlilik politikası](%2$@)**'na göz atabilirsiniz.";
+"aichat.termsConditionsDescription" = "Scout Leo, web kullanımınızı iyileştiren özel bir YZ akıllı asistanıdır. Leo'yu sınırlı erişimle kullanmak ücretsizdir. Scout Leo Premium daha fazla model, daha yüksek limitler sunar ve abonelere yeni özelliklere erken erişim sağlar. Varsayılan model zaman zaman değişecektir. Daha fazla ayrıntı için Scout **[Yardım Merkezi](%1$@)**'ni ziyaret edin.\n\nVarsayılan olarak, Leo'ya görüntülediğiniz bir web sitesi veya sayfa hakkında bir soru sorduğunuzda, görüntülediğiniz web sayfasının içeriği veya sayfada vurguladığınız herhangi bir metin ve arama sorgunuz, Leo'nun bir yanıt vermesi için Scout sunucularına gönderilir. Bazı durumlarda Leo, girdilerinizden türetilen sorguları Scout Arama'ya gönderir ve sorunuzu daha iyi yanıtlamak için arama sonuçlarını kullanır. Scout, yanıtların doğruluğunu garanti etmez ve yanıtlar eksik, yanıltıcı veya hatalı bilgiler içerebilir. Scout Leo'ya hassas veya gizli bilgiler göndermeyin ve sağlık, finans, kişisel güvenlik veya benzeri konularla ilgili yanıtlarda dikkatli olun. Leo'nun seçeneklerini istediğiniz zaman Ayarlar'dan değiştirebilirsiniz. Ayarlar'a gidin > Leo.\n\nLeo, IP adresiniz gibi sizinle ilişkilendirilebilecek tanımlayıcıları toplamaz. Arama sorgularınız veya Scout Leo'nun yanıtları dahil olmak üzere, modellerimizi verilerinize dayalı olarak eğitmiyoruz. Hiçbir kişisel veri sunucularımızda saklanmaz veya Scout tarafından tutulmaz. Daha fazla bilgi için **[gizlilik politikası](%2$@)**'na göz atabilirsiniz.";
 
 /* The title terms and conditions for AI chat usage */
-"aichat.termsConditionsTitle" = "Brave Leo ile Gizli Şekilde Sohbet Edin";
+"aichat.termsConditionsTitle" = "Scout Leo ile Gizli Şekilde Sohbet Edin";
 
 /* The title of the badge where a model which can be used unlimited */
 "aichat.unlimitedModelStatusTitle" = "Sınırsız";

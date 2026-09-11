@@ -2,10 +2,10 @@
 "About" = "Acerca de";
 
 /* The title of the screen explaining Shields */
-"AboutBraveShields" = "Sobre as Proteções do Brave";
+"AboutBraveShields" = "Sobre as Proteções do Scout";
 
 /* The body of the screen explaining Shields */
-"AboutBraveShieldsBody" = "Geralmente, os sites contêm cookies e scripts que tentam identificar você e seu dispositivo. Eles querem descobrir quem você é e seguir você pela web, monitorando o que você faz em todos os sites.\n\nO Brave bloqueia esses itens para que você possa navegar sem ser vigiado.";
+"AboutBraveShieldsBody" = "Geralmente, os sites contêm cookies e scripts que tentam identificar você e seu dispositivo. Eles querem descobrir quem você é e seguir você pela web, monitorando o que você faz em todos os sites.\n\nO Scout bloqueia esses itens para que você possa navegar sem ser vigiado.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "Isso permite que você salve a imagem no Rolo da Câmera.";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "Adicionar marcador";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Dados dos Anúncios Brave";
+"ads.braveAdsDataToggleOption" = "Dados dos Anúncios Scout";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "Anúncios e rastreadores";
@@ -50,7 +50,7 @@
 "AlwaysShow" = "Ativada";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Pergunte ao Brave";
+"AskBraveMenuItem" = "Pergunte ao Scout";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
 "AuthenticationLoginsTouchReason" = "Isso autentica seu acesso ao Scout";
@@ -209,7 +209,7 @@
 "BravePanel" = "Painel do Scout";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Recompensas Brave";
+"BraveRewardsAdNotificationTitle" = "Recompensas Scout";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "Abrir";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "Recompensas";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Recompensas Brave";
+"BraveRewardsTitle" = "Recompensas Scout";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "A Pesquisa Brave não traça o seu perfil.";
+"braveSearchPromotion.bannerDescription" = "A Pesquisa Scout não traça o seu perfil.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "Talvez mais tarde";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "Apoie uma pesquisa independente com mais privacidade";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Testar a Pesquisa Brave";
+"braveSearchPromotion.bannerTryButtonTitle" = "Testar a Pesquisa Scout";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "Talvez mais tarde";
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Controlos avançados";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Escudos Brave e Privacidade";
+"BraveShieldsAndPrivacy" = "Escudos Scout e Privacidade";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Escudos e Privacidade";
@@ -269,7 +269,7 @@
 "BraveShieldsSiteBroken" = "Se este site não estiver funcionando, tente desativar as Proteções";
 
 /* Context: 'Shields Up' or 'Shields Down' */
-"BraveShieldsStatusTitle" = "Proteções Brave";
+"BraveShieldsStatusTitle" = "Proteções Scout";
 
 /* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "Desativadas";
@@ -281,7 +281,7 @@
 "BraveShieldsToggleHint" = "Toque duas vezes para ativar/desativar o Shields";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Conversa Brave";
+"bravetalk.braveTalkTitle" = "Conversa Scout";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "Selecionar Idioma";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Pesquisar";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Tradutor Brave";
+"BraveTranslate.settingsMenuTitle" = "Tradutor Scout";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Tradutor Brave";
+"BraveTranslate.settingsScreenTitle" = "Tradutor Scout";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Quando ativado, o Tradutor Brave detetará automaticamente o idioma atual da sua página e exibirá um botão de tradução na barra de URL.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Quando ativado, o Tradutor Scout detetará automaticamente o idioma atual da sua página e exibirá um botão de tradução na barra de URL.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Tradução Ativada";
@@ -332,7 +332,7 @@
 "callout.bottomBarCalloutTitle" = "Personalizar a barra de guias do Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "Tenha a privacidade do Brave no seu computador ou tablet e sincronize favoritos e extensões entre dispositivos.";
+"callout.privacyEverywhereCalloutDescription" = "Tenha a privacidade do Scout no seu computador ou tablet e sincronize favoritos e extensões entre dispositivos.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "Sincronizar agora";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "Ocultar pré-visualizações de links";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Ocultar Ícone de Recompensas Brave";
+"HideRewardsIcon" = "Ocultar Ícone de Recompensas Scout";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Oculta o ícone do Brave Rewards quando o Brave Rewards não está ativado";
+"HideRewardsIconSubtitle" = "Oculta o ícone do Scout Rewards quando o Scout Rewards não está ativado";
 
 /* Title for history menu item */
 "HistortMenuItem" = "Histórico";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "Redireciona automaticamente links da NPR para a respetiva versão de texto (em text.npr.org).";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Suporte do Brave";
+"ntp.braveSupportFavoriteTitle" = "Suporte do Scout";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "Reivindicar tokens";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Você ganhou %@ navegando com o Brave.";
+"ntp.earningsReport" = "Você ganhou %@ navegando com o Scout.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "Muito bem!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "Ocultar imagens patrocinadas";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "As imagens patrocinadas são fundos de ecrã criados por marcas, que aparecem nos separadores recentemente abertos no navegador. A ativação destas imagens patrocinadas apoia a missão do Brave. [Saiba Mais](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "As imagens patrocinadas são fundos de ecrã criados por marcas, que aparecem nos separadores recentemente abertos no navegador. A ativação destas imagens patrocinadas apoia a missão do Scout. [Saiba Mais](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Saiba mais sobre o Brave Rewards";
+"ntp.learnMoreAboutRewards" = "Saiba mais sobre o Scout Rewards";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "Saiba mais sobre imagens patrocinadas";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "Ganhe pontos enquanto navega e doe-os a criadores pelo conteúdo de qualidade que eles produzem.";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "O Brave Ads chegou!";
+"OBAdsOptInTitle" = "O Scout Ads chegou!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "O Brave irá mostrar o seu primeiro anúncio dentro de";
+"OBAdsTitle" = "O Scout irá mostrar o seu primeiro anúncio dentro de";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "Agora está tudo pronto.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "Participar";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Permitir que o Brave verifique se há um código de indicação correspondente na minha área de transferência";
+"OBPrivacyConsentClipboardPermission" = "Permitir que o Scout verifique se há um código de indicação correspondente na minha área de transferência";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "Talvez você tenha baixado o Brave para apoiar a pessoa que indicou você. Para detectar o responsável pela indicação, o Brave realiza uma verificação única da sua área de transferência em busca do código de indicação correspondente. Essa verificação se limita apenas ao código, e nenhum outro dado pessoal será transmitido. Se você desativar essa opção, o autor da indicação não receberá recompensas do Brave.";
+"OBPrivacyConsentDetail" = "Talvez você tenha baixado o Scout para apoiar a pessoa que indicou você. Para detectar o responsável pela indicação, o Scout realiza uma verificação única da sua área de transferência em busca do código de indicação correspondente. Essa verificação se limita apenas ao código, e nenhum outro dado pessoal será transmitido. Se você desativar essa opção, o autor da indicação não receberá recompensas do Scout.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "Não permitir essa verificação";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "e";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Recompensas Brave";
+"OBRewardsAgreementTitle" = "Recompensas Scout";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "A ativação dos Anúncios privados do Brave apoia editores e criadores de conteúdo com cada anúncio visualizado.";
+"OBRewardsDetail" = "A ativação dos Anúncios privados do Scout apoia editores e criadores de conteúdo com cada anúncio visualizado.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "Ganhe tokens enquanto navega e doe-os a criadores pelo conteúdo de qualidade que eles produzem.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "Política de Privacidade";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Recompensas Brave";
+"OBRewardsTitle" = "Recompensas Scout";
 
 /* Save button to save current selection */
 "OBSaveButton" = "Salvar";
@@ -1208,7 +1208,7 @@
 "OBShieldsDetail" = "Bloqueie rastreadores que invadem sua privacidade para poder navegar sem ser seguido na web";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Proteções Brave";
+"OBShieldsTitle" = "Proteções Scout";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "Mostrar";
@@ -1220,10 +1220,10 @@
 "onboarding.linkReceiptButton" = "Associar a sua assinatura de VPN";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "A sua assinatura da VPN Brave pode proteger até 10 dispositivos, incluindo Android, iOS e computadores. Basta associar sua assinatura da App Store à sua conta do Brave.";
+"onboarding.linkReceiptDescription" = "A sua assinatura da VPN Scout pode proteger até 10 dispositivos, incluindo Android, iOS e computadores. Basta associar sua assinatura da App Store à sua conta do Scout.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "Expanda a sua proteção de Firewall + VPN Brave";
+"onboarding.linkReceiptTitle" = "Expanda a sua proteção de Firewall + VPN Scout";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Ao bloquear rastreadores de atividade e anúncios, os websites utilizam menos dados e carregam mais rapidamente.";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "Abrir tudo (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Abrir as configurações do Brave Rewards";
+"OpenBraveRewardsSettings" = "Abrir as configurações do Scout Rewards";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "Ocorreu um erro desconhecido ao abrir a pasta \"Downloads\" do app Arquivos.";
@@ -1316,7 +1316,7 @@
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Não há sessões ativas para mostrar dos seus outros dispositivos.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "Este espaço mostra as guias do Brave abertas em outros dispositivos";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "Este espaço mostra as guias do Scout abertas em outros dispositivos";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "Ocultar por enquanto";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "Continuar";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "Estas respostas privadas ajudam a Brave a estimar a utilização geral de determinadas funcionalidades e a melhorá-las para si.";
+"p3a.settingSubtitle" = "Estas respostas privadas ajudam a Scout a estimar a utilização geral de determinadas funcionalidades e a melhorá-las para si.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "Permitir a análise de produtos com preservação da privacidade (P3A)";
@@ -1724,7 +1724,7 @@
 "privacyHub.lastWeekHeader" = "Última semana";
 
 /* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** foi bloqueado pelas Proteções Brave em **%2$lld** sites";
+"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** foi bloqueado pelas Proteções Scout em **%2$lld** sites";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "Rastreador de Atividade e Anúncio Mais Frequente";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "\"Tracker\" ou anúncio";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Alertas da Firewall + VPN Brave";
+"privacyHub.vpnAlertsHeader" = "Alertas da Firewall + VPN Scout";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Firewall + VPN";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "Ativar tradução";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Classifique o Brave";
+"RateBrave" = "Classifique o Scout";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "Aumentar o tamanho do texto";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "Selecione uma opção";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Permita que os programadores do Brave saibam que este website não está a funcionar corretamente:";
+"ReportBrokenSiteBody1" = "Permita que os programadores do Scout saibam que este website não está a funcionar corretamente:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "Nota: o relatório enviado para os servidores do Brave inclui o endereço do site, a versão do Brave utilizada, as definições das proteções, o estado da VPN e as definições de idioma.";
+"ReportBrokenSiteBody2" = "Nota: o relatório enviado para os servidores do Scout inclui o endereço do site, a versão do Scout utilizada, as definições das proteções, o estado da VPN e as definições de idioma.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "Submeter";
@@ -2078,25 +2078,25 @@
 "RestoreTabOnCrashAlertTitle" = "O Scout fechou inesperadamente.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Ative para apoiar o Brave e a comunidade BAT.";
+"rewards.disabledBody" = "Ative para apoiar o Scout e a comunidade BAT.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "Ao usar as Brave Rewards está a apoiar o Brave e a comunidade BAT.";
+"rewards.disabledStatusBody" = "Ao usar as Scout Rewards está a apoiar o Scout e a comunidade BAT.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Está a apoiar o Brave e a comunidade BAT.";
+"rewards.enabledBody" = "Está a apoiar o Scout e a comunidade BAT.";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Obrigado por apoiar o Brave e a comunidade BAT.";
+"rewards.enabledStatusBody" = "Obrigado por apoiar o Scout e a comunidade BAT.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Contribua para apoiar o Brave e a comunidade BAT ativando as Brave Rewards e vendo Anúncios Brave.";
+"rewards.settingsToggleMessage" = "Contribua para apoiar o Scout e a comunidade BAT ativando as Scout Rewards e vendo Anúncios Scout.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Ativar Recompensas Brave";
+"rewards.settingsToggleTitle" = "Ativar Recompensas Scout";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "Criador de conteúdos com verificação Brave Creators";
+"rewards.supportingPublisher" = "Criador de conteúdos com verificação Scout Creators";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "Número de criadores de conteúdo que você está apoiando neste mês.";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "Valor da  contribuição";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Tokens do Brave";
+"RewardsInternalsContributionProcessorBraveTokens" = "Tokens do Scout";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "Nenhum";
@@ -2387,13 +2387,13 @@
 "searchSuggestionsSubtitle" = "Gostaria de ativar a Sugestão de Pesquisa?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Pesquisar com o Brave";
+"SearchWithBrave" = "Pesquisar com o Scout";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "Enviar";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Enviar um relatório de falha para que o Brave possa corrigir o problema?";
+"SendCrashReportAlertMessage" = "Enviar um relatório de falha para que o Scout possa corrigir o problema?";
 
 /* Title for prompt displayed to user after the app crashes */
 "SendCrashReportAlertTitle" = "Opa! Houve uma falha no Scout";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "Definições de qualidade";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "Este ping privado permite à Brave estimar os utilizadores ativos.";
+"settings.sendUsagePingDescription" = "Este ping privado permite à Scout estimar os utilizadores ativos.";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "Enviar automaticamente ping de utilização diária para a Brave";
+"settings.sendUsagePingTitle" = "Enviar automaticamente ping de utilização diária para a Scout";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Permite que o Brave mostre links para inquéritos privados na página do novo separador. Os inquéritos ajudam-nos a criar melhores funcionalidades e a medir a eficácia das campanhas publicitárias do navegador. [Learn more](%@)";
+"settings.surveyPanelistDescription" = "Permite que o Scout mostre links para inquéritos privados na página do novo separador. Os inquéritos ajudam-nos a criar melhores funcionalidades e a medir a eficácia das campanhas publicitárias do navegador. [Learn more](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Permitir inquéritos do Brave";
+"settings.surveyPanelistTitle" = "Permitir inquéritos do Scout";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "Youtube";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "Proceda ao scan do código QR";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Abrir o Brave News e conferir as principais notícias de hoje";
+"shortcuts.activityTypeBraveNewsDescription" = "Abrir o Scout News e conferir as principais notícias de hoje";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "Abrir o navegador em uma nova aba e excluir todos os dados de histórico de navegação privada";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "Ativar a VPN";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "Abrir o navegador Brave e ativar a VPN";
+"shortcuts.activityTypeEnableVPNTitle" = "Abrir o navegador Scout e ativar a VPN";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "Abrir nova aba privada";
@@ -2621,10 +2621,10 @@
 "shortcuts.activityTypeOpenBookmarksTitle" = "Abrir marcadores do Scout";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Abrir o Brave News";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Abrir o Scout News";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Abrir o Brave News";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Abrir o Scout News";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "Abrir ecrã do histórico de navegação";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "Abrir playlist";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "Abrir separadores do Brave abertos noutros dispositivos";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "Abrir separadores do Scout abertos noutros dispositivos";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "Abrir separadores de outros dispositivos";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "Limpar histórico do navegador";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Usar atalhos para ativar o Brave VPN com a Siri - Assistente de voz";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Usar atalhos para ativar o Scout VPN com a Siri - Assistente de voz";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "Ativar a VPN";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "Abrir marcadores";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Use Atalhos para abrir uma nova janela e mostrar o Feed de Notícias do Brave através da Assistência de Voz da Siri";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Use Atalhos para abrir uma nova janela e mostrar o Feed de Notícias do Scout através da Assistência de Voz da Siri";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Abrir o Brave News";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Abrir o Scout News";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Usar atalhos para abrir o ecrã do histórico de navegação com a Siri – Assistente de voz";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "Definições das Proteções e de Site";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "Obrigado por comunicar aos desenvolvedores da Brave que há algo de errado com o site. Daremos o nosso melhor para o consertar.";
+"SiteReportedBody" = "Obrigado por comunicar aos desenvolvedores da Scout que há algo de errado com o site. Daremos o nosso melhor para o consertar.";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "Obrigado";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Proteções";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Economizo dados diariamente navegando na web com o Brave.";
+"socialSharing.domainSpecificDataSavedTitle" = "Economizo dados diariamente navegando na web com o Scout.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Economizo dados diariamente navegando na web com o Brave.";
+"socialSharing.shareDescriptionTitle" = "Economizo dados diariamente navegando na web com o Scout.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "Separador padrão";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "Eliminar a conta da sincronização";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "Eliminar a conta irá remover os seus dados encriptados dos servidores do Brave e desativará a Sincronização em todos os seus dispositivos ligados.";
+"sync.deleteAccountAlertDescriptionPart1" = "Eliminar a conta irá remover os seus dados encriptados dos servidores do Scout e desativará a Sincronização em todos os seus dispositivos ligados.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "No entanto, não serão eliminados os dados armazenados localmente nesses dispositivos.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "Eliminar a conta da sincronização";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "Parece que este código foi criado num dispositivo que está a executar uma versão mais antiga do Brave. Atualize para a versão mais recente do Brave no seu outro dispositivo e crie um novo código de sincronização.";
+"sync.deprecatedVersionError" = "Parece que este código foi criado num dispositivo que está a executar uma versão mais antiga do Scout. Atualize para a versão mais recente do Scout no seu outro dispositivo e crie um novo código de sincronização.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "Ocorreu um erro ao obter dispositivos na cadeia de sincronização.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "Parece que o seu dispositivo foi restaurado a partir de uma cópia de segurança, o que pode afetar o Brave Sync. Para continuar a utilizar o Brave Sync, deve repor e voltar a juntar-se à cadeia de sincronização.";
+"sync.deviceRestoreDetectedMessage" = "Parece que o seu dispositivo foi restaurado a partir de uma cópia de segurança, o que pode afetar o Scout Sync. Para continuar a utilizar o Scout Sync, deve repor e voltar a juntar-se à cadeia de sincronização.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "Restauro Detetado";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "Dispositivo";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "Os dados que estão sincronizados no momento serão mantidos, mas todos os dados presentes no cache de sincronização do Brave serão excluídos. Você precisará criar uma nova cadeia de sincronização para sincronizar os dados do dispositivo novamente.";
+"sync.removeLastDeviceMessage" = "Os dados que estão sincronizados no momento serão mantidos, mas todos os dados presentes no cache de sincronização do Scout serão excluídos. Você precisará criar uma nova cadeia de sincronização para sincronizar os dados do dispositivo novamente.";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "Excluir Cadeia de sincronização";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "Sincronizar com o dispositivo";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "Esta funcionalidade abrirá as Definições do Brave. Para alterar as várias opções da Siri, selecione \"Siri e Pesquisa\" e personalize as suas escolhas.";
+"sync.toDeviceDescription" = "Esta funcionalidade abrirá as Definições do Scout. Para alterar as várias opções da Siri, selecione \"Siri e Pesquisa\" e personalize as suas escolhas.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "Não foi possível sincronizar este dispositivo";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "Este código é inválido. Verifique se as horas e o fuso horário estão definidos corretamente no seu dispositivo.";
 
 /* Sync settings welcome */
-"sync.welcome" = "Antes de mais, necessita de instalar Brave em todos os dispositivos que planeia sincronizar. Para os associar todos em cadeia, inicie uma cadeia de sincronização que utilizará para ligar seguramente todos os seus dispositivos.";
+"sync.welcome" = "Antes de mais, necessita de instalar Scout em todos os dispositivos que planeia sincronizar. Para os associar todos em cadeia, inicie uma cadeia de sincronização que utilizará para ligar seguramente todos os seus dispositivos.";
 
 /* Word count title */
 "sync.wordCount" = "Número de palavras: %i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "Não deixe rasto no seu dispositivo";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "O Brave VPN encripta e protege qualquer coisa que faça online, mesmo fora do navegador.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "O Scout VPN encripta e protege qualquer coisa que faça online, mesmo fora do navegador.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "VPN Brave";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "VPN Scout";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "Tenha em atenção que - mesmo em janelas privadas - a sua atividade de navegação pode ser visível para o seu ISP, observadores de rede ou para o seu empregador (se estiver a utilizar uma máquina/rede de trabalho).";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "Abrir o teclado automaticamente";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Abrir links do Ask Brave e da Pesquisa Brave em separadores de pré-visualização";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Abrir links do Ask Scout e da Pesquisa Scout em separadores de pré-visualização";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Ativar separadores de visualização rápida";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "Compartilhar...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Partilhe o Brave com os seus amigos!";
+"themeQRCodeShareTitle" = "Partilhe o Scout com os seus amigos!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "Automático";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "Esse endereço de feed não tem nenhum conteúdo.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Adicionar fonte ao Brave News";
+"today.addSourceShareTitle" = "Adicionar fonte ao Scout News";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "Feeds RSS disponíveis";
 
 /* The name of the feature */
-"today.braveToday" = "Notícias Brave";
+"today.braveToday" = "Notícias Scout";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "Notícias";
@@ -3371,7 +3371,7 @@
 "today.deals" = "Ofertas";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "O Brave News deixará de exibir conteúdo de %@";
+"today.disabledAlertBody" = "O Scout News deixará de exibir conteúdo de %@";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "Desativada";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "Permitir conteúdo de %@";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "O Brave News está enfrentando alguns problemas. Tente novamente.";
+"today.errorGeneralBody" = "O Scout News está enfrentando alguns problemas. Tente novamente.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "Ops…";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "Fontes não seguras: adicione-as por sua conta e risco";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "Siga suas fontes favoritas em um único feed. Basta abrir uma guia no Brave, rolar a tela para baixo e pronto!\nO Notícias Brave exibe anúncios totalmente privados e anonimizados.";
+"today.introCardBody" = "Siga suas fontes favoritas em um único feed. Basta abrir uma guia no Scout, rolar a tela para baixo e pronto!\nO Notícias Scout exibe anúncios totalmente privados e anonimizados.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Ative o Brave News e nunca perca uma história";
+"today.introCardTitle" = "Ative o Scout News e nunca perca uma história";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Mostrar o Brave News";
+"today.isEnabledToggleLabel" = "Mostrar o Scout News";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "Saiba mais sobre os seus dados";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Mais ofertas Brave";
+"today.moreBraveOffers" = "Mais ofertas Scout";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "Sem internet";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "Promovido";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "Avaliar o Brave na App Store";
+"today.rateBraveCardActionSheetTitle" = "Avaliar o Scout na App Store";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "Ocultar";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Classifique o Brave";
+"today.rateBraveCardRateActionTitle" = "Classifique o Scout";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "Diga-nos o que pensa.";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Está a gostar do Brave?";
+"today.rateBraveCardTitle" = "Está a gostar do Scout?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "Atualizar";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "Sugerido";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Ativar as Notícias Brave";
+"today.turnOnBraveToday" = "Ativar as Notícias Scout";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "Deixar de seguir";

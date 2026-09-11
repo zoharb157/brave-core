@@ -295,7 +295,7 @@ extension Strings.Shields {
     "EnableGPCDescription",
     bundle: .module,
     value:
-      "Ask websites not to sell or share your data. [Learn more](https://support.brave.app/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)",
+      "Ask websites not to sell or share your data. [Learn more](https://globalprivacycontrol.org/)",
     comment: "A description of what the Enable GPC toggle does"
   )
 }
@@ -980,7 +980,7 @@ extension Strings.Shields {
     "AboutBraveShieldsBody",
     bundle: .module,
     value:
-      "Sites often include cookies and scripts which try to identify you and your device. They want to work out who you are and follow you across the web — tracking what you do on every site.\n\nBrave blocks these things so that you can browse without being followed around.",
+      "Sites often include cookies and scripts which try to identify you and your device. They want to work out who you are and follow you across the web — tracking what you do on every site.\n\nScout blocks these things so that you can browse without being followed around.",
     comment: "The body of the screen explaining Brave Shields"
   )
   public static let shieldsDownDisclaimer = NSLocalizedString(
@@ -1012,7 +1012,7 @@ extension Strings.Shields {
     "SiteReportedBody",
     bundle: .module,
     value:
-      "Thanks for letting Brave's developers know that there's something wrong with this site. We'll do our best to fix it!",
+      "Thanks for letting Scout's developers know that there's something wrong with this site. We'll do our best to fix it!",
     comment: ""
   )
   public static let braveShieldsSaveContactInfo = NSLocalizedString(
@@ -1040,7 +1040,7 @@ extension Strings.Shields {
   public static let reportBrokenSiteBody1 = NSLocalizedString(
     "ReportBrokenSiteBody1",
     bundle: .module,
-    value: "Let Brave's developers know that this site isn't working as expected:",
+    value: "Let Scout's developers know that this site isn't working as expected:",
     comment:
       "First part of the report a broken site copy. After the colon is a new line and then a website address"
   )
@@ -1048,7 +1048,7 @@ extension Strings.Shields {
     "ReportBrokenSiteBody2",
     bundle: .module,
     value:
-      "Note: The report sent to Brave servers will include the site address, Brave version number, Shields settings, VPN status, and language settings.",
+      "Note: The report sent to Scout servers will include the site address, Scout version number, Shields settings, VPN status, and language settings.",
     comment:
       "This is the info text that is presented when a user is submitting a web-compatibility report."
   )

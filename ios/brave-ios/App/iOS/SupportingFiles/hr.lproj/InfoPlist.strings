@@ -14,7 +14,7 @@
 "NSLocationWhenInUseUsageDescription" = "Na mrežnim mjestima koja posjećujete može se zahtijevati vaša lokacija.";
 
 /* Privacy - Microphone Usage Description */
-"NSMicrophoneUsageDescription" = "Ovo omogućujeBraveu da šalje upite za pretragu koristeći vaš glas.";
+"NSMicrophoneUsageDescription" = "Ovo omogućuje Scoutu da šalje upite za pretragu koristeći vaš glas.";
 
 /* Privacy - Photo Library Additions Usage Description */
 "NSPhotoLibraryAddUsageDescription" = "Omogućava vam spremanje fotografija.";

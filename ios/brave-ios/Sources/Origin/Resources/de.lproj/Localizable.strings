@@ -2,7 +2,7 @@
 "adsHeader" = "Ads";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "Hast du bereits einen Kauf auf brave.com getätigt?";
+"alreadyPurchasedTitle" = "Hast du bereits einen Kauf auf web getätigt?";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Analytics";
@@ -11,25 +11,25 @@
 "buyNowButton" = "Jetzt kaufen";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Das Aktivieren oder Deaktivieren einer Funktion von Brave erfordert den Neustart des Browsers, um die Änderungen zu übernehmen. Bitte schließen Sie Brave (wischen Sie in der App-Übersicht nach oben) und öffnen Sie es anschließend erneut.";
+"featureEnabledToastMessage" = "Das Aktivieren oder Deaktivieren einer Funktion von Scout erfordert den Neustart des Browsers, um die Änderungen zu übernehmen. Bitte schließen Sie Scout (wischen Sie in der App-Übersicht nach oben) und öffnen Sie es anschließend erneut.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Ändern von Brave-Funktionen";
+"featureEnabledToastTitle" = "Ändern von Scout-Funktionen";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Passen Sie Ihren Browser an und unterstützen Sie dabei weiterhin Brave**\n\nBrave Origin ist eine kostenpflichtige Version des Browsers für Benutzende, die nicht alle Funktionen benötigen, die Brave als Unternehmen unterstützen, aber dennoch Wert auf die Datenschutzfunktionen legen, die nur Brave bietet. Benutzende von Origin profitieren weiterhin von unseren branchenführenden Datenschutz- und Werbeblockerfunktionen, hoher Geschwindigkeit (über Shields) sowie von regelmäßigen Softwareupdates, Chromium-Patches und Verbesserungen in den Bereichen Sicherheit und Datenschutz. Die meisten anderen Funktionen werden aus dem Browser entfernt.";
+"featuresFooter" = "**Passen Sie Ihren Browser an und unterstützen Sie dabei weiterhin Scout**\n\nScout Origin ist eine kostenpflichtige Version des Browsers für Benutzende, die nicht alle Funktionen benötigen, die Scout als Unternehmen unterstützen, aber dennoch Wert auf die Datenschutzfunktionen legen, die nur Scout bietet. Benutzende von Origin profitieren weiterhin von unseren branchenführenden Datenschutz- und Werbeblockerfunktionen, hoher Geschwindigkeit (über Shields) sowie von regelmäßigen Softwareupdates, Chromium-Patches und Verbesserungen in den Bereichen Sicherheit und Datenschutz. Die meisten anderen Funktionen werden aus dem Browser entfernt.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Funktionen";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Brave Origin-Kauf verifizieren";
+"getLoginCodeButton" = "Scout Origin-Kauf verifizieren";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Leo-KI";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Kauf mit deinem Brave-Konto verknüpfen";
+"linkPurchase" = "Kauf mit deinem Scout-Konto verknüpfen";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "Nachrichten";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Der Kauf konnte nicht abgeschlossen werden. Bitte versuche es erneut oder überprüfe die bei Apple hinterlegten Zahlungsdaten und versuche es erneut.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Verknüpfe deinen Kauf im App Store mit deinem Brave-Konto, um Brave Origin auf anderen Geräten zu nutzen";
+"purchaseSectionFooter" = "Verknüpfe deinen Kauf im App Store mit deinem Scout-Konto, um Scout Origin auf anderen Geräten zu nutzen";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Kaufen";

@@ -1,99 +1,33 @@
 {
-  "color-space-for-untagged-svg-colors" : "display-p3",
-  "fill" : "system-light",
-  "groups" : [
+  "color-space-for-untagged-svg-colors": "display-p3",
+  "fill": {
+    "linear-gradient": [
+      "display-p3:0.52,0.44,0.82,1.0",
+      "display-p3:0.33,0.25,0.59,1.0"
+    ]
+  },
+  "groups": [
     {
-      "blur-material" : 0.5,
-      "hidden" : false,
-      "layers" : [
+      "layers": [
         {
-          "glass" : false,
-          "image-name" : "BETA.svg",
-          "name" : "BETA"
-        },
-        {
-          "blend-mode" : "normal",
-          "image-name" : "beta-bg.svg",
-          "name" : "beta-bg",
-          "opacity" : 1
-        }
-      ],
-      "position" : {
-        "scale" : 4.1,
-        "translation-in-points" : [
-          204,
-          294
-        ]
-      },
-      "shadow" : {
-        "kind" : "neutral",
-        "opacity" : 0.5
-      },
-      "translucency" : {
-        "enabled" : true,
-        "value" : 0.5
-      }
-    },
-    {
-      "blur-material" : null,
-      "layers" : [
-        {
-          "fill" : "automatic",
-          "glass" : true,
-          "image-name" : "face.svg",
-          "name" : "face",
-          "position" : {
-            "scale" : 4.859999999999998,
-            "translation-in-points" : [
+          "image-name": "scout-mark.svg",
+          "name": "scout-mark",
+          "position": {
+            "scale": 1.0,
+            "translation-in-points": [
               0,
-              -7
+              0
             ]
           }
         }
       ],
-      "name" : "Group",
-      "shadow" : {
-        "kind" : "neutral",
-        "opacity" : 0.65
-      },
-      "translucency" : {
-        "enabled" : true,
-        "value" : 0.2
-      }
-    },
-    {
-      "blur-material" : null,
-      "hidden" : false,
-      "layers" : [
-        {
-          "hidden" : false,
-          "image-name" : "head-beta.svg",
-          "name" : "head-beta",
-          "opacity" : 1,
-          "position" : {
-            "scale" : 4.85,
-            "translation-in-points" : [
-              0,
-              14
-            ]
-          }
-        }
-      ],
-      "shadow" : {
-        "kind" : "layer-color",
-        "opacity" : 0.5
-      },
-      "specular" : true,
-      "translucency" : {
-        "enabled" : false,
-        "value" : 0.5
-      }
+      "name": "Scout"
     }
   ],
-  "supported-platforms" : {
-    "circles" : [
+  "supported-platforms": {
+    "circles": [
       "watchOS"
     ],
-    "squares" : "shared"
+    "squares": "shared"
   }
 }

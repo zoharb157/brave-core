@@ -998,6 +998,9 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         ),
       ]
     )
+    if !ScoutFeatures.sync {
+      general.rows.removeAll { $0.text == Strings.Sync.syncTitle }
+    }
 
     let defaultHostContentSettings = braveCore.defaultHostContentSettings
     if UIDevice.isIpad {

@@ -2,10 +2,10 @@
 "About" = "Mengenai";
 
 /* The title of the screen explaining Shields */
-"AboutBraveShields" = "Mengenai Pelindung Brave";
+"AboutBraveShields" = "Mengenai Pelindung Scout";
 
 /* The body of the screen explaining Shields */
-"AboutBraveShieldsBody" = "Laman sering termasuk kuki dan skrip yang cuba mengenal pasti anda dan peranti anda. Laman ingin mengetahui anda dan mengikuti anda sepanjang web — menjejaki perkara yang anda lakukan pada setiap laman.\n\nBrave menyekat semua hal ini supaya anda boleh melayari laman tanpa diikuti.";
+"AboutBraveShieldsBody" = "Laman sering termasuk kuki dan skrip yang cuba mengenal pasti anda dan peranti anda. Laman ingin mengetahui anda dan mengikuti anda sepanjang web — menjejaki perkara yang anda lakukan pada setiap laman.\n\nScout menyekat semua hal ini supaya anda boleh melayari laman tanpa diikuti.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "Ini membolehkan anda menyimpan imej ke Gulungan Kamera anda.";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "Tambah Penanda Buku";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Data Brave Ads";
+"ads.braveAdsDataToggleOption" = "Data Scout Ads";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "Iklan dan Penjejak";
@@ -50,7 +50,7 @@
 "AlwaysShow" = "Dihidupkan";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Tanya Brave";
+"AskBraveMenuItem" = "Tanya Scout";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
 "AuthenticationLoginsTouchReason" = "Ini mengesahkan akses anda ke Scout";
@@ -209,7 +209,7 @@
 "BravePanel" = "Panel Scout";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Brave Rewards";
+"BraveRewardsAdNotificationTitle" = "Scout Rewards";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "Buka";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "Ganjaran";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Brave Rewards";
+"BraveRewardsTitle" = "Scout Rewards";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "Carian Brave tidak mengumpulkan profil anda.";
+"braveSearchPromotion.bannerDescription" = "Carian Scout tidak mengumpulkan profil anda.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "Mungkin kemudian";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "Sokong carian bebas dengan privasi lebih terjamin";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Cuba gunakan Carian Brave";
+"braveSearchPromotion.bannerTryButtonTitle" = "Cuba gunakan Carian Scout";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "Mungkin kemudian";
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Kawalan lanjutan";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Perisai Brave & Privasi";
+"BraveShieldsAndPrivacy" = "Perisai Scout & Privasi";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Perisai & Privasi";
@@ -254,7 +254,7 @@
 "BraveShieldsBlockedInfoButtonAccessibilityLabel" = "Ketahui lebih lanjut";
 
 /* No comment provided by engineer. */
-"BraveShieldsGlobalChangeButton" = "Tukar Lalai Global Perisai Brave";
+"BraveShieldsGlobalChangeButton" = "Tukar Lalai Global Perisai Scout";
 
 /* No comment provided by engineer. */
 "BraveShieldsGlobalControls" = "Kawalan Global";
@@ -281,7 +281,7 @@
 "BraveShieldsToggleHint" = "Ketik dua kali untuk togol Shields";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Brave Talk";
+"bravetalk.braveTalkTitle" = "Scout Talk";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "Pilih Bahasa";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Cari";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Terjemahan Brave";
+"BraveTranslate.settingsMenuTitle" = "Terjemahan Scout";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Terjemahan Brave";
+"BraveTranslate.settingsScreenTitle" = "Terjemahan Scout";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Apabila diaktifkan, Terjemahan Brave akan mengenal pasti bahasa laman anda secara automatik dan memaparkan butang terjemah di bar URL.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Apabila diaktifkan, Terjemahan Scout akan mengenal pasti bahasa laman anda secara automatik dan memaparkan butang terjemah di bar URL.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Terjemahan Diaktifkan";
@@ -332,7 +332,7 @@
 "callout.bottomBarCalloutTitle" = "Sesuaikan Bar Tab Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "Dapatkan ciri privasi Brave pada komputer atau tablet anda, dan segerakkan penanda halaman & sambungan antara peranti.";
+"callout.privacyEverywhereCalloutDescription" = "Dapatkan ciri privasi Scout pada komputer atau tablet anda, dan segerakkan penanda halaman & sambungan antara peranti.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "Segerakkan Sekarang";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "Sembunyikan Pratonton Pautan";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Sembunyikan Ikon Brave Rewards";
+"HideRewardsIcon" = "Sembunyikan Ikon Scout Rewards";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Sembunyikan ikon Brave Rewards apabila Brave Rewards tidak didayakan";
+"HideRewardsIconSubtitle" = "Sembunyikan ikon Scout Rewards apabila Scout Rewards tidak didayakan";
 
 /* Title for history menu item */
 "HistortMenuItem" = "Sejarah";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "Mengubah hala pautan NPR secara automatik kepada versi berasaskan teks mereka (di text.npr.org).";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Sokongan Brave";
+"ntp.braveSupportFavoriteTitle" = "Sokongan Scout";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "Tuntut Token";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Anda mendapat %@ dengan menyemak lalu dengan Brave.";
+"ntp.earningsReport" = "Anda mendapat %@ dengan menyemak lalu dengan Scout.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "Begitu caranya!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "Sembunyikan imej tajaan";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "Imej tajaan ialah latar belakang berjenama yang muncul apabila tab baharu dibuka dalam pelayar. Dengan mengaktifkannya, anda menyokong misi Brave. [Ketahui Lebih Lanjut](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "Imej tajaan ialah latar belakang berjenama yang muncul apabila tab baharu dibuka dalam pelayar. Dengan mengaktifkannya, anda menyokong misi Scout. [Ketahui Lebih Lanjut](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Ketahui lebih lanjut tentang Brave Rewards";
+"ntp.learnMoreAboutRewards" = "Ketahui lebih lanjut tentang Scout Rewards";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "Ketahui lebih lanjut tentang imej tajaan";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "Dapatkan mata dan beri ganjaran kepada pencipta untuk kandungan hebat sambil anda menyemak lalu.";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "Iklan Brave tersedia!";
+"OBAdsOptInTitle" = "Iklan Scout tersedia!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "Brave akan menunjukkan iklan pertama anda dalam";
+"OBAdsTitle" = "Scout akan menunjukkan iklan pertama anda dalam";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "Sekarang anda sudah bersedia untuk pergi.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "Sertai";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Benarkan Brave untuk menyemak papan klip saya untuk kod rujukan yang sepadan";
+"OBPrivacyConsentClipboardPermission" = "Benarkan Scout untuk menyemak papan klip saya untuk kod rujukan yang sepadan";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "Anda mungkin telah memuat turun Brave untuk menyokong perujuk anda. Untuk mengesan perujuk anda, Brave melakukan pemeriksaan satu kali pada papan klip anda untuk mengetahui kod rujukan yang sepadan. Pemeriksaan ini terhad kepada kod sahaja dan tidak ada data peribadi lain yang akan dihantar. Sekiranya anda memilih keluar, perujuk anda tidak akan menerima ganjaran daripada Brave.";
+"OBPrivacyConsentDetail" = "Anda mungkin telah memuat turun Scout untuk menyokong perujuk anda. Untuk mengesan perujuk anda, Scout melakukan pemeriksaan satu kali pada papan klip anda untuk mengetahui kod rujukan yang sepadan. Pemeriksaan ini terhad kepada kod sahaja dan tidak ada data peribadi lain yang akan dihantar. Sekiranya anda memilih keluar, perujuk anda tidak akan menerima ganjaran daripada Scout.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "Jangan benarkan semakan ini";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "dan";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Brave Rewards";
+"OBRewardsAgreementTitle" = "Scout Rewards";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "Langkah memilih untuk menerima paparan Brave Private Ads dapat menyokong penerbit dan pencipta kandungan bagi setiap iklan yang dipaparkan.";
+"OBRewardsDetail" = "Langkah memilih untuk menerima paparan Scout Private Ads dapat menyokong penerbit dan pencipta kandungan bagi setiap iklan yang dipaparkan.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "Dapatkan token dan beri ganjaran kepada pencipta untuk kandungan hebat sambil anda menyemak lalu.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "Dasar Privasi";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Brave Rewards";
+"OBRewardsTitle" = "Scout Rewards";
 
 /* Save button to save current selection */
 "OBSaveButton" = "Simpan";
@@ -1220,10 +1220,10 @@
 "onboarding.linkReceiptButton" = "Pautkan langganan VPN anda";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "Langganan VPN Brave anda boleh melindungi hingga 10 peranti merentasi Android, iOS dan desktop. Hanya pautkan langganan App Store anda dengan akaun Brave anda.";
+"onboarding.linkReceiptDescription" = "Langganan VPN Scout anda boleh melindungi hingga 10 peranti merentasi Android, iOS dan desktop. Hanya pautkan langganan App Store anda dengan akaun Scout anda.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "Lanjutkan perlindungan Tembok Api Brave + VPN anda";
+"onboarding.linkReceiptTitle" = "Lanjutkan perlindungan Tembok Api Scout + VPN anda";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Dengan menyekat penjejak & iklan, laman web menggunakan kurang data dan memuat dengan lebih pantas.";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "Buka Semua (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Buka Tetapan Brave Rewards";
+"OpenBraveRewardsSettings" = "Buka Tetapan Scout Rewards";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "Ralat tidak diketahui telah berlaku semasa membuka folder Downloads dalam apl Files.";
@@ -1316,7 +1316,7 @@
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Tiada sesi aktif untuk ditunjukkan daripada peranti anda yang lain.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "Ruang ini menunjukkan tab Brave yang dibuka dalam peranti lain";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "Ruang ini menunjukkan tab Scout yang dibuka dalam peranti lain";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "Sorok sementara";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "Teruskan";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "Respons peribadi ini membantu Brave menganggar keseluruhan penggunaan ciri tertentu dan menjadikan ciri ini lebih baik untuk anda.";
+"p3a.settingSubtitle" = "Respons peribadi ini membantu Scout menganggar keseluruhan penggunaan ciri tertentu dan menjadikan ciri ini lebih baik untuk anda.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "Benarkan Analitis Produk Pengekalan Privasi (P3A)";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "Penjejak atau Iklan";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Brave Firewall + Makluman VPN";
+"privacyHub.vpnAlertsHeader" = "Scout Firewall + Makluman VPN";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Firewall + VPN";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "Dayakan Terjemahan";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Berikan penarafan kepada Brave";
+"RateBrave" = "Berikan penarafan kepada Scout";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "Tingkatkan saiz teks";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "Buat satu pilihan";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Beritahu pembangun Brave laman ini tidak berfungsi seperti sepatutnya:";
+"ReportBrokenSiteBody1" = "Beritahu pembangun Scout laman ini tidak berfungsi seperti sepatutnya:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "Perhatian: Laporan yang dihantar kepada pelayan Brave akan menyertakan alamat laman, nombor versi Brave, tetapan Shields, status VPN dan tetapan bahasa.";
+"ReportBrokenSiteBody2" = "Perhatian: Laporan yang dihantar kepada pelayan Scout akan menyertakan alamat laman, nombor versi Scout, tetapan Shields, status VPN dan tetapan bahasa.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "Serah";
@@ -2078,25 +2078,25 @@
 "RestoreTabOnCrashAlertTitle" = "Scout Tertutup Secara Tidak Dijangka.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Hidupkan untuk membantu dalam menyokong Brave dan komuniti BAT.";
+"rewards.disabledBody" = "Hidupkan untuk membantu dalam menyokong Scout dan komuniti BAT.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "Penggunaan Ganjaran Brave membantu dalam menyokong Brave dan komuniti BAT.";
+"rewards.disabledStatusBody" = "Penggunaan Ganjaran Scout membantu dalam menyokong Scout dan komuniti BAT.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Anda membantu dalam menyokong Brave dan komuniti BAT.";
+"rewards.enabledBody" = "Anda membantu dalam menyokong Scout dan komuniti BAT.";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Terima kasih kerana membantu dalam menyokong Brave dan komuniti BAT!";
+"rewards.enabledStatusBody" = "Terima kasih kerana membantu dalam menyokong Scout dan komuniti BAT!";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Berikan sokongan kepada Brave dan komuniti BAT dengan mendayakan Ganjaran Brave dan melihat Brave Ads.";
+"rewards.settingsToggleMessage" = "Berikan sokongan kepada Scout dan komuniti BAT dengan mendayakan Ganjaran Scout dan melihat Scout Ads.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Dayakan Brave Rewards";
+"rewards.settingsToggleTitle" = "Dayakan Scout Rewards";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "Pencipta kandungan ini ditentusahkan dengan Brave Creators";
+"rewards.supportingPublisher" = "Pencipta kandungan ini ditentusahkan dengan Scout Creators";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "Bilangan pencipta kandungan yang anda bantu sokong bulan ini.";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "Jumlah sumbangan";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Token Brave";
+"RewardsInternalsContributionProcessorBraveTokens" = "Token Scout";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "Tiada";
@@ -2387,13 +2387,13 @@
 "searchSuggestionsSubtitle" = "Adakah anda ingin mengaktifkan Cadangan Carian?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Buat carian melalui Brave";
+"SearchWithBrave" = "Buat carian melalui Scout";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "Hantar";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Hantar laporan rosak supaya Brave boleh menyelesaikan masalah?";
+"SendCrashReportAlertMessage" = "Hantar laporan rosak supaya Scout boleh menyelesaikan masalah?";
 
 /* Title for prompt displayed to user after the app crashes */
 "SendCrashReportAlertTitle" = "Aduh! Scout rosak";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "Tetapan Kualiti";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "Ping peribadi ini membolehkan Brave menganggarkan pengguna aktif.";
+"settings.sendUsagePingDescription" = "Ping peribadi ini membolehkan Scout menganggarkan pengguna aktif.";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "Hantar ping penggunaan harian secara automatik ke Brave";
+"settings.sendUsagePingTitle" = "Hantar ping penggunaan harian secara automatik ke Scout";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Membenarkan Brave memaparkan pautan ke tinjauan privet dalam halaman tab baru. Tinjauan membantu kami bina ciri-ciri lebih baik dan ukur keberkesanan kempen iklan berasaskan penyemak imbas. [Ketahui lebih lanjut](%@)";
+"settings.surveyPanelistDescription" = "Membenarkan Scout memaparkan pautan ke tinjauan privet dalam halaman tab baru. Tinjauan membantu kami bina ciri-ciri lebih baik dan ukur keberkesanan kempen iklan berasaskan penyemak imbas. [Ketahui lebih lanjut](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Benarkan tinjauan Brave";
+"settings.surveyPanelistTitle" = "Benarkan tinjauan Scout";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "Imbas Kod QR";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Buka Brave News dan Semak Cerita Teratas Hari Ini";
+"shortcuts.activityTypeBraveNewsDescription" = "Buka Scout News dan Semak Cerita Teratas Hari Ini";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "Buka Pelayar dalam Tab Baharu dan Padam Semua Data Sejarah Pelayar Peribadi";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "Dayakan VPN";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "Buka Pelayar Brave dan Dayakan VPN";
+"shortcuts.activityTypeEnableVPNTitle" = "Buka Pelayar Scout dan Dayakan VPN";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "Buka Tab Peribadi Baharu";
@@ -2621,10 +2621,10 @@
 "shortcuts.activityTypeOpenBookmarksTitle" = "Buka Penanda Halaman Pelayar Scout";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Buka Brave News";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Buka Scout News";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Buka Brave News";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Buka Scout News";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "Buka Skrin Sejarah Pelayar";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "Buka Senarai Main";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "Buka Tab Brave yang Dibuka dalam Peranti Lain";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "Buka Tab Scout yang Dibuka dalam Peranti Lain";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "Buka Tab daripada Peranti Lain";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "Kosongkan Sejarah Pelayar";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Gunakan Pintasan untuk mendayakan Brave VPN melalui Siri - Pembantu Suara";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Gunakan Pintasan untuk mendayakan Scout VPN melalui Siri - Pembantu Suara";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "Dayakan VPN";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "Buka Penanda Halaman";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Gunakan Pintasan untuk membuka tab baharu & memaparkan Suapan Berita Brave melalui Siri - Pembantu Suara";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Gunakan Pintasan untuk membuka tab baharu & memaparkan Suapan Berita Scout melalui Siri - Pembantu Suara";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Buka Brave News";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Buka Scout News";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Gunakan Pintasan untuk membuka skrin sejarah pelayar melalui Siri - Pembantu Suara";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "Tetapan Tapak dan Perisai";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "Terima kasih kerana memberitahu pembangun Brave bahawa ada sesuatu yang tidak kena dengan tapak ini. Kami akan melakukan yang terbaik untuk memperbaikinya!";
+"SiteReportedBody" = "Terima kasih kerana memberitahu pembangun Scout bahawa ada sesuatu yang tidak kena dengan tapak ini. Kami akan melakukan yang terbaik untuk memperbaikinya!";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "Terima Kasih";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Perisai";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Setiap hari saya menjimatkan data dengan melayari web menggunakan Brave.";
+"socialSharing.domainSpecificDataSavedTitle" = "Setiap hari saya menjimatkan data dengan melayari web menggunakan Scout.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Setiap hari saya menjimatkan data dengan melayari web menggunakan Brave.";
+"socialSharing.shareDescriptionTitle" = "Setiap hari saya menjimatkan data dengan melayari web menggunakan Scout.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "Tab Standard";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "Padam Penyegerakan Akaun";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "Pemadaman akaun anda akan mengalih keluar data tersulit anda daripada pelayan Brave dan menyahdayakan Segerak pada semua peranti anda yang bersambung.";
+"sync.deleteAccountAlertDescriptionPart1" = "Pemadaman akaun anda akan mengalih keluar data tersulit anda daripada pelayan Scout dan menyahdayakan Segerak pada semua peranti anda yang bersambung.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "Tindakan ini tidak akan memadamkan data yang disimpan secara setempat pada peranti tersebut.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "Padam Penyegerakan Akaun";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "Nampaknya kod ini telah dicipta pada peranti yang menjalankan versi Brave lebih lama. Sila kemas kini kepada versi terkini Brave pada peranti anda yang lain dan cipta kod segerak baharu.";
+"sync.deprecatedVersionError" = "Nampaknya kod ini telah dicipta pada peranti yang menjalankan versi Scout lebih lama. Sila kemas kini kepada versi terkini Scout pada peranti anda yang lain dan cipta kod segerak baharu.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "Kesilapan telah berlaku semasa mendapatkan peranti dalam rantaian penyegerakan.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "Nampaknya peranti anda telah dipulihkan daripada sandaran, yang boleh menjejas Brave Sync. Untuk terus menggunakan Brave Sync, anda harus menetapkan semula dan menyertai semula rantaian penyegerakan.";
+"sync.deviceRestoreDetectedMessage" = "Nampaknya peranti anda telah dipulihkan daripada sandaran, yang boleh menjejas Scout Sync. Untuk terus menggunakan Scout Sync, anda harus menetapkan semula dan menyertai semula rantaian penyegerakan.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "Pemulihan Dikesan";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "Peranti";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "Data yang kini disegerakkan akan disimpan, namun semua data dalam cache Segerak Brave akan dipadamkan. Anda perlu memulakan rantaian penyegerakan baru untuk menyegerakkan semula data peranti.";
+"sync.removeLastDeviceMessage" = "Data yang kini disegerakkan akan disimpan, namun semua data dalam cache Segerak Scout akan dipadamkan. Anda perlu memulakan rantaian penyegerakan baru untuk menyegerakkan semula data peranti.";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "Padamkan Rantaian Penyegerakan";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "Segerakkan kepada peranti";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "Dengan menggunakan peranti yang telah disegerakkan, buka Tetapan Brave dan pergi ke Tetapan -> Penyegerakan. Pilih \"Tambah Peranti\" dan imbas kod yang dipaparkan pada skrin.";
+"sync.toDeviceDescription" = "Dengan menggunakan peranti yang telah disegerakkan, buka Tetapan Scout dan pergi ke Tetapan -> Penyegerakan. Pilih \"Tambah Peranti\" dan imbas kod yang dipaparkan pada skrin.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "Tidak dapat menyegerakkan peranti ini";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "Kod ini tidak sah. Sila periksa bahawa masa dan zon masa ditetapkan dengan betul pada peranti anda.";
 
 /* Sync settings welcome */
-"sync.welcome" = "Untuk bermula, anda perlu memasangkan Brave pada semua peranti yang anda ingin segerakkan. Untuk menghubungkan mereka bersama-sama, mulakan rantaian penyegerakan yang anda akan gunakan untuk menghubungkan semua peranti anda dengan selamat.";
+"sync.welcome" = "Untuk bermula, anda perlu memasangkan Scout pada semua peranti yang anda ingin segerakkan. Untuk menghubungkan mereka bersama-sama, mulakan rantaian penyegerakan yang anda akan gunakan untuk menghubungkan semua peranti anda dengan selamat.";
 
 /* Word count title */
 "sync.wordCount" = "Bilangan perkataan: %i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "Tiada jejak ditinggalkan pada peranti anda";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "Brave VPN menyulitkan dan melindungi segala yang anda lakukan dalam talian, walaupun di luar pelayar Brave.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "Scout VPN menyulitkan dan melindungi segala yang anda lakukan dalam talian, walaupun di luar pelayar Scout.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Brave VPN";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Scout VPN";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "Harap maklum—walaupun dalam tetingkap peribadi—aktiviti pelayaran anda mungkin masih dapat dilihat oleh ISP, pemerhati rangkaian, atau majikan anda (jika anda menggunakan komputer/rangkaian kerja).";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "Papan Kekunci Terbuka Auto";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Buka pautan daripada Ask Brave dan Carian Brave dalam tab pratonton";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Buka pautan daripada Ask Scout dan Carian Scout dalam tab pratonton";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Dayakan Tab Quickview";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "Kongsi...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Kongsi Brave dengan rakan anda!";
+"themeQRCodeShareTitle" = "Kongsi Scout dengan rakan anda!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "Automatik";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "Maaf, alamat suapan tersebut tidak mempunyai sebarang kandungan.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Tambahkan Sumber Pada Brave News";
+"today.addSourceShareTitle" = "Tambahkan Sumber Pada Scout News";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "Suapan RSS Yang Tersedia";
 
 /* The name of the feature */
-"today.braveToday" = "Brave News";
+"today.braveToday" = "Scout News";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "Berita";
@@ -3371,7 +3371,7 @@
 "today.deals" = "Perjanjian";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "Brave News akan berhenti menunjukkan kandungan daripada %@";
+"today.disabledAlertBody" = "Scout News akan berhenti menunjukkan kandungan daripada %@";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "Dinyahdayakan";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "Benarkan kandungan daripada %@";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "Brave News sedang mengalami beberapa isu. Cuba lagi.";
+"today.errorGeneralBody" = "Scout News sedang mengalami beberapa isu. Cuba lagi.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "Alamak…";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "Sumber Tidak Selamat - Tambah atas risiko anda sendiri";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "Ikuti sumber kegemaran anda dalam suapan tunggal. Hanya buka tab dalam Brave, tatal ke bawah dan... lihatlah!\nBrave News disokong iklan dengan iklan peribadi dan tanpa nama.";
+"today.introCardBody" = "Ikuti sumber kegemaran anda dalam suapan tunggal. Hanya buka tab dalam Scout, tatal ke bawah dan... lihatlah!\nScout News disokong iklan dengan iklan peribadi dan tanpa nama.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Hidupkan Berita Brave dan sentiasa ikuti kisah terkini";
+"today.introCardTitle" = "Hidupkan Berita Scout dan sentiasa ikuti kisah terkini";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Tunjukkan Brave News";
+"today.isEnabledToggleLabel" = "Tunjukkan Scout News";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "Ketahui lebih lanjut mengenai data anda";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Lebih Banyak Tawaran Brave";
+"today.moreBraveOffers" = "Lebih Banyak Tawaran Scout";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "Tiada Internet";
@@ -3458,13 +3458,13 @@
 "today.rateBraveCardHideActionTitle" = "Sembunyikan";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Berikan penarafan kepada Brave";
+"today.rateBraveCardRateActionTitle" = "Berikan penarafan kepada Scout";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "Berikan maklum balas anda!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Sukai Brave?";
+"today.rateBraveCardTitle" = "Sukai Scout?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "Segar semula";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "Dicadangkan";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Hidupkan Brave News";
+"today.turnOnBraveToday" = "Hidupkan Scout News";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "Nyahikut";

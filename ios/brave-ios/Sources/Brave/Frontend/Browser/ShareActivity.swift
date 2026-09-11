@@ -343,7 +343,7 @@ extension UIViewController {
     }
 
     // Report Web-compat Issue Activity
-    if let onShowSubmitReport = callbacks.onShowSubmitReport {
+    if ScoutFeatures.webcompatReporter, let onShowSubmitReport = callbacks.onShowSubmitReport {
       activities.append(
         BasicMenuActivity(
           activityType: .reportBrokenSite

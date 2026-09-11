@@ -8,13 +8,13 @@
 "NSCameraUsageDescription" = "Tämän avulla voit ottaa ja lähettää valokuvia.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Tämä todentaa Braven käyttöoikeutesi";
+"NSFaceIDUsageDescription" = "Tämä todentaa Scoutin käyttöoikeutesi";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Verkkosivustot, joilla käyt, voivat pyytää sijaintiasi.";
 
 /* Privacy - Microphone Usage Description */
-"NSMicrophoneUsageDescription" = "Tämä sallii Braven tehdä hakuja sinun ääntäsi käyttäen.";
+"NSMicrophoneUsageDescription" = "Tämä sallii Scoutin tehdä hakuja sinun ääntäsi käyttäen.";
 
 /* Privacy - Photo Library Additions Usage Description */
 "NSPhotoLibraryAddUsageDescription" = "Tämän avulla voit tallentaa valokuvia.";

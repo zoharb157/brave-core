@@ -2,10 +2,10 @@
 "About" = "Informácie";
 
 /* The title of the screen explaining Shields */
-"AboutBraveShields" = "O Brave štítoch";
+"AboutBraveShields" = "O Scout štítoch";
 
 /* The body of the screen explaining Shields */
-"AboutBraveShieldsBody" = "Stránky často obsahujú súbory cookie a skripty, ktoré sa snažia identifikovať vás a vaše zariadenie. Chcú zistiť, kto ste, a sledovať vás na webe – sledovať, čo robíte na každej stránke.\n\nBrave blokuje ich blokuje, takže stránky môžete prehliadať bez toho, aby vás niekto sledoval.";
+"AboutBraveShieldsBody" = "Stránky často obsahujú súbory cookie a skripty, ktoré sa snažia identifikovať vás a vaše zariadenie. Chcú zistiť, kto ste, a sledovať vás na webe – sledovať, čo robíte na každej stránke.\n\nScout blokuje ich blokuje, takže stránky môžete prehliadať bez toho, aby vás niekto sledoval.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "To vám umožní uložiť obrázok do galérie.";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "Pridať záložku";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Údaje Brave Ads";
+"ads.braveAdsDataToggleOption" = "Údaje Scout Ads";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "Reklamy a sledovače";
@@ -50,7 +50,7 @@
 "AlwaysShow" = "Zapnuté";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Opýtajte sa Brave";
+"AskBraveMenuItem" = "Opýtajte sa Scout";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
 "AuthenticationLoginsTouchReason" = "Toto overí váš prístup k Scout";
@@ -209,7 +209,7 @@
 "BravePanel" = "Panel Scout";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Odmeny Brave";
+"BraveRewardsAdNotificationTitle" = "Odmeny Scout";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "Otvoriť";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "Odmeny";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Odmeny Brave";
+"BraveRewardsTitle" = "Odmeny Scout";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "Vyhľadávanie Brave vás neprofiluje.";
+"braveSearchPromotion.bannerDescription" = "Vyhľadávanie Scout vás neprofiluje.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "Možno neskôr";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "Podporte nezávislé vyhľadávanie s lepším zabezpečením ochrany osobných údajov";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Vyskúšajte nástroj Brave Search";
+"braveSearchPromotion.bannerTryButtonTitle" = "Vyskúšajte nástroj Scout Search";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "Možno neskôr";
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Pokročilé ovládanie";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Štíty Brave a súkromie";
+"BraveShieldsAndPrivacy" = "Štíty Scout a súkromie";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Štíty a súkromie";
@@ -269,7 +269,7 @@
 "BraveShieldsSiteBroken" = "Ak sa táto stránka javí ako nefunkčná, skúste štíty vypnúť";
 
 /* Context: 'Shields Up' or 'Shields Down' */
-"BraveShieldsStatusTitle" = "Brave štíty";
+"BraveShieldsStatusTitle" = "Scout štíty";
 
 /* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "dolu";
@@ -278,10 +278,10 @@
 "BraveShieldsStatusValueUp" = "Hore";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Dvojitým klepnutím prepínate štíty Brave";
+"BraveShieldsToggleHint" = "Dvojitým klepnutím prepínate štíty Scout";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Brave Talk";
+"bravetalk.braveTalkTitle" = "Scout Talk";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "Vyberte jazyk";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Vyhľadávanie";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Prekladač Brave";
+"BraveTranslate.settingsMenuTitle" = "Prekladač Scout";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Prekladač Brave";
+"BraveTranslate.settingsScreenTitle" = "Prekladač Scout";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Keď je táto funkcia zapnutá, Prekladač Brave automaticky zistí aktuálny jazyk vašej stránky a v paneli s URL adresou zobrazí tlačidlo na preklad.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Keď je táto funkcia zapnutá, Prekladač Scout automaticky zistí aktuálny jazyk vašej stránky a v paneli s URL adresou zobrazí tlačidlo na preklad.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Prekladač povolený";
@@ -332,7 +332,7 @@
 "callout.bottomBarCalloutTitle" = "Prispôsobiť panel kariet Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "Získajte súkromie Brave na svojom počítači alebo tablete a synchronizujte záložky a rozšírenia medzi zariadeniami.";
+"callout.privacyEverywhereCalloutDescription" = "Získajte súkromie Scout na svojom počítači alebo tablete a synchronizujte záložky a rozšírenia medzi zariadeniami.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "Synchronizovať teraz";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "Skryť ukážky odkazov";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Skryť ikonu Brave odmeny";
+"HideRewardsIcon" = "Skryť ikonu Scout odmeny";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Skryje ikonu Odmeny Brave, keď nie je aplikácia Odmeny Brave povolená";
+"HideRewardsIconSubtitle" = "Skryje ikonu Odmeny Scout, keď nie je aplikácia Odmeny Scout povolená";
 
 /* Title for history menu item */
 "HistortMenuItem" = "História";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "Automaticky presmeruje odkazy NPR na ich textovú verziu (na text.npr.org).";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Podpora Brave";
+"ntp.braveSupportFavoriteTitle" = "Podpora Scout";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "Získať tokeny";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Prehliadaním s Brave ste zarobili %@.";
+"ntp.earningsReport" = "Prehliadaním s Scout ste zarobili %@.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "To sa oplatí!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "Skryť sponzorované obrázky";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "Sponzorované obrázky sú označené pozadia, ktoré sa zobrazujú na novootvorených kartách v prehliadači. Povolením týchto sponzorovaných obrázkov podporíte poslanie spoločnosti Brave. [Ďalšie informácie](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "Sponzorované obrázky sú označené pozadia, ktoré sa zobrazujú na novootvorených kartách v prehliadači. Povolením týchto sponzorovaných obrázkov podporíte poslanie spoločnosti Scout. [Ďalšie informácie](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Prečítajte si viac o odmenách Brave.";
+"ntp.learnMoreAboutRewards" = "Prečítajte si viac o odmenách Scout.";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "Viac informácií o sponzorovaných obrázkoch";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "Počas prehliadania získavajte body a odmeňujte tvorcov za skvelý obsah.";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "Reklamy Brave sú tu!";
+"OBAdsOptInTitle" = "Reklamy Scout sú tu!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "Prehliadač Brave zobrazí vašu prvú reklamu za";
+"OBAdsTitle" = "Prehliadač Scout zobrazí vašu prvú reklamu za";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "Teraz máte všetko, čo potrebujete.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "Pripojiť sa";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Dovoliť, aby Brave skontroloval moju schránku, či neobsahuje správny referenčný kód";
+"OBPrivacyConsentClipboardPermission" = "Dovoliť, aby Scout skontroloval moju schránku, či neobsahuje správny referenčný kód";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "Možno ste si stiahli Brave na podporu svojho sprostredkovateľa. Aby Brave zistil vášho sprostredkovateľa, vykoná jednorazovú kontrolu vašej schránky, či neobsahuje zodpovedajúci referenčný kód. Táto kontrola je obmedzená len na kód a nebudú sa prenášať žiadne ďalšie osobné údaje. Ak sa odhlásite, váš sprostredkovateľ nedostane Odmeny Brave.";
+"OBPrivacyConsentDetail" = "Možno ste si stiahli Scout na podporu svojho sprostredkovateľa. Aby Scout zistil vášho sprostredkovateľa, vykoná jednorazovú kontrolu vašej schránky, či neobsahuje zodpovedajúci referenčný kód. Táto kontrola je obmedzená len na kód a nebudú sa prenášať žiadne ďalšie osobné údaje. Ak sa odhlásite, váš sprostredkovateľ nedostane Odmeny Scout.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "Nepovoliť túto kontrolu";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "a";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Odmeny Brave";
+"OBRewardsAgreementTitle" = "Odmeny Scout";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "Prihlásením sa do Súkromných reklám Brave podporíte vydavateľov a tvorcov obsahu pri každej zobrazenej reklame.";
+"OBRewardsDetail" = "Prihlásením sa do Súkromných reklám Scout podporíte vydavateľov a tvorcov obsahu pri každej zobrazenej reklame.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "Zarábajte tokeny a odmeňujte tvorcov za skvelý obsah počas prehliadania.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "Zásady ochrany osobných údajov";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Odmeny Brave";
+"OBRewardsTitle" = "Odmeny Scout";
 
 /* Save button to save current selection */
 "OBSaveButton" = "Uložiť";
@@ -1208,7 +1208,7 @@
 "OBShieldsDetail" = "Blokujte sledovače narúšajúce súkromie, aby ste mohli prehliadať web bez toho, aby vás niekto sledoval";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Brave štíty";
+"OBShieldsTitle" = "Scout štíty";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "Zobraziť";
@@ -1220,10 +1220,10 @@
 "onboarding.linkReceiptButton" = "Prepojenie predplatného siete VPN";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "Vaše predplatné Brave VPN môže chrániť až 10 zariadení v systéme Android, iOS a desktop. Stačí prepojiť predplatné App Store so svojím účtom Brave.";
+"onboarding.linkReceiptDescription" = "Vaše predplatné Scout VPN môže chrániť až 10 zariadení v systéme Android, iOS a desktop. Stačí prepojiť predplatné App Store so svojím účtom Scout.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "Rozšírenie ochrany Brave Firewall + VPN";
+"onboarding.linkReceiptTitle" = "Rozšírenie ochrany Scout Firewall + VPN";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Blokovaním sledovačov a reklám webové stránky využívajú menej dát a načítavajú sa oveľa rýchlejšie.";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "Otvoriť všetko (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Otvorte nastavenia Odmeny Brave";
+"OpenBraveRewardsSettings" = "Otvorte nastavenia Odmeny Scout";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "Pri otváraní priečinka Stiahnuté súbory v aplikácii Súbory sa vyskytla neznáma chyba.";
@@ -1316,7 +1316,7 @@
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Neexistujú žiadne aktívne relácie na zobrazenie z vašich iných zariadení.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "Tento priestor zobrazuje karty Brave otvorené v iných zariadeniach";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "Tento priestor zobrazuje karty Scout otvorené v iných zariadeniach";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "Skryť";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "Pokračovať";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "Tieto súkromné odpovede pomáhajú spoločnosti Brave odhadnúť celkové používanie určitých funkcií a vylepšiť ich.";
+"p3a.settingSubtitle" = "Tieto súkromné odpovede pomáhajú spoločnosti Scout odhadnúť celkové používanie určitých funkcií a vylepšiť ich.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "Povoliť analýzu produktov na ochranu súkromia (P3A)";
@@ -1724,7 +1724,7 @@
 "privacyHub.lastWeekHeader" = "Minulý týždeň";
 
 /* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$ @** bol zablokovaný štítom Brave dňa **%2$ lld**";
+"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$ @** bol zablokovaný štítom Scout dňa **%2$ lld**";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "Najčastejší sledovač a reklama";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "Sledovač alebo reklama";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Brave Firewall + VPN Alerts";
+"privacyHub.vpnAlertsHeader" = "Scout Firewall + VPN Alerts";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Firewall + VPN";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "Zapnúť preklad";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Ohodnotiť Brave";
+"RateBrave" = "Ohodnotiť Scout";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "Zväčšiť veľkosť textu";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "Vyberte jednu možnosť";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Dajte vývojárom Brave vedieť, že táto stránka nefunguje podľa očakávaní:";
+"ReportBrokenSiteBody1" = "Dajte vývojárom Scout vedieť, že táto stránka nefunguje podľa očakávaní:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "Poznámka: Správa odoslaná serverom Brave bude obsahovať adresu lokality, číslo verzie Brave, nastavenia ochrany, stav VPN a jazykové nastavenia.";
+"ReportBrokenSiteBody2" = "Poznámka: Správa odoslaná serverom Scout bude obsahovať adresu lokality, číslo verzie Scout, nastavenia ochrany, stav VPN a jazykové nastavenia.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "Odeslat";
@@ -2078,25 +2078,25 @@
 "RestoreTabOnCrashAlertTitle" = "Scout bol nečakane zatvorený.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Zapnite na podporu značky Brave a komunity BAT.";
+"rewards.disabledBody" = "Zapnite na podporu značky Scout a komunity BAT.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "Pomocou Brave Rewards podporujete značku Brave a komunitu BAT.";
+"rewards.disabledStatusBody" = "Pomocou Scout Rewards podporujete značku Scout a komunitu BAT.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Podporujete značku Brave a komunitu BAT.";
+"rewards.enabledBody" = "Podporujete značku Scout a komunitu BAT.";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Ďakujeme, že podporujete značku Brave a komunitu BAT.";
+"rewards.enabledStatusBody" = "Ďakujeme, že podporujete značku Scout a komunitu BAT.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Podporte značku Brave a komunitu BAT povolením Brave Rewards a zobrazovaním Brave Ads.";
+"rewards.settingsToggleMessage" = "Podporte značku Scout a komunitu BAT povolením Scout Rewards a zobrazovaním Scout Ads.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Povoliť odmeny Brave";
+"rewards.settingsToggleTitle" = "Povoliť odmeny Scout";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "Tohto tvorcu obsahu overili tvorcovia Brave";
+"rewards.supportingPublisher" = "Tohto tvorcu obsahu overili tvorcovia Scout";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "Počet tvorcov obsahu, ktorých tento mesiac pomáhate podporovať.";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "Výška daru";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Tokeny Brave";
+"RewardsInternalsContributionProcessorBraveTokens" = "Tokeny Scout";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "Žiadne";
@@ -2387,13 +2387,13 @@
 "searchSuggestionsSubtitle" = "Chcete povoliť Návrhy vyhľadávania?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Vyhľadávanie pomocou Brave";
+"SearchWithBrave" = "Vyhľadávanie pomocou Scout";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "Odoslať";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Chcete poslať správu o výpadku, aby Brave mohol problém vyriešiť?";
+"SendCrashReportAlertMessage" = "Chcete poslať správu o výpadku, aby Scout mohol problém vyriešiť?";
 
 /* Title for prompt displayed to user after the app crashes */
 "SendCrashReportAlertTitle" = "Ojoj! Scout má výpadok";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "Nastavenia kvality";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "Tento súkromný ping umožňuje spoločnosti Brave odhadnúť počet aktívnych používateľov.";
+"settings.sendUsagePingDescription" = "Tento súkromný ping umožňuje spoločnosti Scout odhadnúť počet aktívnych používateľov.";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "Automaticky odoslať správu o dennom využívaní službe Brave";
+"settings.sendUsagePingTitle" = "Automaticky odoslať správu o dennom využívaní službe Scout";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Umožňuje spoločnosti Brave zobrazovať odkazy na súkromné prieskumy na stránke novej karty. Prieskumy nám pomáhajú vytvárať lepšie funkcie a merať účinnosť reklamných kampaní v prehliadači. [Viac informácií](%@)";
+"settings.surveyPanelistDescription" = "Umožňuje spoločnosti Scout zobrazovať odkazy na súkromné prieskumy na stránke novej karty. Prieskumy nám pomáhajú vytvárať lepšie funkcie a merať účinnosť reklamných kampaní v prehliadači. [Viac informácií](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Povoliť prieskumy od Brave";
+"settings.surveyPanelistTitle" = "Povoliť prieskumy od Scout";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Zdieľať novinky";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Štíty Brave práve ochránili vaše súkromie online.";
+"shieldEducation.trackerAdWarningSubTitle" = "Štíty Scout práve ochránili vaše súkromie online.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "Gratulujeme. Ste výnimoční.";
@@ -2555,7 +2555,7 @@
 "shieldEducation.videoAdBlockTitle" = "Počas sledovania videí na tomto webe sú blokované reklamy.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Globálne predvolené hodnoty štítov Brave";
+"ShieldsDefaults" = "Globálne predvolené hodnoty štítov Scout";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "Toto sú predvolené nastavenia Shield pre nové webové stránky. Zmena týchto nastavení nebude mať vplyv na vaše existujúce nastavenia pre jednotlivé stránky.";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "Skenovať QR kód";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Otvorte Správy Brave a pozrite si dnešné hlavné novinky";
+"shortcuts.activityTypeBraveNewsDescription" = "Otvorte Správy Scout a pozrite si dnešné hlavné novinky";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "Otvoriť prehliadač na novej karte a odstrániť všetky súkromné ​​údaje histórie prehliadača";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "Povoliť VPN";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "Otvorte prehliadač Brave a povoľte VPN";
+"shortcuts.activityTypeEnableVPNTitle" = "Otvorte prehliadač Scout a povoľte VPN";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "Otvoriť novú súkromnú kartu";
@@ -2621,10 +2621,10 @@
 "shortcuts.activityTypeOpenBookmarksTitle" = "Otvoriť záložky prehliadača Scout";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Otvoriť Správy Brave";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Otvoriť Správy Scout";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Otvoriť Správy Brave";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Otvoriť Správy Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "Otvorte obrazovku História prehliadača";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "Otvoriť zoznam skladieb";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "Otvoriť otvorené karty Brave v iných zariadeniach";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "Otvoriť otvorené karty Scout v iných zariadeniach";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "Otvoriť karty z iných zariadení";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "Vymazať históriu prehliadača";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Pomocou skratiek povoľte Brave VPN cez Siri – hlasového asistenta";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Pomocou skratiek povoľte Scout VPN cez Siri – hlasového asistenta";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "Povoliť VPN";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "Otvoriť Záložky";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Pomocou skratiek otvorte novú kartu a zobrazte kanál Správy Brave cez Siri – hlasového asistenta";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Pomocou skratiek otvorte novú kartu a zobrazte kanál Správy Scout cez Siri – hlasového asistenta";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Otvoriť Správy Brave";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Otvoriť Správy Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Pomocou skratiek otvorte obrazovku histórie prehliadača cez Siri – hlasového asistenta";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "Nastavenia stránky a štítov";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "Ďakujeme, že ste vývojárom Brave oznámili, že na tejto stránke je niečo chybné. Urobíme všetko pre to, aby sme to napravili!";
+"SiteReportedBody" = "Ďakujeme, že ste vývojárom Scout oznámili, že na tejto stránke je niečo chybné. Urobíme všetko pre to, aby sme to napravili!";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "Ďakujem";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Štíty";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Každý deň šetrím dáta tým, že web prehliadam pomocou prehliadača Brave.";
+"socialSharing.domainSpecificDataSavedTitle" = "Každý deň šetrím dáta tým, že web prehliadam pomocou prehliadača Scout.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Každý deň šetrím dáta tým, že web prehliadam pomocou prehliadača Brave.";
+"socialSharing.shareDescriptionTitle" = "Každý deň šetrím dáta tým, že web prehliadam pomocou prehliadača Scout.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "Štandardná karta";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "Odstrániť synchronizovaný účet";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "Vymazaním účtu vymažete vaše zašifrované údaje z Brave serverov a znemožníte Synchronizáciu na všetkých vašich pripojených zariadeniach.";
+"sync.deleteAccountAlertDescriptionPart1" = "Vymazaním účtu vymažete vaše zašifrované údaje z Scout serverov a znemožníte Synchronizáciu na všetkých vašich pripojených zariadeniach.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "Údaje uložené lokálne na týchto zariadeniach sa však nezmažú.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "Odstrániť synchronizovaný účet";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "Zdá sa, že kód bol vytvorený na zariadení so starou verziou prehliadača Brave. Aktualizujte prehliadač Brave na najnovšiu verziu na svojom zariadení a následne vytvorte nový synchronizačný kód.";
+"sync.deprecatedVersionError" = "Zdá sa, že kód bol vytvorený na zariadení so starou verziou prehliadača Scout. Aktualizujte prehliadač Scout na najnovšiu verziu na svojom zariadení a následne vytvorte nový synchronizačný kód.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "Pri načítavaní zariadení v synchronizačnom reťazci sa vyskytla chyba.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "Zdá sa, že vaše zariadenie bolo obnovené zo zálohy, čo môže ovplyvniť funkciu Brave Sync. Ak chcete pokračovať v používaní Brave Sync, mali by ste funkciu obnoviť a znovu sa pripojiť k synchronizačnému reťazcu.";
+"sync.deviceRestoreDetectedMessage" = "Zdá sa, že vaše zariadenie bolo obnovené zo zálohy, čo môže ovplyvniť funkciu Scout Sync. Ak chcete pokračovať v používaní Scout Sync, mali by ste funkciu obnoviť a znovu sa pripojiť k synchronizačnému reťazcu.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "Zistené obnovenie";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "Zariadenie";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "Aktuálne synchronizované dáta zostanú zachované, ale všetky dáta vo vyrovnávacej pamäti synchronizácie Brave budú vymazané. Ak chcete znova synchronizovať údaje zariadenia, budete musieť spustiť nový synchronizačný reťazec.";
+"sync.removeLastDeviceMessage" = "Aktuálne synchronizované dáta zostanú zachované, ale všetky dáta vo vyrovnávacej pamäti synchronizácie Scout budú vymazané. Ak chcete znova synchronizovať údaje zariadenia, budete musieť spustiť nový synchronizačný reťazec.";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "Odstrániť synchronizačný reťazec";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "Synchronizovať so zariadením";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "Pomocou existujúceho synchronizovaného zariadenia otvorte Nastavenia Brave a prejdite na Nastavenia -> Synchronizácia. Zvoľte „Pridať zariadenie“ a naskenujte kód zobrazený na obrazovke.";
+"sync.toDeviceDescription" = "Pomocou existujúceho synchronizovaného zariadenia otvorte Nastavenia Scout a prejdite na Nastavenia -> Synchronizácia. Zvoľte „Pridať zariadenie“ a naskenujte kód zobrazený na obrazovke.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "Toto zariadenie sa nedá synchronizovať";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "Tento kód je neplatný. Skontrolujte, či je vo vašom zariadení správne nastavený čas a časové pásmo.";
 
 /* Sync settings welcome */
-"sync.welcome" = "Ak chcete začať, na všetkých zariadeniach, ktoré plánujete synchronizovať, si budete musieť nainštalovať Brave. Ak ich chcete spojiť, spustite reťazec synchronizácie, ktorý použijete na bezpečné prepojenie všetkých vašich zariadení.";
+"sync.welcome" = "Ak chcete začať, na všetkých zariadeniach, ktoré plánujete synchronizovať, si budete musieť nainštalovať Scout. Ak ich chcete spojiť, spustite reťazec synchronizácie, ktorý použijete na bezpečné prepojenie všetkých vašich zariadení.";
 
 /* Word count title */
 "sync.wordCount" = "Počet slov: %i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "Nezanechajte na svojom zariadení žiadne stopy";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "Brave VPN šifruje a chráni všetko, čo robíte online, a to aj mimo prehliadača Brave.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "Scout VPN šifruje a chráni všetko, čo robíte online, a to aj mimo prehliadača Scout.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Brave VPN";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Scout VPN";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "Upozorňujeme, že aj v súkromných oknách môže byť vaša aktivita pri prehliadaní viditeľná pre poskytovateľa internetových služieb, pozorovateľov siete alebo vášho zamestnávateľa (ak používate pracovné zariadenie/sieť).";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "Automatické otváranie klávesnice";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Otvoriť odkazy z Ask Brave a Vyhľadávania Brave na kartách s náhľadom";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Otvoriť odkazy z Ask Scout a Vyhľadávania Scout na kartách s náhľadom";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Povoliť karty rýchleho náhľadu";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "Zdieľať...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Zdieľajte Brave so svojimi priateľmi!";
+"themeQRCodeShareTitle" = "Zdieľajte Scout so svojimi priateľmi!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "Automatické";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "Ľutujeme, táto adresa informačného kanála nemá žiadny obsah.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Pridajte zdroj do Správ Brave";
+"today.addSourceShareTitle" = "Pridajte zdroj do Správ Scout";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "Dostupné kanály RSS";
 
 /* The name of the feature */
-"today.braveToday" = "Novinky Brave";
+"today.braveToday" = "Novinky Scout";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "News";
@@ -3371,7 +3371,7 @@
 "today.deals" = "Ponuky";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "Správy Brave prestanú zobrazovať obsah od %@";
+"today.disabledAlertBody" = "Správy Scout prestanú zobrazovať obsah od %@";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "Deaktivované";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "Povoliť obsah z %@";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "Správy Brave majú problémy s načítavaním. Skúste to znova.";
+"today.errorGeneralBody" = "Správy Scout majú problémy s načítavaním. Skúste to znova.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "Ups…";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "Nezabezpečené zdroje – pridávanie na vlastné riziko";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "Sledujte svoje obľúbené zdroje v jedinom informačnom kanáli. Stačí otvoriť kartu v Brave, posunúť sa nadol a... hotovo!\nSprávy Brave sú podporované reklamami so súkromnými, anonymizovanými reklamami.";
+"today.introCardBody" = "Sledujte svoje obľúbené zdroje v jedinom informačnom kanáli. Stačí otvoriť kartu v Scout, posunúť sa nadol a... hotovo!\nSprávy Scout sú podporované reklamami so súkromnými, anonymizovanými reklamami.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Zapnite si Brave News, aby vám nikdy nič neuniklo";
+"today.introCardTitle" = "Zapnite si Scout News, aby vám nikdy nič neuniklo";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Zobraziť službu Brave News";
+"today.isEnabledToggleLabel" = "Zobraziť službu Scout News";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "Získajte viac informácií o svojich údajoch";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Viac ponúk Brave";
+"today.moreBraveOffers" = "Viac ponúk Scout";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "Žiadny internet";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "Propagovaný";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "Ohodnotiť Brave v obchode App Store";
+"today.rateBraveCardActionSheetTitle" = "Ohodnotiť Scout v obchode App Store";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "Skrýt";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Ohodnotiť Brave";
+"today.rateBraveCardRateActionTitle" = "Ohodnotiť Scout";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "Povedzte nám, čo si myslíte!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Páči sa vám prehliadač Brave?";
+"today.rateBraveCardTitle" = "Páči sa vám prehliadač Scout?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "Obnoviť";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "Navrhované";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Zapnúť novinky Brave";
+"today.turnOnBraveToday" = "Zapnúť novinky Scout";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "Zrušiť sledovanie";

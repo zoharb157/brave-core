@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Kysy Bravelta";
+"widgets.askBrave" = "Kysy Scoutilta";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Kirjanmerkkipalkki";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo-tekoäly";
 
 /* The name of the feature */
-"widgets.braveNews" = "Brave-uutiset";
+"widgets.braveNews" = "Uutiset";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Lataukset";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "Tärkeimmät uutiset";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Brave-uutiset eivät ole käytössä";
+"widgets.newsUnavailableByPolicy" = "Uutiset eivät ole käytössä";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "Poistettu käytöstä organisaatiosi käytännön mukaisesti";
@@ -74,7 +74,7 @@
 "widgets.shortcutsPrivateTabButton" = "Yksityinen välilehti";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "Nopea pääsy verkkohakuihin tai verkkosivujen avaamiseen Bravessa.";
+"widgets.shortcutsWidgetDescription" = "Nopea pääsy verkkohakuihin tai verkkosivujen avaamiseen Scoutissa.";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "Pikanäppäimet";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "Tietosuojatilasto";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Brave-lompakko";
+"widgets.walletShortcutTitle" = "Lompakko";
 

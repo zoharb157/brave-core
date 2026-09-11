@@ -20,7 +20,7 @@
 "NSPhotoLibraryAddUsageDescription" = "Isso permite que você salve fotos.";
 
 /* Privacy - Speech Recognition Usage Description */
-"NSSpeechRecognitionUsageDescription" = "Esta autorização é utilizada para ativar o Reconhecimento por voz avançado da Apple. Se não for ativado \"no dispositivo\" o reconhecimento será utilizado e as pesquisas serão totalmente privadas. A brave não guarda nem partilha as suas pesquisas de voz.";
+"NSSpeechRecognitionUsageDescription" = "Esta autorização é utilizada para ativar o Reconhecimento por voz avançado da Apple. Se não for ativado \"no dispositivo\" o reconhecimento será utilizado e as pesquisas serão totalmente privadas. O Scout não guarda nem partilha as suas pesquisas de voz.";
 
 /* No comment provided by engineer. */
 "OPML File" = "Arquivo OPML";

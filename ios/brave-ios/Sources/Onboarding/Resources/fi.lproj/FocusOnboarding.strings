@@ -26,7 +26,7 @@
 "focusOnboarding.p3aScreenDescription" = "Kerro meille, mistä toiminnoista pidät eniten.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Auta parantamaan Bravea";
+"focusOnboarding.p3aScreenTitle" = "Auta parantamaan Scoutia";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "Voit milloin tahansa kieltäytyä siitä Asetuksissa kohdassa **Suojaus ja tietosuoja**. [Lue lisää](#p3a-learn-more) yksityisyyttä suojaavasta tuoteanalytiikastamme.";

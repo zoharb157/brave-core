@@ -78,7 +78,8 @@ class SearchSuggestionDataSource {
   }
 
   var braveSearchPromotionAvailable: Bool {
-    guard Preferences.Review.launchCount.value > 1,
+    guard ScoutFeatures.braveSearchPromotion,
+      Preferences.Review.launchCount.value > 1,
       searchEngines?.defaultEngine(forType: isPrivate ? .privateMode : .standard)?
         .shortName != OpenSearchEngine.EngineNames.brave,
       let braveSearchPromotionLaunchDate = Preferences.BraveSearch.braveSearchPromotionLaunchDate

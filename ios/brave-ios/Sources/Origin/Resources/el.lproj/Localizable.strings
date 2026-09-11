@@ -2,7 +2,7 @@
 "adsHeader" = "Διαφημίσεις";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "Έχετε ήδη κάνει αγορές στο brave.com;";
+"alreadyPurchasedTitle" = "Έχετε ήδη κάνει αγορές στο web;";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Analytics";
@@ -11,25 +11,25 @@
 "buyNowButton" = "Αγορά τώρα";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Η ενεργοποίηση ή η απενεργοποίηση μιας λειτουργίας του Brave απαιτεί επανεκκίνηση του προγράμματος περιήγησης για να εφαρμοστούν οι αλλαγές. Παρακαλώ κλείστε (σύρετε προς τα πάνω στο App Switcher) και έπειτα ανοίξτε ξανά το Brave.";
+"featureEnabledToastMessage" = "Η ενεργοποίηση ή η απενεργοποίηση μιας λειτουργίας του Scout απαιτεί επανεκκίνηση του προγράμματος περιήγησης για να εφαρμοστούν οι αλλαγές. Παρακαλώ κλείστε (σύρετε προς τα πάνω στο App Switcher) και έπειτα ανοίξτε ξανά το Scout.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Αλλαγή λειτουργιών Brave";
+"featureEnabledToastTitle" = "Αλλαγή λειτουργιών Scout";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Προσαρμόστε το πρόγραμμα περιήγησής σας ενώ εξακολουθείτε να υποστηρίζετε το Brave**\n\nΤο Brave Origin είναι μια πληρωτή έκδοση του προγράμματος περιήγησης για χρήστες που δεν χρειάζονται όλες τις λειτουργίες που υποστηρίζουν το Brave ως επιχείρηση, αλλά εξακολουθούν να θέλουν το απόρρητο που παρέχει μόνο το Brave. Οι χρήστες του Origin θα συνεχίσουν να επωφελούνται από την κορυφαία στον κλάδο μας προστασία απορρήτου, φραγή διαφημίσεων και ταχύτητα (μέσω Ασπίδων Brave), καθώς και τακτικές ενημερώσεις λογισμικού, ενημερώσεις Chromium και βελτιώσεις ασφάλειας και απορρήτου. Το Origin θα καταργήσει τις περισσότερες άλλες λειτουργίες από το πρόγραμμα περιήγησης.";
+"featuresFooter" = "**Προσαρμόστε το πρόγραμμα περιήγησής σας ενώ εξακολουθείτε να υποστηρίζετε το Scout**\n\nΤο Scout Origin είναι μια πληρωτή έκδοση του προγράμματος περιήγησης για χρήστες που δεν χρειάζονται όλες τις λειτουργίες που υποστηρίζουν το Scout ως επιχείρηση, αλλά εξακολουθούν να θέλουν το απόρρητο που παρέχει μόνο το Scout. Οι χρήστες του Origin θα συνεχίσουν να επωφελούνται από την κορυφαία στον κλάδο μας προστασία απορρήτου, φραγή διαφημίσεων και ταχύτητα (μέσω Ασπίδων Scout), καθώς και τακτικές ενημερώσεις λογισμικού, ενημερώσεις Chromium και βελτιώσεις ασφάλειας και απορρήτου. Το Origin θα καταργήσει τις περισσότερες άλλες λειτουργίες από το πρόγραμμα περιήγησης.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Δυνατότητες";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Επαλήθευση αγοράς Brave Origin";
+"getLoginCodeButton" = "Επαλήθευση αγοράς Scout Origin";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "AI Leo";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Συνδέστε την αγορά στον λογαριασμό σας Brave";
+"linkPurchase" = "Συνδέστε την αγορά στον λογαριασμό σας Scout";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "Ειδήσεις";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Δεν είναι δυνατή η ολοκλήρωση της αγοράς. Δοκιμάστε ξανά ή ελέγξτε τα στοιχεία πληρωμής σας στην Apple και δοκιμάστε ξανά.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Συνδέστε την αγορά σας από το App Store με τον λογαριασμό σας Brave για να χρησιμοποιήσετε το Brave Origin σε άλλες συσκευές";
+"purchaseSectionFooter" = "Συνδέστε την αγορά σας από το App Store με τον λογαριασμό σας Scout για να χρησιμοποιήσετε το Scout Origin σε άλλες συσκευές";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Αγορά";
@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "Διατήρηση βασικής αποκλεισμού διαφημίσεων, ιδιωτικότητας και ταχύτητας";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "Ελάχιστο UI προγράμματος περιήγησης με επίκεντρο τις Ασπίδες Brave";
+"upsellMinimalUI" = "Ελάχιστο UI προγράμματος περιήγησης με επίκεντρο τις Ασπίδες Scout";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "Η αγορά μιας φοράς μπορεί να ενεργοποιηθεί πολλές φορές σε όλες τις συσκευές σας";

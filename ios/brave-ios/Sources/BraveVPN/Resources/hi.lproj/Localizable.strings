@@ -17,7 +17,7 @@
 "vpn.checkboxGeoLocation" = "Chooअपना भौगोलिक/देश का स्थान चुनें";
 
 /* Text for a checkbox to present the user benefits for using Brave VPN */
-"vpn.checkboxNoIPLog" = "Brave कभी भी आपकी गतिविधि को लॉग नहीं करता है";
+"vpn.checkboxNoIPLog" = "Scout कभी भी आपकी गतिविधि को लॉग नहीं करता है";
 
 /* Text for a checkbox to present the user benefits for using Brave VPN */
 "vpn.checkboxProtectYourDevices" = "हर ऐप और अपने पूरे डिवाइस को सुरक्षित रखें";
@@ -44,7 +44,7 @@
 "vpn.contactFormCarrier" = "सेल्युलर सेवा देने वाली कंपनी";
 
 /* Text to tell user to not modify support info below email's body. */
-"vpn.contactFormDoNotEditText" = "Brave आपको ट्रैक नहीं करता है या न ही यह जानता है कि आप हमारे ऐप का इस्तेमाल कैसे करते हैं, इसलिए हम नहीं जानते कि आपने VPN कैसे सेट अप किया है। जिस समस्या का आप सामना कर रहे हैं उसके बारे में जानकारी दें और हम जल्द से जल्द उसे हल करने की पूरी कोशिश करेंगे।";
+"vpn.contactFormDoNotEditText" = "Scout आपको ट्रैक नहीं करता है या न ही यह जानता है कि आप हमारे ऐप का इस्तेमाल कैसे करते हैं, इसलिए हम नहीं जानते कि आपने VPN कैसे सेट अप किया है। जिस समस्या का आप सामना कर रहे हैं उसके बारे में जानकारी दें और हम जल्द से जल्द उसे हल करने की पूरी कोशिश करेंगे।";
 
 /* Button name to send contact form. */
 "vpn.contactFormEmailNotConfiguredBody" = "ईमेल नहीं भेज सकते। कृपया अपनी ईमेल कॉन्फ़िगरेशन देखें।";
@@ -101,7 +101,7 @@
 "vpn.contactFormTimezone" = "iOS टाइमज़ोन";
 
 /* Title for contact form email. */
-"vpn.contactFormTitle" = "Brave VPN समस्या";
+"vpn.contactFormTitle" = "Scout VPN समस्या";
 
 /* Button text to enable Brave VPN */
 "vpn.enableButton" = "सक्षम करें";
@@ -119,13 +119,13 @@
 "vpn.iapDisclaimer" = "सभी सब्सक्रिप्शन ऑटो-रिन्यू हो जाते हैं, लेकिन उन्हें रिन्यूअल से पहले कैंसल किया जा सकता है।";
 
 /* Text explaining how the VPN works. */
-"vpn.installProfileBody" = "यह प्रोफ़ाइल VPN को आपके डिवाइस पर हर समय ट्रैफ़िक को अपने-आप कनेक्ट और सुरक्षित करने की अनुमति देती है। यह VPN कनेक्शन एन्क्रिप्ट किया जाएगा और संभावित रूप से नुकसान पहुँचाने वाले और हमला करने वाले कनेक्शंस को ब्लॉक करने के लिए Brave के इंटेलिजेंट फ़ायरवॉल के ज़रिए रूट किया जाएगा।";
+"vpn.installProfileBody" = "यह प्रोफ़ाइल VPN को आपके डिवाइस पर हर समय ट्रैफ़िक को अपने-आप कनेक्ट और सुरक्षित करने की अनुमति देती है। यह VPN कनेक्शन एन्क्रिप्ट किया जाएगा और संभावित रूप से नुकसान पहुँचाने वाले और हमला करने वाले कनेक्शंस को ब्लॉक करने के लिए Scout के इंटेलिजेंट फ़ायरवॉल के ज़रिए रूट किया जाएगा।";
 
 /* Text for 'install vpn profile' button */
 "vpn.installProfileButtonText" = "VPN प्रोफ़ाइल इंस्टॉल करें";
 
 /* No comment provided by engineer. */
-"vpn.installProfileTitle" = "Brave अब VPN प्रोफ़ाइल इंस्टॉल करेगा.";
+"vpn.installProfileTitle" = "Scout अब VPN प्रोफ़ाइल इंस्टॉल करेगा.";
 
 /* Popup that shows after user installs the vpn for the first time. */
 "vpn.installSuccessPopup" = "VPN अब चालू है";
@@ -149,7 +149,7 @@
 "vpn.multipleServerCountTitle" = "%ld सर्वर";
 
 /* The text that briefly explains how Brave VPN subscription is going to be charged and managed. */
-"vpn.paywallDisclaimer" = "सब्सक्रिप्शन की राशि आपके Apple अकाउंट के ज़रिए लिया जाएगा। जब आप सब्सक्रिप्शन खरीदते हैं, तो मुफ़्त ट्रायल का बचा हुआ कोई भी हिस्सा, अगर ऑफ़र किया गया हो, तो खत्म हो जाता है।\n\nसब्सक्रिप्शन की मौजूदा अवधि खत्म होने के कम से कम 24 घंटे पहले अगर उसे रद्द नहीं किया जाता, तो वह अपने आप रिन्यू हो जाता है।\n\nआप अपने सब्सक्रिप्शन को सेटिंग में जाकर मैनेज कर सकते हैं।\n\nBrave का इस्तेमाल करके, आप इस्तेमाल की शर्तों और प्राइवेसी पॉलिसी से सहमत होते हैं।";
+"vpn.paywallDisclaimer" = "सब्सक्रिप्शन की राशि आपके Apple अकाउंट के ज़रिए लिया जाएगा। जब आप सब्सक्रिप्शन खरीदते हैं, तो मुफ़्त ट्रायल का बचा हुआ कोई भी हिस्सा, अगर ऑफ़र किया गया हो, तो खत्म हो जाता है।\n\nसब्सक्रिप्शन की मौजूदा अवधि खत्म होने के कम से कम 24 घंटे पहले अगर उसे रद्द नहीं किया जाता, तो वह अपने आप रिन्यू हो जाता है।\n\nआप अपने सब्सक्रिप्शन को सेटिंग में जाकर मैनेज कर सकते हैं।\n\nScout का इस्तेमाल करके, आप इस्तेमाल की शर्तों और प्राइवेसी पॉलिसी से सहमत होते हैं।";
 
 /* The text which will be used to indicate period of payments like 10 / month */
 "vpn.paywallMonthlyPriceDividend" = "माह";
@@ -227,7 +227,7 @@
 "vpn.serverTitle" = "%ld सर्वर";
 
 /* VPN Banner Description */
-"vpn.settingHeaderBody" = "हर ऐप को Brave VPN से सुरक्षित करें। एक प्लान से अधिकतम 10 डिवाइसों को सुरक्षित रखें।";
+"vpn.settingHeaderBody" = "हर ऐप को Scout VPN से सुरक्षित करें। एक प्लान से अधिकतम 10 डिवाइसों को सुरक्षित रखें।";
 
 /* Button to contact tech support */
 "vpn.settingsContactSupport" = "टेक्निकल सपोर्ट से संपर्क करें";
@@ -239,10 +239,10 @@
 "vpn.settingsFAQ" = "VPN सपोर्ट";
 
 /* Button to link your VPN receipt to other devices. */
-"vpn.settingsLinkReceipt" = "खरीदारी को अपने Brave अकाउंट से लिंक करें";
+"vpn.settingsLinkReceipt" = "खरीदारी को अपने Scout अकाउंट से लिंक करें";
 
 /* Footer text to link your VPN receipt to other devices. */
-"vpn.settingsLinkReceiptFooter" = "दूसरे डिवाइसों पर Brave VPN का इस्तेमाल करने के लिए अपने App Store की खरीदारी को अपने Brave अकाउंट से लिंक करें।";
+"vpn.settingsLinkReceiptFooter" = "दूसरे डिवाइसों पर Scout VPN का इस्तेमाल करने के लिए अपने App Store की खरीदारी को अपने Scout अकाउंट से लिंक करें।";
 
 /* Button to manage your VPN subscription */
 "vpn.settingsManageSubscription" = "सब्सक्रिप्शन मैनेज करें";
@@ -293,10 +293,10 @@
 "vpn.vpnActionUpdatePaymentMethodSettingsText" = "पेमेंट का तरीका अपडेट करें";
 
 /* Notification title to tell user that the vpn is turned on even in background */
-"vpn.vpnBackgroundNotificationBody" = "बैकग्राउंड में भी, Brave आपकी सुरक्षा करता रहेगा।";
+"vpn.vpnBackgroundNotificationBody" = "बैकग्राउंड में भी, Scout आपकी सुरक्षा करता रहेगा।";
 
 /* Notification title to tell user that the vpn is turned on even in background */
-"vpn.vpnBackgroundNotificationTitle" = "Brave VPN चालू है";
+"vpn.vpnBackgroundNotificationTitle" = "Scout VPN चालू है";
 
 /* Text for description of list item which chooses the optimal server for the country region */
 "vpn.vpnCityRegionOptimalDescription" = "जो सबसे अच्छा सर्वर मौजूद हो, वह इस्तेमाल करें";
@@ -311,7 +311,7 @@
 "vpn.vpnConfigGenericErrorTitle" = "गड़बड़ी";
 
 /* Title for an alert when the user didn't allow to install VPN profile */
-"vpn.vpnConfigPermissionDeniedErrorBody" = "आपका डिवाइस काम कर पाए, इसके लिए Brave VPN पर VPN प्रोफ़ाइल इंस्टॉल करना ज़रूरी होता है। ";
+"vpn.vpnConfigPermissionDeniedErrorBody" = "आपका डिवाइस काम कर पाए, इसके लिए Scout VPN पर VPN प्रोफ़ाइल इंस्टॉल करना ज़रूरी होता है। ";
 
 /* Title for an alert when the user didn't allow to install VPN profile */
 "vpn.vpnConfigPermissionDeniedErrorTitle" = "अनुमति नहीं दी गई";
@@ -326,7 +326,7 @@
 "vpn.vpnErrorPurchaseFailedTitle" = "गड़बड़ी";
 
 /* Disclaimer for user purchasing the VPN plan. */
-"vpn.vpnIAPBoilerPlate" = "सब्सक्रिप्शन की राशि आपके iTunes अकाउंट के ज़रिए ली जाएगी।\n\nजब आप सब्सक्रिप्शन खरीदते हैं, तो मुफ़्त ट्रायल का बचा हुआ कोई भी हिस्सा, अगर ऑफ़र किया गया हो, तो खत्म हो जाता है।\n\nसब्सक्रिप्शन की मौजूदा अवधि खत्म होने के कम से कम 24 घंटे पहले अगर उसे रद्द नहीं किया जाता, तो वह अपने आप रिन्यू हो जाता है।\n\nआप अपने सब्सक्रिप्शन को सेटिंग में जाकर मैनेज कर सकते हैं।\n\nBrave का इस्तेमाल करके, आप इस्तेमाल की शर्तों और प्राइवेसी पॉलिसी से सहमत होते हैं।";
+"vpn.vpnIAPBoilerPlate" = "सब्सक्रिप्शन की राशि आपके iTunes अकाउंट के ज़रिए ली जाएगी।\n\nजब आप सब्सक्रिप्शन खरीदते हैं, तो मुफ़्त ट्रायल का बचा हुआ कोई भी हिस्सा, अगर ऑफ़र किया गया हो, तो खत्म हो जाता है।\n\nसब्सक्रिप्शन की मौजूदा अवधि खत्म होने के कम से कम 24 घंटे पहले अगर उसे रद्द नहीं किया जाता, तो वह अपने आप रिन्यू हो जाता है।\n\nआप अपने सब्सक्रिप्शन को सेटिंग में जाकर मैनेज कर सकते हैं।\n\nScout का इस्तेमाल करके, आप इस्तेमाल की शर्तों और प्राइवेसी पॉलिसी से सहमत होते हैं।";
 
 /* The title shown on the menu when the VPN connection is disconnected */
 "vpn.vpnOffMenuButtonTitle" = "VPN बंद है";
@@ -341,7 +341,7 @@
 "vpn.vpnRegionChangedTitle" = "VPN क्षेत्र बदल गया";
 
 /* Message for alert to reset vpn configuration */
-"vpn.vpnResetAlertBody" = "इससे आपका Brave VPN कॉन्फ़िगरेशन रीसेट हो जाएगा और सभी गड़बड़ियाँ ठीक हो जाएँगी। इस प्रोसेस में एक मिनट लग सकता है।";
+"vpn.vpnResetAlertBody" = "इससे आपका Scout VPN कॉन्फ़िगरेशन रीसेट हो जाएगा और सभी गड़बड़ियाँ ठीक हो जाएँगी। इस प्रोसेस में एक मिनट लग सकता है।";
 
 /* Title for alert to reset vpn configuration */
 "vpn.vpnResetAlertTitle" = "कॉन्फ़िगरेशन रीसेट करें";

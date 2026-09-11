@@ -1,5 +1,5 @@
 /* The description for the error message when the user's session has expired */
-"aichat.accountSessionExpiredDescription" = "Braveアカウントのセッションの有効期限が切れました。アカウントページを開いて更新し、この画面に戻ってプレミアム機能をご利用ください。";
+"aichat.accountSessionExpiredDescription" = "Scoutアカウントのセッションの有効期限が切れました。アカウントページを開いて更新し、この画面に戻ってプレミアム機能をご利用ください。";
 
 /* The title for button that submits feedback */
 "aichat.addFeedbackActionTitle" = "フィードバックを追加";
@@ -14,10 +14,10 @@
 "aichat.advancedSettingsHeaderTitle" = "Leoはブラウザに組み込まれたAI搭載のスマートアシスタントです。";
 
 /* The subtitle for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "App Storeで購入した商品をBraveアカウントにリンクさせると、他のデバイスでLeoを利用できます。";
+"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "App Storeで購入した商品をScoutアカウントにリンクさせると、他のデバイスでLeoを利用できます。";
 
 /* The title for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionTitle" = "Braveアカウントに購入情報をリンク";
+"aichat.advancedSettingsLinkPurchaseActionTitle" = "Scoutアカウントに購入情報をリンク";
 
 /* The description for the settings to show Leo in Quick Search Engines Bar. */
 "aichat.advancedSettingsShowInQSEBarDescription" = "クイック検索エンジンバーからLeoを起動するショートカットを有効にします。";
@@ -59,7 +59,7 @@
 "aichat.byomEmptyStateTitle" = "まだモデルが接続されていません";
 
 /* The section header description explaining the Bring Your Own Model feature with a link to learn more. The text inside square brackets should be translated. */
-"aichat.byomSectionHeaderDescription" = "自己ホストまたはサードパーティホストのLLMをLeoに接続し、ブラウザ内で使用します。OllamaなどのOpenAI Chat Protocolに対応したフレームワークを使用してください。[詳細を確認](https://support.brave.app/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo)";
+"aichat.byomSectionHeaderDescription" = "自己ホストまたはサードパーティホストのLLMをLeoに接続し、ブラウザ内で使用します。OllamaなどのOpenAI Chat Protocolに対応したフレームワークを使用してください。[詳細を確認](https://zaatar-scout.fly.dev/support)";
 
 /* The section header title for the Bring Your Own Model feature */
 "aichat.byomSectionHeaderTitle" = "モデルを自由にカスタマイズ";
@@ -71,7 +71,7 @@
 "aichat.chatIntroJustTalkTitle" = "チャットを開始しますか？";
 
 /* The subtitle for intro view */
-"aichat.chatIntroSubTitle" = "Braveに組み込まれた、AI搭載型のインテリジェント・アシスタントです。";
+"aichat.chatIntroSubTitle" = "Scoutに組み込まれた、AI搭載型のインテリジェント・アシスタントです。";
 
 /* The title for intro view */
 "aichat.chatIntroTitle" = "こんにちは、私はLeoです。";
@@ -137,7 +137,7 @@
 "aichat.customModelFormLabelFieldTitle" = "ラベル";
 
 /* The error message shown when trying to use a private network address, explaining why it's blocked and how to enable it */
-"aichat.customModelFormPrivateEndpointErrorMessage" = "入力されたアドレスはルーターやローカルサーバーなどのプライベートネットワークからのものと思われます。Braveはセキュリティを確保するため、これらを自動的にブロックしていますが、安全であると確信している場合は有効にすることができます。\n\n続行するには、brave://flags/にアクセスし、「brave-ai-chat-allow-private-ips」を検索して機能を有効にしてください。有効にすると、Leoの設定でプライベートネットワークアドレスを使用できるようになります。";
+"aichat.customModelFormPrivateEndpointErrorMessage" = "入力されたアドレスはルーターやローカルサーバーなどのプライベートネットワークからのものと思われます。Scoutはセキュリティを確保するため、これらを自動的にブロックしていますが、安全であると確信している場合は有効にすることができます。有効にすると、Leoの設定でプライベートネットワークアドレスを使用できるようになります。";
 
 /* The footer text explaining what the model request name is used for and providing an example */
 "aichat.customModelFormRequestNameFieldFooter" = "サービングフレームワークへのリクエストで表示されるべきモデルの名前。例：phi-3（この名前がサービングフレームワークが期待する値と正確に一致しない場合、統合が機能しない点に注意してください）。";
@@ -155,7 +155,7 @@
 "aichat.customModelFormSaveButtonTitle" = "保存";
 
 /* The footer text explaining what the server endpoint is and providing an example URL for Ollama */
-"aichat.customModelFormServerEndpointFieldFooter" = "サービングフレームワークがリクエストをリッスンしているURL。不確かな場合は、サービングフレームワークのドキュメントを確認してください。例えばOllamaの場合、常に`http://localhost:11434/v1/chat/completions`です。Braveはこれらのリクエストをプロキシしていません。選択したプロバイダーのプライバシー条件をお読みください。";
+"aichat.customModelFormServerEndpointFieldFooter" = "サービングフレームワークがリクエストをリッスンしているURL。不確かな場合は、サービングフレームワークのドキュメントを確認してください。例えばOllamaの場合、常に`https://zaatar-scout.fly.dev/support";
 
 /* The label for the server endpoint URL field */
 "aichat.customModelFormServerEndpointFieldTitle" = "サーバーのエンドポイント";
@@ -218,7 +218,7 @@
 "aichat.feedbackOptionTitleUnsafeHarmful" = "危険 / 危害につながるものであった";
 
 /* The title for premium ad view. The links are inside parenthesis and the phrases inside square brackets should be translated */
-"aichat.feedbackPremiumAdTitle" = "Leo Premiumでは、さらに拡張された言語モデルセットを利用できるため、さらに豊かなニュアンスの回答を提供できます。[詳細はこちら](https://brave.com/) - [閉じる](braveai://dismiss)";
+"aichat.feedbackPremiumAdTitle" = "Leo Premiumでは、さらに拡張された言語モデルセットを利用できるため、さらに豊かなニュアンスの回答を提供できます。[詳細はこちら](https://zaatar-scout.fly.dev/support) - [閉じる](braveai://dismiss)";
 
 /* The title for the button that submits feedback */
 "aichat.feedbackSubmitActionTitle" = "送信";
@@ -236,7 +236,7 @@
 "aichat.feedbackSuccessAnswerLikedTitle" = "回答に「いいね」がつきました";
 
 /* The title for view which user type feedback */
-"aichat.feedbackViewMainTitle" = "Brave AIのフィードバックを送信";
+"aichat.feedbackViewMainTitle" = "Scout AIのフィードバックを送信";
 
 /* The button title for opening paywall screen */
 "aichat.goPremiumButtonTitle" = "プレミアムプラン";
@@ -248,25 +248,25 @@
 "aichat.internalErrorViewTitle" = "リクエストの処理中にエラーが発生しました。もう一度お試しください。";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeHaikuMessageDescription" = "こんにちは、Leoです。私はBraveにホストされているAIアシスタントで、Claude Haikuを搭載しています。このモデルはAnthropicによって作成されたもので、会話・テキスト処理タスクをパワーアップさせます。Claude HaikuはBrave独自の安全なインフラを通じてホストされています。";
+"aichat.introMessageClaudeHaikuMessageDescription" = "こんにちは、Leoです。私はScoutにホストされているAIアシスタントで、Claude Haikuを搭載しています。このモデルはAnthropicによって作成されたもので、会話・テキスト処理タスクをパワーアップさせます。Claude HaikuはScout独自の安全なインフラを通じてホストされています。";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeHaikuModelPurposeDescription" = "超高速チャット";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeInstantMessageDescription" = "こんにちは、Leoです。私はBraveにホストされているAIアシスタントで、Claude Instantを搭載しています。このモデルはAnthropicによって作成されたもので、会話・テキスト処理タスクをパワーアップさせます。Claude InstantはBrave独自の安全なインフラを通じてホストされています。";
+"aichat.introMessageClaudeInstantMessageDescription" = "こんにちは、Leoです。私はScoutにホストされているAIアシスタントで、Claude Instantを搭載しています。このモデルはAnthropicによって作成されたもので、会話・テキスト処理タスクをパワーアップさせます。Claude InstantはScout独自の安全なインフラを通じてホストされています。";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeSonnetMessageDescription" = "こんにちは、Leoです。私はBraveにホストされているAIアシスタントで、Claude Sonnetを搭載しています。このモデルはAnthropicによって作成されたもので、会話・テキスト処理タスクをパワーアップさせます。Claude SonnetはBrave独自の安全なインフラを通じてホストされています。";
+"aichat.introMessageClaudeSonnetMessageDescription" = "こんにちは、Leoです。私はScoutにホストされているAIアシスタントで、Claude Sonnetを搭載しています。このモデルはAnthropicによって作成されたもので、会話・テキスト処理タスクをパワーアップさせます。Claude SonnetはScout独自の安全なインフラを通じてホストされています。";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeSonnetModelPurposeDescription" = "均整の取れたスピード＆インテリジェンス";
 
 /* The model intro message when you first enter the chat assistant -- %@ is a place-holder for the model name */
-"aichat.introMessageGenericMessageDescription" = "こんにちは、私はLeo。BraveのAIアシスタントで、%@ により提供されています。できる限り適した回答を提供しますので、何でも質問してください。";
+"aichat.introMessageGenericMessageDescription" = "こんにちは、私はLeo。ScoutのAIアシスタントで、%@ により提供されています。できる限り適した回答を提供しますので、何でも質問してください。";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageQwenMessageDescription" = "こんにちは、Leoです。私はBraveのAIアシスタントで、Alibaba Cloudによって作成されたパフォーマンスに優れ、多くのユースケースに適用可能なモデルであるQwen VL 30Bを搭載しています。QwenはBrave独自の安全なインフラを通じてホストされています。";
+"aichat.introMessageQwenMessageDescription" = "こんにちは、Leoです。私はScoutのAIアシスタントで、Alibaba Cloudによって作成されたパフォーマンスに優れ、多くのユースケースに適用可能なモデルであるQwen VL 30Bを搭載しています。QwenはScout独自の安全なインフラを通じてホストされています。";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageQwenModelPurposeDescription" = "汎用系チャット、コーディングなど";
@@ -287,7 +287,7 @@
 "aichat.leoCodeExampleDefaultTitle" = "コードサンプル";
 
 /* The message that shows in an alert, to let the user know the 'Leo' feature is disabled, and explains how to re-enable the feature. */
-"aichat.leoDisabledMessageDescription" = "レオは現在、機能フラグによって無効化されています。Leoを再度有効にするには、brave://flagsにアクセスして有効にしてください。";
+"aichat.leoDisabledMessageDescription" = "レオは現在、機能フラグによって無効化されています。";
 
 /* The title that shows in an alert when the Leo/AI-Chat feature is disabled. */
 "aichat.leoDisabledMessageTitle" = "レオ・ディスエーブルド";
@@ -305,13 +305,13 @@
 "aichat.leoImprovedAnswerBraveSearch" = "次のクエリについて、より良い回答を検索しています:";
 
 /* The text displayed on the loading screen when searching for a user query */
-"aichat.leoImprovingAnswerBraveSearch" = "Brave検索で回答を推敲しています...";
+"aichat.leoImprovingAnswerBraveSearch" = "Scout検索で回答を推敲しています...";
 
 /* The title of the advanced settings view */
 "aichat.leoNavigationTitle" = "Leo AI";
 
 /* The title to display when the user taps on the information icon on the page context view. Brave Leo is the name of the product and should not be translated. */
-"aichat.leoPageContextInfoDescriptionTitle" = "このページについて質問するには、トグルをクリックしてください。あなたが入力したメッセージとともに、ページのコンテンツがBrave Leoに送信されます。";
+"aichat.leoPageContextInfoDescriptionTitle" = "このページについて質問するには、トグルをクリックしてください。あなたが入力したメッセージとともに、ページのコンテンツがScout Leoに送信されます。";
 
 /* The accessibility text to read out loud when the user taps on the info icon on the page context view */
 "aichat.leoPageContextInfoIconAccessibilityTitle" = "ページコンテキスト情報";
@@ -332,7 +332,7 @@
 "aichat.manageSubscriptionsButtonTitle" = "サブスクリプションの管理";
 
 /* The description for alert needed to have microphone permission */
-"aichat.microphonePermissionAlertDescription" = "Braveで匿名音声入力を使用するには、iOSのシステム設定でマイクへのアクセスを許可してください。";
+"aichat.microphonePermissionAlertDescription" = "Scoutで匿名音声入力を使用するには、iOSのシステム設定でマイクへのアクセスを許可してください。";
 
 /* The description for alert needed to have microphone permission */
 "aichat.microphonePermissionAlertTitle" = "マイクへのアクセスが必要です";
@@ -443,7 +443,7 @@
 "aichat.rateAnswerActionErrorText" = "回答の評価中にエラーが発生しました";
 
 /* The message for privacy warning alert when rating a response */
-"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "回答の良し悪しを答えると、評価、会話、モデル、言語、バージョン、プレミアムステータスがBraveに送信され、Leoを改善するために使われます。 [詳細はこちら](%@)";
+"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "回答の良し悪しを答えると、評価、会話、モデル、言語、バージョン、プレミアムステータスがScoutに送信され、Leoを改善するために使われます。 [詳細はこちら](%@)";
 
 /* The title for privacy warning alert when rating a response */
 "aichat.rateAnswerFeedbackPrivacyWarningTitle" = "回答を評価";
@@ -491,7 +491,7 @@
 "aichat.serviceOverloadedErrorViewTitle" = "エンドポイントは現在過負荷の状態です。時間をおいて再度お試しください。";
 
 /* The description indicating voice inputs from user is not store or shared and these inpurs are totally private. */
-"aichat.speechRecognizerDisclaimer" = "Braveが音声検索結果を保存または共有することはありません。";
+"aichat.speechRecognizerDisclaimer" = "Scoutが音声検索結果を保存または共有することはありません。";
 
 /* Title showing the user has no subscription. */
 "aichat.subscriptionNoneTitle" = "なし";
@@ -506,10 +506,10 @@
 "aichat.termsConditionsApproveActionTitle" = "了解しました";
 
 /* The description terms and conditions for AI chat usage. The links are inside parenthesis %@ will be replaced with urls */
-"aichat.termsConditionsDescription" = "Brave Leoは、Webの利用を向上させるプライベートなAIスマートアシスタントです。Leoは無料でご利用いただけますが、アクセスには制限があります。サブスクリプションサービスのBrave Leo Premiumでは制限が緩和され、より多くのモデルが提供されており、新機能にいち早くアクセスすることができます。デフォルトモデルは随時変わります。詳細はBraveの**[ヘルプセンター](%1$@)**をご覧ください。\n\nデフォルトでは、閲覧中のWebページやページ上でハイライトしたテキストについてLeoに質問すると、Leoが回答できるよう、検索クエリ同様にBrave サーバーに送信されます。場合によっては、Leoはあなたの入力から引き出したクエリをBrave検索に送信し、その検索結果を使用してより適切に回答します。Braveは回答の正確性を保証しておらず、回答には不正確な、誤解を招く、あるいは虚偽の情報が含まれる場合があります。Brave Leoに機密・個人情報は送信しないでください。また、健康、金融、個人の安全などに関する回答には十分ご注意ください。Leoのオプションは、設定 > Leoからいつでも調整できます。\n\nLeoは、IPアドレスのような個人を特定できる識別子を収集しません。検索クエリやBrave Leoの回答を含むあなたのデータが、AIモデルのトレーニングに使用されることはありません。また個人データがBraveのサーバーに保管されたり、Braveにより保持されることはありません。詳しくは、**[プライバシーポリシー](%2$@)**をご覧ください。";
+"aichat.termsConditionsDescription" = "Scout Leoは、Webの利用を向上させるプライベートなAIスマートアシスタントです。Leoは無料でご利用いただけますが、アクセスには制限があります。サブスクリプションサービスのScout Leo Premiumでは制限が緩和され、より多くのモデルが提供されており、新機能にいち早くアクセスすることができます。デフォルトモデルは随時変わります。詳細はScoutの**[ヘルプセンター](%1$@)**をご覧ください。\n\nデフォルトでは、閲覧中のWebページやページ上でハイライトしたテキストについてLeoに質問すると、Leoが回答できるよう、検索クエリ同様にScout サーバーに送信されます。場合によっては、Leoはあなたの入力から引き出したクエリをScout検索に送信し、その検索結果を使用してより適切に回答します。Scoutは回答の正確性を保証しておらず、回答には不正確な、誤解を招く、あるいは虚偽の情報が含まれる場合があります。Scout Leoに機密・個人情報は送信しないでください。また、健康、金融、個人の安全などに関する回答には十分ご注意ください。Leoのオプションは、設定 > Leoからいつでも調整できます。\n\nLeoは、IPアドレスのような個人を特定できる識別子を収集しません。検索クエリやScout Leoの回答を含むあなたのデータが、AIモデルのトレーニングに使用されることはありません。また個人データがScoutのサーバーに保管されたり、Scoutにより保持されることはありません。詳しくは、**[プライバシーポリシー](%2$@)**をご覧ください。";
 
 /* The title terms and conditions for AI chat usage */
-"aichat.termsConditionsTitle" = "Brave Leoとプライベートチャット";
+"aichat.termsConditionsTitle" = "Scout Leoとプライベートチャット";
 
 /* The title of the badge where a model which can be used unlimited */
 "aichat.unlimitedModelStatusTitle" = "無制限";

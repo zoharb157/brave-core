@@ -39,6 +39,7 @@ extension WidgetShortcut {
     }
     if !AIChatUtils.isEnabledInScout(for: prefs) {
       options.remove(.braveLeo)
+      options.remove(.askBrave)
       options.remove(.braveLeoVoiceInput)
     }
     return options
@@ -62,6 +63,7 @@ extension WidgetShortcut {
     }
     if !AIChatUtils.isEnabledInScout(for: prefs) {
       disabled.insert(.braveLeo)
+      disabled.insert(.askBrave)
       disabled.insert(.braveLeoVoiceInput)
     }
     return disabled

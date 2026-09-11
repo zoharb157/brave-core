@@ -3,13 +3,16 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import Foundation
+import Shared
 import UIKit
 
 extension URL {
   public enum Brave {
-    public static let community = URL(string: "https://community.brave.app/")!
+    // Scout: links shown in Scout's own UI go to Scout's pages; the rest belong
+    // to Brave features Scout hides (see ScoutFeatures).
+    public static let community = ScoutContact.supportURL
     public static let account = URL(string: "https://account.brave.com")!
-    public static let privacy = URL(string: "https://brave.com/privacy/")!
+    public static let privacy = ScoutContact.privacyURL
     public static let braveNews = URL(string: "https://brave.com/brave-news/")!
     public static let braveNewsPrivacy = URL(string: "https://brave.com/privacy/#brave-news")!
     public static let braveOffers = URL(string: "https://offers.brave.com/")!
@@ -18,16 +21,14 @@ extension URL {
     public static let rewardsUnverifiedPublisherLearnMoreURL = URL(
       string: "https://brave.com/faq-rewards/#unclaimed-funds"
     )!
-    public static let termsOfUse = URL(string: "https://www.brave.com/terms_of_use")!
+    public static let termsOfUse = ScoutContact.termsURL
     public static let batTermsOfUse = URL(
       string: "https://basicattentiontoken.org/user-terms-of-service/"
     )!
     public static let ntpTutorialPage = URL(string: "https://brave.com/ja/ntp-tutorial")!
-    public static let privacyFeatures = URL(string: "https://brave.com/privacy-features/")!
-    public static let support = URL(string: "https://support.brave.app")!
-    public static let p3aHelpArticle = URL(
-      string: "https://support.brave.app/hc/en-us/articles/9140465918093-What-is-P3A-in-Brave-"
-    )!
+    public static let privacyFeatures = ScoutContact.privacyURL
+    public static let support = ScoutContact.supportURL
+    public static let p3aHelpArticle = ScoutContact.supportURL
     public static let braveVPNFaq = URL(
       string: "https://support.brave.app/hc/en-us/articles/360045045952"
     )!
@@ -53,9 +54,7 @@ extension URL {
     public static let braveVPNLearnMoreURL = URL(
       string: "https://brave.com/firewall-vpn/"
     )!
-    public static let safeBrowsingHelp = URL(
-      string: "https://support.brave.app/hc/en-us/articles/15222663599629-Safe-Browsing-in-Brave"
-    )!
+    public static let safeBrowsingHelp = ScoutContact.supportURL
     public static let screenTimeHelp = URL(
       string: "https://support.apple.com/guide/security/secd8831e732/web"
     )!
@@ -141,6 +140,6 @@ extension URL {
 public struct AppURLScheme {
   /// The apps URL scheme for the current build channel
   public static var appURLScheme: String {
-    Bundle.main.infoDictionary?["BRAVE_URL_SCHEME"] as? String ?? "brave"
+    Bundle.main.infoDictionary?["BRAVE_URL_SCHEME"] as? String ?? "scout"
   }
 }

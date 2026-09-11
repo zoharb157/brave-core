@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Braveアイコン";
+"altAppIcon.braveIconsHeader" = "Scoutアイコン";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "アプリのアイコンを変更";
@@ -35,7 +35,7 @@
 "newTabTakeoverInfoBarLearnMoreOptOutChoices" = "詳細 / オプトアウトの選択";
 
 /* The text of new tab takeover infobar message. */
-"NewTabTakeoverInfoBarMessage" = "スポンサー画像は、ユーザーファーストの独立したウェブを構築するというBraveのミッションをサポートしています。また、ビッグテックとは異なり、あなたのプライバシーを守るために匿名で広告パフォーマンスを測定します。";
+"NewTabTakeoverInfoBarMessage" = "スポンサー画像は、ユーザーファーストの独立したウェブを構築するというScoutのミッションをサポートしています。また、ビッグテックとは異なり、あなたのプライバシーを守るために匿名で広告パフォーマンスを測定します。";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "NewTabTitle" = "新しいタブ";
@@ -47,7 +47,7 @@
 "OpenSelectedTabFromTabTrayKeyCodeTitle" = "選択したタブを開く";
 
 /* Title label text for refreshing credentials from brave site. */
-"paywall.alreadyPurchasedTitle" = "brave.comで購入済みですか？";
+"paywall.alreadyPurchasedTitle" = "Webで購入済みですか？";
 
 /* A subtitle shown on the checkout button that denotes that this checkout option is full price */
 "paywall.appStoreCheckoutOptionSubtitle" = "通常価格";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "コード **%1$@** で %2$@ オフ";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Braveアカウント";
+"paywall.braveAccountCheckoutOptionTitle" = "Scoutアカウント";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "Brave VPNについてもっと知る";
+"paywall.braveVPNLearnMoreButtonTitle" = "Scout VPNについてもっと知る";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "プロモコードをお持ちですか？";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "詳細 / オプトアウトの選択";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "プライベート広告をクリックしてBraveサーチをサポートしてくださり、ありがとうございます。私たちはビッグテックとは異なり、あなたのプライバシーを保護するために匿名で広告パフォーマンスを測定しています。";
+"searchResultAdClickedInfoBarMessage" = "プライベート広告をクリックしてScoutサーチをサポートしてくださり、ありがとうございます。私たちはビッグテックとは異なり、あなたのプライバシーを保護するために匿名で広告パフォーマンスを測定しています。";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "ロケーションバーを選択";
@@ -110,7 +110,7 @@
 "ShowPreviousTabTitle" = "前のタブを表示";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts which is for Showing Shields */
-"showShieldsTitle" = "Brave Shieldを開く";
+"showShieldsTitle" = "Scout Shieldを開く";
 
 /* Hardware shortcut to open the tab tray from a tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "ShowTabTrayFromTabKeyCodeTitle" = "すべてのタブを表示";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "アプリケーション・バージョン";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo (月額プラン)";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Scout Leo (月額プラン)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo (年間購読)";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Scout Leo (年間購読)";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "申し訳ありませんが、App Storeのレシートは見つかりませんでした";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Scout Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "キャンセル日";
@@ -167,10 +167,10 @@
 "storekitReceiptViewer.shareReceiptTitle" = "株式領収書";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.vpnMonthlySubscriptionName" = "月刊Brave VPN";
+"storekitReceiptViewer.vpnMonthlySubscriptionName" = "月刊Scout VPN";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN年鑑";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Scout VPN年鑑";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "通常ブラウジングモード";

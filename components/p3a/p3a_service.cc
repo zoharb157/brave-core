@@ -93,8 +93,9 @@ P3AService::~P3AService() = default;
 
 void P3AService::RegisterPrefs(PrefRegistrySimple* registry, bool first_run) {
   MessageManager::RegisterPrefs(registry);
-  registry->RegisterBooleanPref(kP3AEnabled,
-                                !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED));
+  // Scout (iOS): P3A reports to Brave and Scout hides its toggle, so it is off.
+  registry->RegisterBooleanPref(
+      kP3AEnabled, !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED) && !BUILDFLAG(IS_IOS));
   // New users are shown the P3A notice via the welcome page.
   registry->RegisterBooleanPref(kP3ANoticeAcknowledged, first_run);
 

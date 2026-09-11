@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "שאל את Brave";
+"widgets.askBrave" = "שאל את Scout";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "סימניות";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo המבוסס בינה מלאכותית";
 
 /* The name of the feature */
-"widgets.braveNews" = "חדשות Brave";
+"widgets.braveNews" = "חדשות";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "הורדות";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "חדשות חמות";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "חדשות Brave מושבתות";
+"widgets.newsUnavailableByPolicy" = "חדשות מושבתות";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "כובה על ידי המדיניות של הארגון שלך";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "סטטיסטיקת פרטיות";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "ארנק Brave";
+"widgets.walletShortcutTitle" = "ארנק";
 

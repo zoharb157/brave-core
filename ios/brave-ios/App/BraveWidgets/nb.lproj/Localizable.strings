@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Spør Brave";
+"widgets.askBrave" = "Spør Scout";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Bokmerker";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo AI";
 
 /* The name of the feature */
-"widgets.braveNews" = "Brave News";
+"widgets.braveNews" = "News";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Nedlastinger";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "Toppnyheter";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Brave Nyheter er deaktivert";
+"widgets.newsUnavailableByPolicy" = "Nyheter er deaktivert";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "Slått av av organisasjonens retningslinjer";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "Personvernstatistikk";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Brave-lommebok";
+"widgets.walletShortcutTitle" = "Lommebok";
 

@@ -2,7 +2,7 @@
 "adsHeader" = "Oglasi";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "Već ste kupili putem mrežnog mjesta brave.com?";
+"alreadyPurchasedTitle" = "Već ste kupili putem mrežnog mjesta web?";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Analitika";
@@ -11,25 +11,25 @@
 "buyNowButton" = "Kupi sada";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Omogućavanje ili onemogućavanje Brave funkcije zahteva ponovno pokretanje pregledača da bi se promene primenile. Zatvorite (prevucite nagore u prebacivaču aplikacija) i zatim ponovo otvorite Brave.";
+"featureEnabledToastMessage" = "Omogućavanje ili onemogućavanje Scout funkcije zahteva ponovno pokretanje pregledača da bi se promene primenile. Zatvorite (prevucite nagore u prebacivaču aplikacija) i zatim ponovo otvorite Scout.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Promena Brave funkcija";
+"featureEnabledToastTitle" = "Promena Scout funkcija";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Prilagodite svoj preglednik dok i dalje podržavate Brave**\n\nBrave Origin je plaćena verzija preglednika za korisnike kojima nisu potrebne sve značajke koje podržavaju Brave kao tvrtku, ali i dalje žele privatnost koju nudi samo Brave. Origin korisnici i dalje će imati koristi od naše vodeće privatnosti u industriji, blokiranja oglasa i brzine (putem Štitova), kao i redovitih softverskih ažuriranja, Chromium zakrpa te poboljšanja sigurnosti i privatnosti. Origin će ukloniti većinu ostalih značajki iz preglednika.";
+"featuresFooter" = "**Prilagodite svoj preglednik dok i dalje podržavate Scout**\n\nScout Origin je plaćena verzija preglednika za korisnike kojima nisu potrebne sve značajke koje podržavaju Scout kao tvrtku, ali i dalje žele privatnost koju nudi samo Scout. Origin korisnici i dalje će imati koristi od naše vodeće privatnosti u industriji, blokiranja oglasa i brzine (putem Štitova), kao i redovitih softverskih ažuriranja, Chromium zakrpa te poboljšanja sigurnosti i privatnosti. Origin će ukloniti većinu ostalih značajki iz preglednika.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Značajke";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Provjerite kupnju Brave Origina";
+"getLoginCodeButton" = "Provjerite kupnju Scout Origina";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Pomoćnik Leo potpomognut umjetnom inteligencijom (AI)";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Povežite kupnju sa svojim računom Brave";
+"linkPurchase" = "Povežite kupnju sa svojim računom Scout";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "Vijesti";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Nije moguće dovršiti kupnju. Pokušajte ponovno ili provjerite pojedinosti o plaćanju na Appleu i pokušajte ponovno.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Povežite svoju kupnju iz trgovine App Store sa svojim računom Brave kako biste mogli upotrebljavati Brave Origin na drugim uređajima";
+"purchaseSectionFooter" = "Povežite svoju kupnju iz trgovine App Store sa svojim računom Scout kako biste mogli upotrebljavati Scout Origin na drugim uređajima";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Kupnja";
@@ -68,7 +68,7 @@
 "restoreButton" = "Vrati";
 
 /* A toggle label for Brave Rewards feature */
-"rewardsLabel" = "Nagrade Brave";
+"rewardsLabel" = "Nagrade Scout";
 
 /* A toggle label for statistics reporting feature */
 "statisticsReportingLabel" = "Izvješće o statistici";
@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "Održavajte temeljnu zaštitu od oglasa, privatnost i brzinu";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "Minimalističko korisničko sučelje preglednika usredotočeno na Brave Štitove";
+"upsellMinimalUI" = "Minimalističko korisničko sučelje preglednika usredotočeno na Scout Štitove";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "Jednokratna kupnja može se aktivirati više puta na svim vašim uređajima";

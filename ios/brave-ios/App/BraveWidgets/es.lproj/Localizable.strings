@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Preguntarle a Brave";
+"widgets.askBrave" = "Preguntarle a Scout";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Marcadores";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo IA";
 
 /* The name of the feature */
-"widgets.braveNews" = "Noticias de Brave";
+"widgets.braveNews" = "Noticias";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Descargas";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "Noticias destacadas";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Noticias de Brave está desactivado";
+"widgets.newsUnavailableByPolicy" = "Noticias de está desactivado";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "Desactivado por la política de tu organización";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "Estadística privada";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Cartera de Brave";
+"widgets.walletShortcutTitle" = "Cartera";
 

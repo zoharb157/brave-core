@@ -2,10 +2,10 @@
 "About" = "정보";
 
 /* The title of the screen explaining Shields */
-"AboutBraveShields" = "Brave 실드 정보";
+"AboutBraveShields" = "Scout 실드 정보";
 
 /* The body of the screen explaining Shields */
-"AboutBraveShieldsBody" = "사이트에는 방문자와 방문자의 기기를 식별하기 위한 쿠키 및 스크립트가 포함되어 있을 수 있습니다. 이러한 요소는 방문자를 식별하고 방문자가 방문하는 웹사이트를 따라다니며 모든 사이트에서의 방문자 행동 패턴을 추적합니다.\n\nBrave는 이러한 요소를 차단하므로 추적되지 않고 브라우징을 즐길 수 있습니다.";
+"AboutBraveShieldsBody" = "사이트에는 방문자와 방문자의 기기를 식별하기 위한 쿠키 및 스크립트가 포함되어 있을 수 있습니다. 이러한 요소는 방문자를 식별하고 방문자가 방문하는 웹사이트를 따라다니며 모든 사이트에서의 방문자 행동 패턴을 추적합니다.\n\nScout는 이러한 요소를 차단하므로 추적되지 않고 브라우징을 즐길 수 있습니다.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "이는 카메라 롤에 이미지를 저장하도록 허용합니다.";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "북마크 추가";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Brave Ads 데이터";
+"ads.braveAdsDataToggleOption" = "Scout Ads 데이터";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "광고 및 개인정보 트래커";
@@ -50,7 +50,7 @@
 "AlwaysShow" = "켬";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Brave에 묻기";
+"AskBraveMenuItem" = "Scout에 묻기";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
 "AuthenticationLoginsTouchReason" = "이 방법으로 Scout 액세스를 인증합니다.";
@@ -209,7 +209,7 @@
 "BravePanel" = "Scout 패널";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Brave Rewards";
+"BraveRewardsAdNotificationTitle" = "Scout Rewards";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "열기";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "리워드";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Brave Rewards";
+"BraveRewardsTitle" = "Scout Rewards";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "Brave 검색은 사용자를 프로파일링하지 않습니다.";
+"braveSearchPromotion.bannerDescription" = "Scout 검색은 사용자를 프로파일링하지 않습니다.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "나중에";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "강화된 프라이버시로 독립적 검색을 지향합니다";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Brave Search 이용하기";
+"braveSearchPromotion.bannerTryButtonTitle" = "Scout Search 이용하기";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "나중에";
@@ -281,7 +281,7 @@
 "BraveShieldsToggleHint" = "두 번 탭하여 Shields 토글";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Brave Talk";
+"bravetalk.braveTalkTitle" = "Scout Talk";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "언어 선택";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "검색";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Brave 번역";
+"BraveTranslate.settingsMenuTitle" = "Scout 번역";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Brave 번역";
+"BraveTranslate.settingsScreenTitle" = "Scout 번역";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Brave 번역을 활성화하면 페이지의 현재 언어를 자동으로 감지하여 URL 표시줄에 번역 버튼을 표시합니다.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Scout 번역을 활성화하면 페이지의 현재 언어를 자동으로 감지하여 URL 표시줄에 번역 버튼을 표시합니다.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "번역 활성화됨";
@@ -332,7 +332,7 @@
 "callout.bottomBarCalloutTitle" = "Scout 탭 바 맞춤 설정";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "프라이버시가 뛰어난 Brave를 컴퓨터와 태블릿에서 이용하고 기기 간 북마크와 확장 프로그램을 동기화하세요.";
+"callout.privacyEverywhereCalloutDescription" = "프라이버시가 뛰어난 Scout를 컴퓨터와 태블릿에서 이용하고 기기 간 북마크와 확장 프로그램을 동기화하세요.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "지금 동기화";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "링크 미리보기 숨기기";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Brave Rewards 아이콘 숨기기";
+"HideRewardsIcon" = "Scout Rewards 아이콘 숨기기";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Brave Rewards가 활성화되지 않았을 때 Brave Rewards 아이콘 숨김";
+"HideRewardsIconSubtitle" = "Scout Rewards가 활성화되지 않았을 때 Scout Rewards 아이콘 숨김";
 
 /* Title for history menu item */
 "HistortMenuItem" = "방문 기록";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "NPR 링크를 텍스트 기반 버전(text.npr.org)으로 자동 리디렉션합니다.";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Brave 지원";
+"ntp.braveSupportFavoriteTitle" = "Scout 지원";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "토큰 받기";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Brave로 브라우징하여 %@를 얻었습니다.";
+"ntp.earningsReport" = "Scout로 브라우징하여 %@를 얻었습니다.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "축하합니다!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "스폰서 이미지 숨기기";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "스폰서 이미지는 브라우저에서 새로 여는 탭에 표시되는 브랜드 배경입니다. 이러한 스폰서 이미지를 활성화하면 Brave의 사명을 지원할 수 있습니다. [자세히 알아보기](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "스폰서 이미지는 브라우저에서 새로 여는 탭에 표시되는 브랜드 배경입니다. 이러한 스폰서 이미지를 활성화하면 Scout의 사명을 지원할 수 있습니다. [자세히 알아보기](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Brave Rewards 자세히 알아보기";
+"ntp.learnMoreAboutRewards" = "Scout Rewards 자세히 알아보기";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "스폰서 이미지 자세히 알아보기";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "브라우징하면서 포인트를 얻어 좋은 콘텐츠를 만들어준 제작자에게 보답하세요.";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "Brave Ads 이용 가능!";
+"OBAdsOptInTitle" = "Scout Ads 이용 가능!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "Brave가 당신의 첫 광고를 다음에 표시합니다";
+"OBAdsTitle" = "Scout가 당신의 첫 광고를 다음에 표시합니다";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "이제 준비를 마쳤습니다.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "가입";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Brave가 내 클립보드에서 일치하는 추천 코드를 확인할 수 있도록 허용";
+"OBPrivacyConsentClipboardPermission" = "Scout가 내 클립보드에서 일치하는 추천 코드를 확인할 수 있도록 허용";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "추천인에게 도움이 되시려고 Brave를 다운로드하신 것 같습니다. 귀하의 추천인을 확인하려는 목적으로 Brave가 귀하의 클립보드에서 일치하는 추천 코드 일회성 확인을 수행합니다. 이 확인은 코드 확인 목적으로만 사용되며 어떤 개인 데이터도 전송되지 않습니다. 거부하시면 Brave에서 제공하는 리워드를 추천인에게 보내드릴 수 없습니다.";
+"OBPrivacyConsentDetail" = "추천인에게 도움이 되시려고 Scout를 다운로드하신 것 같습니다. 귀하의 추천인을 확인하려는 목적으로 Scout가 귀하의 클립보드에서 일치하는 추천 코드 일회성 확인을 수행합니다. 이 확인은 코드 확인 목적으로만 사용되며 어떤 개인 데이터도 전송되지 않습니다. 거부하시면 Scout에서 제공하는 리워드를 추천인에게 보내드릴 수 없습니다.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "확인 허용하지 않음";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "및";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Brave Rewards";
+"OBRewardsAgreementTitle" = "Scout Rewards";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "Brave Private Ads를 선택하면 광고를 보고 게시자와 콘텐츠 제작자를 지원할 수 있습니다.";
+"OBRewardsDetail" = "Scout Private Ads를 선택하면 광고를 보고 게시자와 콘텐츠 제작자를 지원할 수 있습니다.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "브라우징하면서 토큰을 얻어 좋은 콘텐츠를 만들어준 제작자에게 보답하세요.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "개인정보 보호 정책";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Brave Rewards";
+"OBRewardsTitle" = "Scout Rewards";
 
 /* Save button to save current selection */
 "OBSaveButton" = "저장";
@@ -1220,10 +1220,10 @@
 "onboarding.linkReceiptButton" = "VPN 구독 연결";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "Brave VPN 구독은 최대 10대의 Android, iOS, 데스크톱 기기를 보호할 수 있습니다. App Store 구독을 Brave 계정에 연결하기만 하면 됩니다.";
+"onboarding.linkReceiptDescription" = "Scout VPN 구독은 최대 10대의 Android, iOS, 데스크톱 기기를 보호할 수 있습니다. App Store 구독을 Scout 계정에 연결하기만 하면 됩니다.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "Brave Firewall + VPN 보호를 더 폭넓게 활용";
+"onboarding.linkReceiptTitle" = "Scout Firewall + VPN 보호를 더 폭넓게 활용";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "트래커와 광고를 차단하면 웹사이트에서 데이터를 적게 사용하므로 로딩이 빨라집니다.";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "모두 열기(%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Brave Rewards 설정 열기";
+"OpenBraveRewardsSettings" = "Scout Rewards 설정 열기";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "파일 앱에서 다운로드 폴더를 여는 중 알 수 없는 오류가 발생했습니다.";
@@ -1316,7 +1316,7 @@
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "귀하의 다른 기기에 표시할 활성 세션이 없습니다.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "다른 기기에 열린 Brave 탭이 표시되는 공간";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "다른 기기에 열린 Scout 탭이 표시되는 공간";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "지금 숨기기";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "계속";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "이 비공개 답변은 Brave가 특정 기능의 총 사용량을 산정하고 기능을 개선하는 용도로 사용됩니다.";
+"p3a.settingSubtitle" = "이 비공개 답변은 Scout가 특정 기능의 총 사용량을 산정하고 기능을 개선하는 용도로 사용됩니다.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "프라이버시 보호 제품 분석(P3A) 허용";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "트래커 또는 광고";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Brave Firewall + VPN 경고";
+"privacyHub.vpnAlertsHeader" = "Scout Firewall + VPN 경고";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Firewall + VPN";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "번역 활성화";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Brave 평가";
+"RateBrave" = "Scout 평가";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "텍스트 크기 확대";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "택일";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Brave 개발자에게 이 사이트가 제대로 작동하지 않는다고 알려주세요:";
+"ReportBrokenSiteBody1" = "Scout 개발자에게 이 사이트가 제대로 작동하지 않는다고 알려주세요:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "참고: Brave 서버로 전송된 보고서에는 사이트 주소, Brave 버전 번호, Shields 설정, VPN 상태, 언어 설정이 포함됩니다.";
+"ReportBrokenSiteBody2" = "참고: Scout 서버로 전송된 보고서에는 사이트 주소, Scout 버전 번호, Shields 설정, VPN 상태, 언어 설정이 포함됩니다.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "제출";
@@ -2078,25 +2078,25 @@
 "RestoreTabOnCrashAlertTitle" = "Scout가 예기치 않게 닫혔습니다.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Brave 및 BAT 커뮤니티를 지원하려면 이 설정을 켜주세요.";
+"rewards.disabledBody" = "Scout 및 BAT 커뮤니티를 지원하려면 이 설정을 켜주세요.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "Brave 리워드를 사용하면 Brave와 BAT 커뮤니티를 지원하실 수 있습니다.";
+"rewards.disabledStatusBody" = "Scout 리워드를 사용하면 Scout와 BAT 커뮤니티를 지원하실 수 있습니다.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Brave와 BAT 커뮤니티를 지원하고 계십니다.";
+"rewards.enabledBody" = "Scout와 BAT 커뮤니티를 지원하고 계십니다.";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Brave 및 BAT 커뮤니티를 지원해주셔서 감사합니다!";
+"rewards.enabledStatusBody" = "Scout 및 BAT 커뮤니티를 지원해주셔서 감사합니다!";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Brave 리워드를 켜고 Brave Ads를 보셔서 Brave와 BAT 커뮤니티를 지원해주세요.";
+"rewards.settingsToggleMessage" = "Scout 리워드를 켜고 Scout Ads를 보셔서 Scout와 BAT 커뮤니티를 지원해주세요.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Brave 리워드 사용";
+"rewards.settingsToggleTitle" = "Scout 리워드 사용";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "이 콘텐츠 제작자는 Brave 크리에이터로 인증받았습니다.";
+"rewards.supportingPublisher" = "이 콘텐츠 제작자는 Scout 크리에이터로 인증받았습니다.";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "이번 달 여러 콘텐츠 제작자를 지원하고 계십니다.";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "기부 금액";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Brave 토큰";
+"RewardsInternalsContributionProcessorBraveTokens" = "Scout 토큰";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "없음";
@@ -2387,13 +2387,13 @@
 "searchSuggestionsSubtitle" = "추천 검색어를 사용하시겠습니까?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Brave로 검색";
+"SearchWithBrave" = "Scout로 검색";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "전송";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Brave에서 문제를 해결할 수 있도록 오류 보고서를 전송하시겠습니까?";
+"SendCrashReportAlertMessage" = "Scout에서 문제를 해결할 수 있도록 오류 보고서를 전송하시겠습니까?";
 
 /* Title for prompt displayed to user after the app crashes */
 "SendCrashReportAlertTitle" = "Scout에서 오류가 발생했습니다.";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "품질 설정";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "이 비공개 Ping으로 Brave가 활성 사용자 수를 추산합니다.";
+"settings.sendUsagePingDescription" = "이 비공개 Ping으로 Scout가 활성 사용자 수를 추산합니다.";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "일일 사용 Ping을 Brave에 자동으로 보내기";
+"settings.sendUsagePingTitle" = "일일 사용 Ping을 Scout에 자동으로 보내기";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Brave가 새 탭 페이지에서 비공개 설문조사 링크를 표시할 수 있도록 허용합니다. 설문조사는 더 나은 기능을 개발하고, 브라우저 기반 광고 캠페인의 효과를 측정하는 데 도움이 됩니다. [자세히 알아보기]%@";
+"settings.surveyPanelistDescription" = "Scout가 새 탭 페이지에서 비공개 설문조사 링크를 표시할 수 있도록 허용합니다. 설문조사는 더 나은 기능을 개발하고, 브라우저 기반 광고 캠페인의 효과를 측정하는 데 도움이 됩니다. [자세히 알아보기]%@";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Brave 설문조사 허용";
+"settings.surveyPanelistTitle" = "Scout 설문조사 허용";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "QR 코드 스캔";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Brave News를 열고 오늘의 인기 스토리 확인";
+"shortcuts.activityTypeBraveNewsDescription" = "Scout News를 열고 오늘의 인기 스토리 확인";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "새 탭에서 브라우저를 열고 비공개 브라우저 기록 데이터 삭제";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "VPN 활성화";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "새 탭에서 Brave 브라우저를 열고 VPN 활성화";
+"shortcuts.activityTypeEnableVPNTitle" = "새 탭에서 Scout 브라우저를 열고 VPN 활성화";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "새 비공개 탭 열기";
@@ -2621,10 +2621,10 @@
 "shortcuts.activityTypeOpenBookmarksTitle" = "Scout 브라우저 북마크 열기";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Brave News 열기";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Scout News 열기";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Brave News 열기";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Scout News 열기";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "브라우저 기록 화면 열기";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "재생목록 열기";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "다른 기기에서 열린 Brave 탭 열기";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "다른 기기에서 열린 Scout 탭 열기";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "다른 기기에서 탭 열기";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "브라우저 기록 지우기";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Siri - Voice Assistant를 통해 바로가기를 사용하여 Brave VPN 활성화";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Siri - Voice Assistant를 통해 바로가기를 사용하여 Scout VPN 활성화";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "VPN 활성화";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "북마크 열기";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Siri - Voice Assistant를 통해 바로 가기를 사용하여 새 탭 열기 및 Brave News 피드 표시";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Siri - Voice Assistant를 통해 바로 가기를 사용하여 새 탭 열기 및 Scout News 피드 표시";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Brave News 열기";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Scout News 열기";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Siri - Voice Assistant를 통해 바로가기를 사용하여 브라우저 기록 열기";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "사이트 및 방패 설정";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "이 사이트에 문제가 있다는 것을 Brave (브레이브) 개발자에게 알려 주셔서 감사합니다. 최선을 다해 문제를 해결하겠습니다!";
+"SiteReportedBody" = "이 사이트에 문제가 있다는 것을 Scout (브레이브) 개발자에게 알려 주셔서 감사합니다. 최선을 다해 문제를 해결하겠습니다!";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "감사합니다.";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "보호";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "매일 Brave를 사용하여 웹 브라우징하여 데이터를 절약합니다.";
+"socialSharing.domainSpecificDataSavedTitle" = "매일 Scout를 사용하여 웹 브라우징하여 데이터를 절약합니다.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "매일 Brave를 사용하여 웹 브라우징하여 데이터를 절약합니다.";
+"socialSharing.shareDescriptionTitle" = "매일 Scout를 사용하여 웹 브라우징하여 데이터를 절약합니다.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "일반 탭";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "동기화 계정 삭제";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "계정을 삭제하면 암호화된 데이터가 Brave 서버에서 제거되고 연결된 모든 디바이스에서 동기화가 비활성화됩니다.";
+"sync.deleteAccountAlertDescriptionPart1" = "계정을 삭제하면 암호화된 데이터가 Scout 서버에서 제거되고 연결된 모든 디바이스에서 동기화가 비활성화됩니다.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "이들 디바이스에 로컬로 저장된 데이터는 삭제되지 않습니다.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "동기화 계정 삭제";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "이 코드는 구버전 Brave를 실행 중인 기기에서 만들어진 것 같습니다. 다른 기기에서 최신 버전의 Brave로 업데이트한 다음, 새 동기화 코드를 만드세요.";
+"sync.deprecatedVersionError" = "이 코드는 구버전 Scout를 실행 중인 기기에서 만들어진 것 같습니다. 다른 기기에서 최신 버전의 Scout로 업데이트한 다음, 새 동기화 코드를 만드세요.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "동기화 체인 내 기기를 불러오는 중에 문제가 발생했습니다.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "기기가 백업에서 복원된 것으로 보입니다. 이로 인해 Brave 동기화에 영향이 갈 수 있습니다. Brave 동기화를 계속 사용하려면 동기화 체인을 재설정하고 다시 참여해 주세요.";
+"sync.deviceRestoreDetectedMessage" = "기기가 백업에서 복원된 것으로 보입니다. 이로 인해 Scout 동기화에 영향이 갈 수 있습니다. Scout 동기화를 계속 사용하려면 동기화 체인을 재설정하고 다시 참여해 주세요.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "복원 감지됨";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "기기";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "현재 동기화된 데이터는 유지되지만, Brave의 동기화 캐시에 있는 데이터는 모두 삭제됩니다. 기기 데이터를 다시 동기화하려면 새 동기화 체인을 시작해야 합니다.";
+"sync.removeLastDeviceMessage" = "현재 동기화된 데이터는 유지되지만, Scout의 동기화 캐시에 있는 데이터는 모두 삭제됩니다. 기기 데이터를 다시 동기화하려면 새 동기화 체인을 시작해야 합니다.";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "동기화 체인 삭제";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "기기에 동기화";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "기존에 동기화된 기기를 사용하여 Brave 설정을 열고 설정 → 동기화로 이동하여 \"기기 추가\"를 선택한 다음, 화면에 표시되는 코드를 스캔하십시오.";
+"sync.toDeviceDescription" = "기존에 동기화된 기기를 사용하여 Scout 설정을 열고 설정 → 동기화로 이동하여 \"기기 추가\"를 선택한 다음, 화면에 표시되는 코드를 스캔하십시오.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "이 기기를 동기화할 수 없음";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "기기에 흔적 남기지 않기";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "Brave VPN은 Brave 브라우저 밖에서도 사용자의 모든 온라인 활동을 암호화하고 보호합니다.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "Scout VPN은 Scout 브라우저 밖에서도 사용자의 모든 온라인 활동을 암호화하고 보호합니다.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Brave VPN";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Scout VPN";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "비공개(시크릿) 창에서도 ISP, 네트워크 관찰자 또는 고용주(업무용 기기/네트워크를 사용하는 경우)는 여전히 사용자의 검색 활동을 볼 수 있습니다.";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "키보드 자동으로 열기";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "미리 보기 탭에서 Ask Brave 및 Brave 검색의 링크 열기";
+"tabs.settings.openLinkInQuickViewModeDescription" = "미리 보기 탭에서 Ask Scout 및 Scout 검색의 링크 열기";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "빠른 보기 탭 사용";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "공유...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "친구들과 Brave를 공유하세요!";
+"themeQRCodeShareTitle" = "친구들과 Scout를 공유하세요!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "자동";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "피드 주소에 아무런 내용도 없습니다.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Brave News에 출처 추가";
+"today.addSourceShareTitle" = "Scout News에 출처 추가";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "사용 가능한 RSS 피드";
 
 /* The name of the feature */
-"today.braveToday" = "Brave News";
+"today.braveToday" = "Scout News";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "뉴스";
@@ -3371,7 +3371,7 @@
 "today.deals" = "딜";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "Brave News에 %@ 제공 콘텐츠를 표시하지 않음";
+"today.disabledAlertBody" = "Scout News에 %@ 제공 콘텐츠를 표시하지 않음";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "사용 중지";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "%@ 제공 콘텐츠 허용";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "Brave News에 문제가 발생했습니다. 다시 시도하세요.";
+"today.errorGeneralBody" = "Scout News에 문제가 발생했습니다. 다시 시도하세요.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "죄송합니다...";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "비보안 출처 - 위험을 감수하고 추가";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "좋아하는 소스를 피드 한 곳에서 팔로우하세요. Brave에서 탭을 열고 아래로 스크롤하면, 다 보이죠!\nBrave Today는 프라이버시를 존중하고 익명화된 광고의 지원으로 제공됩니다.";
+"today.introCardBody" = "좋아하는 소스를 피드 한 곳에서 팔로우하세요. Scout에서 탭을 열고 아래로 스크롤하면, 다 보이죠!\nScout Today는 프라이버시를 존중하고 익명화된 광고의 지원으로 제공됩니다.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Brave News를 켜고 스토리를 놓치지 마세요";
+"today.introCardTitle" = "Scout News를 켜고 스토리를 놓치지 마세요";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Brave News 표시";
+"today.isEnabledToggleLabel" = "Scout News 표시";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "데이터에 대해 자세히 알아보기";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Brave 오퍼 더보기";
+"today.moreBraveOffers" = "Scout 오퍼 더보기";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "인터넷 끊김";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "촉진됨";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "App Store에서 Brave 평가하기";
+"today.rateBraveCardActionSheetTitle" = "App Store에서 Scout 평가하기";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "숨기기";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Brave 평가";
+"today.rateBraveCardRateActionTitle" = "Scout 평가";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "어떻게 생각하시는지 알려주세요!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Brave가 마음에 드십니까?";
+"today.rateBraveCardTitle" = "Scout가 마음에 드십니까?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "새로고침";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "추천";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Brave News 켜기";
+"today.turnOnBraveToday" = "Scout News 켜기";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "언팔로우";

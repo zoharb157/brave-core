@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "詢問 Brave";
+"widgets.askBrave" = "詢問 Scout";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "书签";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo 人工智能";
 
 /* The name of the feature */
-"widgets.braveNews" = "Brave 新闻";
+"widgets.braveNews" = "新闻";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "下载";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "头条新闻";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Brave 新闻已禁用";
+"widgets.newsUnavailableByPolicy" = "新闻已禁用";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "已被你所在组织的政策关闭";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "隐私统计数据";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Brave 钱包";
+"widgets.walletShortcutTitle" = "钱包";
 

@@ -1446,7 +1446,8 @@ public class BrowserViewController: UIViewController {
   }
 
   private func presentCrashReporterCalloutIfNeeded() {
-    if braveCore.localState.boolean(forPath: kMetricsReportingEnabled)
+    if !ScoutFeatures.braveTelemetry
+      || braveCore.localState.boolean(forPath: kMetricsReportingEnabled)
       || Preferences.General.crashReportingOptInShown.value
     {
       // Dont need to display the alert if the user already has crash reporting enabled or they've

@@ -86,7 +86,7 @@ class OpenInBraveViewController: UIViewController {
   private func createURL(for schemeType: SchemeType, with value: String) -> URL? {
     var queryItem: URLQueryItem
     var components = URLComponents()
-    components.scheme = Bundle.main.infoDictionary?["BRAVE_URL_SCHEME"] as? String ?? "brave"
+    components.scheme = Bundle.main.infoDictionary?["BRAVE_URL_SCHEME"] as? String ?? "scout"
 
     switch schemeType {
     case .query:

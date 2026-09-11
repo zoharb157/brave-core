@@ -1,5 +1,5 @@
 /* The description for the error message when the user's session has expired */
-"aichat.accountSessionExpiredDescription" = "A Brave-fiókja bejelentkezési munkamenete lejárt. A frissítéshez látogasson el a fiókja oldalára, majd térjen vissza ide a prémium funkciók használatához.";
+"aichat.accountSessionExpiredDescription" = "A Scout-fiókja bejelentkezési munkamenete lejárt. A frissítéshez látogasson el a fiókja oldalára, majd térjen vissza ide a prémium funkciók használatához.";
 
 /* The title for button that submits feedback */
 "aichat.addFeedbackActionTitle" = "Visszajelzés hozzáadása";
@@ -14,10 +14,10 @@
 "aichat.advancedSettingsHeaderTitle" = "A Leo egy mesterséges intelligencián alapuló, intelligens asszisztens, közvetlenül a böngészőbe építve.";
 
 /* The subtitle for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Kapcsolja össze App Store-vásárlását a Brave-fiókjával, hogy más eszközökön is használni tudja a Leót.";
+"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "Kapcsolja össze App Store-vásárlását a Scout-fiókjával, hogy más eszközökön is használni tudja a Leót.";
 
 /* The title for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionTitle" = "Kapcsolja a vásárlást a Brave-fiókjához";
+"aichat.advancedSettingsLinkPurchaseActionTitle" = "Kapcsolja a vásárlást a Scout-fiókjához";
 
 /* The description for the settings to show Leo in Quick Search Engines Bar. */
 "aichat.advancedSettingsShowInQSEBarDescription" = "Aktiváljon egy parancsikont a Leo gyorskereső sávból történő elindításához.";
@@ -59,7 +59,7 @@
 "aichat.byomEmptyStateTitle" = "Ön még nem csatlakoztatott modellt";
 
 /* The section header description explaining the Bring Your Own Model feature with a link to learn more. The text inside square brackets should be translated. */
-"aichat.byomSectionHeaderDescription" = "Csatlakoztassa a saját üzemeltetésű vagy harmadik fél által üzemeltetett LLM-et a Leo-hoz, és használja őket a böngészőben. Használjon bármilyen OpenAI Chat Protocol kompatibilis keretrendszert, például az Ollama-t. [További információ](https://support.brave.app/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo)";
+"aichat.byomSectionHeaderDescription" = "Csatlakoztassa a saját üzemeltetésű vagy harmadik fél által üzemeltetett LLM-et a Leo-hoz, és használja őket a böngészőben. Használjon bármilyen OpenAI Chat Protocol kompatibilis keretrendszert, például az Ollama-t. [További információ](https://zaatar-scout.fly.dev/support)";
 
 /* The section header title for the Bring Your Own Model feature */
 "aichat.byomSectionHeaderTitle" = "Hozza el saját modelljét";
@@ -71,7 +71,7 @@
 "aichat.chatIntroJustTalkTitle" = "Csak csevegni szeretne?";
 
 /* The subtitle for intro view */
-"aichat.chatIntroSubTitle" = "Egy MI-alapú intelligens asszisztens, amely közvetlenül a Brave-ből elérhető.";
+"aichat.chatIntroSubTitle" = "Egy MI-alapú intelligens asszisztens, amely közvetlenül a Scoutból elérhető.";
 
 /* The title for intro view */
 "aichat.chatIntroTitle" = "Üdv, Leo vagyok!";
@@ -137,7 +137,7 @@
 "aichat.customModelFormLabelFieldTitle" = "Címke";
 
 /* The error message shown when trying to use a private network address, explaining why it's blocked and how to enable it */
-"aichat.customModelFormPrivateEndpointErrorMessage" = "A megadott cím úgy tűnik, hogy egy privát hálózatról származik – például az Ön routeréről vagy egy helyi szerverről. A Brave automatikusan blokkolja ezeket az Ön biztonsága érdekében, de engedélyezheti őket, ha biztos abban, hogy biztonságos.\n\nA folytatáshoz látogasson el a brave://flags/ oldalra, keressen rá a \"brave-ai-chat-allow-private-ips\" kifejezésre, és engedélyezze a funkciót. Az engedélyezés után privát hálózati címeket használhat a Leo beállításaiban.";
+"aichat.customModelFormPrivateEndpointErrorMessage" = "A megadott cím úgy tűnik, hogy egy privát hálózatról származik – például az Ön routeréről vagy egy helyi szerverről. A Scout automatikusan blokkolja ezeket az Ön biztonsága érdekében, de engedélyezheti őket, ha biztos abban, hogy biztonságos. Az engedélyezés után privát hálózati címeket használhat a Leo beállításaiban.";
 
 /* The footer text explaining what the model request name is used for and providing an example */
 "aichat.customModelFormRequestNameFieldFooter" = "A modell neve abban a formában, ahogyan a kiszolgáló keretrendszerhez küldött kérésben meg kell jelennie, pl. phi-3 (vegye figyelembe, hogy ha ez a név nem egyezik meg pontosan azzal, amit a kiszolgáló keretrendszer elvár, az integráció nem fog működni).";
@@ -155,7 +155,7 @@
 "aichat.customModelFormSaveButtonTitle" = "Mentés";
 
 /* The footer text explaining what the server endpoint is and providing an example URL for Ollama */
-"aichat.customModelFormServerEndpointFieldFooter" = "Az az URL-cím, ahol az Ön kiszolgáló keretrendszere figyeli a kéréseket. Ha nem biztos benne, nézze meg a kiszolgáló keretrendszer dokumentációját. Például az Ollama esetében ez mindig a `http://localhost:11434/v1/chat/completions`. A Brave nem proxyzol ezeket a kéréseket, kérjük, olvassa el a kiválasztott szolgáltató adatvédelmi feltételeit.";
+"aichat.customModelFormServerEndpointFieldFooter" = "Az az URL-cím, ahol az Ön kiszolgáló keretrendszere figyeli a kéréseket. Ha nem biztos benne, nézze meg a kiszolgáló keretrendszer dokumentációját. Például az Ollama esetében ez mindig a `http://localhost:11434/v1/chat/completions`. A Scout nem proxyzol ezeket a kéréseket, kérjük, olvassa el a kiválasztott szolgáltató adatvédelmi feltételeit.";
 
 /* The label for the server endpoint URL field */
 "aichat.customModelFormServerEndpointFieldTitle" = "Kiszolgálói végpont";
@@ -218,7 +218,7 @@
 "aichat.feedbackOptionTitleUnsafeHarmful" = "Nem biztonságos/ártalmas";
 
 /* The title for premium ad view. The links are inside parenthesis and the phrases inside square brackets should be translated */
-"aichat.feedbackPremiumAdTitle" = "A Leo Premium nyelvi modellek bővített készletéhez biztosít hozzáférést a még árnyaltabb válaszok érdekében. [További tudnivalók](https://brave.com/) - [Elvetés] (braveai://dismiss)";
+"aichat.feedbackPremiumAdTitle" = "A Leo Premium nyelvi modellek bővített készletéhez biztosít hozzáférést a még árnyaltabb válaszok érdekében. [További tudnivalók](https://zaatar-scout.fly.dev/support) - [Elvetés] (braveai://dismiss)";
 
 /* The title for the button that submits feedback */
 "aichat.feedbackSubmitActionTitle" = "Elküldés";
@@ -236,7 +236,7 @@
 "aichat.feedbackSuccessAnswerLikedTitle" = "A válasz tetszett";
 
 /* The title for view which user type feedback */
-"aichat.feedbackViewMainTitle" = "Visszajelzés küldése a Brave MI-vel kapcsolatban";
+"aichat.feedbackViewMainTitle" = "Visszajelzés küldése a Scout MI-vel kapcsolatban";
 
 /* The button title for opening paywall screen */
 "aichat.goPremiumButtonTitle" = "Prémium előfizetés";
@@ -248,25 +248,25 @@
 "aichat.internalErrorViewTitle" = "Hiba történt a kérés felfolgozásakor. Kérjük, próbálja újra.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeHaikuMessageDescription" = "Üdv, Leo vagyok. A Brave proxyval üzemeltetnek, a működésem a Claude Haiku modellen alapul, amelyet az Anthropic fejlesztett ki beszélgetésre és szövegfeldolgozási feladatok elvégzésére. A Claude Haiku a Brave által biztosított, saját biztonságos infrastruktúrán fut.";
+"aichat.introMessageClaudeHaikuMessageDescription" = "Üdv, Leo vagyok. A Scout proxyval üzemeltetnek, a működésem a Claude Haiku modellen alapul, amelyet az Anthropic fejlesztett ki beszélgetésre és szövegfeldolgozási feladatok elvégzésére. A Claude Haiku a Scout által biztosított, saját biztonságos infrastruktúrán fut.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeHaikuModelPurposeDescription" = "Villámgyors csevegés";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeInstantMessageDescription" = "Üdv, Leo vagyok. A Brave proxyval üzemeltetnek, a működésem a Claude Instant modellen alapul, amelyet az Anthropic fejlesztett ki beszélgetésre és szövegfeldolgozási feladatok elvégzésére. A Claude Instant a Brave által biztosított, saját biztonságos infrastruktúrán fut.";
+"aichat.introMessageClaudeInstantMessageDescription" = "Üdv, Leo vagyok. A Scout proxyval üzemeltetnek, a működésem a Claude Instant modellen alapul, amelyet az Anthropic fejlesztett ki beszélgetésre és szövegfeldolgozási feladatok elvégzésére. A Claude Instant a Scout által biztosított, saját biztonságos infrastruktúrán fut.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeSonnetMessageDescription" = "Üdv, Leo vagyok. A Brave proxyval üzemeltetnek, a működésem a Claude Sonnet modellen alapul, amelyet az Anthropic fejlesztett ki beszélgetésre és szövegfeldolgozási feladatok elvégzésére. A Claude Sonnet a Brave által biztosított, saját biztonságos infrastruktúrán fut.";
+"aichat.introMessageClaudeSonnetMessageDescription" = "Üdv, Leo vagyok. A Scout proxyval üzemeltetnek, a működésem a Claude Sonnet modellen alapul, amelyet az Anthropic fejlesztett ki beszélgetésre és szövegfeldolgozási feladatok elvégzésére. A Claude Sonnet a Scout által biztosított, saját biztonságos infrastruktúrán fut.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeSonnetModelPurposeDescription" = "Kiegyensúlyozott sebesség és intelligencia";
 
 /* The model intro message when you first enter the chat assistant -- %@ is a place-holder for the model name */
-"aichat.introMessageGenericMessageDescription" = "Szia, Leo vagyok, a Brave MI-asszisztense. Engem a(z) %@ üzemeltet. Kérdezz bármit, és legjobb tudásom szerint igyekszem válaszolni.";
+"aichat.introMessageGenericMessageDescription" = "Szia, Leo vagyok, a Scout MI-asszisztense. Engem a(z) %@ üzemeltet. Kérdezz bármit, és legjobb tudásom szerint igyekszem válaszolni.";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageQwenMessageDescription" = "Üdv, Leo vagyok, a Brave AI-asszisztense. A működésem pedig a Qwen VL 30B modellen alapul, amelyet az Alibaba Cloud fejlesztett ki, amely számos esetben használható és teljesítményes. A Qwen a Brave által biztosított, saját biztonságos infrastruktúrán fut.";
+"aichat.introMessageQwenMessageDescription" = "Üdv, Leo vagyok, a Scout AI-asszisztense. A működésem pedig a Qwen VL 30B modellen alapul, amelyet az Alibaba Cloud fejlesztett ki, amely számos esetben használható és teljesítményes. A Qwen a Scout által biztosított, saját biztonságos infrastruktúrán fut.";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageQwenModelPurposeDescription" = "Általános csevegés, kódolás, és sok minden más";
@@ -287,7 +287,7 @@
 "aichat.leoCodeExampleDefaultTitle" = "Kód példa";
 
 /* The message that shows in an alert, to let the user know the 'Leo' feature is disabled, and explains how to re-enable the feature. */
-"aichat.leoDisabledMessageDescription" = "Leo jelenleg le van tiltva a funkciójelzőkkel. A Leo újbóli engedélyezéséhez kérjük, látogasson el a brave://flags oldalra, és engedélyezze.";
+"aichat.leoDisabledMessageDescription" = "Leo jelenleg le van tiltva a funkciójelzőkkel.";
 
 /* The title that shows in an alert when the Leo/AI-Chat feature is disabled. */
 "aichat.leoDisabledMessageTitle" = "Leo Disabled";
@@ -305,13 +305,13 @@
 "aichat.leoImprovedAnswerBraveSearch" = "Továbbfejlesztett válaszkeresés:";
 
 /* The text displayed on the loading screen when searching for a user query */
-"aichat.leoImprovingAnswerBraveSearch" = "Jobb válasz a Brave kereső használatával...";
+"aichat.leoImprovingAnswerBraveSearch" = "Jobb válasz a Scout kereső használatával...";
 
 /* The title of the advanced settings view */
 "aichat.leoNavigationTitle" = "Leo MI";
 
 /* The title to display when the user taps on the information icon on the page context view. Brave Leo is the name of the product and should not be translated. */
-"aichat.leoPageContextInfoDescriptionTitle" = "Kapcsolja be az oldallal kapcsolatos kérdésekhez. A tartalom továbbítva lesz a Brave Leónak az Ön üzeneteivel együtt.";
+"aichat.leoPageContextInfoDescriptionTitle" = "Kapcsolja be az oldallal kapcsolatos kérdésekhez. A tartalom továbbítva lesz a Scout Leónak az Ön üzeneteivel együtt.";
 
 /* The accessibility text to read out loud when the user taps on the info icon on the page context view */
 "aichat.leoPageContextInfoIconAccessibilityTitle" = "Oldalkörnyezeti információ";
@@ -332,7 +332,7 @@
 "aichat.manageSubscriptionsButtonTitle" = "Követések kezelése";
 
 /* The description for alert needed to have microphone permission */
-"aichat.microphonePermissionAlertDescription" = "Kérjük, engedélyezze a mikrofonhoz való hozzáférést az iOS rendszerbeállításaiban, hogy a Brave névtelen hangbevitelt használhasson.";
+"aichat.microphonePermissionAlertDescription" = "Kérjük, engedélyezze a mikrofonhoz való hozzáférést az iOS rendszerbeállításaiban, hogy a Scout névtelen hangbevitelt használhasson.";
 
 /* The description for alert needed to have microphone permission */
 "aichat.microphonePermissionAlertTitle" = "Mikrofon-hozzáférés szükséges";
@@ -443,7 +443,7 @@
 "aichat.rateAnswerActionErrorText" = "Válaszértékelési hiba";
 
 /* The message for privacy warning alert when rating a response */
-"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "Ha értékeli a választ, a Brave elküldi a visszajelzését, a beszélgetés adatait, a használt modellt, nyelvet, verziót és a prémium státuszát, hogy tovább fejleszthessék Leót. [Tudjon meg többet](%@)";
+"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "Ha értékeli a választ, a Scout elküldi a visszajelzését, a beszélgetés adatait, a használt modellt, nyelvet, verziót és a prémium státuszát, hogy tovább fejleszthessék Leót. [Tudjon meg többet](%@)";
 
 /* The title for privacy warning alert when rating a response */
 "aichat.rateAnswerFeedbackPrivacyWarningTitle" = "Válasz Visszajelzés";
@@ -491,7 +491,7 @@
 "aichat.serviceOverloadedErrorViewTitle" = "A szolgáltatás jelenleg túlterhelt. Kérjük, próbálja meg később.";
 
 /* The description indicating voice inputs from user is not store or shared and these inpurs are totally private. */
-"aichat.speechRecognizerDisclaimer" = "A Brave nem tárolja és nem osztja meg hangbemeneteit.";
+"aichat.speechRecognizerDisclaimer" = "A Scout nem tárolja és nem osztja meg hangbemeneteit.";
 
 /* Title showing the user has no subscription. */
 "aichat.subscriptionNoneTitle" = "Nincs";
@@ -506,10 +506,10 @@
 "aichat.termsConditionsApproveActionTitle" = "Megértettem";
 
 /* The description terms and conditions for AI chat usage. The links are inside parenthesis %@ will be replaced with urls */
-"aichat.termsConditionsDescription" = "A Brave Leo egy privát, mesterséges intelligencián alapuló asszisztens, amely megkönnyíti és hatékonyabbá teszi a böngészést. A Leo ingyenesen használható, korlátozott hozzáféréssel. A Brave Leo Premium több modellt, magasabb limiteket biztosít, valamint korai hozzáférést ad az új funkciókhoz. Az alapértelmezett modell időről időre változhat. További részletek a Brave **[Súgóközpontban](%1$@)** találhatók. \n\nAlapértelmezés szerint, amikor kérdést tesz fel a Leónak egy megnyitott weboldallal vagy az azon kijelölt szöveggel kapcsolatban, az oldal tartalma és a keresési lekérdezése a Brave szervereire kerül, hogy a Leo választ adhasson. Bizonyos esetekben a Leo a bevitelből származó lekérdezéseket a Brave keresés felé küldi, és a találatokat is felhasználja a jobb válasz érdekében. A Brave nem garantálja a válaszok pontosságát, azok tartalmazhatnak pontatlan, félrevezető vagy hibás információkat. Kérjük, ne adjon meg érzékeny vagy személyes adatokat a Leónak, és legyen körültekintő az egészséggel, pénzügyekkel, biztonsággal vagy hasonló témákkal kapcsolatos válaszok esetén. A beállításokat bármikor módosíthatja. A beállításokat a Beállítások > Leo menüpontban találja.\n\nA Leo nem gyűjt olyan azonosítókat, például IP-címet, amelyek Önhöz köthetők lennének. Nem használjuk fel adatait – így a keresési lekérdezéseit vagy a Brave Leo válaszait sem – modelljeink betanításához. A Brave nem tárol és nem őriz meg személyes adatokat a szerverein. További információért tekintse meg az  **[Adatvédelmi szabályzatot](%2$@)** részletes tájékoztatásért.";
+"aichat.termsConditionsDescription" = "A Scout Leo egy privát, mesterséges intelligencián alapuló asszisztens, amely megkönnyíti és hatékonyabbá teszi a böngészést. A Leo ingyenesen használható, korlátozott hozzáféréssel. A Scout Leo Premium több modellt, magasabb limiteket biztosít, valamint korai hozzáférést ad az új funkciókhoz. Az alapértelmezett modell időről időre változhat. További részletek a Scout **[Súgóközpontban](%1$@)** találhatók. \n\nAlapértelmezés szerint, amikor kérdést tesz fel a Leónak egy megnyitott weboldallal vagy az azon kijelölt szöveggel kapcsolatban, az oldal tartalma és a keresési lekérdezése a Scout szervereire kerül, hogy a Leo választ adhasson. Bizonyos esetekben a Leo a bevitelből származó lekérdezéseket a Scout keresés felé küldi, és a találatokat is felhasználja a jobb válasz érdekében. A Scout nem garantálja a válaszok pontosságát, azok tartalmazhatnak pontatlan, félrevezető vagy hibás információkat. Kérjük, ne adjon meg érzékeny vagy személyes adatokat a Leónak, és legyen körültekintő az egészséggel, pénzügyekkel, biztonsággal vagy hasonló témákkal kapcsolatos válaszok esetén. A beállításokat bármikor módosíthatja. A beállításokat a Beállítások > Leo menüpontban találja.\n\nA Leo nem gyűjt olyan azonosítókat, például IP-címet, amelyek Önhöz köthetők lennének. Nem használjuk fel adatait – így a keresési lekérdezéseit vagy a Scout Leo válaszait sem – modelljeink betanításához. A Scout nem tárol és nem őriz meg személyes adatokat a szerverein. További információért tekintse meg az  **[Adatvédelmi szabályzatot](%2$@)** részletes tájékoztatásért.";
 
 /* The title terms and conditions for AI chat usage */
-"aichat.termsConditionsTitle" = "Csevegjen privátban a Brave Leóval";
+"aichat.termsConditionsTitle" = "Csevegjen privátban a Scout Leóval";
 
 /* The title of the badge where a model which can be used unlimited */
 "aichat.unlimitedModelStatusTitle" = "Korlátlan";

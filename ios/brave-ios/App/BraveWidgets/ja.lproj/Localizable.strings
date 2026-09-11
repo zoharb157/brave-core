@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Braveに質問";
+"widgets.askBrave" = "Scoutに質問";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "ブックマーク";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo AI";
 
 /* The name of the feature */
-"widgets.braveNews" = "Braveニュース";
+"widgets.braveNews" = "ニュース";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "ダウンロード";
@@ -35,7 +35,7 @@
 "widgets.newsClusteringWidgetTitle" = "人気のニュース";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Brave Newsは無効です";
+"widgets.newsUnavailableByPolicy" = "Newsは無効です";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "組織のポリシーによって無効化されています";
@@ -86,5 +86,5 @@
 "widgets.singleStatTitle" = "プライバシー統計";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Braveウォレット";
+"widgets.walletShortcutTitle" = "ウォレット";
 

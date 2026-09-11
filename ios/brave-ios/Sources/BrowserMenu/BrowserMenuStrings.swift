@@ -119,13 +119,13 @@ extension Strings {
     public static let braveTalk = NSLocalizedString(
       "ActionTitles.braveTalk",
       bundle: .module,
-      value: "Brave Talk",
+      value: "Scout Talk",
       comment: "A button title shown on the menu that opens a link to the Brave Talk feature."
     )
     public static let braveNews = NSLocalizedString(
       "ActionTitles.braveNews",
       bundle: .module,
-      value: "Brave News",
+      value: "Scout News",
       comment: "A button title shown on the menu that presents the Brave News feature."
     )
     public static let share = NSLocalizedString(

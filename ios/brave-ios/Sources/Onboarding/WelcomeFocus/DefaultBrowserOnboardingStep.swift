@@ -4,26 +4,7 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import DesignSystem
-import Lottie
 import SwiftUI
-
-struct DefaultBrowserGraphicView: View {
-  @Environment(\.colorScheme) private var colorScheme
-
-  var body: some View {
-    LottieView {
-      try await DotLottieFile.named(
-        colorScheme == .dark ? "browser-default-dark" : "browser-default-light",
-        bundle: .module,
-        subdirectory: Locale.current.language.languageCode == "en"
-          ? "LottieAssets/en" : "LottieAssets"
-      )
-    }
-    .resizable()
-    .playing(loopMode: .loop)
-    .id(colorScheme)
-  }
-}
 
 struct DefaultBrowserActions: View {
   @Environment(\.windowScene) private var windowScene

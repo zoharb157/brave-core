@@ -202,7 +202,7 @@ extension Strings {
     "SendCrashReportAlertMessage",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Send a crash report so Brave can fix the problem?",
+    value: "Send a crash report so Scout can fix the problem?",
     comment:
       "Message displayed in the crash dialog above the buttons used to select when sending reports"
   )
@@ -723,7 +723,7 @@ extension Strings {
         tableName: "BraveShared",
         bundle: .module,
         value:
-          "Get Brave privacy on your computer or tablet, and sync bookmarks & extensions between devices.",
+          "Get Scout privacy on your computer or tablet, and sync bookmarks & extensions between devices.",
         comment: "Subtitle - Description for Privacy Everywhere Full Screen Callout"
       )
     public static let privacyEverywhereCalloutPrimaryButtonTitle =
@@ -812,7 +812,7 @@ extension Strings {
         "onboarding.linkReceiptTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Extend your Brave Firewall + VPN protection",
+        value: "Extend your Scout Firewall + VPN protection",
         comment: "Popup title to let users know they can use the vpn on all their devices"
       )
 
@@ -822,7 +822,7 @@ extension Strings {
         tableName: "BraveShared",
         bundle: .module,
         value:
-          "Your Brave VPN subscription can protect up to 10 devices, across Android, iOS, and desktop. Just link your App Store subscription to your Brave account.",
+          "Your Scout VPN subscription can protect up to 10 devices, across Android, iOS, and desktop. Just link your App Store subscription to your Scout account.",
         comment: "Popup description to let users know they can use the vpn on all their devices"
       )
 
@@ -1298,14 +1298,14 @@ extension Strings {
       "tabGrid.privateBrowsingInfoBulletThreeTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave VPN",
+      value: "Scout VPN",
       comment: "A bullet point explaining the benefits of Brave VPN"
     )
     public static let privateBrowsingInfoBulletThreeBody = NSLocalizedString(
       "tabGrid.privateBrowsingInfoBulletThreeBody",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave VPN encrypts and protects anything you do online, even outside the Brave browser.",
+      value: "Scout VPN encrypts and protects anything you do online, even outside the Scout browser.",
       comment: "A bullet point explaining the benefits of Brave VPN"
     )
     public static let selectedTabs = NSLocalizedString(
@@ -1905,14 +1905,14 @@ extension Strings {
       "braveSearchPromotion.bannerDescription",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave Search doesn't profile you.",
+      value: "Scout Search doesn't profile you.",
       comment: "Brave Search Banner Promotion description content in Search Suggestions"
     )
     public static let braveSearchPromotionBannerTryButtonTitle = NSLocalizedString(
       "braveSearchPromotion.bannerTryButtonTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Try Brave Search",
+      value: "Try Scout Search",
       comment: "Brave Search Banner Promotion title for try button in Search Suggestions"
     )
     public static let braveSearchPromotionBannerMaybeLaterButtonTitle = NSLocalizedString(
@@ -2084,7 +2084,7 @@ extension Strings {
     "BraveRewardsTitle",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Brave Rewards",
+    value: "Scout Rewards",
     comment: "Brave Rewards title"
   )
   public static let braveRewardsSettingsTitle = NSLocalizedString(
@@ -2098,14 +2098,14 @@ extension Strings {
     "HideRewardsIcon",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Hide Brave Rewards Icon",
+    value: "Hide Scout Rewards Icon",
     comment: "Hides the rewards icon"
   )
   public static let hideRewardsIconSubtitle = NSLocalizedString(
     "HideRewardsIconSubtitle",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Hides the Brave Rewards icon when Brave Rewards is not enabled",
+    value: "Hides the Scout Rewards icon when Scout Rewards is not enabled",
     comment: "Hide the rewards icon explination."
   )
   public static let walletCreationDate = NSLocalizedString(
@@ -2133,7 +2133,7 @@ extension Strings {
     "OpenBraveRewardsSettings",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Open Brave Rewards Settings",
+    value: "Open Scout Rewards Settings",
     comment: "Button title for opening the Brave Rewards panel to settings"
   )
   public static let setDefaultBrowserSettingsCell =
@@ -2361,7 +2361,7 @@ extension Strings {
         "settings.sendUsagePingTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Automatically send daily usage ping to Brave",
+        value: "Automatically send daily usage ping to Scout",
         comment: "Title to explain the daily usage ping toggle"
       )
 
@@ -2370,7 +2370,7 @@ extension Strings {
         "settings.sendUsagePingDescription",
         tableName: "BraveShared",
         bundle: .module,
-        value: "This private ping lets Brave estimate active users.",
+        value: "This private ping lets Scout estimate active users.",
         comment: "Description to explain the daily usage ping toggle"
       )
 
@@ -2407,7 +2407,7 @@ extension Strings {
         tableName: "BraveShared",
         bundle: .module,
         value:
-          "Help support Brave's mission to build an independent, user-first Web with Sponsored Ads. We measure ad performance privately, without identifying you.",
+          "Help support Scout's mission to build an independent, user-first Web with Sponsored Ads. We measure ad performance privately, without identifying you.",
         comment: "Description under the settings toggle that enables Sponsored Ads"
       )
 
@@ -2416,7 +2416,7 @@ extension Strings {
         "settings.surveyPanelistTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Allow Brave surveys",
+        value: "Allow Scout surveys",
         comment: "Title to explain the survey panelist toggle"
       )
 
@@ -2425,7 +2425,7 @@ extension Strings {
         "settings.surveyPanelistDescription",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Allows Brave to show links to private surveys in the new tab page. Surveys help us build better features and measure the effectiveness of browser-based ad campaigns. [Learn more](%@)",
+        value: "Allows Scout to show links to private surveys in the new tab page. Surveys help us build better features and measure the effectiveness of browser-based ad campaigns. [Learn more](%@)",
         comment: "Description to explain the survey panelist toggle"
       )
   }
@@ -2870,7 +2870,7 @@ extension Strings {
     "SearchWithBrave",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Search with Brave",
+    value: "Search with Scout",
     comment:
       "Title of an action that allows user to perform a one-click web search for selected text"
   )
@@ -3287,7 +3287,7 @@ extension Strings {
     "RateBrave",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Rate Brave",
+    value: "Rate Scout",
     comment: "Open the App Store to rate Brave."
   )
   public static let reportABug = NSLocalizedString(
@@ -3510,7 +3510,7 @@ extension Strings {
     "AskBraveMenuItem",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Ask Brave",
+    value: "Ask Scout",
     comment: "Title for Ask Brave menu item. Brave is the company name and should not be translated"
   )
   public static let leoVoiceInputMenuItem = NSLocalizedString(
@@ -3743,7 +3743,7 @@ extension Strings {
       "themeQRCodeShareTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Share Brave with your friends!",
+      value: "Share Scout with your friends!",
       comment: "Title for QR popup encouraging users to share the code with their friends."
     )
   public static let themeQRCodeShareButton =
@@ -3872,14 +3872,14 @@ extension Strings {
     "OBRewardsTitle",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Brave Rewards",
+    value: "Scout Rewards",
     comment: "Title for rewards onboarding screen"
   )
   public static let OBAdsOptInTitle = NSLocalizedString(
     "OBAdsOptInTitle",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Brave Ads is here!",
+    value: "Scout Ads is here!",
     comment: "Title when opting into brave Ads when region becomes available"
   )
   public static let OBAdsOptInMessage = NSLocalizedString(
@@ -3908,14 +3908,14 @@ extension Strings {
     tableName: "BraveShared",
     bundle: .module,
     value:
-      "Opting into Brave Private Ads supports publishers and content creators with every ad viewed.",
+      "Opting into Scout Private Ads supports publishers and content creators with every ad viewed.",
     comment: "Detail text for rewards onboarding screen"
   )
   public static let OBRewardsAgreementTitle = NSLocalizedString(
     "OBRewardsAgreementTitle",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Brave Rewards",
+    value: "Scout Rewards",
     comment: "Title for rewards agreement onboarding screen"
   )
   public static let OBRewardsAgreementDetail = NSLocalizedString(
@@ -3950,7 +3950,7 @@ extension Strings {
     "OBAdsTitle",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Brave will show your first ad in",
+    value: "Scout will show your first ad in",
     comment: "Title for ads onboarding screen"
   )
   public static let OBCompleteTitle = NSLocalizedString(
@@ -3993,14 +3993,14 @@ extension Strings {
     tableName: "BraveShared",
     bundle: .module,
     value:
-      "You may have downloaded Brave in support of your referrer. To detect your referrer, Brave performs a one-time check of your clipboard for the matching referral code. This check is limited to the code only and no other personal data will be transmitted.  If you opt out, your referrer won’t receive rewards from Brave.",
+      "You may have downloaded Scout in support of your referrer. To detect your referrer, Scout performs a one-time check of your clipboard for the matching referral code. This check is limited to the code only and no other personal data will be transmitted.  If you opt out, your referrer won’t receive rewards from Scout.",
     comment: ""
   )
   public static let OBPrivacyConsentClipboardPermission = NSLocalizedString(
     "OBPrivacyConsentClipboardPermission",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Allow Brave to check my clipboard for a matching referral code",
+    value: "Allow Scout to check my clipboard for a matching referral code",
     comment: ""
   )
   public static let OBPrivacyConsentYesButton = NSLocalizedString(
@@ -4104,7 +4104,7 @@ extension Strings {
         "ntp.earningsReport",
         tableName: "BraveShared",
         bundle: .module,
-        value: "You earned %@ by browsing with Brave.",
+        value: "You earned %@ by browsing with Scout.",
         comment: "Placeholder example: 'You earned 42 BAT by browsing with Brave.'"
       )
     public static let claimRewards =
@@ -4121,7 +4121,7 @@ extension Strings {
         "ntp.learnMoreAboutRewards",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Learn more about Brave Rewards",
+        value: "Learn more about Scout Rewards",
         comment: ""
       )
 
@@ -4139,7 +4139,7 @@ extension Strings {
         "ntp.braveSupportFavoriteTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Brave Support",
+        value: "Scout Support",
         comment: "Bookmark title for Brave Support"
       )
 
@@ -4149,7 +4149,7 @@ extension Strings {
         tableName: "BraveShared",
         bundle: .module,
         value:
-          "Sponsored images are branded backgrounds that appear in newly opened tabs in the browser. Enabling these Sponsored Images supports Brave's mission. [Learn More](#learn-more)",
+          "Sponsored images are branded backgrounds that appear in newly opened tabs in the browser. Enabling these Sponsored Images supports Scout's mission. [Learn More](#learn-more)",
         comment: "The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link"
       )
     public static let settingsTitle = NSLocalizedString(
@@ -4337,7 +4337,7 @@ extension Strings {
         "socialSharing.shareDescriptionTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Every day I save data by browsing the web with Brave.",
+        value: "Every day I save data by browsing the web with Scout.",
         comment: "Text used for social sharing together with Brave Shield values"
       )
 
@@ -4346,7 +4346,7 @@ extension Strings {
         "socialSharing.domainSpecificDataSavedTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Every day I save data by browsing the web with Brave.",
+        value: "Every day I save data by browsing the web with Scout.",
         comment: "Title used when in warning pop-over when domain specific data save appears "
       )
 
@@ -5347,7 +5347,7 @@ extension Strings {
       NSLocalizedString(
         "storekitReceiptViewer.vpnMonthlySubscriptionName",
         bundle: .module,
-        value: "Brave VPN Monthly",
+        value: "Scout VPN Monthly",
         comment: "The title of the product subscription the user purchased (Monthly subscription)"
       )
 
@@ -5355,7 +5355,7 @@ extension Strings {
       NSLocalizedString(
         "storekitReceiptViewer.vpnYearlySubscriptionName",
         bundle: .module,
-        value: "Brave VPN Yearly",
+        value: "Scout VPN Yearly",
         comment: "The title of the product subscription the user purchased (Yearly subscription)"
       )
 
@@ -5363,7 +5363,7 @@ extension Strings {
       NSLocalizedString(
         "storekitReceiptViewer.leoMonthlySubscriptionName",
         bundle: .module,
-        value: "Brave Leo Monthly",
+        value: "Scout Leo Monthly",
         comment: "The title of the product subscription the user purchased (Monthly subscription)"
       )
 
@@ -5371,7 +5371,7 @@ extension Strings {
       NSLocalizedString(
         "storekitReceiptViewer.leoYearlySubscriptionName",
         bundle: .module,
-        value: "Brave Leo Yearly",
+        value: "Scout Leo Yearly",
         comment: "The title of the product subscription the user purchased (Yearly subscription)"
       )
 
@@ -5379,7 +5379,7 @@ extension Strings {
       NSLocalizedString(
         "storekitReceiptViewer.originPurchaseName",
         bundle: .module,
-        value: "Brave Origin",
+        value: "Scout Origin",
         comment: "The title of the Brave Origin product"
       )
 
@@ -5551,7 +5551,7 @@ extension Strings {
         "shortcuts.activityTypeEnableVPNTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Open Brave Browser and Enable VPN",
+        value: "Open Scout Browser and Enable VPN",
         comment: ""
       )
 
@@ -5560,7 +5560,7 @@ extension Strings {
         "shortcuts.activityTypeOpenBraveNewsTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Open Brave News",
+        value: "Open Scout News",
         comment: ""
       )
 
@@ -5632,7 +5632,7 @@ extension Strings {
         "shortcuts.activityTypeBraveNewsDescription",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Open Brave News and Check Today's Top Stories",
+        value: "Open Scout News and Check Today's Top Stories",
         comment: ""
       )
 
@@ -5650,7 +5650,7 @@ extension Strings {
         "shortcuts.activityTypeOpenSyncedTabsDescription",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Open Brave Tabs Open in Other Devices",
+        value: "Open Scout Tabs Open in Other Devices",
         comment: ""
       )
 
@@ -5713,7 +5713,7 @@ extension Strings {
         "shortcuts.activityTypeOpenBraveTodaySuggestedPhrase",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Open Brave News",
+        value: "Open Scout News",
         comment: ""
       )
 
@@ -5875,7 +5875,7 @@ extension Strings {
         "shortcuts.shortcutSettingsEnableVPNDescription",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Use Shortcuts to enable Brave VPN via Siri - Voice Assistant",
+        value: "Use Shortcuts to enable Scout VPN via Siri - Voice Assistant",
         comment: ""
       )
 
@@ -5884,7 +5884,7 @@ extension Strings {
         "shortcuts.shortcutSettingsOpenBraveNewsTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Open Brave News",
+        value: "Open Scout News",
         comment: ""
       )
 
@@ -5893,7 +5893,7 @@ extension Strings {
         "shortcuts.shortcutSettingsOpenBraveNewsDescription",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Use Shortcuts to open a new tab & show Brave News Feed via Siri - Voice Assistant",
+        value: "Use Shortcuts to open a new tab & show Scout News Feed via Siri - Voice Assistant",
         comment: "Description of Open Brave News Siri Shortcut in Settings Screen"
       )
 
@@ -6189,7 +6189,7 @@ extension Strings {
       "tabs.settings.openLinkInQuickViewModeDescription",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Open links from Ask Brave and Brave Search in preview tabs",
+      value: "Open links from Ask Scout and Scout Search in preview tabs",
       comment: "The description of the toggle for user to turn on open link in quick view mode."
     )
   }
@@ -6412,7 +6412,7 @@ extension Strings {
         "opentabs.noSyncSessionPlaceHolderViewTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "This space shows Brave tabs open in other devices",
+        value: "This space shows Scout tabs open in other devices",
         comment: "The title of the view showing no synced sessions"
       )
     public static let noSyncChainPlaceHolderViewDescription =
@@ -6569,7 +6569,7 @@ extension Strings {
       "today.braveToday",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave News",
+      value: "Scout News",
       comment: "The name of the feature"
     )
     public static let braveNewsTitle = NSLocalizedString(
@@ -6590,7 +6590,7 @@ extension Strings {
       "today.turnOnBraveToday",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Turn on Brave News",
+      value: "Turn on Scout News",
       comment: ""
     )
     public static let learnMoreTitle = NSLocalizedString(
@@ -6604,7 +6604,7 @@ extension Strings {
       "today.introCardTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Turn on Brave News, and never miss a story",
+      value: "Turn on Scout News, and never miss a story",
       comment: "Shown above a button that turns on the \"Brave News\" product in the app."
     )
     public static let introCardBody = NSLocalizedString(
@@ -6612,7 +6612,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "Follow your favorite sources, in a single feed. Just open a tab in Brave, scroll down, and… voila!\nBrave News is ad-supported with private, anonymized ads.",
+        "Follow your favorite sources, in a single feed. Just open a tab in Scout, scroll down, and… voila!\nScout News is ad-supported with private, anonymized ads.",
       comment:
         "Shown above a button that turns on the \"Brave News\" product in the app. by sources & feeds they mean websites & blogs."
     )
@@ -6669,7 +6669,7 @@ extension Strings {
       "today.errorGeneralBody",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave News is experiencing some issues. Try again.",
+      value: "Scout News is experiencing some issues. Try again.",
       comment: ""
     )
     public static let disablePublisherContent = NSLocalizedString(
@@ -6697,14 +6697,14 @@ extension Strings {
       "today.disabledAlertBody",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave News will stop showing content from %@",
+      value: "Scout News will stop showing content from %@",
       comment: "'%@' will turn into the name of a publisher (verbatim), for example: Brave Blog"
     )
     public static let isEnabledToggleLabel = NSLocalizedString(
       "today.isEnabledToggleLabel",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Show Brave News",
+      value: "Show Scout News",
       comment: ""
     )
     public static let contentAvailableButtonTitle = NSLocalizedString(
@@ -6718,7 +6718,7 @@ extension Strings {
       "today.moreBraveOffers",
       tableName: "BraveShared",
       bundle: .module,
-      value: "More Brave Offers",
+      value: "More Scout Offers",
       comment: "'Brave Offers' is a product name"
     )
     public static let promoted = NSLocalizedString(
@@ -6732,7 +6732,7 @@ extension Strings {
       "today.addSourceShareTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Add Source to Brave News",
+      value: "Add Source to Scout News",
       comment: "The action title displayed in the iOS share menu"
     )
     public static let addSourceFailureTitle = NSLocalizedString(
@@ -6956,7 +6956,7 @@ extension Strings {
       "today.rateBraveCardRateActionTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Rate Brave",
+      value: "Rate Scout",
       comment:
         "Button title / Title for long press action that will perform an action which open AppStore Rate screen"
     )
@@ -6971,14 +6971,14 @@ extension Strings {
       "today.rateBraveCardActionSheetTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Rate Brave in App Store",
+      value: "Rate Scout in App Store",
       comment: "Title for long press action sheet list which has item for rate / hide"
     )
     public static let rateBraveCardTitle = NSLocalizedString(
       "today.rateBraveCardTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Liking Brave?",
+      value: "Liking Scout?",
       comment: "Title shown on the Rate Brave Card "
     )
     public static let rateBraveCardSubtitle = NSLocalizedString(
@@ -7278,7 +7278,7 @@ extension Strings {
       "RewardsInternalsContributionProcessorBraveTokens",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave Tokens",
+      value: "Scout Tokens",
       comment: ""
     )
     public static let contributionProcessorUserFunds = NSLocalizedString(
@@ -7438,21 +7438,21 @@ extension Strings {
       "rewards.enabledBody",
       tableName: "BraveShared",
       bundle: .module,
-      value: "You are helping support Brave and the BAT community.",
+      value: "You are helping support Scout and the BAT community.",
       comment: "Displayed when Brave Rewards is enabled"
     )
     public static let disabledBody = NSLocalizedString(
       "rewards.disabledBody",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Turn on to help support Brave and the BAT community.",
+      value: "Turn on to help support Scout and the BAT community.",
       comment: "Displayed when Brave Rewards is disabled"
     )
     public static let supportingPublisher = NSLocalizedString(
       "rewards.supportingPublisher",
       tableName: "BraveShared",
       bundle: .module,
-      value: "This content creator is verified with Brave Creators",
+      value: "This content creator is verified with Scout Creators",
       comment: "Displayed under verified publishers"
     )
     public static let unverifiedPublisher = NSLocalizedString(
@@ -7466,7 +7466,7 @@ extension Strings {
       "rewards.enabledStatusBody",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Thank you for helping support Brave and the BAT community!",
+      value: "Thank you for helping support Scout and the BAT community!",
       comment:
         "Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count)"
     )
@@ -7474,7 +7474,7 @@ extension Strings {
       "rewards.disabledStatusBody",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Using Brave Rewards helps support Brave and the BAT community.",
+      value: "Using Scout Rewards helps support Scout and the BAT community.",
       comment: "Displayed in the status container when rewards is disabled"
     )
     public static let totalSupportedCount = NSLocalizedString(
@@ -7488,7 +7488,7 @@ extension Strings {
       "rewards.settingsToggleTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Enable Brave Rewards",
+      value: "Enable Scout Rewards",
       comment: ""
     )
     public static let settingsToggleMessage = NSLocalizedString(
@@ -7496,7 +7496,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "Help support Brave and the BAT community by enabling Brave Rewards and seeing Brave Ads.",
+        "Help support Scout and the BAT community by enabling Scout Rewards and seeing Scout Ads.",
       comment: ""
     )
     public static let onProviderText = NSLocalizedString(
@@ -7517,7 +7517,7 @@ extension Strings {
       "rewards.settingsResetConfirmationTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Reset Brave Rewards",
+      value: "Reset Scout Rewards",
       comment: "Title of a confirmation dialog shown before resetting Brave Rewards"
     )
     public static let settingsResetConfirmationMessage = NSLocalizedString(
@@ -7525,7 +7525,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "By resetting, your current Brave Rewards profile will be deleted, and Brave Rewards will no longer be enabled.",
+        "By resetting, your current Scout Rewards profile will be deleted, and Scout Rewards will no longer be enabled.",
       comment: "Message of a confirmation dialog shown before resetting Brave Rewards"
     )
   }
@@ -7538,7 +7538,7 @@ extension Strings {
       "bravetalk.braveTalkTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave Talk",
+      value: "Scout Talk",
       comment: "The name of the feature"
     )
   }
@@ -7558,7 +7558,7 @@ extension Strings {
       "BraveRewardsAdNotificationTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave Rewards",
+      value: "Scout Rewards",
       comment: ""
     )
 
@@ -7567,7 +7567,7 @@ extension Strings {
         "ads.braveAdsDataToggleOption",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Brave Ads Data",
+        value: "Scout Ads Data",
         comment:
           "Text for the toggle switch to clear 'Brave Ads' data in settings"
       )
@@ -7576,7 +7576,7 @@ extension Strings {
       NSLocalizedString(
         "searchResultAdClickedInfoBarMessage",
         bundle: .module,
-        value: "Thanks for supporting Brave Search by clicking a private ad. Unlike Big Tech, we measure ad performance anonymously to preserve your privacy.",
+        value: "Thanks for supporting Scout Search by clicking a private ad. Unlike Big Tech, we measure ad performance anonymously to preserve your privacy.",
         comment: "The text label of creative search result ad infobar message."
       )
 
@@ -7592,7 +7592,7 @@ extension Strings {
       NSLocalizedString(
         "NewTabTakeoverInfoBarMessage",
         bundle: .module,
-        value: "Sponsored background images support Brave's mission to build an independent, user-first Web. And unlike Big Tech, we measure ad performance anonymously to preserve your privacy.",
+        value: "Sponsored background images support Scout's mission to build an independent, user-first Web. And unlike Big Tech, we measure ad performance anonymously to preserve your privacy.",
         comment: "The text of new tab takeover infobar message."
       )
 
@@ -7994,7 +7994,7 @@ extension Strings {
       "privacyHub.vpnAlertsHeader",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave Firewall + VPN Alerts",
+      value: "Scout Firewall + VPN Alerts",
       comment:
         "Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf."
     )
@@ -8341,7 +8341,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "These private responses help Brave estimate the overall usage of certain features and make them better for you.",
+        "These private responses help Scout estimate the overall usage of certain features and make them better for you.",
       comment: "A subtitle shown on the setting that toggles analytics on Brave."
     )
 
@@ -8823,7 +8823,7 @@ extension Strings {
     public static let alreadyPurchasedTitle = NSLocalizedString(
       "paywall.alreadyPurchasedTitle",
       bundle: .module,
-      value: "Already purchased on brave.com?",
+      value: "Already purchased on the web?",
       comment: "Title label text for refreshing credentials from brave site."
     )
     public static let refreshCredentialsButtonTitle = NSLocalizedString(
@@ -8835,7 +8835,7 @@ extension Strings {
     public static let braveVPNLearnMoreButtonTitle = NSLocalizedString(
       "paywall.braveVPNLearnMoreButtonTitle",
       bundle: .module,
-      value: "Learn More About Brave VPN",
+      value: "Learn More About Scout VPN",
       comment: "Button action text which will bring user to Brave VPN web page for more information."
     )
     public static let havePromoCodeTitle = NSLocalizedString(
@@ -8877,7 +8877,7 @@ extension Strings {
     public static let braveAccountCheckoutOptionTitle = NSLocalizedString(
       "paywall.braveAccountCheckoutOptionTitle",
       bundle: .module,
-      value: "Brave Account",
+      value: "Scout Account",
       comment: "The checkout option that lets the user use Brave's own purchase flow"
     )
     public static let braveAccountCheckoutOptionSubtitle = NSLocalizedString(
@@ -8923,7 +8923,7 @@ extension Strings {
     public static let braveIconsHeader = NSLocalizedString(
       "altAppIcon.braveIconsHeader",
       bundle: .module,
-      value: "Brave Icons",
+      value: "Scout Icons",
       comment: "A label shown above a list of icons designed by Brave"
     )
     public static let errorTitle = NSLocalizedString(

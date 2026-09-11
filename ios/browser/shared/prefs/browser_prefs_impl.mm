@@ -58,20 +58,10 @@ namespace brave {
 
 namespace {
 
+// Scout: crash reports upload to Brave, and Scout hides the toggle, so
+// reporting stays off on every channel.
 bool GetDefaultPrefValueForMetricsReporting() {
-  version_info::Channel channel = GetChannel();
-  switch (channel) {
-    case version_info::Channel::STABLE:
-      return false;
-    case version_info::Channel::BETA:  // fall through
-    case version_info::Channel::DEV:   // fall through
-    case version_info::Channel::CANARY:
-      return true;
-    case version_info::Channel::UNKNOWN:
-      return false;
-  }
-  NOTREACHED() << "Unexpected value for channel: "
-               << std::to_underlying(channel);
+  return false;
 }
 
 }  // namespace

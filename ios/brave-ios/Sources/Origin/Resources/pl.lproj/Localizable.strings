@@ -2,7 +2,7 @@
 "adsHeader" = "Ads";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "Dokonałeś(-aś) już zakupu na brave.com?";
+"alreadyPurchasedTitle" = "Dokonałeś(-aś) już zakupu na web?";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Analityka";
@@ -11,25 +11,25 @@
 "buyNowButton" = "Kup teraz";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Włączenie lub wyłączenie funkcji przeglądarki Brave wymaga ponownego uruchomienia przeglądarki w celu zastosowania zmian. Zamknij (przeciągnij w górę w przełączniku aplikacji), a następnie ponownie otwórz Brave.";
+"featureEnabledToastMessage" = "Włączenie lub wyłączenie funkcji przeglądarki Scout wymaga ponownego uruchomienia przeglądarki w celu zastosowania zmian. Zamknij (przeciągnij w górę w przełączniku aplikacji), a następnie ponownie otwórz Scout.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Zmiana funkcji Brave";
+"featureEnabledToastTitle" = "Zmiana funkcji Scout";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Dostosuj swoją przeglądarkę, jednocześnie wspierając Brave**\n\nBrave Origin to płatna wersja przeglądarki dla użytkowników, którzy nie potrzebują wszystkich funkcji wspierających Brave jako biznes, ale nadal chcą prywatności, którą oferuje tylko Brave. Użytkownicy Origin będą nadal korzystać z naszych wiodących w branży funkcji prywatności, blokowania reklam i szybkości (za pośrednictwem Tarcz), a także regularnych aktualizacji oprogramowania, aktualizacji Chromium oraz ulepszeń bezpieczeństwa i prywatności. Origin usunie większość innych funkcji z przeglądarki.";
+"featuresFooter" = "**Dostosuj swoją przeglądarkę, jednocześnie wspierając Scout**\n\nScout Origin to płatna wersja przeglądarki dla użytkowników, którzy nie potrzebują wszystkich funkcji wspierających Scout jako biznes, ale nadal chcą prywatności, którą oferuje tylko Scout. Użytkownicy Origin będą nadal korzystać z naszych wiodących w branży funkcji prywatności, blokowania reklam i szybkości (za pośrednictwem Tarcz), a także regularnych aktualizacji oprogramowania, aktualizacji Chromium oraz ulepszeń bezpieczeństwa i prywatności. Origin usunie większość innych funkcji z przeglądarki.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Funkcje";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Zweryfikuj zakup Brave Origin";
+"getLoginCodeButton" = "Zweryfikuj zakup Scout Origin";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Sztuczna inteligencja Leo";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Połącz zakup ze swoim kontem Brave";
+"linkPurchase" = "Połącz zakup ze swoim kontem Scout";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "Wiadomości";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Nie udało się sfinalizować zakupu. Spróbuj ponownie lub sprawdź szczegóły płatności w Apple i spróbuj ponownie.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Połącz zakup w App Store ze swoim kontem Brave, aby używać Brave Origin na innych urządzeniach";
+"purchaseSectionFooter" = "Połącz zakup w App Store ze swoim kontem Scout, aby używać Scout Origin na innych urządzeniach";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Zakup";
@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "Te same funkcje blokowania reklam, ochrona prywatności i szybkość";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "Minimalistyczny interfejs przeglądarki skoncentrowany na Tarczach Brave";
+"upsellMinimalUI" = "Minimalistyczny interfejs przeglądarki skoncentrowany na Tarczach Scout";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "Jednorazowy zakup można aktywować wielokrotnie na wszystkich Twoich urządzeniach";

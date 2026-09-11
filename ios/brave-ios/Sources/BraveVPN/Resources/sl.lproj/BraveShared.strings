@@ -5,19 +5,19 @@
 "vpn.autoRenewActionButtonTitle" = "Omogoči samodejno podaljšanje";
 
 /* Pop up title for renewing VPN subscription with discount */
-"vpn.autoRenewDiscountPopOverTitle" = "Samodejno obnovite naročnino Brave VPN in dobite 20 % popusta za 3 mesece!";
+"vpn.autoRenewDiscountPopOverTitle" = "Samodejno obnovite naročnino Scout VPN in dobite 20 % popusta za 3 mesece!";
 
 /* Pop up title for renewing VPN subscription with month free */
-"vpn.autoRenewFreeMonthPopOverTitle" = "Samodejno obnovite naročnino Brave VPN in dobite 1 mesec brezplačno!";
+"vpn.autoRenewFreeMonthPopOverTitle" = "Samodejno obnovite naročnino Scout VPN in dobite 1 mesec brezplačno!";
 
 /* Pop up description for VPN subscription is about expire */
-"vpn.autoRenewSoonExpirePopOverDescription" = "To pomeni, da boste izgubili dodatne zaščite Bravea za vsako aplikacijo na telefonu.";
+"vpn.autoRenewSoonExpirePopOverDescription" = "To pomeni, da boste izgubili dodatne zaščite Scouta za vsako aplikacijo na telefonu.";
 
 /* Pop up title for VPN subscription is about expire */
-"vpn.autoRenewSoonExpireTitle" = "O ne! Vaša naročnina Brave VPN bo kmalu potekla.";
+"vpn.autoRenewSoonExpireTitle" = "O ne! Vaša naročnina Scout VPN bo kmalu potekla.";
 
 /* Title for screen to buy the VPN. */
-"vpn.buyVPNTitle" = "Brave VPN";
+"vpn.buyVPNTitle" = "Scout VPN";
 
 /* Message for an alert when the VPN can't get prices from the App Store */
 "vpn.errorCantGetPricesBody" = "Ni bilo mogoče se povezati s storitvijo App Store. Prosimo, poskusite znova čez nekaj minut.";
@@ -71,7 +71,7 @@
 "vpn.regionPickerAutomaticModeCellText" = "Samodejno";
 
 /* Alert description to show when the VPN session has expired */
-"vpn.sessionExpiredDescription" = "Prijavite se v svoj račun Brave in osvežite sejo VPN.";
+"vpn.sessionExpiredDescription" = "Prijavite se v svoj račun Scout in osvežite sejo VPN.";
 
 /* Dismiss button to close the alert showing that the vpn session has expired */
 "vpn.sessionExpiredDismissButton" = "Opusti";
@@ -95,22 +95,22 @@
 "vpn.subscribeVPNActionButtonTitle" = "Naroči se zdaj";
 
 /* Pop up description the subscription for VPN can be used for all platforms */
-"vpn.subscribeVPNAllDevicesPopOverDescription" = "Tako je. Vaša naročnina Brave VPN je zdaj dobra za do 5 naprav. Naročite se na iOS in jo brezplačno uporabljajte v napravah Mac, Windows in Android.";
+"vpn.subscribeVPNAllDevicesPopOverDescription" = "Tako je. Vaša naročnina Scout VPN je zdaj dobra za do 5 naprav. Naročite se na iOS in jo brezplačno uporabljajte v napravah Mac, Windows in Android.";
 
 /* Pop up title the subscription for VPN can be used for all platforms */
-"vpn.subscribeVPNAllDevicesPopOverTitle" = "Zdaj uporabljajte Brave VPN na vseh svojih napravah po enaki ceni!";
+"vpn.subscribeVPNAllDevicesPopOverTitle" = "Zdaj uporabljajte Scout VPN na vseh svojih napravah po enaki ceni!";
 
 /* Pop up title for subscribing VPN with discount */
-"vpn.subscribeVPNDiscountPopOverTitle" = "Dajte Brave VPN novo priložnost in dobite 20 % popusta za 3 mesece!";
+"vpn.subscribeVPNDiscountPopOverTitle" = "Dajte Scout VPN novo priložnost in dobite 20 % popusta za 3 mesece!";
 
 /* Pop up sub description the subscription for VPN can be used for all platforms */
-"vpn.subscribeVPNPopOverSubDescription" = "Ste pripravljeni zaščititi vsako aplikacijo v telefonu? Vrnite se na Brave VPN in dobite 20 % popusta za naslednje 3 mesece.";
+"vpn.subscribeVPNPopOverSubDescription" = "Ste pripravljeni zaščititi vsako aplikacijo v telefonu? Vrnite se na Scout VPN in dobite 20 % popusta za naslednje 3 mesece.";
 
 /* Pop up description for subscribing VPN explaning VPN protects user outside the Brave */
-"vpn.subscribeVPNProtectionPopOverDescription" = "Brave VPN je vedno blokiral sledilce v vsaki aplikaciji, tudi zunaj brskalnika Brave. Sedaj lahko vidite, kdo je poskušal slediti vam, s pomočjo Brave Privacy Hub.";
+"vpn.subscribeVPNProtectionPopOverDescription" = "Scout VPN je vedno blokiral sledilce v vsaki aplikaciji, tudi zunaj brskalnika Scout. Sedaj lahko vidite, kdo je poskušal slediti vam, s pomočjo Scout Privacy Hub.";
 
 /* Pop up title for subscribing VPN explaning VPN protects user outside the Brave */
-"vpn.subscribeVPNProtectionPopOverTitle" = "Ali ste vedeli, da Brave VPN varuje tudi zunaj brskalnika Brave?";
+"vpn.subscribeVPNProtectionPopOverTitle" = "Ali ste vedeli, da Scout VPN varuje tudi zunaj brskalnika Scout?";
 
 /* Cell title indicates update payment method */
 "vpn.updateActionCellTitle" = "Posodobi";
@@ -119,13 +119,13 @@
 "vpn.updateBillingExpiredPopOverDescription" = "Ne skrbite. Ohranjali bomo VPN aktivnega nekaj dni, medtem ko posodabljate podatke o plačilu.";
 
 /* Pop up title for billing issue for subcription VPN already expired */
-"vpn.updateBillingExpiredPopOverTitle" = "Posodobite podatke o plačilu, da ostanete zaščiteni z Brave VPN.";
+"vpn.updateBillingExpiredPopOverTitle" = "Posodobite podatke o plačilu, da ostanete zaščiteni z Scout VPN.";
 
 /* Pop up description for billing issue of subcription VPN about to expire */
 "vpn.updateBillingSoonExpirePopOverDescription" = "Želite še naprej varovati vsako aplikacijo v telefonu? Samo posodobite podatke o plačilu.";
 
 /* Pop up title for billing issue for subcription VPN about to expire */
-"vpn.updateBillingSoonExpirePopOverTitle" = "Težava je v zaračunavanju vašega računa, kar pomeni, da bo vaša naročnina Brave VPN kmalu potekla.";
+"vpn.updateBillingSoonExpirePopOverTitle" = "Težava je v zaračunavanju vašega računa, kar pomeni, da bo vaša naročnina Scout VPN kmalu potekla.";
 
 /* Action button title that updates method payment */
 "vpn.updatePaymentActionButtonTitle" = "Posodobi plačilo";

@@ -56,7 +56,7 @@ extension BrowserViewController {
   // MARK: Conditional Callout Methods
 
   private func presentP3AScreenCallout() {
-    if braveCore.p3aUtils.isP3APreferenceManaged {
+    if !ScoutFeatures.braveTelemetry || braveCore.p3aUtils.isP3APreferenceManaged {
       return
     }
 

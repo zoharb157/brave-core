@@ -1,5 +1,5 @@
 /* The description for the error message when the user's session has expired */
-"aichat.accountSessionExpiredDescription" = "您的 Brave 帐户会话已过期。请访问您的账户页面刷新，然后回来使用高级功能。";
+"aichat.accountSessionExpiredDescription" = "您的 Scout 帐户会话已过期。请访问您的账户页面刷新，然后回来使用高级功能。";
 
 /* The title for button that submits feedback */
 "aichat.addFeedbackActionTitle" = "添加反馈";
@@ -14,10 +14,10 @@
 "aichat.advancedSettingsHeaderTitle" = "Leo 是采用 AI 技术的智慧助理，内置于浏览器中。";
 
 /* The subtitle for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "将您在 App Store 的购买链接到您的 Brave 账户，以便在其他设备上使用 Leo。";
+"aichat.advancedSettingsLinkPurchaseActionSubTitle" = "将您在 App Store 的购买链接到您的 Scout 账户，以便在其他设备上使用 Leo。";
 
 /* The title for the button which links purchase to Brave Account */
-"aichat.advancedSettingsLinkPurchaseActionTitle" = "将购买交易连接至您的 Brave 账号";
+"aichat.advancedSettingsLinkPurchaseActionTitle" = "将购买交易连接至您的 Scout 账号";
 
 /* The description for the settings to show Leo in Quick Search Engines Bar. */
 "aichat.advancedSettingsShowInQSEBarDescription" = "启用快捷方式，从快速搜索引擎栏启动 Leo。";
@@ -59,7 +59,7 @@
 "aichat.byomEmptyStateTitle" = "您尚未连接型号";
 
 /* The section header description explaining the Bring Your Own Model feature with a link to learn more. The text inside square brackets should be translated. */
-"aichat.byomSectionHeaderDescription" = "将您自托管或第三方托管的 LLM 连接到 Leo，并在浏览器中使用它们。使用任何与 OpenAI Chat Protocol 兼容的框架，例如 Ollama。[了解更多](https://support.brave.app/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo)";
+"aichat.byomSectionHeaderDescription" = "将您自托管或第三方托管的 LLM 连接到 Leo，并在浏览器中使用它们。使用任何与 OpenAI Chat Protocol 兼容的框架，例如 Ollama。[了解更多](https://zaatar-scout.fly.dev/support)";
 
 /* The section header title for the Bring Your Own Model feature */
 "aichat.byomSectionHeaderTitle" = "自备模型";
@@ -71,7 +71,7 @@
 "aichat.chatIntroJustTalkTitle" = "只想聊聊天？";
 
 /* The subtitle for intro view */
-"aichat.chatIntroSubTitle" = "Brave 内置的人工智能智能助手。";
+"aichat.chatIntroSubTitle" = "Scout 内置的人工智能智能助手。";
 
 /* The title for intro view */
 "aichat.chatIntroTitle" = "嗨，我是 Leo！";
@@ -137,7 +137,7 @@
 "aichat.customModelFormLabelFieldTitle" = "标签";
 
 /* The error message shown when trying to use a private network address, explaining why it's blocked and how to enable it */
-"aichat.customModelFormPrivateEndpointErrorMessage" = "您输入的地址似乎来自私有网络（如您的路由器或本地服务器）。Brave 会自动阻止这些以保护您的安全，但如果您确信它是安全的，可以启用它们。\n\n要继续，请访问 brave://flags/，搜索";
+"aichat.customModelFormPrivateEndpointErrorMessage" = "您输入的地址似乎来自私有网络（如您的路由器或本地服务器）。Scout 会自动阻止这些以保护您的安全，但如果您确信它是安全的，可以启用它们。";
 
 /* The footer text explaining what the model request name is used for and providing an example */
 "aichat.customModelFormRequestNameFieldFooter" = "模型的名称应该出现在服务框架请求中，例如 phi-3（请注意，如果此名称与服务框架期望的名称不完全匹配，集成将不会正常工作）。";
@@ -155,7 +155,7 @@
 "aichat.customModelFormSaveButtonTitle" = "保存";
 
 /* The footer text explaining what the server endpoint is and providing an example URL for Ollama */
-"aichat.customModelFormServerEndpointFieldFooter" = "您的服务框架正在侦听请求的 URL。如果您不确定，请检查服务框架文档。例如，对于 Ollama，它始终是 `http://localhost:11434/v1/chat/completions`。Brave 不会代理这些请求，请阅读所选提供商的隐私条款。";
+"aichat.customModelFormServerEndpointFieldFooter" = "您的服务框架正在侦听请求的 URL。如果您不确定，请检查服务框架文档。例如，对于 Ollama，它始终是 `https://zaatar-scout.fly.dev/support 不会代理这些请求，请阅读所选提供商的隐私条款。";
 
 /* The label for the server endpoint URL field */
 "aichat.customModelFormServerEndpointFieldTitle" = "服务器终端";
@@ -218,7 +218,7 @@
 "aichat.feedbackOptionTitleUnsafeHarmful" = "不安全/有害";
 
 /* The title for premium ad view. The links are inside parenthesis and the phrases inside square brackets should be translated */
-"aichat.feedbackPremiumAdTitle" = "Leo 高级版提供更丰富的语言模型和更高的回答准确性。[了解更多](https://brave.com/) - [关闭](braveai://dismiss)";
+"aichat.feedbackPremiumAdTitle" = "Leo 高级版提供更丰富的语言模型和更高的回答准确性。[了解更多](https://zaatar-scout.fly.dev/support) - [关闭](braveai://dismiss)";
 
 /* The title for the button that submits feedback */
 "aichat.feedbackSubmitActionTitle" = "提交";
@@ -236,7 +236,7 @@
 "aichat.feedbackSuccessAnswerLikedTitle" = "喜欢答复";
 
 /* The title for view which user type feedback */
-"aichat.feedbackViewMainTitle" = "提供 Brave 人工智能反馈";
+"aichat.feedbackViewMainTitle" = "提供 Scout 人工智能反馈";
 
 /* The button title for opening paywall screen */
 "aichat.goPremiumButtonTitle" = "订阅 Premium";
@@ -248,25 +248,25 @@
 "aichat.internalErrorViewTitle" = "处理您的请求时出错了。请稍后再试。";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeHaikuMessageDescription" = "嗨，我是 Leo。我是由 Brave 完全托管的 AI 助手。我由 Claude Haiku 提供支持，这是一个由 Anthropic 创建的模型，用于支持对话和文本处理任务。Claude Haiku 通过我们自己的安全基础设施由 Brave 托管。";
+"aichat.introMessageClaudeHaikuMessageDescription" = "嗨，我是 Leo。我是由 Scout 完全托管的 AI 助手。我由 Claude Haiku 提供支持，这是一个由 Anthropic 创建的模型，用于支持对话和文本处理任务。Claude Haiku 通过我们自己的安全基础设施由 Scout 托管。";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeHaikuModelPurposeDescription" = "快速流畅的聊天";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeInstantMessageDescription" = "嗨，我是 Leo。我是由 Brave 完全托管的 AI 助手。我由 Claude Instant 提供支持，这是一个由 Anthropic 创建的模型，用于支持对话和文本处理任务。Claude Instant 通过我们自己的安全基础设施由 Brave 托管。";
+"aichat.introMessageClaudeInstantMessageDescription" = "嗨，我是 Leo。我是由 Scout 完全托管的 AI 助手。我由 Claude Instant 提供支持，这是一个由 Anthropic 创建的模型，用于支持对话和文本处理任务。Claude Instant 通过我们自己的安全基础设施由 Scout 托管。";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageClaudeSonnetMessageDescription" = "嗨，我是 Leo。我是由 Brave 完全托管的 AI 助手。我由 Claude Sonnet 提供支持，这是一个由 Anthropic 创建的模型，用于支持对话和文本处理任务。Claude Sonnet 通过我们自己的安全基础设施由 Brave 托管。";
+"aichat.introMessageClaudeSonnetMessageDescription" = "嗨，我是 Leo。我是由 Scout 完全托管的 AI 助手。我由 Claude Sonnet 提供支持，这是一个由 Anthropic 创建的模型，用于支持对话和文本处理任务。Claude Sonnet 通过我们自己的安全基础设施由 Scout 托管。";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageClaudeSonnetModelPurposeDescription" = "兼顾速度与智慧";
 
 /* The model intro message when you first enter the chat assistant -- %@ is a place-holder for the model name */
-"aichat.introMessageGenericMessageDescription" = "你好，我是 Leo，Brave 的智能助手。我由 %@ 研发支持。问我问题，我会尽力解答。";
+"aichat.introMessageGenericMessageDescription" = "你好，我是 Leo，Scout 的智能助手。我由 %@ 研发支持。问我问题，我会尽力解答。";
 
 /* The model intro message when you first enter the chat assistant */
-"aichat.introMessageQwenMessageDescription" = "嗨，我是 Leo。我是由 Brave 提供的 AI 助手。我由 Qwen VL 30B 提供支持，这是由阿里巴巴云创建的模型，性能卓越，适用于多种用例。Qwen 通过我们自己的安全基础设施由 Brave 托管。";
+"aichat.introMessageQwenMessageDescription" = "嗨，我是 Leo。我是由 Scout 提供的 AI 助手。我由 Qwen VL 30B 提供支持，这是由阿里巴巴云创建的模型，性能卓越，适用于多种用例。Qwen 通过我们自己的安全基础设施由 Scout 托管。";
 
 /* The model's purpose - Describes what it can do best */
 "aichat.introMessageQwenModelPurposeDescription" = "普通聊天、编码等更多功能";
@@ -287,7 +287,7 @@
 "aichat.leoCodeExampleDefaultTitle" = "代码示例";
 
 /* The message that shows in an alert, to let the user know the 'Leo' feature is disabled, and explains how to re-enable the feature. */
-"aichat.leoDisabledMessageDescription" = "Leo 当前已通过功能开关禁用。如要重启 Leo, 请访问 brave://flags 并启用 Leo。";
+"aichat.leoDisabledMessageDescription" = "Leo 当前已通过功能开关禁用。";
 
 /* The title that shows in an alert when the Leo/AI-Chat feature is disabled. */
 "aichat.leoDisabledMessageTitle" = "Leo 已禁用";
@@ -305,13 +305,13 @@
 "aichat.leoImprovedAnswerBraveSearch" = "改善了该内容的搜索结果：";
 
 /* The text displayed on the loading screen when searching for a user query */
-"aichat.leoImprovingAnswerBraveSearch" = "正在使用 Brave Search 改善搜索结果……";
+"aichat.leoImprovingAnswerBraveSearch" = "正在使用 Scout Search 改善搜索结果……";
 
 /* The title of the advanced settings view */
 "aichat.leoNavigationTitle" = "Leo 人工智能";
 
 /* The title to display when the user taps on the information icon on the page context view. Brave Leo is the name of the product and should not be translated. */
-"aichat.leoPageContextInfoDescriptionTitle" = "点击询问本页内容。其内容将与您的信息一起发送给 Brave Leo。";
+"aichat.leoPageContextInfoDescriptionTitle" = "点击询问本页内容。其内容将与您的信息一起发送给 Scout Leo。";
 
 /* The accessibility text to read out loud when the user taps on the info icon on the page context view */
 "aichat.leoPageContextInfoIconAccessibilityTitle" = "页面上下文信息";
@@ -332,7 +332,7 @@
 "aichat.manageSubscriptionsButtonTitle" = "管理订阅";
 
 /* The description for alert needed to have microphone permission */
-"aichat.microphonePermissionAlertDescription" = "请在 iOS 系统设置中允许麦克风访问，以便 Brave 使用匿名语音搜索。";
+"aichat.microphonePermissionAlertDescription" = "请在 iOS 系统设置中允许麦克风访问，以便 Scout 使用匿名语音搜索。";
 
 /* The description for alert needed to have microphone permission */
 "aichat.microphonePermissionAlertTitle" = "需要使用麦克风";
@@ -443,7 +443,7 @@
 "aichat.rateAnswerActionErrorText" = "准确率答复";
 
 /* The message for privacy warning alert when rating a response */
-"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "点击喜欢或不喜欢某个回答会向 Brave 发送评分、对话、模型、语言、版本和高级状态以优化 Leo。[了解更多](%@)";
+"aichat.rateAnswerFeedbackPrivacyWarningMessage" = "点击喜欢或不喜欢某个回答会向 Scout 发送评分、对话、模型、语言、版本和高级状态以优化 Leo。[了解更多](%@)";
 
 /* The title for privacy warning alert when rating a response */
 "aichat.rateAnswerFeedbackPrivacyWarningTitle" = "答复反馈";
@@ -491,7 +491,7 @@
 "aichat.serviceOverloadedErrorViewTitle" = "端点当前过载。请稍后再试。";
 
 /* The description indicating voice inputs from user is not store or shared and these inpurs are totally private. */
-"aichat.speechRecognizerDisclaimer" = "Brave 不会存储或分享你的语音搜索。";
+"aichat.speechRecognizerDisclaimer" = "Scout 不会存储或分享你的语音搜索。";
 
 /* Title showing the user has no subscription. */
 "aichat.subscriptionNoneTitle" = "无";
@@ -506,10 +506,10 @@
 "aichat.termsConditionsApproveActionTitle" = "我理解";
 
 /* The description terms and conditions for AI chat usage. The links are inside parenthesis %@ will be replaced with urls */
-"aichat.termsConditionsDescription" = "Brave Leo 是私人 AI 助理，能提升您的网络使用体验。Leo 可免费使用，但有一定的访问限制。Brave Leo 高级版支持更多模型，限制更少，订阅用户可以抢先体验新功能。默认使用的模型会不时更改。详情可参阅 Brave **[帮助中心](%1$@)**。\n\n在默认设置下，当您针对您正在浏览的网站或网页向 Leo 提问时，您当前正在浏览的网页内容、您在页面中高亮的文本以及您的搜索查询将会发送给 Brave 服务器，以便 Leo 为您提供答复。在一些情况下，Leo 会将您的输入提炼为查询，并发送给 Brave 搜索，然后使用搜索结果为您的问题提供更好的答案。Brave 不保证回复的准确度，并且回复中可能包含不准确、误导性或虚假信息。请勿向 Brave Leo 提交敏感信息或私密信息，并谨慎看待所有关于健康、财务、个人安全等相关方面的答复。您可以随时在设置中调整 Leo 的选项，只需前往“设置 > Leo” 即可。\n\nLeo 不会收集身份识别信息，如 IP 地址等可以指向您的信息。我们不会根据您的数据训练我们的模型，包括您的搜索查询或 Brave Leo 的答复。我们的服务器不会存储个人数据，Brave 也不会将其保留。详情可参阅**[隐私政策](%2$@)**。";
+"aichat.termsConditionsDescription" = "Scout Leo 是私人 AI 助理，能提升您的网络使用体验。Leo 可免费使用，但有一定的访问限制。Scout Leo 高级版支持更多模型，限制更少，订阅用户可以抢先体验新功能。默认使用的模型会不时更改。详情可参阅 Scout **[帮助中心](%1$@)**。\n\n在默认设置下，当您针对您正在浏览的网站或网页向 Leo 提问时，您当前正在浏览的网页内容、您在页面中高亮的文本以及您的搜索查询将会发送给 Scout 服务器，以便 Leo 为您提供答复。在一些情况下，Leo 会将您的输入提炼为查询，并发送给 Scout 搜索，然后使用搜索结果为您的问题提供更好的答案。Scout 不保证回复的准确度，并且回复中可能包含不准确、误导性或虚假信息。请勿向 Scout Leo 提交敏感信息或私密信息，并谨慎看待所有关于健康、财务、个人安全等相关方面的答复。您可以随时在设置中调整 Leo 的选项，只需前往“设置 > Leo” 即可。\n\nLeo 不会收集身份识别信息，如 IP 地址等可以指向您的信息。我们不会根据您的数据训练我们的模型，包括您的搜索查询或 Scout Leo 的答复。我们的服务器不会存储个人数据，Scout 也不会将其保留。详情可参阅**[隐私政策](%2$@)**。";
 
 /* The title terms and conditions for AI chat usage */
-"aichat.termsConditionsTitle" = "与 Brave Leo 私密聊天";
+"aichat.termsConditionsTitle" = "与 Scout Leo 私密聊天";
 
 /* The title of the badge where a model which can be used unlimited */
 "aichat.unlimitedModelStatusTitle" = "無上限";

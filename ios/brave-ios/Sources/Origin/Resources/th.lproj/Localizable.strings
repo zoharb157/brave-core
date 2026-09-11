@@ -2,7 +2,7 @@
 "adsHeader" = "โฆษณา";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "เคยทำการซื้อกับ brave.com แล้วเหรอ";
+"alreadyPurchasedTitle" = "เคยทำการซื้อกับ web แล้วเหรอ";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "การวิเคราะห์";
@@ -11,25 +11,25 @@
 "buyNowButton" = "ซื้อเลย";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "การเปิดใช้งานหรือปิดใช้งานฟีเจอร์ Brave ต้องเรียกใช้เบราว์เซอร์ใหม่เพื่อนำการเปลี่ยนแปลงไปใช้ โปรดปิด (ปัดขึ้นใน App Switcher) แล้วเปิด Brave ใหม่อีกครั้ง";
+"featureEnabledToastMessage" = "การเปิดใช้งานหรือปิดใช้งานฟีเจอร์ Scout ต้องเรียกใช้เบราว์เซอร์ใหม่เพื่อนำการเปลี่ยนแปลงไปใช้ โปรดปิด (ปัดขึ้นใน App Switcher) แล้วเปิด Scout ใหม่อีกครั้ง";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "การเปลี่ยนฟีเจอร์ Brave";
+"featureEnabledToastTitle" = "การเปลี่ยนฟีเจอร์ Scout";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**ปรับแต่งเบราว์เซอร์ของคุณในขณะที่ยังคงสนับสนุน Brave**\n\nBrave Origin เป็นเบราว์เซอร์เวอร์ชั่นที่เสียค่าใช้สำหรับผู้ใช้ที่ไม่ต้องการฟีเจอร์ทั้งหมดที่สนับสนุน Brave ในฐานะธุรกิจ แต่ยังต้องการความเป็นส่วนตัวที่เพียงแค่ Brave เท่านั้นที่มีให้ ผู้ใช้ Origin จะได้รับประโยชน์อย่างต่อเนื่องจากการป้องกันความเป็นส่วนตัวระดับอุตสาหกรรม การบล็อกโฆษณา และความเร็ว (ผ่าน Shields) รวมถึงการอัปเดตซอฟต์แวร์อย่างสม่ำเสมอ แพตช์ Chromium และการปรับปรุงความเป็นส่วนตัวและความปลอดภัย Origin จะลบฟีเจอร์อื่นๆ ส่วนใหญ่ออกจากเบราว์เซอร์";
+"featuresFooter" = "**ปรับแต่งเบราว์เซอร์ของคุณในขณะที่ยังคงสนับสนุน Scout**\n\nScout Origin เป็นเบราว์เซอร์เวอร์ชั่นที่เสียค่าใช้สำหรับผู้ใช้ที่ไม่ต้องการฟีเจอร์ทั้งหมดที่สนับสนุน Scout ในฐานะธุรกิจ แต่ยังต้องการความเป็นส่วนตัวที่เพียงแค่ Scout เท่านั้นที่มีให้ ผู้ใช้ Origin จะได้รับประโยชน์อย่างต่อเนื่องจากการป้องกันความเป็นส่วนตัวระดับอุตสาหกรรม การบล็อกโฆษณา และความเร็ว (ผ่าน Shields) รวมถึงการอัปเดตซอฟต์แวร์อย่างสม่ำเสมอ แพตช์ Chromium และการปรับปรุงความเป็นส่วนตัวและความปลอดภัย Origin จะลบฟีเจอร์อื่นๆ ส่วนใหญ่ออกจากเบราว์เซอร์";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "ฟีเจอร์";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "ยืนยันการซื้อ Brave Origin";
+"getLoginCodeButton" = "ยืนยันการซื้อ Scout Origin";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Leo AI";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "ลิงก์การซื้อกับบัญชี Brave ของคุณ";
+"linkPurchase" = "ลิงก์การซื้อกับบัญชี Scout ของคุณ";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "ข่าวสาร";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "ไม่สามารถดำเนินการสั่งซื้อให้เสร็จสมบูรณ์ได้ โปรดลองอีกครั้ง หรือตรวจสอบรายละเอียดการชำระเงินของคุณบน Apple แล้วลองอีกครั้ง";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "ลิงก์การซื้อใน App Store กับบัญชี Brave เพื่อใช้ Brave Origin บนอุปกรณ์อื่นๆ";
+"purchaseSectionFooter" = "ลิงก์การซื้อใน App Store กับบัญชี Scout เพื่อใช้ Scout Origin บนอุปกรณ์อื่นๆ";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "ซื้อ";

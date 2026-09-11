@@ -2,7 +2,7 @@
 "adsHeader" = "広告";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "brave.comで購入済みですか？";
+"alreadyPurchasedTitle" = "Webで購入済みですか？";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "アナリティクス";
@@ -11,25 +11,25 @@
 "buyNowButton" = "今すぐ購入";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Brave機能を有効または無効にするには、ブラウザを再起動して変更を適用する必要があります。Braveを閉じて（App Switcherで上にスワイプ）から、再度開いてください。";
+"featureEnabledToastMessage" = "Scout機能を有効または無効にするには、ブラウザを再起動して変更を適用する必要があります。Scoutを閉じて（App Switcherで上にスワイプ）から、再度開いてください。";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Brave機能の変更";
+"featureEnabledToastTitle" = "Scout機能の変更";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Braveをサポートしながらブラウザをカスタマイズ**\n\nBrave Originは、Braveのビジネスをサポートするすべての機能が必要ないが、Braveのみが提供するプライバシーが必要なユーザー向けの有料版ブラウザです。Originユーザーは、業界トップクラスのプライバシー、広告ブロック、速度(Shields経由)に加えて、定期的なソフトウェアアップデート、Chromiumパッチ、セキュリティおよびプライバシーの改善の恩恵を受け続けます。Originは、ブラウザからほとんどの他の機能を削除します。";
+"featuresFooter" = "**Scoutをサポートしながらブラウザをカスタマイズ**\n\nScout Originは、Scoutのビジネスをサポートするすべての機能が必要ないが、Scoutのみが提供するプライバシーが必要なユーザー向けの有料版ブラウザです。Originユーザーは、業界トップクラスのプライバシー、広告ブロック、速度(Shields経由)に加えて、定期的なソフトウェアアップデート、Chromiumパッチ、セキュリティおよびプライバシーの改善の恩恵を受け続けます。Originは、ブラウザからほとんどの他の機能を削除します。";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "機能";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Brave Origin購入を確認";
+"getLoginCodeButton" = "Scout Origin購入を確認";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Leo AI";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "購入情報をBraveアカウントにリンク";
+"linkPurchase" = "購入情報をScoutアカウントにリンク";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "News";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "購入を完了できません。再度お試しいただくか、Appleでお支払い内容をご確認の上、再度お試しください。";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "App Storeで購入した商品をBraveアカウントにリンクさせると、他のデバイスでBrave Originを利用できます。";
+"purchaseSectionFooter" = "App Storeで購入した商品をScoutアカウントにリンクさせると、他のデバイスでScout Originを利用できます。";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "購入";

@@ -17,7 +17,7 @@
 "vpn.checkboxGeoLocation" = "Izberite svojo geografsko lokacijo/državo";
 
 /* Text for a checkbox to present the user benefits for using Brave VPN */
-"vpn.checkboxNoIPLog" = "Brave nikoli ne beleži vaših dejavnosti";
+"vpn.checkboxNoIPLog" = "Scout nikoli ne beleži vaših dejavnosti";
 
 /* Text for a checkbox to present the user benefits for using Brave VPN */
 "vpn.checkboxProtectYourDevices" = "Zaščitite vsako aplikacijo in amp; amp; amp; celotno napravo";
@@ -44,7 +44,7 @@
 "vpn.contactFormCarrier" = "Mobilni operater";
 
 /* Text to tell user to not modify support info below email's body. */
-"vpn.contactFormDoNotEditText" = "Brave vam ne sledi in ne ve, kako uporabljate našo aplikacijo, zato ne vemo, kako ste nastavili VPN. Prosimo, sporočite informacije o težavi, s katero se soočate, in potrudili se bomo, da jo čim prej odpravimo.";
+"vpn.contactFormDoNotEditText" = "Scout vam ne sledi in ne ve, kako uporabljate našo aplikacijo, zato ne vemo, kako ste nastavili VPN. Prosimo, sporočite informacije o težavi, s katero se soočate, in potrudili se bomo, da jo čim prej odpravimo.";
 
 /* Button name to send contact form. */
 "vpn.contactFormEmailNotConfiguredBody" = "E-pošte ni mogoče poslati. Prosimo, preverite nastavitve e-pošte.";
@@ -101,7 +101,7 @@
 "vpn.contactFormTimezone" = "Časovni pas iOS";
 
 /* Title for contact form email. */
-"vpn.contactFormTitle" = "Težava z Brave VPN";
+"vpn.contactFormTitle" = "Težava z Scout VPN";
 
 /* Button text to enable Brave VPN */
 "vpn.enableButton" = "Omogoči";
@@ -119,13 +119,13 @@
 "vpn.iapDisclaimer" = "Vse naročnine se samodejno podaljšajo, vendar jih lahko prekličete pred podaljšanjem.";
 
 /* Text explaining how the VPN works. */
-"vpn.installProfileBody" = "Ta profil omogoča VPN, da samodejno povezuje in varuje promet v vaši napravi ves čas. Ta VPN povezava bo šifrirana in preusmerjena prek inteligentnega požarnega zidu Brave, da blokira potencialno škodljive in invazivne povezave.";
+"vpn.installProfileBody" = "Ta profil omogoča VPN, da samodejno povezuje in varuje promet v vaši napravi ves čas. Ta VPN povezava bo šifrirana in preusmerjena prek inteligentnega požarnega zidu Scout, da blokira potencialno škodljive in invazivne povezave.";
 
 /* Text for 'install vpn profile' button */
 "vpn.installProfileButtonText" = "Namesti VPN profil";
 
 /* No comment provided by engineer. */
-"vpn.installProfileTitle" = "Brave bo zdaj namestil VPN profil.";
+"vpn.installProfileTitle" = "Scout bo zdaj namestil VPN profil.";
 
 /* Popup that shows after user installs the vpn for the first time. */
 "vpn.installSuccessPopup" = "VPN je zdaj omogočen";
@@ -149,7 +149,7 @@
 "vpn.multipleServerCountTitle" = "%ld Strežnikov";
 
 /* The text that briefly explains how Brave VPN subscription is going to be charged and managed. */
-"vpn.paywallDisclaimer" = "Naročnine bodo zaračunane prek vašega Apple računa. Vsak morebitni neizkoriščen del brezplačnega preizkusa se ob nakupu naročnine izgubi.\n\nVaša naročnina se bo samodejno obnovila, razen če je preklicana vsaj 24 ur pred koncem trenutnega obdobja.\n\nNaročnine lahko upravljate v nastavitvah.\n\nZ uporabo brskalnika Brave se strinjate s pogoji uporabe in politiko zasebnosti.";
+"vpn.paywallDisclaimer" = "Naročnine bodo zaračunane prek vašega Apple računa. Vsak morebitni neizkoriščen del brezplačnega preizkusa se ob nakupu naročnine izgubi.\n\nVaša naročnina se bo samodejno obnovila, razen če je preklicana vsaj 24 ur pred koncem trenutnega obdobja.\n\nNaročnine lahko upravljate v nastavitvah.\n\nZ uporabo brskalnika Scout se strinjate s pogoji uporabe in politiko zasebnosti.";
 
 /* The text which will be used to indicate period of payments like 10 / month */
 "vpn.paywallMonthlyPriceDividend" = "mesec";
@@ -227,7 +227,7 @@
 "vpn.serverTitle" = "%ld Strežnik";
 
 /* VPN Banner Description */
-"vpn.settingHeaderBody" = "Zaščitite vsako aplikacijo z Brave VPN. Zaščitite do 10 naprav z enim načrtom.";
+"vpn.settingHeaderBody" = "Zaščitite vsako aplikacijo z Scout VPN. Zaščitite do 10 naprav z enim načrtom.";
 
 /* Button to contact tech support */
 "vpn.settingsContactSupport" = "Obrnite se na tehnično podporo";
@@ -239,10 +239,10 @@
 "vpn.settingsFAQ" = "Podpora za VPN";
 
 /* Button to link your VPN receipt to other devices. */
-"vpn.settingsLinkReceipt" = "Povežite nakup z računom Brave";
+"vpn.settingsLinkReceipt" = "Povežite nakup z računom Scout";
 
 /* Footer text to link your VPN receipt to other devices. */
-"vpn.settingsLinkReceiptFooter" = "Povežite nakup v App Store s svojim računom Brave, da uporabljate Brave VPN v drugih napravah.";
+"vpn.settingsLinkReceiptFooter" = "Povežite nakup v App Store s svojim računom Scout, da uporabljate Scout VPN v drugih napravah.";
 
 /* Button to manage your VPN subscription */
 "vpn.settingsManageSubscription" = "Urejanje naročnine";
@@ -293,10 +293,10 @@
 "vpn.vpnActionUpdatePaymentMethodSettingsText" = "Posodobi način plačila";
 
 /* Notification title to tell user that the vpn is turned on even in background */
-"vpn.vpnBackgroundNotificationBody" = "Celo v ozadju bo Brave še naprej varovati vam.";
+"vpn.vpnBackgroundNotificationBody" = "Celo v ozadju bo Scout še naprej varovati vam.";
 
 /* Notification title to tell user that the vpn is turned on even in background */
-"vpn.vpnBackgroundNotificationTitle" = "Brave VPN je VKLOPLJEN";
+"vpn.vpnBackgroundNotificationTitle" = "Scout VPN je VKLOPLJEN";
 
 /* Text for description of list item which chooses the optimal server for the country region */
 "vpn.vpnCityRegionOptimalDescription" = "Uporabite najboljši razpoložljivi strežnik";
@@ -311,7 +311,7 @@
 "vpn.vpnConfigGenericErrorTitle" = "Napaka";
 
 /* Title for an alert when the user didn't allow to install VPN profile */
-"vpn.vpnConfigPermissionDeniedErrorBody" = "Brave VPN zahteva, da je na vaši napravi nameščen profil VPN. ";
+"vpn.vpnConfigPermissionDeniedErrorBody" = "Scout VPN zahteva, da je na vaši napravi nameščen profil VPN. ";
 
 /* Title for an alert when the user didn't allow to install VPN profile */
 "vpn.vpnConfigPermissionDeniedErrorTitle" = "Dovoljenje zavrnjeno";
@@ -326,7 +326,7 @@
 "vpn.vpnErrorPurchaseFailedTitle" = "Napaka";
 
 /* Disclaimer for user purchasing the VPN plan. */
-"vpn.vpnIAPBoilerPlate" = "Naročnine bodo zaračunane prek vašega iTunes računa.\n\nVsak morebitni neizkoriščen del brezplačnega preizkusa se ob nakupu naročnine izgubi.\n\nVaša naročnina se bo samodejno obnovila, razen če je preklicana vsaj 24 ur pred koncem trenutnega obdobja.\n\nNaročnine lahko upravljate v nastavitvah.\n\nZ uporabo brskalnika Brave se strinjate s pogoji uporabe in politiko zasebnosti.";
+"vpn.vpnIAPBoilerPlate" = "Naročnine bodo zaračunane prek vašega iTunes računa.\n\nVsak morebitni neizkoriščen del brezplačnega preizkusa se ob nakupu naročnine izgubi.\n\nVaša naročnina se bo samodejno obnovila, razen če je preklicana vsaj 24 ur pred koncem trenutnega obdobja.\n\nNaročnine lahko upravljate v nastavitvah.\n\nZ uporabo brskalnika Scout se strinjate s pogoji uporabe in politiko zasebnosti.";
 
 /* The title shown on the menu when the VPN connection is disconnected */
 "vpn.vpnOffMenuButtonTitle" = "VPN izključena";
@@ -341,7 +341,7 @@
 "vpn.vpnRegionChangedTitle" = "Regija VPN spremenjena";
 
 /* Message for alert to reset vpn configuration */
-"vpn.vpnResetAlertBody" = "To bo ponastavilo vašo konfiguraciju Brave VPN in odpravilo napake. Ta postopek lahko traja minuto.";
+"vpn.vpnResetAlertBody" = "To bo ponastavilo vašo konfiguraciju Scout VPN in odpravilo napake. Ta postopek lahko traja minuto.";
 
 /* Title for alert to reset vpn configuration */
 "vpn.vpnResetAlertTitle" = "Ponastavi konfiguracijo";

@@ -2,7 +2,7 @@
 "adsHeader" = "Mainokset";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "Oletko jo ostanut brave.comista?";
+"alreadyPurchasedTitle" = "Oletko jo ostanut verkosta?";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Analytiikka";
@@ -11,25 +11,25 @@
 "buyNowButton" = "Osta nyt";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Brave-ominaisuuden käyttöön ottaminen tai poistaminen edellyttää selaimen uudelleenkäynnistystä muutosten soveltamiseksi. Sulje (pyyhkäise ylöspäin sovellusvalitsimessa) ja avaa Brave sitten uudelleen.";
+"featureEnabledToastMessage" = "Scout-ominaisuuden käyttöön ottaminen tai poistaminen edellyttää selaimen uudelleenkäynnistystä muutosten soveltamiseksi. Sulje (pyyhkäise ylöspäin sovellusvalitsimessa) ja avaa Scout sitten uudelleen.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Brave-ominaisuuksien muuttaminen";
+"featureEnabledToastTitle" = "Scout-ominaisuuksien muuttaminen";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Mukauta selaintasi ja tue silti Bravea**\n\nBrave Origin on maksullinen selainversio käyttäjille, jotka eivät tarvitse kaikkia ominaisuuksia, jotka tukevat Bravea liiketoimintana, mutta haluavat silti yksityisyyden, jonka vain Brave tarjoaa. Origin-käyttäjät saavat edelleen hyötyä alan johtavasta yksityisyydestä, mainostenestosta ja nopeudesta (Suojauksen kautta), sekä säännöllisistä ohjelmistopäivityksistä, Chromium-korjauksista ja turvallisuus- ja yksityisyysparannuksista. Origin poistaa useimmat muut ominaisuudet selaimesta.";
+"featuresFooter" = "**Mukauta selaintasi ja tue silti Scoutia**\n\nScout Origin on maksullinen selainversio käyttäjille, jotka eivät tarvitse kaikkia ominaisuuksia, jotka tukevat Scoutia liiketoimintana, mutta haluavat silti yksityisyyden, jonka vain Scout tarjoaa. Origin-käyttäjät saavat edelleen hyötyä alan johtavasta yksityisyydestä, mainostenestosta ja nopeudesta (Suojauksen kautta), sekä säännöllisistä ohjelmistopäivityksistä, Chromium-korjauksista ja turvallisuus- ja yksityisyysparannuksista. Origin poistaa useimmat muut ominaisuudet selaimesta.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Ominaisuudet";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Vahvista Brave Origin -osto";
+"getLoginCodeButton" = "Vahvista Scout Origin -osto";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "Leo-tekoäly";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Linkitä ostos Brave-tiliisi";
+"linkPurchase" = "Linkitä ostos Scout-tiliisi";
 
 /* A toggle label for Brave News feature */
 "newsLabel" = "Uutiset";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Ostoa ei voi suorittaa loppuun. Yritä uudelleen tai tarkista Apple-palveluun tallennetut maksutietosi ja yritä uudelleen.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Linkitä App Storen ostos Brave-tiliisi, jotta voit käyttää Brave Originia muissa laitteissa";
+"purchaseSectionFooter" = "Linkitä App Storen ostos Scout-tiliisi, jotta voit käyttää Scout Originia muissa laitteissa";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Osta";
@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "Ylläpidä ydinadblockia, yksityisyyttä ja nopeutta";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "Minimaaalinen selaimen käyttöliittymä, joka keskittyy Brave-suojaukseen";
+"upsellMinimalUI" = "Minimaaalinen selaimen käyttöliittymä, joka keskittyy Scout-suojaukseen";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "Kertaluonteinen osto voidaan aktivoida useita kertoja kaikilla laitteillasi";

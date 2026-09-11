@@ -2,7 +2,7 @@
 "adsHeader" = "Реклама";
 
 /* A title asking if the user already purchased on brave.com */
-"alreadyPurchasedTitle" = "Уже купили на brave.com?";
+"alreadyPurchasedTitle" = "Уже купили на web?";
 
 /* A section header title for analytics-related settings */
 "analyticsHeader" = "Аналитика";
@@ -11,34 +11,34 @@
 "buyNowButton" = "Купить сейчас";
 
 /* A message shown in a toast informing the user that enabling or disabling a Brave feature requires restarting the browser to take effect */
-"featureEnabledToastMessage" = "Включение или отключение функции Brave требует перезагрузки браузера для применения изменений. Закройте (смахните вверх в переключателе приложений), а затем снова откройте Brave.";
+"featureEnabledToastMessage" = "Включение или отключение функции Scout требует перезагрузки браузера для применения изменений. Закройте (смахните вверх в переключателе приложений), а затем снова откройте Scout.";
 
 /* A title shown in a toast that appears after toggling a Brave feature on or off in Origin settings */
-"featureEnabledToastTitle" = "Изменение функций Brave";
+"featureEnabledToastTitle" = "Изменение функций Scout";
 
 /* A footer text explaining Brave Origin subscription and its features. The stars represent markdown and the same paragraph should be also be bolded when translated. */
-"featuresFooter" = "**Настройте браузер под себя, продолжая поддерживать Brave**\n\nBrave Origin — это платная версия браузера для пользователей, которым не нужны все функции, поддерживающие бизнес-модель Brave, но которые всё же хотят получить уровень приватности, доступный только в Brave. Пользователи Origin продолжат пользоваться нашей передовой защитой конфиденциальности, блокировкой рекламы и высокой скоростью работы (благодаря Shields), а также получать регулярные обновления программного обеспечения, патчи Chromium и улучшения безопасности и приватности. В то же время из браузера Origin будет удалено большинство остальных функций.";
+"featuresFooter" = "**Настройте браузер под себя, продолжая поддерживать Scout**\n\nScout Origin — это платная версия браузера для пользователей, которым не нужны все функции, поддерживающие бизнес-модель Scout, но которые всё же хотят получить уровень приватности, доступный только в Scout. Пользователи Origin продолжат пользоваться нашей передовой защитой конфиденциальности, блокировкой рекламы и высокой скоростью работы (благодаря Shields), а также получать регулярные обновления программного обеспечения, патчи Chromium и улучшения безопасности и приватности. В то же время из браузера Origin будет удалено большинство остальных функций.";
 
 /* A section header title that is shown over a list of Brave specific features */
 "featuresHeader" = "Функции";
 
 /* A button label to get a login code for users who purchased on brave.com */
-"getLoginCodeButton" = "Подтвердить покупку Brave Origin";
+"getLoginCodeButton" = "Подтвердить покупку Scout Origin";
 
 /* A toggle label for Brave Leo AI feature */
 "leoAILabel" = "ИИ-помощник Leo";
 
 /* A button title that when triggered will allow a user to link their App Store purchase with Brave Account */
-"linkPurchase" = "Привязать покупку к аккаунту Brave";
+"linkPurchase" = "Привязать покупку к аккаунту Scout";
 
 /* A toggle label for Brave News feature */
-"newsLabel" = "Brave Новости";
+"newsLabel" = "Scout Новости";
 
 /* A label indicating this is a one-time purchase product */
 "oneTimePurchaseLabel" = "Единовременная покупка";
 
 /* A toggle label for Brave Playlist feature */
-"playlistLabel" = "Brave Плейлист";
+"playlistLabel" = "Scout Плейлист";
 
 /* A toggle label for privacy preserving analytics feature */
 "privacyPreservingAnalyticsLabel" = "Аналитика, сохраняющая конфиденциальность";
@@ -53,7 +53,7 @@
 "purchaseErrorMessage" = "Невозможно завершить осуществление покупки. Повторите попытку или проверьте свои платежные реквизиты в сети Apple и попробуйте еще раз.";
 
 /* The footer shown below the Purchase section of the settings page */
-"purchaseSectionFooter" = "Привяжите покупку в App Store к аккаунту Brave, чтобы использовать Brave Origin на других устройствах";
+"purchaseSectionFooter" = "Привяжите покупку в App Store к аккаунту Scout, чтобы использовать Scout Origin на других устройствах";
 
 /* The header shown below the Purchase section of the settings page */
 "purchaseSectionHeader" = "Покупка";
@@ -74,13 +74,13 @@
 "statisticsReportingLabel" = "Статистическая отчетность";
 
 /* A toggle label for Brave Talk feature */
-"talkLabel" = "Brave Разговоры";
+"talkLabel" = "Scout Разговоры";
 
 /* An upsell point about maintaining core features like adblock, privacy, and speed */
 "upsellCoreFeatures" = "Поддерживайте основные функции блокировки объявлений, приватность и скорость";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "Минималистичный интерфейс Браузера с центром на Защите Brave";
+"upsellMinimalUI" = "Минималистичный интерфейс Браузера с центром на Защите Scout";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "Единовременную покупку можно активировать несколько раз на всех ваших устройствах";
@@ -92,8 +92,8 @@
 "viewAppStoreReceipt" = "Посмотреть квитанцию App Store";
 
 /* A toggle label for Brave VPN feature */
-"vpnLabel" = "Brave VPN";
+"vpnLabel" = "Scout VPN";
 
 /* A toggle label for Brave Wallet feature */
-"walletLabel" = "Brave Кошелек";
+"walletLabel" = "Scout Кошелек";
 

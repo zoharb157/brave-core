@@ -6,7 +6,7 @@
 
 MOZ_BUNDLE_DISPLAY_NAME = Scout
 
-BRAVE_URL_SCHEME = brave-debug
+BRAVE_URL_SCHEME = scout-debug
 
 // Bundle Identifier (Same as nightly)
 MOZ_BUNDLE_ID = $(BASE_BUNDLE_ID)
