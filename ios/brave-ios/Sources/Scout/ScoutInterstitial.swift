@@ -84,9 +84,9 @@ public enum ScoutInterstitial {
   }
 
   public static func html(type: DecisionType, verdict: Verdict?, reason: DecisionReason,
-                           matchedCategories: Set<ContentCategory> = []) -> String {
+                           matchedCategories: Set<ContentCategory> = [],
+                           host: String = "") -> String {
     let m = model(type: type, verdict: verdict, reason: reason, matchedCategories: matchedCategories)
-    let chipClass = m.isBlocking ? "chip--block" : "chip--warn"
     // Escaping only applies to content that can originate from the remote
     // check response (a resolved Verdict's title/summary/reasons, surfaced
     // only for the .security reason). All other copy here is a compile-time
@@ -95,21 +95,76 @@ public enum ScoutInterstitial {
     let title = isRemoteSourced ? htmlEscaped(m.title) : m.title
     let summary = isRemoteSourced ? htmlEscaped(m.summary) : m.summary
     let reasonsHTML = m.reasons
-      .map { "<span class=\"reason\">\(isRemoteSourced ? htmlEscaped($0) : $0)</span>" }
+      .map { "<li>\(isRemoteSourced ? htmlEscaped($0) : $0)</li>" }
       .joined()
+    let reasonsBlock = m.reasons.isEmpty ? "" : "<ul class=\"reasons\">\(reasonsHTML)</ul>"
+    let hostBlock = host.isEmpty ? "" : "<p class=\"host\">\(htmlEscaped(host))</p>"
+    let tone = m.isBlocking ? "block" : "warn"
 
     return """
     <!doctype html><html><head><meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style>\(css)</style></head><body><div class="card">
-    <span class="chip \(chipClass)">\(m.chipText)</span>
-    <h1>\(title)</h1><p>\(summary)</p>
-    <div class="reasons">\(reasonsHTML)</div>
-    <button class="primary" onclick="webkit.messageHandlers.scout.postMessage('back')">\(m.primaryLabel)</button>
-    <button class="secondary" onclick="webkit.messageHandlers.scout.postMessage('proceed')">\(m.secondaryLabel)</button>
-    </div></body></html>
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <style>\(css)</style></head>
+    <body class="tone-\(tone)">
+      <main class="card">
+        <div class="glyph">\(m.isBlocking ? shieldGlyph : warnGlyph)</div>
+        <span class="chip">\(m.chipText)</span>
+        <h1>\(title)</h1>
+        <p class="lede">\(summary)</p>
+        \(hostBlock)
+        \(reasonsBlock)
+        <div class="actions">
+          <button class="primary" onclick="webkit.messageHandlers.scout.postMessage('back')">\(m.primaryLabel)</button>
+          <button class="quiet" onclick="webkit.messageHandlers.scout.postMessage('proceed')">\(m.secondaryLabel)</button>
+        </div>
+      </main>
+    </body></html>
     """
   }
+
+  /// The page shown *while* the check runs. The service fetches and analyses
+  /// the page, which takes seconds — showing that work is far better than a
+  /// frozen tab followed by a verdict appearing from nowhere.
+  public static func checkingHTML(host: String) -> String {
+    return """
+    <!doctype html><html><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <style>\(css)</style></head>
+    <body class="tone-check">
+      <main class="card">
+        <div class="scanner" role="img" aria-label="Checking this link">
+          <svg viewBox="0 0 120 120" class="globe">
+            <circle class="ring ring-a" cx="60" cy="60" r="52"/>
+            <circle class="ring ring-b" cx="60" cy="60" r="52"/>
+            <g class="mark">
+              <circle cx="60" cy="60" r="26"/>
+              <line x1="34" y1="60" x2="86" y2="60"/>
+              <path d="M60 34 C 49 43, 49 77, 60 86"/>
+              <path d="M60 34 C 71 43, 71 77, 60 86"/>
+            </g>
+            <g class="sweep"><path d="M60 60 L60 4 A56 56 0 0 1 108 34 Z"/></g>
+          </svg>
+        </div>
+        <span class="chip">CHECKING</span>
+        <h1>Checking this link</h1>
+        <p class="lede">Scout is looking at this page before it opens.</p>
+        <p class="host">\(htmlEscaped(host))</p>
+        <ul class="steps">
+          <li class="s1">Reading the address</li>
+          <li class="s2">Checking for phishing &amp; scams</li>
+          <li class="s3">Matching your blocked categories</li>
+        </ul>
+      </main>
+    </body></html>
+    """
+  }
+
+  private static let shieldGlyph = """
+  <svg viewBox="0 0 48 48"><path d="M24 4 L42 11 v13 c0 11-8 17-18 20 C14 41 6 35 6 24 V11 Z"/>  <path class="x" d="M17 17 L31 31 M31 17 L17 31"/></svg>
+  """
+  private static let warnGlyph = """
+  <svg viewBox="0 0 48 48"><path d="M24 5 L45 41 H3 Z"/>  <path class="x" d="M24 18 v11 M24 34 v.5"/></svg>
+  """
 
   /// Escapes text that originates from the remote check response (title,
   /// summary, reasons) before it is interpolated into the interstitial's
@@ -149,22 +204,119 @@ public enum ScoutInterstitial {
   }
 
   private static let css = """
-  :root{--violet-deep:#7361AE;--ground:#F7F5FB;--ink:#2B2440;
-  --rose-clay:#B3626B;--ochre:#B08A3E}
-  body{margin:0;font:16px/1.5 -apple-system,system-ui,sans-serif;
-  background:var(--ground);color:var(--ink);display:flex;min-height:100vh;
-  align-items:center;justify-content:center}
-  .card{max-width:32rem;padding:2rem;text-align:center}
-  .chip{display:inline-block;padding:.25rem .75rem;border-radius:999px;
-  font-weight:700;font-size:.8rem;color:#fff}
-  .chip--block{background:var(--rose-clay)}.chip--warn{background:var(--ochre)}
-  h1{margin:1rem 0 .5rem}.reasons{display:flex;flex-wrap:wrap;gap:.5rem;
-  justify-content:center;margin:1rem 0}
-  .reason{background:#ECE7F5;border-radius:999px;padding:.2rem .6rem;font-size:.85rem}
-  button{font:inherit;border:0;border-radius:.75rem;padding:.75rem 1.25rem}
-  .primary{background:var(--violet-deep);color:#fff}
-  .secondary{background:transparent;color:var(--violet-deep)}
-  @media(prefers-color-scheme:dark){:root{--ground:#1C1830;--ink:#EEE9F7}
-  .reason{background:#2E2748}}
+  :root {
+    --violet: #8570D2; --violet-deep: #544096; --ink: #1E1830;
+    --ground: #F6F4FB; --card: #FFFFFF; --muted: #6B6382;
+    --rose: #B3626B; --ochre: #B08A3E; --mint: #7EC8A8;
+    --tone: var(--violet-deep);
+  }
+  body.tone-block { --tone: var(--rose); }
+  body.tone-warn  { --tone: var(--ochre); }
+  body.tone-check { --tone: var(--violet-deep); }
+  @media (prefers-color-scheme: dark) {
+    :root { --ground:#141020; --card:#1E1830; --ink:#EFEAF8; --muted:#A79DC0; }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; display: flex; align-items: center; justify-content: center;
+    padding: 24px; background: var(--ground); color: var(--ink);
+    font: 16px/1.55 -apple-system, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .card {
+    width: 100%; max-width: 30rem; background: var(--card);
+    border-radius: 26px; padding: 34px 26px 26px; text-align: center;
+    box-shadow: 0 1px 2px rgba(20,10,50,.05), 0 18px 48px -12px rgba(40,20,90,.18);
+    animation: rise .42s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes rise { from { opacity:0; transform: translateY(10px) scale(.985);} }
+
+  .glyph { width: 62px; height: 62px; margin: 0 auto 14px; }
+  .glyph svg { width: 100%; height: 100%; }
+  .glyph path { fill: color-mix(in srgb, var(--tone) 14%, transparent); stroke: var(--tone); stroke-width: 2.4; stroke-linejoin: round; }
+  .glyph .x { fill: none; stroke: var(--tone); stroke-width: 3.4; stroke-linecap: round; }
+
+  .chip {
+    display: inline-block; padding: .3rem .8rem; border-radius: 999px;
+    font-size: .7rem; font-weight: 800; letter-spacing: .09em;
+    color: #fff; background: var(--tone);
+  }
+  h1 {
+    margin: .7rem 0 .35rem; font-size: 1.55rem; line-height: 1.2;
+    font-weight: 750; letter-spacing: -.02em; text-wrap: balance;
+  }
+  .lede { margin: 0 auto; max-width: 26rem; color: var(--muted); }
+  .host {
+    margin: .9rem 0 0; font-size: .82rem; color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    word-break: break-all; opacity: .85;
+  }
+  .reasons {
+    list-style: none; margin: 1.1rem 0 0; padding: 0;
+    display: flex; flex-direction: column; gap: .4rem; text-align: left;
+  }
+  .reasons li {
+    font-size: .87rem; color: var(--ink); background: color-mix(in srgb, var(--tone) 9%, transparent);
+    border-radius: 12px; padding: .5rem .75rem .5rem 2rem; position: relative;
+  }
+  .reasons li::before {
+    content: ""; position: absolute; left: .78rem; top: 50%;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--tone);
+    transform: translateY(-50%);
+  }
+  .actions { display: flex; flex-direction: column; gap: .3rem; margin-top: 1.5rem; }
+  button { font: inherit; border: 0; cursor: pointer; border-radius: 15px; }
+  .primary {
+    background: var(--violet-deep); color: #fff; font-weight: 650;
+    padding: .92rem 1.2rem; transition: transform .12s ease, opacity .12s ease;
+  }
+  .primary:active { transform: scale(.985); opacity: .92; }
+  .quiet { background: transparent; color: var(--muted); padding: .72rem; font-size: .92rem; }
+  button:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; }
+
+  /* ---- checking state ---- */
+  .scanner { width: 128px; height: 128px; margin: 4px auto 16px; }
+  .globe { width: 100%; height: 100%; overflow: visible; }
+  .globe .mark circle, .globe .mark line, .globe .mark path {
+    fill: none; stroke: var(--violet-deep); stroke-width: 3.2; stroke-linecap: round;
+  }
+  .globe .ring { fill: none; stroke: var(--violet); stroke-width: 2; opacity: .28; }
+  .ring-a { animation: pulse 2.1s ease-out infinite; }
+  .ring-b { animation: pulse 2.1s ease-out infinite 1.05s; }
+  @keyframes pulse {
+    0%   { transform: scale(.62); opacity: .42; }
+    70%  { opacity: .06; }
+    100% { transform: scale(1.06); opacity: 0; }
+  }
+  .globe .ring { transform-origin: 60px 60px; }
+  .sweep path { fill: color-mix(in srgb, var(--mint) 55%, transparent); }
+  .sweep { transform-origin: 60px 60px; animation: spin 1.5s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .steps {
+    list-style: none; margin: 1.2rem 0 .2rem; padding: 0;
+    display: flex; flex-direction: column; gap: .45rem; text-align: left;
+  }
+  .steps li {
+    font-size: .88rem; color: var(--muted); padding-left: 1.7rem; position: relative;
+    opacity: .35; animation: lightUp .5s ease forwards;
+  }
+  .steps li::before {
+    content: ""; position: absolute; left: .35rem; top: .48rem;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--violet-deep); opacity: .35;
+  }
+  .steps .s1 { animation-delay: .15s; }
+  .steps .s2 { animation-delay: 1.1s; }
+  .steps .s3 { animation-delay: 2.2s; }
+  @keyframes lightUp { to { opacity: 1; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card, .steps li { animation: none; opacity: 1; }
+    .sweep, .ring-a, .ring-b { animation: none; }
+    .globe .ring { opacity: .22; }
+  }
   """
+
 }

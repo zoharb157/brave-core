@@ -24,6 +24,15 @@ extension TabDataValues {
   }
 }
 
+/// The generated pages post to a fixed channel name; rewrite it to the script
+/// handler's real (UUID-suffixed) name so the buttons reach native.
+@MainActor
+private func channelled(_ html: String) -> String {
+  html.replacingOccurrences(
+    of: "webkit.messageHandlers.scout",
+    with: "webkit.messageHandlers.\(ScoutScriptHandler.messageHandlerName)")
+}
+
 @MainActor
 public class ScoutTabHelper: TabPolicyDecider {
   weak var tab: (any TabState)?
@@ -60,25 +69,35 @@ public class ScoutTabHelper: TabPolicyDecider {
       return .allow
     }
 
-    let decision = await ScoutServices.shared.guard_.decide(requestURL)
-    guard decision.type != .allow else { return .allow }
+    // The service fetches and AI-analyses the page, which takes seconds. Show
+    // that work rather than freezing the tab and then producing a verdict out
+    // of nowhere: cancel now, show the checking page, and resolve when the
+    // decision lands.
+    let host = requestURL.host ?? requestURL.absoluteString
+    tab.loadHTMLString(channelled(ScoutInterstitial.checkingHTML(host: host)), baseURL: nil)
 
-    let matched = decision.verdict?.categories
-      .intersection(ScoutServices.shared.policy.blockedCategories) ?? []
-    var html = ScoutInterstitial.html(
-      type: decision.type,
-      verdict: decision.verdict,
-      reason: decision.reason,
-      matchedCategories: matched)
+    Task { @MainActor [weak tab] in
+      let decision = await ScoutServices.shared.guard_.decide(requestURL)
+      guard let tab else { return }
 
-    // The generated page posts to a fixed channel name; rewrite it to the
-    // script handler's real (UUID-suffixed) name so the buttons reach native.
-    html = html.replacingOccurrences(
-      of: "webkit.messageHandlers.scout",
-      with: "webkit.messageHandlers.\(ScoutScriptHandler.messageHandlerName)")
+      if decision.type == .allow {
+        // The verdict is cached now, so re-navigating re-decides in ~0 ms and
+        // is allowed through rather than looping back into this branch.
+        tab.loadRequest(URLRequest(url: requestURL))
+        return
+      }
 
-    ScoutInterstitialState.shared.record(blockedURL: requestURL, in: tab)
-    tab.loadHTMLString(html, baseURL: nil)
+      let matched = decision.verdict?.categories
+        .intersection(ScoutServices.shared.policy.blockedCategories) ?? []
+      let html = ScoutInterstitial.html(
+        type: decision.type,
+        verdict: decision.verdict,
+        reason: decision.reason,
+        matchedCategories: matched,
+        host: host)
+      ScoutInterstitialState.shared.record(blockedURL: requestURL, in: tab)
+      tab.loadHTMLString(channelled(html), baseURL: nil)
+    }
     return .cancel
   }
 }

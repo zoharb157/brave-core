@@ -16,15 +16,22 @@ import Scout
 public final class ScoutServices {
   public static let shared = ScoutServices()
 
-  /// The same backend the Kid Safe app uses. It returns content categories
-  /// today; the `security` field is pending backend work, and `Verdict.parse`
-  /// defaults it to `.safe` when absent.
+  /// The same backend the Kid Safe app uses. It returns content categories and
+  /// a `security` status; `Verdict.parse` still defaults a missing `security`
+  /// to `.safe` so an older server cannot make the guard block everything.
   private static let checkEndpoint = URL(
     string: "https://many-apps-30-day-challenge.fly.dev/api/kid-safe/check")!
 
-  /// Phase 1 budget. On-device policy and cache decide most navigations with no
-  /// network at all; only an unknown host waits, and never longer than this.
-  private static let checkTimeout: TimeInterval = 0.4
+  /// The spec's budget is 400 ms, on the assumption that a precheck warms the
+  /// cache before navigation. Precheck is not built yet, and the live service
+  /// measures 2.7-10.2 s (it fetches and AI-analyses the page), so at 400 ms
+  /// every unknown host times out and fails open — the guard would never block
+  /// on a live verdict.
+  ///
+  /// Until precheck lands this is deliberately generous so the verdict actually
+  /// arrives. It is NOT the shipping value: blocking a navigation for seconds is
+  /// unacceptable UX, and the real fix is precheck plus the verdict cache.
+  private static let checkTimeout: TimeInterval = 12.0
 
   public let policy: PolicyStore
   private let cache: VerdictCache

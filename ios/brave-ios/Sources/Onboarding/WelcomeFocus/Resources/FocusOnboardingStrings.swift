@@ -20,7 +20,7 @@ extension Strings {
       "focusOnboarding.noVideoAdsScreenTitle",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "Block Interruptions When You Stream",
+      value: "Browse Without the Bad Stuff",
       comment: "The title of the screen that shows ads embeded in video are blocked"
     )
 
@@ -28,7 +28,7 @@ extension Strings {
       "focusOnboarding.noVideoAdsScreenDescription",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "Block annoying interruptions on your favorite streaming sites.",
+      value: "Unsafe links are blocked, and you choose what else to block.",
       comment: "The subtitle of the screen that shows ads embeded in video are blocked"
     )
 
@@ -36,7 +36,7 @@ extension Strings {
       "focusOnboarding.p3aScreenTitle",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "Make Brave Better",
+      value: "Make Scout Better",
       comment: "The title of the screen which asks user to enable privacy preserving analytics."
     )
 
@@ -62,7 +62,7 @@ extension Strings {
       tableName: "FocusOnboarding",
       bundle: .module,
       value:
-        "Share completely private and anonymous product insights about what features are being used by Brave's users.",
+        "Share completely private and anonymous product insights about what features are being used by Scout's users.",
       comment: "The description shown below the toggle for enabling privacy preserving analytics."
     )
 
@@ -86,7 +86,7 @@ extension Strings {
       "focusOnboarding.defaultBrowserScreenTitle",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "Get Adblocking With Every Site You Visit",
+      value: "Every Link, Checked Before It Opens",
       comment: "The title of the screen that requests user to set Brave as default"
     )
 
@@ -94,7 +94,7 @@ extension Strings {
       "focusOnboarding.defaultBrowserScreenDescription",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "Set Brave as your default browser today.",
+      value: "Set Scout as your default browser today.",
       comment: "The subtitle of the screen that requests user to set Brave as default"
     )
 
@@ -102,7 +102,7 @@ extension Strings {
       "focusOnboarding.addToDockScreenTitle",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "Add Brave to Your Dock",
+      value: "Add Scout to Your Dock",
       comment: "The title of the screen that explains how to add Brave to the iOS dock"
     )
 
@@ -110,7 +110,7 @@ extension Strings {
       "focusOnboarding.addToDockScreenDescription",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "Touch and hold the Brave icon, then drag it into your dock for quick access.",
+      value: "Touch and hold the Scout icon, then drag it into your dock for quick access.",
       comment: "The subtitle of the screen that explains how to add Brave to the iOS dock"
     )
 
