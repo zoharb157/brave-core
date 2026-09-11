@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "รักษาฟีเจอร์หลักของ Adblock, ความเป็นส่วนตัว และความเร็ว";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "เบราว์เซอร์ UI ขั้นต่ำที่มุ่งเน้นไปที่ Brave Shields";
+"upsellMinimalUI" = "เบราว์เซอร์ UI ขั้นต่ำที่มุ่งเน้นไปที่ Shields";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "การซื้อครั้งเดียวสามารถเปิดใช้งานได้หลายครั้งบนอุปกรณ์ทั้งหมดของคุณ";

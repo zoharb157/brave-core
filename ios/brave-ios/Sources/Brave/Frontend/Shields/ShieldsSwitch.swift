@@ -195,13 +195,15 @@ class ShieldsSwitch: UIControl {
     }
   }
 
+  // Scout palette (violet-deep #544096, violet #8570D2, mint #7EC8A8), the
+  // same tones as the app icon and the check/block pages. Replaces Brave's
+  // orange-to-red brand cycle.
   private let steps: [AnimationStep] = [
-    .init(colors: [0xFFA73B, 0xFF7654], shadow: 0xFF7654),
-    .init(colors: [0xFF7654, 0xFB542B], shadow: 0xFB542B),
-    .init(colors: [0xFB542B, 0xF7241C], shadow: 0xF7241C),
-    .init(colors: [0xF7241C, 0xFC4F82], shadow: 0xFC4F82),
-    .init(colors: [0xFC4F82, 0xFFA73B], shadow: 0xFFA73B),
-    .init(colors: [0xFFA73B, 0xFF7654], shadow: 0xFF7654),
+    .init(colors: [0x8570D2, 0x544096], shadow: 0x544096),
+    .init(colors: [0x544096, 0x6A58B8], shadow: 0x6A58B8),
+    .init(colors: [0x6A58B8, 0x7EC8A8], shadow: 0x7EC8A8),
+    .init(colors: [0x7EC8A8, 0x8570D2], shadow: 0x8570D2),
+    .init(colors: [0x8570D2, 0x544096], shadow: 0x544096),
   ]
 
   private func beginGradientAnimations() {

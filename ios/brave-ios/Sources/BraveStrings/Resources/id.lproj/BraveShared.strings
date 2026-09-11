@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "Tentang";
 
-/* The title of the screen explaining Brave Shields */
-"AboutBraveShields" = "Seputar Brave Shields";
+/* The title of the screen explaining Shields */
+"AboutBraveShields" = "Seputar Shields";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "Sering kali saat membuka situs terdapat cookies dan skrip yang berusaha mengidentifikasi pengguna dan perangkatnya.  Mereka ingin mengetahui siapa Anda dan mengikuti Anda di seluruh situs - melacak apa yang Anda lakukan di setiap situs.\n\nBrave memblokir hal-hal tersebut sehingga Anda dapat menjelajah tanpa merasa diikuti.";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -268,17 +268,17 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "Jika situs ini tampak rusak, coba turunkan Shield";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Brave Shields";
+/* Context: 'Shields Up' or 'Shields Down' */
+"BraveShieldsStatusTitle" = "Shields";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "Turun";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "Naik";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Ketuk dua kali untuk mengalihkan Brave Shields";
+"BraveShieldsToggleHint" = "Ketuk dua kali untuk mengalihkan Shields";
 
 /* The name of the feature */
 "bravetalk.braveTalkTitle" = "Brave Talk";
@@ -1208,7 +1208,7 @@
 "OBShieldsDetail" = "Blokir pelacak privasi yang menginvasi agar Anda dapat menjelajahi di web tanpa dikuntit.";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Brave Shields";
+"OBShieldsTitle" = "Shields";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "Tampilkan Kepada Saya";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "Daftar Putar Tanpa Judul";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "Tutup Menu Perisai";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "Semua peringatan";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "Diblokir oleh";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,7 +1723,7 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "Minggu lalu";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
 "privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** diblokir oleh Perisai Brave pada situs **%2$lld**";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */

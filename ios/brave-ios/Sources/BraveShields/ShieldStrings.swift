@@ -855,7 +855,7 @@ extension Strings.Shields {
   public static let shieldsDefaults = NSLocalizedString(
     "ShieldsDefaults",
     bundle: .module,
-    value: "Brave Shields Global Defaults",
+    value: "Shields Global Defaults",
     comment: "Section title for adbblock, tracking protection, HTTPS-E, and cookies"
   )
   public static let shieldsDefaultsFooter = NSLocalizedString(
@@ -924,13 +924,13 @@ extension Strings.Shields {
   public static let toggleHint = NSLocalizedString(
     "BraveShieldsToggleHint",
     bundle: .module,
-    value: "Double-tap to toggle Brave Shields",
+    value: "Double-tap to toggle Shields",
     comment: "The accessibility hint spoken when focused on the main shields toggle"
   )
   public static let statusTitle = NSLocalizedString(
     "BraveShieldsStatusTitle",
     bundle: .module,
-    value: "Brave Shields",
+    value: "Shields",
     comment: "Context: 'Brave Shields Up' or 'Brave Shields Down'"
   )
   public static let statusValueUp = NSLocalizedString(
@@ -973,7 +973,7 @@ extension Strings.Shields {
   public static let aboutBraveShieldsTitle = NSLocalizedString(
     "AboutBraveShields",
     bundle: .module,
-    value: "About Brave Shields",
+    value: "About Shields",
     comment: "The title of the screen explaining Brave Shields"
   )
   public static let aboutBraveShieldsBody = NSLocalizedString(

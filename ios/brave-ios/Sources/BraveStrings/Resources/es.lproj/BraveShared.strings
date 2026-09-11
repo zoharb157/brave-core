@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "Acerca de";
 
-/* The title of the screen explaining Brave Shields */
+/* The title of the screen explaining Shields */
 "AboutBraveShields" = "Acerca de los escudos de Brave";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "Los sitios web suelen usar cookies y scripts que tratan de identificarte a ti y a tu dispositivo. Su intención es averiguar quién eres y rastrear tus movimientos por la web para saber lo que haces en cada sitio.\n\nBrave bloquea estos elementos para que puedas navegar sin que te sigan.";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -268,17 +268,17 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "Si no ves este sitio web correctamente, prueba a desactivar los escudos";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
+/* Context: 'Shields Up' or 'Shields Down' */
 "BraveShieldsStatusTitle" = "Escudos de Brave";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "desactivados";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "activados";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Toca dos veces para activar/desactivar Brave Shields";
+"BraveShieldsToggleHint" = "Toca dos veces para activar/desactivar Shields";
 
 /* The name of the feature */
 "bravetalk.braveTalkTitle" = "Videollamadas Brave";
@@ -632,7 +632,7 @@
 "defaultBrowserCallout.introPrimaryText" = "Abre todos los enlaces con Brave para proteger tu privacidad";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave Shields bloquea rastreadores y anuncios, guarda datos y te ayuda a ahorrar tiempo cada vez que visitas un sitio";
+"defaultBrowserCallout.introSecondaryText" = "Shields bloquea rastreadores y anuncios, guarda datos y te ayuda a ahorrar tiempo cada vez que visitas un sitio";
 
 /* Tertiary text on default browser popup screen */
 "defaultBrowserCallout.introTertiaryText" = "Abre Ajustes, toca en \"Aplicación de navegador predeterminado\" y selecciona Brave.";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "Playlist sin título";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "Cerrar el menú de escudos";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "Todas las alertas";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "Bloqueado por";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,7 +1723,7 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "La semana pasada";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
 "privacyHub.mostFrequentTrackerAndAdBody" = "Protecciones de Brave ha bloqueado **%1$@** en **%2$lld** sitios";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Compartir las noticias";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Brave Shields no ha hecho más que proteger tu privacidad en Internet.";
+"shieldEducation.trackerAdWarningSubTitle" = "Shields no ha hecho más que proteger tu privacidad en Internet.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "¡Enhorabuena! Eres muy especial.";
@@ -2555,10 +2555,10 @@
 "shieldEducation.videoAdBlockTitle" = "Los anuncios se bloquearán cuando veas los vídeos de este sitio web.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Opciones por defecto globales de Brave Shields";
+"ShieldsDefaults" = "Opciones por defecto globales de Shields";
 
 /* Section footer for global shields defaults */
-"ShieldsDefaultsFooter" = "Son ajustes por defecto Brave Shields para sitios nuevos. Se pueden cambiar sin que se alteren los ajustes actuales del sitio.";
+"ShieldsDefaultsFooter" = "Son ajustes por defecto Shields para sitios nuevos. Se pueden cambiar sin que se alteren los ajustes actuales del sitio.";
 
 /* No comment provided by engineer. */
 "ShieldsDownDisclaimer" = "Estás utilizando este sitio web sin la protección de privacidad de Brave. ¿Acaso no funciona bien con los escudos activados?";

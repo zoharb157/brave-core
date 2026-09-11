@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "Informació";
 
-/* The title of the screen explaining Brave Shields */
+/* The title of the screen explaining Shields */
 "AboutBraveShields" = "Sobre Escuts de Brave";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "Els llocs sovint inclouen galetes i scripts que intenten identificar-te a tu i al teu dispositiu. Volen esbrinar qui ets i seguir-te al web, fent un rastrejament de què fas a cada lloc.\n\nBrave bloqueja aquestes coses perquè puguis navegar sense ser perseguit.";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -268,13 +268,13 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "Si aquest enllaç apareix trencat, prova de desactivar Escuts";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
+/* Context: 'Shields Up' or 'Shields Down' */
 "BraveShieldsStatusTitle" = "Escuts de Brave";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "Avall";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "Amunt";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Cerca";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Brave Translate";
+"BraveTranslate.settingsMenuTitle" = "Translate";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Brave Translate";
+"BraveTranslate.settingsScreenTitle" = "Translate";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Si està habilitat, Brave Translate detecta automàticament l'idioma de la pàgina actual i mostra un botó de traducció a la barra d'URL.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Si està habilitat, Translate detecta automàticament l'idioma de la pàgina actual i mostra un botó de traducció a la barra d'URL.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Traductor habilitat";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "Llista de reproducció sense títol";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "Tanca el menú Escuts";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "Totes les alertes";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "Bloquejat per";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,7 +1723,7 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "Darrera setmana";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
 "privacyHub.mostFrequentTrackerAndAdBody" = "Escuts de Brave ha bloquejat **%1$@** a **%2$lld** llocs";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */

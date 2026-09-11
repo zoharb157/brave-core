@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "O opcijama";
 
-/* The title of the screen explaining Brave Shields */
-"AboutBraveShields" = "O značajci Brave Shields";
+/* The title of the screen explaining Shields */
+"AboutBraveShields" = "O značajci Shields";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "Na mrežnim se mjestima obično nalaze kolačići i skripte kojima se pokušavate identificirati vi i vaš uređaj. Njima se želi doznati tko ste i pratiti što radite na svakom mrežnom mjestu.\n\nU pregledniku Brave blokiraju se navedene stavke kako biste mogli pregledavati mrežu bez praćenja.";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -268,13 +268,13 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "Ako se čini da je mrežno mjesto neispravno, pokušajte isključiti štitove";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
+/* Context: 'Shields Up' or 'Shields Down' */
 "BraveShieldsStatusTitle" = "Štitnici Brave";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "Dolje";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "Podignuti";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
@@ -299,7 +299,7 @@
 "BraveTranslate.settingsScreenTitle" = "Brave Prevoditelj";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Kad je uključena, funkcionalnost Brave Translate automatski prepoznaje jezik vaše stranice i pokazuje gumb za prijevod u polju za URL.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Kad je uključena, funkcionalnost Translate automatski prepoznaje jezik vaše stranice i pokazuje gumb za prijevod u polju za URL.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Translate uključen";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "Popis za reprodukciju bez naslova";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "Zatvorite izbornik Štitova Brave";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "Sva upozorenja";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "Blokira:";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,7 +1723,7 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "Prošli tjedan";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
 "privacyHub.mostFrequentTrackerAndAdBody" = "Element **%1$@** za praćenje blokiran je značajkom Štitovi Brave na sljedećem broju mrežnih mjesta: **%2$lld**";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
@@ -2558,7 +2558,7 @@
 "ShieldsDefaults" = "Globalne zadane postavke Štitova Brave";
 
 /* Section footer for global shields defaults */
-"ShieldsDefaultsFooter" = "Ovo su zadane postavke značajke Brave Shields za nova mreža mjesta. Mijenjanjem ovih postavki ne mijenjaju se postojeće postavke prethodno postavljene za određeno mrežno mjesto.";
+"ShieldsDefaultsFooter" = "Ovo su zadane postavke značajke Shields za nova mreža mjesta. Mijenjanjem ovih postavki ne mijenjaju se postojeće postavke prethodno postavljene za određeno mrežno mjesto.";
 
 /* No comment provided by engineer. */
 "ShieldsDownDisclaimer" = "Pregledavate ovo mrežno mjesto bez sigurnosne zaštite i zaštite privatnosti preglednika Brave. Radi li ispravno s uključenom značajkom Štitnika?";

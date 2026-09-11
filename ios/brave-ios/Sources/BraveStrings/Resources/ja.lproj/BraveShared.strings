@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "企業情報";
 
-/* The title of the screen explaining Brave Shields */
+/* The title of the screen explaining Shields */
 "AboutBraveShields" = "Brave Shieldについて";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "多くのサイトには、お客様とお客様のデバイスを識別するためのクッキーやスクリプトが含まれています。これによってインターネット上のいたる所であなたを特定・追跡し、行動データを収集しようとしています。\n\nBraveはそういったものをブロックするので、あなたが追跡されることなくブラウジングすることが可能になります。";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "詳細設定";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Brave Shieldsとプライバシー";
+"BraveShieldsAndPrivacy" = "Shieldsとプライバシー";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Shieldsとプライバシー";
@@ -268,13 +268,13 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "もしサイトに正しく表示されていない場合は、Shieldをオフにしてみてください";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Brave Shields";
+/* Context: 'Shields Up' or 'Shields Down' */
+"BraveShieldsStatusTitle" = "Shields";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "オフ";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "オン";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
@@ -632,7 +632,7 @@
 "defaultBrowserCallout.introPrimaryText" = "プライバシーを保護するためすべてのリンクをBraveで開く";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave Shieldsはすべてのサイトでトラッカーと広告をブロックし、データ通信量と時間を節約します。";
+"defaultBrowserCallout.introSecondaryText" = "Shieldsはすべてのサイトでトラッカーと広告をブロックし、データ通信量と時間を節約します。";
 
 /* Tertiary text on default browser popup screen */
 "defaultBrowserCallout.introTertiaryText" = "アプリ設定画面で、「デフォルトのブラウザApp」をタップし、Braveを選択してください。";
@@ -1208,7 +1208,7 @@
 "OBShieldsDetail" = "プライバシーを侵害するトラッカーをブロックすることで、インターネット上でつきまとわれずにブラウジングすることができます。";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Brave Shields";
+"OBShieldsTitle" = "Shields";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "表示する";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "無題のプレイリスト";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "Shieldメニューを閉じる";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "すべてのアラート";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "ブロック:";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,8 +1723,8 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "先週";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "Brave Shieldsにより、**%1$@** が **%2$lld** 件のサイトでブロックされました";
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
+"privacyHub.mostFrequentTrackerAndAdBody" = "Shieldsにより、**%1$@** が **%2$lld** 件のサイトでブロックされました";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "最も検出頻度の高いトラッカーと広告";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "お知らせをシェアする";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Brave Shieldsがあなたのオンラインでのプライバシーを保護しました。";
+"shieldEducation.trackerAdWarningSubTitle" = "Shieldsがあなたのオンラインでのプライバシーを保護しました。";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "おめでとうございます。あなたは特別な存在です。いつもBraveをご利用いただきありがとうございます。";
@@ -2555,7 +2555,7 @@
 "shieldEducation.videoAdBlockTitle" = "このサイトで動画を見ているとき広告はブロックされています。";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Brave Shieldsの全体のデフォルト設定";
+"ShieldsDefaults" = "Shieldsの全体のデフォルト設定";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "今後アクセスするサイトに適用されるデフォルトのShield設定です。こちらを変更しても個別サイトの設定には影響しません。";

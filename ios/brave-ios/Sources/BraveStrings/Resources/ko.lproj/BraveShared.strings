@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "정보";
 
-/* The title of the screen explaining Brave Shields */
+/* The title of the screen explaining Shields */
 "AboutBraveShields" = "Brave 실드 정보";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "사이트에는 방문자와 방문자의 기기를 식별하기 위한 쿠키 및 스크립트가 포함되어 있을 수 있습니다. 이러한 요소는 방문자를 식별하고 방문자가 방문하는 웹사이트를 따라다니며 모든 사이트에서의 방문자 행동 패턴을 추적합니다.\n\nBrave는 이러한 요소를 차단하므로 추적되지 않고 브라우징을 즐길 수 있습니다.";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "고급 컨트롤";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Brave Shields 및 프라이버시";
+"BraveShieldsAndPrivacy" = "Shields 및 프라이버시";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Shields 및 프라이버시";
@@ -268,17 +268,17 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "이 사이트가 손상된 것 같으면 실드 다운을 시도합니다";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Brave Shields";
+/* Context: 'Shields Up' or 'Shields Down' */
+"BraveShieldsStatusTitle" = "Shields";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "해제";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "사용";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "두 번 탭하여 Brave Shields 토글";
+"BraveShieldsToggleHint" = "두 번 탭하여 Shields 토글";
 
 /* The name of the feature */
 "bravetalk.braveTalkTitle" = "Brave Talk";
@@ -632,7 +632,7 @@
 "defaultBrowserCallout.introPrimaryText" = "모든 링크를 Brave로 열어 프라이버시를 보호하세요.";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave Shields가 트래커와 광고를 차단하여 사이트를 방문할 때마다 데이터와 시간을 절약합니다.";
+"defaultBrowserCallout.introSecondaryText" = "Shields가 트래커와 광고를 차단하여 사이트를 방문할 때마다 데이터와 시간을 절약합니다.";
 
 /* Tertiary text on default browser popup screen */
 "defaultBrowserCallout.introTertiaryText" = "설정을 열고 기본 브라우저 앱을 탭한 다음 Brave를 선택하세요.";
@@ -1208,7 +1208,7 @@
 "OBShieldsDetail" = "프라이버시를 침해하는 트래커를 차단하여 웹에서 불필요한 사이트 방문 없이 브라우징 가능";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Brave Shields";
+"OBShieldsTitle" = "Shields";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "표시";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "무제 재생목록";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "Shields 메뉴 닫기";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "모든 경고";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "차단됨 -";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,8 +1723,8 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "지난주";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@**이(가) Brave Shields에 의해 **%2$lld**개 사이트에서 차단됨";
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
+"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@**이(가) Shields에 의해 **%2$lld**개 사이트에서 차단됨";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "가장 자주 탐지되는 트래커와 광고";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "뉴스 공유";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Brave Shields가 방금 온라인 프라이버시를 보호해드렸습니다.";
+"shieldEducation.trackerAdWarningSubTitle" = "Shields가 방금 온라인 프라이버시를 보호해드렸습니다.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "축하합니다. 정말 특별하십니다.";
@@ -2555,7 +2555,7 @@
 "shieldEducation.videoAdBlockTitle" = "이 웹사이트에서 동영상을 시청하는 동안 광고가 차단되었습니다.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Brave Shields 전역 기본값";
+"ShieldsDefaults" = "Shields 전역 기본값";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "새 사이트에 적용되는 기본 Shields 설정이 있습니다. 설정을 변경해도 기존 사이트별 설정에는 영향을 주지 않습니다.";

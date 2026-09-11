@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "حول";
 
-/* The title of the screen explaining Brave Shields */
-"AboutBraveShields" = "حول Brave Shields";
+/* The title of the screen explaining Shields */
+"AboutBraveShields" = "حول Shields";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "غالبًا ما تتضمن المواقع ملفات تعريف الارتباط والبرامج النصية التي تحاول التعرف عليك وعلى جهازك. وتريد معرفة هويتك ومتابعتك عبر الويب - تتبع ما تفعله على كل موقع.\n\nيقوم Brave بحظر هذه الأشياء حتى تتمكن من التصفح دون متابعة.";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "الضوابط المتقدمة";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Brave Shields والخصوصية";
+"BraveShieldsAndPrivacy" = "Shields والخصوصية";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Shields والخصوصية";
@@ -268,17 +268,17 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "إذا ظهر هذا الموقع معطلًا ، فجرب إيقاف Shields";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
+/* Context: 'Shields Up' or 'Shields Down' */
 "BraveShieldsStatusTitle" = "دروع Brave";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "الأسفل";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "أعلى";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "انقر نقرًا مزدوجًا لتبديل Brave Shields";
+"BraveShieldsToggleHint" = "انقر نقرًا مزدوجًا لتبديل Shields";
 
 /* The name of the feature */
 "bravetalk.braveTalkTitle" = "محادثة Brave";
@@ -299,7 +299,7 @@
 "BraveTranslate.settingsScreenTitle" = "ترجمة Brave";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "عند تمكين Brave Translate، سوف يتعرف تلقائيًا على اللغة الحالية لصفحتك ويعرض زرًا للترجمة في شريط عنوان URL.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "عند تمكين Translate، سوف يتعرف تلقائيًا على اللغة الحالية لصفحتك ويعرض زرًا للترجمة في شريط عنوان URL.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "تم تمكين الترجمة";
@@ -632,7 +632,7 @@
 "defaultBrowserCallout.introPrimaryText" = "افتح جميع الروابط بواسطة متصفح Brave لحماية خصوصيتك";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "تقوم Brave Shields بحظر أدوات التتبع والإعلانات، وتحفظ البيانات، وتوفّر الوقت في كل موقع تزوره";
+"defaultBrowserCallout.introSecondaryText" = "تقوم Shields بحظر أدوات التتبع والإعلانات، وتحفظ البيانات، وتوفّر الوقت في كل موقع تزوره";
 
 /* Tertiary text on default browser popup screen */
 "defaultBrowserCallout.introTertiaryText" = "افتح الإعدادات، وانقر فوق تطبيق المتصفح الافتراضي، وحدد Brave.";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "قائمة تشغيل بدون عنوان";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "إغلاق قائمة Shields";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "جميع التنبيهات";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "تم حظره بواسطة";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,8 +1723,8 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "الأسبوع الماضي";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "تم حظر **%1$@** بواسطة Brave Shields على مواقع **%2$ lld**";
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
+"privacyHub.mostFrequentTrackerAndAdBody" = "تم حظر **%1$@** بواسطة Shields على مواقع **%2$ lld**";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "أداة التتبع والإعلان الأكثر شيوعًا";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "مشاركة الأخبار";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "قامت Brave Shields بحماية خصوصيتك على الإنترنت.";
+"shieldEducation.trackerAdWarningSubTitle" = "قامت Shields بحماية خصوصيتك على الإنترنت.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "تهانينا. أنت مميز جدًا.";
@@ -2555,7 +2555,7 @@
 "shieldEducation.videoAdBlockTitle" = "يتم حظر الإعلانات أثناء مشاهدة مقاطع الفيديو على هذا الموقع.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "إعدادات Brave Shields الافتراضية العالمية";
+"ShieldsDefaults" = "إعدادات Shields الافتراضية العالمية";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "هذه هي إعدادات طرق الحماية الافتراضية للمواقع الجديدة. لن يؤثر تغييرها على إعداداتك الحالية لكل موقع";

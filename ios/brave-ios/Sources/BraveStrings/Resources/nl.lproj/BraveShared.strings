@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "Over";
 
-/* The title of the screen explaining Brave Shields */
-"AboutBraveShields" = "Over Brave Shields";
+/* The title of the screen explaining Shields */
+"AboutBraveShields" = "Over Shields";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "Sites bevatten vaak cookies en scripts die zowel jou als je apparaat proberen te identificeren. Ze willen erachter komen wie je bent, je over het hele web volgen en bijhouden wat je op elke site doet.\n\nBrave blokkeert deze dingen, zodat je kunt surfen zonder dat je gevolgd wordt.";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Geavanceerde instellingen";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Brave Shields & Privacy";
+"BraveShieldsAndPrivacy" = "Shields & Privacy";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Shields & Privacy";
@@ -268,17 +268,17 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "Als deze site niet correct werkt, zet je Shields uit";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Brave Shields";
+/* Context: 'Shields Up' or 'Shields Down' */
+"BraveShieldsStatusTitle" = "Shields";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "Uit";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "Aan";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Dubbeltik om Brave Shields aan of uit te zetten";
+"BraveShieldsToggleHint" = "Dubbeltik om Shields aan of uit te zetten";
 
 /* The name of the feature */
 "bravetalk.braveTalkTitle" = "Brave Talk";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Zoeken";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Brave Translate";
+"BraveTranslate.settingsMenuTitle" = "Translate";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Brave Translate";
+"BraveTranslate.settingsScreenTitle" = "Translate";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Als Brave Translate is ingeschakeld, wordt de huidige taal van je pagina automatisch gedetecteerd en wordt een vertaalknop in de URL-balk weergegeven.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Als Translate is ingeschakeld, wordt de huidige taal van je pagina automatisch gedetecteerd en wordt een vertaalknop in de URL-balk weergegeven.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Translate ingeschakeld";
@@ -632,7 +632,7 @@
 "defaultBrowserCallout.introPrimaryText" = "Open alle links met Brave om je privacy te beschermen";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave Shields blokkeert niet alleen trackers en advertenties, maar zorgt er ook voor dat je data en tijd bespaart wanneer je sites bezoekt";
+"defaultBrowserCallout.introSecondaryText" = "Shields blokkeert niet alleen trackers en advertenties, maar zorgt er ook voor dat je data en tijd bespaart wanneer je sites bezoekt";
 
 /* Tertiary text on default browser popup screen */
 "defaultBrowserCallout.introTertiaryText" = "Open Instellingen, tik op 'Standaard browserapp' en selecteer Brave.";
@@ -1208,7 +1208,7 @@
 "OBShieldsDetail" = "Blokkeer trackers die je privacy niet respecteren, zodat je kunt browsen zonder gevolgd te worden";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Brave Shields";
+"OBShieldsTitle" = "Shields";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "Toon me";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "Naamloze playlist";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "Sluit Shields-menu";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "Alle waarschuwingen";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "Geblokkeerd door";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,8 +1723,8 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "Vorige week";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** is door Brave Shields geblokkeerd op **%2$lld** sites";
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
+"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** is door Shields geblokkeerd op **%2$lld** sites";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "Meest frequente tracker en advertentie";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Deel het nieuws";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Brave Shields heeft net je online privacy beschermd.";
+"shieldEducation.trackerAdWarningSubTitle" = "Shields heeft net je online privacy beschermd.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "Gefeliciteerd! Je bent heel bijzonder.";
@@ -2555,7 +2555,7 @@
 "shieldEducation.videoAdBlockTitle" = "Advertenties worden geblokkeerd wanneer je video's op deze website bekijkt.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Standaardinstellingen van Brave Shields";
+"ShieldsDefaults" = "Standaardinstellingen van Shields";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "Hier vind je de standaard Shields-instellingen voor nieuwe sites. Als je deze instellingen wijzigt, blijven de bestaande instellingen voor specifieke websites ongewijzigd.";

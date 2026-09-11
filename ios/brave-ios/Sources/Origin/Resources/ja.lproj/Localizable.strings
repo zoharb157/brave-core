@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "アドブロック、プライバシー、 & スピードを維持";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "Brave Shields を中心とした最小限のブラウザUI";
+"upsellMinimalUI" = "Shields を中心とした最小限のブラウザUI";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "一度きりの購入は、お使いのすべてのデバイスで複数回有効化できます";

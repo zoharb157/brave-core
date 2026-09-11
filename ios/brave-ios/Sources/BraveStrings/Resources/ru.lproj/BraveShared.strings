@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "О нас";
 
-/* The title of the screen explaining Brave Shields */
+/* The title of the screen explaining Shields */
 "AboutBraveShields" = "О щитах Brave";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "Чтобы распознавать пользователей и их устройства, сайты используют файлы cookie и скрипты. Это значит, что действия в Интернете могут отслеживаться.\n\nBrave защищает вашу конфиденциальность, поэтому блокирует скрипты и файлы cookie.";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -268,17 +268,17 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "Проблемы с сайтом? Попробуйте выключить щиты.";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
+/* Context: 'Shields Up' or 'Shields Down' */
 "BraveShieldsStatusTitle" = "Защита Brave";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "выкл";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "вкл";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Brave Shields: чтобы переключить, нажмите дважды";
+"BraveShieldsToggleHint" = "Shields: чтобы переключить, нажмите дважды";
 
 /* The name of the feature */
 "bravetalk.braveTalkTitle" = "Brave Разговоры";
@@ -632,7 +632,7 @@
 "defaultBrowserCallout.introPrimaryText" = "Для безопасности открывайте ссылки с помощью Brave";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave Shields блокирует трекеры и рекламу, сохраняет данные и экономит ваше время на каждом посещаемом вами сайте";
+"defaultBrowserCallout.introSecondaryText" = "Shields блокирует трекеры и рекламу, сохраняет данные и экономит ваше время на каждом посещаемом вами сайте";
 
 /* Tertiary text on default browser popup screen */
 "defaultBrowserCallout.introTertiaryText" = "Откройте настройки, нажмите «Браузерное приложение по умолчанию» и выберите Brave.";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "Плейлист без названия";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "Закрыть меню «Щиты»";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "Все оповещения";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "Блокировщик:";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,7 +1723,7 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "За неделю";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
 "privacyHub.mostFrequentTrackerAndAdBody" = "Сайтов, на которых Brave Щит заблокировал **%1$@**: **%2$lld**";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
@@ -2036,7 +2036,7 @@
 "ReportBrokenPlaceholder" = "Выберите один вариант";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Сообщите разработчикам Brave, что этот сайт некорректно работает с системой Brave Shields:";
+"ReportBrokenSiteBody1" = "Сообщите разработчикам Brave, что этот сайт некорректно работает с системой Shields:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
 "ReportBrokenSiteBody2" = "Примечание. В отчете, который вы отправите на серверы Brave, будет указан адрес сайта, версия Brave, настройки Щита, статус VPN и языковые параметры.";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Поделиться новостями";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Brave Shields защищает вашу конфиденциальность.";
+"shieldEducation.trackerAdWarningSubTitle" = "Shields защищает вашу конфиденциальность.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "Поздравляем! Отличный результат!";
@@ -2555,10 +2555,10 @@
 "shieldEducation.videoAdBlockTitle" = "Реклама блокируется во время просмотра видео на этом сайте";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Общие настройки Brave Shields по умолчанию";
+"ShieldsDefaults" = "Общие настройки Shields по умолчанию";
 
 /* Section footer for global shields defaults */
-"ShieldsDefaultsFooter" = "Это настройки Brave Shields по умолчанию для новых сайтов. Их изменение не повлияет на уже заданные настройки для отдельных сайтов.";
+"ShieldsDefaultsFooter" = "Это настройки Shields по умолчанию для новых сайтов. Их изменение не повлияет на уже заданные настройки для отдельных сайтов.";
 
 /* No comment provided by engineer. */
 "ShieldsDownDisclaimer" = "Вы выключили защиту конфиденциальности. Сайт неправильно отображается при включенных щитах?";

@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "Behold grunnleggende annonseblokkering, personvern og hastighet";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "Minimalistisk nettlesergrensesnitt med fokus på Brave Shields";
+"upsellMinimalUI" = "Minimalistisk nettlesergrensesnitt med fokus på Shields";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "Engangskjøp kan aktiveres flere ganger på tvers av alle enhetene dine";

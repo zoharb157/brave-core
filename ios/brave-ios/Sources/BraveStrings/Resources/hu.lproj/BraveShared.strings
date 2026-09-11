@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "Névjegy";
 
-/* The title of the screen explaining Brave Shields */
-"AboutBraveShields" = "Bővebben a Brave Shieldsről";
+/* The title of the screen explaining Shields */
+"AboutBraveShields" = "Bővebben a Shieldsről";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "A webhelyek gyakran tartalmaznak cookie-kat és szkripteket, amelyek megpróbálják azonosítani Önt és eszközét. Ki akarják deríteni, hogy Ön kicsoda, és követni akarják Önt az interneten – minden webhelyen nyomon követik, mit csinál.\n\nA Brave letiltja ezeket a dolgokat, így anélkül böngészhet, hogy követnék.";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Speciális vezérlők";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Brave Shields és adatvédelem";
+"BraveShieldsAndPrivacy" = "Shields és adatvédelem";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Shields és adatvédelem";
@@ -268,13 +268,13 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "Ha ez a webhely hibásnak tűnik, próbálja ki a Pajzsok funkciót";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
+/* Context: 'Shields Up' or 'Shields Down' */
 "BraveShieldsStatusTitle" = "Brave védelem";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "Lefelé";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "Fel";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
@@ -299,7 +299,7 @@
 "BraveTranslate.settingsScreenTitle" = "Brave fordítás";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Ha engedélyezi a Brave Translate-et, akkor az automatikusan felismeri az oldal aktuális nyelvét, és megjeleníti a fordítás gombot az URL sávban.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Ha engedélyezi a Translate-et, akkor az automatikusan felismeri az oldal aktuális nyelvét, és megjeleníti a fordítás gombot az URL sávban.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Fordítás engedélyezve";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "Cím nélküli lejátszási lista";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "Pajzsok menü bezárása";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "Minden figyelmeztetés";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "Letiltotta:";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,7 +1723,7 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "Előző hét";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
 "privacyHub.mostFrequentTrackerAndAdBody" = "A Brave-védelem **%2$lld** oldalon blokkolta a következőt: **%1$@**";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */

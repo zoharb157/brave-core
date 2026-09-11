@@ -1,10 +1,10 @@
 /* About settings section title */
 "About" = "Informacje";
 
-/* The title of the screen explaining Brave Shields */
-"AboutBraveShields" = "Brave Shields – informacje";
+/* The title of the screen explaining Shields */
+"AboutBraveShields" = "Shields – informacje";
 
-/* The body of the screen explaining Brave Shields */
+/* The body of the screen explaining Shields */
 "AboutBraveShieldsBody" = "Witryny często wysyłają pliki cookie i skrypty, które próbują zidentyfikować Ciebie i Twoje urządzenie. Chcą dowiedzieć się, kim jesteś, śledząc Twoje działania w każdej witrynie.\n\nBrave blokuje te próby, tak aby możliwe było przeglądanie bez śledzenia.";
 
 /* See http://mzl.la/1G7uHo7 */
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Opcje zaawansowane";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Brave Shields i prywatność";
+"BraveShieldsAndPrivacy" = "Shields i prywatność";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Shields i prywatność";
@@ -268,17 +268,17 @@
 /* No comment provided by engineer. */
 "BraveShieldsSiteBroken" = "Jeśli strona wygląda nieprawidłowo, spróbuj wyłączyć funkcję ochrony";
 
-/* Context: 'Brave Shields Up' or 'Brave Shields Down' */
+/* Context: 'Shields Up' or 'Shields Down' */
 "BraveShieldsStatusTitle" = "Tarcze Brave";
 
-/* Context: The 'Down' in 'Brave Shields Down' */
+/* Context: The 'Down' in 'Shields Down' */
 "BraveShieldsStatusValueDown" = "Wyłączone";
 
-/* Context: The 'Up' in 'Brave Shields Up' */
+/* Context: The 'Up' in 'Shields Up' */
 "BraveShieldsStatusValueUp" = "Włącz";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Dotknij dwukrotnie, aby włączyć lub wyłączyć Brave Shields";
+"BraveShieldsToggleHint" = "Dotknij dwukrotnie, aby włączyć lub wyłączyć Shields";
 
 /* The name of the feature */
 "bravetalk.braveTalkTitle" = "Brave Talk";
@@ -632,7 +632,7 @@
 "defaultBrowserCallout.introPrimaryText" = "Otwieraj wszystkie odsyłacze za pomocą przeglądarki Brave, aby chronić swoją prywatność";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave Shields blokuje programy śledzące i reklamy, zapisuje dane oraz oszczędza czas w każdej odwiedzanej witrynie";
+"defaultBrowserCallout.introSecondaryText" = "Shields blokuje programy śledzące i reklamy, zapisuje dane oraz oszczędza czas w każdej odwiedzanej witrynie";
 
 /* Tertiary text on default browser popup screen */
 "defaultBrowserCallout.introTertiaryText" = "Otwórz „Ustawienia”, dotknij „Domyślna aplikacja przeglądarki” i wybierz „Brave”.";
@@ -1657,7 +1657,7 @@
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "Lista odtwarzania bez tytułu";
 
-/* Description for closing the `Brave Shields` popover menu that is displayed. */
+/* Description for closing the `Shields` popover menu that is displayed. */
 "PopoverShieldsMenuClose" = "Zamknij menu Shields";
 
 /* Settings privacy section title */
@@ -1699,7 +1699,7 @@
 /* Text for a button to display a list of all alerts caught by the Brave VPN. VPN alert is a notificaion of what item has been blocked by the vpn, similar to a regular adblocker */
 "privacyHub.allVPNAlertsButtonText" = "Wszystkie alarmy";
 
-/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Brave Shields', 'Blocked by BraveVPN */
+/* Text which explain by what type of ad blocker a given resource was blocked. Context is like: 'Blocked by Shields', 'Blocked by BraveVPN */
 "privacyHub.blockedBy" = "Zablokowane przez";
 
 /* It says that a ad or tracker was blocked. Think of it in context of 'A tracker X was blocked' */
@@ -1723,8 +1723,8 @@
 /* Header text, under it we display blocked items from last week */
 "privacyHub.lastWeekHeader" = "W zeszłym tygodniu";
 
-/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** zostało zablokowane przez Brave Shields na **%2$lld** witrynach";
+/* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Shields on 42 sites' */
+"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** zostało zablokowane przez Shields na **%2$lld** witrynach";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "Najczęstszy skrypt śledzący i reklama";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Udostępnij wiadomości";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Brave Shields właśnie ochronił Twoją prywatność.";
+"shieldEducation.trackerAdWarningSubTitle" = "Shields właśnie ochronił Twoją prywatność.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "Gratulacje. Jesteś naprawdę wyjątkową osobą.";
@@ -2555,7 +2555,7 @@
 "shieldEducation.videoAdBlockTitle" = "Reklamy są blokowane podczas oglądania filmów w tej witrynie.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Ogólne domyślne ustawienia Brave Shields";
+"ShieldsDefaults" = "Ogólne domyślne ustawienia Shields";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "Są to domyślne ustawienia Shields dla nowych stron. Ich zmiana nie wpłynie na istniejące ustawienia każdej strony.";

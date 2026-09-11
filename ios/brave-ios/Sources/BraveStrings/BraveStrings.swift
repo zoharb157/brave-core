@@ -3012,7 +3012,7 @@ extension Strings {
     "BraveShieldsAndPrivacy",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Brave Shields & Privacy",
+    value: "Shields & Privacy",
     comment: ""
   )
   public static let braveShieldsAndPrivacySettingsTitle = NSLocalizedString(
@@ -3857,7 +3857,7 @@ extension Strings {
     "OBShieldsTitle",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Brave Shields",
+    value: "Shields",
     comment: "Title for shields onboarding screen"
   )
   public static let OBShieldsDetail = NSLocalizedString(
@@ -4247,7 +4247,7 @@ extension Strings {
         "shieldEducation.trackerAdWarningSubTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Brave Shields just protected your online privacy.",
+        value: "Shields just protected your online privacy.",
         comment: "Subtitle for Shield Education Tracker Ad Warning"
       )
 
@@ -7959,7 +7959,7 @@ extension Strings {
       "privacyHub.mostFrequentTrackerAndAdBody",
       tableName: "BraveShared",
       bundle: .module,
-      value: "**%@** was blocked by Brave Shields on **%lld** sites",
+      value: "**%@** was blocked by Shields on **%lld** sites",
       comment:
         "Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites'"
     )
@@ -8704,7 +8704,7 @@ extension Strings {
     public static let showShieldsTitle = NSLocalizedString(
       "showShieldsTitle",
       bundle: .module,
-      value: "Open Brave Shields",
+      value: "Open Shields",
       comment:
         "Label to display in the Discoverability overlay for keyboard shortcuts which is for Showing Brave Shields"
     )
@@ -8981,7 +8981,7 @@ extension Strings {
       "BraveTranslate.settingsMenuTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave Translate",
+      value: "Translate",
       comment: "This text is for the settings menu for all Brave-Translate options."
     )
 
@@ -8989,7 +8989,7 @@ extension Strings {
       "BraveTranslate.settingsScreenTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave Translate",
+      value: "Translate",
       comment: "This text is for the translate settings screen. It's the title of the settings menu."
     )
 
@@ -9005,7 +9005,7 @@ extension Strings {
       "BraveTranslate.settingsTranslateEnabledOptionDescription",
       tableName: "BraveShared",
       bundle: .module,
-      value: "When enabled, Brave Translate will automatically detect your page's current language, and display a translate button in the URL bar.",
+      value: "When enabled, Translate will automatically detect your page's current language, and display a translate button in the URL bar.",
       comment: "This text is for a Toggle that allows the user to enable or disable page translation."
     )
 

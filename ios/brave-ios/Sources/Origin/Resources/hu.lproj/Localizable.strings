@@ -80,7 +80,7 @@
 "upsellCoreFeatures" = "Az alapvető hirdetésblokkolás, adatvédelem és sebesség fenntartása";
 
 /* An upsell point about minimal browser UI */
-"upsellMinimalUI" = "Minimalista böngésző felhasználói felület a Brave Shields középpontjában";
+"upsellMinimalUI" = "Minimalista böngésző felhasználói felület a Shields középpontjában";
 
 /* An upsell point about the one-time purchase model */
 "upsellOneTimePurchase" = "Az egyszeri vásárlás többször is aktiválható az összes eszközén";
