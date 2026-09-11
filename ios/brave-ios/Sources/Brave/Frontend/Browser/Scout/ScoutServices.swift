@@ -4,6 +4,8 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import Foundation
+import Onboarding
+import Preferences
 import Scout
 
 /// Owns the guard's collaborators for the app.
@@ -33,24 +35,23 @@ public final class ScoutServices {
   /// unacceptable UX, and the real fix is precheck plus the verdict cache.
   private static let checkTimeout: TimeInterval = 12.0
 
+  /// Lists, scheme rules and fail mode (server-synced later).
   public let policy: PolicyStore
+  /// What the guard decides with: `policy`, but with blocked categories read
+  /// live from the user's choice (onboarding / Settings → Blocked Content).
+  public let decisionPolicy: PolicyProviding
   private let cache: VerdictCache
   private let checker: SafetyChecker
   public let guard_: NavigationGuard
 
   private init() {
     policy = PolicyStore(policy: .makeDefault())
+    decisionPolicy = UserCategoryPolicy(
+      base: policy, blockedCategories: { Preferences.ScoutBlocking.chosen })
     cache = VerdictCache(maxEntries: 2000, now: { Date() })
     checker = CoalescingSafetyChecker(
       transport: NetworkSafetyTransport(endpoint: Self.checkEndpoint))
     guard_ = NavigationGuard(
-      policy: policy, cache: cache, checker: checker, timeout: Self.checkTimeout)
-  }
-
-  /// Replaces the active policy (onboarding and settings call this).
-  public func apply(blockedCategories: Set<ContentCategory>) {
-    var updated = Policy.makeDefault()
-    updated.blockedCategories = blockedCategories
-    policy.setPolicy(updated)
+      policy: decisionPolicy, cache: cache, checker: checker, timeout: Self.checkTimeout)
   }
 }

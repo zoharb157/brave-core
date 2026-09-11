@@ -23,4 +23,9 @@ public enum ContentCategory: String, CaseIterable, Hashable {
   public static func set(fromWire strings: [String]) -> Set<ContentCategory> {
     Set(strings.compactMap(ContentCategory.init(wireString:)))
   }
+
+  /// The canonical names to persist a set under; `set(fromWire:)` reads them back.
+  public static func wire(_ categories: Set<ContentCategory>) -> [String] {
+    categories.map(\.rawValue).sorted()
+  }
 }

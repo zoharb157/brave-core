@@ -835,6 +835,18 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       uuid: featureSectionUUID.uuidString
     )
 
+    section.rows.append(
+      Row(
+        text: Strings.ScoutBlocking.settingsTitle,
+        selection: { [unowned self] in
+          let controller = UIHostingController(rootView: ScoutBlockingSettingsView())
+          self.navigationController?.pushViewController(controller, animated: true)
+        },
+        image: UIImage(systemName: "hand.raised"),
+        accessory: .disclosureIndicator
+      )
+    )
+
     if BraveRewards.isSupported(prefService: braveCore.profile.prefs), let rewards = rewards {
       section.rows += [
         Row(

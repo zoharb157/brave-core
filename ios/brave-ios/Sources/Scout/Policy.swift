@@ -16,8 +16,13 @@ public struct Policy {
     self.schemes = schemes; self.failMode = failMode
   }
 
+  /// What Scout blocks until the user chooses: the two categories most people
+  /// want gone. Ads stay opt-in because blocking whole ad-heavy pages changes
+  /// how many sites behave.
+  public static let recommendedBlockedCategories: Set<ContentCategory> = [.adult, .gambling]
+
   public static func makeDefault() -> Policy {
-    Policy(blockedCategories: [.adult, .gambling],
+    Policy(blockedCategories: recommendedBlockedCategories,
            allow: [],
            block: [],
            schemes: ["data": .block, "file": .block],

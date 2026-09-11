@@ -468,6 +468,7 @@ var package = Package(
     .target(
       name: "Onboarding",
       dependencies: [
+        "Scout",
         "BraveCore",
         "BraveShared",
         "BraveStrings",

@@ -37,7 +37,7 @@ enum ScoutPages {
   static func resultHTML(for decision: Scout.Decision, siteURL: URL) -> String {
     let matched =
       decision.verdict?.categories
-      .intersection(ScoutServices.shared.policy.blockedCategories) ?? []
+      .intersection(ScoutServices.shared.decisionPolicy.blockedCategories) ?? []
     return channelled(
       ScoutInterstitial.html(
         type: decision.type,
@@ -81,6 +81,13 @@ enum ScoutPages {
   /// the decision lands. Neither (back/forward or restore after the cache
   /// dropped it): check now, then answer.
   static func html(for siteURL: URL) async -> String {
+    if let recorded = recent[siteURL], let verdict = recorded.verdict {
+      // Re-resolve against the current choice: the user may have changed
+      // what Scout blocks since this was recorded.
+      let current = NavigationGuard.resolve(
+        verdict, blockedCategories: ScoutServices.shared.decisionPolicy.blockedCategories)
+      return settled(current, siteURL: siteURL)
+    }
     if let decision = recent[siteURL] ?? ScoutServices.shared.guard_.decideImmediately(siteURL) {
       return settled(decision, siteURL: siteURL)
     }
