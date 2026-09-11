@@ -191,7 +191,7 @@ class UserScriptManager {
   }
 
   func fetchWalletScripts(from braveWalletAPI: BraveWalletAPI) {
-    if !braveWalletAPI.isAllowed {
+    if !braveWalletAPI.isAllowedInScout {
       return
     }
     if let ethJS = braveWalletAPI.providerScripts(for: .eth)[.ethereum] {

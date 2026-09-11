@@ -1936,7 +1936,7 @@ public class BrowserViewController: UIViewController {
   }
 
   func showWeb3ServiceInterstitialPage(service: Web3Service, originalURL: URL) {
-    if !profileController.braveWalletAPI.isAllowed {
+    if !profileController.braveWalletAPI.isAllowedInScout {
       return
     }
     dismissSearchInput()

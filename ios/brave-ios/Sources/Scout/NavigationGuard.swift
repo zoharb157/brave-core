@@ -68,7 +68,10 @@ public final class NavigationGuard {
     url.scheme == "http" || url.scheme == "https"
   }
 
-  public func decide(_ url: URL) async -> Decision {
+  /// The decision if it needs no network call (scheme rule, policy list, or a
+  /// cached verdict), otherwise nil. Lets the browser skip the "checking" page
+  /// entirely for anything it already knows.
+  public func decideImmediately(_ url: URL) -> Decision? {
     if !isHTTP(url) {
       switch policy.schemeDecision(url) {
       case .some(.allow): return Decision(type: .allow, reason: .scheme)
@@ -82,6 +85,13 @@ public final class NavigationGuard {
     }
     if let cached = cache.get(url) {
       return Self.resolve(cached, blockedCategories: policy.blockedCategories)
+    }
+    return nil
+  }
+
+  public func decide(_ url: URL) async -> Decision {
+    if let immediate = decideImmediately(url) {
+      return immediate
     }
     let result = await checker.check(url, timeout: timeout)
     if result.status == .ok, let v = result.verdict {

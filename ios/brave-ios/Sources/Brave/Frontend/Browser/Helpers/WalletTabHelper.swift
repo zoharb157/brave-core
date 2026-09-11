@@ -94,7 +94,7 @@ class WalletTabHelper: NSObject, TabObserver {
   // MARK: -
 
   private func createProviders() {
-    guard let tab, let braveWalletAPI, braveWalletAPI.isAllowed,
+    guard let tab, let braveWalletAPI, braveWalletAPI.isAllowedInScout,
       !FeatureList.kUseProfileWebViewConfiguration.enabled
     else {
       return

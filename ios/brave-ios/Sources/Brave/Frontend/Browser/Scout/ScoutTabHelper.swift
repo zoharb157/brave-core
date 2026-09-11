@@ -69,36 +69,57 @@ public class ScoutTabHelper: TabPolicyDecider {
       return .allow
     }
 
+    // The navigation we re-issued ourselves after an allow. Let it through
+    // exactly once — even a fail-open allow, which is never cached.
+    if approvedURL == requestURL {
+      approvedURL = nil
+      return .allow
+    }
+
+    let host = requestURL.host ?? requestURL.absoluteString
+    let services = ScoutServices.shared
+
+    // Known already (policy list or cached verdict): no checking page at all.
+    if let decision = services.guard_.decideImmediately(requestURL) {
+      if decision.type == .allow { return .allow }
+      showResult(decision, for: requestURL, host: host, in: tab)
+      return .cancel
+    }
+
     // The service fetches and AI-analyses the page, which takes seconds. Show
     // that work rather than freezing the tab and then producing a verdict out
     // of nowhere: cancel now, show the checking page, and resolve when the
     // decision lands.
-    let host = requestURL.host ?? requestURL.absoluteString
     tab.loadHTMLString(channelled(ScoutInterstitial.checkingHTML(host: host)), baseURL: nil)
 
-    Task { @MainActor [weak tab] in
-      let decision = await ScoutServices.shared.guard_.decide(requestURL)
-      guard let tab else { return }
+    Task { @MainActor [weak self, weak tab] in
+      let decision = await services.guard_.decide(requestURL)
+      guard let self, let tab else { return }
 
       if decision.type == .allow {
-        // The verdict is cached now, so re-navigating re-decides in ~0 ms and
-        // is allowed through rather than looping back into this branch.
+        approvedURL = requestURL
         tab.loadRequest(URLRequest(url: requestURL))
         return
       }
-
-      let matched = decision.verdict?.categories
-        .intersection(ScoutServices.shared.policy.blockedCategories) ?? []
-      let html = ScoutInterstitial.html(
-        type: decision.type,
-        verdict: decision.verdict,
-        reason: decision.reason,
-        matchedCategories: matched,
-        host: host)
-      ScoutInterstitialState.shared.record(blockedURL: requestURL, in: tab)
-      tab.loadHTMLString(channelled(html), baseURL: nil)
+      showResult(decision, for: requestURL, host: host, in: tab)
     }
     return .cancel
+  }
+
+  /// One-shot pass for the navigation this helper re-issues after an allow.
+  private var approvedURL: URL?
+
+  private func showResult(_ decision: Scout.Decision, for url: URL, host: String, in tab: some TabState) {
+    let matched = decision.verdict?.categories
+      .intersection(ScoutServices.shared.policy.blockedCategories) ?? []
+    let html = ScoutInterstitial.html(
+      type: decision.type,
+      verdict: decision.verdict,
+      reason: decision.reason,
+      matchedCategories: matched,
+      host: host)
+    ScoutInterstitialState.shared.record(blockedURL: url, in: tab)
+    tab.loadHTMLString(channelled(html), baseURL: nil)
   }
 }
 

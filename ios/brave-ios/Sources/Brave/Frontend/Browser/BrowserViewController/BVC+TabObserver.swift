@@ -71,7 +71,7 @@ extension BrowserViewController: TabObserver {
         }
         // dismiss wallet notification (e.g. after redirect to different origin)
         removeWalletNotificationAndClearOrigin()
-      } else if profileController.braveWalletAPI.isAllowed,
+      } else if profileController.braveWalletAPI.isAllowedInScout,
         let selectedTabVisibleURL = selectedTab.visibleURL,
         selectedTabVisibleURL.isWalletWebUIURL
       {
@@ -361,7 +361,7 @@ extension BrowserViewController {
       injectedScripts.append(BraveTalkScriptHandler())
     }
 
-    if profileController.braveWalletAPI.isAllowed {
+    if profileController.braveWalletAPI.isAllowedInScout {
       injectedScripts.append(Web3NameServiceScriptHandler())
     }
 
@@ -372,7 +372,7 @@ extension BrowserViewController {
         BraveSearchResultAdScriptHandler(),
         BraveSkusScriptHandler(),
       ]
-      if profileController.braveWalletAPI.isAllowed {
+      if profileController.braveWalletAPI.isAllowedInScout {
         injectedScripts += [
           EthereumProviderScriptHandler(),
           SolanaProviderScriptHandler(),

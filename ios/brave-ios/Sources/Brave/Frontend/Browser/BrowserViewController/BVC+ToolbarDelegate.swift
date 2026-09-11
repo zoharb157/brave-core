@@ -654,7 +654,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
   ) -> OrderedSet<WidgetShortcut> {
     return WidgetShortcut.eligibleButtonShortcuts(
       prefs: profileController.profile.prefs,
-      isWalletAvailable: profileController.braveWalletAPI.isAllowed
+      isWalletAvailable: profileController.braveWalletAPI.isAllowedInScout
     )
   }
 

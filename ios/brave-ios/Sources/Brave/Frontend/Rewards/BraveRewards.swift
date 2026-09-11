@@ -17,6 +17,7 @@ public class BraveRewards: PreferencesObserver {
 
   /// Whether or not Brave Rewards is available/can be enabled
   public static func isSupported(prefService: any PrefService) -> Bool {
+    guard ScoutFeatures.rewards else { return false }
     let isSupportedFromPrefs = BraveRewardsAPI.isSupported(prefService)
     #if DEBUG
     return isSupportedFromPrefs

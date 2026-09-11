@@ -1404,7 +1404,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         text: Strings.ShortcutButton.shortcutButtonTitle,
         selection: { [weak self] in
           guard let self else { return }
-          let isWalletAvailable = braveCore.braveWalletAPI.isAllowed
+          let isWalletAvailable = braveCore.braveWalletAPI.isAllowedInScout
           let controller = UIHostingController(
             rootView: ShortcutButtonPickerView(
               prefs: braveCore.profile.prefs,
@@ -2040,7 +2040,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         $0.uuid == self.walletRowUUID.uuidString
       })
 
-      if walletRowIndex == nil && braveCore.braveWalletAPI.isAllowed {
+      if walletRowIndex == nil && braveCore.braveWalletAPI.isAllowedInScout {
         let settingsStore = cryptoStore?.settingsStore
         copyOfSections[featureSectionIndex].rows.append(
           Row(

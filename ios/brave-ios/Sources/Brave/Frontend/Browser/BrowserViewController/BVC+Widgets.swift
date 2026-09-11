@@ -22,7 +22,7 @@ extension BrowserViewController: NSFetchedResultsControllerDelegate {
   func updateWidgetShortcutsData() {
     let disabled = WidgetShortcut.disabledWidgetShortcuts(
       prefs: profileController.profile.prefs,
-      isWalletAvailable: profileController.braveWalletAPI.isAllowed
+      isWalletAvailable: profileController.braveWalletAPI.isAllowedInScout
     )
     Task {
       await DisabledShortcutsWidgetData.updateDisabledShortcuts(disabled)

@@ -491,7 +491,7 @@ extension BrowserViewController {
         }
       )
     }
-    if profileController.braveWalletAPI.isAllowed {
+    if profileController.braveWalletAPI.isAllowedInScout {
       actions.append(
         .init(
           id: .braveWallet,
