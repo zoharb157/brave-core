@@ -33,19 +33,12 @@ public enum ScoutFeatures {
   public static let alternateAppIcons = false
 }
 
-/// Where Scout users reach Zaatar Tech — the public contact used across its apps.
+/// Where Scout users reach Zaatar Tech.
 public enum ScoutContact {
-  public static let email = "inquiries@zaatar.tech"
+  /// The public support page (it also carries the contact email). Hosted on Fly
+  /// until the zaatar-site Worker can serve scout.zaatar.tech.
+  public static let supportURL = URL(string: "https://zaatar-scout.fly.dev/support")!
 
-  /// A pre-addressed bug-report email carrying the app version.
-  public static func bugReportURL(appVersion: String) -> URL? {
-    var components = URLComponents()
-    components.scheme = "mailto"
-    components.path = email
-    components.queryItems = [
-      URLQueryItem(name: "subject", value: "Scout bug report"),
-      URLQueryItem(name: "body", value: "\n\n—\nScout \(appVersion)"),
-    ]
-    return components.url
-  }
+  /// Scout's own public pages: never put through the safety check.
+  public static let ownHosts = ["zaatar-scout.fly.dev", "scout.zaatar.tech"]
 }

@@ -1603,26 +1603,9 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         Row(
           text: Strings.reportABug,
           selection: { [unowned self] in
-            // Scout: bug reports go to Zaatar Tech, not Brave's community forum.
-            let version =
-              Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
-            guard let url = ScoutContact.bugReportURL(appVersion: version) else { return }
-            UIApplication.shared.open(url) { [weak self] opened in
-              // No mail app (removed, or the Simulator): offer the address instead.
-              guard !opened, let self else { return }
-              let alert = UIAlertController(
-                title: Strings.reportABug,
-                message: ScoutContact.email,
-                preferredStyle: .alert
-              )
-              alert.addAction(
-                UIAlertAction(title: Strings.menuItemCopyTitle, style: .default) { _ in
-                  UIPasteboard.general.string = ScoutContact.email
-                }
-              )
-              alert.addAction(UIAlertAction(title: Strings.cancelButtonTitle, style: .cancel))
-              self.present(alert, animated: true)
-            }
+            // Scout: bug reports go to Scout's support page, not Brave's forum.
+            self.settingsDelegate?.settingsOpenURLInNewTab(ScoutContact.supportURL)
+            self.dismiss(animated: true)
           },
           image: UIImage(braveSystemNamed: "leo.bug"),
           cellClass: MultilineValue1Cell.self

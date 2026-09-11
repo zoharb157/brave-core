@@ -7,6 +7,7 @@ import Foundation
 import Onboarding
 import Preferences
 import Scout
+import Shared
 
 /// Owns the guard's collaborators for the app.
 ///
@@ -45,7 +46,9 @@ public final class ScoutServices {
   public let guard_: NavigationGuard
 
   private init() {
-    policy = PolicyStore(policy: .makeDefault())
+    var base = Policy.makeDefault()
+    base.allow = ScoutContact.ownHosts
+    policy = PolicyStore(policy: base)
     decisionPolicy = UserCategoryPolicy(
       base: policy, blockedCategories: { Preferences.ScoutBlocking.chosen })
     cache = VerdictCache(maxEntries: 2000, now: { Date() })
