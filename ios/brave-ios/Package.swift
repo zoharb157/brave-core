@@ -20,6 +20,7 @@ var package = Package(
     ),
     .library(name: "BraveShared", targets: ["BraveShared"]),
     .library(name: "BraveShields", targets: ["BraveShields"]),
+    .library(name: "Scout", targets: ["Scout"]),
     .library(name: "BraveUI", targets: ["BraveUI"]),
     .library(name: "DesignSystem", targets: ["DesignSystem", "NalaAssets"]),
     .library(name: "BraveWallet", targets: ["BraveWallet"]),
@@ -80,6 +81,7 @@ var package = Package(
     .target(
       name: "Brave",
       dependencies: [
+        "Scout",
         "BraveShared",
         "Shared",
         "BraveWallet",
@@ -298,6 +300,7 @@ var package = Package(
       plugins: ["LoggerPlugin"]
     ),
     .testTarget(name: "BraveUITests", dependencies: ["BraveUI"]),
+    .target(name: "Scout"),
     .target(
       name: "BraveShields",
       dependencies: [
