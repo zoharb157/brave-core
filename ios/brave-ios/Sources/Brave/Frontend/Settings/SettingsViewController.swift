@@ -1343,20 +1343,22 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       self.navigationController?.pushViewController(optionsViewController, animated: true)
     }
     display.rows.append(row)
-    display.rows.append(
-      Row(
-        text: Strings.AltAppIcon.changeAppIcon,
-        selection: { [unowned self] in
-          let controller = UIHostingController(rootView: AltIconsView(model: altIconsModel))
-          controller.title = Strings.AltAppIcon.changeAppIcon
-          navigationController?.pushViewController(controller, animated: true)
-        },
-        image: selectedAppIcon,
-        accessory: .disclosureIndicator,
-        cellClass: AppIconCell.self,
-        uuid: appIconRowUUID.uuidString
+    if ScoutFeatures.alternateAppIcons {
+      display.rows.append(
+        Row(
+          text: Strings.AltAppIcon.changeAppIcon,
+          selection: { [unowned self] in
+            let controller = UIHostingController(rootView: AltIconsView(model: altIconsModel))
+            controller.title = Strings.AltAppIcon.changeAppIcon
+            navigationController?.pushViewController(controller, animated: true)
+          },
+          image: selectedAppIcon,
+          accessory: .disclosureIndicator,
+          cellClass: AppIconCell.self,
+          uuid: appIconRowUUID.uuidString
+        )
       )
-    )
+    }
     display.rows.append(
       Row(
         text: Strings.NTP.settingsTitle,
@@ -1589,8 +1591,26 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         Row(
           text: Strings.reportABug,
           selection: { [unowned self] in
-            self.settingsDelegate?.settingsOpenURLInNewTab(.brave.community)
-            self.dismiss(animated: true)
+            // Scout: bug reports go to Zaatar Tech, not Brave's community forum.
+            let version =
+              Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+            guard let url = ScoutContact.bugReportURL(appVersion: version) else { return }
+            UIApplication.shared.open(url) { [weak self] opened in
+              // No mail app (removed, or the Simulator): offer the address instead.
+              guard !opened, let self else { return }
+              let alert = UIAlertController(
+                title: Strings.reportABug,
+                message: ScoutContact.email,
+                preferredStyle: .alert
+              )
+              alert.addAction(
+                UIAlertAction(title: Strings.menuItemCopyTitle, style: .default) { _ in
+                  UIPasteboard.general.string = ScoutContact.email
+                }
+              )
+              alert.addAction(UIAlertAction(title: Strings.cancelButtonTitle, style: .cancel))
+              self.present(alert, animated: true)
+            }
           },
           image: UIImage(braveSystemNamed: "leo.bug"),
           cellClass: MultilineValue1Cell.self

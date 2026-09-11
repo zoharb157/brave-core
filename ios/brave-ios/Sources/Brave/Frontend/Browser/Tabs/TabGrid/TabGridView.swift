@@ -12,6 +12,7 @@ import Foundation
 import LocalAuthentication
 import Lottie
 import Preferences
+import Shared
 import SnapKit
 import Strings
 import SwiftUI
@@ -901,11 +902,13 @@ private struct PrivateModeInfoView: View {
           title: Strings.TabGrid.privateBrowsingInfoBulletTwoTitle,
           description: Strings.TabGrid.privateBrowsingInfoBulletTwoBody
         )
-        BulletPointView(
-          icon: "leo.product.vpn",
-          title: Strings.TabGrid.privateBrowsingInfoBulletThreeTitle,
-          description: Strings.TabGrid.privateBrowsingInfoBulletThreeBody
-        )
+        if ScoutFeatures.vpn {
+          BulletPointView(
+            icon: "leo.product.vpn",
+            title: Strings.TabGrid.privateBrowsingInfoBulletThreeTitle,
+            description: Strings.TabGrid.privateBrowsingInfoBulletThreeBody
+          )
+        }
       }
     }
   }

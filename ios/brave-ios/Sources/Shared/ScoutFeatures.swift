@@ -28,4 +28,24 @@ public enum ScoutFeatures {
   /// Sponsored new-tab-page backgrounds (ads) — contrary to an ad-blocking
   /// browser. Gated in `Preferences.NewTabPage.backgroundMediaType`.
   public static let sponsoredImages = false
+  /// Brave's alternate app icons are all variants of the Brave lion.
+  /// Gated where Settings adds its "Change App Icon" row.
+  public static let alternateAppIcons = false
+}
+
+/// Where Scout users reach Zaatar Tech — the public contact used across its apps.
+public enum ScoutContact {
+  public static let email = "inquiries@zaatar.tech"
+
+  /// A pre-addressed bug-report email carrying the app version.
+  public static func bugReportURL(appVersion: String) -> URL? {
+    var components = URLComponents()
+    components.scheme = "mailto"
+    components.path = email
+    components.queryItems = [
+      URLQueryItem(name: "subject", value: "Scout bug report"),
+      URLQueryItem(name: "body", value: "\n\n—\nScout \(appVersion)"),
+    ]
+    return components.url
+  }
 }
