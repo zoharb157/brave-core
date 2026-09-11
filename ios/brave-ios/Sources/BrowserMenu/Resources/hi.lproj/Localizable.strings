@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "डिफ़ॉल्ट पर रीसेट करें";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "डिफ़ॉल्ट पर रीसेट करने पर, आप Brave में सभी कस्टमाइज़ेशंस खो देंगे। इस कार्रवाई को पहले जैसा नहीं किया जा सकता। क्या आप वाकई ऐसा करना चाहते है?";
+"BrowserMenu.resetToDefaultDialogMessage" = "डिफ़ॉल्ट पर रीसेट करने पर, आप Scout में सभी कस्टमाइज़ेशंस खो देंगे। इस कार्रवाई को पहले जैसा नहीं किया जा सकता। क्या आप वाकई ऐसा करना चाहते है?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "सभी देखें…";

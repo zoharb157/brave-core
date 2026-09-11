@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "這可讓您將影像儲存至您的相機膠卷。";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave 希望能存取您的相片";
+"AccessPhotoDeniedAlertTitle" = "Scout 希望能存取您的相片";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "新增書籤";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "詢問 Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "這會驗證您對 Brave 的存取權限";
+"AuthenticationLoginsTouchReason" = "這會驗證您對 Scout 的存取權限";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "取消";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "地址";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave 面板";
+"BravePanel" = "Scout 面板";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Brave 奖励";
@@ -314,7 +314,7 @@
 "BrowserLock" = "瀏覽器鎖定";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "以 Touch ID、Face ID 或系統密碼解鎖 Brave";
+"BrowserLockDescription" = "以 Touch ID、Face ID 或系統密碼解鎖 Scout";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "浏览历史";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "将地址栏、标签、书签和其他工具移动到浏览器底部。";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "自定义 Brave 标签栏";
+"callout.bottomBarCalloutTitle" = "自定义 Scout 标签栏";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "在您的计算机或平板电脑上体验 Brave 隐私保护，在设备间同步书签&扩展部件。";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "打开设置";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "使用 Brave 開啟所有連結以保護隱私";
+"defaultBrowserCallout.introPrimaryText" = "使用 Scout 開啟所有連結以保護隱私";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave 盾牌可以拦截跟踪器 & 广告，保存数据，在您访问每个网站时为您节省时间";
+"defaultBrowserCallout.introSecondaryText" = "Scout 盾牌可以拦截跟踪器 & 广告，保存数据，在您访问每个网站时为您节省时间";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "開啟「設定」，點選「預設瀏覽器應用程序」，然後選取「Brave」。";
+"defaultBrowserCallout.introTertiaryText" = "開啟「設定」，點選「預設瀏覽器應用程序」，然後選取「Scout」。";
 
 /* Notification body to promote setting Brave app as default browser */
 "defaultBrowserCallout.notificationBody" = "将Brave设为默认浏览器";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "每次點選連結都能獲得 Brave 保護";
+"defaultBrowserCallout.notificationTitle" = "每次點選連結都能獲得 Scout 保護";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "關閉預設瀏覽器標註";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave 預設";
+"defaultThemeName" = "Scout 預設";
 
 /* No comment provided by engineer. */
 "Delete" = "删除";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "输入文件夹名称";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ 通常使用加密来保护您的信息。当 Brave 这次试图连接到 %2$@ 时，网站发回了不寻常和错误的凭据。当攻击者试图假装是 %3$@ 时，或者 Wi-Fi 登录屏幕中断了连接时，可能会发生这种情况。您的信息仍然是安全的，因为 Brave 在交换任何数据之前停止了连接。<br />您目前无法访问 %4$@，因为该网站使用证书码。网络错误和攻击通常是暂时的，所以这个页面将来可能还能正常工作。";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ 通常使用加密来保护您的信息。当 Scout 这次试图连接到 %2$@ 时，网站发回了不寻常和错误的凭据。当攻击者试图假装是 %3$@ 时，或者 Wi-Fi 登录屏幕中断了连接时，可能会发生这种情况。您的信息仍然是安全的，因为 Scout 在交换任何数据之前停止了连接。<br />您目前无法访问 %4$@，因为该网站使用证书码。网络错误和攻击通常是暂时的，所以这个页面将来可能还能正常工作。";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "此服务器无法证明它是 %@；其安全证书不受设备的操作系统信任。原因可能是配置错误，或攻击者正尝试拦截您的连接。";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "选择默认搜索引擎";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "欢迎使用 Brave 浏览器";
+"OBSearchEngineTitle" = "欢迎使用 Scout 浏览器";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "拦截侵犯隐私的跟踪程序，让您能够浏览网络内容，无需担心被跟踪";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "拦截跟踪器 & 广告后，可将网站数据用量减少，加载速度更快。";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "體驗 Brave 的與眾不同：\n沒有廣告，沒有追蹤器，頁面載入速度大幅提升。";
+"onboarding.omniboxOnboardingPopOverDescription" = "體驗 Scout 的與眾不同：\n沒有廣告，沒有追蹤器，頁面載入速度大幅提升。";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "輸入網站名稱或 URL";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "首先，设置一个同步链并在同步设置中切换“打开选项卡”。";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "在设置中管理 Brave 同步的内容。";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "在设置中管理 Scout 同步的内容。";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "您的其他裝置上沒有可顯示的進行中工作階段。";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "持续无痕浏览";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "即使关闭或重新打开应用程序，Brave 也能还原无痕浏览标签页";
+"PersistentPrivateBrowsingAlertMessage" = "即使关闭或重新打开应用程序，Scout 也能还原无痕浏览标签页";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "恢复无痕标签页";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "是否要将此视频添加至播放列表？";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "新增至 Brave Playlist";
+"playList.addToPlayListAlertTitle" = "新增至 Playlist";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "播放选项";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "设定值";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave 播放列表";
+"playlist.carplayTitle" = "Scout 播放列表";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "变更播放列表";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "加载资源时出现问题。";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "您可以在瀏覽器中將項目新增至 Brave 播放清單";
+"playList.noItemLabelDetailLabel" = "您可以在瀏覽器中將項目新增至 Scout 播放清單";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "无可用项目";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "復原";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "在 Brave 浏览器地址栏旁添加一个播放列表按钮。通过该按钮，您可以快速打开播放列表，或是添加/删除媒体。";
+"playlist.urlBarButtonOptionFooter" = "在 Scout 浏览器地址栏旁添加一个播放列表按钮。通过该按钮，您可以快速打开播放列表，或是添加/删除媒体。";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "啟用快速存取按鈕";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "開啟通知";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "回顧本週 Brave 如何在線上保護您。";
+"privacyHub.notificationMessage" = "回顧本週 Scout 如何在線上保護您。";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "每週隱私報告";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "「僅限私人瀏覽」模式將關閉所有當前分頁，將您登出所有網站。";
 
 /* Private tab details */
-"PrivateTabBody" = "Brave 不會儲存隱私分頁，但這並不代表您在網路上為匿名狀態。您使用隱私分頁造訪的網站不會顯示在您的瀏覽記錄中，且一旦您關閉分頁，網站的 Cookie 也將一律刪除，也就是說，Brave 不會留下任何瀏覽記錄。不過，下載項目仍會儲存。即便使用隱私分頁，您的行動網路業者 (或是您所連線的 Wi-Fi 網路或 VPN 擁有者) 仍能看見您造訪哪些網站，而這些網站亦將取得您的公開 IP 位址。";
+"PrivateTabBody" = "Scout 不會儲存隱私分頁，但這並不代表您在網路上為匿名狀態。您使用隱私分頁造訪的網站不會顯示在您的瀏覽記錄中，且一旦您關閉分頁，網站的 Cookie 也將一律刪除，也就是說，Scout 不會留下任何瀏覽記錄。不過，下載項目仍會儲存。即便使用隱私分頁，您的行動網路業者 (或是您所連線的 Wi-Fi 網路或 VPN 擁有者) 仍能看見您造訪哪些網站，而這些網站亦將取得您的公開 IP 位址。";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "使用隱私分頁只會變更 Brave 可在您裝置上執行的作業，無法改變他人行為。\n\n當您造訪網站時，網站能得知您的 IP 位址。根據這項資訊，網站可以大略猜出您的所在位置，通常能知道您所在的城市，有時猜測的位置會更精確。網站也會知道您明確提供的所有內容，像是搜尋內容。當您登入網站時，網站也會知道您是該帳戶的所有人。若關閉隱私分頁，Brave 會捨棄那些將您保持登入的 Cookie，因此系統依然會將您隨即登出。\n\n將您連線至網際網路的公司 (您的 ISP 業者) 可以查看您在網路上的所有活動。這通常會是您的行動網路業者。如果您連線至 Wi-Fi 網路，該網路的所有者可以看到您的活動；如果您是使用 VPN，則是營運該 VPN 的一方。您的 ISP 業者可以在您造訪網站時，瞭解您瀏覽了哪些網站。如果這些網站使用 HTTPS，ISP 業者只能大略猜測您在網站上的活動；但如果網站僅使用 HTTP，則 ISP 業者可以看到所有活動，包括搜尋內容、讀取的頁面以及點選的連結。\n\n如果您的裝置是由雇主所管理，他們可能會追蹤您的裝置使用情形。即使您使用隱私分頁，雇主仍可知道您曾瀏覽過哪些網站。能存取您裝置的其他人士，可能也會安裝軟體以監控您的活動。這類情形下，即使使用隱私分頁，也無法保護您。";
+"PrivateTabDetails" = "使用隱私分頁只會變更 Scout 可在您裝置上執行的作業，無法改變他人行為。\n\n當您造訪網站時，網站能得知您的 IP 位址。根據這項資訊，網站可以大略猜出您的所在位置，通常能知道您所在的城市，有時猜測的位置會更精確。網站也會知道您明確提供的所有內容，像是搜尋內容。當您登入網站時，網站也會知道您是該帳戶的所有人。若關閉隱私分頁，Scout 會捨棄那些將您保持登入的 Cookie，因此系統依然會將您隨即登出。\n\n將您連線至網際網路的公司 (您的 ISP 業者) 可以查看您在網路上的所有活動。這通常會是您的行動網路業者。如果您連線至 Wi-Fi 網路，該網路的所有者可以看到您的活動；如果您是使用 VPN，則是營運該 VPN 的一方。您的 ISP 業者可以在您造訪網站時，瞭解您瀏覽了哪些網站。如果這些網站使用 HTTPS，ISP 業者只能大略猜測您在網站上的活動；但如果網站僅使用 HTTP，則 ISP 業者可以看到所有活動，包括搜尋內容、讀取的頁面以及點選的連結。\n\n如果您的裝置是由雇主所管理，他們可能會追蹤您的裝置使用情形。即使您使用隱私分頁，雇主仍可知道您曾瀏覽過哪些網站。能存取您裝置的其他人士，可能也會安裝軟體以監控您的活動。這類情形下，即使使用隱私分頁，也無法保護您。";
 
 /* Private tab information link */
 "PrivateTabLink" = "了解私人标签";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "不";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "抱歉，Brave 崩溃了或无法正常关闭。\n恢复标签页？";
+"RestoreTabOnCrashAlertMessage" = "抱歉，Scout 崩溃了或无法正常关闭。\n恢复标签页？";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave 意外關閉。";
+"RestoreTabOnCrashAlertTitle" = "Scout 意外關閉。";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "开启支持 Brave 和 BAT 社区。";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "傳送當機報告協助 Brave 修正問題？";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "糟糕，Brave 當機了！";
+"SendCrashReportAlertTitle" = "糟糕，Scout 當機了！";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "发送报告";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "現在能夠在 iOS 將 Brave 設定為預設瀏覽器。請點選此處以開啟設定。";
+"setDefaultBrowserCalloutTitle" = "現在能夠在 iOS 將 Scout 設定為預設瀏覽器。請點選此處以開啟設定。";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "設定為預設瀏覽器";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "關閉分頁";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "允許 Brave 自動關閉最近未檢視的分頁。";
+"settings.autocloseTabsSettingFooter" = "允許 Scout 自動關閉最近未檢視的分頁。";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "屏蔽 YouTube 干扰元素";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "媒体";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "在 Brave 中打开 YouTube 链接";
+"settings.openYouTubeInBrave" = "在 Scout 中打开 YouTube 链接";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "啟用螢幕使用時間";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "這些是 Shields 對新網站的預設設定。變更這些設定不會影響現有的個別網站設定。";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "您目前是在沒有 Brave 隱私防護的情況下瀏覽此網站。開啟 Shields 時無法正常瀏覽嗎？";
+"ShieldsDownDisclaimer" = "您目前是在沒有 Scout 隱私防護的情況下瀏覽此網站。開啟 Shields 時無法正常瀏覽嗎？";
 
 /* shields overview message */
 "ShieldsOverview" = "利用网站屏幕，您在访问每个网站时可以控制是否拦截广告和跟踪程序。如果您希望查看某个特定网站的广告，则可以在此处启用这些广告。";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "清除浏览器历史记录";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "清除 Brave 浏览器历史记录";
+"shortcuts.activityTypeClearHistoryTitle" = "清除 Scout 浏览器历史记录";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "在新标签页中打开浏览器并启用 VPN";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "打开书签";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "打开 Brave 浏览器书签";
+"shortcuts.activityTypeOpenBookmarksTitle" = "打开 Scout 浏览器书签";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "打开 Brave 新闻";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "打开浏览器历史记录";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "打开 Brave 浏览器历史记录";
+"shortcuts.activityTypeOpenHistoryListTitle" = "打开 Scout 浏览器历史记录";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "开始播放播放列表中的视频";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "从其他设备打开标签页";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "开始通过 Brave 安全地搜索网络";
+"shortcuts.activityTypeTabDescription" = "开始通过 Scout 安全地搜索网络";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "開啟書籤網站";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "开启网站";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "此选项会打开 Brave 设置。如要更改各种 Siri 选项，请选择“Siri & Search”菜单项并自定义您的选择。";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "此选项会打开 Scout 设置。如要更改各种 Siri 选项，请选择“Siri & Search”菜单项并自定义您的选择。";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "打开设置";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "瀏覽於 %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "请在 iOS 系统设置中允许麦克风访问，以便 Brave 使用匿名语音搜索。";
+"voice.search.microphone.description.required" = "请在 iOS 系统设置中允许麦克风访问，以便 Scout 使用匿名语音搜索。";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "需要使用麦克风";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave 不会存储或分享你的语音搜索。";
+"voice.search.screen.disclaimer" = "Scout 不会存储或分享你的语音搜索。";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "钱包创建日期";

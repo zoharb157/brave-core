@@ -41,7 +41,7 @@
 "widgets.newsUnavailableByPolicyDescription" = "Dinonaktifkan oleh kebijakan organisasi Anda";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "Silakan buka Brave untuk melihat favorit Anda di sini";
+"widgets.noFavoritesFound" = "Silakan buka Scout untuk melihat favorit Anda di sini";
 
 /* QR Code section title */
 "widgets.QRCode" = "Kode QR";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "Cari";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "Rangkuman cara Brave menghemat waktu Anda dan melindungi Anda secara daring.";
+"widgets.shieldStatsDescription" = "Rangkuman cara Scout menghemat waktu Anda dan melindungi Anda secara daring.";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "Status Privasi";
@@ -74,13 +74,13 @@
 "widgets.shortcutsPrivateTabButton" = "Tab Pribadi";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "Akses cepat untuk mencari situs web atau membuka halaman web di Brave.";
+"widgets.shortcutsWidgetDescription" = "Akses cepat untuk mencari situs web atau membuka halaman web di Scout.";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "Jalan pintas";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "Rangkuman cara Brave telah melindungi Anda secara daring.";
+"widgets.singleStatDescription" = "Rangkuman cara Scout telah melindungi Anda secara daring.";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "Statistik Kerahasiaan";

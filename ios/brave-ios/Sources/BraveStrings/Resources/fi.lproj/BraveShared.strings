@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "Tämän avulla voit tallentaa kuvia kameran kuviin.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave haluaa käyttää valokuviasi";
+"AccessPhotoDeniedAlertTitle" = "Scout haluaa käyttää valokuviasi";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Lisää kirjanmerkki";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "Osoite";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave-paneeli";
+"BravePanel" = "Scout-paneeli";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Brave-palkinnot";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "Siirrä osoitepalkki, välilehdet, kirjanmerkit ja muut työkalut selaimen alaosaan.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Mukauta Brave-välilehtipalkkia";
+"callout.bottomBarCalloutTitle" = "Mukauta Scout-välilehtipalkkia";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Hanki Brave-tietosuoja tietokoneellesi tai tabletillesi ja synkronoi kirjanmerkit ja laajennukset laitteiden välillä.";
@@ -632,22 +632,22 @@
 "defaultBrowserCallout.introPrimaryText" = "Avaa kaikki linkit Bravella suojellaksesi yksityisyyttäsi";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave-suojaus estää seurantaohjelmat ja mainokset sekä säästää dataa ja aikaa jokaisella vierailemallasi sivulla";
+"defaultBrowserCallout.introSecondaryText" = "Scout-suojaus estää seurantaohjelmat ja mainokset sekä säästää dataa ja aikaa jokaisella vierailemallasi sivulla";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Avaa asetukset, napauta Oletusarvoinen selainsovellus ja valitse Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Avaa asetukset, napauta Oletusarvoinen selainsovellus ja valitse Scout.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Aseta Brave oletusselaimeksi";
+"defaultBrowserCallout.notificationBody" = "Aseta Scout oletusselaimeksi";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Hanki Brave-suojaus jokaisen linkin kohdalla";
+"defaultBrowserCallout.notificationTitle" = "Hanki Scout-suojaus jokaisen linkin kohdalla";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Sulje oletusarvoisen selaimen kehote";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Oletisarvoinen Brave";
+"defaultThemeName" = "Oletisarvoinen Scout";
 
 /* No comment provided by engineer. */
 "Delete" = "Poista";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Anna kansion nimi";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ käyttää yleensä salausta tietojesi suojaamiseen. Kun Brave yritti muodostaa yhteyden kohteeseen %2$@, sivusto lähetti tällä kertaa takaisin epätavalliset ja virheelliset kirjautumistiedot. Näin voi käydä, kun hyökkääjä yrittää teeskennellä olevansa %3$@ tai kun Wi-Fi-kirjautumisnäyttö on katkaissut yhteyden. Tietosi ovat edelleen turvassa, koska Brave katkaisi yhteyden ennen tietojen vaihtoa.<br />Et voi juuri nyt käytä kohteessa %4$@, koska verkkosivusto käyttää varmenteen kiinnitystä. Verkkovirheet ja hyökkäykset ovat yleensä tilapäisiä, joten tämä sivu todennäköisesti toimii myöhemmin.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ käyttää yleensä salausta tietojesi suojaamiseen. Kun Scout yritti muodostaa yhteyden kohteeseen %2$@, sivusto lähetti tällä kertaa takaisin epätavalliset ja virheelliset kirjautumistiedot. Näin voi käydä, kun hyökkääjä yrittää teeskennellä olevansa %3$@ tai kun Wi-Fi-kirjautumisnäyttö on katkaissut yhteyden. Tietosi ovat edelleen turvassa, koska Scout katkaisi yhteyden ennen tietojen vaihtoa.<br />Et voi juuri nyt käytä kohteessa %4$@, koska verkkosivusto käyttää varmenteen kiinnitystä. Verkkovirheet ja hyökkäykset ovat yleensä tilapäisiä, joten tämä sivu todennäköisesti toimii myöhemmin.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Palvelin ei pystynyt todistamaan, että se on %@; laitteesi käyttöjärjestelmä ei pidä suojausvarmennetta luotettavana. Tämä voi johtua virheellisestä määrityksestä tai siitä, että hyökkääjä yrittää siepata yhteytesi.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Valitse oletushakukone";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Tervetuloa Brave-selaimeen";
+"OBSearchEngineTitle" = "Tervetuloa Scout-selaimeen";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Estä yksityisyyttäsi loukkaavat mainokset ja seurantaohjelmat, jotta voit selata verkkoa ilman, että sinua seurataan.";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Aloita määrittämällä synkronointiketju ja valitsemalla synkronointiasetuksista Avoimet välilehdet.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Hallinnoi, mitä Brave synkronoi asetuksissa.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Hallinnoi, mitä Scout synkronoi asetuksissa.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Muilta laitteiltasi ei ole näytettäviä aktiivisia istuntoja.";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Haluatko lisätä tämän videon soittolistallesi?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Lisää Brave-soittolistalle";
+"playList.addToPlayListAlertTitle" = "Lisää Scout-soittolistalle";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Toistoasetukset";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Asetukset";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave-soittolista";
+"playlist.carplayTitle" = "Scout-soittolista";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Vaihda soittolistaa";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Resurssin lataamisessa oli ongelma!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Voit lisätä kohteita Brave-soittolistallesi selaimessa";
+"playList.noItemLabelDetailLabel" = "Voit lisätä kohteita Scout-soittolistallesi selaimessa";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Ei käytettävissä olevia kohteita";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Pura";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Lisää soittolistapainikkeen Brave-selaimen osoitepalkin viereen. Tällä painikkeella pääset nopeasti avaamaan soittolistan tai lisäämään tai poistamaan mediatiedostoja.";
+"playlist.urlBarButtonOptionFooter" = "Lisää soittolistapainikkeen Scout-selaimen osoitepalkin viereen. Tällä painikkeella pääset nopeasti avaamaan soittolistan tai lisäämään tai poistamaan mediatiedostoja.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Ota pikakäyttöpainike käyttöön";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Ota ilmoitukset käyttöön";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Tiivistelmä siitä, kuinka Brave suojeli sinua verkossa tällä viikolla.";
+"privacyHub.notificationMessage" = "Tiivistelmä siitä, kuinka Scout suojeli sinua verkossa tällä viikolla.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Viikoittainen yksityisyysraportti";
@@ -1835,7 +1835,7 @@
 "PrivateTabBody" = "Yksityisiä välilehtiä ei tallenneta Braveen, mutta ne eivät tee sinusta anonyymiä verkossa. Sivustot, joilla käyt yksityisellä välilehdellä, eivät näy historiassasi, ja niiden evästeet katoavat aina, kun suljet ne – niistä ei jää jälkeäkään Braveen. Lataukset kuitenkin tallennetaan.\nMobiilioperaattorisi (tai sen Wi-Fi-verkon tai VPN:n omistaja, johon olet yhteydessä) voi nähdä, millä sivustoilla vierailet, ja kyseiset sivustot saavat tietoonsa julkisen IP-osoitteesi, jopa yksityisillä välilehdillä.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Yksityisten välilehtien käyttäminen muuttaa vain sitä, mitä Brave voi tehdä laitteellasi, se ei muuta kenenkään muun käyttäytymistä.\n\nSivustot saavat aina tietoonsa IP-osoitteesi, kun vierailet niillä. Sen perusteella ne voivat usein arvata karkeasti missä olet – tyypillisesti kaupunkisi. Joskus tämä sijainnin arvaus voi olla paljon tarkempi. Sivustot tietävät myös kaiken, mitä kerrot niille, kuten hakutermit. Jos kirjaudut sisään sivustolle, ne tietävät sinun olevan kyseisen tilin omistaja. Olet silti kirjautuneena ulos, kun suljet yksityiset välilehdet, koska Brave poistaa evästeen, joka pitää sinut kirjautuneena sisään.\n\n Kuka tahansa, joka yhdistää sinut Internetiin (internet-palveluntarjoajasi), voi nähdä kaiken toimintasi verkossa. Usein tämä on mobiilioperaattorisi. Jos olet yhteydessä Wi-Fi-verkkoon, tämä on kyseisen verkon omistaja, ja jos käytät VPN:ää, se on VPN:n ylläpitäjä. Internet-palveluntarjoajasi voi nähdä, millä sivustoilla käyt. Jos kyseiset sivustot käyttävät HTTPS:ää, Internet-palveoluntarjoajasi voi tehdä enintään valistuneen arvauksen siitä, mitä teet kyseisillä sivustoilla. Mutta jos sivusto käyttää vain HTTP:tä, Internet-palveluntarjoajasi näkee kaiken: hakutermit, lukemasi sivut ja seuraamasi linkit.\n\n Jos työnantaja hallinnoi laitettasi, hän saattaa myös seurata, mitä teet sillä. Yksityisten välilehtien käyttäminen ei todennäköisesti estä työnantajaa selvittämästä, millä sivustoilla olet käynyt. Myös joku muu, jolla on pääsy käsiksi laitteeseesi, on voinut asentaa ohjelmiston, joka seuraa toimintaasi, eivätkä yksityiset välilehdet suojaa sinua tällaisessa tilanteessa.";
+"PrivateTabDetails" = "Yksityisten välilehtien käyttäminen muuttaa vain sitä, mitä Scout voi tehdä laitteellasi, se ei muuta kenenkään muun käyttäytymistä.\n\nSivustot saavat aina tietoonsa IP-osoitteesi, kun vierailet niillä. Sen perusteella ne voivat usein arvata karkeasti missä olet – tyypillisesti kaupunkisi. Joskus tämä sijainnin arvaus voi olla paljon tarkempi. Sivustot tietävät myös kaiken, mitä kerrot niille, kuten hakutermit. Jos kirjaudut sisään sivustolle, ne tietävät sinun olevan kyseisen tilin omistaja. Olet silti kirjautuneena ulos, kun suljet yksityiset välilehdet, koska Scout poistaa evästeen, joka pitää sinut kirjautuneena sisään.\n\n Kuka tahansa, joka yhdistää sinut Internetiin (internet-palveluntarjoajasi), voi nähdä kaiken toimintasi verkossa. Usein tämä on mobiilioperaattorisi. Jos olet yhteydessä Wi-Fi-verkkoon, tämä on kyseisen verkon omistaja, ja jos käytät VPN:ää, se on VPN:n ylläpitäjä. Internet-palveluntarjoajasi voi nähdä, millä sivustoilla käyt. Jos kyseiset sivustot käyttävät HTTPS:ää, Internet-palveoluntarjoajasi voi tehdä enintään valistuneen arvauksen siitä, mitä teet kyseisillä sivustoilla. Mutta jos sivusto käyttää vain HTTP:tä, Internet-palveluntarjoajasi näkee kaiken: hakutermit, lukemasi sivut ja seuraamasi linkit.\n\n Jos työnantaja hallinnoi laitettasi, hän saattaa myös seurata, mitä teet sillä. Yksityisten välilehtien käyttäminen ei todennäköisesti estä työnantajaa selvittämästä, millä sivustoilla olet käynyt. Myös joku muu, jolla on pääsy käsiksi laitteeseesi, on voinut asentaa ohjelmiston, joka seuraa toimintaasi, eivätkä yksityiset välilehdet suojaa sinua tällaisessa tilanteessa.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Lue lisää yksityisistä välilehdistä.";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "Ei";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Valitettavasti Brave kaatui tai ei sulkeutunut kunnolla.\nPalautetaanko välilehdet?";
+"RestoreTabOnCrashAlertMessage" = "Valitettavasti Scout kaatui tai ei sulkeutunut kunnolla.\nPalautetaanko välilehdet?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave suljettiin yllättäen.";
+"RestoreTabOnCrashAlertTitle" = "Scout suljettiin yllättäen.";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "Ota käyttöön tukeaksesi Bravea ja BAT-yhteisöä.";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "Lähetetäänkö virheraportti, jotta Brave voi korjata ongelman?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Hups! Brave kaatui";
+"SendCrashReportAlertTitle" = "Hups! Scout kaatui";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Lähetä raportti";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Brave voidaan nyt asettaa oletusselaimeksi iOS-laitteissa. Avaa asetukset napauttamalla tätä.";
+"setDefaultBrowserCalloutTitle" = "Scout voidaan nyt asettaa oletusselaimeksi iOS-laitteissa. Avaa asetukset napauttamalla tätä.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Aseta oletusselaimeksi";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Tyhjennä selaushistoria";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Tyhjennä Brave-selaushistoria";
+"shortcuts.activityTypeClearHistoryTitle" = "Tyhjennä Scout-selaushistoria";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Avaa selain uudessa välilehdessä ja ota VPN käyttöön";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Avaa kirjanmerkit";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Avaa Brave-selaimen kirjanmerkit";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Avaa Scout-selaimen kirjanmerkit";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Avaa Brave-uutiset";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Avaa selainhistoria";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Avaa Brave-selainhistoria";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Avaa Scout-selainhistoria";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Aloita videoiden toistaminen soittolistassa";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Näytä kohteessa %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Myönnä mikrofonin käyttöoikeus iOS-järjestelmäasetuksissa, jotta Brave voi käyttää anonyymiä äänihakua.";
+"voice.search.microphone.description.required" = "Myönnä mikrofonin käyttöoikeus iOS-järjestelmäasetuksissa, jotta Scout voi käyttää anonyymiä äänihakua.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Mikrofonin käyttöoikeus vaaditaan";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave ei tallenna tai jaa äänellä tehtyjä hakuja.";
+"voice.search.screen.disclaimer" = "Scout ei tallenna tai jaa äänellä tehtyjä hakuja.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Lompakon luontipäivä";

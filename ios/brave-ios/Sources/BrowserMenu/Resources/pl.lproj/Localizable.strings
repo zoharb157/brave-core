@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "Przywróć domyślne";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "Przywrócenie ustawień domyślnych spowoduje utratę wszystkich własnych ustawień w Brave. Tej czynności nie można cofnąć. Czy na pewno chcesz kontynuować?";
+"BrowserMenu.resetToDefaultDialogMessage" = "Przywrócenie ustawień domyślnych spowoduje utratę wszystkich własnych ustawień w Scout. Tej czynności nie można cofnąć. Czy na pewno chcesz kontynuować?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "Pokaż wszystkie…";

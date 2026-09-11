@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "Ez lehetővé teszi a kép elmentését a kamerafotók közé.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "A Brave szeretne hozzáférni a fotóihoz";
+"AccessPhotoDeniedAlertTitle" = "A Scout szeretne hozzáférni a fotóihoz";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Könyvjelző hozzáadása";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Kérdezz a Brave-tól";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Ez hitelesíti az Ön hozzáférését a Brave-hez";
+"AuthenticationLoginsTouchReason" = "Ez hitelesíti az Ön hozzáférését a Scout-hez";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Mégse";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "Cím";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave panel";
+"BravePanel" = "Scout panel";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Brave jutalmak";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Böngészőzár";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Oldja fel a Brave feloldását Touch ID, Face ID vagy rendszerjelszó segítségével.";
+"BrowserLockDescription" = "Oldja fel a Scout feloldását Touch ID, Face ID vagy rendszerjelszó segítségével.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Böngészési előzmények";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "A címsáv, a lapok, a könyvjelzők és az egyéb eszközök áthelyezése a böngésző aljára.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "A Brave-lapsáv testreszabása";
+"callout.bottomBarCalloutTitle" = "A Scout-lapsáv testreszabása";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Szerezze be a Brave-adatvédelmet számítógépén vagy táblagépén, és szinkronizálja a könyvjelzőket és a bővítményeket az eszközök között.";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Beállítások megnyitása";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Nyiss meg minden hivatkozást Brave-ben, hogy vigyázz az adataidra.";
+"defaultBrowserCallout.introPrimaryText" = "Nyiss meg minden hivatkozást Scout-ben, hogy vigyázz az adataidra.";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "A Brave-védelem blokkolja a követőket és reklámokat, menti az adatokat, és időt takarít meg Önnek minden felkeresett oldalon";
+"defaultBrowserCallout.introSecondaryText" = "A Scout-védelem blokkolja a követőket és reklámokat, menti az adatokat, és időt takarít meg Önnek minden felkeresett oldalon";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Nyissa meg a Beállításokat, koppintson az Alapértelmezett böngészőalkalmazásra, majd válassza ki a Brave-et.";
+"defaultBrowserCallout.introTertiaryText" = "Nyissa meg a Beállításokat, koppintson az Alapértelmezett böngészőalkalmazásra, majd válassza ki a Scout-et.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "A Brave beállítása alapértelmezett böngészőként";
+"defaultBrowserCallout.notificationBody" = "A Scout beállítása alapértelmezett böngészőként";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Használja ki a Brave által nyújtott védelmet minden hivatkozásnál";
+"defaultBrowserCallout.notificationTitle" = "Használja ki a Scout által nyújtott védelmet minden hivatkozásnál";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Alapértelmezett böngésző kiemelésének bezárása";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave alapértelmezett";
+"defaultThemeName" = "Scout alapértelmezett";
 
 /* No comment provided by engineer. */
 "Delete" = "Törlés";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Adja meg a mappa nevét";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "A(z) %1$@ általában titkosítást használ adatai védelme érdekében. Amikor a Brave megpróbált csatlakozni a(z) %2$@ oldalhoz, az szokatlan és hibás hitelesítő adatokat küldött vissza. Ez olyankor fordulhat elő, ha egy hacker a(z) %3$@-nak adja ki magát, vagy egy wifi bejelentkezési képernyő megszakítja a kapcsolatot. Adatai továbbra is biztonságban vannak, mert a Brave leállította a kapcsolatot, mielőtt adatcsere történt volna.<br />Jelenleg nem keresheti fel a(z) %4$@ weboldalt, mert az tanúsítványrögzítést alkalmaz. A hálózati hibák és támadások általában átmenetiek, így az oldal később valószínűleg működni fog.";
+"ErrorPagesAdvancedErrorPinningDetails" = "A(z) %1$@ általában titkosítást használ adatai védelme érdekében. Amikor a Scout megpróbált csatlakozni a(z) %2$@ oldalhoz, az szokatlan és hibás hitelesítő adatokat küldött vissza. Ez olyankor fordulhat elő, ha egy hacker a(z) %3$@-nak adja ki magát, vagy egy wifi bejelentkezési képernyő megszakítja a kapcsolatot. Adatai továbbra is biztonságban vannak, mert a Scout leállította a kapcsolatot, mielőtt adatcsere történt volna.<br />Jelenleg nem keresheti fel a(z) %4$@ weboldalt, mert az tanúsítványrögzítést alkalmaz. A hálózati hibák és támadások általában átmenetiek, így az oldal később valószínűleg működni fog.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "A szerver nem tudta igazolni, hogy az valóban a(z) %@; biztonsági tanúsítványa nem megbízható az eszköze operációs rendszere számára. Ezt okozhatja helytelen konfiguráció, vagy az, hogy egy hacker megpróbálja lehallgatni a kapcsolatát.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Válasszon alapértelmezett keresőmotort";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Üdvözöljük a Brave böngészőben";
+"OBSearchEngineTitle" = "Üdvözöljük a Scout böngészőben";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Blokkolja az adatvédelmet megsértő nyomkövetőket, így anélkül böngészhet, hogy követnék az interneten";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "A trackerek és hirdetések letiltásával& a webhelyek kevesebb adatot használnak fel, és sokkal gyorsabban töltődnek be.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "A Brave-vel más:\nNincsenek hirdetések. Nincsenek nyomkövetők. Sokkal gyorsabban töltenek be az oldalak.";
+"onboarding.omniboxOnboardingPopOverDescription" = "A Scout-vel más:\nNincsenek hirdetések. Nincsenek nyomkövetők. Sokkal gyorsabban töltenek be az oldalak.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Adja meg a weboldal nevét vagy URL-jét";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "A kezdéshez állítson be egy szinkronizálási láncot, és kapcsolja be a „Nyitott lapok\" lehetőséget a Szinkronizálási beállításokban.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "A Beállításokban kezelheti, hogy mit szinkronizáljon a Brave.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "A Beállításokban kezelheti, hogy mit szinkronizáljon a Scout.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Nincsenek megjeleníthető aktív munkamenetek a többi eszközről.";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Privát böngészés állandó visszaállítása";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Lehetővé teszi a Brave számára, hogy akkor is visszaállítsa a privát böngészést, amikor Ön bezárja/újra megnyitja az alkalmazást";
+"PersistentPrivateBrowsingAlertMessage" = "Lehetővé teszi a Scout számára, hogy akkor is visszaállítsa a privát böngészést, amikor Ön bezárja/újra megnyitja az alkalmazást";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Privát lapok visszaállítása";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Hozzáadja ezt a videót a lejátszási listájához?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Hozzáadás a Brave lejátszási listához";
+"playList.addToPlayListAlertTitle" = "Hozzáadás a Scout lejátszási listához";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Lejátszási lehetőségek";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Beállítások";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave lejátszási lista";
+"playlist.carplayTitle" = "Scout lejátszási lista";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Lejátszási lista módosítása";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Hiba történt az erőforrás betöltésekor!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "A böngészőn belül hozzáadhat elemeket a Brave lejátszási listához";
+"playList.noItemLabelDetailLabel" = "A böngészőn belül hozzáadhat elemeket a Scout lejátszási listához";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Nincsenek elérhető tételek";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Visszavonás";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Hozzáad egy lejátszási lista gombot a Brave böngésző címsora mellé. Ez a gomb gyors hozzáférést biztosít a lejátszási lista megnyitásához, illetve a média hozzáadásához vagy eltávolításához.";
+"playlist.urlBarButtonOptionFooter" = "Hozzáad egy lejátszási lista gombot a Scout böngésző címsora mellé. Ez a gomb gyors hozzáférést biztosít a lejátszási lista megnyitásához, illetve a média hozzáadásához vagy eltávolításához.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Gyorselérési gomb engedélyezése";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Értesítések bekapcsolása";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Összefoglaló a Brave védelmi műveleteiről az Ön e heti online tevékenysége során.";
+"privacyHub.notificationMessage" = "Összefoglaló a Scout védelmi műveleteiről az Ön e heti online tevékenysége során.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Heti adatvédelmi jelentés";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "A Csak privát böngészés mód bezárja az összes aktuális lapot, és kijelentkezteti Önt az összes webhelyről.";
 
 /* Private tab details */
-"PrivateTabBody" = "A Brave nem menti el a privát lapokat, de ezek nem teszik Önt névtelenné az interneten. A privát lapon meglátogatott webhelyek nem jelennek meg az előzményekben, és a cookie-jaik mindig eltűnnek, amikor bezárja őket – a Brave-ben nem marad nyomuk. A letöltések azonban mentésre kerülnek.\nMobilszolgáltatója (vagy annak a Wi-Fi-hálózatnak vagy VPN-nek a tulajdonosa, amelyhez csatlakozik) láthatja, hogy mely webhelyeket keresi fel, és ezek a webhelyek megtudják nyilvános IP-címét, még a Privát lapokon is.";
+"PrivateTabBody" = "A Scout nem menti el a privát lapokat, de ezek nem teszik Önt névtelenné az interneten. A privát lapon meglátogatott webhelyek nem jelennek meg az előzményekben, és a cookie-jaik mindig eltűnnek, amikor bezárja őket – a Scout-ben nem marad nyomuk. A letöltések azonban mentésre kerülnek.\nMobilszolgáltatója (vagy annak a Wi-Fi-hálózatnak vagy VPN-nek a tulajdonosa, amelyhez csatlakozik) láthatja, hogy mely webhelyeket keresi fel, és ezek a webhelyek megtudják nyilvános IP-címét, még a Privát lapokon is.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "A Privát lapok használata csak azt változtatja meg, amit a Brave az Ön eszközén végez, mások viselkedését nem.\n\nA webhelyek mindig megismerik az Ön IP-címét, amikor meglátogatja őket. Ebből gyakran kitalálják, hogy nagyjából hol van – jellemzően a várost. Néha ez a helymeghatározás sokkal pontosabb lehet. A webhelyek mindent tudnak, amit kifejezetten elmond nekik, például a keresési kifejezéseket. Ha bejelentkezik egy webhelyre, tudni fogják, hogy Ön a fiók tulajdonosa. A Privát lapok bezárásakor továbbra is ki lesz jelentkezve, mert a Brave eldobja a cookie-t, amely bejelentkezve tartja Önt.\n\nBárki, aki csatlakoztatja Önt az internethez (az Ön internetszolgáltatója), láthatja az összes hálózati tevékenységét. Ez gyakran az Ön mobilszolgáltatója. Ha Wi-Fi hálózathoz csatlakozik, akkor ez a hálózat tulajdonosa, ha pedig VPN-t használ, akkor az, aki a VPN-t futtatja. Internetszolgáltatója láthatja, hogy mely webhelyeket keresi fel, amikor felkeresi azokat. Ha ezek a webhelyek HTTPS-t használnak, akkor nem tehetnek többet, mint megtippelik, hogy mit csinál ezeken a webhelyeken. Viszont ha egy webhely csak HTTP-t használ, akkor az internetszolgáltató mindent láthat: a keresési kifejezéseket, az olvasott oldalakat és a követett linkeket.\n\nHa egy munkáltató kezeli az eszközt, akkor azt is nyomon követheti, hogy Ön mit csinál vele. A Privát lapok használata valószínűleg nem akadályozza meg őket abban, hogy tudják, mely webhelyeket kereste fel. Valaki más, aki hozzáfér az eszközéhez, szintén telepíthetett olyan szoftvert, amely figyeli az Ön tevékenységét, és a Privát lapok sem védenek meg ettől.";
+"PrivateTabDetails" = "A Privát lapok használata csak azt változtatja meg, amit a Scout az Ön eszközén végez, mások viselkedését nem.\n\nA webhelyek mindig megismerik az Ön IP-címét, amikor meglátogatja őket. Ebből gyakran kitalálják, hogy nagyjából hol van – jellemzően a várost. Néha ez a helymeghatározás sokkal pontosabb lehet. A webhelyek mindent tudnak, amit kifejezetten elmond nekik, például a keresési kifejezéseket. Ha bejelentkezik egy webhelyre, tudni fogják, hogy Ön a fiók tulajdonosa. A Privát lapok bezárásakor továbbra is ki lesz jelentkezve, mert a Scout eldobja a cookie-t, amely bejelentkezve tartja Önt.\n\nBárki, aki csatlakoztatja Önt az internethez (az Ön internetszolgáltatója), láthatja az összes hálózati tevékenységét. Ez gyakran az Ön mobilszolgáltatója. Ha Wi-Fi hálózathoz csatlakozik, akkor ez a hálózat tulajdonosa, ha pedig VPN-t használ, akkor az, aki a VPN-t futtatja. Internetszolgáltatója láthatja, hogy mely webhelyeket keresi fel, amikor felkeresi azokat. Ha ezek a webhelyek HTTPS-t használnak, akkor nem tehetnek többet, mint megtippelik, hogy mit csinál ezeken a webhelyeken. Viszont ha egy webhely csak HTTP-t használ, akkor az internetszolgáltató mindent láthat: a keresési kifejezéseket, az olvasott oldalakat és a követett linkeket.\n\nHa egy munkáltató kezeli az eszközt, akkor azt is nyomon követheti, hogy Ön mit csinál vele. A Privát lapok használata valószínűleg nem akadályozza meg őket abban, hogy tudják, mely webhelyeket kereste fel. Valaki más, aki hozzáfér az eszközéhez, szintén telepíthetett olyan szoftvert, amely figyeli az Ön tevékenységét, és a Privát lapok sem védenek meg ettől.";
 
 /* Private tab information link */
 "PrivateTabLink" = "További információ a privát lapokról.";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "Nem";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "A Brave sajnos összeomlott, vagy nem záródott be megfelelően.\nVisszaállítja a korábbi lapokat?";
+"RestoreTabOnCrashAlertMessage" = "A Scout sajnos összeomlott, vagy nem záródott be megfelelően.\nVisszaállítja a korábbi lapokat?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "A Brave váratlanul bezárult.";
+"RestoreTabOnCrashAlertTitle" = "A Scout váratlanul bezárult.";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "A bekapcsolással segíthet támogatni a Brave-et és a BAT közösséget.";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "Elküldi az összeomlási jelentést, hogy a Brave kijavíthassa a problémát?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Hoppá! A Brave összeomlott";
+"SendCrashReportAlertTitle" = "Hoppá! A Scout összeomlott";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Jelentés küldése";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "A Brave mostantól beállítható alapértelmezett böngészőként iOS rendszeren. Koppintson ide a beállítások megnyitásához.";
+"setDefaultBrowserCalloutTitle" = "A Scout mostantól beállítható alapértelmezett böngészőként iOS rendszeren. Koppintson ide a beállítások megnyitásához.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Beállítás alapértelmezett böngészőként";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Lapok bezárása";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Annak engedélyezése, hogy a Brave automatikusan bezárja a közelmúltban nem megtekintett lapokat.";
+"settings.autocloseTabsSettingFooter" = "Annak engedélyezése, hogy a Scout automatikusan bezárja a közelmúltban nem megtekintett lapokat.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Zavaró elemek letiltása a YouTube-on";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Média";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "YouTube-hivatkozások megnyitása a Brave-ben";
+"settings.openYouTubeInBrave" = "YouTube-hivatkozások megnyitása a Scout-ben";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Böngészési idő engedélyezése";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "Ezek az alapértelmezett Shields beállítások új oldalak esetén. Ezek módosítása nem lesz hatással a meglévő oldalankénti beállításokra.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "A Brave adatvédelmi rendszere nélkül böngészel. Nem működik megfelelően ha be van kapcsolva Shields?";
+"ShieldsDownDisclaimer" = "A Scout adatvédelmi rendszere nélkül böngészel. Nem működik megfelelően ha be van kapcsolva Shields?";
 
 /* shields overview message */
 "ShieldsOverview" = "A Webhelyvédelem segítségével szabályozhatja, hogy a hirdetések és a nyomkövetők blokkolva legyenek-e az egyes felkeresett webhelyeken. Ha egy adott webhelyen szeretne hirdetéseket látni, itt engedélyezheti őket.";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Böngészési előzmények törlése";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "A Brave böngészési előzményeinek törlése";
+"shortcuts.activityTypeClearHistoryTitle" = "A Scout böngészési előzményeinek törlése";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Új böngészőlap megnyitása és a VPN engedélyezése";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "A Könyvjelzők megnyitása";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "A Brave böngésző könyvjelzőinek megnyitása";
+"shortcuts.activityTypeOpenBookmarksTitle" = "A Scout böngésző könyvjelzőinek megnyitása";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "A Brave-hírek megnyitása";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "A Böngészési előzmények megnyitása";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "A Brave böngészési előzményeinek megnyitása";
+"shortcuts.activityTypeOpenHistoryListTitle" = "A Scout böngészési előzményeinek megnyitása";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "A lejátszási listán szereplő videók lejátszásának megkezdése";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Más eszközökön nyitott lapok megnyitása";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Biztonságos webes keresés megkezdése a Brave segítségével";
+"shortcuts.activityTypeTabDescription" = "Biztonságos webes keresés megkezdése a Scout segítségével";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Könyvjelző webhelyének megnyitása";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Webhely megnyitása";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ez a lehetőség megnyitja a Brave beállításait. A Siri beállításainak módosításához válassza a „Siri& keresés” menüpontot, és szabja személyre a beállításokat.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ez a lehetőség megnyitja a Scout beállításait. A Siri beállításainak módosításához válassza a „Siri& keresés” menüpontot, és szabja személyre a beállításokat.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Beállítások megnyitása";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Megtekintés itt: %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "A névtelen hangalapú keresés használatához engedélyezze a mikrofon-hozzáférést a Brave számára az iOS rendszerbeállításaiban.";
+"voice.search.microphone.description.required" = "A névtelen hangalapú keresés használatához engedélyezze a mikrofon-hozzáférést a Scout számára az iOS rendszerbeállításaiban.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Mikrofon-hozzáférés szükséges";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "A Brave nem tárolja és nem osztja meg hangalapú kereséseit.";
+"voice.search.screen.disclaimer" = "A Scout nem tárolja és nem osztja meg hangalapú kereséseit.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Pénztárca létrehozási dátuma";

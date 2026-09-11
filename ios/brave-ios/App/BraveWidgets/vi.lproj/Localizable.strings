@@ -41,7 +41,7 @@
 "widgets.newsUnavailableByPolicyDescription" = "Đã bị tắt bởi chính sách của tổ chức bạn";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "Vui lòng mở Brave để xem các trang yêu thích của bạn tại đây";
+"widgets.noFavoritesFound" = "Vui lòng mở Scout để xem các trang yêu thích của bạn tại đây";
 
 /* QR Code section title */
 "widgets.QRCode" = "Mã QR";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "Tìm kiếm";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "Tổng quan về việc Brave tiết kiệm thời gian và bảo vệ bạn khi trực tuyến.";
+"widgets.shieldStatsDescription" = "Tổng quan về việc Scout tiết kiệm thời gian và bảo vệ bạn khi trực tuyến.";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "Thống kê Quyền riêng tư";
@@ -74,13 +74,13 @@
 "widgets.shortcutsPrivateTabButton" = "Thẻ Riêng tư";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "Nhanh chóng tìm kiếm trên web hoặc mở các trang web trong Brave.";
+"widgets.shortcutsWidgetDescription" = "Nhanh chóng tìm kiếm trên web hoặc mở các trang web trong Scout.";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "Phím tắt";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "Tổng quan về cách Brave bảo vệ khi bạn trực tuyến.";
+"widgets.singleStatDescription" = "Tổng quan về cách Scout bảo vệ khi bạn trực tuyến.";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "Thống kê Quyền riêng tư";

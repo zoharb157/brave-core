@@ -41,7 +41,7 @@
 "widgets.newsUnavailableByPolicyDescription" = "Изключено от правилата на твоята организация";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "Моля, отвори Brave, за да видиш любимите си тук";
+"widgets.noFavoritesFound" = "Моля, отвори Scout, за да видиш любимите си тук";
 
 /* QR Code section title */
 "widgets.QRCode" = "QR код";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "Търсене";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "Обобщение на това как Brave ти спестява време и те защитава онлайн.";
+"widgets.shieldStatsDescription" = "Обобщение на това как Scout ти спестява време и те защитава онлайн.";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "Статистика за поверителност";
@@ -74,13 +74,13 @@
 "widgets.shortcutsPrivateTabButton" = "Поверителен раздел";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "Бърз достъп до търсене в мрежата или отваряне на страници в Brave.";
+"widgets.shortcutsWidgetDescription" = "Бърз достъп до търсене в мрежата или отваряне на страници в Scout.";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "Преки пътища";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "Обобщение на това как Brave те е защитил онлайн.";
+"widgets.singleStatDescription" = "Обобщение на това как Scout те е защитил онлайн.";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "Статистика за поверителност";

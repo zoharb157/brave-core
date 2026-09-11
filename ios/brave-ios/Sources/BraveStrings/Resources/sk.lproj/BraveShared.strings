@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "To vám umožní uložiť obrázok do galérie.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave chce získať prístup k vašim fotografiám";
+"AccessPhotoDeniedAlertTitle" = "Scout chce získať prístup k vašim fotografiám";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Pridať záložku";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Opýtajte sa Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Toto overí váš prístup k Brave";
+"AuthenticationLoginsTouchReason" = "Toto overí váš prístup k Scout";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Zrušit";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "Adresa";
 
 /* Button to show the brave panel */
-"BravePanel" = "Panel Brave";
+"BravePanel" = "Panel Scout";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Odmeny Brave";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Zámok prehliadača";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Odomknúť Brave pomocou Touch ID, Face ID alebo systémového hesla.";
+"BrowserLockDescription" = "Odomknúť Scout pomocou Touch ID, Face ID alebo systémového hesla.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "História prehliadania";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "Presuňte panel s adresou, karty, záložky a ďalšie nástroje do spodnej časti prehliadača.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Prispôsobiť panel kariet Brave";
+"callout.bottomBarCalloutTitle" = "Prispôsobiť panel kariet Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Získajte súkromie Brave na svojom počítači alebo tablete a synchronizujte záložky a rozšírenia medzi zariadeniami.";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Otvoriť Nastavenia";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Pre ochranu svojho súkromia otvorte všetky odkazy s programom Brave";
+"defaultBrowserCallout.introPrimaryText" = "Pre ochranu svojho súkromia otvorte všetky odkazy s programom Scout";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Štíty Brave blokujú sledovače a reklamy, šetria dáta a čas na každej stránke, ktorú navštívite";
+"defaultBrowserCallout.introSecondaryText" = "Štíty Scout blokujú sledovače a reklamy, šetria dáta a čas na každej stránke, ktorú navštívite";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Otvorte Nastavenia, ťuknite na Predvolenú aplikáciu prehliadača a vyberte Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Otvorte Nastavenia, ťuknite na Predvolenú aplikáciu prehliadača a vyberte Scout.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Nastaviť Brave ako predvolený prehliadač";
+"defaultBrowserCallout.notificationBody" = "Nastaviť Scout ako predvolený prehliadač";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Získajte ochranu Brave na každom odkaze";
+"defaultBrowserCallout.notificationTitle" = "Získajte ochranu Scout na každom odkaze";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Zavrieť callout predvoleného prehliadača";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Predvolené nastavenia Brave";
+"defaultThemeName" = "Predvolené nastavenia Scout";
 
 /* No comment provided by engineer. */
 "Delete" = "Odstrániť";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Zadajte názov priečinka";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ bežne používa na ochranu vašich informácií šifrovanie. Keď sa Brave tentokrát pokúsil pripojiť k %2$@, webová lokalita poslala späť nezvyčajné a nesprávne poverenia. Môže sa to stať, keď sa útočník snaží predstierať, že je %3$@, alebo keď pripojenie prerušila prihlasovacia obrazovka siete Wi-Fi. Vaše informácie sú stále v bezpečí, pretože Brave zastavil pripojenie skôr, ako došlo k výmene akýchkoľvek údajov.<br />Momentálne nemôžete navštíviť %4$@, pretože web používa autentifikáciu certifikátov. Sieťové chyby a útoky sú zvyčajne dočasné, takže táto stránka bude pravdepodobne neskôr fungovať.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ bežne používa na ochranu vašich informácií šifrovanie. Keď sa Scout tentokrát pokúsil pripojiť k %2$@, webová lokalita poslala späť nezvyčajné a nesprávne poverenia. Môže sa to stať, keď sa útočník snaží predstierať, že je %3$@, alebo keď pripojenie prerušila prihlasovacia obrazovka siete Wi-Fi. Vaše informácie sú stále v bezpečí, pretože Scout zastavil pripojenie skôr, ako došlo k výmene akýchkoľvek údajov.<br />Momentálne nemôžete navštíviť %4$@, pretože web používa autentifikáciu certifikátov. Sieťové chyby a útoky sú zvyčajne dočasné, takže táto stránka bude pravdepodobne neskôr fungovať.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Tento server nedokázal dokázať, že ide o %@; jeho bezpečnostný certifikát nie je dôveryhodný pre operačný systém vášho zariadenia. Môže to byť spôsobené nesprávnou konfiguráciou alebo pokusom útočníka zachytiť vaše pripojenie.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Vyberte si váš predvolený vyhľadávací nástroj";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Vitajte v prehliadači Brave";
+"OBSearchEngineTitle" = "Vitajte v prehliadači Scout";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Blokujte sledovače narúšajúce súkromie, aby ste mohli prehliadať web bez toho, aby vás niekto sledoval";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Blokovaním sledovačov a reklám webové stránky využívajú menej dát a načítavajú sa oveľa rýchlejšie.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Zažite rozdiel s Brave:\nŽiadne reklamy. Žiadne sledovače. Oveľa rýchlejšie načítanie stránok.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Zažite rozdiel s Scout:\nŽiadne reklamy. Žiadne sledovače. Oveľa rýchlejšie načítanie stránok.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Zadajte názov webovej lokality alebo adresu URL";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Ak chcete začať, nastavte synchronizačný reťazec a v nastaveniach synchronizácie prepnite možnosť „Otvorené karty“.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Spravujte, čo Brave synchronizuje v Nastaveniach.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Spravujte, čo Scout synchronizuje v Nastaveniach.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Neexistujú žiadne aktívne relácie na zobrazenie z vašich iných zariadení.";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Trvalé súkromné ​​prehliadanie";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Umožňuje Brave obnoviť súkromné ​​karty prehliadania, aj keď zatvoríte alebo znova otvoríte aplikáciu";
+"PersistentPrivateBrowsingAlertMessage" = "Umožňuje Scout obnoviť súkromné ​​karty prehliadania, aj keď zatvoríte alebo znova otvoríte aplikáciu";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Obnoviť súkromné ​​karty";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Chcete pridať toto video do svojho zoznamu videí?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Pridať do zoznamu skladieb Brave";
+"playList.addToPlayListAlertTitle" = "Pridať do zoznamu skladieb Scout";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Možnosti prehrávania";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Nastavenia";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Zoznam skladieb Brave";
+"playlist.carplayTitle" = "Zoznam skladieb Scout";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Zmeniť zoznam skladieb";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Pri načítavaní zdroja sa vyskytol problém!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "V prehliadači môžete pridávať položky do zoznamu skladieb Brave";
+"playList.noItemLabelDetailLabel" = "V prehliadači môžete pridávať položky do zoznamu skladieb Scout";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Nie sú k dispozícii žiadne položky";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Vrátiť naspäť";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Pridá tlačidlo zoznamu prehrávania vedľa panela s adresou v prehliadači Brave. Toto tlačidlo vám umožňuje rýchly prístup k otvoreniu zoznamu skladieb alebo pridania alebo odstránenia médií.";
+"playlist.urlBarButtonOptionFooter" = "Pridá tlačidlo zoznamu prehrávania vedľa panela s adresou v prehliadači Scout. Toto tlačidlo vám umožňuje rýchly prístup k otvoreniu zoznamu skladieb alebo pridania alebo odstránenia médií.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Povoliť tlačidlo rýchleho prístupu";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Zapnúť upozornenia";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Rekapitulácia toho, ako vás Brave tento týždeň chránil online.";
+"privacyHub.notificationMessage" = "Rekapitulácia toho, ako vás Scout tento týždeň chránil online.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Týždenná správa o ochrane osobných údajov";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "Režim Iba súkromné ​​prehliadanie zatvorí všetky vaše aktuálne karty a odhlási vás zo všetkých stránok.";
 
 /* Private tab details */
-"PrivateTabBody" = "Súkromné ​​karty sa v Brave neukladajú, ale nezaručujú vám online anonymitu. Stránky, ktoré navštívite na súkromnej karte, sa nezobrazia vo vašej histórii a ich súbory cookie vždy zmiznú, keď ich zatvoríte – v Brave po nich nezostane žiadna stopa. Stiahnuté súbory sa však uložia.\nVáš mobilný operátor (alebo vlastník siete Wi-Fi alebo VPN, ku ktorej ste pripojení), môže vidieť, ktoré stránky navštevujete, a tieto stránky zistia vašu verejnú IP adresu, a to aj na súkromných kartách.";
+"PrivateTabBody" = "Súkromné ​​karty sa v Scout neukladajú, ale nezaručujú vám online anonymitu. Stránky, ktoré navštívite na súkromnej karte, sa nezobrazia vo vašej histórii a ich súbory cookie vždy zmiznú, keď ich zatvoríte – v Scout po nich nezostane žiadna stopa. Stiahnuté súbory sa však uložia.\nVáš mobilný operátor (alebo vlastník siete Wi-Fi alebo VPN, ku ktorej ste pripojení), môže vidieť, ktoré stránky navštevujete, a tieto stránky zistia vašu verejnú IP adresu, a to aj na súkromných kartách.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Používanie súkromných kariet mení iba to, čo Brave robí na vašom zariadení, nemení správanie nikoho iného.\n\nWebové stránky vždy zistia vašu IP adresu, keď ich navštívite. Z toho môžu často odhadnúť, kde sa nachádzate – zvyčajne vaše mesto. Niekedy môže byť tento odhad polohy oveľa konkrétnejší. Stránky tiež vedia všetko, čo im konkrétne poviete, napríklad hľadané výrazy. Ak sa prihlásite na stránku, budú vedieť, že ste vlastníkom daného účtu. Po zatvorení súkromných kariet budete stále odhlásení, pretože Brave odstráni súbor cookie, vďaka ktorému ste boli prihlásení.\n\nAkýkoľvek poskytovateľ internetu (váš ISP) môže vidieť všetku vašu aktivitu na sieti. Často je to váš mobilný operátor. Ak ste pripojení k sieti Wi-Fi, je to vlastník tejto siete a ak používate sieť VPN, je to ten, kto túto sieť VPN prevádzkuje. Váš ISP môže vidieť, ktoré stránky navštevujete, keď ich navštívite. Ak tieto stránky používajú protokol HTTPS, poskytovateľ internetu nemôže vedieť, čo na týchto stránkach robíte. Ak však stránka používa iba HTTP, váš poskytovateľ internetových služieb môže vidieť všetko: vaše hľadané výrazy, ktoré stránky čítate a ktoré odkazy sledujete.\n\nAk vaše zariadenie spravuje zamestnávateľ, môže tiež sledovať, čo s ním robíte. Používanie súkromných kariet pravdepodobne nezabráni v tom, aby vedel, ktoré stránky ste navštívili. Niekto iný s prístupom k vášmu zariadeniu by tiež mohol mať nainštalovaný softvér, ktorý monitoruje vašu aktivitu, a pred tým vás nechránia ani súkromné ​​karty.";
+"PrivateTabDetails" = "Používanie súkromných kariet mení iba to, čo Scout robí na vašom zariadení, nemení správanie nikoho iného.\n\nWebové stránky vždy zistia vašu IP adresu, keď ich navštívite. Z toho môžu často odhadnúť, kde sa nachádzate – zvyčajne vaše mesto. Niekedy môže byť tento odhad polohy oveľa konkrétnejší. Stránky tiež vedia všetko, čo im konkrétne poviete, napríklad hľadané výrazy. Ak sa prihlásite na stránku, budú vedieť, že ste vlastníkom daného účtu. Po zatvorení súkromných kariet budete stále odhlásení, pretože Scout odstráni súbor cookie, vďaka ktorému ste boli prihlásení.\n\nAkýkoľvek poskytovateľ internetu (váš ISP) môže vidieť všetku vašu aktivitu na sieti. Často je to váš mobilný operátor. Ak ste pripojení k sieti Wi-Fi, je to vlastník tejto siete a ak používate sieť VPN, je to ten, kto túto sieť VPN prevádzkuje. Váš ISP môže vidieť, ktoré stránky navštevujete, keď ich navštívite. Ak tieto stránky používajú protokol HTTPS, poskytovateľ internetu nemôže vedieť, čo na týchto stránkach robíte. Ak však stránka používa iba HTTP, váš poskytovateľ internetových služieb môže vidieť všetko: vaše hľadané výrazy, ktoré stránky čítate a ktoré odkazy sledujete.\n\nAk vaše zariadenie spravuje zamestnávateľ, môže tiež sledovať, čo s ním robíte. Používanie súkromných kariet pravdepodobne nezabráni v tom, aby vedel, ktoré stránky ste navštívili. Niekto iný s prístupom k vášmu zariadeniu by tiež mohol mať nainštalovaný softvér, ktorý monitoruje vašu aktivitu, a pred tým vás nechránia ani súkromné ​​karty.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Prečítajte si o súkromných kartách.";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "Nie";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Bohužiaľ, Brave prestal fungovať alebo sa nezatvoril správne.\nChcete obnoviť svoje karty?";
+"RestoreTabOnCrashAlertMessage" = "Bohužiaľ, Scout prestal fungovať alebo sa nezatvoril správne.\nChcete obnoviť svoje karty?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave bol nečakane zatvorený.";
+"RestoreTabOnCrashAlertTitle" = "Scout bol nečakane zatvorený.";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "Zapnite na podporu značky Brave a komunity BAT.";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "Chcete poslať správu o výpadku, aby Brave mohol problém vyriešiť?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Ojoj! Brave má výpadok";
+"SendCrashReportAlertTitle" = "Ojoj! Scout má výpadok";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Odoslať správu";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Brave je teraz možné nastaviť ako váš predvolený prehliadač v systéme iOS. Ťuknutím sem otvoríte nastavenia.";
+"setDefaultBrowserCalloutTitle" = "Scout je teraz možné nastaviť ako váš predvolený prehliadač v systéme iOS. Ťuknutím sem otvoríte nastavenia.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Nastaviť ako predvolený prehliadač";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Zavrieť karty";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Povoľte Brave, aby automaticky zatváral karty, ktoré neboli nedávno zobrazené.";
+"settings.autocloseTabsSettingFooter" = "Povoľte Scout, aby automaticky zatváral karty, ktoré neboli nedávno zobrazené.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Blokovanie rušivých prvkov na YouTube";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Médiá";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Otvoriť odkazy na YouTube v prehliadači Brave";
+"settings.openYouTubeInBrave" = "Otvoriť odkazy na YouTube v prehliadači Scout";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Povoliť Čas pred obrazovkou";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "Toto sú predvolené nastavenia Shield pre nové webové stránky. Zmena týchto nastavení nebude mať vplyv na vaše existujúce nastavenia pre jednotlivé stránky.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Túto stránku si prezeráte bez ochrany súkromia Brave. Nefunguje to správne, keď sú štíty hore?";
+"ShieldsDownDisclaimer" = "Túto stránku si prezeráte bez ochrany súkromia Scout. Nefunguje to správne, keď sú štíty hore?";
 
 /* shields overview message */
 "ShieldsOverview" = "Štíty stránky vám umožňujú kontrolovať, kedy sú reklamy a sledovače blokované pre každú stránku, ktorú navštívite. Ak uprednostňujete zobrazovanie reklám na konkrétnej stránke, môžete ich povoliť tu.";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Vymazať históriu prehliadača";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Vymazať históriu prehliadania Brave";
+"shortcuts.activityTypeClearHistoryTitle" = "Vymazať históriu prehliadania Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Otvorte prehliadač na novej karte a povoľte VPN";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Otvoriť Záložky";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Otvoriť záložky prehliadača Brave";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Otvoriť záložky prehliadača Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Otvoriť Správy Brave";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Otvoriť históriu prehliadača";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Otvoriť históriu prehliadača Brave";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Otvoriť históriu prehliadača Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Spustiť prehrávanie svojich videí v zozname prehrávania";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Otvoriť karty z iných zariadení";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Začnite bezpečne surfovať na webe s Brave";
+"shortcuts.activityTypeTabDescription" = "Začnite bezpečne surfovať na webe s Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Otvoriť webovú stránku zo záložiek";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Otvoriť webovú stránku";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Táto možnosť otvorí nastavenia Brave. Ak chcete zmeniť rôzne možnosti Siri, vyberte položku ponuky „Siri a vyhľadávanie“ a prispôsobte svoje preferencie.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Táto možnosť otvorí nastavenia Scout. Ak chcete zmeniť rôzne možnosti Siri, vyberte položku ponuky „Siri a vyhľadávanie“ a prispôsobte svoje preferencie.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Otvoriť Nastavenia";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Zobraziť na %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Povoľte prístup k mikrofónu v nastaveniach systému iOS pre Brave, aby mohol používať anonymné hlasové vyhľadávanie.";
+"voice.search.microphone.description.required" = "Povoľte prístup k mikrofónu v nastaveniach systému iOS pre Scout, aby mohol používať anonymné hlasové vyhľadávanie.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Vyžaduje sa prístup k mikrofónu";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave neukladá ani nezdieľa vaše hlasové vyhľadávania.";
+"voice.search.screen.disclaimer" = "Scout neukladá ani nezdieľa vaše hlasové vyhľadávania.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Dátum vytvorenia peňaženky";

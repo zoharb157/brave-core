@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "يتيح لك ذلك حفظ الصورة في ألبوم الكاميرا.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "يرغب Brave في الوصول إلى صورك";
+"AccessPhotoDeniedAlertTitle" = "يرغب Scout في الوصول إلى صورك";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "إضافة إشارة مرجعية";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "اسأل Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "هذا يصادق على وصولك إلى Brave";
+"AuthenticationLoginsTouchReason" = "هذا يصادق على وصولك إلى Scout";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "إلغاء";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "العنوان";
 
 /* Button to show the brave panel */
-"BravePanel" = "لوحة Brave";
+"BravePanel" = "لوحة Scout";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "مكافآت Brave";
@@ -314,7 +314,7 @@
 "BrowserLock" = "قفل المتصفح";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "افتح Brave باستخدام Touch ID أو Face ID أو رمز مرور النظام.";
+"BrowserLockDescription" = "افتح Scout باستخدام Touch ID أو Face ID أو رمز مرور النظام.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "سجلّ التصفّح";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "انقل شريط العناوين وعلامات التبويب والإشارات المرجعية والأدوات الأخرى إلى أسفل المتصفح.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "تخصيص شريط علامات تبويب Brave";
+"callout.bottomBarCalloutTitle" = "تخصيص شريط علامات تبويب Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "احصل على خصوصية Brave على جهاز الكمبيوتر أو الجهاز اللوحي الخاص بك، وقم بمزامنة الإشارات المرجعية والإضافات بين الأجهزة.";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "فتح الإعدادات";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "افتح جميع الروابط بواسطة متصفح Brave لحماية خصوصيتك";
+"defaultBrowserCallout.introPrimaryText" = "افتح جميع الروابط بواسطة متصفح Scout لحماية خصوصيتك";
 
 /* Secondary text on default browser popup. */
 "defaultBrowserCallout.introSecondaryText" = "تقوم Shields بحظر أدوات التتبع والإعلانات، وتحفظ البيانات، وتوفّر الوقت في كل موقع تزوره";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "افتح الإعدادات، وانقر فوق تطبيق المتصفح الافتراضي، وحدد Brave.";
+"defaultBrowserCallout.introTertiaryText" = "افتح الإعدادات، وانقر فوق تطبيق المتصفح الافتراضي، وحدد Scout.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "‏اختيار Brave كمتصفِّح تلقائي";
+"defaultBrowserCallout.notificationBody" = "‏اختيار Scout كمتصفِّح تلقائي";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "احصل على حماية Brave، على كل رابط";
+"defaultBrowserCallout.notificationTitle" = "احصل على حماية Scout، على كل رابط";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "إغلاق وسيلة شرح المتصفح الافتراضي";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave الافتراضي";
+"defaultThemeName" = "Scout الافتراضي";
 
 /* No comment provided by engineer. */
 "Delete" = "حذف";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "أدخل اسم المجلد";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "يستخدم %1$@ التشفير عادةً لحماية معلوماتك. عندما حاول Brave الاتصال بـ %2$@ هذه المرة، أرسل موقع الويب بيانات اعتماد غير عادية وغير صحيحة. قد يحدث هذا عندما يحاول أحد المهاجمين التظاهر بأنه %3$@، أو عندما تقطع شاشة تسجيل الدخول إلى Wi-Fi الاتصال. تبقى معلوماتك آمنة لأن Brave أوقف الاتصال قبل تبادل أي بيانات.<br />لا يمكنك زيارة %4$@ الآن لأن موقع الويب يستخدم تثبيت الشهادة. عادة ما تكون أخطاء الشبكة والهجمات مؤقتة، لذلك من المحتمل أن تعمل هذه الصفحة لاحقًا.";
+"ErrorPagesAdvancedErrorPinningDetails" = "يستخدم %1$@ التشفير عادةً لحماية معلوماتك. عندما حاول Scout الاتصال بـ %2$@ هذه المرة، أرسل موقع الويب بيانات اعتماد غير عادية وغير صحيحة. قد يحدث هذا عندما يحاول أحد المهاجمين التظاهر بأنه %3$@، أو عندما تقطع شاشة تسجيل الدخول إلى Wi-Fi الاتصال. تبقى معلوماتك آمنة لأن Scout أوقف الاتصال قبل تبادل أي بيانات.<br />لا يمكنك زيارة %4$@ الآن لأن موقع الويب يستخدم تثبيت الشهادة. عادة ما تكون أخطاء الشبكة والهجمات مؤقتة، لذلك من المحتمل أن تعمل هذه الصفحة لاحقًا.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "تعذر على هذا الخادم إثبات أنه %@؛ شهادة الأمان الخاصة به غير موثوق بها من قبل نظام تشغيل جهازك. قد يكون هذا بسبب خطأ في التكوين أو محاولة مهاجم اعتراض اتصالك.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "قم بإختيار محرك البحث الإفتراضي";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "مرحباً بك في متصفح Brave";
+"OBSearchEngineTitle" = "مرحباً بك في متصفح Scout";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "حظر أدوات التتبع التي تغزو الخصوصية حتى تتمكن من التصفح دون متابعتك عبر الويب";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "من خلال حظر أدوات التتبع والإعلانات، تستخدم مواقع الويب بيانات أقل وطريقة تحميل أسرع.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "انظر اختلاف Brave:\nلا إعلانات. لا توجد أدوات تتبع. طريقة تحميل أسرع للصفحة.";
+"onboarding.omniboxOnboardingPopOverDescription" = "انظر اختلاف Scout:\nلا إعلانات. لا توجد أدوات تتبع. طريقة تحميل أسرع للصفحة.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "كتابة اسم موقع ويب أو عنوان URL";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "للبدء، قم بإعداد سلسلة مزامنة وقم بتبديل \"فتح علامات التبويب\" في إعدادات المزامنة.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "إدارة ما يقوم Brave بمزامنته في الإعدادات.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "إدارة ما يقوم Scout بمزامنته في الإعدادات.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "لا توجد جلسات نشطة لعرضها من أجهزتك الأخرى.";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "التصفح الخاص المستمر";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "يسمح لـ Brave باستعادة علامات تبويب التصفح الخاصة، حتى إذا قمت بإغلاق / إعادة فتح التطبيق";
+"PersistentPrivateBrowsingAlertMessage" = "يسمح لـ Scout باستعادة علامات تبويب التصفح الخاصة، حتى إذا قمت بإغلاق / إعادة فتح التطبيق";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "استعادة علامات التبويب الخاصة";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "هل ترغب في إضافة هذا الفيديو إلى قائمة التشغيل الخاصة بك؟";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "أضف إلى قائمة التشغيل لدى Brave";
+"playList.addToPlayListAlertTitle" = "أضف إلى قائمة التشغيل لدى Scout";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "خيارات التشغيل";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "الإعدادات";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "قائمة تشغيل Brave";
+"playlist.carplayTitle" = "قائمة تشغيل Scout";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "تغيير قائمة التشغيل";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "حدثت مشكلة أثناء تحميل المورد!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "يمكنك إضافة عناصر إلى قائمة التشغيل لدى Brave الخاصة بك داخل المتصفح";
+"playList.noItemLabelDetailLabel" = "يمكنك إضافة عناصر إلى قائمة التشغيل لدى Scout الخاصة بك داخل المتصفح";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "لا توجد عناصر متوفرة";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "تراجع";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "لإضافة زر قائمة تشغيل بجانب شريط العناوين في متصفح Brave. يمنحك هذا الزر وصولًا سريعًا لفتح قائمة التشغيل أو إضافة الوسائط أو إزالتها.";
+"playlist.urlBarButtonOptionFooter" = "لإضافة زر قائمة تشغيل بجانب شريط العناوين في متصفح Scout. يمنحك هذا الزر وصولًا سريعًا لفتح قائمة التشغيل أو إضافة الوسائط أو إزالتها.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "تمكين زر الوصول السريع";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "تشغيل الإشعارات";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "ملخص لكيفية حماية Brave لك عبر الإنترنت هذا الأسبوع.";
+"privacyHub.notificationMessage" = "ملخص لكيفية حماية Scout لك عبر الإنترنت هذا الأسبوع.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "تقرير الخصوصية الأسبوعي";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "سيؤدي وضع التصفح الخاص فقط إلى إغلاق جميع علامات التبويب الحالية وتسجيل خروجك من جميع المواقع.";
 
 /* Private tab details */
-"PrivateTabBody" = "لا يتم حفظ علامات التبويب الخاصة في Brave، لكنها لا تجعلك مجهول الهوية عبر الإنترنت. ولن تظهر المواقع التي تزورها في علامة تبويب خاصة في سجلك وتختفي ملفات تعريف الارتباط الخاصة بها دائمًا عند إغلاقها - لن يكون هناك أي أثر لها في Brave. ومع ذلك، سيتم حفظ التنزيلات.\nيمكن لمشغل شبكة الهاتف (أو مالك شبكة Wi-Fi أو شبكة VPN التي تتصل بها) معرفة المواقع التي تزورها وستتعرف هذه المواقع على عنوان بروتوكول الإنترنت العام الخاص بك، حتى في علامات التبويب الخاصة.";
+"PrivateTabBody" = "لا يتم حفظ علامات التبويب الخاصة في Scout، لكنها لا تجعلك مجهول الهوية عبر الإنترنت. ولن تظهر المواقع التي تزورها في علامة تبويب خاصة في سجلك وتختفي ملفات تعريف الارتباط الخاصة بها دائمًا عند إغلاقها - لن يكون هناك أي أثر لها في Scout. ومع ذلك، سيتم حفظ التنزيلات.\nيمكن لمشغل شبكة الهاتف (أو مالك شبكة Wi-Fi أو شبكة VPN التي تتصل بها) معرفة المواقع التي تزورها وستتعرف هذه المواقع على عنوان بروتوكول الإنترنت العام الخاص بك، حتى في علامات التبويب الخاصة.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "يؤدي استخدام علامات التبويب الخاصة فقط إلى تغيير ما يفعله Brave على جهازك، ولا يغير سلوك أي شخص آخر.\n\nتتعرف المواقع دائمًا على عنوان بروتوكول الإنترنت الخاص بك عند زيارتها. ومن خلال ذلك، يمكنها في كثير من الأحيان تخمين مكانك تقريبًا - عادة مدينتك. في بعض الأحيان يمكن أن يكون تخمين الموقع أكثر تحديدًا. كما تعرف المواقع أيضًا كل ما تخبرها به على وجه التحديد، مثل مصطلحات البحث. إذا قمت بتسجيل الدخول إلى أحد المواقع، فستعرف أنك مالك هذا الحساب. وستظل قيد تسجيل الخروج عند إغلاق علامات التبويب الخاصة لأن Brave سيتخلص من ملف تعريف الارتباط الذي يبقيك قيد تسجيل الدخول.\n\nيمكن لأي شخص يقوم بتوصيلك بالإنترنت (مزود خدمة الإنترنت) رؤية كل نشاط الشبكة الخاص بك. وفي كثير من الأحيان، هذا هو مشغل شبكة المحمول الخاص بك. وإذا كنت متصلًا بشبكة Wi-Fi، فهذا هو مالك تلك الشبكة، أما إذا كنت تستخدم شبكة VPN، فهذا هو الشخص الذي يدير شبكة VPN هذه. ويمكن لمزود خدمة الإنترنت معرفة المواقع التي تزورها أثناء زيارتها. إذا كانت هذه المواقع تستخدم HTTPS، فلن تتمكن من إجراء أكثر من مجرد تخمين متعلم حول ما تفعله على تلك المواقع. ولكن إذا كان الموقع يستخدم HTTP فقط، فيمكن لمزود خدمة الإنترنت رؤية كل شيء: مصطلحات البحث والصفحات التي تقرأها والروابط التي تتبعها.\n\nإذا كان صاحب العمل يدير جهازك، فقد يتتبع أيضا ما تفعله به. وربما لن يمنعه استخدام علامات التبويب الخاصة من معرفة المواقع التي زرتها. كما يمكن لشخص آخر لديه حق الوصول إلى جهازك أيضًا تثبيت برنامج يراقب نشاطك، ولن تحميك علامات التبويب الخاصة من ذلك أيضًا.";
+"PrivateTabDetails" = "يؤدي استخدام علامات التبويب الخاصة فقط إلى تغيير ما يفعله Scout على جهازك، ولا يغير سلوك أي شخص آخر.\n\nتتعرف المواقع دائمًا على عنوان بروتوكول الإنترنت الخاص بك عند زيارتها. ومن خلال ذلك، يمكنها في كثير من الأحيان تخمين مكانك تقريبًا - عادة مدينتك. في بعض الأحيان يمكن أن يكون تخمين الموقع أكثر تحديدًا. كما تعرف المواقع أيضًا كل ما تخبرها به على وجه التحديد، مثل مصطلحات البحث. إذا قمت بتسجيل الدخول إلى أحد المواقع، فستعرف أنك مالك هذا الحساب. وستظل قيد تسجيل الخروج عند إغلاق علامات التبويب الخاصة لأن Scout سيتخلص من ملف تعريف الارتباط الذي يبقيك قيد تسجيل الدخول.\n\nيمكن لأي شخص يقوم بتوصيلك بالإنترنت (مزود خدمة الإنترنت) رؤية كل نشاط الشبكة الخاص بك. وفي كثير من الأحيان، هذا هو مشغل شبكة المحمول الخاص بك. وإذا كنت متصلًا بشبكة Wi-Fi، فهذا هو مالك تلك الشبكة، أما إذا كنت تستخدم شبكة VPN، فهذا هو الشخص الذي يدير شبكة VPN هذه. ويمكن لمزود خدمة الإنترنت معرفة المواقع التي تزورها أثناء زيارتها. إذا كانت هذه المواقع تستخدم HTTPS، فلن تتمكن من إجراء أكثر من مجرد تخمين متعلم حول ما تفعله على تلك المواقع. ولكن إذا كان الموقع يستخدم HTTP فقط، فيمكن لمزود خدمة الإنترنت رؤية كل شيء: مصطلحات البحث والصفحات التي تقرأها والروابط التي تتبعها.\n\nإذا كان صاحب العمل يدير جهازك، فقد يتتبع أيضا ما تفعله به. وربما لن يمنعه استخدام علامات التبويب الخاصة من معرفة المواقع التي زرتها. كما يمكن لشخص آخر لديه حق الوصول إلى جهازك أيضًا تثبيت برنامج يراقب نشاطك، ولن تحميك علامات التبويب الخاصة من ذلك أيضًا.";
 
 /* Private tab information link */
 "PrivateTabLink" = "تعرف على علامات التبويب الخاصة.";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "الرقم";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "لسوء الحظ، تعطل Brave أو لم يغلق بشكل صحيح.\nهل تريد استعادة علامات التبويب الخاصة بك؟";
+"RestoreTabOnCrashAlertMessage" = "لسوء الحظ، تعطل Scout أو لم يغلق بشكل صحيح.\nهل تريد استعادة علامات التبويب الخاصة بك؟";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "تم إغلاق Brave بشكل غير متوقع.";
+"RestoreTabOnCrashAlertTitle" = "تم إغلاق Scout بشكل غير متوقع.";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "فعِّل هذا الخيار لدعم Brave ومجتمع BAT.";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "إرسال تقرير الأعطال حتى يتمكن Brave من حل المشكلة؟";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "عفوًا! تعطل Brave";
+"SendCrashReportAlertTitle" = "عفوًا! تعطل Scout";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "إرسال تقرير";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "يمكن الآن تعيين Brave كمتصفح افتراضي في iOS. اضغط هنا لفتح الإعدادات.";
+"setDefaultBrowserCalloutTitle" = "يمكن الآن تعيين Scout كمتصفح افتراضي في iOS. اضغط هنا لفتح الإعدادات.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "التعيين كمتصفح افتراضي";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "إغلاق علامات التبويب";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "السماح لـ Brave بإغلاق علامات التبويب التي لم يتم عرضها مؤخرًا تلقائيًا.";
+"settings.autocloseTabsSettingFooter" = "السماح لـ Scout بإغلاق علامات التبويب التي لم يتم عرضها مؤخرًا تلقائيًا.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "حظر عناصر التشويش على YouTube";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "الوسائط";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "فتح روابط YouTube في متصفح Brave";
+"settings.openYouTubeInBrave" = "فتح روابط YouTube في متصفح Scout";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "تمكين مدة تشغيل الشاشة";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "هذه هي إعدادات طرق الحماية الافتراضية للمواقع الجديدة. لن يؤثر تغييرها على إعداداتك الحالية لكل موقع";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "إنك تتصفح هذا الموقع دون حماية الخصوصية من Brave. ألا يعمل بشكل صحيح أثناء تشغيل Shields؟";
+"ShieldsDownDisclaimer" = "إنك تتصفح هذا الموقع دون حماية الخصوصية من Scout. ألا يعمل بشكل صحيح أثناء تشغيل Shields؟";
 
 /* shields overview message */
 "ShieldsOverview" = "تتيح لك دروع Shields الموقع التحكم في وقت حظر الإعلانات وأدوات التتبع لكل موقع تزوره. إذا كنت تفضل مشاهدة الإعلانات على موقع معين، فيمكنك تمكينها هنا.";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "مسح سجل المتصفح";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "مسح سجل تصفح Brave";
+"shortcuts.activityTypeClearHistoryTitle" = "مسح سجل تصفح Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "افتح المتصفح في علامة تبويب جديدة وقم بتمكين VPN";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "فتح الإشارات المرجعية";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "فتح الإشارات المرجعية لمتصفح Brave";
+"shortcuts.activityTypeOpenBookmarksTitle" = "فتح الإشارات المرجعية لمتصفح Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "فتح أخبار Brave";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "فتح سجل المتصفح";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "فتح سجل متصفح Brave";
+"shortcuts.activityTypeOpenHistoryListTitle" = "فتح سجل متصفح Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "ابدأ تشغيل مقاطع الفيديو الخاصة بك في قائمة التشغيل";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "فتح علامات التبويب من أجهزة أخرى";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "بدء البحث في الويب بأمان باستخدام Brave";
+"shortcuts.activityTypeTabDescription" = "بدء البحث في الويب بأمان باستخدام Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "فتح موقع الويب من الإشارة المرجعية";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "فتح موقع الويب";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "سيفتح هذا الخيار إعدادات Brave. لتغيير خيارات Siri المختلفة، يرجى تحديد عنصر القائمة \"Siri والبحث\" وتخصيص اختياراتك.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "سيفتح هذا الخيار إعدادات Scout. لتغيير خيارات Siri المختلفة، يرجى تحديد عنصر القائمة \"Siri والبحث\" وتخصيص اختياراتك.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "فتح الإعدادات";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "عرض على %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "يرجى السماح بالوصول إلى الميكروفون في إعدادات نظام iOS لـ Brave لاستخدام البحث الصوتي المجهول.";
+"voice.search.microphone.description.required" = "يرجى السماح بالوصول إلى الميكروفون في إعدادات نظام iOS لـ Scout لاستخدام البحث الصوتي المجهول.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "يلزم الوصول إلى الميكروفون";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "لا يقوم Brave بتخزين أو مشاركة عمليات البحث الصوتي الخاصة بك.";
+"voice.search.screen.disclaimer" = "لا يقوم Scout بتخزين أو مشاركة عمليات البحث الصوتي الخاصة بك.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "تاريخ إنشاء المحفظة";

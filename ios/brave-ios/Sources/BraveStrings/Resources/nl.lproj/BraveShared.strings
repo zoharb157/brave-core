@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "Hiermee kun je de afbeeldingen in je Filmrol bewaren.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave wil graag toegang tot je foto's";
+"AccessPhotoDeniedAlertTitle" = "Scout wil graag toegang tot je foto's";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Voeg bladwijzer toe";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Vraag Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Hiermee authenticeer je de toegang tot Brave";
+"AuthenticationLoginsTouchReason" = "Hiermee authenticeer je de toegang tot Scout";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Annuleer";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "Adres";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave-paneel";
+"BravePanel" = "Scout-paneel";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Brave Rewards";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Browservergrendeling";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Ontgrendel Brave met Touch ID, Face ID of een toegangscode.";
+"BrowserLockDescription" = "Ontgrendel Scout met Touch ID, Face ID of een toegangscode.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Browsegeschiedenis";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "Verplaats de adresbalk, tabbladen, bladwijzers en andere tools naar de onderkant van de browser.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Pas Brave-tabbladenbalk aan";
+"callout.bottomBarCalloutTitle" = "Pas Scout-tabbladenbalk aan";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Gebruik Brave Privacy op je computer of tablet en synchroniseer bladwijzers en extensies tussen je apparaten.";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Open Instellingen";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Open alle links met Brave om je privacy te beschermen";
+"defaultBrowserCallout.introPrimaryText" = "Open alle links met Scout om je privacy te beschermen";
 
 /* Secondary text on default browser popup. */
 "defaultBrowserCallout.introSecondaryText" = "Shields blokkeert niet alleen trackers en advertenties, maar zorgt er ook voor dat je data en tijd bespaart wanneer je sites bezoekt";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Open Instellingen, tik op 'Standaard browserapp' en selecteer Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Open Instellingen, tik op 'Standaard browserapp' en selecteer Scout.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Stel Brave in als je standaardbrowser";
+"defaultBrowserCallout.notificationBody" = "Stel Scout in als je standaardbrowser";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Laat Brave je beschermen bij elke link";
+"defaultBrowserCallout.notificationTitle" = "Laat Scout je beschermen bij elke link";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Sluit toelichting over standaardbrowser";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Standaard Brave";
+"defaultThemeName" = "Standaard Scout";
 
 /* No comment provided by engineer. */
 "Delete" = "Verwijder";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Voer mapnaam in";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ gebruikt normaal encryptie om je informatie te beschermen. Wanneer Brave deze keer probeerde verbinding te maken met %2$@, stuurde de website ongebruikelijke en onjuiste inloggegevens terug. Dit kan gebeuren als een aanvaller zich voordoet als %3$@ of als de verbinding is onderbroken door een inlogscherm voor wifi. Je informatie is nog steeds veilig omdat Brave de verbinding heeft gestopt voordat er gegevens werden uitgewisseld.<br />Je kunt %4$@ nu niet bezoeken omdat de website certificaatkoppeling gebruikt. Netwerkfouten en aanvallen zijn doorgaans tijdelijk, waardoor deze pagina wellicht later weer zal werken.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ gebruikt normaal encryptie om je informatie te beschermen. Wanneer Scout deze keer probeerde verbinding te maken met %2$@, stuurde de website ongebruikelijke en onjuiste inloggegevens terug. Dit kan gebeuren als een aanvaller zich voordoet als %3$@ of als de verbinding is onderbroken door een inlogscherm voor wifi. Je informatie is nog steeds veilig omdat Scout de verbinding heeft gestopt voordat er gegevens werden uitgewisseld.<br />Je kunt %4$@ nu niet bezoeken omdat de website certificaatkoppeling gebruikt. Netwerkfouten en aanvallen zijn doorgaans tijdelijk, waardoor deze pagina wellicht later weer zal werken.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Deze server kon niet bewijzen dat het %@ is omdat het beveiligingscertificaat van de server niet wordt vertrouwd door het besturingssysteem van je apparaat. Mogelijk wordt dit veroorzaakt door een verkeerde configuratie of een aanvaller die je verbinding wil onderscheppen.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Selecteer je standaard zoekmachine";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Welkom bij Brave Browser";
+"OBSearchEngineTitle" = "Welkom bij Scout";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Blokkeer trackers die je privacy niet respecteren, zodat je kunt browsen zonder gevolgd te worden";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Door trackers en advertenties te blokkeren, verbruiken websites minder data en laden ze veel sneller.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Merk het verschil met Brave:\nGeen advertenties. Geen trackers. Razendsnel browsen.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Merk het verschil met Scout:\nGeen advertenties. Geen trackers. Razendsnel browsen.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Typ de naam of URL van een website";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Ga aan de slag door een synchronisatieketen in te stellen en 'Geopende tabbladen' in Synchronisatie-instellingen aan te zetten.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Beheer in Instellingen wat Brave synchroniseert.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Beheer in Instellingen wat Scout synchroniseert.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Er zijn geen actieve sessies op je andere apparaten.";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Permanente privémodus";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Staat Brave toe om privétabbladen te herstellen, zelfs als je de app sluit of opnieuw opent";
+"PersistentPrivateBrowsingAlertMessage" = "Staat Scout toe om privétabbladen te herstellen, zelfs als je de app sluit of opnieuw opent";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Herstel privétabbladen";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Wil je deze video aan je playlist toevoegen?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Voeg toe aan Brave Playlist";
+"playList.addToPlayListAlertTitle" = "Voeg toe aan Playlist";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Afspeelopties";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Instellingen";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave Playlist";
+"playlist.carplayTitle" = "Playlist";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Wijzig playlist";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Er was een probleem met het laden van de bron.";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "In de browser kun je items aan Brave Playlist toevoegen";
+"playList.noItemLabelDetailLabel" = "In de browser kun je items aan Playlist toevoegen";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Geen items";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Herstel";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Voegt een playlistknop toe naast de adresbalk in Brave Browser. Met deze knop heb je snel toegang tot je playlist en kun je media toevoegen of verwijderen.";
+"playlist.urlBarButtonOptionFooter" = "Voegt een playlistknop toe naast de adresbalk in Scout. Met deze knop heb je snel toegang tot je playlist en kun je media toevoegen of verwijderen.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Knop voor snelle toegang";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Zet meldingen aan";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Een overzicht van hoe Brave je deze week heeft beschermd.";
+"privacyHub.notificationMessage" = "Een overzicht van hoe Scout je deze week heeft beschermd.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Wekelijks privacyrapport";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "In 'Alleen privémodus' worden al je huidige tabbladen gesloten en word je uitgelogd bij alle sites.";
 
 /* Private tab details */
-"PrivateTabBody" = "Hoewel privétabbladen niet worden bewaard in Brave, garanderen ze jouw online anonimiteit niet. Sites die je bezoekt op privétabbladen, zie je niet in je geschiedenis en eventuele cookies worden altijd gewist wanneer je deze tabbladen sluit zodat er in Brave geen enkel spoor van die bezochte sites is. Downloads worden wel bewaard.\nJe mobiele provider (of de eigenaar van het wifinetwerk of VPN waarmee je verbonden bent) kan zien welke sites je bezoekt en die sites hebben je openbare IP-adres, zelfs als je privétabbladen gebruikt.";
+"PrivateTabBody" = "Hoewel privétabbladen niet worden bewaard in Scout, garanderen ze jouw online anonimiteit niet. Sites die je bezoekt op privétabbladen, zie je niet in je geschiedenis en eventuele cookies worden altijd gewist wanneer je deze tabbladen sluit zodat er in Scout geen enkel spoor van die bezochte sites is. Downloads worden wel bewaard.\nJe mobiele provider (of de eigenaar van het wifinetwerk of VPN waarmee je verbonden bent) kan zien welke sites je bezoekt en die sites hebben je openbare IP-adres, zelfs als je privétabbladen gebruikt.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Het gebruik van privétabbladen is alleen van invloed op wat Brave op jouw apparaat doet. Het gedrag van anderen blijft ongewijzigd.\n\nSites weten altijd je IP-adres wanneer je ze bezoekt. Op basis van dat adres kunnen ze vaak je locatie bij benadering schatten. Doorgaans is dat de stad in je buurt, maar soms kunnen ze je locatie ook nauwkeuriger bepalen. Sites kunnen eveneens gegevens onthouden die je invoert, zoals zoektermen. Als je inlogt op sites, weten ze dat jij de eigenaar bent van dat account. Bij het sluiten van privétabbladen ben je nog steeds uitgelogd want Brave wist de cookie die je ingelogd houdt.\n\nDe service waarmee je verbinding maakt met internet (je internetprovider) kan al je netwerkactiviteit zien. Vaak is dit je mobiele provider. Als je bent verbonden met een wifinetwerk, is dit de eigenaar van dat netwerk en als je een VPN gebruikt, is het de service die dit VPN aanbiedt. Je internetprovider kan zien welke sites je bezoekt wanneer je ze bezoekt. Als die sites HTTPS gebruiken, kunnen ze alleen maar een beredeneerde schatting doen over wat je op die sites doet. Maar als een site alleen HTTP gebruikt, weet je internetprovider alles: gebruikte zoektermen, bezochte pagina's en gevolgde links.\n\nAls je apparaat wordt beheerd door je werkgever, houdt deze mogelijk ook bij wat je met dat apparaat doet. Het gebruik van privétabbladen belet niet dat je werkgever niet weet welke sites je bezoekt. Iemand anders met toegang tot je apparaat kan ook software hebben geïnstalleerd die je activiteit bewaakt en privétabbladen beschermen je hier niet tegen.";
+"PrivateTabDetails" = "Het gebruik van privétabbladen is alleen van invloed op wat Scout op jouw apparaat doet. Het gedrag van anderen blijft ongewijzigd.\n\nSites weten altijd je IP-adres wanneer je ze bezoekt. Op basis van dat adres kunnen ze vaak je locatie bij benadering schatten. Doorgaans is dat de stad in je buurt, maar soms kunnen ze je locatie ook nauwkeuriger bepalen. Sites kunnen eveneens gegevens onthouden die je invoert, zoals zoektermen. Als je inlogt op sites, weten ze dat jij de eigenaar bent van dat account. Bij het sluiten van privétabbladen ben je nog steeds uitgelogd want Scout wist de cookie die je ingelogd houdt.\n\nDe service waarmee je verbinding maakt met internet (je internetprovider) kan al je netwerkactiviteit zien. Vaak is dit je mobiele provider. Als je bent verbonden met een wifinetwerk, is dit de eigenaar van dat netwerk en als je een VPN gebruikt, is het de service die dit VPN aanbiedt. Je internetprovider kan zien welke sites je bezoekt wanneer je ze bezoekt. Als die sites HTTPS gebruiken, kunnen ze alleen maar een beredeneerde schatting doen over wat je op die sites doet. Maar als een site alleen HTTP gebruikt, weet je internetprovider alles: gebruikte zoektermen, bezochte pagina's en gevolgde links.\n\nAls je apparaat wordt beheerd door je werkgever, houdt deze mogelijk ook bij wat je met dat apparaat doet. Het gebruik van privétabbladen belet niet dat je werkgever niet weet welke sites je bezoekt. Iemand anders met toegang tot je apparaat kan ook software hebben geïnstalleerd die je activiteit bewaakt en privétabbladen beschermen je hier niet tegen.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Meer informatie over privétabbladen.";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "Nee";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Brave is gecrasht of is niet correct gesloten.\nWil je de tabbladen herstellen?";
+"RestoreTabOnCrashAlertMessage" = "Scout is gecrasht of is niet correct gesloten.\nWil je de tabbladen herstellen?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave is onverwacht gesloten";
+"RestoreTabOnCrashAlertTitle" = "Scout is onverwacht gesloten";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "Zet deze functie aan om Brave en de BAT Community te steunen.";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "Wil je een crashrapport sturen zodat Brave het probleem kan oplossen?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Oh nee... Brave is gecrasht";
+"SendCrashReportAlertTitle" = "Oh nee... Scout is gecrasht";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Stuur rapport";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Brave kan nu als je standaardbrowser voor iOS worden ingesteld. Tik hier om de instellingen te openen.";
+"setDefaultBrowserCalloutTitle" = "Scout kan nu als je standaardbrowser voor iOS worden ingesteld. Tik hier om de instellingen te openen.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Stel in als standaardbrowser";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Sluit tabbladen";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Sta Brave toe om tabbladen automatisch te sluiten als ze niet recent bekeken zijn.";
+"settings.autocloseTabsSettingFooter" = "Sta Scout toe om tabbladen automatisch te sluiten als ze niet recent bekeken zijn.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Blokkeer afleidende YouTube-elementen";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Media";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Open YouTube-links in Brave";
+"settings.openYouTubeInBrave" = "Open YouTube-links in Scout";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Schakel schermtijd in";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "Hier vind je de standaard Shields-instellingen voor nieuwe sites. Als je deze instellingen wijzigt, blijven de bestaande instellingen voor specifieke websites ongewijzigd.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Je bezoekt deze site zonder de privacybescherming van Brave. Werkt de site niet goed als Shields aan staat?";
+"ShieldsDownDisclaimer" = "Je bezoekt deze site zonder de privacybescherming van Scout. Werkt de site niet goed als Shields aan staat?";
 
 /* shields overview message */
 "ShieldsOverview" = "Met Shields bepaal je zelf of je advertenties en trackers wilt blokkeren voor sites die je bezoekt. Als je op een specifieke site graag advertenties wilt zien, kun je dat hier inschakelen. ";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Wis browsegeschiedenis";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Wis Brave-browsegeschiedenis";
+"shortcuts.activityTypeClearHistoryTitle" = "Wis Scout-browsegeschiedenis";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Open browser in een nieuw tabblad en schakel VPN in";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Open Bladwijzers";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Open Bladwijzers van Brave Browser";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Open Bladwijzers van Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Open Brave News";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Open browsegeschiedenis";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Open Geschiedenis van Brave Browser";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Open Geschiedenis van Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Speel je video's in Playlist af";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Open tabbladen die op andere apparaten zijn geopend";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Zoek veilig op het web met Brave";
+"shortcuts.activityTypeTabDescription" = "Zoek veilig op het web met Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Open website uit Bladwijzers";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Open website";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Met deze optie open je de instellingen van Brave. Als je opties voor Siri wilt wijzigen, selecteer je het menuonderdeel 'Siri en zoekopdrachten' en pas je je keuzes aan.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Met deze optie open je de instellingen van Scout. Als je opties voor Siri wilt wijzigen, selecteer je het menuonderdeel 'Siri en zoekopdrachten' en pas je je keuzes aan.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Open Instellingen";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Bekijk op %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Geef in de iOS-systeeminstellingen toegang tot de microfoon zodat Brave anonieme gesproken zoekopdrachten kan uitvoeren.";
+"voice.search.microphone.description.required" = "Geef in de iOS-systeeminstellingen toegang tot de microfoon zodat Scout anonieme gesproken zoekopdrachten kan uitvoeren.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Toegang tot microfoon vereist";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave bewaart en deelt geen gesproken zoekopdrachten.";
+"voice.search.screen.disclaimer" = "Scout bewaart en deelt geen gesproken zoekopdrachten.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Aanmaakdatum van wallet";

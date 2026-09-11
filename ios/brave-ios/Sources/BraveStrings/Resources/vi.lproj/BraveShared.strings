@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "Điều này cho phép bạn lưu ảnh vào Cuộn camera.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave muốn truy cập Ảnh của bạn";
+"AccessPhotoDeniedAlertTitle" = "Scout muốn truy cập Ảnh của bạn";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Thêm Dấu trang";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Hỏi Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Điều này xác thực quyền truy cập của bạn đối với Brave";
+"AuthenticationLoginsTouchReason" = "Điều này xác thực quyền truy cập của bạn đối với Scout";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Hủy";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "Địa chỉ";
 
 /* Button to show the brave panel */
-"BravePanel" = "Bảng điều khiển Brave";
+"BravePanel" = "Bảng điều khiển Scout";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Phần thưởng Brave";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Khóa trình duyệt";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Mở khóa Brave với Touch ID, Face ID hoặc mật mã của hệ thống.";
+"BrowserLockDescription" = "Mở khóa Scout với Touch ID, Face ID hoặc mật mã của hệ thống.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Lịch sử duyệt web";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "Chuyển thanh địa chỉ, thẻ, dấu trang và các công cụ khác xuống phía dưới trình duyệt.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Tùy chỉnh thanh thẻ của Brave";
+"callout.bottomBarCalloutTitle" = "Tùy chỉnh thanh thẻ của Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Trải nghiệm sự riêng tư Brave mang lại trên máy tính hoặc máy tính bảng của bạn, và đồng bộ hóa dấu trang & tiện ích giữa các thiết bị.";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Mở Cài đặt";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Mở tất cả các đường liên kết bằng Brave để bảo vệ quyền riêng tư của bạn";
+"defaultBrowserCallout.introPrimaryText" = "Mở tất cả các đường liên kết bằng Scout để bảo vệ quyền riêng tư của bạn";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Lá chắn Brave chặn trình theo dõi và quảng cáo, tiết kiệm dữ liệu và giúp bạn tiết kiệm thời gian trên mọi trang web bạn truy cập";
+"defaultBrowserCallout.introSecondaryText" = "Lá chắn Scout chặn trình theo dõi và quảng cáo, tiết kiệm dữ liệu và giúp bạn tiết kiệm thời gian trên mọi trang web bạn truy cập";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Mở Cài đặt, nhấn vào Ứng dụng trình duyệt mặc định và chọn Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Mở Cài đặt, nhấn vào Ứng dụng trình duyệt mặc định và chọn Scout.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Đặt Brave là trình duyệt mặc định của bạn";
+"defaultBrowserCallout.notificationBody" = "Đặt Scout là trình duyệt mặc định của bạn";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Được Brave bảo vệ, với mọi liên kết";
+"defaultBrowserCallout.notificationTitle" = "Được Scout bảo vệ, với mọi liên kết";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Đóng hộp thông tin về trình duyệt mặc định";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave mặc định";
+"defaultThemeName" = "Scout mặc định";
 
 /* No comment provided by engineer. */
 "Delete" = "Xóa";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Nhập tên thư mục";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ thường sử dụng mã hóa để bảo vệ thông tin của bạn. Khi Brave cố gắng kết nối với %2$@ lần này, trang web đã gửi lại thông tin đăng nhập bất thường và không chính xác. Điều này có thể xảy ra khi kẻ tấn công cố gắng giả mạo là %3$@ hoặc màn hình đăng nhập Wi-Fi đã làm gián đoạn kết nối. Thông tin của bạn vẫn an toàn vì Brave đã dừng kết nối trước khi bất kỳ dữ liệu nào được trao đổi.<br />Bạn không thể truy cập %4$@ ngay thời điểm này vì trang web sử dụng cơ chế ghim chứng chỉ. Lỗi mạng và các cuộc tấn công thường là tạm thời, vì vậy trang này có thể sẽ hoạt động sau.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ thường sử dụng mã hóa để bảo vệ thông tin của bạn. Khi Scout cố gắng kết nối với %2$@ lần này, trang web đã gửi lại thông tin đăng nhập bất thường và không chính xác. Điều này có thể xảy ra khi kẻ tấn công cố gắng giả mạo là %3$@ hoặc màn hình đăng nhập Wi-Fi đã làm gián đoạn kết nối. Thông tin của bạn vẫn an toàn vì Scout đã dừng kết nối trước khi bất kỳ dữ liệu nào được trao đổi.<br />Bạn không thể truy cập %4$@ ngay thời điểm này vì trang web sử dụng cơ chế ghim chứng chỉ. Lỗi mạng và các cuộc tấn công thường là tạm thời, vì vậy trang này có thể sẽ hoạt động sau.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Máy chủ này không thể chứng minh rằng đó là %@; chứng chỉ bảo mật không được hệ điều hành của thiết bị của bạn tin tưởng. Điều này có thể do cấu hình sai hoặc có kẻ tấn công cố gắng chặn kết nối của bạn.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Chọn công cụ tìm kiếm mặc định của bạn";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Chào mừng bạn đến với Trình duyệt Brave";
+"OBSearchEngineTitle" = "Chào mừng bạn đến với Trình duyệt Scout";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Chặn các trình theo dõi xâm phạm quyền riêng tư để bạn có thể duyệt web mà không bị theo dõi";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Khi chặn trình theo dõi & quảng cáo, các trang web sử dụng ít dữ liệu hơn và tải nhanh hơn nhiều.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Sự khác biệt Brave mang lại:\nKhông quảng cáo. Không trình theo dõi. Tải trang nhanh hơn nhiều.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Sự khác biệt Scout mang lại:\nKhông quảng cáo. Không trình theo dõi. Tải trang nhanh hơn nhiều.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Nhập tên trang web hoặc URL";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Để bắt đầu, hãy thiết lập chuỗi đồng bộ hóa và bật tùy chọn \"Thẻ đang mở\" trong phần Cài đặt đồng bộ hóa.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Quản lý nội dung Brave đồng bộ hóa trong phần Cài đặt.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Quản lý nội dung Scout đồng bộ hóa trong phần Cài đặt.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Không có phiên hoạt động nào từ các thiết bị khác của bạn để hiển thị.";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Duyệt web riêng tư xuyên suốt";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Cho phép Brave khôi phục các thẻ duyệt riêng tư, ngay cả khi bạn đóng / mở lại ứng dụng";
+"PersistentPrivateBrowsingAlertMessage" = "Cho phép Scout khôi phục các thẻ duyệt riêng tư, ngay cả khi bạn đóng / mở lại ứng dụng";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Khôi phục Thẻ riêng tư";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Bạn có muốn thêm video này vào danh sách phát của mình?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Thêm vào Danh sách phát Brave";
+"playList.addToPlayListAlertTitle" = "Thêm vào Danh sách phát Scout";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Tùy chọn phát";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Cài đặt";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Danh sách phát Brave";
+"playlist.carplayTitle" = "Danh sách phát Scout";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Đổi Danh sách phát";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Có vấn đề khi tải tài nguyên!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Bạn có thể thêm các mục vào Danh sách phát Brave của mình bên trong trình duyệt";
+"playList.noItemLabelDetailLabel" = "Bạn có thể thêm các mục vào Danh sách phát Scout của mình bên trong trình duyệt";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Không có mục nào";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Hoàn tác";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Thêm nút danh sách phát bên cạnh thanh địa chỉ trong trình duyệt Brave. Nút này cho phép bạn nhanh chóng mở Danh sách phát hay thêm hoặc xóa tệp đa phương tiện.";
+"playlist.urlBarButtonOptionFooter" = "Thêm nút danh sách phát bên cạnh thanh địa chỉ trong trình duyệt Scout. Nút này cho phép bạn nhanh chóng mở Danh sách phát hay thêm hoặc xóa tệp đa phương tiện.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Bật nút truy cập nhanh";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Bật thông báo";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Thông tin về việc Brave đã bảo vệ khi bạn trực tuyến thế nào trong tuần này.";
+"privacyHub.notificationMessage" = "Thông tin về việc Scout đã bảo vệ khi bạn trực tuyến thế nào trong tuần này.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Báo cáo Quyền riêng tư hằng tuần";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "Chế độ Chỉ duyệt riêng tư sẽ đóng tất cả thẻ hiện tại của bạn và đăng xuất bạn ra khỏi tất cả các trang web.";
 
 /* Private tab details */
-"PrivateTabBody" = "Các Thẻ riêng tư không được lưu trong Brave, nhưng điều đó không đồng nghĩa với việc làm bạn ẩn danh trong môi trường trực tuyến. Các trang web bạn truy cập trong thẻ riêng tư sẽ không hiển thị trong lịch sử của bạn và cookie của chúng luôn biến mất khi bạn đóng trang — không có dấu vết nào của chúng còn sót lại trong Brave. Tuy nhiên, thông tin tải xuống sẽ được lưu.\nNhà mạng di động của bạn (hoặc chủ sở hữu mạng Wi-Fi hoặc VPN mà bạn kết nối) có thể xem bạn truy cập trang web nào và các trang web đó sẽ biết địa chỉ IP công khai của bạn, ngay cả trong các Thẻ riêng tư.";
+"PrivateTabBody" = "Các Thẻ riêng tư không được lưu trong Scout, nhưng điều đó không đồng nghĩa với việc làm bạn ẩn danh trong môi trường trực tuyến. Các trang web bạn truy cập trong thẻ riêng tư sẽ không hiển thị trong lịch sử của bạn và cookie của chúng luôn biến mất khi bạn đóng trang — không có dấu vết nào của chúng còn sót lại trong Scout. Tuy nhiên, thông tin tải xuống sẽ được lưu.\nNhà mạng di động của bạn (hoặc chủ sở hữu mạng Wi-Fi hoặc VPN mà bạn kết nối) có thể xem bạn truy cập trang web nào và các trang web đó sẽ biết địa chỉ IP công khai của bạn, ngay cả trong các Thẻ riêng tư.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Sử dụng Thẻ riêng tư chỉ thay đổi những gì Brave thực hiện trên thiết bị của bạn, không thay đổi hành vi của bất kỳ ai khác.\n\nCác trang web luôn biết địa chỉ IP của bạn khi bạn truy cập. Từ đó, họ thường có thể đoán sơ bộ vị trí của bạn — thường là thành phố của bạn. Đôi khi, thông tin vị trí đó có thể cụ thể hơn nhiều. Các trang web cũng biết mọi thứ bạn chia sẻ với họ, chẳng hạn như các cụm từ tìm kiếm. Nếu bạn đăng nhập vào một trang web, họ sẽ biết bạn là chủ sở hữu của tài khoản đó. Bạn vẫn sẽ bị đăng xuất khi đóng Thẻ riêng tư vì Brave sẽ xóa cookie có tác dụng giúp bạn duy trì trạng thái đăng nhập.\n\nBất kỳ ai kết nối bạn với Internet (ISP của bạn) đều có thể thấy mọi hoạt động mạng của bạn. Thông thường, đó sẽ là nhà mạng di động của bạn. Nếu bạn kết nối với mạng Wi-Fi, đó là chủ sở hữu của mạng đó và nếu bạn đang sử dụng VPN, thì đó là bên điều hành VPN đó. ISP của bạn có thể thấy những đó là trang web nào ngay khi bạn truy cập. Nếu các trang web đó sử dụng HTTPS, họ chỉ có thể phỏng đoán có căn cứ về những gì bạn làm trên các trang web đó. Nhưng nếu một trang web chỉ sử dụng HTTP thì ISP của bạn có thể thấy mọi thứ: các cụm từ tìm kiếm của bạn, những trang bạn đọc và những liên kết bạn theo dõi.\n\nNếu một nhà tuyển dụng quản lý thiết bị của bạn, họ cũng có thể theo dõi những gì bạn làm với thiết bị đó. Sử dụng Thẻ riêng tư có lẽ sẽ không ngăn họ biết những trang web bạn đã truy cập. Một người khác có quyền truy cập vào thiết bị của bạn cũng có thể đã cài đặt phần mềm theo dõi hoạt động của bạn và Thẻ riêng tư cũng sẽ không bảo vệ bạn khỏi điều này.";
+"PrivateTabDetails" = "Sử dụng Thẻ riêng tư chỉ thay đổi những gì Scout thực hiện trên thiết bị của bạn, không thay đổi hành vi của bất kỳ ai khác.\n\nCác trang web luôn biết địa chỉ IP của bạn khi bạn truy cập. Từ đó, họ thường có thể đoán sơ bộ vị trí của bạn — thường là thành phố của bạn. Đôi khi, thông tin vị trí đó có thể cụ thể hơn nhiều. Các trang web cũng biết mọi thứ bạn chia sẻ với họ, chẳng hạn như các cụm từ tìm kiếm. Nếu bạn đăng nhập vào một trang web, họ sẽ biết bạn là chủ sở hữu của tài khoản đó. Bạn vẫn sẽ bị đăng xuất khi đóng Thẻ riêng tư vì Scout sẽ xóa cookie có tác dụng giúp bạn duy trì trạng thái đăng nhập.\n\nBất kỳ ai kết nối bạn với Internet (ISP của bạn) đều có thể thấy mọi hoạt động mạng của bạn. Thông thường, đó sẽ là nhà mạng di động của bạn. Nếu bạn kết nối với mạng Wi-Fi, đó là chủ sở hữu của mạng đó và nếu bạn đang sử dụng VPN, thì đó là bên điều hành VPN đó. ISP của bạn có thể thấy những đó là trang web nào ngay khi bạn truy cập. Nếu các trang web đó sử dụng HTTPS, họ chỉ có thể phỏng đoán có căn cứ về những gì bạn làm trên các trang web đó. Nhưng nếu một trang web chỉ sử dụng HTTP thì ISP của bạn có thể thấy mọi thứ: các cụm từ tìm kiếm của bạn, những trang bạn đọc và những liên kết bạn theo dõi.\n\nNếu một nhà tuyển dụng quản lý thiết bị của bạn, họ cũng có thể theo dõi những gì bạn làm với thiết bị đó. Sử dụng Thẻ riêng tư có lẽ sẽ không ngăn họ biết những trang web bạn đã truy cập. Một người khác có quyền truy cập vào thiết bị của bạn cũng có thể đã cài đặt phần mềm theo dõi hoạt động của bạn và Thẻ riêng tư cũng sẽ không bảo vệ bạn khỏi điều này.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Tìm hiểu về Thẻ riêng tư.";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "No";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Thật không may, Brave bị lỗi đóng đột ngột hoặc không được đóng đúng cách.\nKhôi phục các thẻ?";
+"RestoreTabOnCrashAlertMessage" = "Thật không may, Scout bị lỗi đóng đột ngột hoặc không được đóng đúng cách.\nKhôi phục các thẻ?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave đóng đột ngột.";
+"RestoreTabOnCrashAlertTitle" = "Scout đóng đột ngột.";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "Bật để góp phần hỗ trợ Brave và cộng đồng BAT.";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "Gửi báo cáo lỗi đóng đột ngột để Brave khắc phục?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Ôi! Brave đã bị lỗi đóng đột ngột";
+"SendCrashReportAlertTitle" = "Ôi! Scout đã bị lỗi đóng đột ngột";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Gửi báo cáo";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Brave hiện có thể được đặt làm trình duyệt mặc định của bạn trong iOS. Nhấn vào đây để mở cài đặt.";
+"setDefaultBrowserCalloutTitle" = "Scout hiện có thể được đặt làm trình duyệt mặc định của bạn trong iOS. Nhấn vào đây để mở cài đặt.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Đặt làm Trình duyệt mặc định";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Đóng thẻ";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Cho phép Brave tự động đóng thẻ không được xem gần đây.";
+"settings.autocloseTabsSettingFooter" = "Cho phép Scout tự động đóng thẻ không được xem gần đây.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Chặn các yếu tố gây mất tập trung trên YouTube";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Truyền thông";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Mở liên kết YouTube trong Brave";
+"settings.openYouTubeInBrave" = "Mở liên kết YouTube trong Scout";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Bật Thống kê thời gian";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "Đây là những cài đặt Lá chắn mặc định cho các trang web mới. Thay đổi chúng sẽ không ảnh hưởng đến các cài đặt cho từng trang web hiện tại của bạn.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Bạn đang duyệt trang web này mà không được Brave bảo vệ quyền riêng tư. Mọi thứ không hoạt động đúng khi bật Lá chắn sao?";
+"ShieldsDownDisclaimer" = "Bạn đang duyệt trang web này mà không được Scout bảo vệ quyền riêng tư. Mọi thứ không hoạt động đúng khi bật Lá chắn sao?";
 
 /* shields overview message */
 "ShieldsOverview" = "Lá chắn trang web giúp bạn kiểm soát khi nào quảng cáo và trình theo dõi được chặn ở trang web bạn truy cập. Nếu bạn muốn thấy quảng cáo ở một trang nhất định, bạn có thể bật ở đây.";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Xóa lịch sử trình duyệt";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Xóa lịch sử duyệt Brave";
+"shortcuts.activityTypeClearHistoryTitle" = "Xóa lịch sử duyệt Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Mở trình duyệt trong thẻ mới và bật VPN";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Mở dấu trang";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Mở Dấu trang của trình duyệt Brave";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Mở Dấu trang của trình duyệt Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Mở Tin tức Brave";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Mở lịch sử trình duyệt";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Mở lịch sử trình duyệt Brave";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Mở lịch sử trình duyệt Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Bắt đầu phát video của bạn trong Danh sách phát";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Mở thẻ từ các thiết bị khác";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Bắt đầu tìm kiếm an toàn trên web với Brave";
+"shortcuts.activityTypeTabDescription" = "Bắt đầu tìm kiếm an toàn trên web với Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Mở trang web dấu trang";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Mở trang web";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Tùy chọn này sẽ mở Cài đặt Brave. Để thay đổi nhiều tùy chọn Siri khác nhau, vui lòng chọn mục \"Siri & Tìm kiếm\" trên menu và tùy chỉnh các lựa chọn của bạn.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Tùy chọn này sẽ mở Cài đặt Scout. Để thay đổi nhiều tùy chọn Siri khác nhau, vui lòng chọn mục \"Siri & Tìm kiếm\" trên menu và tùy chỉnh các lựa chọn của bạn.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Mở Cài đặt";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Xem trên %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Vui lòng cho phép truy cập micrô trong Cài đặt hệ thống iOS để Brave sử dụng tìm kiếm bằng giọng nói ẩn danh.";
+"voice.search.microphone.description.required" = "Vui lòng cho phép truy cập micrô trong Cài đặt hệ thống iOS để Scout sử dụng tìm kiếm bằng giọng nói ẩn danh.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Cần có quyền truy cập micrô";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave không lưu trữ hoặc chia sẻ tìm kiếm bằng giọng nói của bạn.";
+"voice.search.screen.disclaimer" = "Scout không lưu trữ hoặc chia sẻ tìm kiếm bằng giọng nói của bạn.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Ngày tạo Ví";

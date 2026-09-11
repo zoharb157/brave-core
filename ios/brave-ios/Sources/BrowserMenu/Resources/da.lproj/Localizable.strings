@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "Nulstil til standard";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "Ved at nulstille til standard mister du alle de tilpasninger, du har foretaget i Brave. Denne handling kan ikke fortrydes. Er du sikker på, at du vil fortsætte?";
+"BrowserMenu.resetToDefaultDialogMessage" = "Ved at nulstille til standard mister du alle de tilpasninger, du har foretaget i Scout. Denne handling kan ikke fortrydes. Er du sikker på, at du vil fortsætte?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "Vis alle …";

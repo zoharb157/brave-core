@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "Asta îți va permite să salvezi imaginea în Galerie.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave dorește să acceseze galeria ta de poze.";
+"AccessPhotoDeniedAlertTitle" = "Scout dorește să acceseze galeria ta de poze.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Adaugă marcaj";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Întreabă Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Asta îți autentifică accesul la Brave";
+"AuthenticationLoginsTouchReason" = "Asta îți autentifică accesul la Scout";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Anulare";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "Adresă";
 
 /* Button to show the brave panel */
-"BravePanel" = "Panoul Brave";
+"BravePanel" = "Panoul Scout";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Brave Rewards";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Blocare Browser";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Deblocare Brave cu Touch ID, Face ID sau passcode de sistem.";
+"BrowserLockDescription" = "Deblocare Scout cu Touch ID, Face ID sau passcode de sistem.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Istoric de navigare";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "Mută bara de adrese, filele, marcajele și alte instrumente în partea de jos a browser-ului.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Personalizează bara de file Brave";
+"callout.bottomBarCalloutTitle" = "Personalizează bara de file Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Beneficiază de confidențialitatea Brave pe computerul sau tableta ta și sincronizează marcajele și extensiile între dispozitive.";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Deschide Setările";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Deschide toate link-urile în Brave pentru a îți proteja confidențialitatea";
+"defaultBrowserCallout.introPrimaryText" = "Deschide toate link-urile în Scout pentru a îți proteja confidențialitatea";
 
 /* Secondary text on default browser popup. */
 "defaultBrowserCallout.introSecondaryText" = "Shields blochează reclamele și urmăritorii și îți economisește date și timp la fiecare site vizitat";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Deschide Setările, apasă pe \"Aplicație implicită browser\" și selectează Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Deschide Setările, apasă pe \"Aplicație implicită browser\" și selectează Scout.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Setează Brave ca browser implicit";
+"defaultBrowserCallout.notificationBody" = "Setează Scout ca browser implicit";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Obține protecția Brave pentru fiecare link";
+"defaultBrowserCallout.notificationTitle" = "Obține protecția Scout pentru fiecare link";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Închide fereastra de browser implicit";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave implicit";
+"defaultThemeName" = "Scout implicit";
 
 /* No comment provided by engineer. */
 "Delete" = "Șterge";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Introdu numele dosarului";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ utilizează în mod normal criptarea pentru a-ți proteja informațiile. Când Brave a încercat să se conecteze la %2$@ de data aceasta, site-ul a trimis înapoi acreditări neobișnuite și incorecte. Acest lucru se poate întâmpla atunci când un atacator încearcă să pretindă că este %3$@ sau un ecran de conectare Wi-Fi a întrerupt conexiunea. Informațiile tale sunt în continuare securizate, deoarece Brave a întrerupt conexiunea înainte ca orice date să fie schimbate.<br />Nu poți vizita %4$@ în acest moment, deoarece site-ul web utilizează certificate pinning. Erorile de rețea și atacurile sunt de obicei temporare, astfel încât această pagină va funcționa probabil mai târziu.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ utilizează în mod normal criptarea pentru a-ți proteja informațiile. Când Scout a încercat să se conecteze la %2$@ de data aceasta, site-ul a trimis înapoi acreditări neobișnuite și incorecte. Acest lucru se poate întâmpla atunci când un atacator încearcă să pretindă că este %3$@ sau un ecran de conectare Wi-Fi a întrerupt conexiunea. Informațiile tale sunt în continuare securizate, deoarece Scout a întrerupt conexiunea înainte ca orice date să fie schimbate.<br />Nu poți vizita %4$@ în acest moment, deoarece site-ul web utilizează certificate pinning. Erorile de rețea și atacurile sunt de obicei temporare, astfel încât această pagină va funcționa probabil mai târziu.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Acest server nu a putut dovedi că este %@; certificatul său de securitate nu este recunoscut de către sistemul de operare. Acest lucru poate fi cauzat de o configurație greșită sau de un atacator care încearcă să îți intercepteze conexiunea.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Selectează motorul de căutare implicit";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Bun venit la browser-ul Brave";
+"OBSearchEngineTitle" = "Bun venit la browser-ul Scout";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Blochează urmăritorii ce îți afectează confidențialitatea astfel încât să poți naviga fără a fi urmărit pe internet";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Prin blocarea urmăritorilor și a reclamelor, site-urile web utilizează mai puține date și se încarcă mult mai repede.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Vezi diferența Brave:\nFără reclame. Fără urmăritori. Încărcarea paginii este mult mai rapidă.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Vezi diferența Scout:\nFără reclame. Fără urmăritori. Încărcarea paginii este mult mai rapidă.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Tastează numele sau adresa URL a unui site";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Pentru a începe, configurează un lanț de sincronizare și activează \"File deschise\" în setările de sincronizare.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Gestionează ceea ce Brave sincronizează în Setări.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Gestionează ceea ce Scout sincronizează în Setări.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Nu există sesiuni active care să fie afișate de pe celelalte dispozitive.";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Navigare privată persistentă";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Permite ca Brave să restabilească filele de navigare privată chiar dacă închizi / redeschizi aplicația";
+"PersistentPrivateBrowsingAlertMessage" = "Permite ca Scout să restabilească filele de navigare privată chiar dacă închizi / redeschizi aplicația";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Restabilește filele private";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Vrei să adaugi acest videoclip la playlist-ul tău?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Adaugă la Brave Playlist";
+"playList.addToPlayListAlertTitle" = "Adaugă la Playlist";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Opțiuni de redare";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Setări";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave Playlist";
+"playlist.carplayTitle" = "Playlist";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Schimbă playlist";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "A apărut o problemă la încărcarea resursei!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Poți adăuga elemente la Brave Playlist direct din browser";
+"playList.noItemLabelDetailLabel" = "Poți adăuga elemente la Playlist direct din browser";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Nu există elemente disponibile";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Anulează";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Adaugă un buton de playlist lângă bara de adrese în browser-ul Brave. Acest buton îți oferă acces rapid pentru a deschide Playlist-ul sau pentru a adăuga sau elimina conținut media.";
+"playlist.urlBarButtonOptionFooter" = "Adaugă un buton de playlist lângă bara de adrese în browser-ul Scout. Acest buton îți oferă acces rapid pentru a deschide Playlist-ul sau pentru a adăuga sau elimina conținut media.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Activează butonul de acces rapid";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Activează notificările";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "O recapitulare a modului în care Brave te-a protejat online în această săptămână.";
+"privacyHub.notificationMessage" = "O recapitulare a modului în care Scout te-a protejat online în această săptămână.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Raportul săptămânal de confidențialitate ";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "Navigarea exclusiv privată va închide toate filele curente și te va deconecta de pe toate site-urile.";
 
 /* Private tab details */
-"PrivateTabBody" = "Filele private nu sunt salvate în Brave insă asta nu îți acordă anonimitate online. Site-urile pe care le vizitezi într-o filă privată  nu vor apărea în istoric iar cookie-urile asociate dispar întotdeauna când le închizi - nu va rămâne nicio urmă a acestora în Brave. Cu toate acestea, descărcările vor fi salvate.\nOperatorul tău de telefonie mobilă (sau proprietarul rețelei Wi-Fi sau VPN la care ești conectat) poate vedea ce site-uri vizitezi iar aceste site-uri vor afla adresa ta IP publică chiar și în navigarea din filele private.";
+"PrivateTabBody" = "Filele private nu sunt salvate în Scout insă asta nu îți acordă anonimitate online. Site-urile pe care le vizitezi într-o filă privată  nu vor apărea în istoric iar cookie-urile asociate dispar întotdeauna când le închizi - nu va rămâne nicio urmă a acestora în Scout. Cu toate acestea, descărcările vor fi salvate.\nOperatorul tău de telefonie mobilă (sau proprietarul rețelei Wi-Fi sau VPN la care ești conectat) poate vedea ce site-uri vizitezi iar aceste site-uri vor afla adresa ta IP publică chiar și în navigarea din filele private.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Utilizarea filelor private modifică doar ceea ce face Brave pe dispozitiv, nu schimbă comportamentul altcuiva.\n\nSite-urile îți află adresa IP de fiecare dată când le vizitezi. Pe baza adresei IP pot aproxima deseori unde te afli - de obicei, orașul tău. Uneori, această localizare poate fi mult mai specifică. De asemenea, site-urile știu tot ceea ce le spui în mod specific, cum ar fi termenii de căutare. Dacă te conectezi la un site prin folosirea de credențiale, site-ul te va asocia ca proprietarul acelui cont. Vei fi în continuare deconectat atunci când închizi fila privată deoarece Brave va elimina cookie-urile care te mențin conectat.\n\nCine te conectează la Internet (ISP-ul) poate vedea toată activitatea ta în rețea. Adesea, acesta este operatorul tău de telefonie mobilă. Dacă ești conectat la o rețea Wi-Fi, acesta este proprietarul rețelei respective iar dacă utilizezi un VPN, atunci este cel care administrează acel VPN. ISP-ul poate vedea ce site-uri vizitezi pe măsură ce le vizitezi. Dacă acele site-uri utilizează HTTPS, nu pot face mai mult decât o presupunere despre ceea ce faci pe acele site-uri. Dacă un site utilizează însă doar HTTP, atunci ISP-ul poate vedea totul: termenii de căutare, paginile pe care le citești cât și link-urile pe care le urmezi.\n\nÎn cazul în care un angajator îți gestionează dispozitivul, acesta ar putea, de asemenea, să urmărească to ce faci cu el. Folosirea filelor private probabil că nu îi va împiedica să știe ce site-uri ai accesat. Altcineva care are acces la dispozitiv ar putea, de asemenea, să fi instalat un software care îți monitorizează activitatea, iar filele private nu te vor proteja nici în acest caz.";
+"PrivateTabDetails" = "Utilizarea filelor private modifică doar ceea ce face Scout pe dispozitiv, nu schimbă comportamentul altcuiva.\n\nSite-urile îți află adresa IP de fiecare dată când le vizitezi. Pe baza adresei IP pot aproxima deseori unde te afli - de obicei, orașul tău. Uneori, această localizare poate fi mult mai specifică. De asemenea, site-urile știu tot ceea ce le spui în mod specific, cum ar fi termenii de căutare. Dacă te conectezi la un site prin folosirea de credențiale, site-ul te va asocia ca proprietarul acelui cont. Vei fi în continuare deconectat atunci când închizi fila privată deoarece Scout va elimina cookie-urile care te mențin conectat.\n\nCine te conectează la Internet (ISP-ul) poate vedea toată activitatea ta în rețea. Adesea, acesta este operatorul tău de telefonie mobilă. Dacă ești conectat la o rețea Wi-Fi, acesta este proprietarul rețelei respective iar dacă utilizezi un VPN, atunci este cel care administrează acel VPN. ISP-ul poate vedea ce site-uri vizitezi pe măsură ce le vizitezi. Dacă acele site-uri utilizează HTTPS, nu pot face mai mult decât o presupunere despre ceea ce faci pe acele site-uri. Dacă un site utilizează însă doar HTTP, atunci ISP-ul poate vedea totul: termenii de căutare, paginile pe care le citești cât și link-urile pe care le urmezi.\n\nÎn cazul în care un angajator îți gestionează dispozitivul, acesta ar putea, de asemenea, să urmărească to ce faci cu el. Folosirea filelor private probabil că nu îi va împiedica să știe ce site-uri ai accesat. Altcineva care are acces la dispozitiv ar putea, de asemenea, să fi instalat un software care îți monitorizează activitatea, iar filele private nu te vor proteja nici în acest caz.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Află mai multe despre filele private.";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "Nu";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Din păcate, Brave s-a blocat sau nu a fost închis corect.\nRestabilește filele?";
+"RestoreTabOnCrashAlertMessage" = "Din păcate, Scout s-a blocat sau nu a fost închis corect.\nRestabilește filele?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave s-a închis în mod neașteptat.";
+"RestoreTabOnCrashAlertTitle" = "Scout s-a închis în mod neașteptat.";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "Activează pentru a susține Brave si comunitatea BAT";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "Trimite un raport de crash astfel încât Brave să poată rezolva problema?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Oops! Brave s-a blocat";
+"SendCrashReportAlertTitle" = "Oops! Scout s-a blocat";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Trimite raportul";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Brave poate fi acum setat ca browser implicit în iOS. Apasă aici pentru a deschide setările.";
+"setDefaultBrowserCalloutTitle" = "Scout poate fi acum setat ca browser implicit în iOS. Apasă aici pentru a deschide setările.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Setează ca browser implicit";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Închide filele";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Permite ca Brave să închidă automat filele care nu au fost vizualizate recent.";
+"settings.autocloseTabsSettingFooter" = "Permite ca Scout să închidă automat filele care nu au fost vizualizate recent.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Blochează elementele care distrag atenția de pe YouTube";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Media";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Deschide link-urile YouTube în Brave";
+"settings.openYouTubeInBrave" = "Deschide link-urile YouTube în Scout";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Activează Screen Time";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "Acestea sunt setările implicite pentru Shields. Modificarea lor nu va afecta setările existente per site.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Navighezi pe acest site fără protecția de confidențialitate oferită de Brave. Nu este în regulă cu scuturile activate?";
+"ShieldsDownDisclaimer" = "Navighezi pe acest site fără protecția de confidențialitate oferită de Scout. Nu este în regulă cu scuturile activate?";
 
 /* shields overview message */
 "ShieldsOverview" = "Site Shields îți permit să controlezi momentul în care reclamele și urmăritorii sunt blocate pentru fiecare site pe care îl vizitezi. Dacă preferi să vezi reclame pe un anumit site, le poți activa aici.";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Șterge istoricul de browser";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Șterge istoricul de navigare Brave";
+"shortcuts.activityTypeClearHistoryTitle" = "Șterge istoricul de navigare Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Deschide browser-ul într-o filă nouă și activează VPN-ul";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Deschide marcajele";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Deschide marcajele Brave browser";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Deschide marcajele Scout browser";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Deschide Brave News";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Deschide istoric browser";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Deschide istoricul Brave browser";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Deschide istoricul Scout browser";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Începe să redai videoclipurile tale în Playlist";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "File deschise pe alte dispozitive";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Începe să cauți în siguranță pe web cu Brave";
+"shortcuts.activityTypeTabDescription" = "Începe să cauți în siguranță pe web cu Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Deschide site web din marcaje";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Deschide site web";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Această opțiune va deschide setările Brave. Pentru a modifica diverse opțiuni Siri, selectează elementul de meniu „Siri și căutare” și personalizează-ți opțiunile.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Această opțiune va deschide setările Scout. Pentru a modifica diverse opțiuni Siri, selectează elementul de meniu „Siri și căutare” și personalizează-ți opțiunile.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Deschide Setările";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Vezi pe %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Te rog să permiți accesul lui Brave la microfon în setările de sistem iOS pentru a putea utiliza căutarea vocală anonimă.";
+"voice.search.microphone.description.required" = "Te rog să permiți accesul lui Scout la microfon în setările de sistem iOS pentru a putea utiliza căutarea vocală anonimă.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Este necesar accesul la microfon";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave nu stochează și nu distribuie căutările tale vocale.";
+"voice.search.screen.disclaimer" = "Scout nu stochează și nu distribuie căutările tale vocale.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Data creării portofelului";

@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "इससे आप इमेज को अपने कैमरा रोल में सेव कर सकते हैं।";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave आपकी फ़ोटो को ऐक्सेस करना चाहिए";
+"AccessPhotoDeniedAlertTitle" = "Scout आपकी फ़ोटो को ऐक्सेस करना चाहिए";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "बुकमार्क लगाएँ";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Brave से पूछें";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "इससे Brave का आपका ऐक्सेस ऑथेंटिकेट हो जाता है";
+"AuthenticationLoginsTouchReason" = "इससे Scout का आपका ऐक्सेस ऑथेंटिकेट हो जाता है";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "रद्द करना";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "पता";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave पैनल";
+"BravePanel" = "Scout पैनल";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Brave रिवार्ड्स";
@@ -314,7 +314,7 @@
 "BrowserLock" = "ब्राउज़र लॉक";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Touch ID, Face ID या सिस्टम पासकोड से Brave को अनलॉक करें।";
+"BrowserLockDescription" = "Touch ID, Face ID या सिस्टम पासकोड से Scout को अनलॉक करें।";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "ब्राउज़िंग इतिहास";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "ऐड्रेस बार, टैब्स, बुकमार्क्स और ब्राउज़र के निचले हिस्से में मौजूद दूसरे टूल्स की जगह बदलें।";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Brave टैब्स बार कस्टमाइज़ करें";
+"callout.bottomBarCalloutTitle" = "Scout टैब्स बार कस्टमाइज़ करें";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "अपने कंप्यूटर या टैबलेट पर Brave प्राइवेसी पाएँ और डिवाइसों के बीच बुकमार्क & एक्सटेंशन सिंक करें।";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "सेटिंग खोलें";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "अपनी गोपनीयता की रक्षा के लिए सभी लिंक को Brave के साथ खोलें";
+"defaultBrowserCallout.introPrimaryText" = "अपनी गोपनीयता की रक्षा के लिए सभी लिंक को Scout के साथ खोलें";
 
 /* Secondary text on default browser popup. */
 "defaultBrowserCallout.introSecondaryText" = "Shields & ऐड्स को ब्लॉक करता है, डेटा सेव करता है और आप जिस भी साइट पर जाते हैं वहाँ आपका समय बचाता है";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "सेटिंग खोलें, डिफ़ॉल्ट ब्राउज़र ऐप पर टैप करें, और Brave को चुनें।";
+"defaultBrowserCallout.introTertiaryText" = "सेटिंग खोलें, डिफ़ॉल्ट ब्राउज़र ऐप पर टैप करें, और Scout को चुनें।";
 
 /* Notification body to promote setting Brave app as default browser */
 "defaultBrowserCallout.notificationBody" = "क्रोमियम को अपने डिफ़ॉल्ट ब्राउज़र के रूप में सेट करें";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "हर लिंक पर Brave की सुरक्षा पाएँ";
+"defaultBrowserCallout.notificationTitle" = "हर लिंक पर Scout की सुरक्षा पाएँ";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "डिफ़ॉल्ट ब्राउज़र कॉलआउट बंद करें";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave डिफ़ॉल्ट";
+"defaultThemeName" = "Scout डिफ़ॉल्ट";
 
 /* No comment provided by engineer. */
 "Delete" = "हटाएं";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "फ़ोल्डर के नाम में बदलाव करें";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "आम तौर पर, %1$@ आपकी जानकारी को सुरक्षित रखने के लिए एन्क्रिप्शन का इस्तेमाल करता है। जब Brave ने इस बार %2$@ से कनेक्ट करने की कोशिश की, तो वेबसाइट ने अजीब और गलत क्रेडेंशियल वापस भेजे। ऐसा तब हो सकता है, जब कोई हमलावर %3$@ की कोशिश कर रहा हो या वाई-फ़ाई साइन इन स्क्रीन ने कनेक्शन में रुकावट डाली हो। आपकी जानकारी अब भी सुरक्षित है, क्योंकि Brave ने किसी भी डेटा के एक्सचेंज होने से पहले कनेक्शन रोक दिया था।<br />आप अभी %4$@ पर नहीं जा सकते, क्योंकि वेबसाइट प्रमाणपत्र को पिन करती है। औम तौर पर, नेटवर्क की गड़बड़ियाँ और हमले अस्थायी होते हैं, इसलिए यह पेज शायद बाद में काम करेगा।";
+"ErrorPagesAdvancedErrorPinningDetails" = "आम तौर पर, %1$@ आपकी जानकारी को सुरक्षित रखने के लिए एन्क्रिप्शन का इस्तेमाल करता है। जब Scout ने इस बार %2$@ से कनेक्ट करने की कोशिश की, तो वेबसाइट ने अजीब और गलत क्रेडेंशियल वापस भेजे। ऐसा तब हो सकता है, जब कोई हमलावर %3$@ की कोशिश कर रहा हो या वाई-फ़ाई साइन इन स्क्रीन ने कनेक्शन में रुकावट डाली हो। आपकी जानकारी अब भी सुरक्षित है, क्योंकि Scout ने किसी भी डेटा के एक्सचेंज होने से पहले कनेक्शन रोक दिया था।<br />आप अभी %4$@ पर नहीं जा सकते, क्योंकि वेबसाइट प्रमाणपत्र को पिन करती है। औम तौर पर, नेटवर्क की गड़बड़ियाँ और हमले अस्थायी होते हैं, इसलिए यह पेज शायद बाद में काम करेगा।";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "यह सर्वर साबित नहीं कर पाया कि यह %@ है; आपके डिवाइस का ऑपरेटिंग सिस्टम इसके सुरक्षा प्रमाणपत्र पर भरोसा नहीं करता। ऐसा लगत कॉन्फ़िगरेशन के कारण या इस कारण से हो सकता है कि कोई हमलावर आपके कनेक्शन को इंटरसेप्ट करने की कोशिश कर रहा हो।";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "अपने डिफ़ॉल्ट खोज इंजन का चयन करें";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Brave ब्राउज़र में आपका स्वागत है";
+"OBSearchEngineTitle" = "Scout ब्राउज़र में आपका स्वागत है";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "निजता का उल्लंघन करने वाले ट्रैकर्स को ब्लॉक करें, ताकि वेब पर कोई आप पर नज़र न रखे और आप आराम से ब्राउज़ कर सकें";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "ट्रैकर्स & ऐड्स को ब्लॉक करके, वेबसाइटें कम डेटा इस्तेमाल करती हैं और जल्दी लोड होती हैं।";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Brave का कमाल देखें:\nकोई ऐड नहीं। कोई ट्रैकर नहीं। पेज बहुत जल्दी खुलते हैं।";
+"onboarding.omniboxOnboardingPopOverDescription" = "Scout का कमाल देखें:\nकोई ऐड नहीं। कोई ट्रैकर नहीं। पेज बहुत जल्दी खुलते हैं।";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "किसी वेबसाइट का नाम या URL टाइप करें";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "शुरू करने के लिए, सिंक चेन सेट अप करें और सिंक की सेटिंग में \"खुले हुए टैब्स\" को टॉगल करें।";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "सेटिंग में मैनेज करें कि Brave क्या सिंक करता है।";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "सेटिंग में मैनेज करें कि Scout क्या सिंक करता है।";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "आपके दूसरे डिवाइसों से दिखाने के लिए कोई ऐक्टिव सेशन नहीं है।";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "लगातार प्राइवेट ब्राउज़िंग";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "आपके ऐप बंद / फिर से खोलने के बाद भी, Brave को प्राइवेट ब्राउज़िंग टैब्स खोलने की अनुमति देता है";
+"PersistentPrivateBrowsingAlertMessage" = "आपके ऐप बंद / फिर से खोलने के बाद भी, Scout को प्राइवेट ब्राउज़िंग टैब्स खोलने की अनुमति देता है";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "प्राइवेट टैब रीस्टोर करें";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "क्या आप इस वीडियो को अपनी प्लेलिस्ट में जोड़ना चाहेंगे?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Brave Playlist में जोडे़ं";
+"playList.addToPlayListAlertTitle" = "Playlist में जोडे़ं";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "प्लेबैक के विकल्प";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "सेटिंग";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave प्लेलिस्ट";
+"playlist.carplayTitle" = "Scout प्लेलिस्ट";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "प्लेलिस्ट बदलें";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "रिसोर्स लोड करने में कोई समस्या हुई!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "आप ब्राउज़र में अपनी Brave Playlist में आइटम जोड़ सकते हैं";
+"playList.noItemLabelDetailLabel" = "आप ब्राउज़र में अपनी Playlist में आइटम जोड़ सकते हैं";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "कोई आइटम उपलब्ध नहीं है";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "अनकिया करें";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Brave ब्राउज़र में ऐड्रेस बार के पास प्लेलिस्ट बटन जोड़ता है। इस बटन से आपको प्लेलिस्ट खोलने या मीडिया जोड़ने या हटाने का जल्दी ऐक्सेस मिलता है।";
+"playlist.urlBarButtonOptionFooter" = "Scout ब्राउज़र में ऐड्रेस बार के पास प्लेलिस्ट बटन जोड़ता है। इस बटन से आपको प्लेलिस्ट खोलने या मीडिया जोड़ने या हटाने का जल्दी ऐक्सेस मिलता है।";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "जल्दी ऐक्सेस वाला बटन चालू करें";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "नोटिफ़िकेशन चालू करें";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "इस हफ़्ते Brave ने आपको ऑनलाइन कैसे सुरक्षित रखा, इसका एक रीकैप।";
+"privacyHub.notificationMessage" = "इस हफ़्ते Scout ने आपको ऑनलाइन कैसे सुरक्षित रखा, इसका एक रीकैप।";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "साप्ताहिक प्राइवेसी रिपोर्ट";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "'सिर्फ़ प्राइवेट ब्राउज़िंग' मोड आपके सभी मौजूदा टैब बंद कर देगा और आपको सभी साइटों से लॉग आउट कर देगा।";
 
 /* Private tab details */
-"PrivateTabBody" = "प्राइवेट टैब्स को Brave में सेव नहीं किया जाता, लेकिन वे आपको ऑनलाइन अनाम नहीं बनाते। आप जिन साइटों पर प्राइवेट टैब में जाते हैं वे आपकी हिस्ट्री में नहीं दिखतीं और उन्हें बंद करने पर आपकी कुकीज़ हमेशा मिट जाती हैं — Brave में उनका कोई नामोंनिशान नहीं रह जाएगा। हालाँकि, डाउनलोड सेव होंगे।\nआपका मोबाइल कैरियर (या उस वाई-फ़ाई नेटवर्क या VPN का मालिक जिससे आप कनेक्ट हैं) देख सकता है आप किन साइटों पर जाते हैं और उन साइटों को आपके सार्वजनिक IP address पता चल जाएगा, प्राइवेट टैब्स में भी।";
+"PrivateTabBody" = "प्राइवेट टैब्स को Scout में सेव नहीं किया जाता, लेकिन वे आपको ऑनलाइन अनाम नहीं बनाते। आप जिन साइटों पर प्राइवेट टैब में जाते हैं वे आपकी हिस्ट्री में नहीं दिखतीं और उन्हें बंद करने पर आपकी कुकीज़ हमेशा मिट जाती हैं — Scout में उनका कोई नामोंनिशान नहीं रह जाएगा। हालाँकि, डाउनलोड सेव होंगे।\nआपका मोबाइल कैरियर (या उस वाई-फ़ाई नेटवर्क या VPN का मालिक जिससे आप कनेक्ट हैं) देख सकता है आप किन साइटों पर जाते हैं और उन साइटों को आपके सार्वजनिक IP address पता चल जाएगा, प्राइवेट टैब्स में भी।";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "प्राइवेट टैब्स इस्तेमाल करने से, सिर्फ़ यह बदलेगा कि Brave आपके डिवाइस के साथ क्या करता है, इससे किसी और का व्यवहार नहीं बदलेगा।\n\nआप जब साइटों पर जाते हैं, तो आपको हमेशा आपका IP address पता चल जाता है। इससे, अक्सर उन्हें इस बात का अंदाज़ा हो जाता है कि आप किस जगह से हैं — आम तौर पर, आपका शहर। कभी-कभी, लोकेशन का अंदाज़ा और भी बारीकी से लगाया जा सकता है। साइटों को वे बातें भी पता चल जाती हैं जो आप खास तौर पर उन्हें बताते हैं, जैसे कि खोजे गए शब्द। अगर आप किसी साइट में लॉग इन करते हैं, तो उन्हें पता चल जाएगा कि आप उस अकाउंट के मालिक हैं। प्राइवेट टैब्स को बंद करने पर, आप लॉग आउट हो जाएँगे, क्योंकि Brave उन कुकीज़ को हटा देगा जो आपको लॉग इन रखती हैं।\n\nआपको जो भी इंटरनेट से कनेक्ट करता है (आपका ISP) वह आपकी सभी नेटवर्क गतिविधि देख सकता है। अक्सर, यह आपका मोबाइल कैरियर होता है। अगर आप वाई-फ़ाई नेटवर्क से कनेक्ट हैं, तो यह उस नेटवर्क का मालिक है और अगर आप VPN का इस्तेमाल कर रहे हैं, तो यह वही है जो VPN चला रहा है। आपके साइटों पर जाने पर, आपका ISP देख सकता है कि आप किन साइटों पर जा रहे हैं। अगर वे साइटें HTTPS का इस्तेमाल करती हैं, तो वे सिर्फ़ अंदाज़ा लगा सकती हैं कि आप उन साइटों पर क्या करते हैं। मगर कोई साइट सिर्फ़ HTTP का इस्तेमाल करती है, तो आपका ISP सब कुछ देख सकता है: आपके खोजे गए शब्द, आप कौनसे पेज पढ़ते हैं और किन लिंक्स को फ़ॉलो करते हैं।\n\nअगर कोई कर्मचारी आपके डिवाइस को मैनेज करता है, तो वे इस बात पर भी नज़र रख सकते हैं कि आप इस पर क्या करते हैं। प्राइवेट टैब्स इस्तेमाल करने से शायद उन्हें यह जानने से नहीं रोका जा सकता कि आप किन साइटों पर गए हैं। आपके डिवाइस के ऐक्सस वाला कोई और व्यक्ति भी ऐसा सॉफ़्टवेयर इंस्टॉल कर सकता है जो आपकी गतिविधि पर नज़र रखता हो और प्राइवेट टैबआपको इससे भी सुरक्षित नहीं रखेंगे।";
+"PrivateTabDetails" = "प्राइवेट टैब्स इस्तेमाल करने से, सिर्फ़ यह बदलेगा कि Scout आपके डिवाइस के साथ क्या करता है, इससे किसी और का व्यवहार नहीं बदलेगा।\n\nआप जब साइटों पर जाते हैं, तो आपको हमेशा आपका IP address पता चल जाता है। इससे, अक्सर उन्हें इस बात का अंदाज़ा हो जाता है कि आप किस जगह से हैं — आम तौर पर, आपका शहर। कभी-कभी, लोकेशन का अंदाज़ा और भी बारीकी से लगाया जा सकता है। साइटों को वे बातें भी पता चल जाती हैं जो आप खास तौर पर उन्हें बताते हैं, जैसे कि खोजे गए शब्द। अगर आप किसी साइट में लॉग इन करते हैं, तो उन्हें पता चल जाएगा कि आप उस अकाउंट के मालिक हैं। प्राइवेट टैब्स को बंद करने पर, आप लॉग आउट हो जाएँगे, क्योंकि Scout उन कुकीज़ को हटा देगा जो आपको लॉग इन रखती हैं।\n\nआपको जो भी इंटरनेट से कनेक्ट करता है (आपका ISP) वह आपकी सभी नेटवर्क गतिविधि देख सकता है। अक्सर, यह आपका मोबाइल कैरियर होता है। अगर आप वाई-फ़ाई नेटवर्क से कनेक्ट हैं, तो यह उस नेटवर्क का मालिक है और अगर आप VPN का इस्तेमाल कर रहे हैं, तो यह वही है जो VPN चला रहा है। आपके साइटों पर जाने पर, आपका ISP देख सकता है कि आप किन साइटों पर जा रहे हैं। अगर वे साइटें HTTPS का इस्तेमाल करती हैं, तो वे सिर्फ़ अंदाज़ा लगा सकती हैं कि आप उन साइटों पर क्या करते हैं। मगर कोई साइट सिर्फ़ HTTP का इस्तेमाल करती है, तो आपका ISP सब कुछ देख सकता है: आपके खोजे गए शब्द, आप कौनसे पेज पढ़ते हैं और किन लिंक्स को फ़ॉलो करते हैं।\n\nअगर कोई कर्मचारी आपके डिवाइस को मैनेज करता है, तो वे इस बात पर भी नज़र रख सकते हैं कि आप इस पर क्या करते हैं। प्राइवेट टैब्स इस्तेमाल करने से शायद उन्हें यह जानने से नहीं रोका जा सकता कि आप किन साइटों पर गए हैं। आपके डिवाइस के ऐक्सस वाला कोई और व्यक्ति भी ऐसा सॉफ़्टवेयर इंस्टॉल कर सकता है जो आपकी गतिविधि पर नज़र रखता हो और प्राइवेट टैबआपको इससे भी सुरक्षित नहीं रखेंगे।";
 
 /* Private tab information link */
 "PrivateTabLink" = "प्राइवेट टैब के बारे में जानें।";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "नहीं";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "माफ़ करें, Brave क्रैश हो गया या अच्छे से बंद नहीं हुआ।\nअपने टैब्स रीस्टोर करें?";
+"RestoreTabOnCrashAlertMessage" = "माफ़ करें, Scout क्रैश हो गया या अच्छे से बंद नहीं हुआ।\nअपने टैब्स रीस्टोर करें?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave अचानक बंद हो गया।";
+"RestoreTabOnCrashAlertTitle" = "Scout अचानक बंद हो गया।";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "Brave और BAT कम्युनिटी की मदद के लिए चालू करें।";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "क्रैश रिपोर्ट भेजता है, ताकि Brave समस्या को ठीक कर सके?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "ओह! Brave क्रैश हो गया";
+"SendCrashReportAlertTitle" = "ओह! Scout क्रैश हो गया";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "रिपोर्ट भेजें";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "अब Brave को iOS में आपके डिफ़ॉल्ट ब्राउज़र के तौर पर सेट किया जा सकता है। सेटिंग खोलने के लिए यहाँ टैप करें।";
+"setDefaultBrowserCalloutTitle" = "अब Scout को iOS में आपके डिफ़ॉल्ट ब्राउज़र के तौर पर सेट किया जा सकता है। सेटिंग खोलने के लिए यहाँ टैप करें।";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "डिफ़ॉल्ट ब्राउज़र के तौर पर सेट करें";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "टैब बंद करें";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Brave को अनुमति दें कि वह हाल ही न देखे गए टैब्स को अपने-आप बंद कर दे।";
+"settings.autocloseTabsSettingFooter" = "Scout को अनुमति दें कि वह हाल ही न देखे गए टैब्स को अपने-आप बंद कर दे।";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "YouTube की ध्यान बँटाने वाली चीज़ों को ब्लॉक करें";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "मीडिया";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "YouTube लिंक Brave पर खोलें";
+"settings.openYouTubeInBrave" = "YouTube लिंक Scout पर खोलें";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "स्क्रीन टाइम चालू करें";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "ये नई साइटों के लिए डिफ़ॉल्ट शील्ड सेटिंग्स हैं. इन्हें बदलने से आपकी मौजूदा प्रति-साइट सेटिंग्स पर कोई फ़र्क नहीं पड़ेगा.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "आप Brave की गोपनीयता सुरक्षा के बिना इस साइट को ब्राउज़ कर रहे हैं। क्या यह शील्ड के साथ सही तरीके से काम नहीं करता है?";
+"ShieldsDownDisclaimer" = "आप Scout की गोपनीयता सुरक्षा के बिना इस साइट को ब्राउज़ कर रहे हैं। क्या यह शील्ड के साथ सही तरीके से काम नहीं करता है?";
 
 /* shields overview message */
 "ShieldsOverview" = "साइट Shields आपको नियंत्रित करने देती है कि आप जिस भी साइट पर जाते हैं उस पर ऐड्स और ट्रैकर्स को कब ब्लॉक किया जाता है। अगर आप किसी खास साइट पर ऐड्स देखना चाहें, तो आप उन्हें यहाँ चालू कर सकते हैं।";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "ब्राउज़र हिस्ट्री मिटाएँ";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Brave की ब्राउज़िंग हिस्ट्री मिटाएँ";
+"shortcuts.activityTypeClearHistoryTitle" = "Scout की ब्राउज़िंग हिस्ट्री मिटाएँ";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "नए टैब में ब्राउज़र खोलें और VPN चालू करें";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "बुकमार्क्स खोलें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Brave ब्राउज़र बुकमार्क्स खोलें";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Scout ब्राउज़र बुकमार्क्स खोलें";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Brave News खोलें";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "ब्राउज़र हिस्ट्री खोलें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Brave ब्राउज़र हिस्ट्री खोलें";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Scout ब्राउज़र हिस्ट्री खोलें";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "प्लेलिस्ट में अपने वीडियो चलाना शुरू करें";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "दूसरे डिवाइसों के टैब्स खोलें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Brave के साथ वेब पर सुरक्षित रूप से सर्च शुरू करें";
+"shortcuts.activityTypeTabDescription" = "Scout के साथ वेब पर सुरक्षित रूप से सर्च शुरू करें";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "बुकमार्क वेबसाइट खोलें";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "वेबसाइट खोलें";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "इस विकल्प से Brave सेटिंग खुल जाएँगी। अलग-अलग Siri विकल्प बदलने के लिए, कृपया 'Siri & सर्च' मेम्यू आइटम चुनें और अपनी पसंद कस्टमाइज़ करें।";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "इस विकल्प से Scout सेटिंग खुल जाएँगी। अलग-अलग Siri विकल्प बदलने के लिए, कृपया 'Siri & सर्च' मेम्यू आइटम चुनें और अपनी पसंद कस्टमाइज़ करें।";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "सेटिंग खोलें";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "%@ पर देखें";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "अनाम वॉइस सर्च इस्तेमाल करने के लिए, कृपया Brave के लिए iOS सिस्टम सेटिंग में माइक्रोफ़ोन ऐक्सेस की अनुमति दें।";
+"voice.search.microphone.description.required" = "अनाम वॉइस सर्च इस्तेमाल करने के लिए, कृपया Scout के लिए iOS सिस्टम सेटिंग में माइक्रोफ़ोन ऐक्सेस की अनुमति दें।";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "माइक्रोफ़ोन ऐक्सेस की ज़रूरत है";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave आपकी वॉइस सर्च को स्टोर या शेयर नहीं करता है।";
+"voice.search.screen.disclaimer" = "Scout आपकी वॉइस सर्च को स्टोर या शेयर नहीं करता है।";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "वॉलेट बनाने की तारीख";

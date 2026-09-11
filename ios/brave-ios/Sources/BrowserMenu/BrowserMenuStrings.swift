@@ -90,7 +90,7 @@ extension Strings {
       "BrowserMenu.resetToDefaultDialogMessage",
       bundle: .module,
       value:
-        "By resetting to default, you'll lose any customizations you've made in Brave. This action cannot be undone. Are you sure you want to proceed?",
+        "By resetting to default, you'll lose any customizations you've made in Scout. This action cannot be undone. Are you sure you want to proceed?",
       comment:
         "A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state"
     )

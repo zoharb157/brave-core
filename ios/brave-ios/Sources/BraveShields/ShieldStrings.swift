@@ -195,7 +195,7 @@ extension Strings.Shields {
     "AntiAdBlockWarningDescription2",
     bundle: .module,
     value:
-      "To address this issue, Brave can adjust your shields settings for you. Once adjusted, you can try watching this content in Brave Player instead.",
+      "To address this issue, Scout can adjust your shields settings for you. Once adjusted, you can try watching this content in Scout Player instead.",
     comment: "A descriptive message explaining to disable shields on this site."
   )
 
@@ -219,7 +219,7 @@ extension Strings.Shields {
   public static let antiAdBlockWarningBravePlayerDescription = NSLocalizedString(
     "AntiAdBlockWarningBravePlayerDescription",
     bundle: .module,
-    value: "**Brave Player** is your ticket to an ad-free and uninterrupted video experience.",
+    value: "**Scout Player** is your ticket to an ad-free and uninterrupted video experience.",
     comment: "A discription of the Brave Player."
   )
 }
@@ -231,7 +231,7 @@ extension Strings.Shields {
   public static let bravePlayer = NSLocalizedString(
     "BravePlayer",
     bundle: .module,
-    value: "Brave Player",
+    value: "Scout Player",
     comment: "Title for the brave player feature"
   )
 
@@ -239,7 +239,7 @@ extension Strings.Shields {
   public static let bravePlayerInfoTitle = NSLocalizedString(
     "BravePlayerInfoTitle",
     bundle: .module,
-    value: "Watch In Brave Player Instead",
+    value: "Watch In Scout Player Instead",
     comment:
       "Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar."
   )
@@ -248,7 +248,7 @@ extension Strings.Shields {
   public static let bravePlayerInfoMessage = NSLocalizedString(
     "BravePlayerInfoMessage",
     bundle: .module,
-    value: "Brave Player lets you watch videos without interruptions.",
+    value: "Scout Player lets you watch videos without interruptions.",
     comment:
       "A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time."
   )
@@ -257,7 +257,7 @@ extension Strings.Shields {
   public static let bravePlayerAlwaysOpenVideoLinks = NSLocalizedString(
     "BravePlayerAlwaysOpenYouTubeLinks",
     bundle: .module,
-    value: "Always open videos from this site with Brave Player",
+    value: "Always open videos from this site with Scout Player",
     comment:
       "A label for a toggle that enables automatic launching of brave player for certain sites"
   )
@@ -371,7 +371,7 @@ extension Strings.Shields {
   public static let shredOnAppCloseDescription = NSLocalizedString(
     "ShredOnAppCloseDescription",
     bundle: .module,
-    value: "Browsing data is automatically shredded when the Brave app is closed / restarted",
+    value: "Browsing data is automatically shredded when the Scout app is closed / restarted",
     comment: "The description for shredding when the app is closed"
   )
 
@@ -490,7 +490,7 @@ extension Strings.Shields {
   public static let domainBlockedPageMessage = NSLocalizedString(
     "DomainBlockedPageMessage",
     bundle: .module,
-    value: "Brave has prevented the following site from loading:",
+    value: "Scout has prevented the following site from loading:",
     comment: "A message in the warning page that appears when a page was blocked"
   )
 
@@ -499,7 +499,7 @@ extension Strings.Shields {
     "DomainBlockedPageDescription",
     bundle: .module,
     value:
-      "Because you requested to aggressively block trackers and ads, Brave is blocking this site before the first network connection.",
+      "Because you requested to aggressively block trackers and ads, Scout is blocking this site before the first network connection.",
     comment: "A description in the warning page that appears when a page was blocked"
   )
 
@@ -987,7 +987,7 @@ extension Strings.Shields {
     "ShieldsDownDisclaimer",
     bundle: .module,
     value:
-      "You're browsing this site without Brave's privacy protections. Does it not work right with Shields up?",
+      "You're browsing this site without Scout's privacy protections. Does it not work right with Shields up?",
     comment: ""
   )
   public static let globalControls = NSLocalizedString(

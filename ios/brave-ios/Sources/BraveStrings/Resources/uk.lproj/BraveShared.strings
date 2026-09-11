@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "Це дозволить збергіати зображення до папки «Камера».";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave хоче отримати доступ до «Фотографій»";
+"AccessPhotoDeniedAlertTitle" = "Scout хоче отримати доступ до «Фотографій»";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Додати закладку";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Запитайте Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Це дозволяє автентифікувати ваш доступ до Brave";
+"AuthenticationLoginsTouchReason" = "Це дозволяє автентифікувати ваш доступ до Scout";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Скасувати";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "Адреса";
 
 /* Button to show the brave panel */
-"BravePanel" = "Панель Brave";
+"BravePanel" = "Панель Scout";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Нагороди Brave";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "Перемістіть адресний рядок, вкладки, закладки й інші інструменти у нижню частину браузеру.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Персоналізуйте панель вкладок Brave";
+"callout.bottomBarCalloutTitle" = "Персоналізуйте панель вкладок Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Отримуйте конфіденційність Brave на своєму комп’ютері або планшеті й синхронізуйте закладки й розширення на різних пристроях.";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Відкрити налаштування";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Відкривайте всі посилання у Brave, щоб захистити свою конфіденційність";
+"defaultBrowserCallout.introPrimaryText" = "Відкривайте всі посилання у Scout, щоб захистити свою конфіденційність";
 
 /* Secondary text on default browser popup. */
 "defaultBrowserCallout.introSecondaryText" = "Shields блокує трекери та рекламу, а також дозволяє заощадити дані й час під час перегляду вебсайтів";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Відкрийте меню «Параметри», торкніться пункту «Програма браузера за замовчуванням» і виберіть Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Відкрийте меню «Параметри», торкніться пункту «Програма браузера за замовчуванням» і виберіть Scout.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Зробити Brave веб-переглядачем за умовчанням";
+"defaultBrowserCallout.notificationBody" = "Зробити Scout веб-переглядачем за умовчанням";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Отримайте захист Brave у кожному посиланні";
+"defaultBrowserCallout.notificationTitle" = "Отримайте захист Scout у кожному посиланні";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Закрити запит на встановлення браузера за замовчуванням";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Стандартна тема Brave";
+"defaultThemeName" = "Стандартна тема Scout";
 
 /* No comment provided by engineer. */
 "Delete" = "Видалити";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Уведіть назву папки";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ зазвичай використовує шифрування для захисту вашої інформації. Коли Brave намагався підключитися до %2$@ цього разу, вебсайт надіслав незвичні й неправильні облікові дані. Таке може траплятися, коли хакер намагається видати себе за %3$@ або ж якщо екран підключення до Wi-Fi перервав підключення. Ваша інформація повністю захищена, оскільки Brave припинив підключення, перш ніж будь-які дані було передано.<br />Наразі ви не можете відвідати %4$@, тому що вебсайт використовує закріплення сертифікату. Мережеві помилки й атаки зазвичай тимчасові, тож ця сторінка, скоріш за все, працюватиме пізніше.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ зазвичай використовує шифрування для захисту вашої інформації. Коли Scout намагався підключитися до %2$@ цього разу, вебсайт надіслав незвичні й неправильні облікові дані. Таке може траплятися, коли хакер намагається видати себе за %3$@ або ж якщо екран підключення до Wi-Fi перервав підключення. Ваша інформація повністю захищена, оскільки Scout припинив підключення, перш ніж будь-які дані було передано.<br />Наразі ви не можете відвідати %4$@, тому що вебсайт використовує закріплення сертифікату. Мережеві помилки й атаки зазвичай тимчасові, тож ця сторінка, скоріш за все, працюватиме пізніше.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Сервер не може довести, що він є %@; його сертифікат безпеки не є довіреним сертифікатом для операційної системи вашого пристрою. Це могло статися через помилку конфігурації або через спроби зловмисника перехопити ваше під’єднання.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Виберіть пошукову систему за замовчуванням";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Вітаємо в браузері Brave!";
+"OBSearchEngineTitle" = "Вітаємо в браузері Scout!";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Блокування трекерів, які порушують приватність, щоб за вами не стежили в мережі";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Завдяки блокуванню трекерів і реклами вебсайти використовують менше даних і завантажуються набагато швидше.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Відчуйте різницю з Brave!\nСторінки без реклами, без трекерів, ще й завантажуються напрочуд швидко.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Відчуйте різницю з Scout!\nСторінки без реклами, без трекерів, ще й завантажуються напрочуд швидко.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Наберіть назву сайту або введіть URL-посилання";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Щоб розпочати, налаштуйте ланцюжок синхронізації та увімкніть «Відкриті вкладки» у налаштуваннях синхронізації.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Виберіть у налаштуваннях дані, які Brave буде синхронізувати.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Виберіть у налаштуваннях дані, які Scout буде синхронізувати.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Немає активних сеансів для відображення з інших ваших пристроїв.";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Постійний перегляд у приватному режимі";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Дозволити Brave відновлювати вкладки приватного режиму, навіть після перезапуску додатка";
+"PersistentPrivateBrowsingAlertMessage" = "Дозволити Scout відновлювати вкладки приватного режиму, навіть після перезапуску додатка";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Відновлення вкладок приватного режиму";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Хочете додати це відео до списку відтворення?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Додати у Brave Playlist";
+"playList.addToPlayListAlertTitle" = "Додати у Playlist";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Параметри відтворення";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Налаштування";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Список відтворення Brave";
+"playlist.carplayTitle" = "Список відтворення Scout";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Змінити список відтворення";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Виникла проблема із завантаженням ресурсу!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Ви можете додавати елементи до списку відтворення Brave у браузері";
+"playList.noItemLabelDetailLabel" = "Ви можете додавати елементи до списку відтворення Scout у браузері";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Немає жодного доступного файлу";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Скасувати";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Поруч із панеллю адреси в браузері Brave з’явиться кнопка списку відтворення. За допомогою неї ви зможете отримати швидкий доступ до списку відтворення, а також видалити/додати медіафайли.";
+"playlist.urlBarButtonOptionFooter" = "Поруч із панеллю адреси в браузері Scout з’явиться кнопка списку відтворення. За допомогою неї ви зможете отримати швидкий доступ до списку відтворення, а також видалити/додати медіафайли.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Додати кнопку швидкого доступу";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Увімкнути сповіщення";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Зведення від Brave щодо вашого захисту в Інтернеті цього тижня.";
+"privacyHub.notificationMessage" = "Зведення від Scout щодо вашого захисту в Інтернеті цього тижня.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Щотижневий звіт про конфіденційність";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "У режимі «Тільки приватний перегляд» буде закрито всі відкриті вкладки та виконано вихід з усіх сайтів.";
 
 /* Private tab details */
-"PrivateTabBody" = "Приватні вкладки не зберігаються в Brave, але це не робить ваші дії в Інтернеті анонімними. Сайти, які ви переглядаєте з приватних вкладок, не відображаються в історії, а файли cookie видаляються після закриття вкладки. У Brave не залишиться жодних даних про ваш сеанс, окрім завантажень.\nПроте оператор мобільного зв’язку (або власник мережі Wi-Fi чи VPN, до якої ви підключені) може бачити, які сайти ви відвідуєте. Сайти отримують інформацію про вашу публічну IP-адресу, навіть коли ви переглядаєте їх із приватних вкладок.";
+"PrivateTabBody" = "Приватні вкладки не зберігаються в Scout, але це не робить ваші дії в Інтернеті анонімними. Сайти, які ви переглядаєте з приватних вкладок, не відображаються в історії, а файли cookie видаляються після закриття вкладки. У Scout не залишиться жодних даних про ваш сеанс, окрім завантажень.\nПроте оператор мобільного зв’язку (або власник мережі Wi-Fi чи VPN, до якої ви підключені) може бачити, які сайти ви відвідуєте. Сайти отримують інформацію про вашу публічну IP-адресу, навіть коли ви переглядаєте їх із приватних вкладок.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Використання приватних вкладок впливає лише на роботу Brave на вашому пристрої та не впливає на дії поза вашим пристроєм.\n\nІнформація про вашу IP-адресу завжди передається на сайти, завдяки чому можна визначити ваше розташування. Зазвичай це місто, але інколи результати відстеження розташування можуть бути більш точними. Також сайти мають доступ до всієї інформації, яку ви вводите, наприклад до пошукових запитів. Якщо ви ввійдете до системи на веб-сайті, стане відомо, що ви є власником облікового запису. Коли ви закриєте приватну вкладку, буде виконано вихід з облікового запису, оскільки Brave видалить файл cookie, створений під час входу.\n\nКомпанія, що надає підключення до Інтернету (зазвичай провайдер мобільної мережі або власник мереж Wi-Fi чи VPN), може переглядати всю вашу мережеву діяльність і журнал відвідувань сайтів. Якщо на сайті використовується протокол HTTPS, провайдер може лише здогадуватися про ваші дії на сайті. Якщо ж на сайті використовується протокол HTTP, провайдер має інформацію про всі ваші пошукові запити, відвідувані сторінки та посилання.\n\nЯкщо ваш роботодавець керує вашим пристроєм, то він також може відстежувати ваші дії. Імовірно, використання приватних вкладок не допоможе приховати інформацію про те, які сайти ви відвідували. Крім того, інші люди, що мають доступ до вашого пристрою, можуть також установити програму, що відстежуватиме вашу діяльність. У цьому разі приватні вкладки також вам не допоможуть.";
+"PrivateTabDetails" = "Використання приватних вкладок впливає лише на роботу Scout на вашому пристрої та не впливає на дії поза вашим пристроєм.\n\nІнформація про вашу IP-адресу завжди передається на сайти, завдяки чому можна визначити ваше розташування. Зазвичай це місто, але інколи результати відстеження розташування можуть бути більш точними. Також сайти мають доступ до всієї інформації, яку ви вводите, наприклад до пошукових запитів. Якщо ви ввійдете до системи на веб-сайті, стане відомо, що ви є власником облікового запису. Коли ви закриєте приватну вкладку, буде виконано вихід з облікового запису, оскільки Scout видалить файл cookie, створений під час входу.\n\nКомпанія, що надає підключення до Інтернету (зазвичай провайдер мобільної мережі або власник мереж Wi-Fi чи VPN), може переглядати всю вашу мережеву діяльність і журнал відвідувань сайтів. Якщо на сайті використовується протокол HTTPS, провайдер може лише здогадуватися про ваші дії на сайті. Якщо ж на сайті використовується протокол HTTP, провайдер має інформацію про всі ваші пошукові запити, відвідувані сторінки та посилання.\n\nЯкщо ваш роботодавець керує вашим пристроєм, то він також може відстежувати ваші дії. Імовірно, використання приватних вкладок не допоможе приховати інформацію про те, які сайти ви відвідували. Крім того, інші люди, що мають доступ до вашого пристрою, можуть також установити програму, що відстежуватиме вашу діяльність. У цьому разі приватні вкладки також вам не допоможуть.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Докладніше про приватні вкладки.";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "Ні";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Роботу додатка Brave було аварійно завершено або його було неналежно закрито.\nВідновити вкладки?";
+"RestoreTabOnCrashAlertMessage" = "Роботу додатка Scout було аварійно завершено або його було неналежно закрито.\nВідновити вкладки?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Неочікуване закриття Brave.";
+"RestoreTabOnCrashAlertTitle" = "Неочікуване закриття Scout.";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "Увімкнути, щоб допомогти в підтримці Brave і спільноти BAT.";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "Надіслати звіт про аварійне завершення роботи Brave, щоб вирішити проблему?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Роботу Brave було завершено в аварійному режимі";
+"SendCrashReportAlertTitle" = "Роботу Scout було завершено в аварійному режимі";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Надіслати звіт";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Тепер на платформі iOS Brave можна встановити як браузер за замовчуванням. Торкніться тут, щоб відкрити налаштування.";
+"setDefaultBrowserCalloutTitle" = "Тепер на платформі iOS Scout можна встановити як браузер за замовчуванням. Торкніться тут, щоб відкрити налаштування.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Установити як браузер за замовчуванням";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Закрити вкладки";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Дозволити Brave автоматично закривати вкладки, які останнім часом не переглядалися.";
+"settings.autocloseTabsSettingFooter" = "Дозволити Scout автоматично закривати вкладки, які останнім часом не переглядалися.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Заблокувати відволікаючі елементи YouTube";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Медіа-дані";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Відкривати посилання на YouTube у браузері Brave";
+"settings.openYouTubeInBrave" = "Відкривати посилання на YouTube у браузері Scout";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Відстежувати час активної роботи";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "Це налаштування Shields за замовчуванням для нових вебсайтів. Якщо ви їх зміните, це не вплине на ваші налаштування для окремих вебсайтів.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Ви переглядаєте вебсайт з вимкненим засобом захисту конфіденційності від Brave. Вебсайт не працює належним чином, якщо щити увімкнено?";
+"ShieldsDownDisclaimer" = "Ви переглядаєте вебсайт з вимкненим засобом захисту конфіденційності від Scout. Вебсайт не працює належним чином, якщо щити увімкнено?";
 
 /* shields overview message */
 "ShieldsOverview" = "Екрани дозволяють керувати блокуванням реклами або трекерів на кожному сайті, який ви переглядаєте. Для перегляду реклами на сайті увімкніть цей параметр тут.";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Очистити журнал браузера";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Очистити журнал браузера Brave";
+"shortcuts.activityTypeClearHistoryTitle" = "Очистити журнал браузера Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Відкрити браузер у новій вкладці й увімкнути VPN";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Відкрити закладки";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Відкрити закладки браузеру Brave";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Відкрити закладки браузеру Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Відкрити Brave News";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Відкрити історію браузеру";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Відкрити історію браузеру Brave";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Відкрити історію браузеру Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Почати відтворення відео зі списку відтворення";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Відкрити вкладки з інших пристроїв";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Почніть безпечний пошук в Інтернеті за допомогою Brave";
+"shortcuts.activityTypeTabDescription" = "Почніть безпечний пошук в Інтернеті за допомогою Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Відкрити вебсайт із закладки";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Відкрити вебсайт";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Це відкриє налаштування Brave. Щоб змінити різні опції Siri, виберіть пункт меню «Siri й пошук» і виберіть відповідні параметри.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Це відкриє налаштування Scout. Щоб змінити різні опції Siri, виберіть пункт меню «Siri й пошук» і виберіть відповідні параметри.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Відкрити налаштування";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Переглянути в %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Щоб користуватися анонімним голосовим пошуком, надайте програмі Brave дозвіл на доступ до мікрофона в меню «Системні налаштування iOS».";
+"voice.search.microphone.description.required" = "Щоб користуватися анонімним голосовим пошуком, надайте програмі Scout дозвіл на доступ до мікрофона в меню «Системні налаштування iOS».";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Потрібен доступ до мікрофона";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave не зберігає та не передає іншим сторонам дані ваших голосових пошуків.";
+"voice.search.screen.disclaimer" = "Scout не зберігає та не передає іншим сторонам дані ваших голосових пошуків.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Дата створення гаманця";

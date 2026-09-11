@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "Varsayılana Sıfırla";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "Varsayılana sıfırladığınızda, Brave'de yaptığınız tüm özelleştirmeleri kaybedersiniz. Bu eylem geri alınamaz. Devam etmek istediğinizden emin misiniz?";
+"BrowserMenu.resetToDefaultDialogMessage" = "Varsayılana sıfırladığınızda, Scout'de yaptığınız tüm özelleştirmeleri kaybedersiniz. Bu eylem geri alınamaz. Devam etmek istediğinizden emin misiniz?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "Tümünü Göster…";

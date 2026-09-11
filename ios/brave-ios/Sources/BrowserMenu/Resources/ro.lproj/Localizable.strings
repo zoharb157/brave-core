@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "Resetare la setările implicite";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "Prin resetarea la setările implicite, vei pierde toate personalizările pe care le-ai făcut în Brave. Această acțiune nu poate fi anulată. Sigur vrei să continui?";
+"BrowserMenu.resetToDefaultDialogMessage" = "Prin resetarea la setările implicite, vei pierde toate personalizările pe care le-ai făcut în Scout. Această acțiune nu poate fi anulată. Sigur vrei să continui?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "Afișează-le pe toate…";

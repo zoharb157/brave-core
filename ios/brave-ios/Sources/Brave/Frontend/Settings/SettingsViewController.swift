@@ -1595,21 +1595,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           image: UIImage(braveSystemNamed: "leo.bug"),
           cellClass: MultilineValue1Cell.self
         ),
-        Row(
-          text: Strings.rateBrave,
-          selection: { [unowned self] in
-            // Rate Brave
-            guard
-              let writeReviewURL = URL(
-                string: "https://itunes.apple.com/app/id1052879175?action=write-review"
-              )
-            else { return }
-            UIApplication.shared.open(writeReviewURL)
-            self.dismiss(animated: true)
-          },
-          image: UIImage(braveSystemNamed: "leo.message.bubble-smile"),
-          cellClass: MultilineValue1Cell.self
-        ),
       ]
     )
   }()

@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "То вам омогућава да сачувате слику у галерију.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave жели да приступи вашим фотографијама";
+"AccessPhotoDeniedAlertTitle" = "Scout жели да приступи вашим фотографијама";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Додај обележивач";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Питајте Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Тиме се потврђује идентитет ради приступа Brave-у";
+"AuthenticationLoginsTouchReason" = "Тиме се потврђује идентитет ради приступа Scout-у";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Откажи";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "Адреса";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave панел";
+"BravePanel" = "Scout панел";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Brave награде";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Закључавање прегледача";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Откључајте Brave помоћу идентификације отиска, лица или системског приступног кода.";
+"BrowserLockDescription" = "Откључајте Scout помоћу идентификације отиска, лица или системског приступног кода.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Историја прегледања веба";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "Преместите траку за адресу, картице, обележиваче и друге алатке на дно прегледача.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Прилагодите траку са картицама у Brave-у";
+"callout.bottomBarCalloutTitle" = "Прилагодите траку са картицама у Scout-у";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Обезбедите себи приватност коју нуди Brave на рачунару или таблету и синхронизујте обележиваче и додатке међу уређајима.";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Отвори подешавања";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Отворите све линкове помоћу Brave-а да бисте заштитили своју приватност";
+"defaultBrowserCallout.introPrimaryText" = "Отворите све линкове помоћу Scout-а да бисте заштитили своју приватност";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave штитови блокирају праћења и огласе, смањују потрошњу података и штеде вам време на сваком сајту који посетите";
+"defaultBrowserCallout.introSecondaryText" = "Scout штитови блокирају праћења и огласе, смањују потрошњу података и штеде вам време на сваком сајту који посетите";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Отворите подешавања, додирните опцију за подразумевану апликацију прегледача и изаберите Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Отворите подешавања, додирните опцију за подразумевану апликацију прегледача и изаберите Scout.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Подесите Brave као подразумевани прегледач";
+"defaultBrowserCallout.notificationBody" = "Подесите Scout као подразумевани прегледач";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Набавите Brave заштиту, на сваком линку";
+"defaultBrowserCallout.notificationTitle" = "Набавите Scout заштиту, на сваком линку";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Затвори облачић за подразумевани прегледач";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave – подразумевано";
+"defaultThemeName" = "Scout – подразумевано";
 
 /* No comment provided by engineer. */
 "Delete" = "Избриши";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Унеси назив фолдера";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ обично користи шифровање да би се заштитили ваши подаци. Када је Brave покушао да се повеже са %2$@ овог пута, веб-сајт је послао необичне и нетачне акредитиве. То се може десити када нападач покушава да се претвара да је %3$@ или је екран за пријаву на Wi-Fi прекинуо везу. Ваше информације су и даље безбедне јер је Brave прекинуо везу пре него што су размењени било какви подаци.<br />Тренутно не можете посетити %4$@ јер веб-сајт користи качење сертификата. Мрежне грешке и напади су обично привремени, тако да ће ова страница вероватно радити касније.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ обично користи шифровање да би се заштитили ваши подаци. Када је Scout покушао да се повеже са %2$@ овог пута, веб-сајт је послао необичне и нетачне акредитиве. То се може десити када нападач покушава да се претвара да је %3$@ или је екран за пријаву на Wi-Fi прекинуо везу. Ваше информације су и даље безбедне јер је Scout прекинуо везу пре него што су размењени било какви подаци.<br />Тренутно не можете посетити %4$@ јер веб-сајт користи качење сертификата. Мрежне грешке и напади су обично привремени, тако да ће ова страница вероватно радити касније.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Овај сервер није могао да докаже да је %@. Оперативни систем вашег уређаја не верује његовом безбедносном сертификату. То може бити узроковано погрешном конфигурацијом или покушајем нападача да пресретне вашу везу.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Изаберите подразумевани претраживач";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Добро дошли у Brave прегледач";
+"OBSearchEngineTitle" = "Добро дошли у Scout прегледач";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Блокирајте праћења којима се нарушава приватност да вас други не би пратили док прегледате веб";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Блокирањем праћења и огласа, веб-сајтови користе мање података и брже се учитавају.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Видите колико се Brave разликује од других:\nНема огласа, нема праћења, а учитавање страница је знатно брже.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Видите колико се Scout разликује од других:\nНема огласа, нема праћења, а учитавање страница је знатно брже.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Унесите назив веб-сајта или URL";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Да бисте започели, подесите ланац синхронизације и укључите „Отворене картице“ у подешавањима синхронизације.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Одредите у подешавањима шта Brave синхронизује.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Одредите у подешавањима шта Scout синхронизује.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Нема активних сесија са ваших других уређаја.";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Трајно приватно прегледање";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Омогућава Brave-у да врати картице из приватног прегледања, чак и ако затворите / поново отворите апликацију";
+"PersistentPrivateBrowsingAlertMessage" = "Омогућава Scout-у да врати картице из приватног прегледања, чак и ако затворите / поново отворите апликацију";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Врати приватне картице";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Желите ли да додате овај видео на своју плејлисту?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Додавање на Brave плејлисту";
+"playList.addToPlayListAlertTitle" = "Додавање на Scout плејлисту";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Опције за пуштање садржаја";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Подешавања";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave плејлиста";
+"playlist.carplayTitle" = "Scout плејлиста";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Промени плејлисту";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Дошло је до проблема приликом учитавања ресурса!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Можете да додате ставке на Brave плејлисту у прегледачу";
+"playList.noItemLabelDetailLabel" = "Можете да додате ставке на Scout плејлисту у прегледачу";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Нема доступних ставки";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Поништи";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Додаје дугме за плејлисту поред траке за адресу у Brave прегледачу. То дугме вам омогућава брз приступ отварању плејлисте или додавању или уклањању медија.";
+"playlist.urlBarButtonOptionFooter" = "Додаје дугме за плејлисту поред траке за адресу у Scout прегледачу. То дугме вам омогућава брз приступ отварању плејлисте или додавању или уклањању медија.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Активирај дугме за брзи приступ";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Укључи обавештења";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Преглед начина на који вас је Brave заштитио онлајн ове недеље.";
+"privacyHub.notificationMessage" = "Преглед начина на који вас је Scout заштитио онлајн ове недеље.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Недељни извештај о приватности";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "Режим за само приватно прегледање веба ће затворити све ваше тренутне картице и одјавити вас са свих сајтова.";
 
 /* Private tab details */
-"PrivateTabBody" = "Приватне картице се не чувају у Brave-у, али то вас не чини анонимним онлајн. Сајтови које посећујете у приватној картици неће се приказивати у вашој историји и њихови колачићи увек нестају када их затворите — неће остати никакав траг од њих у Brave-у. С друге стране, преузимања ће бити сачувана.\nВаш мобилни оператер (или власник Wi-Fi мреже или VPN-а на који сте повезани) може да види које сајтове посећујете и ти сајтови ће сазнати вашу јавну IP адресу, чак и у приватним картицама.";
+"PrivateTabBody" = "Приватне картице се не чувају у Scout-у, али то вас не чини анонимним онлајн. Сајтови које посећујете у приватној картици неће се приказивати у вашој историји и њихови колачићи увек нестају када их затворите — неће остати никакав траг од њих у Scout-у. С друге стране, преузимања ће бити сачувана.\nВаш мобилни оператер (или власник Wi-Fi мреже или VPN-а на који сте повезани) може да види које сајтове посећујете и ти сајтови ће сазнати вашу јавну IP адресу, чак и у приватним картицама.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Коришћење приватних картица мења само оно што Brave ради на вашем уређају, али не мења понашање других.\n\nСајтови увек знају вашу IP адресу када их посетите. На основу тога, често могу да претпоставе где се отприлике налазите — обично ваш град. Понекад та претпоставка локације може бити много прецизнија. Сајтови такође знају све што им конкретно кажете, као што су термини за претрагу. Ако се пријавите на сајт, знаће да сте власник тог налога. И даље ћете бити одјављени када затворите приватне картице јер ће Brave одбацити колачић који вас држи пријављеним.\n\nКо год вас повезује са интернетом (ваш интернет провајдер) може да види све ваше мрежне активности. Често је то ваш мобилни оператер. Ако сте повезани на Wi-Fi мрежу, то је власник те мреже, а ако користите VPN, онда је то онај ко покреће тај VPN. Ваш интернет провајдер може да види које сајтове посећујете док их посећујете. Ако ти сајтови користе HTTPS, не могу да направе много више од претпоставке о томе шта радите на тим сајтовима. Али ако сајт користи само HTTP, онда ваш интернет провајдер може да види све: ваше претраге, које странице читате и које линкове пратите.\n\nАко послодавац управља вашим уређајем, можда ће и пратити шта радите са њим. Коришћење приватних картица вероватно их неће спречити да сазнају које сте сајтове посетили. Неко други са приступом вашем уређају такође је могао да инсталира софтвер који прати вашу активност, а приватне картице вас неће заштитити ни од тога.";
+"PrivateTabDetails" = "Коришћење приватних картица мења само оно што Scout ради на вашем уређају, али не мења понашање других.\n\nСајтови увек знају вашу IP адресу када их посетите. На основу тога, често могу да претпоставе где се отприлике налазите — обично ваш град. Понекад та претпоставка локације може бити много прецизнија. Сајтови такође знају све што им конкретно кажете, као што су термини за претрагу. Ако се пријавите на сајт, знаће да сте власник тог налога. И даље ћете бити одјављени када затворите приватне картице јер ће Scout одбацити колачић који вас држи пријављеним.\n\nКо год вас повезује са интернетом (ваш интернет провајдер) може да види све ваше мрежне активности. Често је то ваш мобилни оператер. Ако сте повезани на Wi-Fi мрежу, то је власник те мреже, а ако користите VPN, онда је то онај ко покреће тај VPN. Ваш интернет провајдер може да види које сајтове посећујете док их посећујете. Ако ти сајтови користе HTTPS, не могу да направе много више од претпоставке о томе шта радите на тим сајтовима. Али ако сајт користи само HTTP, онда ваш интернет провајдер може да види све: ваше претраге, које странице читате и које линкове пратите.\n\nАко послодавац управља вашим уређајем, можда ће и пратити шта радите са њим. Коришћење приватних картица вероватно их неће спречити да сазнају које сте сајтове посетили. Неко други са приступом вашем уређају такође је могао да инсталира софтвер који прати вашу активност, а приватне картице вас неће заштитити ни од тога.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Сазнајте о приватним картицама.";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "Не";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Нажалост, Brave је пао или се није правилно затворио.\nЖелите ли да вратите картице?";
+"RestoreTabOnCrashAlertMessage" = "Нажалост, Scout је пао или се није правилно затворио.\nЖелите ли да вратите картице?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave се неочекивано затворио.";
+"RestoreTabOnCrashAlertTitle" = "Scout се неочекивано затворио.";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "Укључите да бисте подржали Brave и BAT заједницу.";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "Желите ли да нам пошаљете извештај о паду да би Brave могао да реши проблем?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Упс! Brave је пао";
+"SendCrashReportAlertTitle" = "Упс! Scout је пао";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Пошаљи извештај";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Сада можете подесити Brave као подразумевани прегледач у iOS-у. Додирните овде да отворите подешавања.";
+"setDefaultBrowserCalloutTitle" = "Сада можете подесити Scout као подразумевани прегледач у iOS-у. Додирните овде да отворите подешавања.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Подеси као подразумевани прегледач";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Затвори картице";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Дозволите Brave-у да аутоматски затвори картице које нису скоро гледане.";
+"settings.autocloseTabsSettingFooter" = "Дозволите Scout-у да аутоматски затвори картице које нису скоро гледане.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Блокирај елементе YouTube-а који одвлаче пажњу";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Медији";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Отвори YouTube линкове у Brave-у";
+"settings.openYouTubeInBrave" = "Отвори YouTube линкове у Scout-у";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Активирај праћење времена проведеног пред екраном";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "Ово су подразумевана подешавања штитова за нове сајтове. Промена ових подешавања неће утицати на ваша постојећа подешавања по сајту.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Прегледате овај сајт без Brave-ове заштите приватности. Да ли сајт не функционише исправно са укљученим штитовима?";
+"ShieldsDownDisclaimer" = "Прегледате овај сајт без Scout-ове заштите приватности. Да ли сајт не функционише исправно са укљученим штитовима?";
 
 /* shields overview message */
 "ShieldsOverview" = "Штитови за сајтове вам омогућавају да контролишете када су огласи и праћења блокирани за сваки сајт који посетите. Ако преферирате да видите огласе на одређеном сајту, можете их активирати овде.";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Избриши историју прегледача";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Избриши историју прегледања веба у Brave-у";
+"shortcuts.activityTypeClearHistoryTitle" = "Избриши историју прегледања веба у Scout-у";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Отвори прегледач у новој картици и активирај VPN";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Отвори обележиваче";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Отвори обележиваче у Brave прегледачу";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Отвори обележиваче у Scout прегледачу";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Отвори Brave вести";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Отвори историју прегледача";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Отвори историју Brave прегледача";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Отвори историју Scout прегледача";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Започни пуштање видео садржаја у плејлисти";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Отвори картице са других уређаја";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Започни безбедну претрагу веба помоћу Brave-а";
+"shortcuts.activityTypeTabDescription" = "Започни безбедну претрагу веба помоћу Scout-а";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Отвори веб-сајт са обележивачима";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Отвори веб-сајт";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ова опција отвара подешавања Brave-а. Да бисте променили различите опције за Siri, изаберите ставку менија „Siri и претрага“ и прилагодите своје изборе.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ова опција отвара подешавања Scout-а. Да бисте променили различите опције за Siri, изаберите ставку менија „Siri и претрага“ и прилагодите своје изборе.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Отвори подешавања";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Прикажи на %@-у";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Дозволите приступ микрофону у системским подешавањима iOS-а за Brave да бисте користили анонимну гласовну претрагу.";
+"voice.search.microphone.description.required" = "Дозволите приступ микрофону у системским подешавањима iOS-а за Scout да бисте користили анонимну гласовну претрагу.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Неопходан је приступ микрофону";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave не чува нити уступа другима ваше гласовне претраге.";
+"voice.search.screen.disclaimer" = "Scout не чува нити уступа другима ваше гласовне претраге.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Датум креирања новчаника";

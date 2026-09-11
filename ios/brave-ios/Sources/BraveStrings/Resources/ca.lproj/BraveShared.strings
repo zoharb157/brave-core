@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "Això et permet desar la imatge al carret de la càmera.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave voldria accedir a les teves fotos";
+"AccessPhotoDeniedAlertTitle" = "Scout voldria accedir a les teves fotos";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Afegeix adreça d'interès";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Pregunta a Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Això autentica el teu accés a Brave";
+"AuthenticationLoginsTouchReason" = "Això autentica el teu accés a Scout";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Cancel·la";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "Adreça";
 
 /* Button to show the brave panel */
-"BravePanel" = "Panell de Brave";
+"BravePanel" = "Panell de Scout";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Recompenses de Brave";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Bloqueig del navegador";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Desbloqueja Brave amb Touch ID, Face ID o contrasenya del sistema.";
+"BrowserLockDescription" = "Desbloqueja Scout amb Touch ID, Face ID o contrasenya del sistema.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Historial de navegació";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "Mou la barra d'adreces, pestanyes, preferits, i altres eines a la part inferior del navegador. ";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Personalitza la barra de pestanyes de Brave";
+"callout.bottomBarCalloutTitle" = "Personalitza la barra de pestanyes de Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Aconsegueix la privacitat de Brave al teu ordinador o tauleta i sincronitza les adreces d'interès i les extensions entre dispositius.";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Obre Configuració";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Obre tots els enllaços amb Brave per protegir la teva privacitat";
+"defaultBrowserCallout.introPrimaryText" = "Obre tots els enllaços amb Scout per protegir la teva privacitat";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Escuts de Brave bloqueja els rastrejadors i els anuncis, desa dades i t'estalvia temps a cada lloc que visites";
+"defaultBrowserCallout.introSecondaryText" = "Escuts de Scout bloqueja els rastrejadors i els anuncis, desa dades i t'estalvia temps a cada lloc que visites";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Obre Configuració, prem l'app del navegador predeterminat i selecciona Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Obre Configuració, prem l'app del navegador predeterminat i selecciona Scout.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Defineix Brave com a navegador predeterminat";
+"defaultBrowserCallout.notificationBody" = "Defineix Scout com a navegador predeterminat";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Aconsegueix la protecció de Brave a cada enllaç";
+"defaultBrowserCallout.notificationTitle" = "Aconsegueix la protecció de Scout a cada enllaç";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Tanca les crides del navegador predeterminat";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave predeterminat";
+"defaultThemeName" = "Scout predeterminat";
 
 /* No comment provided by engineer. */
 "Delete" = "Suprimeix";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Introdueix el nom de la carpeta";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ normalment utilitza el xifratge per protegir la teva informació. Quan Brave va intentar connectar-se a %2$@ aquesta vegada, el lloc web va enviar credencials inusuals i incorrectes. Això pot passar quan un atacant intenta fingir ser %3$@ o una pantalla d'inici de sessió per Wi-Fi ha interromput la connexió. La teva informació encara està segura perquè Brave va aturar la connexió abans que s'intercanviés cap dada.<br /> No pots visitar %4$@ ara mateix perquè el lloc web utilitza la fixació de certificats. Els errors i els atacs de xarxa solen ser temporals, de manera que probablement aquesta pàgina funcionarà més tard.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ normalment utilitza el xifratge per protegir la teva informació. Quan Scout va intentar connectar-se a %2$@ aquesta vegada, el lloc web va enviar credencials inusuals i incorrectes. Això pot passar quan un atacant intenta fingir ser %3$@ o una pantalla d'inici de sessió per Wi-Fi ha interromput la connexió. La teva informació encara està segura perquè Scout va aturar la connexió abans que s'intercanviés cap dada.<br /> No pots visitar %4$@ ara mateix perquè el lloc web utilitza la fixació de certificats. Els errors i els atacs de xarxa solen ser temporals, de manera que probablement aquesta pàgina funcionarà més tard.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Aquest servidor no ha pogut demostrar que és %@; el seu certificat de seguretat no és de confiança pel sistema operatiu del teu dispositiu. Això pot ser causat per una configuració incorrecta o per un atacant que intenta interceptar la teva connexió.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Selecciona el teu motor de cerca predeterminat";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Et donem la benvinguda al navegador de Brave";
+"OBSearchEngineTitle" = "Et donem la benvinguda al navegador de Scout";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Bloqueja els rastrejadors que envaeixen la privacitat perquè puguis navegar sense ser perseguit per la web";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "En bloquejar els rastrejadors i els anuncis, els llocs web utilitzen menys dades i es carreguen molt més ràpidament.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Mira la diferència de Brave:\nSense anuncis. Sense rastrejadors. Càrrega de la pàgina molt més ràpida.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Mira la diferència de Scout:\nSense anuncis. Sense rastrejadors. Càrrega de la pàgina molt més ràpida.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Introdueix el nom o l'URL d'un lloc web";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Per començar, configura una cadena de sincronització i activa \"Obre pestanyes\" a la configuració de sincronització.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Gestiona el que Brave sincronitza a Configuració.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Gestiona el que Scout sincronitza a Configuració.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "No hi ha sessions actives per mostrar des dels altres dispositius.";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Navegació d'incògnit persistent";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Permet a Brave restablir les pestanyes de navegació d'incògnit, fins i tot si tanques/tornes a obrir l'aplicació";
+"PersistentPrivateBrowsingAlertMessage" = "Permet a Scout restablir les pestanyes de navegació d'incògnit, fins i tot si tanques/tornes a obrir l'aplicació";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Restaura les pestanyes d'incògnit";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Vols afegir aquest vídeo a la teva llista de reproducció?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Afegeix a la Llista de reproducció de Brave";
+"playList.addToPlayListAlertTitle" = "Afegeix a la Llista de reproducció de Scout";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Opcions de reproducció";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Configuració";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Llista de reproducció de Brave";
+"playlist.carplayTitle" = "Llista de reproducció de Scout";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Canvia la llista de reproducció";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Hi ha hagut un problema en carregar el recurs!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Pots afegir elements a la Llista de reproducció de Brave des del navegador";
+"playList.noItemLabelDetailLabel" = "Pots afegir elements a la Llista de reproducció de Scout des del navegador";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "No hi ha elements disponibles";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Desfés";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Afegeix un botó de llista de reproducció (semblen 4 línies amb un símbol +) al costat de la barra d'adreces del navegador de Brave. Aquest botó et permet accedir ràpidament per obrir la llista de reproducció o afegir o eliminar contingut multimèdia.";
+"playlist.urlBarButtonOptionFooter" = "Afegeix un botó de llista de reproducció (semblen 4 línies amb un símbol +) al costat de la barra d'adreces del navegador de Scout. Aquest botó et permet accedir ràpidament per obrir la llista de reproducció o afegir o eliminar contingut multimèdia.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Activa el botó d'accés ràpid";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Activa les notificacions";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Un resum de com Brave et va protegir en línia aquesta setmana.";
+"privacyHub.notificationMessage" = "Un resum de com Scout et va protegir en línia aquesta setmana.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Informe setmanal de privacitat";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "El mode Només navegació d'incògnit tancarà totes les pestanyes actuals i tancarà la sessió de tots els llocs.";
 
 /* Private tab details */
-"PrivateTabBody" = "Les pestanyes d'incògnit no es guarden a Brave, però no et fan anònim en línia. Els llocs que visites en una pestanya d'incògnit no apareixeran a l'historial i les teves galetes sempre s'esvaeixen quan les tanques; no en quedarà cap rastre a Brave. Tanmateix, les descàrregues es desaran.\nEl teu operador de telefonia mòbil (o el propietari de la xarxa Wi-Fi o VPN a la qual estàs connectat) pot veure quins llocs visites i aquests llocs aprendran la teva adreça IP pública, fins i tot a les pestanyes d'incògnit.";
+"PrivateTabBody" = "Les pestanyes d'incògnit no es guarden a Scout, però no et fan anònim en línia. Els llocs que visites en una pestanya d'incògnit no apareixeran a l'historial i les teves galetes sempre s'esvaeixen quan les tanques; no en quedarà cap rastre a Scout. Tanmateix, les descàrregues es desaran.\nEl teu operador de telefonia mòbil (o el propietari de la xarxa Wi-Fi o VPN a la qual estàs connectat) pot veure quins llocs visites i aquests llocs aprendran la teva adreça IP pública, fins i tot a les pestanyes d'incògnit.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "L'ús de les pestanyes d'incògnit només canvia el que fa Brave al teu dispositiu, no canvia el comportament de ningú més.\n\nEls llocs sempre aprenen la teva adreça IP quan els visites. A partir d'això, sovint poden endevinar aproximadament on ets, normalment la teva ciutat. De vegades, aquesta estimació de la ubicació pot ser molt més específica. Els llocs també saben tot el que els dius específicament, com ara els termes de cerca. Si inicies sessió en un lloc, sabran que sou el propietari d'aquell compte. Encara estaràs fora de sessió quan tanquis les pestanyes d'incògnit perquè Brave llençarà la galeta que et manté connectat.\n\nQui et connecti a Internet (el teu ISP) pot veure tota l'activitat de la teva xarxa. Sovint, aquest és el teu operador de telefonia mòbil. Si estàs connectat a una xarxa Wi-Fi, aquest és el propietari d'aquesta xarxa i, si fas servir una VPN, és qui la dirigeix. El teu ISP pot veure quins llocs visites mentre els visites. Si aquests llocs utilitzen HTTPS, no poden fer molt més que una conjectura educada sobre el que fas en aquests llocs. Però si un lloc només utilitza HTTP, el teu ISP pot veure-ho tot: els termes de cerca, quines pàgines llegeixes i quins enllaços segueixes.\n\nSi un ocupador gestiona el teu dispositiu, també pots fer un rastrejament d'allò que fas amb ell. Probablement, l'ús de pestanyes d'incògnit no els impedirà saber quins llocs has visitat. Una altra persona amb accés al teu dispositiu també podria tenir instal·lat programari que supervisa la teva activitat, i les pestanyes d'incògnit tampoc et protegiran d'això.";
+"PrivateTabDetails" = "L'ús de les pestanyes d'incògnit només canvia el que fa Scout al teu dispositiu, no canvia el comportament de ningú més.\n\nEls llocs sempre aprenen la teva adreça IP quan els visites. A partir d'això, sovint poden endevinar aproximadament on ets, normalment la teva ciutat. De vegades, aquesta estimació de la ubicació pot ser molt més específica. Els llocs també saben tot el que els dius específicament, com ara els termes de cerca. Si inicies sessió en un lloc, sabran que sou el propietari d'aquell compte. Encara estaràs fora de sessió quan tanquis les pestanyes d'incògnit perquè Scout llençarà la galeta que et manté connectat.\n\nQui et connecti a Internet (el teu ISP) pot veure tota l'activitat de la teva xarxa. Sovint, aquest és el teu operador de telefonia mòbil. Si estàs connectat a una xarxa Wi-Fi, aquest és el propietari d'aquesta xarxa i, si fas servir una VPN, és qui la dirigeix. El teu ISP pot veure quins llocs visites mentre els visites. Si aquests llocs utilitzen HTTPS, no poden fer molt més que una conjectura educada sobre el que fas en aquests llocs. Però si un lloc només utilitza HTTP, el teu ISP pot veure-ho tot: els termes de cerca, quines pàgines llegeixes i quins enllaços segueixes.\n\nSi un ocupador gestiona el teu dispositiu, també pots fer un rastrejament d'allò que fas amb ell. Probablement, l'ús de pestanyes d'incògnit no els impedirà saber quins llocs has visitat. Una altra persona amb accés al teu dispositiu també podria tenir instal·lat programari que supervisa la teva activitat, i les pestanyes d'incògnit tampoc et protegiran d'això.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Saber més sobre pestanyes d'incògnit";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "No";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Malauradament, Brave va col·lapsar o no es va tancar correctament.\nVols restaurar les teves pestanyes?";
+"RestoreTabOnCrashAlertMessage" = "Malauradament, Scout va col·lapsar o no es va tancar correctament.\nVols restaurar les teves pestanyes?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave s'ha tancat inesperadament.";
+"RestoreTabOnCrashAlertTitle" = "Scout s'ha tancat inesperadament.";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "Activa per ajudar a donar suport a Brave i a la comunitat BAT.";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "Vols enviar un informe d'error perquè Brave pugui solucionar el problema?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Oops! Brave s'ha col·lapsat";
+"SendCrashReportAlertTitle" = "Oops! Scout s'ha col·lapsat";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Envia un informe";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Ara es pot configurar Brave com a navegador predeterminat a iOS. Prem aquí per obrir la configuració.";
+"setDefaultBrowserCalloutTitle" = "Ara es pot configurar Scout com a navegador predeterminat a iOS. Prem aquí per obrir la configuració.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Configura com a navegador predeterminat";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Tanca les pestanyes";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Permet que Brave tanqui automàticament les pestanyes que no s'han vist recentment.";
+"settings.autocloseTabsSettingFooter" = "Permet que Scout tanqui automàticament les pestanyes que no s'han vist recentment.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Bloqueja els elements de distracció de YouTube";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Multimèdia";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Obre els enllaços de YouTube a Brave";
+"settings.openYouTubeInBrave" = "Obre els enllaços de YouTube a Scout";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Activa el temps de pantalla";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "Aquestes són les proteccions predeterminades d'Escuts pels nous llocs web. Si les canvies, no afectarà la configuració existent per a cada lloc web.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Estàs navegant per aquest lloc sense les proteccions de privacitat de Brave. No funciona correctament amb Escuts?";
+"ShieldsDownDisclaimer" = "Estàs navegant per aquest lloc sense les proteccions de privacitat de Scout. No funciona correctament amb Escuts?";
 
 /* shields overview message */
 "ShieldsOverview" = "El lloc web d'Escuts permet controlar quan es bloquegen els anuncis i els rastrejadors per a cada lloc que visites. Si prefereixes veure anuncis en un lloc específic, pots activar-los aquí.";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Esborra l'historial del navegador";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = " Esborra l'historial de navegació de Brave";
+"shortcuts.activityTypeClearHistoryTitle" = " Esborra l'historial de navegació de Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Obre el navegador en una pestanya nova i activa la VPN";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Obre adreces d'interès";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Obre les adreces d'interès del navegador de Brave";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Obre les adreces d'interès del navegador de Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Obre Notícies de Brave";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Obre l'historial del navegador";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Obre l'historial del navegador de Brave";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Obre l'historial del navegador de Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Comença a reproduir els teus vídeos a la llista de reproducció";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Obre pestanyes d'altres dispositius";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Comença a cercar al web de manera segura amb Brave";
+"shortcuts.activityTypeTabDescription" = "Comença a cercar al web de manera segura amb Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Obre el lloc web de les adreces d'interès";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Obre lloc web";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Aquesta opció obrirà la configuració de Brave. Per canviar diverses opcions de Siri, selecciona l'element de menú \"Siri i cerca\" i personalitza les teves opcions.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Aquesta opció obrirà la configuració de Scout. Per canviar diverses opcions de Siri, selecciona l'element de menú \"Siri i cerca\" i personalitza les teves opcions.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Obre Configuració";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Veure a %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Permet l'accés al micròfon a la configuració del sistema iOS perquè Brave utilitzi la cerca per veu anònima.";
+"voice.search.microphone.description.required" = "Permet l'accés al micròfon a la configuració del sistema iOS perquè Scout utilitzi la cerca per veu anònima.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Accés al micròfon requerit";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave no emmagatzema ni comparteix les teves cerques per veu.";
+"voice.search.screen.disclaimer" = "Scout no emmagatzema ni comparteix les teves cerques per veu.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Data de creació de la cartera";

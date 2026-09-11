@@ -41,7 +41,7 @@
 "widgets.newsUnavailableByPolicyDescription" = "Kikapcsolva a szervezete házirendje által";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "Az itteni kedvenceinek megtekintéséhez nyissa meg a Brave-et";
+"widgets.noFavoritesFound" = "Az itteni kedvenceinek megtekintéséhez nyissa meg a Scout-et";
 
 /* QR Code section title */
 "widgets.QRCode" = "QR-kód";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "Keresés ";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "Összefoglaló arról, hogy a Brave hogyan takarít meg időt és védi meg Önt online tevékenysége során.";
+"widgets.shieldStatsDescription" = "Összefoglaló arról, hogy a Scout hogyan takarít meg időt és védi meg Önt online tevékenysége során.";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "Adatvédelmi statisztikák";
@@ -74,13 +74,13 @@
 "widgets.shortcutsPrivateTabButton" = "Privát fül";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "Gyors hozzáférés az interneten való kereséshez vagy weboldalak megnyitásához a Brave alkalmazásban.";
+"widgets.shortcutsWidgetDescription" = "Gyors hozzáférés az interneten való kereséshez vagy weboldalak megnyitásához a Scout alkalmazásban.";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "Parancsikonok";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "Összefoglaló arról, hogy a Brave hogyan védte meg Önt online tevékenysége során.";
+"widgets.singleStatDescription" = "Összefoglaló arról, hogy a Scout hogyan védte meg Önt online tevékenysége során.";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "Adatvédelmi statisztika";

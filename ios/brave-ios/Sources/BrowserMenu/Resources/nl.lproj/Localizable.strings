@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "Terug naar standaard";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "Door terug te zetten naar standaard, verlies je alle aanpassingen die je in Brave hebt gemaakt. Deze actie kan niet ongedaan worden gemaakt. Weet je zeker dat je door wilt gaan?";
+"BrowserMenu.resetToDefaultDialogMessage" = "Door terug te zetten naar standaard, verlies je alle aanpassingen die je in Scout hebt gemaakt. Deze actie kan niet ongedaan worden gemaakt. Weet je zeker dat je door wilt gaan?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "Toon alle…";

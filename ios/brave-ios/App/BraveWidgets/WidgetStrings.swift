@@ -15,7 +15,7 @@ extension Strings {
     public static let noFavoritesFound = NSLocalizedString(
       "widgets.noFavoritesFound",
       bundle: widgetBundle,
-      value: "Please open Brave to view your favorites here",
+      value: "Please open Scout to view your favorites here",
       comment: "This shows when you add a widget but have no favorites added in your app"
     )
 
@@ -43,7 +43,7 @@ extension Strings {
     public static let shortcutsWidgetDescription = NSLocalizedString(
       "widgets.shortcutsWidgetDescription",
       bundle: widgetBundle,
-      value: "Quick access to search the web or open web pages in Brave.",
+      value: "Quick access to search the web or open web pages in Scout.",
       comment: "Description for shortcuts widget on 'add widget' screen."
     )
 
@@ -85,7 +85,7 @@ extension Strings {
     public static let shieldStatsDescription = NSLocalizedString(
       "widgets.shieldStatsDescription",
       bundle: widgetBundle,
-      value: "A summary of how Brave saves you time and protects you online.",
+      value: "A summary of how Scout saves you time and protects you online.",
       comment: "Description for Brave Shields widget on 'add widget' screen."
     )
 
@@ -106,7 +106,7 @@ extension Strings {
     public static let singleStatDescription = NSLocalizedString(
       "widgets.singleStatDescription",
       bundle: widgetBundle,
-      value: "A summary of how Brave has protected you online.",
+      value: "A summary of how Scout has protected you online.",
       comment: "Description for Brave Shields single stat widget on 'add widget' screen."
     )
 

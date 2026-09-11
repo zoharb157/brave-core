@@ -41,7 +41,7 @@
 "widgets.newsUnavailableByPolicyDescription" = "Vypnuto zásadami vaší organizace";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "Otevřít Brave a zobrazit tam své oblíbené";
+"widgets.noFavoritesFound" = "Otevřít Scout a zobrazit tam své oblíbené";
 
 /* QR Code section title */
 "widgets.QRCode" = "QR kód";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "Search";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "Shrnutí toho, jak vám Brave šetří čas a chrání vás online.";
+"widgets.shieldStatsDescription" = "Shrnutí toho, jak vám Scout šetří čas a chrání vás online.";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "Statistiky soukromí";
@@ -74,13 +74,13 @@
 "widgets.shortcutsPrivateTabButton" = "Soukromá karta";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "Rychlý přístup k vyhledávání na webu nebo otevírání webových stránek v Brave.";
+"widgets.shortcutsWidgetDescription" = "Rychlý přístup k vyhledávání na webu nebo otevírání webových stránek v Scout.";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "Zástupci";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "Shrnutí toho, jak vás Brave chránil online.";
+"widgets.singleStatDescription" = "Shrnutí toho, jak vás Scout chránil online.";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "Statistiky soukromí";

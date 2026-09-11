@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "Obnoviť predvolené";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "Obnovením predvoleného zobrazenia stratíte akékoľvek úpravy, ktoré ste v Brave vykonali. Táto akcia sa nedá vrátiť späť. Naozaj chcete pokračovať?";
+"BrowserMenu.resetToDefaultDialogMessage" = "Obnovením predvoleného zobrazenia stratíte akékoľvek úpravy, ktoré ste v Scout vykonali. Táto akcia sa nedá vrátiť späť. Naozaj chcete pokračovať?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "Zobraziť všetky…";

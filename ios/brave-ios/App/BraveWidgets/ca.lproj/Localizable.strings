@@ -41,7 +41,7 @@
 "widgets.newsUnavailableByPolicyDescription" = "Desactivat per la política de la teva organització";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "Obre Brave per veure els teus preferits aquí";
+"widgets.noFavoritesFound" = "Obre Scout per veure els teus preferits aquí";
 
 /* QR Code section title */
 "widgets.QRCode" = "Codi QR";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "Cerca";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "Un resum de com Brave t'estalvia temps i et protegeix en línia.";
+"widgets.shieldStatsDescription" = "Un resum de com Scout t'estalvia temps i et protegeix en línia.";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "Estadístiques de privacitat";
@@ -74,13 +74,13 @@
 "widgets.shortcutsPrivateTabButton" = "Pestanya d'incògnit";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "Accés ràpid per cercar al web o obrir pàgines web a Brave.";
+"widgets.shortcutsWidgetDescription" = "Accés ràpid per cercar al web o obrir pàgines web a Scout.";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "Dreceres";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "Un resum de com Brave t'ha protegit en línia.";
+"widgets.singleStatDescription" = "Un resum de com Scout t'ha protegit en línia.";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "Estadística de privacitat";

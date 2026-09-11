@@ -22,11 +22,8 @@ struct FavoritesPreloadedData {
     url: URL(string: "https://www.facebook.com/")!,
     title: "Facebook"
   )
-  static let brave = FavoriteSite(
-    url: URL(string: "https://brave.com/whats-new/")!,
-    title: "What's new in Brave"
-  )
-  static let popularFavorites = [youtube, wikipedia, facebook, brave]
+  // Scout: Brave's "What's new in Brave" favorite is not preloaded.
+  static let popularFavorites = [youtube, wikipedia, facebook]
 
   private struct TopSiteForRegion: Codable {
     let region: String

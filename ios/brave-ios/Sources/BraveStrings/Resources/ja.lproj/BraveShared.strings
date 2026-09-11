@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "カメラロールに画像を保存します。";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave が写真にアクセスしようとしています";
+"AccessPhotoDeniedAlertTitle" = "Scout が写真にアクセスしようとしています";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "ブックマーク追加";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "住所";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave パネル";
+"BravePanel" = "Scout パネル";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Braveリワード";
@@ -638,7 +638,7 @@
 "defaultBrowserCallout.introTertiaryText" = "アプリ設定画面で、「デフォルトのブラウザApp」をタップし、Braveを選択してください。";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Brave をデフォルト ブラウザに設定する";
+"defaultBrowserCallout.notificationBody" = "Scout をデフォルト ブラウザに設定する";
 
 /* Notification title to promote setting Brave app as default browser */
 "defaultBrowserCallout.notificationTitle" = "Braveですべてのリンクを保護しましょう";
@@ -647,7 +647,7 @@
 "defaultBrowserCalloutCloseAccesabilityLabel" = "デフォルトブラウザの設定メッセージを閉じる";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave デフォルト";
+"defaultThemeName" = "Scout デフォルト";
 
 /* No comment provided by engineer. */
 "Delete" = "削除";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "この動画をPlaylistに追加しますか？";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Brave Playlistに追加する";
+"playList.addToPlayListAlertTitle" = "Scout Playlistに追加する";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "再生オプション";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "設定";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave Playlist";
+"playlist.carplayTitle" = "Playlist";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "プレイリストを変更";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "リソースの読み込み中に問題が発生しました！";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "ブラウザ内で、Brave Playlistにアイテムを追加することができます。";
+"playList.noItemLabelDetailLabel" = "ブラウザ内で、Scout Playlistにアイテムを追加することができます。";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "利用可能なアイテムがありません";
@@ -2396,7 +2396,7 @@
 "SendCrashReportAlertMessage" = "Braveが問題を解決できるようにクラッシュレポートを送信しますか？";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "申し訳ございません。Brave がクラッシュしました";
+"SendCrashReportAlertTitle" = "申し訳ございません。Scout がクラッシュしました";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "レポートを送信";

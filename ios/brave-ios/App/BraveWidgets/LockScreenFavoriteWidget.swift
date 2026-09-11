@@ -146,7 +146,7 @@ struct LockScreenFavoriteViewWidget_Previews: PreviewProvider {
           date: .now,
           favorite: .init(
             url: URL(string: "https://brave.com")!,
-            title: "Brave",
+            title: "Scout",
             favicon: .init(
               image: nil,
               isMonogramImage: false,

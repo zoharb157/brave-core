@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "การดำเนินการนี้จะทำให้คุณสามารถบันทึกภาพไปยังคลังภาพของคุณได้";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave ต้องการเข้าถึงรูปภาพของคุณ";
+"AccessPhotoDeniedAlertTitle" = "Scout ต้องการเข้าถึงรูปภาพของคุณ";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "เพิ่มบุ๊กมาร์ก";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "ถามถึง Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "การดำเนินการนี้จะเป็นการตรวจสอบสิทธิ์การเข้าถึง Brave ของคุณ";
+"AuthenticationLoginsTouchReason" = "การดำเนินการนี้จะเป็นการตรวจสอบสิทธิ์การเข้าถึง Scout ของคุณ";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "ยกเลิก";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "แอดเดรส";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave Panel";
+"BravePanel" = "Scout Panel";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Brave Rewards";
@@ -314,7 +314,7 @@
 "BrowserLock" = "ล็อกเบราว์เซอร์";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "ปลดล็อก Brave ด้วย Touch ID, Face ID หรือรหัสผ่านของระบบ";
+"BrowserLockDescription" = "ปลดล็อก Scout ด้วย Touch ID, Face ID หรือรหัสผ่านของระบบ";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "ประวัติการเรียกดู";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "ย้ายแถบแอดเดรส บุ๊กมาร์ก และเครื่องมืออื่นๆ ไปยังด้านล่างสุดของเบราว์เซอร์";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "ปรับแต่งแถบแท็บของ Brave";
+"callout.bottomBarCalloutTitle" = "ปรับแต่งแถบแท็บของ Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "ดาวน์โหลดความเป็นส่วนตัวของ Brave บนคอมพิวเตอร์หรือแท็บเล็ตของคุณ แล้วซิงค์บุ๊กมาร์กและส่วนขยายระหว่างอุปกรณ์";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "เปิดการตั้งค่า";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "เปิดลิงก์ทั้งหมดด้วย Brave เพื่อปกป้องความเป็นส่วนตัวของคุณ";
+"defaultBrowserCallout.introPrimaryText" = "เปิดลิงก์ทั้งหมดด้วย Scout เพื่อปกป้องความเป็นส่วนตัวของคุณ";
 
 /* Secondary text on default browser popup. */
 "defaultBrowserCallout.introSecondaryText" = "Shields ได้บล็อกเครื่องมือติดตาม & โฆษณา บันทึกข้อมูล และช่วยให้คุณประหยัดเวลาในทุกเว็บไซต์ที่คุณเยี่ยมชม";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "เปิดการตั้งค่า แตะที่แอปเบราว์เซอร์เริ่มต้น แล้วเลือก Brave";
+"defaultBrowserCallout.introTertiaryText" = "เปิดการตั้งค่า แตะที่แอปเบราว์เซอร์เริ่มต้น แล้วเลือก Scout";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "ตั้ง Brave เป็นเบราว์เซอร์เริ่มต้นของคุณ";
+"defaultBrowserCallout.notificationBody" = "ตั้ง Scout เป็นเบราว์เซอร์เริ่มต้นของคุณ";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "รับการป้องกันของ Brave ในทุกๆ ลิงก์";
+"defaultBrowserCallout.notificationTitle" = "รับการป้องกันของ Scout ในทุกๆ ลิงก์";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "ปิดคำอธิบายของเบราว์เซอร์เริ่มต้น";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "ค่าเริ่มต้นของ Brave";
+"defaultThemeName" = "ค่าเริ่มต้นของ Scout";
 
 /* No comment provided by engineer. */
 "Delete" = "ลบ";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "ใส่ชื่อโฟลเดอร์";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "โดยปกติแล้ว %1$@ จะใช้การเข้ารหัสเพื่อปกป้องข้อมูลของคุณ เมื่อ Brave พยายามเชื่อมต่อกับ %2$@ ในครั้งนี้ เว็บไซต์จะส่งข้อมูลประจำตัวที่ผิดปกติและไม่ถูกต้องกลับมา ซึ่งอาจเกิดขึ้นเมื่อผู้โจมตีพยายามแสร้งทำเป็น %3$@ หรือหน้าจอลงชื่อเข้าใช้ Wi-Fi ขัดจังหวะการเชื่อมต่อ ข้อมูลของคุณยังคงปลอดภัยเนื่องจาก Brave หยุดการเชื่อมต่อก่อนที่จะมีการแลกเปลี่ยนข้อมูลใดๆ <br />คุณไม่สามารถเยี่ยมชม %4$@ ได้ในขณะนี้เนื่องจากเว็บไซต์ใช้การปักหมุดใบรับรอง ข้อผิดพลาดและการโจมตีเครือข่ายมักเกิดขึ้นชั่วคราว ดังนั้นหน้าเว็บนี้อาจใช้งานได้ในภายหลัง";
+"ErrorPagesAdvancedErrorPinningDetails" = "โดยปกติแล้ว %1$@ จะใช้การเข้ารหัสเพื่อปกป้องข้อมูลของคุณ เมื่อ Scout พยายามเชื่อมต่อกับ %2$@ ในครั้งนี้ เว็บไซต์จะส่งข้อมูลประจำตัวที่ผิดปกติและไม่ถูกต้องกลับมา ซึ่งอาจเกิดขึ้นเมื่อผู้โจมตีพยายามแสร้งทำเป็น %3$@ หรือหน้าจอลงชื่อเข้าใช้ Wi-Fi ขัดจังหวะการเชื่อมต่อ ข้อมูลของคุณยังคงปลอดภัยเนื่องจาก Scout หยุดการเชื่อมต่อก่อนที่จะมีการแลกเปลี่ยนข้อมูลใดๆ <br />คุณไม่สามารถเยี่ยมชม %4$@ ได้ในขณะนี้เนื่องจากเว็บไซต์ใช้การปักหมุดใบรับรอง ข้อผิดพลาดและการโจมตีเครือข่ายมักเกิดขึ้นชั่วคราว ดังนั้นหน้าเว็บนี้อาจใช้งานได้ในภายหลัง";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "เซิร์ฟเวอร์นี้ไม่สามารถพิสูจน์ได้ว่าเป็น %@ เนื่องจากระบบปฏิบัติการของอุปกรณ์ของคุณไม่เชื่อถือใบรับรองความปลอดภัย ซึ่งอาจเกิดจากการกำหนดค่าผิดพลาดหรือผู้โจมตีพยายามดักจับการเชื่อมต่อของคุณ";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "เลือกเครื่องมือค้นหาเริ่มต้นของคุณ";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "ยินดีต้อนรับสู่ Brave Browser";
+"OBSearchEngineTitle" = "ยินดีต้อนรับสู่ Scout";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "บล็อกตัวติดตามที่บุกรุกความเป็นส่วนตัว เพื่อให้คุณสามารถท่องเว็บได้โดยไม่มีอะไรคอยตาม";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "เมื่อทำการบล็อกโฆษณา & เครื่องมือติดตามแล้ว เว็บไซต์จะใช้ข้อมูลน้อยลง และโหลดได้รวดเร็วยิ่งขึ้น";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "ดูความแตกต่างที่ Brave มอบให้:\nไม่มีโฆษณา ไม่มีตัวติดตาม โหลดหน้าเร็วกว่า";
+"onboarding.omniboxOnboardingPopOverDescription" = "ดูความแตกต่างที่ Scout มอบให้:\nไม่มีโฆษณา ไม่มีตัวติดตาม โหลดหน้าเร็วกว่า";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "พิมพ์ชื่อเว็บไซต์หรือ URL";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "ในการเริ่มต้น ให้ตั้งค่าซิงค์เชนและเปิดใช้ \"เปิดแท็บ\" ในการตั้งค่าการซิงค์";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "จัดการสิ่งที่ Brave ซิงค์ในการตั้งค่า";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "จัดการสิ่งที่ Scout ซิงค์ในการตั้งค่า";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "ไม่มีเซสชันที่ใช้งานอยู่ให้แสดงจากอุปกรณ์อื่นๆ ของคุณ";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "การท่องเว็บส่วนตัวแบบถาวร";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "อนุญาตให้ Brave กู้คืนแท็บการท่องเว็บส่วนตัว แม้ว่าคุณจะปิด/เปิดแอปอีกครั้ง";
+"PersistentPrivateBrowsingAlertMessage" = "อนุญาตให้ Scout กู้คืนแท็บการท่องเว็บส่วนตัว แม้ว่าคุณจะปิด/เปิดแอปอีกครั้ง";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "กู้คืนแท็บส่วนตัว";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "คุณต้องการเพิ่มวิดีโอนี้ไปยังเพลย์ลิสต์ของคุณหรือไม่";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "เพิ่มไปยัง Brave Playlist";
+"playList.addToPlayListAlertTitle" = "เพิ่มไปยัง Playlist";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "ตัวเลือกการเล่น";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "การตั้งค่า";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave Playlist";
+"playlist.carplayTitle" = "Playlist";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "เปลี่ยนเพลย์ลิสต์";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "มีปัญหาในการโหลดทรัพยากร!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "คุณสามารถเพิ่มรายการลงใน Brave Playlist ของคุณได้ภายในเบราว์เซอร์";
+"playList.noItemLabelDetailLabel" = "คุณสามารถเพิ่มรายการลงใน Playlist ของคุณได้ภายในเบราว์เซอร์";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "ไม่มีรายการที่พร้อมใช้งาน";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "เลิกทำ";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "เพิ่มปุ่มเพลย์ลิสต์ ข้างแถบแอดเดรสในเบราว์เซอร์ของ Brave ปุ่มนี้ช่วยให้คุณเข้าถึงเพลย์ลิสต์ที่เปิดอยู่ได้อย่างรวดเร็ว หรือเพิ่มหรือลบสื่อ";
+"playlist.urlBarButtonOptionFooter" = "เพิ่มปุ่มเพลย์ลิสต์ ข้างแถบแอดเดรสในเบราว์เซอร์ของ Scout ปุ่มนี้ช่วยให้คุณเข้าถึงเพลย์ลิสต์ที่เปิดอยู่ได้อย่างรวดเร็ว หรือเพิ่มหรือลบสื่อ";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "เปิดใช้งานปุ่มการเข้าถึงด่วน";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "เปิดการแจ้งเตือน";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "สรุปวิธีการที่ Brave ปกป้องคุณทางออนไลน์ในสัปดาห์นี้";
+"privacyHub.notificationMessage" = "สรุปวิธีการที่ Scout ปกป้องคุณทางออนไลน์ในสัปดาห์นี้";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "รายงานความเป็นส่วนตัวประจำสัปดาห์";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "โหมดการท่องเว็บส่วนตัวเท่านั้นจะปิดแท็บในขณะนี้ขอวคุณทั้งหมดและนำคุณออกจากระบบจากเว็บไซต์ทั้งหมด";
 
 /* Private tab details */
-"PrivateTabBody" = "แท็บส่วนตัวจะไม่ถูกบันทึกไว้ใน Brave แต่จะไม่ทำให้คุณไม่เปิดเผยตัวตนทางออนไลน์ เว็บไซต์ที่คุณเยี่ยมชมในแท็บส่วนตัวจะไม่ปรากฏในประวัติของคุณ และคุกกี้ของเว็บไซต์เหล่านั้นจะหายไปเสมอเมื่อคุณปิดแท็บเหล่านั้น — จะไม่มีร่องรอยของเว็บไซต์เหล่านั้นเหลืออยู่ใน Brave อย่างไรก็ตาม การดาวน์โหลดจะถูกบันทึกไว้\nผู้ให้บริการโทรศัพท์มือถือของคุณ (หรือเจ้าของเครือข่าย Wi-Fi หรือ VPN ที่คุณเชื่อมต่ออยู่) สามารถดูว่าคุณเยี่ยมชมเว็บไซต์ใด และเว็บไซต์เหล่านั้นจะเรียนรู้ IP แอดเดรสสาธารณะของคุณ แม้แต่ในแท็บส่วนตัว";
+"PrivateTabBody" = "แท็บส่วนตัวจะไม่ถูกบันทึกไว้ใน Scout แต่จะไม่ทำให้คุณไม่เปิดเผยตัวตนทางออนไลน์ เว็บไซต์ที่คุณเยี่ยมชมในแท็บส่วนตัวจะไม่ปรากฏในประวัติของคุณ และคุกกี้ของเว็บไซต์เหล่านั้นจะหายไปเสมอเมื่อคุณปิดแท็บเหล่านั้น — จะไม่มีร่องรอยของเว็บไซต์เหล่านั้นเหลืออยู่ใน Scout อย่างไรก็ตาม การดาวน์โหลดจะถูกบันทึกไว้\nผู้ให้บริการโทรศัพท์มือถือของคุณ (หรือเจ้าของเครือข่าย Wi-Fi หรือ VPN ที่คุณเชื่อมต่ออยู่) สามารถดูว่าคุณเยี่ยมชมเว็บไซต์ใด และเว็บไซต์เหล่านั้นจะเรียนรู้ IP แอดเดรสสาธารณะของคุณ แม้แต่ในแท็บส่วนตัว";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "การใช้แท็บส่วนตัวจะเปลี่ยนแปลงเฉพาะสิ่งที่ Brave ทำบนอุปกรณ์ของคุณเท่านั้น ไม่ได้เปลี่ยนแปลงพฤติกรรมของผู้อื่น\n\nเว็บไซต์จะเรียนรู้ IP แอดเดรสของคุณเสมอเมื่อคุณเยี่ยมชม จากข้อมูลนี้ พวกเขาสามารถเดาได้คร่าวๆ ว่าคุณอยู่ที่ไหน โดยทั่วไปคือเมืองของคุณ บางครั้งการคาดเดาตำแหน่งอาจเจาะจงกว่านั้นมาก เว็บไซต์ยังรู้ทุกอย่างที่คุณแจ้งให้พวกเขาทราบโดยเฉพาะ เช่น เงื่อนไขการค้นหา หากคุณเข้าสู่ระบบเว็บไซต์ใดเว็บไซต์หนึ่ง พวกเขาจะรู้ว่าคุณเป็นเจ้าของบัญชีนั้น คุณจะยังคงออกจากระบบเมื่อปิดแท็บส่วนตัว เนื่องจาก Brave จะทิ้งคุกกี้ที่ทำให้คุณเข้าสู่ระบบต่อไป\nใครก็ตามที่เชื่อมต่อคุณกับอินเทอร์เน็ต (ISP ของคุณ) จะสามารถเห็นกิจกรรมเครือข่ายทั้งหมดของคุณได้ บ่อยครั้งนี่คือผู้ให้บริการมือถือของคุณ หากคุณเชื่อมต่อกับเครือข่าย Wi-Fi นี่คือเจ้าของเครือข่ายนั้น และหากคุณใช้ VPN ก็จะเป็นผู้ที่ดำเนินการ VPN นั้น ISP ของคุณสามารถดูว่าคุณเยี่ยมชมเว็บไซต์ใดบ้างขณะที่คุณเยี่ยมชม หากเว็บไซต์เหล่านั้นใช้ HTTPS พวกเขาจะไม่สามารถเดาได้มากไปกว่าการเดาอย่างมีการศึกษาว่าคุณทำอะไรบนเว็บไซต์เหล่านั้น แต่ถ้าไซต์ใช้เฉพาะ HTTP ผู้ให้บริการอินเทอร์เน็ตของคุณก็จะสามารถดูข้อมูลทั้งหมดได้ ไม่ว่าจะเป็นเงื่อนไขการค้นหา หน้าเว็บที่คุณอ่าน และลิงก์ที่คุณติดตาม\n\nหากนายจ้างเป็นผู้ดูแลอุปกรณ์ของคุณ พวกเขาอาจติดตามสิ่งที่คุณทำกับอุปกรณ์ด้วย การใช้แท็บส่วนตัวอาจไม่ทำให้นายจ้างไม่สามารถทราบได้ว่าคุณเยี่ยมชมไซต์ใดบ้าง บุคคลอื่นที่สามารถเข้าถึงอุปกรณ์ของคุณได้อาจติดตั้งซอฟต์แวร์ที่ตรวจสอบกิจกรรมของคุณ และแท็บส่วนตัวก็ไม่สามารถปกป้องคุณจากสิ่งนี้ได้เช่นกัน";
+"PrivateTabDetails" = "การใช้แท็บส่วนตัวจะเปลี่ยนแปลงเฉพาะสิ่งที่ Scout ทำบนอุปกรณ์ของคุณเท่านั้น ไม่ได้เปลี่ยนแปลงพฤติกรรมของผู้อื่น\n\nเว็บไซต์จะเรียนรู้ IP แอดเดรสของคุณเสมอเมื่อคุณเยี่ยมชม จากข้อมูลนี้ พวกเขาสามารถเดาได้คร่าวๆ ว่าคุณอยู่ที่ไหน โดยทั่วไปคือเมืองของคุณ บางครั้งการคาดเดาตำแหน่งอาจเจาะจงกว่านั้นมาก เว็บไซต์ยังรู้ทุกอย่างที่คุณแจ้งให้พวกเขาทราบโดยเฉพาะ เช่น เงื่อนไขการค้นหา หากคุณเข้าสู่ระบบเว็บไซต์ใดเว็บไซต์หนึ่ง พวกเขาจะรู้ว่าคุณเป็นเจ้าของบัญชีนั้น คุณจะยังคงออกจากระบบเมื่อปิดแท็บส่วนตัว เนื่องจาก Scout จะทิ้งคุกกี้ที่ทำให้คุณเข้าสู่ระบบต่อไป\nใครก็ตามที่เชื่อมต่อคุณกับอินเทอร์เน็ต (ISP ของคุณ) จะสามารถเห็นกิจกรรมเครือข่ายทั้งหมดของคุณได้ บ่อยครั้งนี่คือผู้ให้บริการมือถือของคุณ หากคุณเชื่อมต่อกับเครือข่าย Wi-Fi นี่คือเจ้าของเครือข่ายนั้น และหากคุณใช้ VPN ก็จะเป็นผู้ที่ดำเนินการ VPN นั้น ISP ของคุณสามารถดูว่าคุณเยี่ยมชมเว็บไซต์ใดบ้างขณะที่คุณเยี่ยมชม หากเว็บไซต์เหล่านั้นใช้ HTTPS พวกเขาจะไม่สามารถเดาได้มากไปกว่าการเดาอย่างมีการศึกษาว่าคุณทำอะไรบนเว็บไซต์เหล่านั้น แต่ถ้าไซต์ใช้เฉพาะ HTTP ผู้ให้บริการอินเทอร์เน็ตของคุณก็จะสามารถดูข้อมูลทั้งหมดได้ ไม่ว่าจะเป็นเงื่อนไขการค้นหา หน้าเว็บที่คุณอ่าน และลิงก์ที่คุณติดตาม\n\nหากนายจ้างเป็นผู้ดูแลอุปกรณ์ของคุณ พวกเขาอาจติดตามสิ่งที่คุณทำกับอุปกรณ์ด้วย การใช้แท็บส่วนตัวอาจไม่ทำให้นายจ้างไม่สามารถทราบได้ว่าคุณเยี่ยมชมไซต์ใดบ้าง บุคคลอื่นที่สามารถเข้าถึงอุปกรณ์ของคุณได้อาจติดตั้งซอฟต์แวร์ที่ตรวจสอบกิจกรรมของคุณ และแท็บส่วนตัวก็ไม่สามารถปกป้องคุณจากสิ่งนี้ได้เช่นกัน";
 
 /* Private tab information link */
 "PrivateTabLink" = "เรียนรู้เกี่ยวกับแท็บส่วนตัว";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "ไม่มี";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "ขออภัย Brave ขัดข้องหรือไม่สามารถปิดได้อย่างถูกต้อง\nต้องการกู้คืนแท็บของคุณหรือไม่";
+"RestoreTabOnCrashAlertMessage" = "ขออภัย Scout ขัดข้องหรือไม่สามารถปิดได้อย่างถูกต้อง\nต้องการกู้คืนแท็บของคุณหรือไม่";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave ปิดตัวลงอย่างไม่คาดคิด";
+"RestoreTabOnCrashAlertTitle" = "Scout ปิดตัวลงอย่างไม่คาดคิด";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "เปิดใช้งานเพื่อช่วยสนับสนุน Brave และชุมชน BAT";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "ต้องการส่งรายงานการขัดข้องเพื่อให้ Brave สามารถแก้ไขปัญหาได้หรือไม่";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "อุ๊ปส์! Brave เกิดการขัดข้อง";
+"SendCrashReportAlertTitle" = "อุ๊ปส์! Scout เกิดการขัดข้อง";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "ส่งรายงาน";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "ตอนนี้ Brave สามารถตั้งค่าเป็นเบราว์เซอร์เริ่มต้นใน iOS ได้แล้ว แตะที่นี่เพื่อเปิดการตั้งค่า";
+"setDefaultBrowserCalloutTitle" = "ตอนนี้ Scout สามารถตั้งค่าเป็นเบราว์เซอร์เริ่มต้นใน iOS ได้แล้ว แตะที่นี่เพื่อเปิดการตั้งค่า";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "ตั้งเป็นเบราว์เซอร์เริ่มต้น";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "ปิดแท็บ";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "อนุญาตให้ Brave ปิดแท็บที่ไม่ได้ดูเมื่อเร็วๆ นี้โดยอัตโนมัติ";
+"settings.autocloseTabsSettingFooter" = "อนุญาตให้ Scout ปิดแท็บที่ไม่ได้ดูเมื่อเร็วๆ นี้โดยอัตโนมัติ";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "บล็อกสิ่งรบกวนบน YouTube";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "สื่อ";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "เปิดลิงก์ YouTube ใน Brave";
+"settings.openYouTubeInBrave" = "เปิดลิงก์ YouTube ใน Scout";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "เปิดใช้งานเวลาที่ใช้บนหน้าจอ";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "นี่คือการตั้งค่า Shields เริ่มต้นสำหรับเว็บไซต์ใหม่ โดยการเปลี่ยนแปลงเหล่านี้จะไม่ส่งผลต่อการตั้งค่าที่มีอยู่ของแต่ละเว็บไซต์";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "คุณกำลังค้นเว็บนี้โดยไม่มีการป้องกันความเป็นส่วนตัวของ Brave เว็บนี้ทำงานไม่ถูกต้องเมื่อเปิด Shields หรือ?";
+"ShieldsDownDisclaimer" = "คุณกำลังค้นเว็บนี้โดยไม่มีการป้องกันความเป็นส่วนตัวของ Scout เว็บนี้ทำงานไม่ถูกต้องเมื่อเปิด Shields หรือ?";
 
 /* shields overview message */
 "ShieldsOverview" = "Shields ของเว็บไซต์จะให้การควบคุมกับคุณเมื่อโฆษณาและตัวติดตามถูกบล็อกบนแต่ละเว็บไซต์ที่คุณเยี่ยมชม หากคุณต้องการเห็นโฆษณาบนเว็บไซต์นั้นๆ คุณสามารถเปิดใช้พวกมันได้จากที่นี่";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "ล่้างประวัติการเข้าชมเบราว์เซอร์";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "ล้างประวัติการเข้าชมเบราว์เซอร์ของ Brave";
+"shortcuts.activityTypeClearHistoryTitle" = "ล้างประวัติการเข้าชมเบราว์เซอร์ของ Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "เปิดเบราว์เซอร์ในแท็บใหม่และเปิดใช้งาน VPN";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "เปิดบุ๊กมาร์ก";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "เปิดบุ๊กมาร์กของเบราว์เซอร์ Brave";
+"shortcuts.activityTypeOpenBookmarksTitle" = "เปิดบุ๊กมาร์กของเบราว์เซอร์ Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "เปิด Brave News";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "เปิดประวัติการเข้าชมเบราว์เซอร์";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "เปิดประวัติการเข้าชมเบราว์เซอร์ Brave";
+"shortcuts.activityTypeOpenHistoryListTitle" = "เปิดประวัติการเข้าชมเบราว์เซอร์ Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "เริ่มเล่นวิดีโอของคุณในเพลย์ลิสต์";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "เปิดแท็บจากอุปกรณ์อื่น";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "เริ่มค้นหาเว็บไซต์อย่างปลอดภัยด้วย Brave";
+"shortcuts.activityTypeTabDescription" = "เริ่มค้นหาเว็บไซต์อย่างปลอดภัยด้วย Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "เปิดเว็บไซต์ที่บุ๊กมาร์ก";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "เปิดเว็บไซต์";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "ตัวเลือกนี้จะเปิดการตั้งค่า Brave หากต้องการเปลี่ยนตัวเลือก Siri ต่างๆ โปรดเลือกรายการเมนู 'Siri & Search' และปรับแต่งตัวเลือกของคุณ";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "ตัวเลือกนี้จะเปิดการตั้งค่า Scout หากต้องการเปลี่ยนตัวเลือก Siri ต่างๆ โปรดเลือกรายการเมนู 'Siri & Search' และปรับแต่งตัวเลือกของคุณ";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "เปิดการตั้งค่า";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "ดูบน %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "โปรดอนุญาตให้เข้าถึงไมโครโฟนในการตั้งค่าระบบ iOS เพื่อให้ Brave ใช้การค้นหาด้วยเสียงโดยไม่เปิดเผยตัวตน";
+"voice.search.microphone.description.required" = "โปรดอนุญาตให้เข้าถึงไมโครโฟนในการตั้งค่าระบบ iOS เพื่อให้ Scout ใช้การค้นหาด้วยเสียงโดยไม่เปิดเผยตัวตน";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "ต้องใช้การเข้าถึงไมโครโฟน";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave จะไม่จัดเก็บหรือแบ่งปันการค้นหาด้วยเสียงของคุณ";
+"voice.search.screen.disclaimer" = "Scout จะไม่จัดเก็บหรือแบ่งปันการค้นหาด้วยเสียงของคุณ";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "วันที่สร้างวอลเล็ท";

@@ -11,7 +11,7 @@
 "AccessPhotoDeniedAlertMessage" = "Ovim se omogućava spremanje slike u album kamere.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave želi pristupiti vašim fotografijama";
+"AccessPhotoDeniedAlertTitle" = "Scout želi pristupiti vašim fotografijama";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Dodaj oznaku";
@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Pitajte Brave";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Ovim se potvrđuje autentičnost vašeg pristupa pregledniku Brave";
+"AuthenticationLoginsTouchReason" = "Ovim se potvrđuje autentičnost vašeg pristupa pregledniku Scout";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Otkaži";
@@ -206,7 +206,7 @@
 "BookmarkUrlPlaceholderText" = "Adresa";
 
 /* Button to show the brave panel */
-"BravePanel" = "Ploča Brave";
+"BravePanel" = "Ploča Scout";
 
 /* No comment provided by engineer. */
 "BraveRewardsAdNotificationTitle" = "Nagrade Brave";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Zaključavanje preglednika";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Otključajte preglednik Brave identifikacijom s pomoću dodira, identifikacijom s pomoću očitavanja lica ili šifrom sustava.";
+"BrowserLockDescription" = "Otključajte preglednik Scout identifikacijom s pomoću dodira, identifikacijom s pomoću očitavanja lica ili šifrom sustava.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Povijest pregledavanja";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "Pomaknite adresnu traku, kartice, knjižne oznake i druge alate na dno preglednika.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Prilagođavanje trake kartica preglednika Brave";
+"callout.bottomBarCalloutTitle" = "Prilagođavanje trake kartica preglednika Scout";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Dobijte privatnost preglednika Brave na svom računalu ili tabletnom uređaju te sinkronizirajte knjižne oznake i proširenja između uređaja.";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Otvorite Postavke";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Otvori sve poveznice preglednikom Brave radi zaštite privatnosti";
+"defaultBrowserCallout.introPrimaryText" = "Otvori sve poveznice preglednikom Scout radi zaštite privatnosti";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Značajkom Štitovi Brave blokiraju se elementi za praćenje i oglasi te štede podatci i vrijeme na svakom mrežnom mjestu koje posjetite";
+"defaultBrowserCallout.introSecondaryText" = "Značajkom Štitovi Scout blokiraju se elementi za praćenje i oglasi te štede podatci i vrijeme na svakom mrežnom mjestu koje posjetite";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Otvorite Postavke, dodirnite Zadana aplikacija preglednika i odaberite Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Otvorite Postavke, dodirnite Zadana aplikacija preglednika i odaberite Scout.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Postavite Brave kao zadani preglednik";
+"defaultBrowserCallout.notificationBody" = "Postavite Scout kao zadani preglednik";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Dobijte zaštitu preglednika Brave na svakoj poveznici";
+"defaultBrowserCallout.notificationTitle" = "Dobijte zaštitu preglednika Scout na svakoj poveznici";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Zatvori zadani element za privlačenje pažnje preglednika";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Zadani Brave";
+"defaultThemeName" = "Zadani Scout";
 
 /* No comment provided by engineer. */
 "Delete" = "Izbriši";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Upišite naziv mape";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ obično upotrebljava šifriranje za zaštitu vaših informacija. Kada se u pregledniku Brave pokušavate povezati sa sljedećim: %2$@, mrežnim mjestom vraćaju se neobične i netočne vjerodajnice. To se može dogoditi kada se napadač pretvara da je %3$@ ili kad se zaslonom za prijavu mreže Wi-Fi prekine veza. Vaše informacije i dalje su sigurne jer se preglednikom Brave zaustavila veza prije razmjene podataka.<br />Trenutačno ne možete posjetiti %4$@ jer se na mrežnom mjestu upotrebljava prikvačivanje certifikata. Mrežne pogreške i napadi obično su privremeni, pa će stranica vjerojatno raditi poslije.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ obično upotrebljava šifriranje za zaštitu vaših informacija. Kada se u pregledniku Scout pokušavate povezati sa sljedećim: %2$@, mrežnim mjestom vraćaju se neobične i netočne vjerodajnice. To se može dogoditi kada se napadač pretvara da je %3$@ ili kad se zaslonom za prijavu mreže Wi-Fi prekine veza. Vaše informacije i dalje su sigurne jer se preglednikom Scout zaustavila veza prije razmjene podataka.<br />Trenutačno ne možete posjetiti %4$@ jer se na mrežnom mjestu upotrebljava prikvačivanje certifikata. Mrežne pogreške i napadi obično su privremeni, pa će stranica vjerojatno raditi poslije.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Ovaj poslužitelj nije dokazao da je %@. Operativni sustav vašeg uređaja odbacuje njegov sigurnosni certifikat. To se možda događa zbog pogrešne konfiguracije ili zato što napadač pokušava prekinuti vašu vezu.";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Odaberite svoju zadanu tražilicu";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Dobro došli u preglednik Brave";
+"OBSearchEngineTitle" = "Dobro došli u preglednik Scout";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Blokirajte elemente za praćenje kojima se narušava privatnost kako biste mogli pregledavati mrežu bez praćenja ";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Kada se blokiraju elementi za praćenje i oglasi, mrežna mjesta koriste manje podataka i oni se učitavaju mnogo brže.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Pogledajte kako se preglednik Brave razlikuje: \nNema oglasa. Nema elemenata za praćenje. Mnogo brže učitavanje stranice.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Pogledajte kako se preglednik Scout razlikuje: \nNema oglasa. Nema elemenata za praćenje. Mnogo brže učitavanje stranice.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Upišite naziv ili URL mrežnog mjesta";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Za početak postavite lanac sinkronizacije i uključite/isključite „Otvori kartice” u postavkama sinkronizacije.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Upravljajte onime što se sinkronizira preglednikom Brave u Postavkama.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Upravljajte onime što se sinkronizira preglednikom Scout u Postavkama.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Nema aktivnih sesija za pokazivanje s vaših drugih uređaja.";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Stalno privatno pregledavanje";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Omogućava pregledniku Brave vraćanje kartica privatnog pregledavanja čak kada zatvorite / ponovno otvorite aplikaciju";
+"PersistentPrivateBrowsingAlertMessage" = "Omogućava pregledniku Scout vraćanje kartica privatnog pregledavanja čak kada zatvorite / ponovno otvorite aplikaciju";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Vrati privatne kartice";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Želite li dodati ovaj videozapis svom popisu za reprodukciju?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Dodavanje na popis za reprodukciju preglednika Brave";
+"playList.addToPlayListAlertTitle" = "Dodavanje na popis za reprodukciju preglednika Scout";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Mogućnosti reprodukcije";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Postavke";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Popis za reprodukciju Brave";
+"playlist.carplayTitle" = "Popis za reprodukciju Scout";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Promjena popisa za reprodukciju";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Nastao je problem pri učitavanju resursa!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Možete dodati stavke na svoj popis za reprodukciju preglednika Brave u pregledniku";
+"playList.noItemLabelDetailLabel" = "Možete dodati stavke na svoj popis za reprodukciju preglednika Scout u pregledniku";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Nema dostupnih stavki";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Poništi";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Dodaje se gumb popisa za reprodukciju pokraj adresne trake u pregledniku Brave. Gumbom se omogućava brz pristup otvaranju popisa za reprodukciju ili dodavanje ili uklanjanje medijskog sadržaja.";
+"playlist.urlBarButtonOptionFooter" = "Dodaje se gumb popisa za reprodukciju pokraj adresne trake u pregledniku Scout. Gumbom se omogućava brz pristup otvaranju popisa za reprodukciju ili dodavanje ili uklanjanje medijskog sadržaja.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Omogući gumb za brzi pristup";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Uključi obavijesti";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Rekapitulacija pružene zaštite preglednikom Brave na mreži ovog tjedna.";
+"privacyHub.notificationMessage" = "Rekapitulacija pružene zaštite preglednikom Scout na mreži ovog tjedna.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Tjedno izvješće o privatnosti";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "U načinu „Samo privatno pregledavanje” zatvaraju se sve vaše trenutačne kartice i odjavljujete se iz svih mrežnih mjesta.";
 
 /* Private tab details */
-"PrivateTabBody" = "Privatne kartice ne spremaju se u pregledniku Brave, ali njihovom upotrebom niste anonimni na mreži. Mrežna mjesta koja posjećujete u privatnoj kartici ne pojavljuju se u vašoj povijesti i njihovi kolačići uvijek nestaju kada ih zatvorite – u pregledniku Brave ne ostaje nikakav njihov trag. Međutim, preuzimanja se spremaju.\nVaš mobilni operater (ili vlasnik mreže Wi-Fi mreže ili mreže VPN s kojom ste povezani) može vidjeti koja mrežna mjesta posjećujete i ta mrežna mjesta znaju vašu javnu adresu IP čak u privatnim karticama.";
+"PrivateTabBody" = "Privatne kartice ne spremaju se u pregledniku Scout, ali njihovom upotrebom niste anonimni na mreži. Mrežna mjesta koja posjećujete u privatnoj kartici ne pojavljuju se u vašoj povijesti i njihovi kolačići uvijek nestaju kada ih zatvorite – u pregledniku Scout ne ostaje nikakav njihov trag. Međutim, preuzimanja se spremaju.\nVaš mobilni operater (ili vlasnik mreže Wi-Fi mreže ili mreže VPN s kojom ste povezani) može vidjeti koja mrežna mjesta posjećujete i ta mrežna mjesta znaju vašu javnu adresu IP čak u privatnim karticama.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Upotrebom privatnih kartica mijenja se samo ono što preglednik Brave radi na vašem uređaju, a ne mijenja se ponašanje drugih.\n\nMrežna mjesta uvijek znaju vašu adresu IP kada ih posjetite. Na osnovi toga često mogu približno pogoditi gdje se nalazite – obično vaš grad. Ponekad ta pretpostavka o lokaciji može biti mnogo preciznija. Mrežna mjesta također znaju sve što im izravno navedete kao što su pojmovi za pretraživanje. Ako se prijavite u mrežno mjesto, ono zna da ste vlasnik tog računa. No, i dalje ste odjavljeni kada zatvorite privatne kartice jer se preglednikom Brave odbacuje kolačić kojim se održava prijava.\n\nSvatko putem koga se povezujete s internetom (vaš pružatelj internetskih usluga (ISP)) može vidjeti sve vaše mrežne aktivnosti. Često je to vaš mobilni operater. Ako ste povezani s mrežom Wi-Fi, to je vlasnik te mreže, a ako upotrebljavate mrežu VPN, onda je to pružatelj te mreže VPN. Vaš ISP može vidjeti koja mrežna mjesta posjećujete dok ih posjećujete. Ako se na tim mrežnim mjestima upotrebljava HTTPS, ne može napraviti ništa više od pretpostavljanja onoga što radite na tim mrežnim mjestima. No, ako se na mrežnom mjestu upotrebljava samo HTTP, vaš ISP može vidjeti sve: pojmove za pretraživanje, stranice koje čitate i poveznice na koje ste kliknuli.\n\nAko poslodavac upravlja vašim uređajem, mogao bi pratiti i što radite na njemu. Korištenjem privatnih kartica vjerojatno ga ne možete spriječiti da dozna koja ste mrežna mjesta posjetili. Netko drugi s pristupom vašem uređaju također može instalirati softver kojim se prati vaša aktivnost, a u privatnim karticama nemate zaštitu ni od toga.";
+"PrivateTabDetails" = "Upotrebom privatnih kartica mijenja se samo ono što preglednik Scout radi na vašem uređaju, a ne mijenja se ponašanje drugih.\n\nMrežna mjesta uvijek znaju vašu adresu IP kada ih posjetite. Na osnovi toga često mogu približno pogoditi gdje se nalazite – obično vaš grad. Ponekad ta pretpostavka o lokaciji može biti mnogo preciznija. Mrežna mjesta također znaju sve što im izravno navedete kao što su pojmovi za pretraživanje. Ako se prijavite u mrežno mjesto, ono zna da ste vlasnik tog računa. No, i dalje ste odjavljeni kada zatvorite privatne kartice jer se preglednikom Scout odbacuje kolačić kojim se održava prijava.\n\nSvatko putem koga se povezujete s internetom (vaš pružatelj internetskih usluga (ISP)) može vidjeti sve vaše mrežne aktivnosti. Često je to vaš mobilni operater. Ako ste povezani s mrežom Wi-Fi, to je vlasnik te mreže, a ako upotrebljavate mrežu VPN, onda je to pružatelj te mreže VPN. Vaš ISP može vidjeti koja mrežna mjesta posjećujete dok ih posjećujete. Ako se na tim mrežnim mjestima upotrebljava HTTPS, ne može napraviti ništa više od pretpostavljanja onoga što radite na tim mrežnim mjestima. No, ako se na mrežnom mjestu upotrebljava samo HTTP, vaš ISP može vidjeti sve: pojmove za pretraživanje, stranice koje čitate i poveznice na koje ste kliknuli.\n\nAko poslodavac upravlja vašim uređajem, mogao bi pratiti i što radite na njemu. Korištenjem privatnih kartica vjerojatno ga ne možete spriječiti da dozna koja ste mrežna mjesta posjetili. Netko drugi s pristupom vašem uređaju također može instalirati softver kojim se prati vaša aktivnost, a u privatnim karticama nemate zaštitu ni od toga.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Doznajte više o privatnim karticama.";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "Ne";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Nažalost, preglednik Brave srušio se ili se nije dobro zatvorio.\nŽelite li vratiti svoje kartice?";
+"RestoreTabOnCrashAlertMessage" = "Nažalost, preglednik Scout srušio se ili se nije dobro zatvorio.\nŽelite li vratiti svoje kartice?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Preglednik Brave neočekivano se zatvorio.";
+"RestoreTabOnCrashAlertTitle" = "Preglednik Scout neočekivano se zatvorio.";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "Uključite kako biste podržali Brave i zajednicu BAT.";
@@ -2396,13 +2396,13 @@
 "SendCrashReportAlertMessage" = "Poslati izvještaj o padu kako bi se mogao riješiti problem u pregledniku Brave?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Ups! Preglednik Brave srušio se";
+"SendCrashReportAlertTitle" = "Ups! Preglednik Scout srušio se";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Pošalji izvještaj";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Preglednik Brave sada možete postaviti kao zadani preglednik u sustavu iOS. Dodirnite ovdje za otvaranje postavki.";
+"setDefaultBrowserCalloutTitle" = "Preglednik Scout sada možete postaviti kao zadani preglednik u sustavu iOS. Dodirnite ovdje za otvaranje postavki.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Postavi kao zadani preglednik";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Zatvori kartice";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Dopustite pregledniku Brave automatsko zatvaranje kartica koje se nisu nedavno prikazivale.";
+"settings.autocloseTabsSettingFooter" = "Dopustite pregledniku Scout automatsko zatvaranje kartica koje se nisu nedavno prikazivale.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Blokirajte elemente YouTubea koji odvlače pažnju";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Mediji";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Otvorite poveznice YouTube u pregledniku Brave";
+"settings.openYouTubeInBrave" = "Otvorite poveznice YouTube u pregledniku Scout";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Omogući vrijeme upotrebe zaslona";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "Ovo su zadane postavke značajke Shields za nova mreža mjesta. Mijenjanjem ovih postavki ne mijenjaju se postojeće postavke prethodno postavljene za određeno mrežno mjesto.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Pregledavate ovo mrežno mjesto bez sigurnosne zaštite i zaštite privatnosti preglednika Brave. Radi li ispravno s uključenom značajkom Štitnika?";
+"ShieldsDownDisclaimer" = "Pregledavate ovo mrežno mjesto bez sigurnosne zaštite i zaštite privatnosti preglednika Scout. Radi li ispravno s uključenom značajkom Štitnika?";
 
 /* shields overview message */
 "ShieldsOverview" = "Štitovima mrežnog mjesta omogućava se upravljanje time kada se blokiraju oglasi i elementi za praćenje za svako mrežno mjesto koje posjetite. Ako želite vidjeti oglase na određenom mrežnom mjestu, možete ih omogućiti ovdje.";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Čišćenje povijesti preglednika";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Čišćenje povijesti pregledavanja preglednika Brave";
+"shortcuts.activityTypeClearHistoryTitle" = "Čišćenje povijesti pregledavanja preglednika Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Otvorite preglednik u novoj kartici i omogućite mrežu VPN";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Otvaranje knjižnih oznaka";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Otvaranje knjižnih oznaka preglednika Brave";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Otvaranje knjižnih oznaka preglednika Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Otvaranje značajke Novosti Brave";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Otvaranje povijesti preglednika";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Otvaranje povijesti preglednika Brave";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Otvaranje povijesti preglednika Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Pokretanje reprodukcije videozapisa na popisu za reprodukciju";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Otvaranje kartica s drugih uređaja";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Počnite sigurno pretraživati ​​mrežu upotrebom preglednika Brave";
+"shortcuts.activityTypeTabDescription" = "Počnite sigurno pretraživati ​​mrežu upotrebom preglednika Scout";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Otvaranje mrežnog mjesta knjižne oznake";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Otvori mrežno mjesto";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ovom se mogućnosti otvaraju postavke preglednika Brave. Kako biste promijenili razne mogućnosti pomoćnika Siri, odaberite stavku „Siri i pretraživanje” u izborniku te prilagodite svoje odabire.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ovom se mogućnosti otvaraju postavke preglednika Scout. Kako biste promijenili razne mogućnosti pomoćnika Siri, odaberite stavku „Siri i pretraživanje” u izborniku te prilagodite svoje odabire.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Otvorite Postavke";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Prikaži putem usluge %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Omogućite pristup mikrofonu u postavkama sustava iOS kako bi se putem preglednika Brave upotrebljavalo anonimno glasovno pretraživanje.";
+"voice.search.microphone.description.required" = "Omogućite pristup mikrofonu u postavkama sustava iOS kako bi se putem preglednika Scout upotrebljavalo anonimno glasovno pretraživanje.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Potreban je pristup mikrofonu";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "U pregledniku Brave ne pohranjuju se niti dijele vaša glasovna pretraživanja.";
+"voice.search.screen.disclaimer" = "U pregledniku Scout ne pohranjuju se niti dijele vaša glasovna pretraživanja.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Datum stvaranja novčanika";

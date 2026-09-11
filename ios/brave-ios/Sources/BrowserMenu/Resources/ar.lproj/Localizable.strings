@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "إعادة التعيين إلى الوضع الافتراضي";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "من خلال إعادة التعيين إلى الوضع الافتراضي، ستفقد أي تخصيصات قمت بها في Brave. لا يمكن التراجع عن هذا الإجراء. هل أنت متأكد من أنك تريد المتابعة؟";
+"BrowserMenu.resetToDefaultDialogMessage" = "من خلال إعادة التعيين إلى الوضع الافتراضي، ستفقد أي تخصيصات قمت بها في Scout. لا يمكن التراجع عن هذا الإجراء. هل أنت متأكد من أنك تريد المتابعة؟";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "إظهار الكل…";

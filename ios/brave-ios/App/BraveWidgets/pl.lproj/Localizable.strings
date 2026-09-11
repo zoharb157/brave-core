@@ -41,7 +41,7 @@
 "widgets.newsUnavailableByPolicyDescription" = "Wyłączone przez zasady Twojej organizacji";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "Otwórz przeglądarkę Brave, aby wyświetlić tu ulubione strony";
+"widgets.noFavoritesFound" = "Otwórz przeglądarkę Scout, aby wyświetlić tu ulubione strony";
 
 /* QR Code section title */
 "widgets.QRCode" = "Kod QR";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "Szukaj";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "Krótka informacja o tym, jak przeglądarka Brave oszczędza Twój czas i chroni Cię w sieci.";
+"widgets.shieldStatsDescription" = "Krótka informacja o tym, jak przeglądarka Scout oszczędza Twój czas i chroni Cię w sieci.";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "Statystyki ochrony prywatności";
@@ -74,13 +74,13 @@
 "widgets.shortcutsPrivateTabButton" = "Karta w trybie prywatnym";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "Szybki dostęp do przeglądania Internetu lub otwierania stron w przeglądarce Brave.";
+"widgets.shortcutsWidgetDescription" = "Szybki dostęp do przeglądania Internetu lub otwierania stron w przeglądarce Scout.";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "Skróty";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "Krótka informacja o tym, jak przeglądarka Brave chroni Cię w sieci.";
+"widgets.singleStatDescription" = "Krótka informacja o tym, jak przeglądarka Scout chroni Cię w sieci.";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "Statystyka ochrony prywatności";

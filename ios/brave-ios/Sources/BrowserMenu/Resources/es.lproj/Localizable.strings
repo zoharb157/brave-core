@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "Restablecer valores predeterminados";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "Al restablecer los valores predeterminados, perderás todas las personalizaciones que hayas realizado en Brave. Esta acción no se puede deshacer. ¿Estás seguro de que deseas continuar?";
+"BrowserMenu.resetToDefaultDialogMessage" = "Al restablecer los valores predeterminados, perderás todas las personalizaciones que hayas realizado en Scout. Esta acción no se puede deshacer. ¿Estás seguro de que deseas continuar?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "Mostrar todo…";
