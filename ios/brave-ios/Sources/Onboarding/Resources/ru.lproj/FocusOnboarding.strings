@@ -1,32 +1,32 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Нажмите и удерживайте значок Brave, затем перетащите его в док для быстрого доступа.";
+"focusOnboarding.addToDockScreenDescription" = "Нажмите и удерживайте значок Scout, затем перетащите его в док для быстрого доступа.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Добавьте Brave в док";
+"focusOnboarding.addToDockScreenTitle" = "Добавьте Scout в док";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Далее";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Установите Brave в качестве браузера по умолчанию сегодня.";
+"focusOnboarding.defaultBrowserScreenDescription" = "Установите Scout в качестве браузера по умолчанию сегодня.";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "Блокируйте рекламу на каждом сайте, который вы посещаете";
+"focusOnboarding.defaultBrowserScreenTitle" = "Каждая ссылка проверяется перед открытием";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "Не сейчас";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "Блокируйте раздражающие прерывания на Ваших любимых сайтах потокового вещания.";
+"focusOnboarding.noVideoAdsScreenDescription" = "Небезопасные ссылки блокируются, а что блокировать ещё — решаете вы.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "Блокировать прерывания при вашем потоке";
+"focusOnboarding.noVideoAdsScreenTitle" = "Просмотр без нежелательного контента";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "Какие функции вам нравятся больше всего?";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Сделайте Brave лучше";
+"focusOnboarding.p3aScreenTitle" = "Сделайте Scout лучше";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "Вы можете отказаться в любой момент в Настройках в разделе **Защита и конфиденциальность**. [Подробнее](#p3a-learn-more) о нашем продукте Аналитика, сохраняющая конфиденциальность.";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "Установить по умолчанию";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Что должен блокировать Scout?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "Небезопасные ссылки всегда блокируются. Выберите, что еще блокировать. Вы можете изменить это в любое время в Настройках.";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "Заблокированный контент";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout проверяет каждый новый сайт перед его открытием. Вы всегда можете продолжить переход на заблокированный сайт.";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "Небезопасные ссылки";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "Фишинг, мошенничество и вредоносное ПО всегда блокируются.";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "Всегда активно";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "Контент для взрослых";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "Порнография и откровенный контент.";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "Азартные игры";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "Ставки, казино и лотереи.";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "Сайты с обилием рекламы";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "Страницы, которые существуют в основном для показа рекламы. Shields уже удаляет рекламу внутри страниц.";

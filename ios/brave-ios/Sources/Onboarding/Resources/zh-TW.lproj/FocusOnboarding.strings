@@ -1,32 +1,32 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "按住 Brave 圖示，然後將其拖曳至您的 Dock 以便快速存取。";
+"focusOnboarding.addToDockScreenDescription" = "按住 Scout 圖示，然後將其拖曳至您的 Dock 以便快速存取。";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "將 Brave 加入您的 Dock";
+"focusOnboarding.addToDockScreenTitle" = "將 Scout 加入您的 Dock";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "繼續";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "立即將 Brave 設為預設瀏覽器。";
+"focusOnboarding.defaultBrowserScreenDescription" = "立即將 Scout 設為預設瀏覽器。";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "讓您前往的每個網站都有廣告攔截功能";
+"focusOnboarding.defaultBrowserScreenTitle" = "每個連結，開啟前都先檢查";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "現在不要";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "在您最愛的串流網站阻擋惱人干擾。";
+"focusOnboarding.noVideoAdsScreenDescription" = "不安全的連結會被封鎖，其餘項目則由您自行選擇是否封鎖。";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "觀看串流媒體時防止受到中斷";
+"focusOnboarding.noVideoAdsScreenTitle" = "擺脫干擾，暢快瀏覽";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "請告訴我們您最喜愛的功能有哪些。";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "讓 Brave 更好";
+"focusOnboarding.p3aScreenTitle" = "讓 Scout 更好";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "您可以隨時在**盾牌與隱私**的「設定」中選擇退出。[進一步了解](#p3a-learn-more) 我們的隱私保護產品分析。";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "設為預設";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Scout 應該封鎖什麼？";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "不安全的連結一律會被封鎖。選擇您想封鎖的其他項目，隨時都能在設定中變更。";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "已封鎖的內容";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout 會在開啟每個新網站前先進行檢查。您也可以選擇繼續前往已封鎖的網站。";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "不安全的連結";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "網路釣魚、詐騙和惡意軟體一律會被封鎖。";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "一律啟用";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "成人內容";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "色情與露骨內容。";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "賭博";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "博弈、賭場與彩券。";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "廣告過多的網站";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "這類頁面主要用於顯示廣告，Shields 已經會移除頁面內的廣告。";

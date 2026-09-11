@@ -53,7 +53,7 @@
 "AskBraveMenuItem" = "Braveに質問";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "これによりBraveへのアクセスを認証します";
+"AuthenticationLoginsTouchReason" = "これによりScoutへのアクセスを認証します";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "キャンセル";
@@ -314,7 +314,7 @@
 "BrowserLock" = "ブラウザのロック";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "BraveをTouch ID、Face ID、システムパスコードでロック解除する";
+"BrowserLockDescription" = "ScoutをTouch ID、Face ID、システムパスコードでロック解除する";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "閲覧履歴";
@@ -329,7 +329,7 @@
 "callout.bottomBarCalloutDescription" = "アドレスバー、タブ、ブックマーク、その他のツールをブラウザの下部に移動します。";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Braveタブバーをカスタマイズする";
+"callout.bottomBarCalloutTitle" = "Scoutタブバーをカスタマイズする";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
 "callout.privacyEverywhereCalloutDescription" = "Braveによるプライバシー保護を、パソコンやタブレットでも活用しましょう。ブックマークや拡張機能をデバイス間で同期することもできます。";
@@ -629,19 +629,19 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "設定を開く";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "プライバシーを保護するためすべてのリンクをBraveで開く";
+"defaultBrowserCallout.introPrimaryText" = "プライバシーを保護するためすべてのリンクをScoutで開く";
 
 /* Secondary text on default browser popup. */
 "defaultBrowserCallout.introSecondaryText" = "Shieldsはすべてのサイトでトラッカーと広告をブロックし、データ通信量と時間を節約します。";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "アプリ設定画面で、「デフォルトのブラウザApp」をタップし、Braveを選択してください。";
+"defaultBrowserCallout.introTertiaryText" = "アプリ設定画面で、「デフォルトのブラウザApp」をタップし、Scoutを選択してください。";
 
 /* Notification body to promote setting Brave app as default browser */
 "defaultBrowserCallout.notificationBody" = "Scout をデフォルト ブラウザに設定する";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Braveですべてのリンクを保護しましょう";
+"defaultBrowserCallout.notificationTitle" = "Scoutですべてのリンクを保護しましょう";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "デフォルトブラウザの設定メッセージを閉じる";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "フォルダ名を入力";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@は通常、情報を保護するために暗号化を使用します。今回、Braveが%2$@に接続を試みた際、ウェブサイトから通常とは異なる不正な認証情報が返されました。これは、攻撃者が%3$@になりすまそうとしているときや、Wi-Fiサインイン画面により接続が中断したときに起こる可能性があります。Braveはデータが交換される前に接続を停止したため、お客様の情報はまだ安全です。<br />ウェブサイトは証明書のピン留めを使用しているため、現時点では%4$@にアクセスすることはできません。ネットワークエラーや攻撃は通常一時的なものなので、しばらくするとページの機能は回復します。";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@は通常、情報を保護するために暗号化を使用します。今回、Scoutが%2$@に接続を試みた際、ウェブサイトから通常とは異なる不正な認証情報が返されました。これは、攻撃者が%3$@になりすまそうとしているときや、Wi-Fiサインイン画面により接続が中断したときに起こる可能性があります。Scoutはデータが交換される前に接続を停止したため、お客様の情報はまだ安全です。<br />ウェブサイトは証明書のピン留めを使用しているため、現時点では%4$@にアクセスすることはできません。ネットワークエラーや攻撃は通常一時的なものなので、しばらくするとページの機能は回復します。";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "このサーバーは、%@ であることを証明できませんでした。セキュリティ証明書があなたのデバイスのオペレーションシステムによって信頼されていません。これは、設定の間違いか、あなたの接続に介入しようとする攻撃者によって生じている可能性があります。";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "デフォルトの検索エンジンを設定する";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Braveブラウザにようこそ！";
+"OBSearchEngineTitle" = "Scoutブラウザにようこそ！";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "プライバシーを侵害するトラッカーをブロックすることで、インターネット上でつきまとわれずにブラウジングすることができます。";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "トラッカーと広告をブロックすることで、ウェブサイトが使用するデータ通信量が減少し、より速く読み込むことができます。";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Braveの違いを実感:\n広告もトラッカーもなし。高速でページを読み込み。";
+"onboarding.omniboxOnboardingPopOverDescription" = "Scoutの違いを実感:\n広告もトラッカーもなし。高速でページを読み込み。";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "ウェブサイト名またはURLを入力";
@@ -1310,7 +1310,7 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "まず同期チェーンを設定し、同期設定で「タブを開く」のトグルをクリックしてください。";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "設定でBraveが同期する対象を管理できます。";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "設定でScoutが同期する対象を管理できます。";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "別のデバイスで実行中のセッションはありません。";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "プライベートブラウジングモードを継続";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "アプリを終了 / 再開した場合でも、Braveがプライベートブラウジングタブを復元できるようにします";
+"PersistentPrivateBrowsingAlertMessage" = "アプリを終了 / 再開した場合でも、Scoutがプライベートブラウジングタブを復元できるようにします";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "プライベートタブを復元";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "元に戻す";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Braveブラウザのアドレスバーの横に、Playlistボタンを追加します。このボタンにより、Playlistを開いたり、メディアを追加したり削除したりすることが素早く行えるようになります。";
+"playlist.urlBarButtonOptionFooter" = "Scoutブラウザのアドレスバーの横に、Playlistボタンを追加します。このボタンにより、Playlistを開いたり、メディアを追加したり削除したりすることが素早く行えるようになります。";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "クイックアクセスボタンを有効にする";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "通知を有効にする";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Braveにより保護されたオンライン活動のまとめをお届けします。";
+"privacyHub.notificationMessage" = "Scoutにより保護されたオンライン活動のまとめをお届けします。";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "週次プライバシーレポート";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "プライベートブラウジングのみモードでは、現在のタブがすべて閉じられ、すべてのサイトからログアウトされます。";
 
 /* Private tab details */
-"PrivateTabBody" = "プライベートタブはBraveに保存されませんが、オンライン上で匿名になるわけではありません。プライベートタブで訪問したサイトは、履歴には表示されず、そのサイトを閉じるとCookieは常に消滅し、Braveにはその痕跡が残りません。ただし、ダウンロードは保存されます。\nプライベートタブを利用していても、携帯電話会社（または接続しているWi-FiネットワークやVPNの所有者）は、あなたがどのサイトを訪れたかを知ることができ、それらのサイトはあなたの公開IPアドレスを知ることができます。";
+"PrivateTabBody" = "プライベートタブはScoutに保存されませんが、オンライン上で匿名になるわけではありません。プライベートタブで訪問したサイトは、履歴には表示されず、そのサイトを閉じるとCookieは常に消滅し、Scoutにはその痕跡が残りません。ただし、ダウンロードは保存されます。\nプライベートタブを利用していても、携帯電話会社（または接続しているWi-FiネットワークやVPNの所有者）は、あなたがどのサイトを訪れたかを知ることができ、それらのサイトはあなたの公開IPアドレスを知ることができます。";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "プライベートタブを使うと、Braveがあなたのデバイス上で行うことが変わるだけで、他の人の行動が変わることはありません。\n\nお客様がサイトにアクセスすると、サイトは常にお客様のIPアドレスを取得します。このIPアドレスから、多くの場合、あなたがどこにいるか（通常は都市）を推測することができます。推測される場所は、より具体的な場合もあります。また、サイトは、検索キーワードなど、あなたが具体的に伝えたこともすべて把握しています。サイトにログインすると、あなたがそのアカウントの所有者であることがわかります。プライベートタブを閉じても、ログイン状態を維持するCookieがBraveによって破棄されるため、ログアウトされたままになります。\n\nあなたがインターネットに接続することを可能にしている人（あなたのISP）は、お客様のネットワーク活動をすべて見ることができます。多くの場合、これはあなたの携帯電話会社です。Wi-Fiネットワークに接続している場合は、そのネットワークの所有者であり、VPNを使用している場合は、そのVPNを運営している会社となります。あなたのISPは、あなたがどのサイトを訪れたかを見ることができます。それらのサイトがHTTPSを使用している場合、ISPはあなたがそのサイトで何をしているかについて、経験則に基づく推測以上のことはできません。しかし、サイトが HTTP のみを使用している場合、ISP は、あなたの検索用語、どのページを読んだか、どのリンクを辿ったかなど、すべてを見ることができます。\n\n雇用主があなたのデバイスを管理している場合は、あなたがそのデバイスで何をしているかを追跡しているかもしれません。プライベートタブを使用しても、あなたがどのサイトにアクセスしたかを雇用主に知られないようにすることはできないかもしれません。また、あなたのデバイスにアクセスできる誰かが、あなたの行動を監視するソフトウェアをインストールしている可能性もあり、プライベートタブを使用してもそうしたソフトウェアからあなたを保護することはできません。\n\n";
+"PrivateTabDetails" = "プライベートタブを使うと、Scoutがあなたのデバイス上で行うことが変わるだけで、他の人の行動が変わることはありません。\n\nお客様がサイトにアクセスすると、サイトは常にお客様のIPアドレスを取得します。このIPアドレスから、多くの場合、あなたがどこにいるか（通常は都市）を推測することができます。推測される場所は、より具体的な場合もあります。また、サイトは、検索キーワードなど、あなたが具体的に伝えたこともすべて把握しています。サイトにログインすると、あなたがそのアカウントの所有者であることがわかります。プライベートタブを閉じても、ログイン状態を維持するCookieがScoutによって破棄されるため、ログアウトされたままになります。\n\nあなたがインターネットに接続することを可能にしている人（あなたのISP）は、お客様のネットワーク活動をすべて見ることができます。多くの場合、これはあなたの携帯電話会社です。Wi-Fiネットワークに接続している場合は、そのネットワークの所有者であり、VPNを使用している場合は、そのVPNを運営している会社となります。あなたのISPは、あなたがどのサイトを訪れたかを見ることができます。それらのサイトがHTTPSを使用している場合、ISPはあなたがそのサイトで何をしているかについて、経験則に基づく推測以上のことはできません。しかし、サイトが HTTP のみを使用している場合、ISP は、あなたの検索用語、どのページを読んだか、どのリンクを辿ったかなど、すべてを見ることができます。\n\n雇用主があなたのデバイスを管理している場合は、あなたがそのデバイスで何をしているかを追跡しているかもしれません。プライベートタブを使用しても、あなたがどのサイトにアクセスしたかを雇用主に知られないようにすることはできないかもしれません。また、あなたのデバイスにアクセスできる誰かが、あなたの行動を監視するソフトウェアをインストールしている可能性もあり、プライベートタブを使用してもそうしたソフトウェアからあなたを保護することはできません。\n\n";
 
 /* Private tab information link */
 "PrivateTabLink" = "プライベートタブについて";
@@ -2072,10 +2072,10 @@
 "RestoreTabNegativeButtonTitle" = "いいえ";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Braveで問題が発生したか、適切に終了しませんでした。\nタブを復元しますか？";
+"RestoreTabOnCrashAlertMessage" = "Scoutで問題が発生したか、適切に終了しませんでした。\nタブを復元しますか？";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Braveが予期せず終了しました。";
+"RestoreTabOnCrashAlertTitle" = "Scoutが予期せず終了しました。";
 
 /* Displayed when Brave Rewards is disabled */
 "rewards.disabledBody" = "有効にしてBraveとBATコミュニティを支援しましょう。";
@@ -2402,7 +2402,7 @@
 "SendReportButtonTitle" = "レポートを送信";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Braveをデフォルトのブラウザに設定できるようになりました。こちらをタップして設定を開始しましょう。";
+"setDefaultBrowserCalloutTitle" = "Scoutをデフォルトのブラウザに設定できるようになりました。こちらをタップして設定を開始しましょう。";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "デフォルトブラウザに設定する";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "タブを閉じる";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "しばらく見ていないタブをBraveが自動で閉じることを許可します。";
+"settings.autocloseTabsSettingFooter" = "しばらく見ていないタブをScoutが自動で閉じることを許可します。";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "YouTubeのディストラクション要素をブロック";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "メディア";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "BraveでYouTubeリンクを開く";
+"settings.openYouTubeInBrave" = "ScoutでYouTubeリンクを開く";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "スクリーンタイムを有効化";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "今後アクセスするサイトに適用されるデフォルトのShield設定です。こちらを変更しても個別サイトの設定には影響しません。";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "現在Braveのプライバシー保護機能オフの状態でブラウジングしています。Shieldをオンにした状態では不具合が発生しますか？";
+"ShieldsDownDisclaimer" = "現在Scoutのプライバシー保護機能オフの状態でブラウジングしています。Shieldをオンにした状態では不具合が発生しますか？";
 
 /* shields overview message */
 "ShieldsOverview" = "サイトの保護機能では、サイト毎に広告やトラッカーをブロックするか設定することができます。特定のサイトで広告を表示させたい場合、ここで設定することができます。";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "ブラウザの履歴を消去する";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Braveでのブラウジングの履歴を消去する";
+"shortcuts.activityTypeClearHistoryTitle" = "Scoutでのブラウジングの履歴を消去する";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "新タブでブラウザを立ち上げ、VPNを有効にする";
@@ -2618,7 +2618,7 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "ブックマークを開く";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Braveブラウザのブックマークを開く";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Scoutブラウザのブックマークを開く";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenBraveNewsTitle" = "Brave Newsを開く";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "ブラウザ履歴を開く";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Braveブラウザの履歴を開く";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Scoutブラウザの履歴を開く";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Playlist内の動画を再生開始する";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "他のデバイスからのタブを開く";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Braveでwebを安全に検索する";
+"shortcuts.activityTypeTabDescription" = "Scoutでwebを安全に検索する";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "ブックマークのウェブサイトを開く";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "ウェブサイトを開く";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "この項目は、Braveの設定を開きます。様々なSiriオプションを変更するには、「Siriと検索」メニューを選択し、設定をカスタマイズしてください。";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "この項目は、Scoutの設定を開きます。様々なSiriオプションを変更するには、「Siriと検索」メニューを選択し、設定をカスタマイズしてください。";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "設定を開く";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "View on %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Braveで匿名音声検索を使用するには、iOSのシステム設定でマイクへのアクセスを許可してください。";
+"voice.search.microphone.description.required" = "Scoutで匿名音声検索を使用するには、iOSのシステム設定でマイクへのアクセスを許可してください。";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "マイクへのアクセスが必要です";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Braveが音声検索結果を保存または共有することはありません。";
+"voice.search.screen.disclaimer" = "Scoutが音声検索結果を保存または共有することはありません。";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "ウォレット作成日";

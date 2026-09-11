@@ -2,10 +2,10 @@
 "focusOnboarding.continueButtonTitle" = "계속";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "탭하는 모든 링크를 Brave의 프라이버시 보호로 열기";
+"focusOnboarding.defaultBrowserScreenDescription" = "탭하는 모든 링크를 Scout의 프라이버시 보호로 열기";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "Brave를 기본 브라우저로 설정";
+"focusOnboarding.defaultBrowserScreenTitle" = "모든 링크를 열기 전에 확인";
 
 /* The subtitle of the screen that shows ads are blocked */
 "focusOnboarding.movingAdsScreenDescription" = "더욱 빠른 탐색, 적은 데이터 사용량.";
@@ -17,10 +17,10 @@
 "focusOnboarding.notNowActionButtonTitle" = "나중에";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "보기 싫은 것을 보지 않을 자유.";
+"focusOnboarding.noVideoAdsScreenDescription" = "안전하지 않은 링크는 차단되며, 그 외에 차단할 항목은 사용자가 선택합니다.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "동영상 광고에서 해방.";
+"focusOnboarding.noVideoAdsScreenTitle" = "불필요한 요소 없이 브라우징하기";
 
 /* The title of the button that opens the website abouyt privacy preserving analytics. */
 "focusOnboarding.p3aInformationButtonTitle" = "프라이버시 보호 제품 분석(P3A)에 대해 자세히 알아보기";
@@ -29,10 +29,10 @@
 "focusOnboarding.p3aScreenDescription" = "어떤 기능이 가장 마음에 드는지 알려주세요.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Brave 개선에 도움을 주세요.";
+"focusOnboarding.p3aScreenTitle" = "Scout 개선에 도움을 주세요.";
 
 /* The title of the toggle for enable / disable privacy preserving analytics. */
-"focusOnboarding.p3aToggleDescription" = "'Shields 및 프라이버시' 아래 Brave 설정에서 언제든지 변경할 수 있습니다.";
+"focusOnboarding.p3aToggleDescription" = "'Shields 및 프라이버시' 아래 Scout 설정에서 언제든지 변경할 수 있습니다.";
 
 /* The title of the toggle for enable / disable the privacy preserving analytics. */
 "focusOnboarding.p3aToggleTitle" = "프라이버시가 보장되는 익명 제품 인사이트를 공유합니다.";
@@ -49,3 +49,41 @@
 /* The title of the popup which points to URL Bar after onboarding */
 "focusOnboarding.urlBarIndicatorTitle" = "Brave의 차별점 보기";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Scout에서 무엇을 차단할까요?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "안전하지 않은 링크는 항상 차단됩니다. 그 외에 차단할 항목을 선택하세요. 설정에서 언제든지 변경할 수 있습니다.";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "차단된 콘텐츠";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout는 새 사이트를 열기 전에 매번 확인합니다. 차단된 사이트도 원하면 언제든지 계속 방문할 수 있습니다.";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "안전하지 않은 링크";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "피싱, 사기, 악성코드는 항상 차단됩니다.";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "항상 켜짐";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "성인 콘텐츠";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "포르노 및 노골적인 콘텐츠.";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "도박";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "베팅, 카지노, 복권.";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "광고 위주 사이트";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "주로 광고를 보여주기 위해 존재하는 페이지입니다. Shields는 이미 페이지 내 광고를 제거합니다.";

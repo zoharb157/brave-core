@@ -1,32 +1,32 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "แตะค้างที่ไอคอน Brave จากนั้นลากไปที่ Dock ของคุณเพื่อการเข้าถึงที่รวดเร็ว";
+"focusOnboarding.addToDockScreenDescription" = "แตะค้างที่ไอคอน Scout จากนั้นลากไปที่ Dock ของคุณเพื่อการเข้าถึงที่รวดเร็ว";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "เพิ่ม Brave ไปยัง Dock ของคุณ";
+"focusOnboarding.addToDockScreenTitle" = "เพิ่ม Scout ไปยัง Dock ของคุณ";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "ดำเนินการต่อ";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "ตั้ง Brave เป็นเบราว์เซอร์เริ่มต้นของคุณวันนี้";
+"focusOnboarding.defaultBrowserScreenDescription" = "ตั้ง Scout เป็นเบราว์เซอร์เริ่มต้นของคุณวันนี้";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "บล็อกโฆษณาทุกครั้งที่คุณเยี่ยมชมเว็บไซต์";
+"focusOnboarding.defaultBrowserScreenTitle" = "ทุกลิงก์ถูกตรวจสอบก่อนเปิด";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "ไม่ใช่ตอนนี้";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "บล็อคสิ่งรบกวนที่น่ารำคาญบนเว็บไซต์สตรีมมิ่งที่คุณชื่นชอบ";
+"focusOnboarding.noVideoAdsScreenDescription" = "ลิงก์ที่ไม่ปลอดภัยจะถูกบล็อก และคุณเลือกได้ว่าจะบล็อกอะไรเพิ่มเติม";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "บล็อคการขัดจังหวะตอนคุณสตรีม";
+"focusOnboarding.noVideoAdsScreenTitle" = "ท่องเว็บโดยไม่มีสิ่งรบกวน";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "บอกให้เราทราบทีว่าฟีเจอร์ใดที่คุณชื่นชอบที่สุด";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "ปรับปรุง Brave ให้ดีขึ้น";
+"focusOnboarding.p3aScreenTitle" = "ปรับปรุง Scout ให้ดีขึ้น";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "คุณสามารถเลือกยกเลิกได้ตลอดเวลาในการตั้งค่าภายใต้ **Shields and Privacy** [เรียนรู้เพิ่มเติม] (#p3a-learn-more) เกี่ยวกับการวิเคราะห์ผลิตภัณฑ์ที่รักษาความเป็นส่วนตัวของเรา";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "ตั้งเป็นค่าเริ่มต้น";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "ให้ Scout บล็อกอะไรบ้าง?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "ลิงก์ที่ไม่ปลอดภัยจะถูกบล็อกเสมอ เลือกสิ่งอื่นที่คุณต้องการบล็อกเพิ่มเติม คุณสามารถเปลี่ยนแปลงได้ทุกเมื่อในการตั้งค่า";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "เนื้อหาที่ถูกบล็อก";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout จะตรวจสอบเว็บไซต์ใหม่ทุกครั้งก่อนเปิด คุณสามารถเลือกไปยังเว็บไซต์ที่ถูกบล็อกต่อได้เสมอ";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "ลิงก์ที่ไม่ปลอดภัย";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "ฟิชชิง การหลอกลวง และมัลแวร์จะถูกบล็อกเสมอ";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "เปิดเสมอ";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "เนื้อหาสำหรับผู้ใหญ่";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "สื่อลามกและเนื้อหาที่โจ่งแจ้ง";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "การพนัน";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "การเดิมพัน คาสิโน และลอตเตอรี";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "เว็บไซต์ที่เต็มไปด้วยโฆษณา";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "หน้าเว็บที่มีอยู่เพื่อแสดงโฆษณาเป็นหลัก Shields ได้ลบโฆษณาภายในหน้าเว็บออกไปแล้ว";

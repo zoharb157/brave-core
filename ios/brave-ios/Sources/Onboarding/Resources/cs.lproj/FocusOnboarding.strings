@@ -1,35 +1,35 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Klepněte a podržte ikonu Brave, poté ji přetáhněte do svého doku pro rychlý přístup.";
+"focusOnboarding.addToDockScreenDescription" = "Klepněte a podržte ikonu Scout, poté ji přetáhněte do svého doku pro rychlý přístup.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Přidejte Brave do svého doku";
+"focusOnboarding.addToDockScreenTitle" = "Přidejte Scout do svého doku";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Pokračovat";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Nastavte si ještě dnes Brave jako výchozí prohlížeč.";
+"focusOnboarding.defaultBrowserScreenDescription" = "Nastavte si ještě dnes Scout jako výchozí prohlížeč.";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "Získejte blokování reklam na každém navštíveném webu";
+"focusOnboarding.defaultBrowserScreenTitle" = "Nechte každý odkaz zkontrolovat, než se otevře";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "Teď ne";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "Zablokujte otravná přerušení na vašich oblíbených streamovacích službách.";
+"focusOnboarding.noVideoAdsScreenDescription" = "Nebezpečné odkazy jsou blokovány a vy si vybíráte, co dalšího chcete blokovat.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "Blokování přerušení při streamování";
+"focusOnboarding.noVideoAdsScreenTitle" = "Prohlížejte web bez nežádoucího obsahu";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "Dejte nám vědět, které funkce se vám líbí nejvíce.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Vylepšete Brave";
+"focusOnboarding.p3aScreenTitle" = "Vylepšete Scout";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
-"focusOnboarding.p3aToggleDescription" = "Tuto funkci můžete kdykoli vypnout v Nastavení v části **Štíty Brave a soukromí**. [Zjistit více](#p3a-learn-more) o naší produktové analýze uchovávající soukromí.";
+"focusOnboarding.p3aToggleDescription" = "Tuto funkci můžete kdykoli vypnout v Nastavení v části **Štíty Scout a soukromí**. [Zjistit více](#p3a-learn-more) o naší produktové analýze uchovávající soukromí.";
 
 /* The title of the toggle for enable / disable the privacy preserving analytics. This uses standard markdown syntax. The "private & anonymous" snippet should be bold in all languages */
 "focusOnboarding.p3aToggleTitle" = "Sdílejte **soukromé a anonymní** informace o produktu.";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "Nastavit jako výchozí";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Co by měl Scout blokovat?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "Nebezpečné odkazy jsou vždy blokovány. Vyberte, co dalšího chcete blokovat. Toto můžete kdykoli změnit v Nastavení.";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "Blokovaný obsah";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout zkontroluje každý nový web, než se otevře. Vždy si můžete zvolit pokračovat na blokovaný web.";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "Nebezpečné odkazy";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "Phishing, podvody a malware jsou vždy blokovány.";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "Vždy zapnuto";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "Obsah pro dospělé";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "Pornografie a explicitní materiál.";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "Hazardní hry";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "Sázky, kasina a loterie.";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "Weby plné reklam";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "Stránky, které existují hlavně proto, aby zobrazovaly reklamy. Štíty už reklamy na stránkách odstraňují.";

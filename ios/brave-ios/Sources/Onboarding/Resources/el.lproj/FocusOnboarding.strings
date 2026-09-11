@@ -1,26 +1,26 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Αγγίξτε και κρατήστε πατημένο το εικονίδιο Brave, στη συνέχεια σύρετέ το στο dock σας για γρήγορη πρόσβαση.";
+"focusOnboarding.addToDockScreenDescription" = "Αγγίξτε και κρατήστε πατημένο το εικονίδιο Scout, στη συνέχεια σύρετέ το στο dock σας για γρήγορη πρόσβαση.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Προσθέστε το Brave στο Dock σας";
+"focusOnboarding.addToDockScreenTitle" = "Προσθέστε το Scout στο Dock σας";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Συνέχεια";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Όρισε το Brave ως το προεπιλεγμένο πρόγραμμα περιήγησης τώρα.";
+"focusOnboarding.defaultBrowserScreenDescription" = "Όρισε το Scout ως το προεπιλεγμένο πρόγραμμα περιήγησης τώρα.";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "Αποκτήστε αποκλεισμό διαφημίσεων σε κάθε ιστότοπο που επισκέπτεστε";
+"focusOnboarding.defaultBrowserScreenTitle" = "Κάθε σύνδεσμος, ελέγχεται πριν ανοίξει";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "Όχι τώρα";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "Αποκλείστε τις ενοχλητικές διακοπές ";
+"focusOnboarding.noVideoAdsScreenDescription" = "Οι μη ασφαλείς σύνδεσμοι αποκλείονται και εσύ επιλέγεις τι άλλο να αποκλείσεις.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "Αποκλεισμός παύσεων όταν παρακολουθείτε μεταδόσεις";
+"focusOnboarding.noVideoAdsScreenTitle" = "Περιήγηση χωρίς ανεπιθύμητο περιεχόμενο";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "Πείτε μας ποιες λειτουργίες απολαμβάνετε περισσότερο";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "Ορισμός ως προεπιλογή";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Τι πρέπει να αποκλείει το Scout;";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "Οι μη ασφαλείς σύνδεσμοι αποκλείονται πάντα. Επίλεξε τι άλλο θέλεις να αποκλείσεις. Μπορείς να το αλλάξεις όποτε θέλεις από τις Ρυθμίσεις.";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "Αποκλεισμένο περιεχόμενο";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Το Scout ελέγχει κάθε νέα ιστοσελίδα πριν ανοίξει. Μπορείς πάντα να επιλέξεις να συνεχίσεις σε έναν αποκλεισμένο ιστότοπο.";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "Μη ασφαλείς σύνδεσμοι";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "Το phishing, οι απάτες και το κακόβουλο λογισμικό αποκλείονται πάντα.";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "Πάντα ενεργό";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "Περιεχόμενο για ενήλικες";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "Πορνογραφία και ακατάλληλο περιεχόμενο.";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "Τζόγος";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "Στοιχήματα, καζίνο και λαχεία.";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "Ιστότοποι με πολλές διαφημίσεις";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "Σελίδες που υπάρχουν κυρίως για να εμφανίζουν διαφημίσεις. Το Shields αφαιρεί ήδη τις διαφημίσεις μέσα στις σελίδες.";

@@ -1,32 +1,32 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Érintse meg és tartsa lenyomva a Brave ikont, majd húzza a dokkba a gyors hozzáférés érdekében.";
+"focusOnboarding.addToDockScreenDescription" = "Érintse meg és tartsa lenyomva a Scout ikont, majd húzza a dokkba a gyors hozzáférés érdekében.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Adja hozzá a Brave-et a dokkhoz";
+"focusOnboarding.addToDockScreenTitle" = "Adja hozzá a Scout-et a dokkhoz";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Folytatás";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Legyen a Brave az alapértelmezett böngészője";
+"focusOnboarding.defaultBrowserScreenDescription" = "Legyen a Scout az alapértelmezett böngészője";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "Hirdetésblokkolás minden meglátogatott webhelyen";
+"focusOnboarding.defaultBrowserScreenTitle" = "Minden hivatkozás ellenőrizve, mielőtt megnyílik";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "Ne most";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "Tiltsa le a zavaró megszakításokat a kedvenc streaming oldalain.";
+"focusOnboarding.noVideoAdsScreenDescription" = "A nem biztonságos hivatkozásokat blokkoljuk, Ön pedig eldönti, mit szeretne még blokkolni.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "Megszakítások letiltása streamelés közben";
+"focusOnboarding.noVideoAdsScreenTitle" = "Böngésszen nemkívánatos tartalom nélkül";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "Tudassa velünk, mely funkciókat élvezi leginkább.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Segítsen fejleszteni a Brave-et";
+"focusOnboarding.p3aScreenTitle" = "Segítsen fejleszteni a Scout-et";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "Bármikor leiratkozhat a Beállítások menüpontban a **Védelem és adatvédelem** alatt. [Tudjon meg többet](#p3a-learn-more) az adatvédelmet megőrző termékanalitikánkról.";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "Beállítás alapértelmezettként";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Mit blokkoljon a Scout?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "A nem biztonságos hivatkozásokat mindig blokkoljuk. Válassza ki, mit szeretne még kizárni. Ezt bármikor módosíthatja a Beállításokban.";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "Blokkolt tartalom";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "A Scout minden új webhelyet ellenőriz megnyitás előtt. Egy blokkolt webhelyre mindig továbbléphet, ha szeretné.";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "Nem biztonságos hivatkozások";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "Az adathalászatot, a csalásokat és a kártevőket mindig blokkoljuk.";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "Mindig bekapcsolva";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "Felnőtt tartalom";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "Pornográfia és explicit tartalom.";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "Szerencsejáték";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "Fogadás, kaszinók és lottók.";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "Hirdetésekkel túlzsúfolt webhelyek";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "Olyan oldalak, amelyek elsősorban hirdetések megjelenítése céljából léteznek. A Shields már eltávolítja a hirdetéseket az oldalakon belül.";

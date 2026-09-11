@@ -1,32 +1,32 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Hızlı erişim için Brave simgesine dokunup basılı tutun, ardından dock'unuza sürükleyin.";
+"focusOnboarding.addToDockScreenDescription" = "Hızlı erişim için Scout simgesine dokunup basılı tutun, ardından dock'unuza sürükleyin.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Brave'i Dock'unuza Ekleyin";
+"focusOnboarding.addToDockScreenTitle" = "Scout'i Dock'unuza Ekleyin";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Devam";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Brave'i hemen varsayılan tarayıcınız olarak ayarlayın.";
+"focusOnboarding.defaultBrowserScreenDescription" = "Scout'i hemen varsayılan tarayıcınız olarak ayarlayın.";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "Ziyaret Ettiğiniz Her Sitede Reklam Engelleme";
+"focusOnboarding.defaultBrowserScreenTitle" = "Her Bağlantı, Açılmadan Önce Kontrol Edilir";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "Şimdi Değil";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "En sevdiğiniz video sitelerinde kesintisiz bir izleme deneyimi yaşayın.";
+"focusOnboarding.noVideoAdsScreenDescription" = "Güvenli olmayan bağlantılar engellenir, başka neyi engelleyeceğinizi siz seçersiniz.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "Kesintisiz İzleme Deneyimi";
+"focusOnboarding.noVideoAdsScreenTitle" = "İstenmeyen İçerik Olmadan Gezinin";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "En çok hangi özellikleri sevdiğinizi bizi söyleyin.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Brave'i Daha da Geliştirelim";
+"focusOnboarding.p3aScreenTitle" = "Scout'i Daha da Geliştirelim";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "Ayarlar'da **Kalkanlar ve Gizlilik** altında istediğiniz zaman devre dışı bırakabilirsiniz. Gizliliği Koruyan Ürün Analitiğimiz hakkında [daha fazla bilgi](#p3a-learn-more).";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "Varsayılan Olarak Ayarla";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Scout Neyi Engellemeli?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "Güvenli olmayan bağlantılar her zaman engellenir. Başka neyi engelleyeceğinizi seçin. Bunu istediğiniz zaman Ayarlar'dan değiştirebilirsiniz.";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "Engellenen İçerik";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout, açılmadan önce her yeni siteyi kontrol eder. Engellenen bir siteye devam etmeyi her zaman seçebilirsiniz.";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "Güvenli Olmayan Bağlantılar";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "Kimlik avı, dolandırıcılık ve kötü amaçlı yazılımlar her zaman engellenir.";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "Her zaman açık";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "Yetişkin İçeriği";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "Pornografi ve müstehcen içerikler.";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "Kumar";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "Bahis, kumarhaneler ve piyangolar.";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "Reklam Yoğun Siteler";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "Öncelikle reklam göstermek için var olan sayfalar. Shields, sayfaların içindeki reklamları zaten kaldırıyor.";

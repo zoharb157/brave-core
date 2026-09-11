@@ -1,32 +1,32 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Pritisnite in pridržite ikono Brave, nato jo povlecite v svojo dock vrstico za hiter dostop.";
+"focusOnboarding.addToDockScreenDescription" = "Pritisnite in pridržite ikono Scout, nato jo povlecite v svojo dock vrstico za hiter dostop.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Dodajte Brave v svojo Dock vrstico";
+"focusOnboarding.addToDockScreenTitle" = "Dodajte Scout v svojo Dock vrstico";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Naprej";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Danes nastavite Brave kot privzeti brskalnik.";
+"focusOnboarding.defaultBrowserScreenDescription" = "Danes nastavite Scout kot privzeti brskalnik.";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "Blokirajte oglase na vsakem spletnem mestu, ki ga obiščete";
+"focusOnboarding.defaultBrowserScreenTitle" = "Vsaka povezava preverjena, preden se odpre";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "Ne zdaj";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "Blokirajte nadležne motnje na svojih priljubljenih spletnih mestih za pretakanje.";
+"focusOnboarding.noVideoAdsScreenDescription" = "Nevarne povezave so blokirane, vi pa izberete, kaj želite blokirati še.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "Blokirajte motnje med pretakanjem";
+"focusOnboarding.noVideoAdsScreenTitle" = "Brskajte brez nezaželene vsebine";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "Povejte nam, katere funkcije vam najbolj všečkajo.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Naredite Brave boljši";
+"focusOnboarding.p3aScreenTitle" = "Naredite Scout boljši";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "Lahko se odjavite kadarkoli v Nastavitvah pod **Ščiti in zasebnost**. [Več informacij](#p3a-learn-more) o naših analitiki izdelkov za ohranjanje zasebnosti.";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "Nastavi kot privzeti";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Kaj naj Scout blokira?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "Nevarne povezave so vedno blokirane. Izberite, kaj želite blokirati še. To lahko kadar koli spremenite v Nastavitvah.";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "Blokirana vsebina";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout preveri vsako novo spletno mesto, preden se odpre. Na blokirano spletno mesto lahko vedno nadaljujete, če želite.";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "Nevarne povezave";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "Lažno predstavljanje, prevare in zlonamerna programska oprema so vedno blokirani.";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "Vedno vklopljeno";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "Vsebina za odrasle";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "Pornografija in eksplicitna vsebina.";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "Igre na srečo";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "Stave, igralnice in loterije.";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "Oglasno prenatrpana spletna mesta";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "Strani, ki obstajajo predvsem za prikazovanje oglasov. Shields že odstranjuje oglase znotraj strani.";

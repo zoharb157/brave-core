@@ -1,32 +1,32 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Brave आइकन को टच करके पकड़ें, फिर त्वरित पहुंच के लिए इसे अपने डॉक में खींचें।";
+"focusOnboarding.addToDockScreenDescription" = "Scout आइकन को टच करके पकड़ें, फिर त्वरित पहुंच के लिए इसे अपने डॉक में खींचें।";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Brave को अपने डॉक में जोड़ें";
+"focusOnboarding.addToDockScreenTitle" = "Scout को अपने डॉक में जोड़ें";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "जारी रखें";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "आज ही Brave को अपना डिफ़ॉल्ट ब्राउज़र सेट करें।";
+"focusOnboarding.defaultBrowserScreenDescription" = "आज ही Scout को अपना डिफ़ॉल्ट ब्राउज़र सेट करें।";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "आप जिस भी साइट पर जाते हैं उस पर ऐड ब्लॉकिंग पाएँ";
+"focusOnboarding.defaultBrowserScreenTitle" = "हर लिंक, खुलने से पहले जांचा गया";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "अभी नहीं";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "अपनी पसंदीदा स्ट्रीमिंग साइटों पर परेशान करने वाली रुकावटें ब्लॉक करें।";
+"focusOnboarding.noVideoAdsScreenDescription" = "असुरक्षित लिंक ब्लॉक रहते हैं, और बाकी क्या ब्लॉक करना है यह आप तय करते हैं।";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "स्ट्रीम करते समय रुकावटें ब्लॉक करें";
+"focusOnboarding.noVideoAdsScreenTitle" = "बिना किसी झंझट के ब्राउज़ करें";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "हमें बताएँ कि आप किन फ़ीचर्स का सबसे ज़्यादा लुत्फ़ उठाते हैं।";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Brave को बेहतर बनाएँ";
+"focusOnboarding.p3aScreenTitle" = "Scout को बेहतर बनाएँ";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "आप **Shields और प्राइवेसी** में जाकर सेटिंग में कभी भी ऑप्ट-आउट कर सकते हैं। अपनी प्राइवेसी संरक्षण प्रोडक्ट अनलिटिक्स के बारे में [ज़्यादा जानें](#p3a-learn-more)।";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "डिफ़ॉल्ट सेट करें";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Scout को क्या ब्लॉक करना चाहिए?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "असुरक्षित लिंक हमेशा ब्लॉक रहते हैं। बाकी क्या ब्लॉक करना है, यह चुनें। आप इसे कभी भी सेटिंग्स में बदल सकते हैं।";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "ब्लॉक की गई सामग्री";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout हर नई साइट खोलने से पहले उसकी जांच करता है। आप चाहें तो हमेशा ब्लॉक की गई साइट पर जाना जारी रख सकते हैं।";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "असुरक्षित लिंक";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "फ़िशिंग, धोखाधड़ी और मैलवेयर हमेशा ब्लॉक रहते हैं।";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "हमेशा ऑन";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "वयस्क सामग्री";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "पोर्नोग्राफ़ी और अश्लील सामग्री।";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "जुआ";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "सट्टेबाज़ी, कैसीनो और लॉटरी।";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "विज्ञापनों से भरी साइटें";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "ऐसे पेज जो मुख्य रूप से विज्ञापन दिखाने के लिए बने होते हैं। Shields पेज के अंदर के विज्ञापन पहले से ही हटा देता है।";

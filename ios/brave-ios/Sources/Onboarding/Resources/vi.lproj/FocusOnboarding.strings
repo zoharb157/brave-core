@@ -1,32 +1,32 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Chạm và giữ biểu tượng Brave, sau đó kéo nó vào dock để truy cập nhanh.";
+"focusOnboarding.addToDockScreenDescription" = "Chạm và giữ biểu tượng Scout, sau đó kéo nó vào dock để truy cập nhanh.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Thêm Brave vào Dock của bạn";
+"focusOnboarding.addToDockScreenTitle" = "Thêm Scout vào Dock của bạn";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Tiếp tục";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Đặt Brave làm trình duyệt mặc định của bạn ngay hôm nay.";
+"focusOnboarding.defaultBrowserScreenDescription" = "Đặt Scout làm trình duyệt mặc định của bạn ngay hôm nay.";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "Chặn quảng cáo trên mọi trang bạn truy cập";
+"focusOnboarding.defaultBrowserScreenTitle" = "Mọi Liên Kết Đều Được Kiểm Tra Trước Khi Mở";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "Không phải Bây giờ";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "Chặn các yếu tố ngắt quãng phiền nhiễu trên các trang nội dung trực tuyến bạn yêu thích.";
+"focusOnboarding.noVideoAdsScreenDescription" = "Liên kết không an toàn sẽ bị chặn, và bạn chọn những gì khác cần chặn.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "Chặn Các Yếu Tố Ngắt Quãng Nội Dung Phát Trực Tuyến";
+"focusOnboarding.noVideoAdsScreenTitle" = "Duyệt Web Không Phiền Toái";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "Hãy cho chúng tôi biết bạn thích nhất tính năng nào.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Giúp cải thiện Brave";
+"focusOnboarding.p3aScreenTitle" = "Giúp cải thiện Scout";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "Bạn có thể chọn không tham gia bất cứ lúc nào trong phần Cài đặt của **Lá chắn và Quyền riêng tư**. [Tìm hiểu thêm](#p3a-learn-more) về Phân tích Sản phẩm bảo vệ quyền riêng tư.";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "Đặt làm mặc định";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Scout nên chặn những gì?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "Các liên kết không an toàn luôn bị chặn. Hãy chọn những nội dung khác bạn muốn chặn. Bạn có thể thay đổi bất kỳ lúc nào trong Cài đặt.";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "Nội dung bị chặn";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout kiểm tra từng trang mới trước khi mở. Bạn luôn có thể chọn tiếp tục truy cập trang bị chặn.";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "Liên kết không an toàn";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "Phishing, lừa đảo và phần mềm độc hại luôn bị chặn.";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "Luôn bật";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "Nội dung người lớn";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "Nội dung khiêu dâm và phản cảm.";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "Cờ bạc";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "Cá cược, sòng bạc và xổ số.";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "Trang web nhiều quảng cáo";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "Các trang tồn tại chủ yếu để hiển thị quảng cáo. Shields đã loại bỏ quảng cáo trong trang.";

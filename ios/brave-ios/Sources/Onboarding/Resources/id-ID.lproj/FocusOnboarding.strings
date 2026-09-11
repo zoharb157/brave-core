@@ -2,10 +2,10 @@
 "focusOnboarding.continueButtonTitle" = "Lanjutkan";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Bukalah setiap tautan yang Anda ketuk dengan perlindungan privasi dari Brave";
+"focusOnboarding.defaultBrowserScreenDescription" = "Bukalah setiap tautan yang Anda ketuk dengan perlindungan privasi dari Scout";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "Tetapkan Brave sebagai Peramban Bawaan Anda";
+"focusOnboarding.defaultBrowserScreenTitle" = "Setiap Tautan, Diperiksa Sebelum Dibuka";
 
 /* The subtitle of the screen that shows ads are blocked */
 "focusOnboarding.movingAdsScreenDescription" = "Menjelajah lebih cepat dan menghemat penggunaan data.";
@@ -17,10 +17,10 @@
 "focusOnboarding.notNowActionButtonTitle" = "Jangan Sekarang";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "Kami benar-benar menyingkirkan mereka.";
+"focusOnboarding.noVideoAdsScreenDescription" = "Tautan yang tidak aman diblokir, dan Anda memilih apa lagi yang ingin diblokir.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "Tidak ada lagi iklan video.";
+"focusOnboarding.noVideoAdsScreenTitle" = "Jelajahi Tanpa Hal yang Mengganggu";
 
 /* The title of the button that opens the website abouyt privacy preserving analytics. */
 "focusOnboarding.p3aInformationButtonTitle" = "Pelajari lebih lanjut tentang Analitik Produk yang Menjaga Privasi (P3A) milik kami.";
@@ -29,10 +29,10 @@
 "focusOnboarding.p3aScreenDescription" = "Beri tahu kami fitur mana yang paling Anda sukai.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Jadikan Brave lebih baik.";
+"focusOnboarding.p3aScreenTitle" = "Jadikan Scout lebih baik.";
 
 /* The title of the toggle for enable / disable privacy preserving analytics. */
-"focusOnboarding.p3aToggleDescription" = "Ubah ini kapan saja di Pengaturan Brave, pada bagian 'Perisai dan Privasi Brave'.";
+"focusOnboarding.p3aToggleDescription" = "Ubah ini kapan saja di Pengaturan Scout, pada bagian 'Perisai dan Privasi Scout'.";
 
 /* The title of the toggle for enable / disable the privacy preserving analytics. */
 "focusOnboarding.p3aToggleTitle" = "Bagikan Wawasan Produk Secara Privat & Anonim.";
@@ -49,3 +49,41 @@
 /* The title of the popup which points to URL Bar after onboarding */
 "focusOnboarding.urlBarIndicatorTitle" = "Lihat perbedaan yang diberikan Brave";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Apa yang Harus Diblokir Scout?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "Tautan yang tidak aman selalu diblokir. Pilih apa lagi yang ingin Anda blokir. Anda dapat mengubahnya kapan saja di Pengaturan.";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "Konten yang Diblokir";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout memeriksa setiap situs baru sebelum dibuka. Anda selalu bisa memilih untuk tetap membuka situs yang diblokir.";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "Tautan tidak aman";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "Phishing, penipuan, dan malware selalu diblokir.";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "Selalu aktif";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "Konten dewasa";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "Pornografi dan materi eksplisit.";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "Perjudian";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "Taruhan, kasino, dan lotre.";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "Situs penuh iklan";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "Halaman yang ada terutama untuk menampilkan iklan. Shields sudah menghapus iklan di dalam halaman.";

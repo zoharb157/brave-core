@@ -1,32 +1,32 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "触摸并按住 Brave 图标，然后将其拖至您的程序坞中，以便快速访问。";
+"focusOnboarding.addToDockScreenDescription" = "触摸并按住 Scout 图标，然后将其拖至您的程序坞中，以便快速访问。";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "将 Brave 添加到您的程序坞";
+"focusOnboarding.addToDockScreenTitle" = "将 Scout 添加到您的程序坞";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "继续";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "立即将 Brave 设为默认浏览器";
+"focusOnboarding.defaultBrowserScreenDescription" = "立即将 Scout 设为默认浏览器";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "在您访问的每一个网站拦截广告";
+"focusOnboarding.defaultBrowserScreenTitle" = "每个链接，打开前都经过检查";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "现在不";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "在您喜欢的流媒体网站上防止广告干扰";
+"focusOnboarding.noVideoAdsScreenDescription" = "不安全的链接会被拦截，其余内容由您自行选择是否拦截。";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "防止流媒体广告干扰";
+"focusOnboarding.noVideoAdsScreenTitle" = "摆脱干扰，畅快浏览";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "与我们分享您最喜欢的功能。";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "让 Brave 更加卓越";
+"focusOnboarding.p3aScreenTitle" = "让 Scout 更加卓越";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "您可以随时在**盾牌和隐私**部分的设置中选择退出参与产品反馈。欢迎[详细了解](#p3a-learn-more)我们的隐私保护产品分析。";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "设为默认";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Scout应该拦截什么？";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "不安全的链接会一直被拦截。选择您还想拦截的内容，可随时在设置中更改。";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "拦截内容";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout 会在打开每个新网站前进行检查。您始终可以选择继续访问被拦截的网站。";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "不安全的链接";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "网络钓鱼、诈骗和恶意软件会始终被拦截。";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "始终开启";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "成人内容";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "色情和露骨内容。";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "赌博";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "博彩、赌场和彩票。";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "广告过多的网站";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "这类页面主要用于展示广告。Shields 已经会移除页面内的广告。";

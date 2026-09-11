@@ -1,26 +1,26 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Kosketa ja pidä Brave-kuvaketta painettuna, vedä se sitten telakkaan nopeaa käyttöä varten.";
+"focusOnboarding.addToDockScreenDescription" = "Kosketa ja pidä Scout-kuvaketta painettuna, vedä se sitten telakkaan nopeaa käyttöä varten.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Lisää Brave telakkaasi";
+"focusOnboarding.addToDockScreenTitle" = "Lisää Scout telakkaasi";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Jatka";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Aseta Brave oletusselaimeksi jo tänään.";
+"focusOnboarding.defaultBrowserScreenDescription" = "Aseta Scout oletusselaimeksi jo tänään.";
 
 /* The title of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenTitle" = "Mainokset estetään jokaisella sivustolla, jolla käyt";
+"focusOnboarding.defaultBrowserScreenTitle" = "Jokainen linkki tarkistetaan, ennen kuin se avataan";
 
 /* The title of the button that closes the default browser full screen callout */
 "focusOnboarding.notNowActionButtonTitle" = "Ei nyt";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "Estä ärsyttävät keskeytykset suosimillasi suoratoistosivustoilla.";
+"focusOnboarding.noVideoAdsScreenDescription" = "Vaaralliset linkit estetään, ja voit itse valita, mitä muuta haluat estää.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "Estä keskeytykset suoratoiston aikana";
+"focusOnboarding.noVideoAdsScreenTitle" = "Selaa ilman ei-toivottua sisältöä";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "Kerro meille, mistä toiminnoista pidät eniten.";
@@ -40,3 +40,41 @@
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "Aseta oletukseksi";
 
+/* Title of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenTitle" = "Mitä Scoutin pitäisi estää?";
+
+/* Subtitle of the onboarding screen where the user picks which kinds of sites to block */
+"scoutBlocking.screenDescription" = "Vaaralliset linkit estetään aina. Valitse, mitä muuta haluat estää. Voit muuttaa tätä milloin tahansa asetuksissa.";
+
+/* Settings row and screen title for choosing which kinds of sites Scout blocks */
+"scoutBlocking.settingsTitle" = "Estetty sisältö";
+
+/* Footer under the list of blockable content categories in Settings */
+"scoutBlocking.settingsFooter" = "Scout tarkistaa jokaisen uuden sivuston ennen kuin se avautuu. Voit aina halutessasi jatkaa estetylle sivustolle.";
+
+/* Row title for the protection that can't be turned off */
+"scoutBlocking.alwaysOnTitle" = "Vaaralliset linkit";
+
+/* Row description for the protection that can't be turned off */
+"scoutBlocking.alwaysOnDetail" = "Tietojenkalastelu, huijaukset ja haittaohjelmat estetään aina.";
+
+/* Badge on the protection that can't be turned off */
+"scoutBlocking.alwaysOnBadge" = "Aina käytössä";
+
+/* Blockable category: pornography and explicit material */
+"scoutBlocking.adultTitle" = "Aikuissisältö";
+
+/* Description of the adult content category */
+"scoutBlocking.adultDetail" = "Pornografiaa ja eksplisiittistä materiaalia.";
+
+/* Blockable category: betting and casino sites */
+"scoutBlocking.gamblingTitle" = "Uhkapelit";
+
+/* Description of the gambling category */
+"scoutBlocking.gamblingDetail" = "Vedonlyöntiä, kasinoita ja arpajaisia.";
+
+/* Blockable category: whole pages that exist mainly to show ads */
+"scoutBlocking.adsTitle" = "Mainosraskaat sivustot";
+
+/* Description of the ad-heavy sites category */
+"scoutBlocking.adsDetail" = "Sivut, jotka ovat olemassa lähinnä mainosten näyttämistä varten. Shields poistaa jo mainokset sivujen sisältä.";
