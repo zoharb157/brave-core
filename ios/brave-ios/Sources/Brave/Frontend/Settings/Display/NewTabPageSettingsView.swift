@@ -6,6 +6,7 @@ import BraveStrings
 import BraveUI
 import Foundation
 import Preferences
+import Shared
 import SwiftUI
 
 struct NewTabPageSettingsView: View {
@@ -24,7 +25,7 @@ struct NewTabPageSettingsView: View {
     Form {
       Section {
         Toggle(Strings.NTP.settingsBackgroundImages, isOn: $backgroundImages.value)
-        if backgroundImages.value, isSponsoredBackgroundsSupported {
+        if backgroundImages.value, isSponsoredBackgroundsSupported, ScoutFeatures.sponsoredImages {
           NavigationLink {
             BackgroundMediaTypePicker(
               selection: Binding(

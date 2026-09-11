@@ -25,4 +25,7 @@ public enum ScoutFeatures {
   public static let vpn = false
   /// Gated via `AIChatUtils.isEnabledInScout(for:)`.
   public static let aiChat = false
+  /// Sponsored new-tab-page backgrounds (ads) — contrary to an ad-blocking
+  /// browser. Gated in `Preferences.NewTabPage.backgroundMediaType`.
+  public static let sponsoredImages = false
 }

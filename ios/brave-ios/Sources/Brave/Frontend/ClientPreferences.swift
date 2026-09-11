@@ -280,13 +280,15 @@ extension Preferences {
     /// - Warning: You should not access this directly but  through ``backgroundMediaType``
     static let backgroundMediaTypeRaw = Option<Int>(
       key: "newtabpage.background-media-type",
-      default: BackgroundMediaType.sponsoredImages.rawValue
+      default: ScoutFeatures.sponsoredImages
+        ? BackgroundMediaType.sponsoredImages.rawValue : BackgroundMediaType.defaultImages.rawValue
     )
 
     /// A  variable to access the ``backgroundMediaTypeRaw`` preference value
     static var backgroundMediaType: BackgroundMediaType {
       get {
-        BackgroundMediaType(rawValue: backgroundMediaTypeRaw.value)
+        guard ScoutFeatures.sponsoredImages else { return .defaultImages }
+        return BackgroundMediaType(rawValue: backgroundMediaTypeRaw.value)
           ?? BackgroundMediaType.sponsoredImages
       }
       set { backgroundMediaTypeRaw.value = newValue.rawValue }

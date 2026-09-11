@@ -11,9 +11,10 @@ import Combine
 import Data
 import Foundation
 import Growth
-import Preferences
-import Web
 import os
+import Preferences
+import Shared
+import Web
 
 @MainActor class AdvancedShieldsSettings: ObservableObject {
   struct ClearableSetting: Identifiable {
@@ -160,7 +161,7 @@ import os
   /// `AdsServiceImplIOS` logic when it is not started if Rewards is not
   /// supported.
   var isSponsoredAdsSupported: Bool {
-    BraveRewardsAPI.isSupported(prefs)
+    ScoutFeatures.sponsoredImages && BraveRewardsAPI.isSupported(prefs)
   }
 
   /// If we should write Shields setting changes to content settings.
