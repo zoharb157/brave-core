@@ -1690,7 +1690,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         Row(
           text: Strings.privacyPolicy,
           selection: { [unowned self] in
-            settingsDelegate?.settingsOpenURLInNewTab(.brave.privacy)
+            settingsDelegate?.settingsOpenURLInNewTab(ScoutContact.privacyURL)
           },
           accessory: .disclosureIndicator,
           cellClass: MultilineValue1Cell.self
@@ -1698,7 +1698,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         Row(
           text: Strings.termsOfUse,
           selection: { [unowned self] in
-            settingsDelegate?.settingsOpenURLInNewTab(.brave.termsOfUse)
+            settingsDelegate?.settingsOpenURLInNewTab(ScoutContact.termsURL)
           },
           accessory: .disclosureIndicator,
           cellClass: MultilineValue1Cell.self

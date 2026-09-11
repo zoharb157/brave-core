@@ -35,9 +35,14 @@ public enum ScoutFeatures {
 
 /// Where Scout users reach Zaatar Tech.
 public enum ScoutContact {
-  /// The public support page (it also carries the contact email). Hosted on Fly
-  /// until the zaatar-site Worker can serve scout.zaatar.tech.
-  public static let supportURL = URL(string: "https://zaatar-scout.fly.dev/support")!
+  /// Scout's public site, hosted on Fly until the zaatar-site Worker can serve
+  /// scout.zaatar.tech. These are also the App Store Connect URLs (support,
+  /// privacy policy, marketing), so the in-app links match the listing.
+  public static let site = URL(string: "https://zaatar-scout.fly.dev/")!
+  /// The support page (it also carries the contact email).
+  public static let supportURL = site.appending(path: "support")
+  public static let privacyURL = site.appending(path: "privacy")
+  public static let termsURL = site.appending(path: "terms")
 
   /// Scout's own public pages: never put through the safety check.
   public static let ownHosts = ["zaatar-scout.fly.dev", "scout.zaatar.tech"]
