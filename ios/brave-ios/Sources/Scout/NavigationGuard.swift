@@ -103,7 +103,13 @@ public final class NavigationGuard {
     if let immediate = decideImmediately(url) {
       return immediate
     }
-    let result = await checker.check(url, timeout: timeout)
+    var result = await checker.check(url, timeout: timeout)
+    // A refused connection or a 500 is usually a blip, and failing open on one
+    // is how an unchecked page slips through. A timeout is not retried: the
+    // budget is already spent and the user is waiting.
+    if result.status == .error {
+      result = await checker.check(url, timeout: timeout)
+    }
     if result.status == .ok, let v = result.verdict {
       cache.put(url, v)
       return Self.resolve(v, blockedCategories: policy.blockedCategories)

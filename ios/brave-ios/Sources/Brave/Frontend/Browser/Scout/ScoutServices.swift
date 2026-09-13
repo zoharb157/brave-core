@@ -75,7 +75,10 @@ public final class ScoutServices {
       base: policy, blockedCategories: { Preferences.ScoutBlocking.chosen })
     cache = VerdictCache(maxEntries: 2000, now: { Date() }, perPageHosts: Self.perPageHosts)
     checker = CoalescingSafetyChecker(
-      transport: NetworkSafetyTransport(endpoint: Self.checkEndpoint))
+      transport: NetworkSafetyTransport(endpoint: Self.checkEndpoint),
+      // Same key the cache uses, so two pages that are cached apart are also
+      // checked apart rather than sharing one in-flight request.
+      key: { VerdictCache.cacheKey(for: $0, perPageHosts: ScoutServices.perPageHosts) })
     guard_ = NavigationGuard(
       policy: decisionPolicy, cache: cache, checker: checker, timeout: Self.checkTimeout,
       // With no network the check can only time out, and the page is about to
