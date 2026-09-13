@@ -25,11 +25,18 @@ public final class NavigationGuard {
   private let cache: VerdictCache
   private let checker: SafetyChecker
   private let timeout: TimeInterval
+  private let isReachable: () -> Bool
 
+  /// - Parameter isReachable: whether the network can reach the service at all.
+  ///   With no network the check can only time out, so the guard skips it and
+  ///   applies `failMode` immediately instead of making every navigation wait
+  ///   out the timeout.
   public init(policy: PolicyProviding, cache: VerdictCache,
-              checker: SafetyChecker, timeout: TimeInterval) {
+              checker: SafetyChecker, timeout: TimeInterval,
+              isReachable: @escaping () -> Bool = { true }) {
     self.policy = policy; self.cache = cache
     self.checker = checker; self.timeout = timeout
+    self.isReachable = isReachable
   }
 
   /// Resolves a fetched/cached `Verdict` against the user's chosen
@@ -85,6 +92,9 @@ public final class NavigationGuard {
     }
     if let cached = cache.get(url) {
       return Self.resolve(cached, blockedCategories: policy.blockedCategories)
+    }
+    if !isReachable() {
+      return Self.resolveFailure(policy.failMode)
     }
     return nil
   }

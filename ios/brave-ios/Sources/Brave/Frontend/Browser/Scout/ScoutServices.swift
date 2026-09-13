@@ -3,6 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import BraveShared
 import Foundation
 import Onboarding
 import Preferences
@@ -59,7 +60,10 @@ public final class ScoutServices {
     checker = CoalescingSafetyChecker(
       transport: NetworkSafetyTransport(endpoint: Self.checkEndpoint))
     guard_ = NavigationGuard(
-      policy: decisionPolicy, cache: cache, checker: checker, timeout: Self.checkTimeout)
+      policy: decisionPolicy, cache: cache, checker: checker, timeout: Self.checkTimeout,
+      // With no network the check can only time out, and the page is about to
+      // fail to load anyway — don't spend the timeout on a checking screen.
+      isReachable: { Reachability.shared.status.connectionType != .offline })
 
     load()
     observeLifecycle()
