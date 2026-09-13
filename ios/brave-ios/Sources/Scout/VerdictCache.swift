@@ -8,14 +8,19 @@ public final class VerdictCache {
 
   private let maxEntries: Int
   private let now: () -> Date
+  private let perPageHosts: Set<String>
   private var entries: [String: Entry] = [:]
   private var lru: [String] = []  // most-recent first
 
-  public init(maxEntries: Int, now: @escaping () -> Date) {
-    self.maxEntries = maxEntries; self.now = now
+  /// - Parameter perPageHosts: eTLD+1s where a verdict describes one page
+  ///   rather than the site. Everywhere else one verdict covers the whole
+  ///   domain, which is what keeps browsing fast; on a site where anyone can
+  ///   post, that would let the first harmless page vouch for every other one.
+  public init(maxEntries: Int, now: @escaping () -> Date, perPageHosts: Set<String> = []) {
+    self.maxEntries = maxEntries; self.now = now; self.perPageHosts = perPageHosts
   }
 
-  private func key(_ url: URL) -> String { Self.cacheKey(for: url) }
+  private func key(_ url: URL) -> String { Self.cacheKey(for: url, perPageHosts: perPageHosts) }
 
   private func ttl(for security: SecurityStatus) -> TimeInterval {
     security == .safe ? Self.safeTTL : Self.riskyTTL
@@ -57,9 +62,31 @@ public final class VerdictCache {
 
   /// The key a URL is cached under — its eTLD+1. Callers need it to name
   /// entries they don't want written to disk (private browsing).
-  public static func cacheKey(for url: URL) -> String {
+  /// Query parameters that identify the visitor or one particular request
+  /// rather than the page: keeping them would file the same page under a new
+  /// key every visit (a bot-challenge token alone is ~200 characters).
+  private static let volatileQueryKeys: Set<String> = [
+    "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_id",
+    "gclid", "fbclid", "igshid", "mc_cid", "mc_eid", "ref", "ref_src", "ref_url",
+    "source", "share_id", "si", "cb", "_ga", "sessionid", "session_id", "token",
+    "solution", "js_challenge", "jsc_token", "jsc_orig_r",
+  ]
+
+  public static func cacheKey(for url: URL, perPageHosts: Set<String> = []) -> String {
     guard let host = url.host else { return url.absoluteString }
-    return eTLDPlusOne(host)
+    let site = eTLDPlusOne(host)
+    guard perPageHosts.contains(site) else { return site }
+    // The query is part of the page's identity here (youtube.com/watch?v=...),
+    // minus the parts that identify the visit rather than the page. Sorted, so
+    // the same page keys the same whatever order the parameters arrive in.
+    let path = url.path.isEmpty ? "/" : url.path
+    let items = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems ?? []
+    let kept = items
+      .filter { !volatileQueryKeys.contains($0.name.lowercased()) }
+      .map { item in item.value.map { "\(item.name)=\($0)" } ?? item.name }
+      .sorted()
+    let query = kept.isEmpty ? "" : "?" + kept.joined(separator: "&")
+    return String((site + path + query).prefix(300))
   }
 
   public func serialize(excludingKeys excluded: Set<String> = []) -> Data {

@@ -38,6 +38,23 @@ public final class ScoutServices {
   /// unacceptable UX, and the real fix is precheck plus the verdict cache.
   private static let checkTimeout: TimeInterval = 12.0
 
+  /// Sites where the pages are written by whoever signs up, so one page's
+  /// verdict says nothing about the next: a video, a subreddit or a free
+  /// hosting subdomain is checked as a page, not as a site. Everywhere else a
+  /// verdict covers the whole domain, which is what keeps browsing fast.
+  static let perPageHosts: Set<String> = [
+    // Social and user-posted content
+    "reddit.com", "x.com", "twitter.com", "tumblr.com", "facebook.com", "instagram.com",
+    "tiktok.com", "snapchat.com", "vk.com", "pinterest.com", "quora.com", "discord.com",
+    "twitch.tv", "4chan.org", "deviantart.com", "imgur.com",
+    // Video and story platforms
+    "youtube.com", "youtu.be", "dailymotion.com", "vimeo.com", "wattpad.com",
+    "archiveofourown.org", "fanfiction.net",
+    // Publishing and free hosting: anyone can put a page under these
+    "medium.com", "substack.com", "blogspot.com", "wordpress.com", "wixsite.com",
+    "weebly.com", "github.io", "pages.dev", "netlify.app", "vercel.app", "glitch.me",
+  ]
+
   /// Lists, scheme rules and fail mode (server-synced later).
   public let policy: PolicyStore
   /// What the guard decides with: `policy`, but with blocked categories read
@@ -56,7 +73,7 @@ public final class ScoutServices {
     policy = PolicyStore(policy: base)
     decisionPolicy = UserCategoryPolicy(
       base: policy, blockedCategories: { Preferences.ScoutBlocking.chosen })
-    cache = VerdictCache(maxEntries: 2000, now: { Date() })
+    cache = VerdictCache(maxEntries: 2000, now: { Date() }, perPageHosts: Self.perPageHosts)
     checker = CoalescingSafetyChecker(
       transport: NetworkSafetyTransport(endpoint: Self.checkEndpoint))
     guard_ = NavigationGuard(
@@ -93,7 +110,7 @@ public final class ScoutServices {
 
   /// Called for every checked navigation in a private tab.
   public func notePrivateNavigation(to url: URL) {
-    privateOnlyKeys.insert(VerdictCache.cacheKey(for: url))
+    privateOnlyKeys.insert(VerdictCache.cacheKey(for: url, perPageHosts: Self.perPageHosts))
   }
 
   /// The cache keys are the sites the user visited, so clearing history clears
