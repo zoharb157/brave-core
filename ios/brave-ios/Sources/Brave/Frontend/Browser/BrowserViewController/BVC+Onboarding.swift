@@ -219,6 +219,9 @@ extension BrowserViewController {
     guard Preferences.Onboarding.basicOnboardingCompleted.value == OnboardingState.unseen.rawValue
     else {
       Preferences.AppState.shouldDeferPromotedPurchase.value = false
+      // A returning user: the scene became active before this controller could
+      // observe it, so this is where a cold launch asks.
+      presentDefaultBrowserReminderIfNeeded()
       return
     }
 
@@ -250,11 +253,49 @@ extension BrowserViewController {
         Preferences.Onboarding.basicOnboardingCompleted.value = OnboardingState.completed.rawValue
         Preferences.AppState.shouldDeferPromotedPurchase.value = false
         Preferences.FocusOnboarding.focusOnboardingFinished.value = true
+        // Onboarding just asked; the reminder waits its usual gap before it
+        // asks again.
+        if !isDefault {
+          Preferences.Scout.lastDefaultBrowserPrompt.value = Date()
+        }
       }
     )
 
     present(controller, animated: false)
 
     Preferences.FocusOnboarding.urlBarIndicatorShowBeShown.value = true
+  }
+
+  /// Asks to be made the default browser, and keeps asking.
+  ///
+  /// Called every time the app comes forward: until the system says Scout is
+  /// the default, the links a child opens in other apps never reach the guard,
+  /// so this is worth re-asking for rather than showing once at onboarding.
+  func presentDefaultBrowserReminderIfNeeded() {
+    // Onboarding asks on its own, and nothing should land on top of it.
+    guard
+      Preferences.Onboarding.basicOnboardingCompleted.value == OnboardingState.completed.rawValue,
+      presentedViewController == nil,
+      ScoutDefaultBrowserReminder.canBecomeDefaultBrowser
+    else { return }
+
+    defaultBrowserHelper.performAccurateDefaultCheckNow()
+    guard ScoutDefaultBrowserReminder.shouldAsk(status: defaultBrowserHelper.status) else { return }
+    Preferences.Scout.lastDefaultBrowserPrompt.value = Date()
+
+    let controller = OnboardingController(
+      environment: .init(
+        p3aUtils: braveCore.p3aUtils,
+        attributionManager: attributionManager,
+        localState: braveCore.localState
+      ),
+      steps: [.defaultBrowsing],
+      showSplashScreen: false,
+      showDismissButton: false
+    ).then {
+      $0.isModalInPresentation = true
+      $0.modalPresentationStyle = .overFullScreen
+    }
+    present(controller, animated: true)
   }
 }

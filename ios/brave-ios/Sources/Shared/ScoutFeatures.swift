@@ -43,6 +43,11 @@ public enum ScoutFeatures {
   public static let braveTelemetry = false
   /// Brave Search's promotion card in the URL bar's suggestions.
   public static let braveSearchPromotion = false
+  /// Whether this build carries Apple's managed `com.apple.developer.web-browser`
+  /// entitlement. Without it Scout cannot appear in Settings → Default Apps, so
+  /// the browser doesn't ask to be made default. Turn on together with the
+  /// entitlement in `App/iOS/Entitlements` once Apple grants the request.
+  public static let defaultBrowserEntitlement = false
 }
 
 /// Where Scout users reach Zaatar Tech.

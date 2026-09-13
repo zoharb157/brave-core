@@ -927,6 +927,10 @@ public class BrowserViewController: UIViewController {
       collapsedURLBarView.isKeyboardVisible = false
     }
 
+    // Scout: being the default browser is what puts the guard in front of every
+    // link, so ask again whenever the app comes forward until it is.
+    presentDefaultBrowserReminderIfNeeded()
+
     if !isContentHiddenInBackground {
       return
     }

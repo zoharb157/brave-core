@@ -78,6 +78,29 @@ class DefaultBrowserHelper {
     updateStatus()
   }
 
+  /// Checks now, whatever Brave's schedule says.
+  ///
+  /// Brave only asks the system during a few windows in the first ten days and
+  /// then never again. For Scout being the default browser *is* the product —
+  /// every link is only checked when the system routes links here — so the
+  /// status is re-read whenever the app comes forward. The system rate-limits
+  /// the call; when it does, the cached answer stands.
+  func performAccurateDefaultCheckNow() {
+    guard isDefaultAppChecker.isAvailable() else {
+      updateStatus()
+      return
+    }
+    do {
+      Preferences.General.isDefaultAPILastCheckDate.value = now()
+      let isDefault = try isDefaultAppChecker.isDefaultWebBrowser()
+      Preferences.General.isDefaultAPILastResult.value = isDefault
+      Preferences.General.isDefaultAPILastResultDate.value = now()
+    } catch {
+      // Rate limited or unavailable: keep what we had.
+    }
+    updateStatus()
+  }
+
   func recordAppLaunchedWithWebURL() {
     Preferences.General.lastHTTPURLOpenedDate.value = now()
     updateStatus()
