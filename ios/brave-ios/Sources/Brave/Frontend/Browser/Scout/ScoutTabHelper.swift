@@ -69,6 +69,12 @@ public class ScoutTabHelper: TabPolicyDecider {
 
     let services = ScoutServices.shared
 
+    // A site first seen in a private tab is checked like any other, but its
+    // verdict is never written to disk.
+    if tab.isPrivate {
+      services.notePrivateNavigation(to: requestURL)
+    }
+
     // Known already (policy list or cached verdict): no checking page at all.
     if let decision = services.guard_.decideImmediately(requestURL) {
       if decision.type == .allow { return .allow }

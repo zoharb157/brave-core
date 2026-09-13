@@ -15,10 +15,7 @@ public final class VerdictCache {
     self.maxEntries = maxEntries; self.now = now
   }
 
-  private func key(_ url: URL) -> String {
-    guard let host = url.host else { return url.absoluteString }
-    return eTLDPlusOne(host)
-  }
+  private func key(_ url: URL) -> String { Self.cacheKey(for: url) }
 
   private func ttl(for security: SecurityStatus) -> TimeInterval {
     security == .safe ? Self.safeTTL : Self.riskyTTL
@@ -51,12 +48,30 @@ public final class VerdictCache {
     }
   }
 
-  public func serialize() -> Data {
-    let arr: [[String: Any]] = entries.map { (k, e) in
-      ["key": k, "security": e.verdict.security.rawValue,
-       "categories": e.verdict.categories.map(\.rawValue),
-       "title": e.verdict.title, "summary": e.verdict.summary,
-       "storedAt": e.storedAt.timeIntervalSince1970]
+  /// Forget every verdict — called when the user clears browsing history, since
+  /// the keys are the sites they visited.
+  public func removeAll() {
+    entries.removeAll()
+    lru.removeAll()
+  }
+
+  /// The key a URL is cached under — its eTLD+1. Callers need it to name
+  /// entries they don't want written to disk (private browsing).
+  public static func cacheKey(for url: URL) -> String {
+    guard let host = url.host else { return url.absoluteString }
+    return eTLDPlusOne(host)
+  }
+
+  public func serialize(excludingKeys excluded: Set<String> = []) -> Data {
+    // Most-recent first, so a reload that trims to `maxEntries` keeps the
+    // entries most likely to be wanted again.
+    let arr: [[String: Any]] = lru.compactMap { k in
+      guard let e = entries[k], !excluded.contains(k) else { return nil }
+      return ["key": k, "security": e.verdict.security.rawValue,
+              "categories": e.verdict.categories.map(\.rawValue),
+              "title": e.verdict.title, "summary": e.verdict.summary,
+              "reasons": e.verdict.reasons,
+              "storedAt": e.storedAt.timeIntervalSince1970]
     }
     return (try? JSONSerialization.data(withJSONObject: arr)) ?? Data()
   }
@@ -73,9 +88,14 @@ public final class VerdictCache {
       let categories = ContentCategory.set(fromWire: d["categories"] as? [String] ?? [])
       let v = Verdict(security: security, categories: categories,
                       title: d["title"] as? String ?? "",
-                      summary: d["summary"] as? String ?? "", reasons: [])
-      entries[k] = Entry(verdict: v, storedAt: Date(timeIntervalSince1970: storedAt))
-      lru.insert(k, at: 0)
+                      summary: d["summary"] as? String ?? "",
+                      reasons: d["reasons"] as? [String] ?? [])
+      let entry = Entry(verdict: v, storedAt: Date(timeIntervalSince1970: storedAt))
+      // A stale entry would only be dropped on its next lookup; skip it now so a
+      // reload can't carry more than `maxEntries` worth of dead weight.
+      if isExpired(entry) || entries.count >= maxEntries { continue }
+      entries[k] = entry
+      lru.append(k)
     }
   }
 }

@@ -8,6 +8,7 @@ import Onboarding
 import Preferences
 import Scout
 import Shared
+import UIKit
 
 /// Owns the guard's collaborators for the app.
 ///
@@ -42,6 +43,9 @@ public final class ScoutServices {
   /// live from the user's choice (onboarding / Settings → Blocked Content).
   public let decisionPolicy: PolicyProviding
   private let cache: VerdictCache
+  /// Sites first seen in a private tab. They stay in the in-memory cache for the
+  /// session but are never written to disk — a private visit leaves no trace.
+  private var privateOnlyKeys: Set<String> = []
   private let checker: SafetyChecker
   public let guard_: NavigationGuard
 
@@ -56,5 +60,57 @@ public final class ScoutServices {
       transport: NetworkSafetyTransport(endpoint: Self.checkEndpoint))
     guard_ = NavigationGuard(
       policy: decisionPolicy, cache: cache, checker: checker, timeout: Self.checkTimeout)
+
+    load()
+    observeLifecycle()
+  }
+
+  // MARK: - Keeping verdicts between launches
+
+  /// Checking an unknown site takes seconds, so a cache that died with the app
+  /// meant every site paid that price again on the next launch. Verdicts are
+  /// re-derivable, so they live in Caches; they expire on their own (7 days
+  /// safe, 24 hours otherwise) and are dropped when the user clears history.
+  private static var storeURL: URL? {
+    try? FileManager.default.url(
+      for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true
+    ).appendingPathComponent("scout-verdicts.json")
+  }
+
+  private func load() {
+    guard let url = Self.storeURL, let data = try? Data(contentsOf: url) else { return }
+    cache.deserialize(data)
+  }
+
+  public func save() {
+    guard let url = Self.storeURL else { return }
+    try? cache.serialize(excludingKeys: privateOnlyKeys).write(to: url, options: .atomic)
+  }
+
+  /// Called for every checked navigation in a private tab.
+  public func notePrivateNavigation(to url: URL) {
+    privateOnlyKeys.insert(VerdictCache.cacheKey(for: url))
+  }
+
+  /// The cache keys are the sites the user visited, so clearing history clears
+  /// them too.
+  public func forgetVerdicts() {
+    cache.removeAll()
+    privateOnlyKeys.removeAll()
+    if let url = Self.storeURL {
+      try? FileManager.default.removeItem(at: url)
+    }
+  }
+
+  private func observeLifecycle() {
+    let center = NotificationCenter.default
+    for name in [UIApplication.didEnterBackgroundNotification, UIApplication.willTerminateNotification] {
+      center.addObserver(forName: name, object: nil, queue: .main) { _ in
+        MainActor.assumeIsolated { ScoutServices.shared.save() }
+      }
+    }
+    center.addObserver(forName: .privateDataClearedHistory, object: nil, queue: .main) { _ in
+      MainActor.assumeIsolated { ScoutServices.shared.forgetVerdicts() }
+    }
   }
 }
