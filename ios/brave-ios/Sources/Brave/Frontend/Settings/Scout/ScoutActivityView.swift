@@ -193,7 +193,9 @@ private struct ActivityRow: View {
 
   private var symbol: String {
     switch record.decision {
-    case .allow: return record.continued ? "arrow.turn.down.right" : "checkmark.circle"
+    case .allow:
+      if record.continued { return "arrow.turn.down.right" }
+      return record.reason == .unavailable ? "questionmark.circle" : "checkmark.circle"
     case .warn: return "exclamationmark.circle"
     case .block: return "hand.raised.fill"
     }
@@ -201,7 +203,8 @@ private struct ActivityRow: View {
 
   private var tint: Color {
     switch record.decision {
-    case .allow: return scoutMint
+    // Amber, not mint: nothing was established about the page.
+    case .allow: return record.reason == .unavailable ? scoutAmber : scoutMint
     case .warn: return scoutAmber
     case .block: return scoutRose
     }
@@ -212,8 +215,12 @@ private struct ActivityRow: View {
   private var detail: String {
     switch record.decision {
     case .allow:
-      return record.continued
-        ? Strings.ScoutProtection.continuedAnyway : Strings.ScoutProtection.activityAllowed
+      if record.continued { return Strings.ScoutProtection.continuedAnyway }
+      // Scout opens a page it could not check. That is not the same event as
+      // one it checked and cleared, and this list is where the difference is
+      // looked for.
+      if record.reason == .unavailable { return Strings.ScoutProtection.activityUnchecked }
+      return Strings.ScoutProtection.activityAllowed
     case .warn:
       return Strings.ScoutProtection.activityWarned
     case .block:

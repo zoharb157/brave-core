@@ -160,6 +160,21 @@ extension Strings {
       comment: "Hint shown when the text typed into the add-a-site field is not a site name"
     )
 
+    /// An allow that happened because nothing could be checked.
+    ///
+    /// Scout opens the page when a check cannot be completed, which is the
+    /// right call on a flaky network but is not the same event as a page that
+    /// was checked and found safe. The log said "Opened" for both, which is
+    /// exactly the row someone is looking for when asking how a page got
+    /// through.
+    public static let activityUnchecked = NSLocalizedString(
+      "scoutProtection.activityUnchecked",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Opened without checking",
+      comment: "Shown in the activity log when a page opened because its safety check could not be completed"
+    )
+
     public static let sitePlaceholder = NSLocalizedString(
       "scoutProtection.sitePlaceholder",
       tableName: "BraveShared",
