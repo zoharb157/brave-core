@@ -84,8 +84,15 @@ public class ScoutTabHelper: TabPolicyDecider {
     // anyone turns the switch off inside the site, and a filter a child can
     // switch off from the page it is filtering is not one.
     if Preferences.Scout.safeSearch.value, RestrictedMode.governs(requestURL),
+      !restrictedURLs.contains(requestURL),
       await restrictYouTube(in: tab)
     {
+      // Re-issue at most once per URL per tab. The cookie is expected to stick
+      // and the second pass then goes straight through — but if it ever didn't
+      // (a store that drops it, YouTube rewriting PREF as the page loads), an
+      // unbounded re-issue would be an endless reload on the site it is
+      // supposed to be protecting.
+      restrictedURLs.insert(requestURL)
       tab.loadRequest(request)
       return .cancel
     }
@@ -152,6 +159,9 @@ public class ScoutTabHelper: TabPolicyDecider {
 
   /// One-shot pass for the navigation this helper re-issues after an allow.
   private var approvedURL: URL?
+
+  /// Navigations already re-issued to carry YouTube's Restricted Mode cookie.
+  private var restrictedURLs: Set<URL> = []
 
   /// Writes YouTube's Restricted Mode into the cookie the site itself reads.
   ///
