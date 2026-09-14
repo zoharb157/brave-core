@@ -835,26 +835,18 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       uuid: featureSectionUUID.uuidString
     )
 
+    // One entry, not one per protection layer: what Scout blocks, what it
+    // filters, what reaches past the browser and what the user decided by hand
+    // are one feature to the person using it, and reading them apart made the
+    // browser's whole purpose look like two minor settings.
     section.rows.append(
       Row(
-        text: Strings.ScoutBlocking.settingsTitle,
+        text: Strings.ScoutProtection.title,
         selection: { [unowned self] in
-          let controller = UIHostingController(rootView: ScoutBlockingSettingsView())
+          let controller = UIHostingController(rootView: ScoutProtectionView())
           self.navigationController?.pushViewController(controller, animated: true)
         },
-        image: UIImage(systemName: "hand.raised"),
-        accessory: .disclosureIndicator
-      )
-    )
-
-    section.rows.append(
-      Row(
-        text: Strings.ScoutBlocking.phoneFilterTitle,
-        selection: { [unowned self] in
-          let controller = UIHostingController(rootView: ScoutDeviceFilterView())
-          self.navigationController?.pushViewController(controller, animated: true)
-        },
-        image: UIImage(systemName: "iphone.gen3.badge.exclamationmark"),
+        image: UIImage(systemName: "checkmark.shield"),
         accessory: .disclosureIndicator
       )
     )

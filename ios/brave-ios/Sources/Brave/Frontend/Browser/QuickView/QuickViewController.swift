@@ -346,6 +346,11 @@ class QuickViewController: UIViewController {
             self.changedShieldSettings()
           case .shredSiteData:  // not available in quickview mode
             break
+          case .changedSiteRule:
+            // Quick view is a preview of a link, not the tab it belongs to.
+            // The rule is already written; it applies wherever the link is
+            // actually opened.
+            weakPopover?.dismiss(animated: true)
           }
         }
       ),

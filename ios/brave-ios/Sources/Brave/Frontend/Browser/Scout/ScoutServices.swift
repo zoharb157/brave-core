@@ -58,8 +58,15 @@ public final class ScoutServices {
   /// Lists, scheme rules and fail mode (server-synced later).
   public let policy: PolicyStore
   /// What the guard decides with: `policy`, but with blocked categories read
-  /// live from the user's choice (onboarding / Settings → Blocked Content).
+  /// live from the user's choice (onboarding / Settings → Blocked Content),
+  /// and with the user's own per-site rules ahead of both.
   public let decisionPolicy: PolicyProviding
+  /// Sites the user allowed or blocked by hand. Consulted before the category
+  /// settings and before the network check, so "always allow" takes effect on
+  /// the very next navigation.
+  public let siteRules: SiteRules
+  /// What Scout has blocked recently, for Settings → Protection.
+  public let blockLog: BlockLog
   private let cache: VerdictCache
   /// Sites first seen in a private tab. They stay in the in-memory cache for the
   /// session but are never written to disk — a private visit leaves no trace.
@@ -71,8 +78,15 @@ public final class ScoutServices {
     var base = Policy.makeDefault()
     base.allow = ScoutContact.ownHosts
     policy = PolicyStore(policy: base)
-    decisionPolicy = UserCategoryPolicy(
+    siteRules = ScoutProtectionStore.loadSiteRules()
+    blockLog = ScoutProtectionStore.loadBlockLog()
+    let categoryPolicy = UserCategoryPolicy(
       base: policy, blockedCategories: { Preferences.ScoutBlocking.chosen })
+    // The user's own per-site decision is the outermost layer: it is the one
+    // input that is an explicit human answer about this exact site, so it wins
+    // over both the category settings and the check.
+    let rules = siteRules
+    decisionPolicy = UserSitePolicy(base: categoryPolicy, rules: { rules })
     cache = VerdictCache(maxEntries: 2000, now: { Date() }, perPageHosts: Self.perPageHosts)
     checker = CoalescingSafetyChecker(
       transport: NetworkSafetyTransport(endpoint: Self.checkEndpoint),
@@ -110,6 +124,45 @@ public final class ScoutServices {
     guard let url = Self.storeURL else { return }
     try? cache.serialize(excludingKeys: privateOnlyKeys).write(to: url, options: .atomic)
   }
+
+  /// Everything Scout knows about one site, for the panel behind the URL bar.
+  public struct SiteStatus {
+    /// The registrable domain the status is about — what a rule would key on.
+    public let site: String
+    /// The user's own standing decision, if they made one.
+    public let rule: SiteRule?
+    /// The check's answer, if Scout has one on hand.
+    public let verdict: Verdict?
+    /// When that answer was fetched.
+    public let checkedAt: Date?
+    /// Categories on this site that the user currently blocks. Recomputed
+    /// from the live settings rather than stored, so turning a category off
+    /// is reflected without re-checking anything.
+    public let blockedCategories: Set<ContentCategory>
+  }
+
+  public func status(for url: URL) -> SiteStatus {
+    let verdict = cache.get(url)
+    return SiteStatus(
+      site: eTLDPlusOne(url.host ?? ""),
+      rule: siteRules.rule(for: url),
+      verdict: verdict,
+      checkedAt: cache.storedAt(url),
+      blockedCategories: verdict?.categories.intersection(decisionPolicy.blockedCategories) ?? [])
+  }
+
+  /// Drops what Scout knows about `url` and checks it again. For the "Check
+  /// again" action: a site that changed since its verdict was cached is
+  /// otherwise stuck with the old answer for up to a week.
+  public func recheck(_ url: URL) async {
+    cache.forget(url)
+    await guard_.refresh(url)
+  }
+
+  /// How many sites Scout has a verdict for right now. The only visible trace
+  /// of a check that passed, so Settings can say what the browser has done
+  /// rather than only what it stopped.
+  public var checkedSiteCount: Int { cache.count }
 
   /// Called for every checked navigation in a private tab.
   public func notePrivateNavigation(to url: URL) {

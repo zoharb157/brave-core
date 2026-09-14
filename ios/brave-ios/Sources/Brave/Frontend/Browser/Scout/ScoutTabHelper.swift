@@ -72,7 +72,7 @@ public class ScoutTabHelper: TabPolicyDecider {
     // A results page is a wall of thumbnails and snippets: unfiltered, it shows
     // explicit material before anything is clicked. Someone who blocks adult
     // content gets the engine's own filter pinned on.
-    if Preferences.ScoutBlocking.chosen.contains(.adult),
+    if Preferences.Scout.safeSearch.value,
       let filtered = SafeSearch.enforced(requestURL)
     {
       tab.loadRequest(URLRequest(url: filtered))
@@ -95,6 +95,7 @@ public class ScoutTabHelper: TabPolicyDecider {
         Task { await services.guard_.refresh(requestURL) }
       }
       if decision.type == .allow { return .allow }
+      Self.note(decision, for: requestURL, in: tab)
       ScoutPages.record(decision, for: requestURL)
       showScoutPage(for: requestURL, in: tab)
       return .cancel
@@ -108,6 +109,9 @@ public class ScoutTabHelper: TabPolicyDecider {
 
     Task { @MainActor [weak self, weak tab] in
       let decision = await services.guard_.decide(requestURL)
+      if decision.type != .allow, let tab {
+        Self.note(decision, for: requestURL, in: tab)
+      }
       ScoutPages.record(decision, for: requestURL)
       // Only act if the tab is still showing this site's checking page; if the
       // user has moved on, the recorded decision just waits in the cache.
@@ -124,6 +128,15 @@ public class ScoutTabHelper: TabPolicyDecider {
       }
     }
     return .cancel
+  }
+
+  /// Records a stopped navigation, so Settings → Protection can show what
+  /// happened. A private tab is excluded: the point of one is that the visit
+  /// leaves no trace, and a log naming the site would be exactly that trace.
+  private static func note(_ decision: Scout.Decision, for url: URL, in tab: some TabState) {
+    guard !tab.isPrivate, let host = url.host else { return }
+    ScoutServices.shared.blockLog.record(
+      site: host, reason: decision.reason, categories: decision.matchedCategories)
   }
 
   /// One-shot pass for the navigation this helper re-issues after an allow.

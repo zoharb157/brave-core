@@ -4,6 +4,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import Foundation
+import Scout
 import Shared
 import Web
 import WebKit
@@ -37,6 +38,8 @@ class ScoutScriptHandler: TabContentScript {
     switch action {
     case "proceed":
       proceed(to: siteURL, tab: tab)
+    case "always":
+      allowFromNowOn(siteURL, tab: tab)
     case "back":
       goBack(tab: tab)
     default:
@@ -48,6 +51,27 @@ class ScoutScriptHandler: TabContentScript {
     MainActor.assumeIsolated {
       if let etldP1 = siteURL.baseDomain {
         tab.proceedAnywaysDomainList?.insert(etldP1)
+      }
+      if let host = siteURL.host {
+        ScoutServices.shared.blockLog.noteContinued(site: host)
+      }
+      tab.loadRequest(URLRequest(url: siteURL))
+    }
+  }
+
+  /// The standing version of "continue anyway": the site is allowed from now
+  /// on, in every tab and after a relaunch, until the user changes it in
+  /// Settings → Protection.
+  ///
+  /// A page the user had blocked by hand offers this as "Unblock this site",
+  /// which is the same write with the opposite starting point — clearing the
+  /// rule would put the site straight back under whatever blocked it first, so
+  /// both paths set an explicit allow.
+  private func allowFromNowOn(_ siteURL: URL, tab: some TabState) {
+    MainActor.assumeIsolated {
+      ScoutServices.shared.siteRules.set(.allow, for: siteURL)
+      if let host = siteURL.host {
+        ScoutServices.shared.blockLog.noteContinued(site: host)
       }
       tab.loadRequest(URLRequest(url: siteURL))
     }

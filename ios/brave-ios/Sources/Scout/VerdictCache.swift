@@ -35,6 +35,18 @@ public final class VerdictCache {
     lru.insert(k, at: 0)
   }
 
+  /// How many sites have a verdict on hand. Surfaced in Settings as the work
+  /// Scout has already done, which is otherwise invisible: a site that was
+  /// checked and passed looks exactly like one nothing happened to.
+  public var count: Int { entries.count }
+
+  /// When the verdict on hand for `url` was fetched, if there is one. Lets
+  /// the browser say how fresh its answer is instead of presenting every
+  /// verdict as if it had just arrived.
+  public func storedAt(_ url: URL) -> Date? {
+    entries[key(url)]?.storedAt
+  }
+
   public func get(_ url: URL) -> Verdict? {
     lookup(url, grace: 0)?.verdict
   }
@@ -70,6 +82,15 @@ public final class VerdictCache {
 
   /// Forget every verdict — called when the user clears browsing history, since
   /// the keys are the sites they visited.
+  /// Drops the verdict for `url`, so the next decision has to fetch a fresh
+  /// one. Behind "Check again": a site that changed after being cached is
+  /// otherwise stuck with the old answer until it expires.
+  public func forget(_ url: URL) {
+    let k = key(url)
+    entries[k] = nil
+    lru.removeAll { $0 == k }
+  }
+
   public func removeAll() {
     entries.removeAll()
     lru.removeAll()

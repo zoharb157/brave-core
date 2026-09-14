@@ -4,7 +4,7 @@ public enum DecisionType { case allow, warn, block }
 
 /// Spec §4.4: why a Decision came out the way it did. Distinct from
 /// `DecisionType` (what happened) — this says which pipeline stage decided.
-public enum DecisionReason: Equatable { case policyList, scheme, security, category, unavailable }
+public enum DecisionReason: Equatable, Sendable { case policyList, scheme, security, category, unavailable }
 
 public struct Decision {
   public let type: DecisionType

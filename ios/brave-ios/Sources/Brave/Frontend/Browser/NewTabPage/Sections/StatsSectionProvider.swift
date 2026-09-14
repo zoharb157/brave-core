@@ -8,22 +8,23 @@ import BraveStrings
 import BraveUI
 import Foundation
 import Preferences
+import Scout
 import Shared
 import SwiftUI
 import UIKit
 
 class StatsSectionProvider: NSObject, NTPSectionProvider {
   private let isPrivateBrowsing: Bool
-  var openPrivacyHubPressed: () -> Void
+  var openProtectionPressed: () -> Void
   var hidePrivacyHubPressed: () -> Void
 
   init(
     isPrivateBrowsing: Bool,
-    openPrivacyHubPressed: @escaping () -> Void,
+    openProtectionPressed: @escaping () -> Void,
     hidePrivacyHubPressed: @escaping () -> Void
   ) {
     self.isPrivateBrowsing = isPrivateBrowsing
-    self.openPrivacyHubPressed = openPrivacyHubPressed
+    self.openProtectionPressed = openProtectionPressed
     self.hidePrivacyHubPressed = hidePrivacyHubPressed
   }
 
@@ -47,7 +48,7 @@ class StatsSectionProvider: NSObject, NTPSectionProvider {
       StatsNTPWidget(
         isPrivateBrowsing: isPrivateBrowsing
       ) { [weak self] in
-        self?.openPrivacyHubPressed()
+        self?.openProtectionPressed()
       } hidePrivacyHubPressed: { [weak self] in
         self?.hidePrivacyHubPressed()
       }
@@ -93,13 +94,24 @@ class StatsNTPWidgetCell: UICollectionViewCell, CollectionViewReusable {
   }
 }
 
+/// The new tab's summary of what Scout has done.
+///
+/// Brave's version of this widget counts trackers and ads it removed from
+/// inside pages. That is real work, but it isn't what Scout is for, and it
+/// left the browser's actual job — deciding whether a site should open at
+/// all — with no presence on the screen someone sees most often. These are
+/// Scout's own numbers, and tapping them opens Settings → Protection.
 struct StatsNTPWidget: View {
   var isPrivateBrowsing: Bool
 
-  var openPrivacyHubPressed: () -> Void
+  var openProtectionPressed: () -> Void
   var hidePrivacyHubPressed: () -> Void
 
-  private let stats = BraveGlobalShieldStats.shared
+  /// Read once, when the new tab appears. These change on navigation, not
+  /// while a new tab sits on screen.
+  @State private var checked = 0
+  @State private var blocked = 0
+  @State private var allowed = 0
 
   private struct StatLabeledContentStyle: LabeledContentStyle {
     func makeBody(configuration: Configuration) -> some View {
@@ -135,37 +147,33 @@ struct StatsNTPWidget: View {
     }
   }
 
-  private var adblockCount: Int {
-    stats.adblock + stats.trackingProtection
-  }
-
   var body: some View {
     Button {
-      openPrivacyHubPressed()
+      openProtectionPressed()
     } label: {
       VStack(spacing: 8) {
-        Label(Strings.PrivacyHub.privacyReportsTitle, braveSystemImage: "leo.shield.done-filled")
+        Label(Strings.ScoutProtection.title, systemImage: "checkmark.shield.fill")
           .foregroundStyle(.white)
           .font(.footnote.weight(.semibold))
           .frame(maxWidth: .infinity, alignment: .leading)
         HStack {
           LabeledContent {
-            Text(adblockCount.kFormattedNumber)
-              .foregroundStyle(Color(braveSystemName: .primitiveOrange70))
-          } label: {
-            Text(Strings.Shields.shieldsAdAndTrackerStats.capitalized)
-          }
-          LabeledContent {
-            Text(stats.dataSaved)
-              .foregroundStyle(Color(braveSystemName: .primitiveBlurple70))
-          } label: {
-            Text(Strings.Shields.dataSavedStat)
-          }
-          LabeledContent {
-            Text(stats.timeSaved)
+            Text(checked.kFormattedNumber)
               .foregroundStyle(.white)
           } label: {
-            Text(Strings.Shields.shieldsTimeStats)
+            Text(Strings.ScoutProtection.statusChecked)
+          }
+          LabeledContent {
+            Text(blocked.kFormattedNumber)
+              .foregroundStyle(Color(braveSystemName: .primitiveOrange70))
+          } label: {
+            Text(Strings.ScoutProtection.statusBlocked)
+          }
+          LabeledContent {
+            Text(allowed.kFormattedNumber)
+              .foregroundStyle(Color(braveSystemName: .primitiveBlurple70))
+          } label: {
+            Text(Strings.ScoutProtection.statusAllowed)
           }
         }
         .labeledContentStyle(StatLabeledContentStyle())
@@ -185,5 +193,11 @@ struct StatsNTPWidget: View {
     }
     .disabled(isPrivateBrowsing)
     .dynamicTypeSize(.xSmall..<DynamicTypeSize.xLarge)
+    .onAppear {
+      let services = ScoutServices.shared
+      checked = services.checkedSiteCount
+      blocked = services.blockLog.count
+      allowed = services.siteRules.sites(.allow).count
+    }
   }
 }

@@ -199,40 +199,17 @@ class NewTabPageViewController: UIViewController {
     sections = [
       StatsSectionProvider(
         isPrivateBrowsing: tab.isPrivate,
-        openPrivacyHubPressed: { [weak self] in
-          guard let self, let tab = browserTab else { return }
-          if privateBrowsingManager.isPrivateBrowsing == true {
-            return
-          }
-
-          let isOriginPurchased =
-            BraveOriginServiceFactory.get(profile: tab.profile)?.isPurchased() == true
-          let host = UIHostingController(
-            rootView: PrivacyReportsManager.prepareView(
-              isPrivateBrowsing: privateBrowsingManager.isPrivateBrowsing,
-              isOriginPurchased: isOriginPurchased
-            )
-          )
-          host.rootView.onDismiss = { [weak self] in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-              guard let self = self else { return }
-
-              // Handle App Rating
-              // User finished viewing the privacy report (tapped close)
-              AppReviewManager.shared.handleAppReview(for: .revised, using: self)
-            }
-          }
-
-          host.rootView.openPrivacyReportsUrl = { [weak self] in
-            self?.delegate?.navigateToInput(
-              URL.brave.privacyFeatures.absoluteString,
-              inNewTab: false,
-              // Privacy Reports view is unavailable in private mode.
-              switchingToPrivateMode: false
-            )
-          }
-
-          present(host, animated: true)
+        // The widget now reports Scout's own work, so it leads where that
+        // work is configured. Brave's privacy report counted trackers removed
+        // from inside pages — not what this browser is for, and it isn't the
+        // question someone taps a protection summary to answer.
+        openProtectionPressed: { [weak self] in
+          guard let self, !privateBrowsingManager.isPrivateBrowsing else { return }
+          var view = ScoutProtectionView()
+          view.onDone = { [weak self] in self?.dismiss(animated: true) }
+          present(
+            UINavigationController(rootViewController: UIHostingController(rootView: view)),
+            animated: true)
         },
         hidePrivacyHubPressed: { [weak self] in
           self?.hidePrivacyHub()

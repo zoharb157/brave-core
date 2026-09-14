@@ -3,7 +3,7 @@ import Foundation
 /// A content category the user can choose to block. Distinct from security
 /// (phishing/malware/scam) — there is no parent here, so blocking a category
 /// is always the user's own preference, never enforced on someone else.
-public enum ContentCategory: String, CaseIterable, Hashable {
+public enum ContentCategory: String, CaseIterable, Hashable, Sendable {
   case adult, gambling, ads
 
   /// Parses a single wire string from the backend's `categories: [String]`

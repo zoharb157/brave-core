@@ -36,7 +36,7 @@ final class ShieldsActivityItemSourceProvider {
       let statsInfoView = UIHostingController(
         rootView: StatsNTPWidget(
           isPrivateBrowsing: isPrivateBrowsing,
-          openPrivacyHubPressed: {},
+          openProtectionPressed: {},
           hidePrivacyHubPressed: {}
         )
       ).view!

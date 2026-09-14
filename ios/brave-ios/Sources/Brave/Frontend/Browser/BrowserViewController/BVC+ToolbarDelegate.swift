@@ -485,6 +485,13 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
               guard let selectedTab = selectedTab else { return }
               self?.shredData(for: url, in: selectedTab)
             }
+          case .changedSiteRule:
+            // A standing decision only means something once the page is loaded
+            // under it: allowing takes effect on the next navigation, and
+            // blocking has to take the page off the screen.
+            weakPopover?.dismiss(animated: true) {
+              selectedTab?.loadRequest(URLRequest(url: url))
+            }
           }
         }
       ),

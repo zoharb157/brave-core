@@ -27,6 +27,9 @@ struct ShieldsPanelView: View {
     case navigate(NavigationTarget, dismiss: Bool)
     case changedShieldSettings
     case shredSiteData
+    /// The user set or cleared a standing decision about this site, so the
+    /// page has to be loaded again under it.
+    case changedSiteRule
   }
 
   private let url: URL
@@ -66,6 +69,16 @@ struct ShieldsPanelView: View {
   var body: some View {
     ScrollView {
       VStack(spacing: 16) {
+        siteHeaderView
+
+        // Scout's own read on this site comes first: it is the reason the
+        // browser exists, and it is the part that is otherwise invisible when
+        // the answer is "this is fine". Brave's ad and tracker controls stay
+        // below, unchanged.
+        ScoutSitePanelView(url: url) { _ in
+          actionCallback(.changedSiteRule)
+        }
+
         headerView
 
         if viewModel.shieldsEnabled {
@@ -96,19 +109,25 @@ struct ShieldsPanelView: View {
     .toolbarVisibility(.hidden, for: .navigationBar)
   }
 
+  /// The site this panel is about. Split out from the shields toggle so
+  /// Scout's read on that site can sit directly under its name, where it
+  /// answers the question the panel was opened to answer.
+  @ViewBuilder @MainActor private var siteHeaderView: some View {
+    HStack(alignment: .center, spacing: 8) {
+      StyledFaviconImage(
+        url: url.absoluteString,
+        isPrivateBrowsing: viewModel.isPrivateBrowsing
+      )
+      URLElidedText(text: displayHost)
+        .font(.title2)
+        .foregroundStyle(Color(braveSystemName: .textPrimary))
+    }
+    .frame(minWidth: .zero, maxWidth: .infinity, alignment: .center)
+    .padding(.horizontal)
+  }
+
   @ViewBuilder @MainActor private var headerView: some View {
     VStack(alignment: .center, spacing: 8) {
-      HStack(alignment: .center, spacing: 8) {
-        StyledFaviconImage(
-          url: url.absoluteString,
-          isPrivateBrowsing: viewModel.isPrivateBrowsing
-        )
-        URLElidedText(text: displayHost)
-          .font(.title2)
-          .foregroundStyle(Color(braveSystemName: .textPrimary))
-      }
-      .frame(minWidth: .zero, alignment: .center)
-
       ShieldsSwitchView(isEnabled: $viewModel.shieldsEnabled)
         .frame(
           width: ShieldsSwitch.size.width,

@@ -18,6 +18,10 @@ public struct ScoutInterstitialModel: Equatable {
   public let reasons: [String]
   public let primaryLabel: String
   public let secondaryLabel: String
+  /// A standing decision about this site, offered only where one makes sense:
+  /// nil for a malicious page, where the honest offer is a one-time
+  /// "continue anyway" and not a permanent exception.
+  public let alwaysLabel: String?
 }
 
 public enum ScoutInterstitial {
@@ -73,6 +77,18 @@ public enum ScoutInterstitial {
       reasons = []
     }
 
+    // Continuing past a block should be able to stick. Repeating the same
+    // override on every visit reads as a browser that isn't listening, and a
+    // parent who wants one site allowed has nothing else to reach for. The
+    // exception is a page the check found actually dangerous: there the only
+    // honest offer is this once.
+    let alwaysLabel: String?
+    switch reason {
+    case .category: alwaysLabel = "Always allow this site"
+    case .policyList: alwaysLabel = "Unblock this site"
+    case .security, .scheme, .unavailable: alwaysLabel = nil
+    }
+
     return ScoutInterstitialModel(
       chipText: chipText,
       isBlocking: type == .block,
@@ -80,7 +96,8 @@ public enum ScoutInterstitial {
       summary: summary,
       reasons: reasons,
       primaryLabel: "Go back",
-      secondaryLabel: type == .block ? "Continue anyway" : "Continue")
+      secondaryLabel: type == .block ? "Continue anyway" : "Continue",
+      alwaysLabel: alwaysLabel)
   }
 
   public static func html(type: DecisionType, verdict: Verdict?, reason: DecisionReason,
@@ -100,6 +117,10 @@ public enum ScoutInterstitial {
     let reasonsBlock = m.reasons.isEmpty ? "" : "<ul class=\"reasons\">\(reasonsHTML)</ul>"
     let hostBlock = host.isEmpty ? "" : "<p class=\"host\">\(htmlEscaped(host))</p>"
     let tone = m.isBlocking ? "block" : "warn"
+    let alwaysBlock =
+      m.alwaysLabel.map {
+        "<button class=\"quiet\" onclick=\"webkit.messageHandlers.scout.postMessage('always')\">\(htmlEscaped($0))</button>"
+      } ?? ""
 
     return """
     <!doctype html><html><head><meta charset="utf-8">
@@ -116,6 +137,7 @@ public enum ScoutInterstitial {
         <div class="actions">
           <button class="primary" onclick="webkit.messageHandlers.scout.postMessage('back')">\(m.primaryLabel)</button>
           <button class="quiet" onclick="webkit.messageHandlers.scout.postMessage('proceed')">\(m.secondaryLabel)</button>
+          \(alwaysBlock)
         </div>
       </main>
     </body></html>

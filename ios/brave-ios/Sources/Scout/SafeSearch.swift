@@ -1,5 +1,25 @@
 import Foundation
 
+/// Sites that are pinned to their own restricted mode by a request header
+/// rather than a query parameter.
+///
+/// YouTube reads `YouTube-Restrict` on each request; networks use it to hold a
+/// whole school in Restricted Mode. A browser is the client, so it can set the
+/// header itself — no interception needed. This covers YouTube opened as a web
+/// page; the YouTube app has its own setting and is out of reach.
+public enum RestrictedMode {
+  public static let header = "YouTube-Restrict"
+  public static let strict = "Strict"
+
+  private static let sites: Set<String> = ["youtube.com", "youtube-nocookie.com", "youtu.be"]
+
+  /// The header to add for `url`, or nil if the site doesn't take one.
+  public static func headerValue(for url: URL) -> String? {
+    guard let host = url.host, sites.contains(eTLDPlusOne(host)) else { return nil }
+    return strict
+  }
+}
+
 /// Forces search engines into their filtered mode.
 ///
 /// The guard checks the pages someone opens, but a search results page is a
@@ -18,7 +38,8 @@ public enum SafeSearch {
     ({ $0 == "duckduckgo.com" }, "kp", "1"),
     ({ $0 == "yahoo.com" }, "vm", "r"),
     ({ $0 == "qwant.com" }, "safesearch", "2"),
-    ({ $0 == "ecosia.org" }, "sfs", "true"),
+    ({ $0 == "ecosia.org" }, "safesearch", "2"),
+    ({ $0.hasPrefix("yandex.") }, "fyandex", "1"),
   ]
 
   /// The same URL with the engine's filter pinned on, or nil when nothing needs
