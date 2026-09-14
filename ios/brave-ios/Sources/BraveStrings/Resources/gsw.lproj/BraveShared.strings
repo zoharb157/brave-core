@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Suechergebnis filtere";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Schaltet de Sicherheitsmodus vo de Suechmaschine ii, so dass explizierti Vorschaubilder gar nöd uf d Ergebnisssiite chömed.";
+"scoutProtection.safeSearchDetail" = "Schaltet de Sicherheitsmodus vo Suechmaschine und YouTube ii, so dass explizierti Ergebnis gar nöd uf d Siite chömed.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d vo %d aktiv";

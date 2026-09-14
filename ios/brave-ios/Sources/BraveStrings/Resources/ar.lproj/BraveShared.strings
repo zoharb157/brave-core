@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "تصفية نتائج البحث";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "يشغّل وضع الأمان الخاص بمحرك البحث نفسه، حتى لا تصل الصور المصغّرة الصريحة إلى صفحة النتائج أصلاً.";
+"scoutProtection.safeSearchDetail" = "يشغّل وضع الأمان المدمج في محركات البحث وفي YouTube، حتى لا تصل النتائج الصريحة إلى الصفحة أصلاً.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "‏%d من %d مفعّل";

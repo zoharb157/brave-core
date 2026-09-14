@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Filtrera sökresultat";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Slår på sökmotorns eget säkra läge, så att explicita miniatyrer aldrig når resultatsidan.";
+"scoutProtection.safeSearchDetail" = "Slår på det säkra läge som finns inbyggt i sökmotorer och YouTube, så att explicita resultat aldrig når sidan.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d av %d på";

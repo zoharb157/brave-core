@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Filtrează rezultatele căutării";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Activează modul sigur al motorului de căutare, astfel încât miniaturile explicite să nu ajungă niciodată pe pagina de rezultate.";
+"scoutProtection.safeSearchDetail" = "Activează modul sigur încorporat în motoarele de căutare și în YouTube, astfel încât rezultatele explicite să nu ajungă niciodată pe pagină.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d din %d active";

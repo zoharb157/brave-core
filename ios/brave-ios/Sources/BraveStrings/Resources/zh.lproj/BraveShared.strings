@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "过滤搜索结果";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "开启搜索引擎自带的安全模式，让露骨缩略图根本不会出现在结果页上。";
+"scoutProtection.safeSearchDetail" = "开启搜索引擎和 YouTube 内建的安全模式，让露骨结果根本不会出现在页面上。";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "已开启 %d/%d";

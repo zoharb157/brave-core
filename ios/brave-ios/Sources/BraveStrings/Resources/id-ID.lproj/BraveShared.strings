@@ -3768,7 +3768,7 @@
 "scoutProtection.safeSearchTitle" = "Filter hasil penelusuran";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Menyalakan mode aman milik mesin pencari itu sendiri, sehingga gambar mini vulgar tidak pernah sampai ke halaman hasil.";
+"scoutProtection.safeSearchDetail" = "Menyalakan mode aman bawaan mesin pencari dan YouTube, sehingga hasil vulgar tidak pernah sampai ke halaman.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d dari %d aktif";

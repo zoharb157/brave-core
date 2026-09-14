@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Keresési találatok szűrése";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Bekapcsolja a keresőmotor saját biztonságos módját, így a szókimondó bélyegképek el sem jutnak a találati oldalra.";
+"scoutProtection.safeSearchDetail" = "Bekapcsolja a keresőmotorokba és a YouTube-ba épített biztonságos módot, így a szókimondó találatok el sem jutnak az oldalra.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d/%d bekapcsolva";

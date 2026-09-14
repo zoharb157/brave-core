@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Zoekresultaten filteren";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Zet de veilige modus van de zoekmachine zelf aan, zodat expliciete miniaturen de resultatenpagina nooit bereiken.";
+"scoutProtection.safeSearchDetail" = "Zet de veilige modus aan die in zoekmachines en YouTube is ingebouwd, zodat expliciete resultaten de pagina nooit bereiken.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d van %d aan";

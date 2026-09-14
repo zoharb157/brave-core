@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Filtruj wyniki wyszukiwania";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Włącza tryb bezpieczny samej wyszukiwarki, dzięki czemu jednoznaczne miniatury nigdy nie trafiają na stronę wyników.";
+"scoutProtection.safeSearchDetail" = "Włącza tryb bezpieczny wbudowany w wyszukiwarki i YouTube, dzięki czemu jednoznaczne wyniki nigdy nie trafiają na stronę.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "Włączone: %d z %d";

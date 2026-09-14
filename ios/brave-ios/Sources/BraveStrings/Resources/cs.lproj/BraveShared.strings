@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Filtrovat výsledky vyhledávání";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Zapne bezpečný režim samotného vyhledávače, aby se explicitní náhledy nikdy nedostaly na stránku s výsledky.";
+"scoutProtection.safeSearchDetail" = "Zapne bezpečný režim zabudovaný ve vyhledávačích a na YouTube, aby se explicitní výsledky nikdy nedostaly na stránku.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "Zapnuto %d ze %d";

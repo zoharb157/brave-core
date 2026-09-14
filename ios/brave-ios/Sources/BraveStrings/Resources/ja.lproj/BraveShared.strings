@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "検索結果をフィルタリング";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "検索エンジン自体のセーフモードを有効にし、露骨なサムネイルが結果ページに表示されないようにします。";
+"scoutProtection.safeSearchDetail" = "検索エンジンと YouTube に組み込まれたセーフモードを有効にし、露骨な結果がページに表示されないようにします。";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d / %d 個オン";

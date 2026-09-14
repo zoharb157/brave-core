@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Φιλτράρισμα αποτελεσμάτων αναζήτησης";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Ενεργοποιεί την ασφαλή λειτουργία της ίδιας της μηχανής αναζήτησης, ώστε οι ρητές μικρογραφίες να μη φτάνουν ποτέ στη σελίδα αποτελεσμάτων.";
+"scoutProtection.safeSearchDetail" = "Ενεργοποιεί την ασφαλή λειτουργία που είναι ενσωματωμένη στις μηχανές αναζήτησης και στο YouTube, ώστε τα ρητά αποτελέσματα να μη φτάνουν ποτέ στη σελίδα.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d από %d ενεργά";

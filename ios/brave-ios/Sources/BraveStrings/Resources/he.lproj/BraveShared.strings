@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "סינון תוצאות חיפוש";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "מפעיל את מצב הבטיחות של מנוע החיפוש עצמו, כך שתמונות ממוזערות בוטות לא מגיעות בכלל לדף התוצאות.";
+"scoutProtection.safeSearchDetail" = "מפעיל את מצב הבטיחות המובנה במנועי חיפוש וב-YouTube, כך שתוצאות בוטות לא מגיעות בכלל לדף.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "‏%d מתוך %d פעילים";

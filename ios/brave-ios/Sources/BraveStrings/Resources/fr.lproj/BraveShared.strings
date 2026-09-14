@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Filtrer les résultats de recherche";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Active le mode sécurisé du moteur de recherche, pour que les vignettes explicites n'atteignent jamais la page de résultats.";
+"scoutProtection.safeSearchDetail" = "Active le mode sécurisé intégré aux moteurs de recherche et à YouTube, pour que les résultats explicites n'atteignent jamais la page.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d sur %d activés";

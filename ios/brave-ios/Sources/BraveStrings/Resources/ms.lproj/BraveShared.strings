@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Tapis hasil carian";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Menghidupkan mod selamat enjin carian itu sendiri, supaya imej kecil lucah tidak pernah sampai ke halaman hasil.";
+"scoutProtection.safeSearchDetail" = "Menghidupkan mod selamat terbina dalam enjin carian dan YouTube, supaya hasil lucah tidak pernah sampai ke halaman.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d daripada %d hidup";

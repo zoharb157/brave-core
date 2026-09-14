@@ -88,7 +88,7 @@ extension Strings {
       "scoutProtection.safeSearchDetail",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Turns on the search engine's own safe mode, so explicit thumbnails never reach the results page.",
+      value: "Turns on the safe mode built into search engines and YouTube, so explicit results never reach the page.",
       comment: "Explanation of the search filtering setting"
     )
     public static let categoriesSummary = NSLocalizedString(

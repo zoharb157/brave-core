@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Филтриране на резултатите от търсене";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Включва безопасния режим на самата търсачка, така че явни миниатюри изобщо да не стигат до страницата с резултати.";
+"scoutProtection.safeSearchDetail" = "Включва безопасния режим, вграден в търсачките и YouTube, така че явни резултати изобщо да не стигат до страницата.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "Включени %d от %d";

@@ -1,22 +1,63 @@
 import Foundation
 
-/// Sites that are pinned to their own restricted mode by a request header
-/// rather than a query parameter.
+/// YouTube's Restricted Mode, as a browser can actually set it.
 ///
-/// YouTube reads `YouTube-Restrict` on each request; networks use it to hold a
-/// whole school in Restricted Mode. A browser is the client, so it can set the
-/// header itself — no interception needed. This covers YouTube opened as a web
-/// page; the YouTube app has its own setting and is out of reach.
+/// The documented `YouTube-Restrict` header is for network equipment that
+/// rewrites every request on the wire; sent by a client it does nothing —
+/// youtube.com answers `SafetyMode: false` with and without it. What the
+/// site's own Restricted Mode switch writes is a cookie, and that is sent with
+/// every request the page makes, including the SPA's own fetches. So Scout
+/// writes the same cookie the switch would.
+///
+/// This covers YouTube opened as a web page; the YouTube app has its own
+/// setting and is out of reach.
 public enum RestrictedMode {
-  public static let header = "YouTube-Restrict"
-  public static let strict = "Strict"
+  public static let cookieName = "PREF"
+  /// `f2` is the flag bank the Restricted Mode switch sets; 0x8000000 is the
+  /// bit for it.
+  public static let cookieValue = "f2=8000000"
+  /// Leading dot: the cookie has to reach m.youtube.com and www.youtube.com
+  /// alike, since which one you land on depends on the device.
+  public static let cookieDomain = ".youtube.com"
 
   private static let sites: Set<String> = ["youtube.com", "youtube-nocookie.com", "youtu.be"]
 
-  /// The header to add for `url`, or nil if the site doesn't take one.
-  public static func headerValue(for url: URL) -> String? {
-    guard let host = url.host, sites.contains(eTLDPlusOne(host)) else { return nil }
-    return strict
+  /// Whether `url` is a site whose Restricted Mode this cookie governs.
+  public static func governs(_ url: URL) -> Bool {
+    guard let host = url.host else { return false }
+    return sites.contains(eTLDPlusOne(host))
+  }
+
+  /// Whether `value` (an existing PREF cookie) already has Restricted Mode on.
+  ///
+  /// PREF carries the viewer's other choices — language, playback, appearance —
+  /// so it is amended rather than replaced, and left alone when the flag is
+  /// already there.
+  public static func isRestricted(_ value: String) -> Bool {
+    fields(value)["f2"].map { ($0 ?? 0) & 0x800_0000 != 0 } ?? false
+  }
+
+  /// `value` with Restricted Mode turned on, preserving every other field.
+  public static func restricting(_ value: String) -> String {
+    var seen = false
+    var parts = value.split(separator: "&", omittingEmptySubsequences: true).map { part -> String in
+      guard part.hasPrefix("f2=") else { return String(part) }
+      seen = true
+      let current = Int(part.dropFirst(3), radix: 16) ?? 0
+      return "f2=" + String(current | 0x800_0000, radix: 16)
+    }
+    if !seen { parts.append(cookieValue) }
+    return parts.joined(separator: "&")
+  }
+
+  private static func fields(_ value: String) -> [String: Int?] {
+    var out: [String: Int?] = [:]
+    for part in value.split(separator: "&") {
+      let pair = part.split(separator: "=", maxSplits: 1)
+      guard pair.count == 2 else { continue }
+      out[String(pair[0])] = Int(pair[1], radix: 16)
+    }
+    return out
   }
 }
 

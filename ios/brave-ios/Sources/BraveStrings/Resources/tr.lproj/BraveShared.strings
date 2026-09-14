@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Arama sonuçlarını filtrele";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Arama motorunun kendi güvenli modunu açar, böylece müstehcen küçük resimler sonuç sayfasına hiç ulaşmaz.";
+"scoutProtection.safeSearchDetail" = "Arama motorlarında ve YouTube'da yerleşik güvenli modu açar, böylece müstehcen sonuçlar sayfaya hiç ulaşmaz.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d/%d açık";

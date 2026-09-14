@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "過濾搜尋結果";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "開啟搜尋引擎內建的安全模式，讓露骨縮圖根本不會出現在結果頁上。";
+"scoutProtection.safeSearchDetail" = "開啟搜尋引擎和 YouTube 內建的安全模式，讓露骨結果根本不會出現在頁面上。";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "已開啟 %d/%d";

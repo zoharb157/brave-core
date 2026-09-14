@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "खोज परिणाम फ़िल्टर करें";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "सर्च इंजन का अपना सुरक्षित मोड चालू करता है, ताकि अश्लील थंबनेल परिणाम पृष्ठ तक पहुँचें ही नहीं।";
+"scoutProtection.safeSearchDetail" = "सर्च इंजनों और YouTube में मौजूद सुरक्षित मोड चालू करता है, ताकि अश्लील परिणाम पृष्ठ तक पहुँचें ही नहीं।";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d में से %d चालू";

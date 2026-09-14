@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Filtriraj rezultate pretraživanja";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Uključuje sigurni način rada same tražilice, tako da eksplicitne sličice nikada ne dođu na stranicu s rezultatima.";
+"scoutProtection.safeSearchDetail" = "Uključuje sigurni način rada ugrađen u tražilice i YouTube, tako da eksplicitni rezultati nikada ne dođu na stranicu.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "Uključeno %d od %d";

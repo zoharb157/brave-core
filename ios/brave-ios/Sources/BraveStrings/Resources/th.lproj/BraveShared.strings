@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "กรองผลการค้นหา";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "เปิดโหมดปลอดภัยของเครื่องมือค้นหาเอง เพื่อไม่ให้ภาพย่อที่โจ่งแจ้งไปถึงหน้าผลการค้นหาเลย";
+"scoutProtection.safeSearchDetail" = "เปิดโหมดปลอดภัยที่มีอยู่ในเครื่องมือค้นหาและ YouTube เพื่อไม่ให้ผลลัพธ์ที่โจ่งแจ้งไปถึงหน้าเว็บเลย";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "เปิดอยู่ %d จาก %d";

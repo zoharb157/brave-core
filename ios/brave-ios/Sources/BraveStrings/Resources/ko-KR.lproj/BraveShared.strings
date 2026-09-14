@@ -3768,7 +3768,7 @@
 "scoutProtection.safeSearchTitle" = "검색 결과 필터링";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "검색 엔진 자체의 세이프 모드를 켜서 노골적인 미리보기가 결과 페이지에 아예 나타나지 않도록 합니다.";
+"scoutProtection.safeSearchDetail" = "검색 엔진과 YouTube에 내장된 세이프 모드를 켜서 노골적인 결과가 페이지에 아예 나타나지 않도록 합니다.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "%d/%d 켜짐";

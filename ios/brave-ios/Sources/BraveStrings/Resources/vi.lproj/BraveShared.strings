@@ -3663,7 +3663,7 @@
 "scoutProtection.safeSearchTitle" = "Lọc kết quả tìm kiếm";
 
 /* Explanation of the search filtering setting */
-"scoutProtection.safeSearchDetail" = "Bật chế độ an toàn của chính công cụ tìm kiếm, để ảnh thu nhỏ phản cảm không bao giờ xuất hiện trên trang kết quả.";
+"scoutProtection.safeSearchDetail" = "Bật chế độ an toàn có sẵn trong các công cụ tìm kiếm và YouTube, để kết quả phản cảm không bao giờ xuất hiện trên trang.";
 
 /* Summary showing how many blockable content categories are switched on */
 "scoutProtection.categoriesSummary" = "Đang bật %d/%d";

@@ -79,6 +79,17 @@ public class ScoutTabHelper: TabPolicyDecider {
       return .cancel
     }
 
+    // YouTube's own Restricted Mode, asserted before the page loads. Re-asserted
+    // on every visit rather than set once: YouTube rewrites this cookie when
+    // anyone turns the switch off inside the site, and a filter a child can
+    // switch off from the page it is filtering is not one.
+    if Preferences.Scout.safeSearch.value, RestrictedMode.governs(requestURL),
+      await restrictYouTube(in: tab)
+    {
+      tab.loadRequest(request)
+      return .cancel
+    }
+
     let services = ScoutServices.shared
 
     // A site first seen in a private tab is checked like any other, but its
@@ -141,6 +152,35 @@ public class ScoutTabHelper: TabPolicyDecider {
 
   /// One-shot pass for the navigation this helper re-issues after an allow.
   private var approvedURL: URL?
+
+  /// Writes YouTube's Restricted Mode into the cookie the site itself reads.
+  ///
+  /// - Returns: whether anything changed, and so whether the navigation has to
+  ///   be made again to carry the new cookie. A visit that is already
+  ///   restricted returns false and goes straight through.
+  private func restrictYouTube(in tab: some TabState) async -> Bool {
+    guard let store = tab.configuration?.websiteDataStore.httpCookieStore else { return false }
+    let existing = await store.allCookies().first {
+      $0.name == RestrictedMode.cookieName && $0.domain.hasSuffix("youtube.com")
+    }
+    if let existing, RestrictedMode.isRestricted(existing.value) { return false }
+
+    let value = RestrictedMode.restricting(existing?.value ?? "")
+    guard
+      let cookie = HTTPCookie(properties: [
+        .name: RestrictedMode.cookieName,
+        .value: value,
+        .domain: RestrictedMode.cookieDomain,
+        .path: "/",
+        .secure: true,
+        // Two years, which is what YouTube itself sets. A session cookie would
+        // drop the setting the next time the app is relaunched.
+        .expires: Date().addingTimeInterval(2 * 365 * 24 * 3600),
+      ])
+    else { return false }
+    await store.setCookie(cookie)
+    return true
+  }
 
   private func showScoutPage(for siteURL: URL, in tab: some TabState) {
     guard let request = ScoutPages.pageRequest(for: siteURL) else { return }
