@@ -240,7 +240,12 @@ extension BrowserViewController {
     var steps: [any OnboardingStep] = [
       .scoutBlocking, .scoutPhoneFilter, .addToDock,
     ]
-    if !isDefault {
+    // Only when iOS would actually list Scout. Without the managed
+    // web-browser entitlement the picker this step sends people to does not
+    // contain Scout at all, so the first screen of the app would ask for
+    // something that cannot be done and illustrate it being done. The
+    // recurring reminder is already gated the same way.
+    if !isDefault, ScoutDefaultBrowserReminder.canBecomeDefaultBrowser {
       steps.insert(.defaultBrowsing, at: 0)
     }
     if ScoutFeatures.braveTelemetry,

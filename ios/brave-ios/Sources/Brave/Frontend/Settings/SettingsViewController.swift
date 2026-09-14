@@ -317,8 +317,11 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   }()
 
   private lazy var defaultBrowserSection: Static.Section = {
-    Static.Section(
-      rows: [
+    var rows: [Row] = []
+    // Hidden until iOS would list Scout in the picker this opens — see
+    // ScoutDefaultBrowserReminder.canBecomeDefaultBrowser.
+    if ScoutDefaultBrowserReminder.canBecomeDefaultBrowser {
+      rows.append(
         Row(
           text: Strings.setDefaultBrowserSettingsCell,
           selection: { [unowned self] in
@@ -334,7 +337,10 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           },
           image: UIImage(braveSystemNamed: "leo.set.as-default"),
           cellClass: MultilineButtonCell.self
-        ),
+        )
+      )
+    }
+    rows.append(contentsOf: [
         Row(
           text: Strings.addToDockSettingsCell,
           selection: { [weak self] in
@@ -382,8 +388,8 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           image: UIImage(braveSystemNamed: "leo.import.arrow"),
           cellClass: MultilineButtonCell.self
         ),
-      ]
-    )
+    ])
+    return Static.Section(rows: rows)
   }()
 
   private func setCellEnabled(_ enabled: Bool, rowUUID: UUID, sectionUUID: UUID) {

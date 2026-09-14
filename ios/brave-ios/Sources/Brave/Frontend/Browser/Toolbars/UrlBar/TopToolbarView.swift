@@ -278,6 +278,14 @@ class TopToolbarView: UIView, ToolbarProtocol {
 
     super.init(frame: .zero)
 
+    // A verdict lands after the navigation that asked for it, so the mark has
+    // to be redrawn when it arrives rather than only when the URL changes.
+    NotificationCenter.default.addObserver(
+      forName: ScoutServices.verdictDidChange, object: nil, queue: .main
+    ) { [weak self] _ in
+      MainActor.assumeIsolated { self?.refreshShieldsStatus() }
+    }
+
     locationContainer.contentView.addSubview(locationView)
 
     [scrollToTopButton, tabsButton].forEach(addSubview(_:))

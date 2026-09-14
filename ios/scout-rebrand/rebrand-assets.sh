@@ -5,8 +5,12 @@
 # alone changes nothing — the app links a compiled Assets.car. This rebuilds
 # that car with actool and drops it into every slice that exists.
 set -euo pipefail
-CATALOG="$1"           # path to Colors.xcassets
-shift
+# Every catalog that belongs in the framework, not just the colours. NalaAssets
+# carries Leo's symbols too, and compiling only Colors.xcassets produces an
+# Assets.car with no icons in it — which looks exactly like a toolbar whose
+# buttons have vanished.
+COLORS="$1"; SYMBOLS="$2"
+shift 2
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
 
 for FW in "$@"; do
@@ -16,9 +20,10 @@ for FW in "$@"; do
     *)           PLATFORM=iphoneos ;;
   esac
   rm -rf "$TMP/out"; mkdir -p "$TMP/out"
-  xcrun actool "$CATALOG" \
+  xcrun actool "$COLORS" "$SYMBOLS" \
     --compile "$TMP/out" \
     --platform "$PLATFORM" \
+    --enable-on-demand-resources NO \
     --minimum-deployment-target 18.0 \
     --output-format human-readable-text \
     --notices --warnings > /dev/null

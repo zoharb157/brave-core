@@ -143,6 +143,9 @@ public class ScoutTabHelper: TabPolicyDecider {
       guard let self, let tab, ScoutPages.siteURL(fromPageURL: tab.visibleURL) == requestURL
       else { return }
 
+      // The mark in the URL bar reads the stored verdict; tell it there is one.
+      NotificationCenter.default.post(name: ScoutServices.verdictDidChange, object: nil)
+
       if decision.type == .allow {
         approvedURL = requestURL
         replaceCheckingPage(with: requestURL, in: tab)

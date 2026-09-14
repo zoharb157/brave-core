@@ -195,6 +195,14 @@ public final class ScoutServices {
     }
   }
 
+  /// Posted once a decision for a page has been recorded.
+  ///
+  /// The URL bar's mark is drawn from the stored verdict, and nothing told it
+  /// when one arrived: a freshly checked page kept the generic shield until
+  /// some other event happened to refresh the toolbar, so the browser looked
+  /// like it had not checked a page it had just checked.
+  public static let verdictDidChange = Notification.Name("scout.verdict-did-change")
+
   /// How many links Scout has checked over the life of this install.
   ///
   /// A running tally, not the size of the verdict cache: that cache lives in
