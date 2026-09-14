@@ -4,6 +4,8 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import Foundation
+import Onboarding
+import Preferences
 import Scout
 import Shared
 import Web
@@ -65,6 +67,16 @@ public class ScoutTabHelper: TabPolicyDecider {
     if approvedURL == requestURL {
       approvedURL = nil
       return .allow
+    }
+
+    // A results page is a wall of thumbnails and snippets: unfiltered, it shows
+    // explicit material before anything is clicked. Someone who blocks adult
+    // content gets the engine's own filter pinned on.
+    if Preferences.ScoutBlocking.chosen.contains(.adult),
+      let filtered = SafeSearch.enforced(requestURL)
+    {
+      tab.loadRequest(URLRequest(url: filtered))
+      return .cancel
     }
 
     let services = ScoutServices.shared

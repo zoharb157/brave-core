@@ -2,10 +2,59 @@ import Foundation
 
 public enum LocalDecision { case allow, block, unknown }
 
+/// Public suffixes made of two labels, where the registrable name is the third
+/// from the right: bbc.co.uk, not co.uk.
+///
+/// Curated rather than the full Public Suffix List: the list is thousands of
+/// entries and needs updating, while these cover the overwhelming majority of
+/// real browsing. A suffix missing from here degrades to the last two labels,
+/// which is what every host used to get.
+///
+/// Mirrors MULTI_PART_PUBLIC_SUFFIXES in packages/cross/utils/url.ts — the same
+/// list serves the safety service, so the two must agree on what a site is.
+let multiPartPublicSuffixes: Set<String> = [
+  // United Kingdom
+  "co.uk", "org.uk", "gov.uk", "ac.uk", "me.uk", "net.uk", "sch.uk",
+  // Australia
+  "com.au", "net.au", "org.au", "edu.au", "gov.au",
+  // New Zealand
+  "co.nz", "net.nz", "org.nz",
+  // South Africa
+  "co.za", "org.za",
+  // Japan
+  "co.jp", "ne.jp", "or.jp", "ac.jp", "go.jp",
+  // Brazil
+  "com.br", "net.br", "org.br", "gov.br",
+  // Other Latin America
+  "com.mx", "com.ar",
+  // Turkey
+  "com.tr",
+  // East / Southeast Asia
+  "com.tw", "com.hk", "com.sg", "com.my", "com.ph", "com.vn",
+  "com.cn", "net.cn", "org.cn", "gov.cn",
+  // Korea
+  "co.kr", "or.kr",
+  // India
+  "co.in", "net.in", "org.in", "gov.in", "ac.in",
+  // Israel
+  "co.il", "org.il", "gov.il", "ac.il",
+  // Poland, Ukraine, Russia
+  "com.pl", "com.ua", "com.ru",
+  // Thailand, Egypt, Saudi Arabia, Nigeria, Pakistan, Bangladesh
+  "co.th", "com.eg", "com.sa", "com.ng", "com.pk", "com.bd",
+]
+
+/// The registrable domain: the name someone actually registered, plus its
+/// public suffix. Everything keyed per site — verdicts, allow and block lists,
+/// in-flight checks — hangs off this, so treating "co.uk" as a site would let
+/// one checked British site vouch for every other one.
 public func eTLDPlusOne(_ host: String) -> String {
-  let parts = host.split(separator: ".")
-  guard parts.count > 2 else { return host }
-  return parts.suffix(2).joined(separator: ".")
+  let parts = host.lowercased().split(separator: ".").map(String.init)
+  guard parts.count > 2 else { return parts.joined(separator: ".") }
+  let lastTwo = parts.suffix(2).joined(separator: ".")
+  let suffixLabels = multiPartPublicSuffixes.contains(lastTwo) ? 2 : 1
+  guard parts.count > suffixLabels else { return parts.joined(separator: ".") }
+  return parts.suffix(suffixLabels + 1).joined(separator: ".")
 }
 
 private func globMatch(_ text: String, _ pattern: String) -> Bool {
