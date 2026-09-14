@@ -160,7 +160,9 @@ struct ScoutProtectionView: View {
   /// of the product working is the times it got in the way.
   private var statusCard: some View {
     VStack(alignment: .leading, spacing: 14) {
-      HStack(spacing: 12) {
+      // Top-aligned: at accessibility text sizes the headline runs to four
+      // lines, and a centred icon then floats in the middle of them.
+      HStack(alignment: .top, spacing: 12) {
         Image(systemName: isDefaultBrowser ? "checkmark.shield.fill" : "exclamationmark.shield.fill")
           .font(.system(size: 26))
           .foregroundStyle(isDefaultBrowser ? scoutMint : scoutAmber)
@@ -174,23 +176,30 @@ struct ScoutProtectionView: View {
           .fixedSize(horizontal: false, vertical: true)
         Spacer(minLength: 0)
       }
-      HStack(spacing: 0) {
+      // Top-aligned so the three figures sit on one line. Centred, each
+      // column centres inside its own height, and at larger text sizes — where
+      // "Sites checked" wraps but "Blocked" does not — the numbers stagger.
+      HStack(alignment: .top, spacing: 0) {
         statistic(checkedCount, Strings.ScoutProtection.statusChecked)
         divider
         statistic(blockedTally, Strings.ScoutProtection.statusBlocked)
         divider
         statistic(allowedCount, Strings.ScoutProtection.statusAllowed)
       }
+      .fixedSize(horizontal: false, vertical: true)
     }
     .padding(18)
     .frame(maxWidth: .infinity, alignment: .leading)
     .background(scoutViolet, in: .rect(cornerRadius: 18, style: .continuous))
   }
 
+  /// Stretches to the tallest column rather than a fixed 28pt, which at
+  /// larger text sizes left a stub floating beside two-line labels.
   private var divider: some View {
     Rectangle()
       .fill(.white.opacity(0.2))
-      .frame(width: 1, height: 28)
+      .frame(width: 1)
+      .frame(maxHeight: .infinity)
   }
 
   private func statistic(_ value: Int, _ label: String) -> some View {

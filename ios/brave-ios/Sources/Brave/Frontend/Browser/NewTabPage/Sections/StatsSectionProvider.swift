@@ -115,12 +115,16 @@ struct StatsNTPWidget: View {
 
   private struct StatLabeledContentStyle: LabeledContentStyle {
     func makeBody(configuration: Configuration) -> some View {
-      VStack {
+      VStack(spacing: 2) {
         configuration.content
           .font(.title2)
         configuration.label
           .font(.caption)
           .foregroundStyle(.white)
+        // Pushes the label up so every column is as tall as the tallest,
+        // which is what keeps the three figures on one line once a label
+        // wraps at larger text sizes and its neighbours do not.
+        Spacer(minLength: 0)
       }
       .frame(maxWidth: .infinity)
       .multilineTextAlignment(.center)
@@ -156,7 +160,7 @@ struct StatsNTPWidget: View {
           .foregroundStyle(.white)
           .font(.footnote.weight(.semibold))
           .frame(maxWidth: .infinity, alignment: .leading)
-        HStack {
+        HStack(alignment: .top) {
           LabeledContent {
             Text(checked.kFormattedNumber)
               .foregroundStyle(.white)
