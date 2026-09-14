@@ -207,7 +207,7 @@ struct ScoutProtectionView: View {
           .font(.subheadline)
           .foregroundStyle(Color(braveSystemName: .textSecondary))
       } else {
-        ForEach(recent.prefix(5), id: \.date) { BlockRecordRow(record: $0) }
+        ForEach(recent.prefix(5)) { BlockRecordRow(record: $0) }
         if recent.count > 5 {
           NavigationLink(Strings.ScoutProtection.seeAll) {
             ScoutBlockLogView()
@@ -318,7 +318,7 @@ struct ScoutBlockLogView: View {
             .font(.subheadline)
             .foregroundStyle(Color(braveSystemName: .textSecondary))
         } else {
-          ForEach(recent, id: \.date) { BlockRecordRow(record: $0) }
+          ForEach(recent) { BlockRecordRow(record: $0) }
         }
       } footer: {
         Text(Strings.ScoutProtection.recentlyBlockedFooter)

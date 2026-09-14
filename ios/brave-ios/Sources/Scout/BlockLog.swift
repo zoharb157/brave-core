@@ -1,7 +1,13 @@
 import Foundation
 
 /// One blocked navigation, as it should read back to a person.
-public struct BlockRecord: Equatable, Sendable {
+public struct BlockRecord: Equatable, Identifiable, Sendable {
+  /// Site and time together: two entries share a site only when they are
+  /// minutes apart (`coalesce`), and two sites blocked in the same instant are
+  /// still told apart by name. A list keyed on the date alone would collide if
+  /// they ever weren't.
+  public var id: String { "\(site)@\(date.timeIntervalSince1970)" }
+
   /// The site, as the registrable domain — the same key rules and verdicts use.
   public let site: String
   public let reason: DecisionReason
