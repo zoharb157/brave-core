@@ -61,11 +61,6 @@ struct ShieldsPanelView: View {
       "\u{200E}\(URLFormatter.formatURLOrigin(forDisplayOmitSchemePathAndTrivialSubdomains: url.strippingBlobURLAuth.absoluteString))"
   }
 
-  private var shieldsEnabledAccessibiltyLabel: String {
-    viewModel.shieldsEnabled
-      ? Strings.Shields.statusValueUp : Strings.Shields.statusValueDown
-  }
-
   var body: some View {
     ScrollView {
       VStack(spacing: 16) {
@@ -79,10 +74,9 @@ struct ShieldsPanelView: View {
           actionCallback(.changedSiteRule)
         }
 
-        headerView
+        adBlockingCard
 
         if viewModel.shieldsEnabled {
-          shieldsReportView
           Text(Strings.Shields.siteBroken)
             .font(.caption)
             .foregroundStyle(Color(braveSystemName: .textSecondary))
@@ -126,77 +120,94 @@ struct ShieldsPanelView: View {
     .padding(.horizontal)
   }
 
-  @ViewBuilder @MainActor private var headerView: some View {
-    VStack(alignment: .center, spacing: 8) {
-      ShieldsSwitchView(isEnabled: $viewModel.shieldsEnabled)
-        .frame(
-          width: ShieldsSwitch.size.width,
-          height: ShieldsSwitch.size.height,
-          alignment: .center
-        ).padding(.top, 8)
-        .onChange(of: viewModel.shieldsEnabled) { _, newValue in
-          actionCallback(.changedShieldSettings)
+  /// Ad and tracker blocking, as one row.
+  ///
+  /// It used to open with a switch the size of a thumb, unlabelled until you
+  /// read the caption under it — the largest thing in a panel opened to find
+  /// out whether a site is safe, controlling the part of the panel that
+  /// answers that question least. A setting that belongs to this site reads
+  /// like the other per-site settings below it instead, and the number it
+  /// blocked moves under it where it says what the setting is doing.
+  @ViewBuilder @MainActor private var adBlockingCard: some View {
+    VStack(spacing: 0) {
+      HStack(alignment: .center, spacing: 12) {
+        Image(braveSystemName: "leo.shield.done")
+          .font(.body)
+          .foregroundStyle(Color(braveSystemName: .iconDefault))
+          .frame(width: 24)
+        VStack(alignment: .leading, spacing: 2) {
+          Text(Strings.Shields.statusTitle)
+            .font(.subheadline.weight(.medium))
+            .foregroundStyle(Color(braveSystemName: .textPrimary))
+          if viewModel.shieldsEnabled {
+            Text(verbatim: "\(viewModel.stats.total) \(Strings.Shields.blockedCountLabel)")
+              .font(.caption)
+              .foregroundStyle(Color(braveSystemName: .textSecondary))
+              .fixedSize(horizontal: false, vertical: true)
+          }
+        }
+        .fixedSize(horizontal: false, vertical: true)
+        Spacer(minLength: 8)
+        Toggle(Strings.Shields.statusTitle, isOn: $viewModel.shieldsEnabled)
+          .labelsHidden()
+          .tint(scoutViolet)
+          .onChange(of: viewModel.shieldsEnabled) { _, _ in
+            actionCallback(.changedShieldSettings)
+          }
+      }
+      .padding(14)
+
+      Divider().padding(.leading, 50)
+
+      // The link owns only its own label; the Spacer and the trailing
+      // controls sit in the row around it. A Spacer inside the label makes the
+      // row's ideal width unbounded, and this panel is sized from its
+      // content's preferred size — an unbounded one and it never appears.
+      HStack(spacing: 12) {
+        NavigationLink {
+          AboutBraveShieldsView()
+        } label: {
+          HStack(spacing: 12) {
+            Image(braveSystemName: "leo.help.outline")
+              .font(.body)
+              .foregroundStyle(Color(braveSystemName: .iconDefault))
+              .frame(width: 24)
+            Text(Strings.Shields.aboutBraveShieldsTitle)
+              .font(.subheadline)
+              .foregroundStyle(Color(braveSystemName: .textPrimary))
+          }
+          .contentShape(.rect)
+        }
+        .buttonStyle(.plain)
+
+        Spacer(minLength: 8)
+
+        if viewModel.shieldsEnabled, viewModel.stats.total > 0 {
+          Button {
+            actionCallback(.navigate(.shareStats, dismiss: false))
+          } label: {
+            Image(braveSystemName: "leo.share")
+              .font(.footnote)
+              .foregroundStyle(Color(braveSystemName: .iconDefault))
+              .contentShape(.rect)
+          }
+          .buttonStyle(.plain)
+          .accessibilityLabel(Strings.share)
         }
 
-      Group {
-        Text(verbatim: "\(Strings.Shields.statusTitle) ")
-          + Text(shieldsEnabledAccessibiltyLabel.uppercased()).bold()
+        Image(braveSystemName: "leo.carat.right")
+          .font(.footnote)
+          .foregroundStyle(Color(braveSystemName: .iconDefault))
       }
-      .font(.footnote)
-      .foregroundStyle(Color(braveSystemName: .textSecondary))
-      .padding(.bottom, 8)
-    }.padding(.horizontal)
-  }
-
-  @ViewBuilder private var shieldsReportView: some View {
-    HStack(spacing: 2) {
-      HStack {
-        Text(verbatim: "\(viewModel.stats.total)")
-          .frame(minWidth: 30, alignment: .center)
-          .foregroundStyle(Color(braveSystemName: .textPrimary))
-          .font(.title)
-          .padding(0)
-        Text(Strings.Shields.blockedCountLabel)
-          .foregroundStyle(Color(braveSystemName: .textPrimary))
-          .font(.caption)
-          .lineLimit(4)
-          .padding(0)
-          .frame(maxWidth: .infinity, alignment: .leading)
-      }
-      .padding()
-      .frame(maxWidth: .infinity, alignment: .center)
-      .background(Color(braveSystemName: .pageBackground).cornerRadius(8))
-
-      NavigationLink {
-        AboutBraveShieldsView()
-      } label: {
-        HStack {
-          Image(braveSystemName: "leo.help.outline")
-            .font(.title2)
-        }
-        .padding()
-        .contentShape(RoundedRectangle(cornerRadius: 8))
-      }
-      .foregroundStyle(Color(braveSystemName: .textPrimary))
-      .frame(maxHeight: .infinity, alignment: .center)
-      .background(Color(braveSystemName: .pageBackground).cornerRadius(8))
-
-      Button {
-        actionCallback(.navigate(.shareStats, dismiss: false))
-      } label: {
-        HStack {
-          Image(braveSystemName: "leo.share")
-            .font(.title2)
-        }
-        .padding()
-        .contentShape(RoundedRectangle(cornerRadius: 8))
-      }
-      .foregroundStyle(Color(braveSystemName: .textPrimary))
-      .buttonStyle(.plain)
-      .frame(maxHeight: .infinity, alignment: .center)
-      .background(Color(braveSystemName: .pageBackground).cornerRadius(8))
+      .padding(14)
     }
+    .frame(maxWidth: .infinity, alignment: .leading)
+    .background(
+      Color(braveSystemName: .containerBackground),
+      in: .rect(cornerRadius: 14, style: .continuous)
+    )
     .padding(.horizontal)
+    .accessibilityElement(children: .contain)
   }
 
   @ViewBuilder private var shieldsOffFooterView: some View {
