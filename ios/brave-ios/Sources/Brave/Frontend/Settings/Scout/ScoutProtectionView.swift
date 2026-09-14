@@ -39,6 +39,7 @@ struct ScoutProtectionView: View {
 
   @State private var blocked = Preferences.ScoutBlocking.chosen
   @ObservedObject private var safeSearch = Preferences.Scout.safeSearch
+  @ObservedObject private var askWhenCheckFails = Preferences.Scout.askWhenCheckFails
   /// Re-read on every appearance rather than observed: rules and the log are
   /// written from the browser, not from this screen, so the counts only need
   /// to be right when someone is looking at them.
@@ -77,6 +78,15 @@ struct ScoutProtectionView: View {
             symbol: "magnifyingglass",
             title: Strings.ScoutProtection.safeSearchTitle,
             detail: Strings.ScoutProtection.safeSearchDetail
+          )
+        }
+        .tint(scoutViolet)
+
+        Toggle(isOn: $askWhenCheckFails.value) {
+          row(
+            symbol: "questionmark.circle",
+            title: Strings.ScoutProtection.askWhenCheckFails,
+            detail: Strings.ScoutProtection.askWhenCheckFailsDetail
           )
         }
         .tint(scoutViolet)

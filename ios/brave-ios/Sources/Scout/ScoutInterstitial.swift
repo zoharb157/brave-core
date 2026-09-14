@@ -18,6 +18,10 @@ public struct ScoutInterstitialModel: Equatable {
   public let reasons: [String]
   public let primaryLabel: String
   public let secondaryLabel: String
+  /// Offered when the check could not be completed, where trying it again is
+  /// the thing the reader actually wants. `nil` everywhere else — a verdict
+  /// that came back does not become different by asking twice.
+  public let retryLabel: String?
   /// A standing decision about this site, offered only where one makes sense:
   /// nil for a malicious page, where the honest offer is a one-time
   /// "continue anyway" and not a permanent exception.
@@ -80,7 +84,7 @@ public enum ScoutInterstitial {
       // regardless of decision type.
       chipText = "CAUTION"
       title = "Can't verify right now"
-      summary = "We couldn't check this page. Try again."
+      summary = "We couldn't check this page."
       reasons = []
     }
 
@@ -104,6 +108,7 @@ public enum ScoutInterstitial {
       reasons: reasons,
       primaryLabel: "Go back",
       secondaryLabel: type == .block ? "Continue anyway" : "Continue",
+      retryLabel: reason == .unavailable ? "Try again" : nil,
       alwaysLabel: alwaysLabel)
   }
 
@@ -124,6 +129,15 @@ public enum ScoutInterstitial {
     let reasonsBlock = m.reasons.isEmpty ? "" : "<ul class=\"reasons\">\(reasonsHTML)</ul>"
     let hostBlock = host.isEmpty ? "" : "<p class=\"host\">\(htmlEscaped(host))</p>"
     let tone = m.isBlocking ? "block" : "warn"
+    // When nothing could be established, checking again is the action the
+    // page was already telling people to take — it just had no button. It
+    // leads, because going back or continuing unchecked are both worse
+    // answers to "we couldn't check this".
+    let retryBlock =
+      m.retryLabel.map {
+        "<button class=\"primary\" onclick=\"webkit.messageHandlers.scout.postMessage('retry')\">\(htmlEscaped($0))</button>"
+      } ?? ""
+
     // "Continue anyway" lasts for this visit; this one lasts forever. They
     // were the same quiet button with different words, so the permanent one
     // read as no more consequential than the temporary one above it — and it
@@ -166,7 +180,8 @@ public enum ScoutInterstitial {
         \(hostBlock)
         \(reasonsBlock)
         <div class="actions">
-          <button class="primary" onclick="webkit.messageHandlers.scout.postMessage('back')">\(m.primaryLabel)</button>
+          \(retryBlock)
+          <button class="\(m.retryLabel == nil ? "primary" : "quiet")" onclick="webkit.messageHandlers.scout.postMessage('back')">\(m.primaryLabel)</button>
           <button class="quiet" onclick="webkit.messageHandlers.scout.postMessage('proceed')">\(m.secondaryLabel)</button>
           \(alwaysBlock)
         </div>

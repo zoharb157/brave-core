@@ -82,7 +82,10 @@ public final class ScoutServices {
     siteRules = ScoutProtectionStore.loadSiteRules()
     blockLog = ScoutProtectionStore.loadBlockLog()
     let categoryPolicy = UserCategoryPolicy(
-      base: policy, blockedCategories: { Preferences.ScoutBlocking.chosen })
+      base: policy, blockedCategories: { Preferences.ScoutBlocking.chosen },
+      // Read live, like the categories, so changing it in Settings applies to
+      // the very next navigation rather than the next launch.
+      failMode: { Preferences.Scout.askWhenCheckFails.value ? .closed : .open })
     // The user's own per-site decision is the outermost layer: it is the one
     // input that is an explicit human answer about this exact site, so it wins
     // over both the category settings and the check.

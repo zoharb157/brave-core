@@ -185,6 +185,22 @@ extension Strings {
       comment: "Subtitle for the Protection row in Settings"
     )
 
+    public static let askWhenCheckFails = NSLocalizedString(
+      "scoutProtection.askWhenCheckFails",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Ask if a check can't finish",
+      comment: "Title of the setting deciding what happens when a safety check cannot complete"
+    )
+    public static let askWhenCheckFailsDetail = NSLocalizedString(
+      "scoutProtection.askWhenCheckFailsDetail",
+      tableName: "BraveShared",
+      bundle: .module,
+      value:
+        "A check can fail because the phone lost signal, not because the site is bad. Off, those pages open and are marked in your activity. On, Scout stops and asks.",
+      comment: "Explanation of the setting deciding what happens when a safety check cannot complete"
+    )
+
     public static let sitePlaceholder = NSLocalizedString(
       "scoutProtection.sitePlaceholder",
       tableName: "BraveShared",

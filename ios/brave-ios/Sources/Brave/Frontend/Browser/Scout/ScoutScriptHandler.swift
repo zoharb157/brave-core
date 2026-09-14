@@ -40,10 +40,24 @@ class ScoutScriptHandler: TabContentScript {
       proceed(to: siteURL, tab: tab)
     case "always":
       allowFromNowOn(siteURL, tab: tab)
+    case "retry":
+      retry(siteURL, tab: tab)
     case "back":
       goBack(tab: tab)
     default:
       break
+    }
+  }
+
+  /// Checks the page again after a check that couldn't be completed.
+  ///
+  /// Drops whatever is on hand for the site first: a fail-open allow is cached
+  /// like any other answer, so simply re-navigating would hand back the same
+  /// non-answer and the button would appear to do nothing.
+  private func retry(_ siteURL: URL, tab: some TabState) {
+    MainActor.assumeIsolated {
+      ScoutServices.shared.forget(siteURL)
+      tab.loadRequest(URLRequest(url: siteURL))
     }
   }
 

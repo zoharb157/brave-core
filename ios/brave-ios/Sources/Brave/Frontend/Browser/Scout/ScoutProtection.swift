@@ -38,6 +38,18 @@ extension Preferences.Scout {
     key: "scout.safe-search",
     default: true
   )
+
+  /// Whether a page whose check couldn't finish is held rather than opened.
+  ///
+  /// Off by default, which means the page opens: a check fails because the
+  /// phone lost signal or the service was slow, not because the site is bad,
+  /// and a browser that stops on every hiccup gets turned off. The cost is
+  /// that a page nobody could vouch for still loads, so whoever wants the
+  /// stricter trade can have it.
+  public static let askWhenCheckFails = Preferences.Option<Bool>(
+    key: "scout.ask-when-check-fails",
+    default: false
+  )
 }
 
 /// Reads and writes the two stores through preferences.
