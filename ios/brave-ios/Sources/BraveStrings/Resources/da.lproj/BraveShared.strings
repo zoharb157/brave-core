@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Der er ikke blokeret noget endnu";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Gemmes kun på denne telefon og aldrig for private faner.";
+"scoutProtection.recentlyBlockedFooter" = "Denne liste bliver på din telefon. En oversigt over, hvad Scout har tjekket, gemmes desuden i din konto i 30 dage.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Se alle";

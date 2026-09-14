@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Henüz hiçbir şey engellenmedi";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Yalnızca bu telefonda tutulur ve gizli sekmeler için asla tutulmaz.";
+"scoutProtection.recentlyBlockedFooter" = "Bu liste telefonunuzda kalır. Ayrıca Scout'un neleri kontrol ettiğine dair bir kayıt hesabınızda 30 gün saklanır.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Tümünü gör";

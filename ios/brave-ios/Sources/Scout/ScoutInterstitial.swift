@@ -53,7 +53,9 @@ public enum ScoutInterstitial {
         summary = "We couldn't check this page. Try again."
         reasons = []
       }
-    case .category:
+    // An address block is a category block that needed no verdict: same
+    // decision, same words for it.
+    case .category, .address:
       chipText = "BLOCKED"
       title = "Blocked by your settings"
       // Naming what matched is the point of this screen, but an empty set must
@@ -89,7 +91,7 @@ public enum ScoutInterstitial {
     // honest offer is this once.
     let alwaysLabel: String?
     switch reason {
-    case .category: alwaysLabel = "Always allow this site"
+    case .category, .address: alwaysLabel = "Always allow this site"
     case .policyList: alwaysLabel = "Unblock this site"
     case .security, .scheme, .unavailable: alwaysLabel = nil
     }

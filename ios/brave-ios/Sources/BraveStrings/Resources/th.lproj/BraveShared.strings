@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "ยังไม่มีอะไรถูกบล็อก";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "เก็บไว้ในเครื่องนี้เท่านั้น และไม่เก็บสำหรับแท็บส่วนตัว";
+"scoutProtection.recentlyBlockedFooter" = "รายการนี้อยู่ในเครื่องนี้ และบันทึกสิ่งที่ Scout ตรวจจะถูกเก็บไว้ในบัญชีของคุณอีก 30 วัน";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "ดูทั้งหมด";

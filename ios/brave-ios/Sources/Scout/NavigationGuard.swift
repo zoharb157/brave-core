@@ -2,9 +2,16 @@ import Foundation
 
 public enum DecisionType { case allow, warn, block }
 
-/// Spec §4.4: why a Decision came out the way it did. Distinct from
-/// `DecisionType` (what happened) — this says which pipeline stage decided.
-public enum DecisionReason: Equatable, Sendable { case policyList, scheme, security, category, unavailable }
+/// Spec §4.4: why a Decision came out the way it did.
+///
+/// `address` is a category block decided from the URL alone, with no verdict
+/// involved. It is kept apart from `category` because the two fail in
+/// different ways: one means the check judged the page, the other means the
+/// check never got a say — and telling them apart is what makes an escape
+/// traceable.
+public enum DecisionReason: Equatable, Sendable {
+  case policyList, scheme, security, category, address, unavailable
+}
 
 public struct Decision {
   public let type: DecisionType
@@ -109,7 +116,7 @@ public final class NavigationGuard {
     // After the user's own rules, though: someone who chose "always allow this
     // site" has answered this question already.
     if policy.blockedCategories.contains(.adult), ExplicitURL.looksExplicit(url) {
-      return Decision(type: .block, reason: .category, matchedCategories: [.adult])
+      return Decision(type: .block, reason: .address, matchedCategories: [.adult])
     }
     if let cached = cache.lookup(url, grace: staleGrace) {
       let decision = Self.resolve(cached.verdict, blockedCategories: policy.blockedCategories)

@@ -294,7 +294,7 @@ struct BlockRecordRow: View {
   /// parent nothing about whether their settings are doing what they wanted.
   static func why(_ record: BlockRecord) -> String {
     switch record.reason {
-    case .category:
+    case .category, .address:
       let names = record.categories.map(\.title).sorted()
       return names.isEmpty ? Strings.ScoutProtection.blockedReasonUnsafe : ListFormatter
         .localizedString(byJoining: names)

@@ -172,7 +172,7 @@ extension Strings {
       "scoutProtection.recentlyBlockedFooter",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Kept on this phone only, and never for private tabs.",
+      value: "This list stays on your phone. A record of what Scout checked is also kept in your account for 30 days.",
       comment: "Footer explaining where the recently blocked list lives"
     )
     public static let seeAll = NSLocalizedString(

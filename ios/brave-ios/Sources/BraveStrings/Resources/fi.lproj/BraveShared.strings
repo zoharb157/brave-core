@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Mitään ei ole vielä estetty";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Säilytetään vain tässä puhelimessa, eikä koskaan yksityisistä välilehdistä.";
+"scoutProtection.recentlyBlockedFooter" = "Tämä luettelo pysyy puhelimessasi. Lisäksi tieto siitä, mitä Scout on tarkistanut, säilytetään tililläsi 30 päivää.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Näytä kaikki";

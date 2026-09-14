@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Још ништа није блокирано";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Чува се само на овом телефону и никада за приватне картице.";
+"scoutProtection.recentlyBlockedFooter" = "Ова листа остаје на вашем телефону. Запис о томе шта је Scout проверио додатно се чува на вашем налогу 30 дана.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Прикажи све";

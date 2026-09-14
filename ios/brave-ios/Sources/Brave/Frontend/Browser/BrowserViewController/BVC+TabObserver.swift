@@ -330,6 +330,7 @@ extension BrowserViewController {
     var injectedScripts: [TabContentScript] = [
       BlockedDomainScriptHandler(),
       ScoutScriptHandler(),
+      ScoutLinkWarmScriptHandler(),
       HTTPBlockedScriptHandler(tabManager: tabManager),
       PrintScriptHandler(browserController: self),
       DarkReaderScriptHandler(),

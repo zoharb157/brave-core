@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "עדיין לא נחסם דבר";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "נשמר רק בטלפון הזה, ולעולם לא עבור לשוניות פרטיות.";
+"scoutProtection.recentlyBlockedFooter" = "הרשימה הזו נשארת בטלפון שלך. בנוסף, רישום של מה ש-Scout בדק נשמר בחשבון שלך למשך 30 יום.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "הצגת הכול";

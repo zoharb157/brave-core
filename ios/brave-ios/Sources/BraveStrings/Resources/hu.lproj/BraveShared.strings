@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Még semmi sem lett letiltva";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Csak ezen a telefonon marad, és soha nem privát lapokról.";
+"scoutProtection.recentlyBlockedFooter" = "Ez a lista a telefonján marad. Emellett 30 napig a fiókjában is megmarad a feljegyzés arról, mit ellenőrzött a Scout.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Összes megtekintése";

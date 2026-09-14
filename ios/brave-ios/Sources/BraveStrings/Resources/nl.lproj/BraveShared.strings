@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Er is nog niets geblokkeerd";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Blijft alleen op deze telefoon, en nooit voor privétabbladen.";
+"scoutProtection.recentlyBlockedFooter" = "Deze lijst blijft op je telefoon. Een overzicht van wat Scout heeft gecontroleerd wordt daarnaast 30 dagen in je account bewaard.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Alles bekijken";

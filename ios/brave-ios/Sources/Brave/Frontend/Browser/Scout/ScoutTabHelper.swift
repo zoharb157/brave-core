@@ -107,6 +107,11 @@ public class ScoutTabHelper: TabPolicyDecider {
 
     // Known already (policy list or cached verdict): no checking page at all.
     if let decision = services.guard_.decideImmediately(requestURL) {
+      // Nothing was fetched for this one; say so, since "did the cache decide
+      // this?" is the first question when a page gets through it shouldn't.
+      ScoutActivityReporter.shared.record(
+        decision, for: requestURL,
+        source: decision.verdict == nil ? .none : .cache, isPrivate: tab.isPrivate)
       // The verdict was past its life but inside the grace window: it decided
       // this navigation, and a fresh one lands before the next.
       if decision.isStale {
@@ -127,6 +132,8 @@ public class ScoutTabHelper: TabPolicyDecider {
 
     Task { @MainActor [weak self, weak tab] in
       let decision = await services.guard_.decide(requestURL)
+      ScoutActivityReporter.shared.record(
+        decision, for: requestURL, source: .service, isPrivate: tab?.isPrivate ?? false)
       if decision.type != .allow, let tab {
         Self.note(decision, for: requestURL, in: tab)
       }

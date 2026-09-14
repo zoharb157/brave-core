@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "まだ何もブロックされていません";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "この端末にのみ保存され、プライベートタブでは記録しません。";
+"scoutProtection.recentlyBlockedFooter" = "この一覧はこの端末に残ります。Scout が確認した記録は、アカウントにも 30 日間保存されます。";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "すべて表示";

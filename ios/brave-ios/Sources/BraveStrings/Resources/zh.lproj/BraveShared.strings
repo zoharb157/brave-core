@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "目前还没有拦截任何内容";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "仅保存在这部手机上，隐私标签页从不记录。";
+"scoutProtection.recentlyBlockedFooter" = "此列表保存在本机。Scout 检查过的记录还会在你的账户中保留 30 天。";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "查看全部";

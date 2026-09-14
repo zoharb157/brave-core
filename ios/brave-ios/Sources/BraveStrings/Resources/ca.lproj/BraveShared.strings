@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Encara no s'ha blocat res";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Es desa només en aquest telèfon, i mai per a pestanyes privades.";
+"scoutProtection.recentlyBlockedFooter" = "Aquesta llista es queda al teu telèfon. A més, es desa al teu compte un registre del que Scout ha comprovat durant 30 dies.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Mostra-ho tot";

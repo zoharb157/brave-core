@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Belum ada apa-apa disekat";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Disimpan pada telefon ini sahaja, dan tidak pernah untuk tab persendirian.";
+"scoutProtection.recentlyBlockedFooter" = "Senarai ini kekal pada telefon anda. Rekod perkara yang diperiksa Scout turut disimpan dalam akaun anda selama 30 hari.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Lihat semua";

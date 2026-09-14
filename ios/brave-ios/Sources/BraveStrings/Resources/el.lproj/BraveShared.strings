@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Δεν έχει αποκλειστεί τίποτα ακόμη";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Μένει μόνο σε αυτό το τηλέφωνο και ποτέ για ιδιωτικές καρτέλες.";
+"scoutProtection.recentlyBlockedFooter" = "Αυτή η λίστα παραμένει στο τηλέφωνό σας. Επιπλέον, ένα αρχείο με όσα έλεγξε το Scout φυλάσσεται στον λογαριασμό σας για 30 ημέρες.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Δείτε όλα";

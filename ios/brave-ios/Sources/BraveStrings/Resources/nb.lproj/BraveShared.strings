@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Ingenting er blokkert ennå";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Lagres bare på denne telefonen, og aldri for private faner.";
+"scoutProtection.recentlyBlockedFooter" = "Denne listen blir på telefonen din. En oversikt over hva Scout har sjekket lagres i tillegg i kontoen din i 30 dager.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Se alle";

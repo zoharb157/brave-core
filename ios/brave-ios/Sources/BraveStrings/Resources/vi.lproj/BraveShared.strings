@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Chưa có gì bị chặn";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Chỉ lưu trên điện thoại này, và không bao giờ cho thẻ riêng tư.";
+"scoutProtection.recentlyBlockedFooter" = "Danh sách này ở lại trên điện thoại của bạn. Bản ghi những gì Scout đã kiểm tra cũng được giữ trong tài khoản của bạn trong 30 ngày.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Xem tất cả";

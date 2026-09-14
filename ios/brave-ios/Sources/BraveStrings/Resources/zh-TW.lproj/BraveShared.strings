@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "目前還沒有封鎖任何內容";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "僅保存在這支手機上，私密分頁從不記錄。";
+"scoutProtection.recentlyBlockedFooter" = "此清單保存在本機。Scout 檢查過的紀錄還會在你的帳戶中保留 30 天。";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "查看全部";

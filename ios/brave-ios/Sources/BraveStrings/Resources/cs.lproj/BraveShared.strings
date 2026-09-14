@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Zatím nebylo nic blokováno";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Zůstává jen v tomto telefonu a nikdy se neukládá pro anonymní panely.";
+"scoutProtection.recentlyBlockedFooter" = "Tento seznam zůstává ve vašem telefonu. Záznam o tom, co Scout zkontroloval, se navíc uchovává ve vašem účtu 30 dní.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Zobrazit vše";

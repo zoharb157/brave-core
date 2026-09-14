@@ -55,6 +55,7 @@ class ScoutScriptHandler: TabContentScript {
       if let host = siteURL.host {
         ScoutServices.shared.blockLog.noteContinued(site: host)
       }
+      ScoutActivityReporter.shared.recordContinued(siteURL, isPrivate: tab.isPrivate)
       tab.loadRequest(URLRequest(url: siteURL))
     }
   }
@@ -73,6 +74,7 @@ class ScoutScriptHandler: TabContentScript {
       if let host = siteURL.host {
         ScoutServices.shared.blockLog.noteContinued(site: host)
       }
+      ScoutActivityReporter.shared.recordContinued(siteURL, isPrivate: tab.isPrivate)
       tab.loadRequest(URLRequest(url: siteURL))
     }
   }

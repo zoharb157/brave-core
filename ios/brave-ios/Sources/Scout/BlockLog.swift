@@ -126,6 +126,7 @@ extension DecisionReason {
     case .scheme: return "scheme"
     case .security: return "security"
     case .category: return "category"
+    case .address: return "address"
     case .unavailable: return "unavailable"
     }
   }
@@ -136,6 +137,7 @@ extension DecisionReason {
     case "scheme": self = .scheme
     case "security": self = .security
     case "category": self = .category
+    case "address": self = .address
     case "unavailable": self = .unavailable
     default: return nil
     }

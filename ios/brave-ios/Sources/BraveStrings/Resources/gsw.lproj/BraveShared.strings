@@ -3699,7 +3699,7 @@
 "scoutProtection.nothingBlocked" = "Bis jetzt isch nüt blockiert worde";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "Nume uf dem Telefon gspeicheret, und nie für privati Tabs.";
+"scoutProtection.recentlyBlockedFooter" = "Die Lischte bliibt uf dim Telefon. E Ufzeichnig vo dem, wo Scout prüeft het, wird zuesätzlich 30 Täg im Konto gspeicheret.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "Alli aaluege";

@@ -3804,7 +3804,7 @@
 "scoutProtection.nothingBlocked" = "아직 차단된 항목이 없습니다";
 
 /* Footer explaining where the recently blocked list lives */
-"scoutProtection.recentlyBlockedFooter" = "이 휴대폰에만 보관되며 비공개 탭에서는 기록하지 않습니다.";
+"scoutProtection.recentlyBlockedFooter" = "이 목록은 휴대폰에 남습니다. Scout가 확인한 기록은 계정에도 30일간 보관됩니다.";
 
 /* Button that opens the full list of blocked navigations */
 "scoutProtection.seeAll" = "모두 보기";

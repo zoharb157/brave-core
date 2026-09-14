@@ -159,6 +159,30 @@ public final class ScoutServices {
     await guard_.refresh(url)
   }
 
+  /// Links being checked ahead of a tap, by cache key. Bounded so a page that
+  /// fires a lot of touches can't queue unbounded work.
+  private var warming: Set<String> = []
+  private static let maxConcurrentWarms = 4
+
+  /// Starts checking `url` before the user has finished opening it.
+  ///
+  /// Fire-and-forget: the result is only ever wanted through the cache. The
+  /// coalescing checker keys in-flight requests the same way the cache keys
+  /// entries, so the navigation that follows joins this request instead of
+  /// starting a second one — which is the whole point.
+  public func warm(_ url: URL) {
+    // Anything already decidable — a rule, a cached verdict, a scheme — needs
+    // no work, and that is the common case on a site already visited.
+    guard guard_.decideImmediately(url) == nil else { return }
+    let key = VerdictCache.cacheKey(for: url, perPageHosts: Self.perPageHosts)
+    guard warming.count < Self.maxConcurrentWarms, !warming.contains(key) else { return }
+    warming.insert(key)
+    Task { @MainActor in
+      _ = await guard_.decide(url)
+      warming.remove(key)
+    }
+  }
+
   /// How many sites Scout has a verdict for right now. The only visible trace
   /// of a check that passed, so Settings can say what the browser has done
   /// rather than only what it stopped.
