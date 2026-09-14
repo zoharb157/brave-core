@@ -87,3 +87,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Halaman yang ada terutama untuk menampilkan iklan. Shields sudah menghapus iklan di dalam halaman.";
+"scoutBlocking.phoneFilterTitle" = "Filter seluruh ponsel ini";
+"scoutBlocking.phoneFilterDetail" = "Aplikasi lain membuka tautan di peramban mereka sendiri, di mana Scout tidak bisa memeriksanya. Aktifkan ini dan situs dewasa serta situs berbahaya akan ditolak di seluruh ponsel, di setiap aplikasi.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Hampir selesai: buka Pengaturan › Umum › VPN, DNS & Manajemen Perangkat › DNS lalu pilih Scout.";
+"scoutBlocking.phoneFilterOn" = "Aktif. Setiap aplikasi di ponsel ini difilter.";
+"scoutBlocking.phoneFilterFailed" = "Scout tidak dapat menyiapkan ini di perangkat ini.";
+"scoutBlocking.phoneFilterFootnote" = "Penyaringan dilakukan berdasarkan nama situs, jadi lebih kasar daripada pemeriksaan di dalam Scout, dan beberapa aplikasi dengan pengaturannya sendiri bisa melewatinya.";

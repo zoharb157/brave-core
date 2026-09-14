@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Strony, których głównym celem jest wyświetlanie reklam. Tarcze już usuwają reklamy wewnątrz stron.";
+"scoutBlocking.phoneFilterTitle" = "Filtruj cały ten telefon";
+"scoutBlocking.phoneFilterDetail" = "Inne aplikacje otwierają linki we własnej przeglądarce, gdzie Scout nie może ich sprawdzić. Włącz tę opcję, a strony dla dorosłych i niebezpieczne będą odrzucane w całym telefonie, w każdej aplikacji.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Już prawie: otwórz Ustawienia › Ogólne › VPN, DNS i zarządzanie urządzeniem › DNS i wybierz Scout.";
+"scoutBlocking.phoneFilterOn" = "Włączone. Każda aplikacja w tym telefonie jest filtrowana.";
+"scoutBlocking.phoneFilterFailed" = "Scout nie mógł tego skonfigurować na tym urządzeniu.";
+"scoutBlocking.phoneFilterFootnote" = "Filtrowanie działa po nazwie witryny, więc jest mniej dokładne niż sprawdzanie w Scout, a kilka aplikacji z własnymi ustawieniami może je ominąć.";

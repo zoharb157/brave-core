@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Stránky, které existují hlavně proto, aby zobrazovaly reklamy. Štíty už reklamy na stránkách odstraňují.";
+"scoutBlocking.phoneFilterTitle" = "Filtrovat celý tento telefon";
+"scoutBlocking.phoneFilterDetail" = "Ostatní aplikace otevírají odkazy ve vlastním prohlížeči, kde je Scout nemůže zkontrolovat. Zapněte to a stránky pro dospělé i nebezpečné stránky budou odmítnuty všude v telefonu, v každé aplikaci.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Už to skoro je: otevřete Nastavení › Obecné › VPN, DNS a správa zařízení › DNS a zvolte Scout.";
+"scoutBlocking.phoneFilterOn" = "Zapnuto. Každá aplikace v tomto telefonu je filtrována.";
+"scoutBlocking.phoneFilterFailed" = "Scoutu se to na tomto zařízení nepodařilo nastavit.";
+"scoutBlocking.phoneFilterFootnote" = "Filtruje se podle názvu webu, takže je to hrubší než kontroly uvnitř Scoutu, a několik aplikací s vlastním nastavením to může obejít.";

@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Các trang tồn tại chủ yếu để hiển thị quảng cáo. Shields đã loại bỏ quảng cáo trong trang.";
+"scoutBlocking.phoneFilterTitle" = "Lọc toàn bộ điện thoại này";
+"scoutBlocking.phoneFilterDetail" = "Các ứng dụng khác mở liên kết trong trình duyệt riêng của chúng, nơi Scout không thể kiểm tra. Bật tùy chọn này và các trang người lớn cùng trang không an toàn sẽ bị từ chối trên toàn bộ điện thoại, trong mọi ứng dụng.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Sắp xong: mở Cài đặt › Cài đặt chung › VPN, DNS và Quản lý thiết bị › DNS rồi chọn Scout.";
+"scoutBlocking.phoneFilterOn" = "Đang bật. Mọi ứng dụng trên điện thoại này đều được lọc.";
+"scoutBlocking.phoneFilterFailed" = "Scout không thể thiết lập điều này trên thiết bị này.";
+"scoutBlocking.phoneFilterFootnote" = "Việc lọc dựa trên tên trang web nên thô hơn các kiểm tra bên trong Scout, và một số ứng dụng có cài đặt riêng có thể vượt qua.";

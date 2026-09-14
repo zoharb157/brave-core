@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "這類頁面主要用於顯示廣告，Shields 已經會移除頁面內的廣告。";
+"scoutBlocking.phoneFilterTitle" = "過濾整支手機";
+"scoutBlocking.phoneFilterDetail" = "其他 App 會用自己的瀏覽器開啟連結，Scout 無法檢查。開啟後，成人內容與不安全的網站會在手機上的所有 App 中被拒絕。";
+"scoutBlocking.phoneFilterApprovalNeeded" = "就快好了：開啟 設定 › 一般 › VPN 與裝置管理 › DNS，然後選擇 Scout。";
+"scoutBlocking.phoneFilterOn" = "已開啟。這支手機上的每個 App 都會被過濾。";
+"scoutBlocking.phoneFilterFailed" = "Scout 無法在這台裝置上完成設定。";
+"scoutBlocking.phoneFilterFootnote" = "過濾依據是網站名稱，因此比 Scout 內的檢查更粗略，少數自帶設定的 App 可能繞過。";

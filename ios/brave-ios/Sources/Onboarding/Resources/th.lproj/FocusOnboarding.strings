@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "หน้าเว็บที่มีอยู่เพื่อแสดงโฆษณาเป็นหลัก Shields ได้ลบโฆษณาภายในหน้าเว็บออกไปแล้ว";
+"scoutBlocking.phoneFilterTitle" = "กรองทั้งเครื่องนี้";
+"scoutBlocking.phoneFilterDetail" = "แอปอื่นเปิดลิงก์ในเบราว์เซอร์ของตัวเอง ซึ่ง Scout ตรวจสอบไม่ได้ เปิดใช้งานสิ่งนี้แล้วเว็บไซต์สำหรับผู้ใหญ่และเว็บไซต์ที่ไม่ปลอดภัยจะถูกปฏิเสธทั่วทั้งเครื่อง ในทุกแอป";
+"scoutBlocking.phoneFilterApprovalNeeded" = "ใกล้เสร็จแล้ว: เปิด การตั้งค่า › ทั่วไป › VPN, DNS และการจัดการอุปกรณ์ › DNS แล้วเลือก Scout";
+"scoutBlocking.phoneFilterOn" = "เปิดอยู่ ทุกแอปในเครื่องนี้ถูกกรอง";
+"scoutBlocking.phoneFilterFailed" = "Scout ตั้งค่านี้บนอุปกรณ์นี้ไม่ได้";
+"scoutBlocking.phoneFilterFootnote" = "การกรองใช้ชื่อเว็บไซต์ จึงหยาบกว่าการตรวจสอบภายใน Scout และบางแอปที่มีการตั้งค่าของตัวเองอาจเลี่ยงได้";

@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "这类页面主要用于展示广告。Shields 已经会移除页面内的广告。";
+"scoutBlocking.phoneFilterTitle" = "过滤整部手机";
+"scoutBlocking.phoneFilterDetail" = "其他应用会在自己的浏览器中打开链接，Scout 无法检查。开启后，成人内容和不安全的网站将在手机上的所有应用中被拒绝。";
+"scoutBlocking.phoneFilterApprovalNeeded" = "就快好了：打开 设置 › 通用 › VPN与设备管理 › DNS，然后选择 Scout。";
+"scoutBlocking.phoneFilterOn" = "已开启。这部手机上的每个应用都会被过滤。";
+"scoutBlocking.phoneFilterFailed" = "Scout 无法在此设备上完成设置。";
+"scoutBlocking.phoneFilterFootnote" = "过滤依据是网站名称，因此比 Scout 内部的检查更粗略，少数自带设置的应用可能绕过。";

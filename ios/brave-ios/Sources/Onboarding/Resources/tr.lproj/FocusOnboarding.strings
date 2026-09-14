@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Öncelikle reklam göstermek için var olan sayfalar. Shields, sayfaların içindeki reklamları zaten kaldırıyor.";
+"scoutBlocking.phoneFilterTitle" = "Bu telefonun tamamını filtrele";
+"scoutBlocking.phoneFilterDetail" = "Diğer uygulamalar bağlantıları kendi tarayıcılarında açar ve Scout onları kontrol edemez. Bunu açtığınızda yetişkin ve güvenli olmayan siteler telefonun her yerinde, her uygulamada reddedilir.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Neredeyse bitti: Ayarlar › Genel › VPN ve Cihaz Yönetimi › DNS bölümünü açıp Scout'u seçin.";
+"scoutBlocking.phoneFilterOn" = "Açık. Bu telefondaki her uygulama filtreleniyor.";
+"scoutBlocking.phoneFilterFailed" = "Scout bunu bu cihazda kuramadı.";
+"scoutBlocking.phoneFilterFootnote" = "Filtreleme site adına göre yapılır; bu yüzden Scout içindeki kontrollerden daha kabadır ve kendi ayarlarını taşıyan birkaç uygulama bunu aşabilir.";

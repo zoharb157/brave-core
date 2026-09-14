@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Strani, ki obstajajo predvsem za prikazovanje oglasov. Shields že odstranjuje oglase znotraj strani.";
+"scoutBlocking.phoneFilterTitle" = "Filtriraj ves ta telefon";
+"scoutBlocking.phoneFilterDetail" = "Druge aplikacije odpirajo povezave v svojem brskalniku, kjer jih Scout ne more preveriti. Vklopite to in strani za odrasle ter nevarne strani bodo zavrnjene povsod v telefonu, v vsaki aplikaciji.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Skoraj končano: odprite Nastavitve › Splošno › VPN, DNS in upravljanje naprav › DNS ter izberite Scout.";
+"scoutBlocking.phoneFilterOn" = "Vklopljeno. Vsaka aplikacija v tem telefonu je filtrirana.";
+"scoutBlocking.phoneFilterFailed" = "Scout tega ni mogel nastaviti v tej napravi.";
+"scoutBlocking.phoneFilterFootnote" = "Filtriranje poteka po imenu strani, zato je bolj grobo od preverjanj v Scoutu, nekaj aplikacij z lastnimi nastavitvami pa ga lahko zaobide.";

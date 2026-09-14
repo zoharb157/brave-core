@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Sivut, jotka ovat olemassa lähinnä mainosten näyttämistä varten. Shields poistaa jo mainokset sivujen sisältä.";
+"scoutBlocking.phoneFilterTitle" = "Suodata koko puhelin";
+"scoutBlocking.phoneFilterDetail" = "Muut sovellukset avaavat linkit omassa selaimessaan, jossa Scout ei voi tarkistaa niitä. Ota tämä käyttöön, niin aikuisviihde- ja vaaralliset sivustot torjutaan kaikkialla puhelimessa, jokaisessa sovelluksessa.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Melkein valmista: avaa Asetukset › Yleiset › VPN, DNS ja laitehallinta › DNS ja valitse Scout.";
+"scoutBlocking.phoneFilterOn" = "Päällä. Puhelimen jokainen sovellus suodatetaan.";
+"scoutBlocking.phoneFilterFailed" = "Scout ei saanut tätä määritettyä tällä laitteella.";
+"scoutBlocking.phoneFilterFootnote" = "Suodatus perustuu sivuston nimeen, joten se on karkeampaa kuin Scoutin sisäiset tarkistukset, ja muutama omilla asetuksillaan varustettu sovellus voi kiertää sen.";

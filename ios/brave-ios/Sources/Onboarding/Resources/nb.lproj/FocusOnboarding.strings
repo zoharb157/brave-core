@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Sider som hovedsakelig finnes for å vise annonser. Shields fjerner allerede annonser inne på sidene.";
+"scoutBlocking.phoneFilterTitle" = "Filtrer hele denne telefonen";
+"scoutBlocking.phoneFilterDetail" = "Andre apper åpner lenker i sin egen nettleser, der Scout ikke kan sjekke dem. Slå på dette, så avvises nettsteder for voksne og utrygge nettsteder overalt på telefonen, i alle apper.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Nesten i mål: åpne Innstillinger › Generelt › VPN, DNS og enhetsadministrasjon › DNS og velg Scout.";
+"scoutBlocking.phoneFilterOn" = "På. Alle apper på denne telefonen filtreres.";
+"scoutBlocking.phoneFilterFailed" = "Scout klarte ikke å sette opp dette på denne enheten.";
+"scoutBlocking.phoneFilterFootnote" = "Det filtreres på nettstedsnavn, så det er grovere enn sjekkene inne i Scout, og noen få apper med egne innstillinger kan komme rundt det.";

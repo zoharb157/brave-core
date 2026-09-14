@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Laman yang wujud terutamanya untuk memaparkan iklan. Shields sudah pun mengalih keluar iklan dalam laman.";
+"scoutBlocking.phoneFilterTitle" = "Tapis seluruh telefon ini";
+"scoutBlocking.phoneFilterDetail" = "Aplikasi lain membuka pautan dalam pelayar mereka sendiri, di mana Scout tidak dapat memeriksanya. Hidupkan ini dan tapak dewasa serta tapak tidak selamat akan ditolak di seluruh telefon, dalam setiap aplikasi.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Hampir siap: buka Tetapan › Umum › VPN, DNS & Pengurusan Peranti › DNS dan pilih Scout.";
+"scoutBlocking.phoneFilterOn" = "Hidup. Setiap aplikasi pada telefon ini ditapis.";
+"scoutBlocking.phoneFilterFailed" = "Scout tidak dapat menyediakannya pada peranti ini.";
+"scoutBlocking.phoneFilterFootnote" = "Penapisan mengikut nama tapak, jadi ia lebih kasar daripada pemeriksaan dalam Scout, dan beberapa aplikasi dengan tetapan sendiri boleh memintasnya.";

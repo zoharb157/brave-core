@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Olyan oldalak, amelyek elsősorban hirdetések megjelenítése céljából léteznek. A Shields már eltávolítja a hirdetéseket az oldalakon belül.";
+"scoutBlocking.phoneFilterTitle" = "Az egész telefon szűrése";
+"scoutBlocking.phoneFilterDetail" = "Más alkalmazások a saját böngészőjükben nyitják meg a hivatkozásokat, ahol a Scout nem tudja ellenőrizni őket. Kapcsold be, és a felnőtt tartalmú, illetve nem biztonságos oldalak a telefon minden alkalmazásában elutasításra kerülnek.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Majdnem kész: nyisd meg a Beállítások › Általános › VPN, DNS és eszközkezelés › DNS menüt, és válaszd a Scoutot.";
+"scoutBlocking.phoneFilterOn" = "Bekapcsolva. A telefon minden alkalmazása szűrve van.";
+"scoutBlocking.phoneFilterFailed" = "A Scout nem tudta ezt beállítani ezen az eszközön.";
+"scoutBlocking.phoneFilterFootnote" = "A szűrés az oldal neve alapján történik, ezért durvább, mint a Scouton belüli ellenőrzés, és néhány saját beállítással érkező alkalmazás megkerülheti.";

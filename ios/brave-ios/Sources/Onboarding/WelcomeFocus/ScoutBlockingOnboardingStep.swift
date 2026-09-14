@@ -52,6 +52,48 @@ extension Strings {
       value: "Blocked Content",
       comment: "Settings row and screen title for choosing which kinds of sites Scout blocks"
     )
+    public static let phoneFilterTitle = NSLocalizedString(
+      "scoutBlocking.phoneFilterTitle",
+      tableName: "FocusOnboarding",
+      bundle: .module,
+      value: "Filter This Whole Phone",
+      comment: "Title of the setting that filters every app on the device, not just Scout"
+    )
+    public static let phoneFilterDetail = NSLocalizedString(
+      "scoutBlocking.phoneFilterDetail",
+      tableName: "FocusOnboarding",
+      bundle: .module,
+      value: "Other apps open links in their own browsers, where Scout can't check them. Turn this on and adult and unsafe sites are refused everywhere on the phone, in every app.",
+      comment: "Explanation of the setting that filters every app on the device"
+    )
+    public static let phoneFilterApprovalNeeded = NSLocalizedString(
+      "scoutBlocking.phoneFilterApprovalNeeded",
+      tableName: "FocusOnboarding",
+      bundle: .module,
+      value: "Almost there: open Settings › General › VPN, DNS & Device Management › DNS and choose Scout.",
+      comment: "Shown when the device-wide filter is installed but iOS still needs the user to allow it"
+    )
+    public static let phoneFilterOn = NSLocalizedString(
+      "scoutBlocking.phoneFilterOn",
+      tableName: "FocusOnboarding",
+      bundle: .module,
+      value: "On. Every app on this phone is filtered.",
+      comment: "Shown when the device-wide filter is active"
+    )
+    public static let phoneFilterFailed = NSLocalizedString(
+      "scoutBlocking.phoneFilterFailed",
+      tableName: "FocusOnboarding",
+      bundle: .module,
+      value: "Scout couldn't set this up on this device.",
+      comment: "Shown when the system refuses to install the device-wide filter"
+    )
+    public static let phoneFilterFootnote = NSLocalizedString(
+      "scoutBlocking.phoneFilterFootnote",
+      tableName: "FocusOnboarding",
+      bundle: .module,
+      value: "This filters by site name, so it is coarser than the checks inside Scout, and a few apps that bring their own settings can get around it.",
+      comment: "Footnote setting expectations for the device-wide filter"
+    )
     public static let settingsFooter = NSLocalizedString(
       "scoutBlocking.settingsFooter",
       tableName: "FocusOnboarding",

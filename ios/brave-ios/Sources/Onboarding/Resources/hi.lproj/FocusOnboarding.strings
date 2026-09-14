@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "ऐसे पेज जो मुख्य रूप से विज्ञापन दिखाने के लिए बने होते हैं। Shields पेज के अंदर के विज्ञापन पहले से ही हटा देता है।";
+"scoutBlocking.phoneFilterTitle" = "इस पूरे फ़ोन को फ़िल्टर करें";
+"scoutBlocking.phoneFilterDetail" = "दूसरे ऐप्स लिंक अपने ही ब्राउज़र में खोलते हैं, जहाँ Scout उन्हें जाँच नहीं सकता। इसे चालू करें और वयस्क तथा असुरक्षित साइटें फ़ोन पर हर ऐप में अस्वीकार कर दी जाएँगी।";
+"scoutBlocking.phoneFilterApprovalNeeded" = "बस थोड़ा और: सेटिंग्स › सामान्य › VPN, DNS और डिवाइस प्रबंधन › DNS खोलें और Scout चुनें।";
+"scoutBlocking.phoneFilterOn" = "चालू है। इस फ़ोन का हर ऐप फ़िल्टर हो रहा है।";
+"scoutBlocking.phoneFilterFailed" = "Scout इस डिवाइस पर यह सेट नहीं कर सका।";
+"scoutBlocking.phoneFilterFootnote" = "फ़िल्टर साइट के नाम से होता है, इसलिए यह Scout की जाँचों से मोटा है, और अपनी सेटिंग्स वाले कुछ ऐप्स इसे बायपास कर सकते हैं।";

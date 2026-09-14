@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "主に広告を表示するためのページです。ページ内の広告はShieldsがすでに削除しています。";
+"scoutBlocking.phoneFilterTitle" = "この端末全体をフィルタリング";
+"scoutBlocking.phoneFilterDetail" = "他のアプリはリンクを独自のブラウザで開くため、Scout は確認できません。これをオンにすると、成人向けや危険なサイトが端末のどのアプリでも拒否されます。";
+"scoutBlocking.phoneFilterApprovalNeeded" = "あと少しです。設定 › 一般 › VPN と デバイス管理 › DNS を開き、Scout を選択してください。";
+"scoutBlocking.phoneFilterOn" = "オンです。この端末のすべてのアプリがフィルタリングされています。";
+"scoutBlocking.phoneFilterFailed" = "Scout はこの端末で設定できませんでした。";
+"scoutBlocking.phoneFilterFootnote" = "サイト名による判定のため Scout 内の確認より大まかで、独自の設定を持つ一部のアプリは回避できます。";

@@ -847,6 +847,18 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       )
     )
 
+    section.rows.append(
+      Row(
+        text: Strings.ScoutBlocking.phoneFilterTitle,
+        selection: { [unowned self] in
+          let controller = UIHostingController(rootView: ScoutDeviceFilterView())
+          self.navigationController?.pushViewController(controller, animated: true)
+        },
+        image: UIImage(systemName: "iphone.gen3.badge.exclamationmark"),
+        accessory: .disclosureIndicator
+      )
+    )
+
     if BraveRewards.isSupported(prefService: braveCore.profile.prefs), let rewards = rewards {
       section.rows += [
         Row(

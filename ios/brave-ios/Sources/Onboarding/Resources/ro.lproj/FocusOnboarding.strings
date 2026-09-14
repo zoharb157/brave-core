@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Pagini care există în principal pentru a afișa reclame. Shields elimină deja reclamele de pe pagini.";
+"scoutBlocking.phoneFilterTitle" = "Filtrează tot acest telefon";
+"scoutBlocking.phoneFilterDetail" = "Alte aplicații deschid linkurile în propriul browser, unde Scout nu le poate verifica. Activează această opțiune și site-urile pentru adulți sau nesigure vor fi refuzate peste tot pe telefon, în fiecare aplicație.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Aproape gata: deschide Setări › General › VPN, DNS și gestionarea dispozitivelor › DNS și alege Scout.";
+"scoutBlocking.phoneFilterOn" = "Activat. Fiecare aplicație de pe acest telefon este filtrată.";
+"scoutBlocking.phoneFilterFailed" = "Scout nu a putut configura acest lucru pe dispozitiv.";
+"scoutBlocking.phoneFilterFootnote" = "Filtrarea se face după numele site-ului, deci este mai grosieră decât verificările din Scout, iar câteva aplicații cu setări proprii o pot ocoli.";

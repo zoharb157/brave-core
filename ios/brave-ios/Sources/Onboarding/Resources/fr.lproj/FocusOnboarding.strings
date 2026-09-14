@@ -78,3 +78,9 @@
 
 /* Description of the ad-heavy sites category */
 "scoutBlocking.adsDetail" = "Pages qui existent surtout pour afficher des publicités. Shields supprime déjà les publicités à l'intérieur des pages.";
+"scoutBlocking.phoneFilterTitle" = "Filtrer tout ce téléphone";
+"scoutBlocking.phoneFilterDetail" = "Les autres applications ouvrent les liens dans leur propre navigateur, où Scout ne peut pas les vérifier. Activez cette option et les sites pour adultes ou dangereux seront refusés partout sur le téléphone, dans toutes les applications.";
+"scoutBlocking.phoneFilterApprovalNeeded" = "Presque terminé : ouvrez Réglages › Général › VPN, DNS et gestion des appareils › DNS, puis choisissez Scout.";
+"scoutBlocking.phoneFilterOn" = "Activé. Toutes les applications de ce téléphone sont filtrées.";
+"scoutBlocking.phoneFilterFailed" = "Scout n'a pas pu configurer cela sur cet appareil.";
+"scoutBlocking.phoneFilterFootnote" = "Ce filtrage se fait par nom de site : il est donc moins fin que les vérifications dans Scout, et quelques applications qui ont leurs propres réglages peuvent le contourner.";
