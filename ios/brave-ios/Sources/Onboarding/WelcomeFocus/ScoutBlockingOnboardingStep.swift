@@ -175,7 +175,7 @@ extension Strings {
       "scoutBlocking.adsDetail",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "Pages that exist mainly to show ads. Shields already removes ads inside pages.",
+      value: "Pages that exist mainly to show ads. Ad blocking already removes ads inside pages.",
       comment: "Description of the ad-heavy sites category"
     )
   }
@@ -211,6 +211,8 @@ extension ContentCategory {
 
 private let scoutViolet = Color(red: 0x54 / 255, green: 0x40 / 255, blue: 0x96 / 255)
 private let scoutMint = Color(red: 0x7E / 255, green: 0xC8 / 255, blue: 0xA8 / 255)
+/// Text that sits on `scoutMint` itself. Deep enough to clear 4.5:1 against it.
+private let scoutBadgeInk = Color(red: 0x0E / 255, green: 0x2E / 255, blue: 0x22 / 255)
 
 /// Unsafe links are stated, not offered — security is never optional — then
 /// one toggle per content category.
@@ -241,12 +243,17 @@ struct ScoutBlockingPicker: View {
           .fixedSize(horizontal: false, vertical: true)
       }
       Spacer(minLength: 0)
+      // Solid mint with ink on top, rather than violet on a 25%-mint pill.
+      // That pill composites over the page, so it was pale in light mode and
+      // near-black in dark — where dark violet on it fell to about 1.6:1 and
+      // the badge could not be read at all. These two colours are fixed, so
+      // the contrast is the same whichever mode the reader is in.
       Text(Strings.ScoutBlocking.alwaysOnBadge)
         .font(.caption.weight(.semibold))
-        .foregroundStyle(scoutViolet)
+        .foregroundStyle(scoutBadgeInk)
         .padding(.horizontal, 8)
         .padding(.vertical, 4)
-        .background(scoutMint.opacity(0.25), in: .capsule)
+        .background(scoutMint, in: .capsule)
     }
     .padding(14)
     .background(scoutMint.opacity(0.12), in: .rect(cornerRadius: 14, style: .continuous))

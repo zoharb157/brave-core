@@ -2821,7 +2821,7 @@ extension Strings {
     "SiteAndShieldsSettings",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Site and Shields Settings",
+    value: "Site Settings",
     comment: "Settings item for clearing site-specific settings and shields settings."
   )
   public static let downloadedFiles = NSLocalizedString(
@@ -3012,14 +3012,14 @@ extension Strings {
     "BraveShieldsAndPrivacy",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Shields & Privacy",
+    value: "Privacy & Ad Blocking",
     comment: ""
   )
   public static let braveShieldsAndPrivacySettingsTitle = NSLocalizedString(
     "BraveShieldsAndPrivacyTitle",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Shields & Privacy",
+    value: "Privacy & Ad Blocking",
     comment: ""
   )
   public static let bookmarksImportAction = NSLocalizedString(
@@ -3251,7 +3251,7 @@ extension Strings {
     "blockAllCookiesDescription",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Shields already blocks 3rd-party cookies. This setting to block ALL cookies will remove existing cookies and site data, and could break websites.",
+    value: "Ad blocking already blocks 3rd-party cookies. This setting to block ALL cookies will remove existing cookies and site data, and could break websites.",
     comment: "Description of confirmation alert displayed to user when block all cookie toggle is enabled."
   )
   public static let blockAllCookiesFailedAlertMsg = NSLocalizedString(
@@ -3857,7 +3857,7 @@ extension Strings {
     "OBShieldsTitle",
     tableName: "BraveShared",
     bundle: .module,
-    value: "Shields",
+    value: "Ad blocking",
     comment: "Title for shields onboarding screen"
   )
   public static let OBShieldsDetail = NSLocalizedString(
@@ -4247,7 +4247,7 @@ extension Strings {
         "shieldEducation.trackerAdWarningSubTitle",
         tableName: "BraveShared",
         bundle: .module,
-        value: "Shields just protected your online privacy.",
+        value: "Scout just protected your online privacy.",
         comment: "Subtitle for Shield Education Tracker Ad Warning"
       )
 
@@ -7959,7 +7959,7 @@ extension Strings {
       "privacyHub.mostFrequentTrackerAndAdBody",
       tableName: "BraveShared",
       bundle: .module,
-      value: "**%@** was blocked by Shields on **%lld** sites",
+      value: "**%@** was blocked on **%lld** sites",
       comment:
         "Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites'"
     )
@@ -8114,7 +8114,7 @@ extension Strings {
       "privacyHub.shieldsLabel",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Shields",
+      value: "Ad blocking",
       comment:
         "This label says shields, as a source of by what a resource was blocked. Think of it in context of 'Blocked by Shields'"
     )
@@ -8207,7 +8207,7 @@ extension Strings {
       "privacyHub.settingsEnableShieldsTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Show Shields Data",
+      value: "Show Blocking Data",
       comment: "Title of a setting that lets Brave monitor blocked network requests"
     )
 
@@ -8242,7 +8242,7 @@ extension Strings {
       "privacyHub.settingsSlearDataTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Clear Shields Data",
+      value: "Clear Blocking Data",
       comment:
         "Button that lets user clear all blocked requests and vpn alerts data that Brave captured for them."
     )
@@ -8251,7 +8251,7 @@ extension Strings {
       "privacyHub.settingsSlearDataFooter",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Resets the count of everything Shields has blocked.",
+      value: "Resets the count of everything ad blocking has stopped.",
       comment: "This text explains what the button to clear datain the Privacy Hub is for."
     )
 
@@ -8259,7 +8259,7 @@ extension Strings {
       "privacyHub.clearAllDataPrompt",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Clear all Shields data?",
+      value: "Clear all blocking data?",
       comment:
         "A prompt message we show to the user if they want to clear all data gathered by the Privacy Reports Feature"
     )
@@ -8704,7 +8704,7 @@ extension Strings {
     public static let showShieldsTitle = NSLocalizedString(
       "showShieldsTitle",
       bundle: .module,
-      value: "Open Shields",
+      value: "Open Site Panel",
       comment:
         "Label to display in the Discoverability overlay for keyboard shortcuts which is for Showing Brave Shields"
     )

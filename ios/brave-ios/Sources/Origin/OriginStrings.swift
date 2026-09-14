@@ -171,7 +171,7 @@ extension Strings {
     public static let upsellMinimalUI = NSLocalizedString(
       "upsellMinimalUI",
       bundle: .module,
-      value: "Minimalist browser UI centered on Shields",
+      value: "Minimalist browser UI centered on protection",
       comment: "An upsell point about minimal browser UI"
     )
     public static let upsellCoreFeatures = NSLocalizedString(
