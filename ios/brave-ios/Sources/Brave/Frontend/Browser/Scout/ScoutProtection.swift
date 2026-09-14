@@ -50,6 +50,16 @@ extension Preferences.Scout {
     key: "scout.ask-when-check-fails",
     default: false
   )
+
+  /// Whether a parent is watching this phone, and a PIN guards the settings
+  /// that weaken protection.
+  ///
+  /// Off by default: Scout is the user's own browser until someone says
+  /// otherwise, and this is turned on from the phone being supervised.
+  public static let supervised = Preferences.Option<Bool>(
+    key: "scout.supervised",
+    default: false
+  )
 }
 
 /// Reads and writes the two stores through preferences.

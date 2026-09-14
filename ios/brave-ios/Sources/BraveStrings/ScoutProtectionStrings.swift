@@ -201,6 +201,123 @@ extension Strings {
       comment: "Explanation of the setting deciding what happens when a safety check cannot complete"
     )
 
+    // MARK: - Supervision
+
+    public static let supervisionTitle = NSLocalizedString(
+      "scoutProtection.supervisionTitle",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Let a parent watch this phone",
+      comment: "Title of the screen that turns supervision on"
+    )
+    public static let supervisionDetail = NSLocalizedString(
+      "scoutProtection.supervisionDetail",
+      tableName: "BraveShared",
+      bundle: .module,
+      value:
+        "A parent can see what Scout checked and blocked here, from their own phone. They can't change anything from there, and private tabs are turned off while this is on.",
+      comment: "Explanation of what supervision does"
+    )
+    public static let supervisionTurnOn = NSLocalizedString(
+      "scoutProtection.supervisionTurnOn",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Turn on",
+      comment: "Button that starts supervision"
+    )
+    public static let supervisionSetPIN = NSLocalizedString(
+      "scoutProtection.supervisionSetPIN",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Choose a 4-digit PIN",
+      comment: "Prompt to set the supervision PIN"
+    )
+    public static let supervisionPINDetail = NSLocalizedString(
+      "scoutProtection.supervisionPINDetail",
+      tableName: "BraveShared",
+      bundle: .module,
+      value:
+        "Needed to allow a blocked site, turn a category off, or turn this back off. Continuing past one block does not need it.",
+      comment: "Explanation of what the PIN is for"
+    )
+    public static let supervisionConfirmPIN = NSLocalizedString(
+      "scoutProtection.supervisionConfirmPIN",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Enter it again",
+      comment: "Prompt to confirm the PIN"
+    )
+    public static let supervisionPINMismatch = NSLocalizedString(
+      "scoutProtection.supervisionPINMismatch",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Those don't match",
+      comment: "Shown when the two PIN entries differ"
+    )
+    public static let supervisionWrongPIN = NSLocalizedString(
+      "scoutProtection.supervisionWrongPIN",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "That PIN doesn't match",
+      comment: "Shown when the PIN entered is wrong"
+    )
+    public static let supervisionEnterPIN = NSLocalizedString(
+      "scoutProtection.supervisionEnterPIN",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Enter the PIN",
+      comment: "Title of the sheet asking for the PIN"
+    )
+    public static let supervisionCodeTitle = NSLocalizedString(
+      "scoutProtection.supervisionCodeTitle",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Give this code to the parent",
+      comment: "Title above the pairing code"
+    )
+    public static let supervisionCodeDetail = NSLocalizedString(
+      "scoutProtection.supervisionCodeDetail",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "They enter it at %@ within ten minutes. It works once.",
+      comment: "Where and how long the pairing code can be used; %@ is a web address"
+    )
+    public static let supervisionNewCode = NSLocalizedString(
+      "scoutProtection.supervisionNewCode",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "New code",
+      comment: "Button that issues a fresh pairing code"
+    )
+    public static let supervisionCodeFailed = NSLocalizedString(
+      "scoutProtection.supervisionCodeFailed",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Scout couldn't reach the internet to make a code. Try again.",
+      comment: "Shown when a pairing code could not be issued"
+    )
+    public static let supervisionStopSharing = NSLocalizedString(
+      "scoutProtection.supervisionStopSharing",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Stop sharing",
+      comment: "Button that revokes every parent link"
+    )
+    public static let supervisionStopSharingDetail = NSLocalizedString(
+      "scoutProtection.supervisionStopSharingDetail",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Any link a parent saved stops working straight away.",
+      comment: "What Stop sharing does"
+    )
+    public static let supervisionTurnOff = NSLocalizedString(
+      "scoutProtection.supervisionTurnOff",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Turn off supervision",
+      comment: "Button that ends supervision"
+    )
+
     public static let sitePlaceholder = NSLocalizedString(
       "scoutProtection.sitePlaceholder",
       tableName: "BraveShared",

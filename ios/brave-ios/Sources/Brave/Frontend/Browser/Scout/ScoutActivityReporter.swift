@@ -179,7 +179,7 @@ public final class ScoutActivityReporter {
   ///
   /// Kept in the keychain, not in the app group: the install id used to be the
   /// credential, and it sat in a plist that travels in a backup.
-  private func deviceToken() async -> String? {
+  public func deviceToken() async -> String? {
     if let existing = ScoutCredentials.string(forKey: Self.tokenKey) { return existing }
     var request = URLRequest(url: Self.mintEndpoint)
     request.httpMethod = "POST"

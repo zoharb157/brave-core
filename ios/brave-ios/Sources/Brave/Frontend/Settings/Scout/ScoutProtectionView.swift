@@ -94,6 +94,15 @@ struct ScoutProtectionView: View {
 
       Section(Strings.ScoutProtection.beyondScout) {
         NavigationLink {
+          ScoutSupervisionView()
+        } label: {
+          row(
+            symbol: "person.2",
+            title: Strings.ScoutProtection.supervisionTitle,
+            detail: Strings.ScoutProtection.supervisionDetail
+          )
+        }
+        NavigationLink {
           ScoutDeviceFilterView()
         } label: {
           row(
