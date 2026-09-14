@@ -6,6 +6,8 @@
 import Foundation
 import Preferences
 import Scout
+import Strings
+import UIKit
 
 /// Whether a parent is watching this phone, and the PIN that goes with it.
 ///
@@ -53,7 +55,13 @@ public final class ScoutSupervision: ObservableObject {
     ScoutCredentials.set(pin, forKey: Self.pinKey)
     Preferences.Scout.supervised.value = true
     objectWillChange.send()
+    // Private tabs stop being offered from here on, so any already open would
+    // otherwise sit there unreachable by the control that made them.
+    NotificationCenter.default.post(name: Self.supervisionDidBegin, object: nil)
   }
+
+  /// Posted when supervision starts, so open private tabs can be closed.
+  public static let supervisionDidBegin = Notification.Name("scout.supervision-did-begin")
 
   /// Ends supervision, and every watch with it.
   ///
@@ -95,5 +103,54 @@ public final class ScoutSupervision: ObservableObject {
       let http = response as? HTTPURLResponse, http.statusCode == 200
     else { return nil }
     return try? JSONSerialization.jsonObject(with: data) as? [String: Any]
+  }
+
+  /// The controller actually on screen, starting from `presenter`.
+  ///
+  /// Settings and the menu are presented on top of the browser, so the
+  /// controller a caller has to hand is often not the one in front. Presenting
+  /// on a covered controller does nothing at all — no alert, no error — which
+  /// is how a gate can look like it is not firing when it is.
+  private static func topmost(from presenter: UIViewController?) -> UIViewController? {
+    var current = presenter
+    while let next = current?.presentedViewController, !next.isBeingDismissed {
+      current = next
+    }
+    return current
+  }
+
+  /// Asks for the PIN if this action needs one, then runs `perform`.
+  ///
+  /// Nothing happens on a wrong PIN or a cancel — deliberately silent rather
+  /// than scolding, because the person who does not know it is not the person
+  /// this is protecting.
+  public func gate(
+    _ action: SupervisedAction,
+    from presenter: UIViewController?,
+    perform: @escaping () -> Void
+  ) {
+    guard needsPIN(action) else {
+      perform()
+      return
+    }
+    guard let presenter = Self.topmost(from: presenter) else { return }
+    let alert = UIAlertController(
+      title: Strings.ScoutProtection.supervisionEnterPIN,
+      message: nil,
+      preferredStyle: .alert
+    )
+    alert.addTextField { field in
+      field.isSecureTextEntry = true
+      field.keyboardType = .numberPad
+      field.textContentType = .oneTimeCode
+    }
+    alert.addAction(UIAlertAction(title: Strings.cancelButtonTitle, style: .cancel))
+    alert.addAction(
+      UIAlertAction(title: Strings.done, style: .default) { [weak alert] _ in
+        guard let entered = alert?.textFields?.first?.text, self.verify(pin: entered) else { return }
+        perform()
+      }
+    )
+    presenter.present(alert, animated: true)
   }
 }

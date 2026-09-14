@@ -18,6 +18,9 @@ struct ScoutSiteListView: View {
 
   @State private var sites: [String] = []
   @State private var typed = ""
+  @State private var askingPIN = false
+  @State private var pendingSite: String?
+  @State private var pendingRemoval: [String] = []
   @FocusState private var fieldFocused: Bool
 
   var body: some View {
@@ -81,6 +84,14 @@ struct ScoutSiteListView: View {
       }
     }
     .onAppear { sites = ScoutServices.shared.siteRules.sites(rule) }
+    .sheet(isPresented: $askingPIN) {
+      ScoutPINSheet(mode: .confirm) { _ in
+        if let pendingSite { commit(pendingSite) }
+        if !pendingRemoval.isEmpty { drop(pendingRemoval) }
+        pendingSite = nil
+        pendingRemoval = []
+      }
+    }
   }
 
   /// Whether the user has typed something that isn't a site.
@@ -112,16 +123,44 @@ struct ScoutSiteListView: View {
 
   private func add() {
     guard let site = normalized(typed) else { return }
+    // Adding to the allow list weakens protection; adding to the block list
+    // does not, so only one of them asks.
+    if ScoutSupervision.shared.needsPIN(rule == .allow ? .allowSite : .blockSite) {
+      pendingSite = site
+      askingPIN = true
+      return
+    }
+    commit(site)
+  }
+
+  private func commit(_ site: String) {
     ScoutServices.shared.siteRules.set(rule, forSite: site)
     sites = ScoutServices.shared.siteRules.sites(rule)
     typed = ""
     fieldFocused = false
   }
 
+  /// Deleting a row from the block list is "stop blocking this site", which
+  /// weakens protection exactly as much as adding it to the allow list does,
+  /// so it asks for the same reason. Deleting from the allow list puts a site
+  /// back under checking and never asks.
   private func remove(at offsets: IndexSet) {
+    let going = offsets.map { sites[$0] }
+    if rule == .block, ScoutSupervision.shared.needsPIN(.allowSite) {
+      pendingRemoval = going
+      askingPIN = true
+      // Put the rows back: the list already animated them away, and they are
+      // not gone until the PIN says so.
+      sites = ScoutServices.shared.siteRules.sites(rule)
+      return
+    }
+    drop(going)
+  }
+
+  private func drop(_ going: [String]) {
     let rules = ScoutServices.shared.siteRules
-    for index in offsets {
-      rules.set(nil, forSite: sites[index])
+    for site in going {
+      rules.set(nil, forSite: site)
     }
     sites = rules.sites(rule)
   }

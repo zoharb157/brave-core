@@ -554,6 +554,21 @@ public class BrowserViewController: UIViewController {
 
     disconnectVPNIfDisabledByPolicy()
 
+    // Turning a category off is one of the things a supervised phone asks the
+    // PIN for. The category screen lives in a module that cannot see either,
+    // so the check is handed to it from here.
+    ScoutBlockingChoices.confirmRelax = { [weak self] proceed in
+      ScoutSupervision.shared.gate(.relaxCategory, from: self) { proceed() }
+    }
+
+    NotificationCenter.default.addObserver(
+      forName: ScoutSupervision.supervisionDidBegin,
+      object: nil,
+      queue: .main
+    ) { [weak self] _ in
+      MainActor.assumeIsolated { self?.tabManager.closePrivateTabsForSupervision() }
+    }
+
     pageZoomListener = NotificationCenter.default.addObserver(
       forName: PageZoomView.notificationName,
       object: nil,

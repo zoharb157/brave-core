@@ -209,6 +209,16 @@ extension ContentCategory {
 
 // MARK: - Picker
 
+/// How this screen asks before letting someone block less.
+///
+/// The check belongs to the browser — it owns the supervision state and the
+/// PIN — and this module cannot see it. The browser installs a confirmation
+/// here at launch; with none installed the change simply happens, which is what
+/// an unsupervised phone wants.
+public enum ScoutBlockingChoices {
+  public static var confirmRelax: (@escaping () -> Void) -> Void = { $0() }
+}
+
 private let scoutViolet = Color(red: 0x54 / 255, green: 0x40 / 255, blue: 0x96 / 255)
 private let scoutMint = Color(red: 0x7E / 255, green: 0xC8 / 255, blue: 0xA8 / 255)
 /// Text that sits on `scoutMint` itself. Deep enough to clear 4.5:1 against it.
@@ -264,7 +274,12 @@ struct ScoutBlockingPicker: View {
     let isOn = Binding(
       get: { blocked.contains(category) },
       set: { on in
-        if on { blocked.insert(category) } else { blocked.remove(category) }
+        if on {
+          // Turning protection up never asks for anything.
+          blocked.insert(category)
+        } else {
+          ScoutBlockingChoices.confirmRelax { blocked.remove(category) }
+        }
       }
     )
     return Toggle(isOn: isOn) {

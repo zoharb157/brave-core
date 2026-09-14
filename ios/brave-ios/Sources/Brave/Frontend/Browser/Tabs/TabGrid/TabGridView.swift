@@ -511,7 +511,10 @@ struct TabGridView: View {
       .keyboardShortcut("t", modifiers: [.command])
       Spacer()
 
-      if !privateBrowsingOnly.value {
+      // Supervised phones do not offer private tabs. Logging a private visit
+      // and labelling it is a worse answer than not offering a privacy the
+      // product does not intend to honour.
+      if !privateBrowsingOnly.value, !ScoutSupervision.shared.isOn {
         TabGridModeSwitcher(
           isPrivateBrowsing: $viewModel.isPrivateBrowsing,
           regularTabCount: viewModel.regularTabCount

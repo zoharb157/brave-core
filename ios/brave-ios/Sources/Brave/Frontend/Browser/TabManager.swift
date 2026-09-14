@@ -411,6 +411,13 @@ class TabManager: NSObject {
   // Called by other classes to signal that they are entering/exiting private mode
   // This is called by TabTrayVC when the private mode button is pressed and BEFORE we've switched to the new mode
   // we only want to remove all private tabs when leaving PBM and not when entering.
+  /// Closes every private tab when supervision begins, since the control that
+  /// opened them is about to disappear.
+  @MainActor func closePrivateTabsForSupervision() {
+    guard !tabs(isPrivate: true).isEmpty else { return }
+    removeAllPrivateTabs()
+  }
+
   func willSwitchTabMode(leavingPBM: Bool) {
     if leavingPBM {
       if Preferences.Privacy.privateBrowsingOnly.value

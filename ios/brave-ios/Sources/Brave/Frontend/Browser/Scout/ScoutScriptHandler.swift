@@ -84,6 +84,19 @@ class ScoutScriptHandler: TabContentScript {
   /// both paths set an explicit allow.
   private func allowFromNowOn(_ siteURL: URL, tab: some TabState) {
     MainActor.assumeIsolated {
+      // A standing allow is the most consequential thing on this page, so on a
+      // supervised phone it asks first. "Continue anyway" above it does not.
+      ScoutSupervision.shared.gate(
+        .alwaysAllowFromBlockPage,
+        from: tab.view.window?.rootViewController
+      ) {
+        Self.applyAllow(siteURL, tab: tab)
+      }
+    }
+  }
+
+  private static func applyAllow(_ siteURL: URL, tab: some TabState) {
+    MainActor.assumeIsolated {
       ScoutServices.shared.siteRules.set(.allow, for: siteURL)
       if let host = siteURL.host {
         ScoutServices.shared.blockLog.noteContinued(site: host)
