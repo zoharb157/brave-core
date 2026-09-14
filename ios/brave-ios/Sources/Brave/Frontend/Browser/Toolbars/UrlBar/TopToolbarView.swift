@@ -10,6 +10,7 @@ import Data
 import DesignSystem
 import OrderedCollections
 import Preferences
+import Scout
 import Shared
 import SnapKit
 import SpeechRecognition
@@ -534,20 +535,74 @@ class TopToolbarView: UIView, ToolbarProtocol {
     // Default on
     var shieldIcon = "brave.logo"
     let shieldsOffIcon = "brave.logo.greyscale"
+    var isShieldsOff = false
     if let currentURL = currentURL, currentURL.isWebPage(includeDataURIs: false) {
       let isShieldsEnabled =
         delegate?.topToolbarIsShieldsEnabled(self, for: currentURL) ?? true
       if !isShieldsEnabled {
         shieldIcon = shieldsOffIcon
+        isShieldsOff = true
       }
       if currentURL.isLocal || currentURL.isNewTabURL {
         shieldIcon = shieldsOffIcon
+        isShieldsOff = true
       }
     } else {
       shieldIcon = shieldsOffIcon
+      isShieldsOff = true
     }
 
+    // Scout's read on this page takes the icon when there is one. The button
+    // opens a panel that now leads with that read, and a browser whose job is
+    // deciding whether a site should open has no business showing the same
+    // mark on a site it checked and one it has never seen. Brave's own
+    // shields-off state still wins: that is a state of this button's other
+    // half, and hiding it would leave ad blocking silently switched off.
+    if !isShieldsOff, let currentURL, let scout = Self.scoutIcon(for: currentURL) {
+      shieldsButton.setImage(scout.image, for: .normal)
+      shieldsButton.tintColor = scout.tint
+      shieldsButton.accessibilityLabel = scout.label
+      return
+    }
+
+    shieldsButton.tintColor = nil
+    shieldsButton.accessibilityLabel = Strings.bravePanel
     shieldsButton.setImage(UIImage(sharedNamed: shieldIcon), for: .normal)
+  }
+
+  /// The mark for what Scout knows about `url`, or nil when it knows nothing
+  /// and the ordinary icon should stand.
+  private static func scoutIcon(for url: URL) -> (image: UIImage?, tint: UIColor, label: String)? {
+    let status = ScoutServices.shared.status(for: url)
+    let configuration = UIImage.SymbolConfiguration(pointSize: 17, weight: .semibold)
+    func mark(_ name: String, _ tint: UIColor, _ label: String) -> (UIImage?, UIColor, String) {
+      (
+        UIImage(systemName: name, withConfiguration: configuration)?
+          .withRenderingMode(.alwaysTemplate),
+        tint, label
+      )
+    }
+
+    switch status.rule {
+    case .allow:
+      return mark("checkmark.seal.fill", .scoutMint, Strings.ScoutSitePanel.alwaysAllowed)
+    case .block:
+      return mark("minus.circle.fill", .scoutViolet, Strings.ScoutSitePanel.alwaysBlocked)
+    case nil:
+      break
+    }
+    guard let verdict = status.verdict else { return nil }
+    if verdict.security == .malicious || !status.blockedCategories.isEmpty {
+      return mark(
+        "exclamationmark.shield.fill", UIColor(braveSystemName: .systemfeedbackErrorIcon),
+        Strings.ScoutSitePanel.checkedUnsafe)
+    }
+    if verdict.security == .suspicious {
+      return mark(
+        "exclamationmark.shield.fill", UIColor(braveSystemName: .systemfeedbackWarningIcon),
+        Strings.ScoutSitePanel.checkedSuspicious)
+    }
+    return mark("checkmark.shield.fill", .scoutMint, Strings.ScoutSitePanel.checkedSafe)
   }
 
   // MARK: Actions

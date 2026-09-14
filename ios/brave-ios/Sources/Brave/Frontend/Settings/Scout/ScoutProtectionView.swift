@@ -10,6 +10,7 @@ import Scout
 import Shared
 import Strings
 import SwiftUI
+import UIKit
 
 /// Scout's colours. Defined here as well as in the onboarding module because
 /// the two live in separate targets and a shared design token for one brand
@@ -320,4 +321,10 @@ struct ScoutBlockLogView: View {
     .navigationBarTitleDisplayMode(.inline)
     .onAppear { recent = ScoutServices.shared.blockLog.entries }
   }
+}
+
+extension UIColor {
+  /// Scout's brand colours for UIKit surfaces (the URL bar's status mark).
+  static let scoutViolet = UIColor(red: 0x54 / 255, green: 0x40 / 255, blue: 0x96 / 255, alpha: 1)
+  static let scoutMint = UIColor(red: 0x4E / 255, green: 0xA3 / 255, blue: 0x80 / 255, alpha: 1)
 }
