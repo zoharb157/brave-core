@@ -56,7 +56,12 @@ public enum ScoutInterstitial {
     case .category:
       chipText = "BLOCKED"
       title = "Blocked by your settings"
-      summary = "This page matched: \(categorySummary(matchedCategories))."
+      // Naming what matched is the point of this screen, but an empty set must
+      // never render as a sentence with nothing in it ("This page matched: .").
+      summary =
+        matchedCategories.isEmpty
+        ? "This page matched something you chose to block."
+        : "This page matched: \(categorySummary(matchedCategories))."
       reasons = []
     case .policyList:
       chipText = "BLOCKED"

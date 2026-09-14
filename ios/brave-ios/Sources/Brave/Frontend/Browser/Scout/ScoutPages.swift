@@ -35,15 +35,16 @@ enum ScoutPages {
   }
 
   static func resultHTML(for decision: Scout.Decision, siteURL: URL) -> String {
-    let matched =
-      decision.verdict?.categories
-      .intersection(ScoutServices.shared.decisionPolicy.blockedCategories) ?? []
+    // The decision already carries what it matched. Recomputing it from the
+    // verdict used to give the same answer and now doesn't: a block decided
+    // from the address alone has no verdict to recompute from, and the page
+    // read "This page matched: ." with nothing in it.
     return channelled(
       ScoutInterstitial.html(
         type: decision.type,
         verdict: decision.verdict,
         reason: decision.reason,
-        matchedCategories: matched,
+        matchedCategories: decision.matchedCategories,
         host: host(of: siteURL)
       )
     )

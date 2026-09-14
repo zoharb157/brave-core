@@ -101,6 +101,16 @@ public final class NavigationGuard {
     case .block: return Decision(type: .block, reason: .policyList)
     case .unknown: break
     }
+    // Read the address before the cache, not after. A verdict is keyed by site,
+    // so an injected page on an otherwise clean domain inherits that domain's
+    // clean answer — and no amount of re-fetching fixes it, because the rest of
+    // the domain really is clean. The address is per-page and free.
+    //
+    // After the user's own rules, though: someone who chose "always allow this
+    // site" has answered this question already.
+    if policy.blockedCategories.contains(.adult), ExplicitURL.looksExplicit(url) {
+      return Decision(type: .block, reason: .category, matchedCategories: [.adult])
+    }
     if let cached = cache.lookup(url, grace: staleGrace) {
       let decision = Self.resolve(cached.verdict, blockedCategories: policy.blockedCategories)
       return Decision(
