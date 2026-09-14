@@ -34,7 +34,7 @@ struct ScoutSiteListView: View {
           ForEach(sites, id: \.self) { site in
             HStack(spacing: 12) {
               Image(systemName: rule == .allow ? "checkmark.circle.fill" : "minus.circle.fill")
-                .foregroundStyle(rule == .allow ? scoutMint : scoutViolet)
+                .foregroundStyle(rule == .allow ? scoutMint : scoutRose)
               Text(site).lineLimit(1).truncationMode(.middle)
             }
           }
@@ -61,6 +61,13 @@ struct ScoutSiteListView: View {
             .disabled(normalized(typed) == nil)
             .foregroundStyle(normalized(typed) == nil ? Color(braveSystemName: .textSecondary) : scoutViolet)
         }
+      } footer: {
+        // Only once there is something to be wrong about: an empty field is
+        // not a mistake, it is the starting state.
+        if hasUnusableInput {
+          Text(Strings.ScoutProtection.siteInvalid)
+            .foregroundStyle(scoutRose)
+        }
       }
     }
     .listStyle(.insetGrouped)
@@ -74,6 +81,14 @@ struct ScoutSiteListView: View {
       }
     }
     .onAppear { sites = ScoutServices.shared.siteRules.sites(rule) }
+  }
+
+  /// Whether the user has typed something that isn't a site.
+  ///
+  /// Without this the Add button simply refuses to work and says nothing,
+  /// which reads as a broken screen rather than a rejected entry.
+  private var hasUnusableInput: Bool {
+    !typed.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && normalized(typed) == nil
   }
 
   /// What the user typed, as a site name — or nil if there isn't one in there.

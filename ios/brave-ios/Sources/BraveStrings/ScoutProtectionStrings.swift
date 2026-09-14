@@ -130,14 +130,14 @@ extension Strings {
       "scoutProtection.noAllowedSites",
       tableName: "BraveShared",
       bundle: .module,
-      value: "No sites allowed by hand",
+      value: "You haven't allowed any sites yet",
       comment: "Empty state for the list of always-allowed sites"
     )
     public static let noBlockedSites = NSLocalizedString(
       "scoutProtection.noBlockedSites",
       tableName: "BraveShared",
       bundle: .module,
-      value: "No sites blocked by hand",
+      value: "You haven't blocked any sites yet",
       comment: "Empty state for the list of always-blocked sites"
     )
     public static let addSite = NSLocalizedString(
@@ -147,6 +147,19 @@ extension Strings {
       value: "Add a site",
       comment: "Button that adds a site to the allowed or blocked list"
     )
+    /// Shown under the field when what was typed isn't a site.
+    ///
+    /// The Add button disables itself on invalid input, which is correct and
+    /// completely silent: someone types, taps, nothing happens, and there is
+    /// no way to tell a rejected entry from a broken screen.
+    public static let siteInvalid = NSLocalizedString(
+      "scoutProtection.siteInvalid",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Enter a site name, like example.com",
+      comment: "Hint shown when the text typed into the add-a-site field is not a site name"
+    )
+
     public static let sitePlaceholder = NSLocalizedString(
       "scoutProtection.sitePlaceholder",
       tableName: "BraveShared",
