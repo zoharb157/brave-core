@@ -62,7 +62,15 @@ struct ScoutActivityView: View {
               .font(.subheadline)
               .foregroundStyle(Color(braveSystemName: .textSecondary))
           } else {
-            ForEach(shown) { ActivityRow(record: $0) }
+            ForEach(shown) { record in
+              ActivityRow(record: record)
+                .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                  // Reading the log is where someone notices a site they want
+                  // decided differently. Making them go and type it into a
+                  // list somewhere else is how that intention gets lost.
+                  ruleButton(for: record)
+                }
+            }
           }
         }
       } footer: {
@@ -74,6 +82,28 @@ struct ScoutActivityView: View {
     .navigationBarTitleDisplayMode(.inline)
     .refreshable { await load() }
     .task { await load() }
+  }
+
+  /// Sets a standing rule from the row, or clears it if this site already has
+  /// the one the button would set.
+  @ViewBuilder private func ruleButton(
+    for record: ScoutActivityReporter.ActivityRecord
+  ) -> some View {
+    let site = record.site.isEmpty ? (URL(string: record.url)?.host ?? "") : record.site
+    if !site.isEmpty {
+      let existing = ScoutServices.shared.siteRules.rule(forSite: site)
+      if record.decision == .block {
+        Button(Strings.ScoutSitePanel.allow) {
+          ScoutServices.shared.siteRules.set(existing == .allow ? nil : .allow, forSite: site)
+        }
+        .tint(scoutMint)
+      } else {
+        Button(Strings.ScoutSitePanel.block) {
+          ScoutServices.shared.siteRules.set(existing == .block ? nil : .block, forSite: site)
+        }
+        .tint(scoutViolet)
+      }
+    }
   }
 
   private func load() async {
