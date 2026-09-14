@@ -124,9 +124,33 @@ public enum ScoutInterstitial {
     let reasonsBlock = m.reasons.isEmpty ? "" : "<ul class=\"reasons\">\(reasonsHTML)</ul>"
     let hostBlock = host.isEmpty ? "" : "<p class=\"host\">\(htmlEscaped(host))</p>"
     let tone = m.isBlocking ? "block" : "warn"
+    // "Continue anyway" lasts for this visit; this one lasts forever. They
+    // were the same quiet button with different words, so the permanent one
+    // read as no more consequential than the temporary one above it — and it
+    // took a single tap to stop Scout checking a site for good. It is set
+    // apart, it says what it will do, and it asks twice.
     let alwaysBlock =
-      m.alwaysLabel.map {
-        "<button class=\"quiet\" onclick=\"webkit.messageHandlers.scout.postMessage('always')\">\(htmlEscaped($0))</button>"
+      m.alwaysLabel.map { label in
+        let note = host.isEmpty
+          ? "Scout will stop checking this site."
+          : "Scout will stop checking \(htmlEscaped(host))."
+        // Inline, like the two buttons above it: this page's other actions
+        // are inline handlers, and a <script> block here did nothing when
+        // tapped. Arming lives on the element itself so there is no state to
+        // keep anywhere else, and it disarms after four seconds so it cannot
+        // be armed now and hit by accident later.
+        let arm =
+          "if(this.dataset.armed===\'1\'){window.webkit.messageHandlers.scout.postMessage(\'always\');}"
+          + "else{this.dataset.armed=\'1\';this.textContent=\'Tap again to confirm\';"
+          + "this.classList.add(\'armed\');var b=this;setTimeout(function(){b.dataset.armed=\'\';"
+          + "b.textContent=b.getAttribute(\'data-label\');b.classList.remove(\'armed\');},4000);}"
+        return """
+        <div class="lasting">
+          <button class="lasting-btn" data-label="\(htmlEscaped(label))"
+            onclick="\(arm)">\(htmlEscaped(label))</button>
+          <p class="lasting-note">\(note)</p>
+        </div>
+        """
       } ?? ""
 
     return """
@@ -302,6 +326,14 @@ public enum ScoutInterstitial {
   }
   .primary:active { transform: scale(.985); opacity: .92; }
   .quiet { background: transparent; color: var(--muted); padding: .72rem; font-size: .92rem; }
+  .lasting { margin-top: .9rem; padding-top: .9rem; border-top: 1px solid rgba(107,99,130,.22); }
+  .lasting-btn {
+    background: transparent; color: var(--muted); font-size: .86rem;
+    padding: .5rem .72rem; width: 100%;
+  }
+  .lasting-btn.armed { color: var(--rose); font-weight: 600; }
+  .lasting-note { margin: .15rem 0 0; font-size: .76rem; color: var(--muted); opacity: .85; }
+  .lasting-btn:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; }
   button:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; }
 
   /* ---- checking state ---- */
