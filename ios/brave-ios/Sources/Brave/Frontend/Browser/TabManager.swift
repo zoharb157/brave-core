@@ -1030,6 +1030,10 @@ class TabManager: NSObject {
       // This is because other tabs share the same data-store.
       if tabsCountForMode(isPrivate: true) <= 1 {
         removeAllBrowsingDataForTab(tab)
+        // The last private tab is going, so the private session is over. This
+        // is the path a person actually takes — closing tabs one by one — and
+        // it does not go through `removeAllPrivateTabs`.
+        ScoutServices.shared.forgetPrivateVerdicts()
 
         if !FeatureList.kUseProfileWebViewConfiguration.enabled {
           // After clearing the very last webview from the storage, give it a blank persistent store
@@ -1139,6 +1143,13 @@ class TabManager: NSObject {
     }
 
     Self.nonPersistentDataStore = nil
+
+    // Scout's own trace of the private session: verdicts it learned there are
+    // held in memory and were otherwise kept for the life of the app. Hopped
+    // rather than asserted onto the main actor — this method does UIKit work
+    // and so is called there, but that isn't something the type system knows,
+    // and nothing here depends on the drop happening before the return.
+    Task { @MainActor in ScoutServices.shared.forgetPrivateVerdicts() }
 
     allTabs = tabs(isPrivate: false)
   }

@@ -68,8 +68,9 @@ public final class ScoutServices {
   /// What Scout has blocked recently, for Settings → Protection.
   public let blockLog: BlockLog
   private let cache: VerdictCache
-  /// Sites first seen in a private tab. They stay in the in-memory cache for the
-  /// session but are never written to disk — a private visit leaves no trace.
+  /// Sites first seen in a private tab. Their verdicts are held in memory so a
+  /// private session doesn't re-check the same page over and over, and are
+  /// dropped the moment that session ends — see `forgetPrivateVerdicts()`.
   private var privateOnlyKeys: Set<String> = []
   private let checker: SafetyChecker
   public let guard_: NavigationGuard
@@ -206,6 +207,20 @@ public final class ScoutServices {
   /// Called for every checked navigation in a private tab.
   public func notePrivateNavigation(to url: URL) {
     privateOnlyKeys.insert(VerdictCache.cacheKey(for: url, perPageHosts: Self.perPageHosts))
+  }
+
+  /// Drops everything learned in private tabs. Called when the last private
+  /// tab closes, alongside the rest of the private teardown.
+  ///
+  /// These keys were only ever kept out of the file written to disk, and
+  /// cleared when the user cleared history. That left a private visit's verdict
+  /// sitting in the in-memory cache for the rest of the app's life: the site
+  /// panel would say "Checked 20 minutes ago" for a page the user had only ever
+  /// opened privately, and the set of keys grew for every private navigation
+  /// and was never emptied.
+  public func forgetPrivateVerdicts() {
+    for key in privateOnlyKeys { cache.forget(key: key) }
+    privateOnlyKeys.removeAll()
   }
 
   /// The cache keys are the sites the user visited, so clearing history clears

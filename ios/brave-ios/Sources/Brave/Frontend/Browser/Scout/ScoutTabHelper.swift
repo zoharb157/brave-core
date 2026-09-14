@@ -92,7 +92,7 @@ public class ScoutTabHelper: TabPolicyDecider {
       // (a store that drops it, YouTube rewriting PREF as the page loads), an
       // unbounded re-issue would be an endless reload on the site it is
       // supposed to be protecting.
-      restrictedURLs.insert(requestURL)
+      noteRestricted(requestURL)
       tab.loadRequest(request)
       return .cancel
     }
@@ -168,7 +168,23 @@ public class ScoutTabHelper: TabPolicyDecider {
   private var approvedURL: URL?
 
   /// Navigations already re-issued to carry YouTube's Restricted Mode cookie.
+  ///
+  /// Bounded, and ordered oldest-first so the oldest goes when it is full. It
+  /// exists only to stop a reload loop on the page being re-issued, which is a
+  /// question about the last few navigations; kept as a plain set it grew for
+  /// every distinct video watched in a tab and was never emptied.
   private var restrictedURLs: Set<URL> = []
+  private var restrictedOrder: [URL] = []
+  /// Far more than a loop needs, far less than a long watching session makes.
+  private static let maxRestrictedURLs = 50
+
+  private func noteRestricted(_ url: URL) {
+    guard restrictedURLs.insert(url).inserted else { return }
+    restrictedOrder.append(url)
+    if restrictedOrder.count > Self.maxRestrictedURLs {
+      restrictedURLs.remove(restrictedOrder.removeFirst())
+    }
+  }
 
   /// Writes YouTube's Restricted Mode into the cookie the site itself reads.
   ///

@@ -62,23 +62,47 @@ struct ScoutDeviceFilterView: View {
   @ViewBuilder private var status: some View {
     switch filter.state {
     case .needsApproval:
-      label(Strings.ScoutBlocking.phoneFilterApprovalNeeded, systemImage: "exclamationmark.circle")
+      label(
+        Strings.ScoutBlocking.phoneFilterApprovalNeeded, systemImage: "exclamationmark.circle",
+        tint: scoutAmber)
     case .on:
-      label(Strings.ScoutBlocking.phoneFilterOn, systemImage: "checkmark.circle")
+      label(Strings.ScoutBlocking.phoneFilterOn, systemImage: "checkmark.circle", tint: scoutMint)
     case .failed:
       // The system's own wording ("IPC failed") means nothing to a parent.
-      label(Strings.ScoutBlocking.phoneFilterFailed, systemImage: "exclamationmark.triangle")
+      VStack(alignment: .leading, spacing: 8) {
+        label(
+          Strings.ScoutBlocking.phoneFilterFailed, systemImage: "exclamationmark.triangle",
+          tint: scoutRose)
+        // Turning this on can fail for reasons that pass — no network when the
+        // profile is installed, another DNS profile briefly winning. Saying so
+        // and stopping there leaves a parent with the most important setting in
+        // the app switched off and nothing to press.
+        Button(Strings.ScoutProtection.activityRetry) {
+          isWorking = true
+          Task {
+            await filter.enable()
+            isWorking = false
+          }
+        }
+        .buttonStyle(.plain)
+        .font(.footnote.weight(.medium))
+        .foregroundStyle(scoutViolet)
+        .disabled(isWorking)
+      }
     case .off:
       EmptyView()
     }
   }
 
-  private func label(_ text: String, systemImage: String) -> some View {
+  /// Status carries its own colour: a failure styled like a success is read as
+  /// one, and this row is the only thing that says whether the filter is up.
+  private func label(_ text: String, systemImage: String, tint: Color) -> some View {
     HStack(alignment: .firstTextBaseline, spacing: 6) {
       Image(systemName: systemImage)
+        .foregroundStyle(tint)
       Text(text)
+        .foregroundStyle(Color(braveSystemName: .textSecondary))
     }
     .font(.footnote)
-    .foregroundStyle(Color(braveSystemName: .textSecondary))
   }
 }

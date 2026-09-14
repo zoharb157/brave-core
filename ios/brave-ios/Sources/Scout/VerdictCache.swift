@@ -86,7 +86,13 @@ public final class VerdictCache {
   /// one. Behind "Check again": a site that changed after being cached is
   /// otherwise stuck with the old answer until it expires.
   public func forget(_ url: URL) {
-    let k = key(url)
+    forget(key: key(url))
+  }
+
+  /// Drops a verdict by its cache key, for callers that hold keys rather than
+  /// the URLs they came from — dropping everything a private session learned,
+  /// where the URLs are exactly what must not be kept around.
+  public func forget(key k: String) {
     entries[k] = nil
     lru.removeAll { $0 == k }
   }
