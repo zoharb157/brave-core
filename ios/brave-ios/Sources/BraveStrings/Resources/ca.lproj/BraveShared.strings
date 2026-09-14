@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "S'està comprovant…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "Tota l'activitat";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Cada enllaç que Scout havia d'obrir, desat 30 dies.";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "Encara no hi ha res";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "No s'ha pogut carregar l'activitat ara mateix.";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "Torna-ho a provar";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "Tot";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "Només blocats";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "Obert";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "Avisat";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "Ja conegut";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "Pestanya privada";

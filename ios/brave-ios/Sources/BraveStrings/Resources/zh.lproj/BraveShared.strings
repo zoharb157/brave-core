@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "检查中…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "全部记录";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Scout 被要求打开的每个链接，保留 30 天。";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "这里还没有内容";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "暂时无法加载记录。";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "重试";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "全部";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "仅被拦截";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "已打开";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "已警告";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "已知结果";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "隐私标签页";

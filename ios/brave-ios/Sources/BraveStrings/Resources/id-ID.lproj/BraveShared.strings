@@ -3865,3 +3865,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "Memeriksa…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "Semua aktivitas";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Setiap tautan yang diminta dibuka Scout, disimpan 30 hari.";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "Belum ada apa pun di sini";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "Aktivitas tidak dapat dimuat saat ini.";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "Coba lagi";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "Semua";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "Hanya yang diblokir";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "Dibuka";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "Diperingatkan";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "Sudah diketahui";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "Tab pribadi";

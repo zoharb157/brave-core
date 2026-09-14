@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "בודק…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "כל הפעילות";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "כל קישור ש-Scout התבקש לפתוח, נשמר 30 יום.";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "עדיין אין כאן דבר";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "לא ניתן היה לטעון את הפעילות כרגע.";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "נסה שוב";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "הכול";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "חסומים בלבד";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "נפתח";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "אזהרה";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "ידוע כבר";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "לשונית פרטית";

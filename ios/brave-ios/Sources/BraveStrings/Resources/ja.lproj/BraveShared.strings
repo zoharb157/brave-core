@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "確認中…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "すべての履歴";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Scout が開くよう求められたすべてのリンク。30 日間保存されます。";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "まだ何もありません";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "いま履歴を読み込めませんでした。";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "再試行";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "すべて";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "ブロックのみ";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "開いた";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "警告";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "確認済み";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "プライベートタブ";

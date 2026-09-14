@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "Kontrolujem…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "Všetka aktivita";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Každý odkaz, ktorý mal Scout otvoriť, uchovávaný 30 dní.";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "Zatiaľ tu nič nie je";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "Aktivitu sa teraz nepodarilo načítať.";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "Skúsiť znova";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "Všetko";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "Len blokované";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "Otvorené";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "Varovanie";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "Už známe";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "Anonymná karta";

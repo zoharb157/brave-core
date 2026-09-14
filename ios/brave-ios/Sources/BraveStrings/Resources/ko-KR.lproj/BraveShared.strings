@@ -3865,3 +3865,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "확인 중…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "전체 기록";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Scout가 열도록 요청받은 모든 링크. 30일간 보관됩니다.";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "아직 아무것도 없습니다";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "지금은 기록을 불러올 수 없습니다.";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "다시 시도";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "전체";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "차단된 것만";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "열림";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "경고";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "이미 확인됨";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "비공개 탭";

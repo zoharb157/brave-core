@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "जाँच हो रही है…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "सारी गतिविधि";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "हर वह लिंक जिसे Scout को खोलना था, 30 दिन तक रखा जाता है।";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "यहाँ अभी कुछ नहीं है";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "अभी गतिविधि लोड नहीं हो सकी।";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "फिर कोशिश करें";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "सब कुछ";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "केवल ब्लॉक किए गए";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "खोला गया";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "चेतावनी दी";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "पहले से ज्ञात";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "निजी टैब";

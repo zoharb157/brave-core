@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "Перевірка…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "Уся активність";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Кожне посилання, яке просили відкрити, зберігається 30 днів.";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "Поки що нічого немає";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "Не вдалося завантажити активність зараз.";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "Повторити";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "Усе";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "Лише заблоковані";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "Відкрито";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "Попередження";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "Уже відомо";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "Приватна вкладка";

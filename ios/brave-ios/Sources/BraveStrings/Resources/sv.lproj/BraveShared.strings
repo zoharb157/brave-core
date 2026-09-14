@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "Kontrollerar…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "All aktivitet";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Varje länk Scout ombads öppna, sparad i 30 dagar.";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "Inget här ännu";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "Aktiviteten kunde inte laddas just nu.";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "Försök igen";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "Allt";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "Endast blockerade";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "Öppnad";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "Varnad";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "Redan känd";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "Privat flik";

@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "Tjekker…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "Al aktivitet";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Hvert link, Scout blev bedt om at åbne, gemt i 30 dage.";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "Der er ikke noget her endnu";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "Aktiviteten kunne ikke indlæses lige nu.";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "Prøv igen";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "Alt";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "Kun blokerede";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "Åbnet";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "Advaret";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "Allerede kendt";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "Privat faneblad";

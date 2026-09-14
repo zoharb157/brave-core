@@ -220,6 +220,21 @@ struct ScoutProtectionView: View {
     } footer: {
       Text(Strings.ScoutProtection.recentlyBlockedFooter)
     }
+
+    // Its own section, not part of the list above: that one is blocks,
+    // instantly and offline. This is everything, including what was allowed
+    // and what was decided without a fresh check.
+    Section {
+      NavigationLink {
+        ScoutActivityView()
+      } label: {
+        row(
+          symbol: "list.bullet.rectangle",
+          title: Strings.ScoutProtection.activityTitle,
+          detail: Strings.ScoutProtection.activityFooter
+        )
+      }
+    }
   }
 
   // MARK: - Row shapes

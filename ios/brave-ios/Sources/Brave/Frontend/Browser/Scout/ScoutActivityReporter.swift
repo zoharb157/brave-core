@@ -115,6 +115,82 @@ public final class ScoutActivityReporter {
     case none
   }
 
+  // MARK: - Reading it back
+
+  /// One decision as it reads back from the log.
+  public struct ActivityRecord: Identifiable, Sendable {
+    public let id = UUID()
+    public let url: String
+    /// The site the verdict behind this was keyed under.
+    public let site: String
+    public let decision: DecisionType
+    public let reason: DecisionReason
+    public let source: VerdictSource
+    public let categories: Set<ContentCategory>
+    public let continued: Bool
+    public let isPrivate: Bool
+    public let date: Date
+  }
+
+  private static let readEndpoint = URL(
+    string: "https://many-apps-30-day-challenge.fly.dev/api/kid-safe/navigations/read")!
+
+  /// This install's recent activity, newest first.
+  ///
+  /// Anything still waiting to be sent is flushed first, so opening the screen
+  /// right after browsing doesn't show a list that is missing the last minute
+  /// of it.
+  public func recentActivity(limit: Int = 200) async throws -> [ActivityRecord] {
+    flush()
+    var request = URLRequest(url: Self.readEndpoint)
+    request.httpMethod = "POST"
+    request.setValue("kid-safe", forHTTPHeaderField: "x-app-id")
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.httpBody = try JSONSerialization.data(
+      withJSONObject: ["installId": Self.installId, "limit": limit])
+
+    let (data, response) = try await session.data(for: request)
+    guard let http = response as? HTTPURLResponse, http.statusCode == 200 else {
+      throw URLError(.badServerResponse)
+    }
+    guard let object = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+      let rows = object["records"] as? [[String: Any]]
+    else { throw URLError(.cannotParseResponse) }
+
+    let formatter = ISO8601DateFormatter()
+    formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+    let plain = ISO8601DateFormatter()
+
+    return rows.compactMap { row -> ActivityRecord? in
+      guard let url = row["url"] as? String,
+        let decision = (row["decision"] as? String).flatMap(Self.decision(fromWire:)),
+        let reason = (row["reason"] as? String).flatMap(DecisionReason.init(wire:)),
+        let stamp = row["createdAt"] as? String
+      else { return nil }
+      let date = formatter.date(from: stamp) ?? plain.date(from: stamp)
+      guard let date else { return nil }
+      return ActivityRecord(
+        url: url,
+        site: row["key"] as? String ?? "",
+        decision: decision,
+        reason: reason,
+        source: (row["source"] as? String).flatMap(VerdictSource.init(rawValue:)) ?? .none,
+        categories: ContentCategory.set(fromWire: row["categories"] as? [String] ?? []),
+        continued: row["continued"] as? Bool ?? false,
+        isPrivate: row["isPrivate"] as? Bool ?? false,
+        date: date)
+    }
+  }
+
+  private static func decision(fromWire wire: String) -> DecisionType? {
+    switch wire {
+    case "allow": return .allow
+    case "warn": return .warn
+    case "block": return .block
+    default: return nil
+    }
+  }
+
   // MARK: - Sending
 
   private func enqueue(_ event: [String: Any]) {

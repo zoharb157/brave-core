@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "กำลังตรวจ…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "กิจกรรมทั้งหมด";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "ทุกลิงก์ที่ Scout ถูกขอให้เปิด เก็บไว้ 30 วัน";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "ยังไม่มีอะไรที่นี่";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "ตอนนี้โหลดกิจกรรมไม่ได้";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "ลองอีกครั้ง";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "ทั้งหมด";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "เฉพาะที่ถูกบล็อก";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "เปิดแล้ว";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "เตือนแล้ว";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "ทราบอยู่แล้ว";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "แท็บส่วนตัว";

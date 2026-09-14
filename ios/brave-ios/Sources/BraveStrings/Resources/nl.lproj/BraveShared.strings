@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "Bezig met controleren…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "Alle activiteit";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Elke link die Scout moest openen, 30 dagen bewaard.";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "Nog niets";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "De activiteit kon nu niet worden geladen.";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "Opnieuw proberen";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "Alles";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "Alleen geblokkeerd";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "Geopend";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "Gewaarschuwd";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "Al bekend";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "Privétabblad";

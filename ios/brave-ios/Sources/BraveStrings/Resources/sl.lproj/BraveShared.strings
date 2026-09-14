@@ -3760,3 +3760,36 @@
 
 /* Shown on the check-again button while the check runs */
 "scoutSitePanel.checking" = "Preverjanje…";
+
+/* Row and screen title for the full record of links Scout checked */
+"scoutProtection.activityTitle" = "Vsa dejavnost";
+
+/* Footer under the full activity list */
+"scoutProtection.activityFooter" = "Vsaka povezava, ki naj bi jo Scout odprl, hranjena 30 dni.";
+
+/* Empty state for the full activity list */
+"scoutProtection.activityEmpty" = "Tu še ni ničesar";
+
+/* Shown when the activity list can't be fetched */
+"scoutProtection.activityFailed" = "Dejavnosti zdaj ni bilo mogoče naložiti.";
+
+/* Button that retries loading the activity list */
+"scoutProtection.activityRetry" = "Poskusi znova";
+
+/* Filter showing every link Scout checked */
+"scoutProtection.activityFilterAll" = "Vse";
+
+/* Filter showing only the links Scout refused */
+"scoutProtection.activityFilterBlocked" = "Samo blokirano";
+
+/* Label on a link Scout allowed */
+"scoutProtection.activityAllowed" = "Odprto";
+
+/* Label on a link Scout warned about */
+"scoutProtection.activityWarned" = "Opozorilo";
+
+/* Note that the decision used a verdict Scout already had, with no new check */
+"scoutProtection.activityFromCache" = "Že znano";
+
+/* Note that the link was opened in a private tab */
+"scoutProtection.activityPrivate" = "Zasebni zavihek";

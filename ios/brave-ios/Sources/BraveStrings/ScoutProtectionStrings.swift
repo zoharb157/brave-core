@@ -175,6 +175,83 @@ extension Strings {
       value: "This list stays on your phone. A record of what Scout checked is also kept in your account for 30 days.",
       comment: "Footer explaining where the recently blocked list lives"
     )
+    public static let activityTitle = NSLocalizedString(
+      "scoutProtection.activityTitle",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "All Activity",
+      comment: "Row and screen title for the full record of links Scout checked"
+    )
+    public static let activityFooter = NSLocalizedString(
+      "scoutProtection.activityFooter",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Every link Scout was asked to open, kept for 30 days.",
+      comment: "Footer under the full activity list"
+    )
+    public static let activityEmpty = NSLocalizedString(
+      "scoutProtection.activityEmpty",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Nothing here yet",
+      comment: "Empty state for the full activity list"
+    )
+    public static let activityFailed = NSLocalizedString(
+      "scoutProtection.activityFailed",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Couldn't load the activity right now.",
+      comment: "Shown when the activity list can't be fetched"
+    )
+    public static let activityRetry = NSLocalizedString(
+      "scoutProtection.activityRetry",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Try again",
+      comment: "Button that retries loading the activity list"
+    )
+    public static let activityFilterAll = NSLocalizedString(
+      "scoutProtection.activityFilterAll",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Everything",
+      comment: "Filter showing every link Scout checked"
+    )
+    public static let activityFilterBlocked = NSLocalizedString(
+      "scoutProtection.activityFilterBlocked",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Blocked only",
+      comment: "Filter showing only the links Scout refused"
+    )
+    public static let activityAllowed = NSLocalizedString(
+      "scoutProtection.activityAllowed",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Opened",
+      comment: "Label on a link Scout allowed"
+    )
+    public static let activityWarned = NSLocalizedString(
+      "scoutProtection.activityWarned",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Warned",
+      comment: "Label on a link Scout warned about"
+    )
+    public static let activityFromCache = NSLocalizedString(
+      "scoutProtection.activityFromCache",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Already known",
+      comment: "Note that the decision used a verdict Scout already had, with no new check"
+    )
+    public static let activityPrivate = NSLocalizedString(
+      "scoutProtection.activityPrivate",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Private tab",
+      comment: "Note that the link was opened in a private tab"
+    )
     public static let seeAll = NSLocalizedString(
       "scoutProtection.seeAll",
       tableName: "BraveShared",
