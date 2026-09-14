@@ -904,6 +904,11 @@ private struct PrivateModeInfoView: View {
           title: Strings.TabGrid.privateBrowsingInfoBulletTwoTitle,
           description: Strings.TabGrid.privateBrowsingInfoBulletTwoBody
         )
+        BulletPointView(
+          icon: "leo.shield.done",
+          title: Strings.TabGrid.privateBrowsingInfoScoutTitle,
+          description: Strings.TabGrid.privateBrowsingInfoScoutBody
+        )
         if ScoutFeatures.vpn {
           BulletPointView(
             icon: "leo.product.vpn",

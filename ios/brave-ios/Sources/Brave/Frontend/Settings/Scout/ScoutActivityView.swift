@@ -138,7 +138,9 @@ struct ScoutActivityView: View {
         Button(Strings.ScoutSitePanel.block) {
           ScoutServices.shared.siteRules.set(existing == .block ? nil : .block, forSite: site)
         }
-        .tint(scoutViolet)
+        // Rose, like every other block in the app. Violet is the brand accent
+        // and says nothing about what the action does.
+        .tint(scoutRose)
       }
     }
   }

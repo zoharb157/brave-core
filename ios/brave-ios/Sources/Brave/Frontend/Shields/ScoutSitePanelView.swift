@@ -114,7 +114,7 @@ struct ScoutSitePanelView: View {
 
   private var tint: Color {
     guard let status else { return Color(braveSystemName: .textSecondary) }
-    if status.rule == .block { return scoutViolet }
+    if status.rule == .block { return scoutRose }
     if status.rule == .allow { return scoutMint }
     guard let verdict = status.verdict else { return Color(braveSystemName: .textSecondary) }
     if verdict.security == .malicious || !status.blockedCategories.isEmpty {

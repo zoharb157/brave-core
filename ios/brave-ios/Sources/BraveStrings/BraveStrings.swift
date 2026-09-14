@@ -1280,6 +1280,27 @@ extension Strings {
       value: "Sites you visit in private windows won't appear in your history. Cookies, form data, and site data vanish once all private windows are closed.",
       comment: "A bullet point explaining the benefits of private browsing"
     )
+    /// What a private tab does and does not change about Scout.
+    ///
+    /// The other bullets describe privacy from the browsing side and say
+    /// nothing about the checking, which leaves both readers of this screen
+    /// with the wrong idea: a parent assuming private tabs are a blind spot,
+    /// and a child assuming they are a way around the log. Neither is true.
+    public static let privateBrowsingInfoScoutTitle = NSLocalizedString(
+      "tabGrid.privateBrowsingInfoScoutTitle",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Scout still checks every link",
+      comment: "A bullet point explaining that safety checking is unaffected by private browsing"
+    )
+    public static let privateBrowsingInfoScoutBody = NSLocalizedString(
+      "tabGrid.privateBrowsingInfoScoutBody",
+      tableName: "BraveShared",
+      bundle: .module,
+      value:
+        "Private tabs are checked and blocked like any other. These visits are marked private in All Activity; they aren't added to the list kept on this phone.",
+      comment: "A bullet point explaining that safety checking is unaffected by private browsing"
+    )
     public static let privateBrowsingInfoBulletTwoTitle = NSLocalizedString(
       "tabGrid.privateBrowsingInfoBulletTwoTitle",
       tableName: "BraveShared",
