@@ -231,8 +231,14 @@ extension BrowserViewController {
     // Check if user is already default before showing onboarding
     let isDefault = defaultBrowserHelper.status == .defaulted
 
+    // No "block interruptions" step: its graphic is Brave's no-video-ads
+    // animation, built around YouTube's mark, behind copy that now promises
+    // safety checking — a trademark that isn't ours to show, illustrating
+    // something the screen no longer says. It also sat immediately before
+    // "What Should Scout Block?", which makes the same point and lets someone
+    // act on it, so the flow loses a tap rather than a message.
     var steps: [any OnboardingStep] = [
-      .blockInterruptions, .scoutBlocking, .scoutPhoneFilter, .addToDock,
+      .scoutBlocking, .scoutPhoneFilter, .addToDock,
     ]
     if !isDefault {
       steps.insert(.defaultBrowsing, at: 0)
