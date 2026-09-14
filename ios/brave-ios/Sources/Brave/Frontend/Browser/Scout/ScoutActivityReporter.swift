@@ -20,6 +20,17 @@ extension Preferences.Scout {
     key: "scout.install-id",
     default: ""
   )
+
+  /// How many links Scout has checked, and how many it stopped, for the life
+  /// of this install.
+  ///
+  /// Kept as their own counters rather than read off the verdict cache and the
+  /// block list. Those two are a purgeable cache and a capped list: the first
+  /// empties whenever iOS reclaims disk, the second stops growing once it is
+  /// full, so the card could say "0 sites checked, 2 blocked" — three numbers
+  /// that look like one series and are not.
+  public static let sitesChecked = Preferences.Option<Int>(key: "scout.tally.checked", default: 0)
+  public static let sitesBlocked = Preferences.Option<Int>(key: "scout.tally.blocked", default: 0)
 }
 
 /// Sends the browser's decisions to the activity log.
@@ -47,7 +58,16 @@ public final class ScoutActivityReporter {
   /// than allowed to grow without bound while offline.
   private static let maxPending = 200
 
+  /// Stamps an event with the moment it happened, not the moment it is sent.
+  private static let stamp: ISO8601DateFormatter = {
+    let f = ISO8601DateFormatter()
+    f.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+    return f
+  }()
+
   private var pending: [[String: Any]] = []
+  /// Folds a redirect chain back into the one attempt a person made.
+  private var coalescer = ActivityCoalescer()
   private var flushTask: Task<Void, Never>?
   private let session: URLSession
 
@@ -73,6 +93,18 @@ public final class ScoutActivityReporter {
     isPrivate: Bool,
     continued: Bool = false
   ) {
+    // Typing a bare host loads `http://…`, the site redirects to `https://…`,
+    // and both come through here — the first checked, the second answered from
+    // the cache a moment later. That is one attempt, and the log says one.
+    guard coalescer.shouldReport(url: url, decision: decision.type) else { return }
+    // Counted here because this is the one place every decision passes through
+    // after redirects have been folded together, so a single tap counts once.
+    // A private tab is left out: the point of one is that the visit leaves no
+    // trace, and a number that moves is a trace.
+    if !isPrivate {
+      Preferences.Scout.sitesChecked.value += 1
+      if decision.type == .block { Preferences.Scout.sitesBlocked.value += 1 }
+    }
     var event: [String: Any] = [
       "installId": Self.installId,
       "url": String(url.absoluteString.prefix(2048)),
@@ -81,6 +113,10 @@ public final class ScoutActivityReporter {
       "source": source.rawValue,
       "isPrivate": isPrivate,
       "continued": continued,
+      // Reports are batched, so the server only knows when a batch arrived.
+      // Without this every link in a burst reads as one instant and the log
+      // cannot say what happened when.
+      "at": Self.stamp.string(from: Date()),
     ]
     if !decision.matchedCategories.isEmpty {
       event["categories"] = ContentCategory.wire(decision.matchedCategories)
@@ -102,6 +138,7 @@ public final class ScoutActivityReporter {
       "source": "none",
       "isPrivate": isPrivate,
       "continued": true,
+      "at": Self.stamp.string(from: Date()),
     ])
   }
 

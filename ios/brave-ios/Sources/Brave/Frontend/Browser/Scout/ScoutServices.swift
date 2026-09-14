@@ -191,10 +191,17 @@ public final class ScoutServices {
     }
   }
 
-  /// How many sites Scout has a verdict for right now. The only visible trace
-  /// of a check that passed, so Settings can say what the browser has done
-  /// rather than only what it stopped.
-  public var checkedSiteCount: Int { cache.count }
+  /// How many links Scout has checked over the life of this install.
+  ///
+  /// A running tally, not the size of the verdict cache: that cache lives in
+  /// Caches and iOS empties it whenever it wants the space back, which would
+  /// reset this to zero while the block count stayed where it was.
+  public var checkedSiteCount: Int { Preferences.Scout.sitesChecked.value }
+
+  /// How many links Scout has stopped over the life of this install. The
+  /// "recently blocked" list is capped; this is not, so the two disagree once
+  /// someone has run into more blocks than the list holds.
+  public var blockedSiteCount: Int { Preferences.Scout.sitesBlocked.value }
 
   /// Called for every checked navigation in a private tab.
   public func notePrivateNavigation(to url: URL) {

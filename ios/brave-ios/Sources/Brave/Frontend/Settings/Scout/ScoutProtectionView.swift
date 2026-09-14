@@ -21,6 +21,10 @@ let scoutMint = Color(red: 0x7E / 255, green: 0xC8 / 255, blue: 0xA8 / 255)
 /// rather than wrong. A design-system orange would be tuned for a page
 /// background, not for sitting on the accent itself.
 let scoutAmber = Color(red: 0xF5 / 255, green: 0xC2 / 255, blue: 0x6B / 255)
+/// What a block looks like. The same rose the block page uses, so the page
+/// that stopped a site and the list that records it agree on sight; the brand
+/// violet cannot do this job because everything else on the screen is violet.
+let scoutRose = Color(red: 0xB3 / 255, green: 0x62 / 255, blue: 0x6B / 255)
 
 /// Everything Scout does to keep sites out, on one screen.
 ///
@@ -42,6 +46,7 @@ struct ScoutProtectionView: View {
   @State private var blockedCount = 0
   @State private var recent: [BlockRecord] = []
   @State private var checkedCount = 0
+  @State private var blockedTally = 0
   /// Read fresh each time the screen appears: the user may have just come back
   /// from changing it in iOS Settings.
   @State private var isDefaultBrowser = false
@@ -104,7 +109,7 @@ struct ScoutProtectionView: View {
         } label: {
           countRow(
             symbol: "minus.circle.fill",
-            tint: scoutViolet,
+            tint: scoutRose,
             title: Strings.ScoutProtection.blockedSites,
             count: blockedCount)
         }
@@ -135,6 +140,9 @@ struct ScoutProtectionView: View {
     blockedCount = services.siteRules.sites(.block).count
     recent = services.blockLog.entries
     checkedCount = services.checkedSiteCount
+    // Not `recent.count`: the list below is capped, so past that cap the card
+    // would stop counting while blocks kept happening.
+    blockedTally = services.blockedSiteCount
     // "Scout is checking every site" is only true when the system hands Scout
     // the links. Until then this screen says the narrower thing that is
     // actually true, rather than promising cover the browser doesn't have.
@@ -169,7 +177,7 @@ struct ScoutProtectionView: View {
       HStack(spacing: 0) {
         statistic(checkedCount, Strings.ScoutProtection.statusChecked)
         divider
-        statistic(recent.count, Strings.ScoutProtection.statusBlocked)
+        statistic(blockedTally, Strings.ScoutProtection.statusBlocked)
         divider
         statistic(allowedCount, Strings.ScoutProtection.statusAllowed)
       }
@@ -279,7 +287,7 @@ struct BlockRecordRow: View {
     HStack(spacing: 12) {
       Image(systemName: record.continued ? "arrow.turn.down.right" : "hand.raised.fill")
         .font(.system(size: 15))
-        .foregroundStyle(record.continued ? Color(braveSystemName: .textSecondary) : scoutViolet)
+        .foregroundStyle(record.continued ? Color(braveSystemName: .textSecondary) : scoutRose)
         .frame(width: 22)
       VStack(alignment: .leading, spacing: 2) {
         Text(record.site)

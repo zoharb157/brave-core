@@ -27,6 +27,32 @@ struct ScoutActivityView: View {
     filter == .all ? records : records.filter { $0.decision == .block }
   }
 
+  /// One day's activity, newest day first.
+  ///
+  /// Thirty days of every link one phone opened is a wall of rows that all
+  /// look alike. Breaking it on the day boundary is what makes "what happened
+  /// on Saturday" a thing you can look up rather than scroll for.
+  private struct Day: Identifiable {
+    let id: Date
+    let records: [ScoutActivityReporter.ActivityRecord]
+  }
+
+  private var days: [Day] {
+    let calendar = Calendar.current
+    let grouped = Dictionary(grouping: shown) { calendar.startOfDay(for: $0.date) }
+    return grouped.keys.sorted(by: >).map { Day(id: $0, records: grouped[$0] ?? []) }
+  }
+
+  /// "Today", "Yesterday" or the date — in the reader's language, from the
+  /// system, rather than three more strings to translate.
+  private static let dayHeader: DateFormatter = {
+    let f = DateFormatter()
+    f.dateStyle = .medium
+    f.timeStyle = .none
+    f.doesRelativeDateFormatting = true
+    return f
+  }()
+
   var body: some View {
     List {
       Section {
@@ -39,30 +65,36 @@ struct ScoutActivityView: View {
         .listRowBackground(Color.clear)
       }
 
-      Section {
-        switch state {
-        case .loading:
-          HStack {
-            ProgressView()
-            Spacer()
-          }
-        case .failed:
-          VStack(alignment: .leading, spacing: 10) {
-            Text(Strings.ScoutProtection.activityFailed)
-              .font(.subheadline)
-              .foregroundStyle(Color(braveSystemName: .textSecondary))
-            Button(Strings.ScoutProtection.activityRetry) {
-              Task { await load() }
+      if state != .loaded || shown.isEmpty {
+        Section {
+          switch state {
+          case .loading:
+            HStack {
+              ProgressView()
+              Spacer()
             }
-            .foregroundStyle(scoutViolet)
-          }
-        case .loaded:
-          if shown.isEmpty {
+          case .failed:
+            VStack(alignment: .leading, spacing: 10) {
+              Text(Strings.ScoutProtection.activityFailed)
+                .font(.subheadline)
+                .foregroundStyle(Color(braveSystemName: .textSecondary))
+              Button(Strings.ScoutProtection.activityRetry) {
+                Task { await load() }
+              }
+              .foregroundStyle(scoutViolet)
+            }
+          case .loaded:
             Text(Strings.ScoutProtection.activityEmpty)
               .font(.subheadline)
               .foregroundStyle(Color(braveSystemName: .textSecondary))
-          } else {
-            ForEach(shown) { record in
+          }
+        }
+      }
+
+      if state == .loaded {
+        ForEach(days) { day in
+          Section {
+            ForEach(day.records) { record in
               ActivityRow(record: record)
                 .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                   // Reading the log is where someone notices a site they want
@@ -71,8 +103,13 @@ struct ScoutActivityView: View {
                   ruleButton(for: record)
                 }
             }
+          } header: {
+            Text(Self.dayHeader.string(from: day.id))
           }
         }
+      }
+
+      Section {
       } footer: {
         Text(Strings.ScoutProtection.activityFooter)
       }
@@ -142,8 +179,11 @@ private struct ActivityRow: View {
         }
       }
       Spacer(minLength: 8)
-      Text(record.date, format: .relative(presentation: .numeric))
+      // The clock time, not "3 weeks ago": the day is already on the section
+      // header, and a parent asking about a site wants the hour it happened.
+      Text(record.date, format: .dateTime.hour().minute())
         .font(.caption2)
+        .monospacedDigit()
         .foregroundStyle(Color(braveSystemName: .textSecondary))
     }
     .accessibilityElement(children: .combine)
@@ -161,7 +201,7 @@ private struct ActivityRow: View {
     switch record.decision {
     case .allow: return scoutMint
     case .warn: return scoutAmber
-    case .block: return scoutViolet
+    case .block: return scoutRose
     }
   }
 

@@ -203,7 +203,7 @@ extension Strings.Shields {
   public static let antiAdBlockWarningConfirmationButton = NSLocalizedString(
     "AntiAdBlockWarningConfirmationButton",
     bundle: .module,
-    value: "Adjust Shields For Me",
+    value: "Adjust Ad Blocking For Me",
     comment: "A button that disables ad-blocking and uses brave player."
   )
 
@@ -855,7 +855,7 @@ extension Strings.Shields {
   public static let shieldsDefaults = NSLocalizedString(
     "ShieldsDefaults",
     bundle: .module,
-    value: "Shields Global Defaults",
+    value: "Ad Blocking Defaults",
     comment: "Section title for adbblock, tracking protection, HTTPS-E, and cookies"
   )
   public static let shieldsDefaultsFooter = NSLocalizedString(
@@ -924,31 +924,31 @@ extension Strings.Shields {
   public static let toggleHint = NSLocalizedString(
     "BraveShieldsToggleHint",
     bundle: .module,
-    value: "Double-tap to toggle Shields",
+    value: "Double-tap to turn ad blocking on or off",
     comment: "The accessibility hint spoken when focused on the main shields toggle"
   )
   public static let statusTitle = NSLocalizedString(
     "BraveShieldsStatusTitle",
     bundle: .module,
-    value: "Shields",
-    comment: "Context: 'Brave Shields Up' or 'Brave Shields Down'"
+    value: "Ad blocking",
+    comment: "Paired with On/Off, as in 'Ad blocking ON'"
   )
   public static let statusValueUp = NSLocalizedString(
     "BraveShieldsStatusValueUp",
     bundle: .module,
-    value: "Up",
-    comment: "Context: The 'Up' in 'Brave Shields Up'"
+    value: "ON",
+    comment: "Paired with the ad-blocking title, as in 'Ad blocking ON'"
   )
   public static let statusValueDown = NSLocalizedString(
     "BraveShieldsStatusValueDown",
     bundle: .module,
-    value: "Down",
-    comment: "Context: The 'Down' in 'Brave Shields Down'"
+    value: "OFF",
+    comment: "Paired with the ad-blocking title, as in 'Ad blocking OFF'"
   )
   public static let blockedCountLabel = NSLocalizedString(
     "BraveShieldsBlockedCountLabel",
     bundle: .module,
-    value: "Ads and other creepy things blocked",
+    value: "Ads and trackers blocked",
     comment: "The number of ads and trackers blocked will be next to this"
   )
   public static let blockedInfoButtonAccessibilityLabel = NSLocalizedString(
@@ -961,7 +961,7 @@ extension Strings.Shields {
   public static let siteBroken = NSLocalizedString(
     "BraveShieldsSiteBroken",
     bundle: .module,
-    value: "If this site appears broken, try Shields down",
+    value: "If this site looks broken, turn ad blocking off",
     comment: ""
   )
   public static let advancedControls = NSLocalizedString(
@@ -973,7 +973,7 @@ extension Strings.Shields {
   public static let aboutBraveShieldsTitle = NSLocalizedString(
     "AboutBraveShields",
     bundle: .module,
-    value: "About Shields",
+    value: "About ad blocking",
     comment: "The title of the screen explaining Brave Shields"
   )
   public static let aboutBraveShieldsBody = NSLocalizedString(
@@ -987,7 +987,7 @@ extension Strings.Shields {
     "ShieldsDownDisclaimer",
     bundle: .module,
     value:
-      "You're browsing this site without Scout's privacy protections. Does it not work right with Shields up?",
+      "You're browsing this site without Scout's privacy protections. Does it not work right with ad blocking on?",
     comment: ""
   )
   public static let globalControls = NSLocalizedString(
@@ -999,7 +999,7 @@ extension Strings.Shields {
   public static let globalChangeButton = NSLocalizedString(
     "BraveShieldsGlobalChangeButton",
     bundle: .module,
-    value: "Change Shields Global Defaults",
+    value: "Change ad blocking defaults",
     comment: ""
   )
   public static let siteReportedTitle = NSLocalizedString(

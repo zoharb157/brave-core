@@ -438,6 +438,19 @@ extension BrowserViewController {
   private func destinationMenuActions(for pageURL: URL?) -> [Action] {
     let isPrivateBrowsing = privateBrowsingManager.isPrivateBrowsing
     var actions: [Action] = [
+      // First, and not gated on there being a page: the reason this browser
+      // exists was otherwise only reachable from the new tab or from three
+      // levels into Settings.
+      .init(id: .scoutProtection) { @MainActor [unowned self] _ in
+        var view = ScoutProtectionView()
+        view.onDone = { [weak self] in self?.dismiss(animated: true) }
+        let container = UINavigationController(
+          rootViewController: UIHostingController(rootView: view))
+        self.dismiss(animated: true) {
+          self.present(container, animated: true)
+        }
+        return .none
+      },
       .init(id: .bookmarks) { @MainActor [unowned self] _ in
         let vc = BookmarksViewController(
           folder: bookmarkManager.lastVisitedFolder(),

@@ -4,6 +4,7 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveShields
+import BraveStrings
 import BraveWallet
 import Foundation
 
@@ -29,6 +30,20 @@ import Foundation
 /// Default visibility controls whether or not the item appears on the menu without the user tapping
 /// "Show All…" to display all actions or explicitly adding it to the menu themselves.
 extension Action.Identifier {
+
+  /// Scout's protection, reachable from the page a question is about.
+  ///
+  /// Ranked ahead of everything else and visible without "Show All…": it was
+  /// only reachable from the new-tab widget or by digging through Settings,
+  /// which is a long way to go for the reason this browser exists. Someone
+  /// looking at a page they have a question about is exactly who needs it.
+  public static let scoutProtection: Self = .init(
+    id: "ScoutProtection",
+    title: Strings.ScoutProtection.title,
+    braveSystemImage: "leo.shield.done",
+    defaultRank: 50,
+    defaultVisibility: .visible
+  )
 
   public static let vpn: Self = .init(
     id: "ToggleVPN",

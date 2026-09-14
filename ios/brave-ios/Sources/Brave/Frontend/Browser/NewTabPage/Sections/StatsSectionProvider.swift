@@ -196,7 +196,7 @@ struct StatsNTPWidget: View {
     .onAppear {
       let services = ScoutServices.shared
       checked = services.checkedSiteCount
-      blocked = services.blockLog.count
+      blocked = services.blockedSiteCount
       allowed = services.siteRules.sites(.allow).count
     }
   }
