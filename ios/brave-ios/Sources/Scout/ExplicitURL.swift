@@ -28,6 +28,22 @@ public enum ExplicitURL {
     "blowjob", "blowjobs", "deepthroat", "gangbang", "bukkake", "fetish",
   ]
 
+  /// Whether a page's own title names explicit content.
+  ///
+  /// The last line of defence, and the only one that sees what actually
+  /// rendered. A verdict describes a site; an injected page on a hacked domain
+  /// inherits it, and the address only gives it away when the address happens
+  /// to say so. The title is written by the page itself, for the person
+  /// reading it — an injected spam page announces exactly what it is, because
+  /// that is the whole point of it.
+  ///
+  /// Same markers as the address, and the same restraint: a page about
+  /// legislation or health that merely mentions these words is a page someone
+  /// may need, and blocking it is recoverable but not free.
+  public static func looksExplicit(title: String) -> Bool {
+    containsMarker(title.lowercased())
+  }
+
   /// Whether `url`'s address carries an adult marker.
   ///
   /// Matching is on whole words, split at anything that isn't a letter or
@@ -39,9 +55,13 @@ public enum ExplicitURL {
     // The host and the path are read together: the marker can be in either
     // (`porn.example.com` or `example.com/porn`).
     let address = host + " " + url.path.lowercased() + " " + (url.query?.lowercased() ?? "")
-    for word in address.split(whereSeparator: { !$0.isLetter && !$0.isNumber }) {
+    return containsMarker(address)
+  }
+
+  private static func containsMarker(_ text: String) -> Bool {
+    for word in text.split(whereSeparator: { !$0.isLetter && !$0.isNumber }) {
       if markers.contains(String(word)) { return true }
-      // Runs of x are how these addresses spell it: xxx, xxxx, 4k-xxx-hd.
+      // Runs of x are how these spell it: xxx, xxxx, 4k-xxx-hd.
       if word.count >= 3 && word.allSatisfy({ $0 == "x" }) { return true }
     }
     return false

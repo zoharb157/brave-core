@@ -24,6 +24,12 @@ class UserScriptManager {
       .faviconFetcher,
       .resourceDownloader,
       .nightMode,
+      // Scout's own checks: not optional, and not tied to a preference. One
+      // starts a verdict the moment a link is touched; the other reads what
+      // actually rendered, which is the only signal that catches an injected
+      // page on a domain whose verdict is honestly clean.
+      .scoutLinkWarm,
+      .scoutPageTitle,
     ]
 
     if Preferences.UserScript.playlist.value {
@@ -127,6 +133,8 @@ class UserScriptManager {
     case youtubeQuality
     case braveLeoAIChat
     case braveTranslate
+    case scoutLinkWarm
+    case scoutPageTitle
 
     fileprivate var script: WKUserScript? {
       switch self {
@@ -172,6 +180,10 @@ class UserScriptManager {
       case .braveTranslate:
         return Preferences.UserScript.translate.value && FeatureList.kBraveTranslateEnabled.enabled
           ? BraveTranslateScriptHandler.userScript : nil
+      // Scout's own: always on. Registering the message handler is not enough
+      // on its own — a script only reaches a page if it is listed here.
+      case .scoutLinkWarm: return ScoutLinkWarmScriptHandler.userScript
+      case .scoutPageTitle: return ScoutPageTitleScriptHandler.userScript
       }
     }
 

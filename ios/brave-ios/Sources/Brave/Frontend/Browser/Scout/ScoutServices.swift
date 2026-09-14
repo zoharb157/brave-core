@@ -151,6 +151,14 @@ public final class ScoutServices {
       blockedCategories: verdict?.categories.intersection(decisionPolicy.blockedCategories) ?? [])
   }
 
+  /// Drops the verdict for `url` without fetching another.
+  ///
+  /// For a verdict the page itself has just disproved: keeping it would mean
+  /// deciding the next visit from an answer already known to be wrong.
+  public func forget(_ url: URL) {
+    cache.forget(url)
+  }
+
   /// Drops what Scout knows about `url` and checks it again. For the "Check
   /// again" action: a site that changed since its verdict was cached is
   /// otherwise stuck with the old answer for up to a week.

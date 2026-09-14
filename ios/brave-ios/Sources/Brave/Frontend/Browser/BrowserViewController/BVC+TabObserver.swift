@@ -331,6 +331,7 @@ extension BrowserViewController {
       BlockedDomainScriptHandler(),
       ScoutScriptHandler(),
       ScoutLinkWarmScriptHandler(),
+      ScoutPageTitleScriptHandler(),
       HTTPBlockedScriptHandler(tabManager: tabManager),
       PrintScriptHandler(browserController: self),
       DarkReaderScriptHandler(),

@@ -225,6 +225,9 @@ var package = Package(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Sandboxed/ScoutLinkWarmScript.js"
         ),
         .copy(
+          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Sandboxed/ScoutPageTitleScript.js"
+        ),
+        .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Sandboxed/FaviconScript.js"
         ),
         .copy(
