@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Benarkan melalui Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Perlindungan";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout sedang memeriksa setiap tapak";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout hanya memeriksa pautan yang dibuka dalam Scout";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Tapak diperiksa";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Disekat";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Anda benarkan";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Apa yang Scout sekat";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Di luar apl ini";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Tapak yang anda telah putuskan";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Tapis hasil carian";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Menghidupkan mod selamat enjin carian itu sendiri, supaya imej kecil lucah tidak pernah sampai ke halaman hasil.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d daripada %d hidup";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Tapak dibenarkan";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Tapak disekat";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout membukanya tanpa memeriksa. Sebuah tapak masuk ke sini apabila anda pilih “Sentiasa benarkan tapak ini” pada halaman yang disekat.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Scout tidak pernah membukanya, apa pun kata pemeriksaan.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Tiada tapak dibenarkan secara manual";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Tiada tapak disekat secara manual";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Tambah tapak";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Baru disekat";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Belum ada apa-apa disekat";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Disimpan pada telefon ini sahaja, dan tidak pernah untuk tab persendirian.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Lihat semua";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Kosongkan senarai";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Tetap dibuka";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Tidak selamat";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "Dalam senarai sekatan anda";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Tidak dapat diperiksa";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Jenis pautan yang Scout tidak buka";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Alih keluar";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Diperiksa — tiada yang berbahaya";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout mendapati tapak ini tidak selamat";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Ada sesuatu yang tidak kena dengan tapak ini";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Sepadan dengan apa yang anda sekat: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Belum diperiksa";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Anda sentiasa benarkan tapak ini";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Anda sentiasa sekat tapak ini";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Diperiksa %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Sentiasa benarkan";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Sentiasa sekat";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Buat asal";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Periksa semula";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Memeriksa…";

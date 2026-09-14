@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Να επιτρέπεται μέσω Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Προστασία";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Το Scout ελέγχει κάθε ιστότοπο";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Το Scout ελέγχει μόνο τους συνδέσμους που ανοίγουν στο Scout";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Ελεγμένοι ιστότοποι";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Αποκλείστηκαν";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Επιτρέψατε";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Τι αποκλείει το Scout";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Πέρα από αυτήν την εφαρμογή";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Ιστότοποι για τους οποίους αποφασίσατε";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Φιλτράρισμα αποτελεσμάτων αναζήτησης";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Ενεργοποιεί την ασφαλή λειτουργία της ίδιας της μηχανής αναζήτησης, ώστε οι ρητές μικρογραφίες να μη φτάνουν ποτέ στη σελίδα αποτελεσμάτων.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d από %d ενεργά";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Επιτρεπόμενοι ιστότοποι";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Αποκλεισμένοι ιστότοποι";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Το Scout τους ανοίγει χωρίς έλεγχο. Ένας ιστότοπος καταλήγει εδώ όταν επιλέξετε «Να επιτρέπεται πάντα αυτός ο ιστότοπος» σε αποκλεισμένη σελίδα.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Το Scout δεν τους ανοίγει ποτέ, ό,τι κι αν πει ο έλεγχος.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Κανένας ιστότοπος δεν επιτράπηκε χειροκίνητα";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Κανένας ιστότοπος δεν αποκλείστηκε χειροκίνητα";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Προσθήκη ιστότοπου";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Πρόσφατα αποκλεισμένα";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Δεν έχει αποκλειστεί τίποτα ακόμη";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Μένει μόνο σε αυτό το τηλέφωνο και ποτέ για ιδιωτικές καρτέλες.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Δείτε όλα";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Εκκαθάριση λίστας";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Άνοιξε ούτως ή άλλως";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Μη ασφαλής";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "Στη λίστα αποκλεισμού σας";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Δεν ήταν δυνατός ο έλεγχος";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Τύπος συνδέσμου που το Scout δεν ανοίγει";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Αφαίρεση";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Ελέγχθηκε — δεν βρέθηκε τίποτα επικίνδυνο";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Το Scout θεωρεί αυτόν τον ιστότοπο μη ασφαλή";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Κάτι δεν πάει καλά με αυτόν τον ιστότοπο";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Ταιριάζει με αυτά που αποκλείετε: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Δεν έχει ελεγχθεί ακόμη";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Επιτρέπετε πάντα αυτόν τον ιστότοπο";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Αποκλείετε πάντα αυτόν τον ιστότοπο";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Ελέγχθηκε %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Να επιτρέπεται πάντα";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Να αποκλείεται πάντα";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Αναίρεση";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Έλεγχος ξανά";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Γίνεται έλεγχος…";

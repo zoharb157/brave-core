@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Разрешаване през Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Защита";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout проверява всеки сайт";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout проверява само връзките, отворени в Scout";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Проверени сайтове";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Блокирани";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Вие разрешихте";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Какво блокира Scout";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Извън това приложение";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Сайтове, за които решихте";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Филтриране на резултатите от търсене";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Включва безопасния режим на самата търсачка, така че явни миниатюри изобщо да не стигат до страницата с резултати.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "Включени %d от %d";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Разрешени сайтове";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Блокирани сайтове";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout ги отваря без проверка. Сайт попада тук, когато изберете „Винаги разрешавай този сайт“ на блокирана страница.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Scout никога не ги отваря, каквото и да покаже проверката.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Няма ръчно разрешени сайтове";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Няма ръчно блокирани сайтове";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Добавяне на сайт";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Наскоро блокирани";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Още нищо не е блокирано";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Пази се само на този телефон и никога за поверителни раздели.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Виж всички";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Изчисти списъка";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Отворен въпреки това";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Опасен";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "В списъка ви с блокирани";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Не можа да бъде проверен";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Вид връзка, която Scout не отваря";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Премахни";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Проверено — нищо опасно";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout смята този сайт за опасен";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Нещо с този сайт не е наред";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Съвпада с това, което блокирате: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Още не е проверен";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Винаги разрешавате този сайт";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Винаги блокирате този сайт";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Проверено %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Винаги разрешавай";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Винаги блокирай";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Отмени";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Провери отново";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Проверка…";

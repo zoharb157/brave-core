@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Engedélyezés Wi-Fi esetén";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Védelem";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "A Scout minden webhelyet ellenőriz";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "A Scout csak a Scoutban megnyitott hivatkozásokat ellenőrzi";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Ellenőrzött webhelyek";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Letiltva";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Ön engedélyezte";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Mit tilt a Scout";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Az alkalmazáson túl";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Webhelyek, amelyekről döntött";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Keresési találatok szűrése";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Bekapcsolja a keresőmotor saját biztonságos módját, így a szókimondó bélyegképek el sem jutnak a találati oldalra.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d/%d bekapcsolva";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Engedélyezett webhelyek";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Letiltott webhelyek";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "A Scout ezeket ellenőrzés nélkül nyitja meg. Egy webhely akkor kerül ide, ha egy letiltott oldalon a „Webhely mindig engedélyezése” lehetőséget választja.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "A Scout ezeket soha nem nyitja meg, bármit is mond az ellenőrzés.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Nincs kézzel engedélyezett webhely";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Nincs kézzel letiltott webhely";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Webhely hozzáadása";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Nemrég letiltva";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Még semmi sem lett letiltva";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Csak ezen a telefonon marad, és soha nem privát lapokról.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Összes megtekintése";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Lista törlése";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Mégis megnyitva";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Nem biztonságos";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "A letiltási listáján";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Nem sikerült ellenőrizni";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "A Scout nem nyit meg ilyen hivatkozástípust";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Eltávolítás";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Ellenőrizve – semmi veszélyes";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "A Scout nem biztonságosnak találta ezt a webhelyet";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Valami nem stimmel ezzel a webhellyel";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Egyezik azzal, amit letilt: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Még nincs ellenőrizve";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Ezt a webhelyet mindig engedélyezi";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Ezt a webhelyet mindig letiltja";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Ellenőrizve %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Mindig engedélyezés";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Mindig letiltás";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Visszavonás";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Ellenőrzés újra";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Ellenőrzés…";

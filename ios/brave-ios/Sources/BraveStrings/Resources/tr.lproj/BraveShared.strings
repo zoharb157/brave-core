@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Wi-Fi Üzerinden İzin Ver";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Koruma";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout her siteyi kontrol ediyor";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout yalnızca Scout'ta açılan bağlantıları kontrol eder";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Kontrol edilen siteler";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Engellendi";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Siz izin verdiniz";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Scout neyi engelliyor";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Bu uygulamanın ötesinde";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Karar verdiğiniz siteler";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Arama sonuçlarını filtrele";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Arama motorunun kendi güvenli modunu açar, böylece müstehcen küçük resimler sonuç sayfasına hiç ulaşmaz.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d/%d açık";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "İzin verilen siteler";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Engellenen siteler";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout bunları kontrol etmeden açar. Engellenen bir sayfada “Bu siteye her zaman izin ver” seçtiğinizde site buraya gelir.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Kontrol ne derse desin, Scout bunları asla açmaz.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Elle izin verilen site yok";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Elle engellenen site yok";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Site ekle";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Son engellenenler";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Henüz hiçbir şey engellenmedi";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Yalnızca bu telefonda tutulur ve gizli sekmeler için asla tutulmaz.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Tümünü gör";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Listeyi temizle";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Yine de açıldı";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Güvensiz";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "Engelleme listenizde";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Kontrol edilemedi";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Scout'un açmadığı bağlantı türü";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Kaldır";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Kontrol edildi — güvensiz bir şey bulunmadı";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout bu siteyi güvensiz buldu";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Bu sitede bir şeyler ters";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Engellediklerinizle eşleşiyor: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Henüz kontrol edilmedi";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Bu siteye her zaman izin veriyorsunuz";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Bu siteyi her zaman engelliyorsunuz";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Kontrol edildi %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Her zaman izin ver";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Her zaman engelle";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Geri al";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Yeniden kontrol et";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Kontrol ediliyor…";

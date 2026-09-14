@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Tillåt över Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Skydd";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout kontrollerar varje webbplats";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout kontrollerar bara länkar som öppnas i Scout";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Kontrollerade webbplatser";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Blockerade";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Du tillät";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Vad Scout blockerar";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Utanför den här appen";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Webbplatser du har tagit ställning till";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Filtrera sökresultat";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Slår på sökmotorns eget säkra läge, så att explicita miniatyrer aldrig når resultatsidan.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d av %d på";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Tillåtna webbplatser";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Blockerade webbplatser";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout öppnar dessa utan att kontrollera dem. En webbplats hamnar här när du väljer ”Tillåt alltid den här webbplatsen” på en blockerad sida.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Scout öppnar dessa aldrig, vad kontrollen än säger.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Inga webbplatser tillåtna för hand";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Inga webbplatser blockerade för hand";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Lägg till en webbplats";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Nyligen blockerade";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Inget har blockerats ännu";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Sparas bara på den här telefonen, och aldrig för privata flikar.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Visa alla";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Rensa listan";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Öppnades ändå";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Osäker";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "På din blockeringslista";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Kunde inte kontrolleras";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Länktyp som Scout inte öppnar";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Ta bort";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Kontrollerad — inget osäkert hittades";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout anser att den här webbplatsen är osäker";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Något med den här webbplatsen känns fel";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Matchar det du blockerar: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Inte kontrollerad ännu";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Du tillåter alltid den här webbplatsen";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Du blockerar alltid den här webbplatsen";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Kontrollerad %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Tillåt alltid";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Blockera alltid";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Ångra";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Kontrollera igen";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Kontrollerar…";

@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Cho phép qua Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Bảo vệ";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout đang kiểm tra mọi trang web";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout chỉ kiểm tra các liên kết được mở trong Scout";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Trang đã kiểm tra";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Đã chặn";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Bạn đã cho phép";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Scout chặn những gì";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Ngoài ứng dụng này";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Những trang bạn đã quyết định";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Lọc kết quả tìm kiếm";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Bật chế độ an toàn của chính công cụ tìm kiếm, để ảnh thu nhỏ phản cảm không bao giờ xuất hiện trên trang kết quả.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "Đang bật %d/%d";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Trang được phép";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Trang bị chặn";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout mở những trang này mà không kiểm tra. Một trang sẽ vào đây khi bạn chọn “Luôn cho phép trang này” trên trang bị chặn.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Scout không bao giờ mở những trang này, dù kết quả kiểm tra ra sao.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Chưa cho phép trang nào theo cách thủ công";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Chưa chặn trang nào theo cách thủ công";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Thêm một trang";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Vừa bị chặn";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Chưa có gì bị chặn";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Chỉ lưu trên điện thoại này, và không bao giờ cho thẻ riêng tư.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Xem tất cả";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Xóa danh sách";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Vẫn mở";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Không an toàn";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "Trong danh sách chặn của bạn";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Không kiểm tra được";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Loại liên kết Scout không mở";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Gỡ bỏ";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Đã kiểm tra — không thấy gì nguy hiểm";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout thấy trang này không an toàn";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Có gì đó không ổn ở trang này";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Khớp với điều bạn chặn: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Chưa kiểm tra";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Bạn luôn cho phép trang này";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Bạn luôn chặn trang này";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Đã kiểm tra %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Luôn cho phép";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Luôn chặn";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Hoàn tác";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Kiểm tra lại";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Đang kiểm tra…";

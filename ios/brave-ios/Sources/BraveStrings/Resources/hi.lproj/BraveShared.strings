@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "वाई-फ़ाई पर अनुमति दें";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "सुरक्षा";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout हर साइट की जाँच कर रहा है";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout सिर्फ़ उन लिंक की जाँच करता है जो Scout में खुलते हैं";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "जाँची गई साइटें";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "ब्लॉक";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "आपने अनुमति दी";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Scout क्या ब्लॉक करता है";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "इस ऐप से आगे";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "वे साइटें जिन पर आपने फ़ैसला लिया";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "खोज परिणाम फ़िल्टर करें";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "सर्च इंजन का अपना सुरक्षित मोड चालू करता है, ताकि अश्लील थंबनेल परिणाम पृष्ठ तक पहुँचें ही नहीं।";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d में से %d चालू";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "अनुमत साइटें";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "ब्लॉक की गई साइटें";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout इन्हें बिना जाँचे खोलता है। किसी ब्लॉक पृष्ठ पर “इस साइट को हमेशा अनुमति दें” चुनने पर साइट यहाँ आ जाती है।";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "जाँच कुछ भी कहे, Scout इन्हें कभी नहीं खोलता।";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "हाथ से कोई साइट अनुमत नहीं";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "हाथ से कोई साइट ब्लॉक नहीं";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "साइट जोड़ें";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "हाल में ब्लॉक";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "अभी तक कुछ भी ब्लॉक नहीं हुआ";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "सिर्फ़ इसी फ़ोन पर रहता है, और निजी टैब के लिए कभी नहीं।";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "सभी देखें";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "सूची साफ़ करें";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "फिर भी खोला";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "असुरक्षित";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "आपकी ब्लॉक सूची में";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "जाँच नहीं हो सकी";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "ऐसा लिंक प्रकार जिसे Scout नहीं खोलता";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "हटाएँ";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "जाँच पूरी — कुछ भी असुरक्षित नहीं मिला";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout को यह साइट असुरक्षित लगी";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "इस साइट में कुछ गड़बड़ है";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "आपके ब्लॉक से मेल खाता है: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "अभी जाँची नहीं गई";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "आप इस साइट को हमेशा अनुमति देते हैं";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "आप इस साइट को हमेशा ब्लॉक करते हैं";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "%@ जाँची गई";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "हमेशा अनुमति दें";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "हमेशा ब्लॉक करें";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "पूर्ववत करें";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "फिर से जाँचें";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "जाँच हो रही है…";

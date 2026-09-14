@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Povolit přes Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Ochrana";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout kontroluje každý web";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout kontroluje jen odkazy otevřené ve Scoutu";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Zkontrolované weby";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Blokováno";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Povoleno vámi";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Co Scout blokuje";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Mimo tuto aplikaci";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Weby, o kterých jste rozhodli";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Filtrovat výsledky vyhledávání";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Zapne bezpečný režim samotného vyhledávače, aby se explicitní náhledy nikdy nedostaly na stránku s výsledky.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "Zapnuto %d ze %d";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Povolené weby";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Blokované weby";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout je otevírá bez kontroly. Web se sem dostane, když na blokované stránce zvolíte „Tento web vždy povolit“.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Scout je nikdy neotevře, ať kontrola řekne cokoli.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Žádné ručně povolené weby";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Žádné ručně blokované weby";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Přidat web";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Nedávno blokováno";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Zatím nebylo nic blokováno";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Zůstává jen v tomto telefonu a nikdy se neukládá pro anonymní panely.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Zobrazit vše";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Vymazat seznam";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Přesto otevřeno";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Nebezpečné";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "Na vašem seznamu blokovaných";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Nešlo zkontrolovat";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Typ odkazu, který Scout neotevírá";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Odebrat";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Zkontrolováno — nic nebezpečného";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout považuje tento web za nebezpečný";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Na tomto webu něco nesedí";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Odpovídá tomu, co blokujete: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Zatím nezkontrolováno";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Tento web vždy povolujete";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Tento web vždy blokujete";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Zkontrolováno %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Vždy povolit";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Vždy blokovat";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Zpět";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Zkontrolovat znovu";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Kontroluji…";

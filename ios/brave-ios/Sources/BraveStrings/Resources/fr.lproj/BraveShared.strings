@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Autorisé en Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Protection";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout vérifie chaque site";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout ne vérifie que les liens ouverts dans Scout";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Sites vérifiés";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Bloqués";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Autorisés par vous";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Ce que Scout bloque";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Au-delà de cette app";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Sites que vous avez tranchés";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Filtrer les résultats de recherche";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Active le mode sécurisé du moteur de recherche, pour que les vignettes explicites n'atteignent jamais la page de résultats.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d sur %d activés";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Sites autorisés";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Sites bloqués";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout les ouvre sans les vérifier. Un site arrive ici quand vous choisissez « Toujours autoriser ce site » sur une page bloquée.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Scout ne les ouvre jamais, quel que soit le résultat de la vérification.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Aucun site autorisé à la main";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Aucun site bloqué à la main";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Ajouter un site";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Bloqués récemment";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Rien n'a encore été bloqué";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Conservé sur ce téléphone uniquement, et jamais pour les onglets privés.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Tout voir";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Vider la liste";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Ouvert quand même";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Dangereux";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "Dans votre liste de sites bloqués";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "N'a pas pu être vérifié";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Type de lien que Scout n'ouvre pas";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Retirer";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Vérifié — rien de dangereux";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout juge ce site dangereux";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Quelque chose cloche sur ce site";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Correspond à ce que vous bloquez : %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Pas encore vérifié";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Vous autorisez toujours ce site";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Vous bloquez toujours ce site";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Vérifié %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Toujours autoriser";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Toujours bloquer";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Annuler";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Vérifier à nouveau";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Vérification…";

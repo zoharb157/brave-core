@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "允許透過 Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "防護";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout 正在檢查每個網站";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout 只會檢查在 Scout 中開啟的連結";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "已檢查網站";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "已封鎖";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "你已允許";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Scout 封鎖的內容";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "超出本應用程式之外";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "你已做出判斷的網站";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "過濾搜尋結果";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "開啟搜尋引擎內建的安全模式，讓露骨縮圖根本不會出現在結果頁上。";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "已開啟 %d/%d";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "允許的網站";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "封鎖的網站";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout 會直接開啟這些網站，不再檢查。在被封鎖的頁面上選擇「一律允許此網站」，網站就會加到這裡。";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "無論檢查結果如何，Scout 都不會開啟這些網站。";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "沒有手動允許的網站";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "沒有手動封鎖的網站";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "新增網站";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "最近封鎖";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "目前還沒有封鎖任何內容";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "僅保存在這支手機上，私密分頁從不記錄。";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "查看全部";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "清空清單";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "仍然開啟了";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "不安全";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "在你的封鎖清單中";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "無法檢查";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Scout 不開啟的連結類型";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "移除";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "已檢查 — 未發現不安全內容";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout 認為此網站不安全";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "這個網站有些不對勁";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "與你封鎖的內容相符：%@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "尚未檢查";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "你一律允許此網站";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "你一律封鎖此網站";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "%@檢查";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "一律允許";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "一律封鎖";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "復原";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "重新檢查";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "檢查中…";

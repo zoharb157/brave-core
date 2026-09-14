@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Wi-Fi 연결 시 허용";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "보호";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout가 모든 사이트를 확인하고 있습니다";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout는 Scout에서 연 링크만 확인합니다";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "확인한 사이트";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "차단됨";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "허용함";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Scout가 차단하는 것";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "이 앱 너머";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "직접 결정한 사이트";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "검색 결과 필터링";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "검색 엔진 자체의 세이프 모드를 켜서 노골적인 미리보기가 결과 페이지에 아예 나타나지 않도록 합니다.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d/%d 켜짐";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "허용한 사이트";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "차단한 사이트";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout는 확인 없이 이 사이트를 엽니다. 차단된 페이지에서 \"이 사이트 항상 허용\"을 선택하면 여기에 추가됩니다.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "확인 결과와 상관없이 Scout는 이 사이트를 열지 않습니다.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "직접 허용한 사이트 없음";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "직접 차단한 사이트 없음";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "사이트 추가";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "최근 차단됨";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "아직 차단된 항목이 없습니다";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "이 휴대폰에만 보관되며 비공개 탭에서는 기록하지 않습니다.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "모두 보기";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "목록 지우기";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "그래도 열었음";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "안전하지 않음";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "차단 목록에 있음";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "확인할 수 없었음";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Scout가 열지 않는 링크 유형";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "제거";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "확인 완료 — 위험한 점 없음";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout가 이 사이트를 안전하지 않다고 판단했습니다";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "이 사이트에 이상한 점이 있습니다";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "차단 항목과 일치: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "아직 확인하지 않음";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "이 사이트를 항상 허용합니다";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "이 사이트를 항상 차단합니다";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "%@ 확인";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "항상 허용";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "항상 차단";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "실행 취소";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "다시 확인";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "확인 중…";

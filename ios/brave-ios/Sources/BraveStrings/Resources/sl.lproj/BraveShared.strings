@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Dovoli prek Wi-Fija";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Zaščita";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout preverja vsako spletno mesto";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout preverja samo povezave, odprte v Scoutu";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Preverjena spletna mesta";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Blokirano";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Dovolili ste";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Kaj Scout blokira";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Zunaj te aplikacije";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Spletna mesta, o katerih ste odločili";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Filtriraj rezultate iskanja";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Vklopi varni način samega iskalnika, tako da eksplicitne sličice nikoli ne pridejo na stran z rezultati.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "Vklopljeno %d od %d";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Dovoljena spletna mesta";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Blokirana spletna mesta";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout jih odpre brez preverjanja. Spletno mesto pride sem, ko na blokirani strani izberete »Vedno dovoli to spletno mesto«.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Scout jih nikoli ne odpre, ne glede na izid preverjanja.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Nobeno spletno mesto ni ročno dovoljeno";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Nobeno spletno mesto ni ročno blokirano";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Dodaj spletno mesto";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Nedavno blokirano";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Nič še ni bilo blokirano";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Shranjeno samo v tem telefonu in nikoli za zasebne zavihke.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Prikaži vse";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Počisti seznam";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Vseeno odprto";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Nevarno";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "Na vašem seznamu blokiranih";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Ni bilo mogoče preveriti";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Vrsta povezave, ki je Scout ne odpre";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Odstrani";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Preverjeno — nič nevarnega";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout meni, da to spletno mesto ni varno";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "S tem spletnim mestom nekaj ni v redu";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Ustreza temu, kar blokirate: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Še ni preverjeno";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "To spletno mesto vedno dovolite";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "To spletno mesto vedno blokirate";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Preverjeno %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Vedno dovoli";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Vedno blokiraj";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Razveljavi";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Preveri znova";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Preverjanje…";

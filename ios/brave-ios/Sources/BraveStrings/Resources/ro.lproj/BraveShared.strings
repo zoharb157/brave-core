@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Permite pe Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Protecție";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout verifică fiecare site";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout verifică doar linkurile deschise în Scout";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Site-uri verificate";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Blocate";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Permise de tine";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Ce blochează Scout";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Dincolo de această aplicație";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Site-uri despre care ai decis";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Filtrează rezultatele căutării";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Activează modul sigur al motorului de căutare, astfel încât miniaturile explicite să nu ajungă niciodată pe pagina de rezultate.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d din %d active";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Site-uri permise";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Site-uri blocate";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout le deschide fără să le verifice. Un site ajunge aici când alegi „Permite mereu acest site” pe o pagină blocată.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Scout nu le deschide niciodată, orice ar spune verificarea.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Niciun site permis manual";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Niciun site blocat manual";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Adaugă un site";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Blocate recent";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Nu a fost blocat nimic încă";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Se păstrează doar pe acest telefon și niciodată pentru filele private.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Vezi tot";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Golește lista";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Deschis oricum";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Nesigur";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "Pe lista ta de blocate";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Nu a putut fi verificat";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Tip de link pe care Scout nu îl deschide";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Elimină";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Verificat — nimic nesigur";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout consideră acest site nesigur";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Ceva nu e în regulă cu acest site";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Corespunde cu ce blochezi: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Încă neverificat";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Permiți mereu acest site";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Blochezi mereu acest site";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Verificat %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Permite mereu";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Blochează mereu";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Anulează";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Verifică din nou";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Se verifică…";

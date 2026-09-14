@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Разрешать только при подключении к сети Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Защита";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout проверяет каждый сайт";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout проверяет только ссылки, открытые в Scout";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Сайтов проверено";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Заблокировано";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Вы разрешили";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Что блокирует Scout";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "За пределами приложения";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Сайты, о которых вы решили";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Фильтровать результаты поиска";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Включает безопасный режим самой поисковой системы, чтобы откровенные миниатюры вообще не попадали на страницу результатов.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d из %d включено";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Разрешённые сайты";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Заблокированные сайты";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout открывает их без проверки. Сайт попадает сюда, когда вы выбираете «Всегда разрешать этот сайт» на заблокированной странице.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Scout никогда их не открывает, что бы ни показала проверка.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Вручную разрешённых сайтов нет";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Вручную заблокированных сайтов нет";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Добавить сайт";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Недавно заблокировано";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Пока ничего не заблокировано";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Хранится только на этом телефоне и никогда — для приватных вкладок.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Показать все";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Очистить список";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Всё равно открыт";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Небезопасно";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "В вашем списке блокировки";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Не удалось проверить";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Тип ссылки, который Scout не открывает";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Удалить";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Проверено — ничего опасного";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout считает этот сайт небезопасным";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "С этим сайтом что-то не так";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Совпадает с тем, что вы блокируете: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Ещё не проверен";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Вы всегда разрешаете этот сайт";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Вы всегда блокируете этот сайт";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Проверено %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Всегда разрешать";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Всегда блокировать";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Отменить";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Проверить снова";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Проверка…";

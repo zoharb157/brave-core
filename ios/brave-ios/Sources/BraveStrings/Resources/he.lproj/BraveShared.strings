@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "פועל בחיבור Wi-Fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "הגנה";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "‏Scout בודק כל אתר";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "‏Scout בודק רק קישורים שנפתחים בתוך Scout";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "אתרים שנבדקו";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "נחסמו";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "אישרת";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "מה Scout חוסם";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "מעבר לאפליקציה הזו";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "אתרים שהכרעת לגביהם";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "סינון תוצאות חיפוש";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "מפעיל את מצב הבטיחות של מנוע החיפוש עצמו, כך שתמונות ממוזערות בוטות לא מגיעות בכלל לדף התוצאות.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "‏%d מתוך %d פעילים";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "אתרים מאושרים";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "אתרים חסומים";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "‏Scout פותח אותם בלי לבדוק. אתר מגיע לכאן כשבוחרים «תמיד לאשר את האתר הזה» בדף חסום.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "‏Scout לעולם לא פותח אותם, מה שלא תגיד הבדיקה.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "לא אושרו אתרים ידנית";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "לא נחסמו אתרים ידנית";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "הוספת אתר";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "נחסמו לאחרונה";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "עדיין לא נחסם דבר";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "נשמר רק בטלפון הזה, ולעולם לא עבור לשוניות פרטיות.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "הצגת הכול";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "ניקוי הרשימה";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "נפתח בכל זאת";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "לא בטוח";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "ברשימת החסימה שלך";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "לא ניתן היה לבדוק";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "סוג קישור ש-Scout לא פותח";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "הסרה";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "נבדק — לא נמצא שום דבר מסוכן";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "‏Scout מצא שהאתר הזה לא בטוח";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "משהו באתר הזה לא מסתדר";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "תואם למה שאתה חוסם: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "עדיין לא נבדק";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "אתה תמיד מאשר את האתר הזה";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "אתה תמיד חוסם את האתר הזה";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "נבדק %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "תמיד לאשר";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "תמיד לחסום";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "ביטול";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "בדיקה מחדש";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "בודק…";

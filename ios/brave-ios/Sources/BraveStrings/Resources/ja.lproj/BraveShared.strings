@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Wi-Fi経由で許可";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "保護";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout はすべてのサイトを確認しています";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout が確認できるのは Scout で開いたリンクだけです";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "確認したサイト";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "ブロック";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "許可したサイト";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Scout がブロックするもの";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "このアプリの外でも";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "判断済みのサイト";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "検索結果をフィルタリング";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "検索エンジン自体のセーフモードを有効にし、露骨なサムネイルが結果ページに表示されないようにします。";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d / %d 個オン";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "許可したサイト";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "ブロックしたサイト";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout はこれらを確認せずに開きます。ブロックされたページで「このサイトを常に許可」を選ぶと、ここに追加されます。";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "確認結果にかかわらず、Scout はこれらを開きません。";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "手動で許可したサイトはありません";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "手動でブロックしたサイトはありません";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "サイトを追加";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "最近のブロック";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "まだ何もブロックされていません";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "この端末にのみ保存され、プライベートタブでは記録しません。";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "すべて表示";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "リストを消去";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "それでも開いた";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "危険";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "ブロックリストに登録済み";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "確認できませんでした";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Scout が開かないリンクの種類";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "削除";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "確認済み — 危険なものはありません";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout はこのサイトを危険と判断しました";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "このサイトには気になる点があります";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "ブロック対象に一致: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "未確認";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "このサイトを常に許可しています";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "このサイトを常にブロックしています";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "%@に確認";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "常に許可";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "常にブロック";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "元に戻す";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "再確認";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "確認中…";

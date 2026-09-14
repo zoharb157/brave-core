@@ -3631,3 +3631,135 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Tillat over wi-fi";
 
+
+/* Settings row and screen title for everything Scout does to keep sites out */
+"scoutProtection.title" = "Beskyttelse";
+
+/* Headline of the status card at the top of the Protection screen */
+"scoutProtection.statusHeadline" = "Scout sjekker hvert eneste nettsted";
+
+/* Headline of the status card when Scout is not the default browser */
+"scoutProtection.statusNotDefault" = "Scout sjekker bare lenker som åpnes i Scout";
+
+/* Label under the count of sites Scout has a verdict for */
+"scoutProtection.statusChecked" = "Sjekkede nettsteder";
+
+/* Label under the count of sites Scout has blocked recently */
+"scoutProtection.statusBlocked" = "Blokkert";
+
+/* Label under the count of sites the user allowed by hand */
+"scoutProtection.statusAllowed" = "Du tillot";
+
+/* Section header above the content and search filtering settings */
+"scoutProtection.whatScoutBlocks" = "Hva Scout blokkerer";
+
+/* Section header above settings that reach outside the browser */
+"scoutProtection.beyondScout" = "Utenfor denne appen";
+
+/* Section header above the lists of sites the user allowed or blocked */
+"scoutProtection.yourDecisions" = "Nettsteder du har tatt stilling til";
+
+/* Title of the setting that pins search engines to their filtered mode */
+"scoutProtection.safeSearchTitle" = "Filtrer søkeresultater";
+
+/* Explanation of the search filtering setting */
+"scoutProtection.safeSearchDetail" = "Slår på søkemotorens eget trygge modus, slik at eksplisitte miniatyrbilder aldri når resultatsiden.";
+
+/* Summary showing how many blockable content categories are switched on */
+"scoutProtection.categoriesSummary" = "%d av %d på";
+
+/* Row title for the list of sites the user always allows */
+"scoutProtection.allowedSites" = "Tillatte nettsteder";
+
+/* Row title for the list of sites the user always blocks */
+"scoutProtection.blockedSites" = "Blokkerte nettsteder";
+
+/* Footer under the list of always-allowed sites */
+"scoutProtection.allowedSitesFooter" = "Scout åpner disse uten å sjekke dem. Et nettsted havner her når du velger «Tillat alltid dette nettstedet» på en blokkert side.";
+
+/* Footer under the list of always-blocked sites */
+"scoutProtection.blockedSitesFooter" = "Scout åpner aldri disse, uansett hva sjekken sier.";
+
+/* Empty state for the list of always-allowed sites */
+"scoutProtection.noAllowedSites" = "Ingen nettsteder tillatt manuelt";
+
+/* Empty state for the list of always-blocked sites */
+"scoutProtection.noBlockedSites" = "Ingen nettsteder blokkert manuelt";
+
+/* Button that adds a site to the allowed or blocked list */
+"scoutProtection.addSite" = "Legg til et nettsted";
+
+/* Placeholder in the field where a site name is typed */
+"scoutProtection.sitePlaceholder" = "example.com";
+
+/* Section header and screen title for the list of blocked navigations */
+"scoutProtection.recentlyBlocked" = "Nylig blokkert";
+
+/* Empty state for the recently blocked list */
+"scoutProtection.nothingBlocked" = "Ingenting er blokkert ennå";
+
+/* Footer explaining where the recently blocked list lives */
+"scoutProtection.recentlyBlockedFooter" = "Lagres bare på denne telefonen, og aldri for private faner.";
+
+/* Button that opens the full list of blocked navigations */
+"scoutProtection.seeAll" = "Se alle";
+
+/* Button that empties the recently blocked list */
+"scoutProtection.clearList" = "Tøm listen";
+
+/* Badge on a blocked site the user chose to continue to */
+"scoutProtection.continuedAnyway" = "Åpnet likevel";
+
+/* Why a site was blocked: the safety check found it dangerous */
+"scoutProtection.blockedReasonUnsafe" = "Utrygt";
+
+/* Why a site was blocked: the user blocked it by hand */
+"scoutProtection.blockedReasonYourList" = "På blokkeringslisten din";
+
+/* Why a site was blocked: the check could not be completed */
+"scoutProtection.blockedReasonUnchecked" = "Kunne ikke sjekkes";
+
+/* Why a site was blocked: the URL scheme is not one Scout opens */
+"scoutProtection.blockedReasonLinkType" = "Lenketype som Scout ikke åpner";
+
+/* Swipe action that removes a site from an allowed or blocked list */
+"scoutProtection.removeSite" = "Fjern";
+
+/* Status shown for a site Scout checked and found no problem with */
+"scoutSitePanel.checkedSafe" = "Sjekket — ingenting utrygt funnet";
+
+/* Status shown for a site the safety check found dangerous */
+"scoutSitePanel.checkedUnsafe" = "Scout mener dette nettstedet er utrygt";
+
+/* Status shown for a site the safety check was unsure about */
+"scoutSitePanel.checkedSuspicious" = "Noe med dette nettstedet stemmer ikke";
+
+/* Status naming the content categories a site matched. %@ is a list of category names */
+"scoutSitePanel.checkedBlockedCategory" = "Samsvarer med det du blokkerer: %@";
+
+/* Status shown for a page Scout has no verdict for */
+"scoutSitePanel.notChecked" = "Ikke sjekket ennå";
+
+/* Status shown for a site the user allowed by hand */
+"scoutSitePanel.alwaysAllowed" = "Du tillater alltid dette nettstedet";
+
+/* Status shown for a site the user blocked by hand */
+"scoutSitePanel.alwaysBlocked" = "Du blokkerer alltid dette nettstedet";
+
+/* How long ago the site was checked. %@ is a relative time like \"2 hours ago\" */
+"scoutSitePanel.checkedAt" = "Sjekket %@";
+
+/* Button that allows this site from now on */
+"scoutSitePanel.allow" = "Tillat alltid";
+
+/* Button that blocks this site from now on */
+"scoutSitePanel.block" = "Blokker alltid";
+
+/* Button that removes the standing decision the user made about this site */
+"scoutSitePanel.undo" = "Angre";
+
+/* Button that discards the stored verdict and checks the site again */
+"scoutSitePanel.recheck" = "Sjekk igjen";
+
+/* Shown on the check-again button while the check runs */
+"scoutSitePanel.checking" = "Sjekker…";
