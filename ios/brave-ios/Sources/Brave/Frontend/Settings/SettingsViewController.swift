@@ -248,6 +248,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   private func makeSections() -> [Static.Section] {
     var list = [
       defaultBrowserSection,
+      protectionSection,
       makeFeaturesSection(),
       generalSection,
       displaySection,
@@ -767,6 +768,33 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     )
   }
 
+  /// Protection, on its own, above everything else.
+  ///
+  /// It sat inside Features between "Privacy & Ad Blocking" and Playlist,
+  /// wearing almost the same shield icon as the row above it — the reason this
+  /// browser exists, filed as a peer of a music playlist and hard to tell apart
+  /// from the ad blocker. One entry, not one per layer: what Scout blocks, what
+  /// it filters, what reaches past the browser and what the user decided by
+  /// hand are one feature to the person using it.
+  private var protectionSection: Static.Section {
+    Static.Section(
+      rows: [
+        Row(
+          text: Strings.ScoutProtection.title,
+          detailText: Strings.ScoutProtection.settingsSubtitle,
+          selection: { [unowned self] in
+            let controller = UIHostingController(rootView: ScoutProtectionView())
+            self.navigationController?.pushViewController(controller, animated: true)
+          },
+          image: UIImage(systemName: "checkmark.shield.fill")?
+            .withTintColor(.scoutViolet, renderingMode: .alwaysOriginal),
+          accessory: .disclosureIndicator,
+          cellClass: MultilineSubtitleCell.self
+        )
+      ]
+    )
+  }
+
   private func makeFeaturesSection() -> Static.Section {
     weak var spinner: SpinnerView?
 
@@ -833,22 +861,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         )
       ],
       uuid: featureSectionUUID.uuidString
-    )
-
-    // One entry, not one per protection layer: what Scout blocks, what it
-    // filters, what reaches past the browser and what the user decided by hand
-    // are one feature to the person using it, and reading them apart made the
-    // browser's whole purpose look like two minor settings.
-    section.rows.append(
-      Row(
-        text: Strings.ScoutProtection.title,
-        selection: { [unowned self] in
-          let controller = UIHostingController(rootView: ScoutProtectionView())
-          self.navigationController?.pushViewController(controller, animated: true)
-        },
-        image: UIImage(systemName: "checkmark.shield"),
-        accessory: .disclosureIndicator
-      )
     )
 
     if BraveRewards.isSupported(prefService: braveCore.profile.prefs), let rewards = rewards {

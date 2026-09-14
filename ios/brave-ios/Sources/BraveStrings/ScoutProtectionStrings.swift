@@ -175,6 +175,16 @@ extension Strings {
       comment: "Shown in the activity log when a page opened because its safety check could not be completed"
     )
 
+    /// The one-line summary under Protection in Settings, where it now sits
+    /// on its own rather than among the features.
+    public static let settingsSubtitle = NSLocalizedString(
+      "scoutProtection.settingsSubtitle",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "What Scout checks and blocks, and everywhere it has been",
+      comment: "Subtitle for the Protection row in Settings"
+    )
+
     public static let sitePlaceholder = NSLocalizedString(
       "scoutProtection.sitePlaceholder",
       tableName: "BraveShared",
