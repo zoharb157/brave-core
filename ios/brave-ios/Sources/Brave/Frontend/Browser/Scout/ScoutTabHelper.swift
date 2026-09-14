@@ -77,6 +77,11 @@ public class ScoutTabHelper: TabPolicyDecider {
 
     // Known already (policy list or cached verdict): no checking page at all.
     if let decision = services.guard_.decideImmediately(requestURL) {
+      // The verdict was past its life but inside the grace window: it decided
+      // this navigation, and a fresh one lands before the next.
+      if decision.isStale {
+        Task { await services.guard_.refresh(requestURL) }
+      }
       if decision.type == .allow { return .allow }
       ScoutPages.record(decision, for: requestURL)
       showScoutPage(for: requestURL, in: tab)

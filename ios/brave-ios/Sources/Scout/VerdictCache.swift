@@ -36,11 +36,26 @@ public final class VerdictCache {
   }
 
   public func get(_ url: URL) -> Verdict? {
+    lookup(url, grace: 0)?.verdict
+  }
+
+  /// A verdict for `url`, and whether it is past its TTL.
+  ///
+  /// `grace` lets a caller reuse a just-expired verdict rather than making the
+  /// user wait out a fresh check, on the understanding that it refreshes the
+  /// entry afterwards. Beyond the grace window an expired entry is dropped.
+  public func lookup(_ url: URL, grace: TimeInterval) -> (verdict: Verdict, isStale: Bool)? {
     let k = key(url)
     guard let e = entries[k] else { return nil }
-    if isExpired(e) { entries[k] = nil; lru.removeAll { $0 == k }; return nil }
+    let age = now().timeIntervalSince(e.storedAt)
+    let life = ttl(for: e.verdict.security)
+    if age >= life + grace {
+      entries[k] = nil
+      lru.removeAll { $0 == k }
+      return nil
+    }
     touch(k)
-    return e.verdict
+    return (e.verdict, age >= life)
   }
 
   public func put(_ url: URL, _ verdict: Verdict) {

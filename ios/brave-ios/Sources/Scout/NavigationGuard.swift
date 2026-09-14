@@ -13,10 +13,14 @@ public struct Decision {
   /// Non-empty only when `reason == .category`: the blocked categories that
   /// this verdict actually matched, so the interstitial can name them.
   public let matchedCategories: Set<ContentCategory>
+  /// Decided from a verdict that is past its TTL but still within the grace
+  /// window: usable now, and worth refreshing in the background.
+  public let isStale: Bool
   public init(type: DecisionType, verdict: Verdict? = nil, reason: DecisionReason,
-              matchedCategories: Set<ContentCategory> = []) {
+              matchedCategories: Set<ContentCategory> = [], isStale: Bool = false) {
     self.type = type; self.verdict = verdict; self.reason = reason
     self.matchedCategories = matchedCategories
+    self.isStale = isStale
   }
 }
 
@@ -26,17 +30,24 @@ public final class NavigationGuard {
   private let checker: SafetyChecker
   private let timeout: TimeInterval
   private let isReachable: () -> Bool
+  private let staleGrace: TimeInterval
 
   /// - Parameter isReachable: whether the network can reach the service at all.
   ///   With no network the check can only time out, so the guard skips it and
   ///   applies `failMode` immediately instead of making every navigation wait
   ///   out the timeout.
+  /// - Parameter staleGrace: how long past its TTL a verdict may still decide a
+  ///   navigation. Without it the first visit after a verdict expires waits out
+  ///   a whole fresh check; within the window the known answer is used and the
+  ///   entry is refreshed in the background (`Decision.isStale`).
   public init(policy: PolicyProviding, cache: VerdictCache,
               checker: SafetyChecker, timeout: TimeInterval,
-              isReachable: @escaping () -> Bool = { true }) {
+              isReachable: @escaping () -> Bool = { true },
+              staleGrace: TimeInterval = 24 * 3600) {
     self.policy = policy; self.cache = cache
     self.checker = checker; self.timeout = timeout
     self.isReachable = isReachable
+    self.staleGrace = staleGrace
   }
 
   /// Resolves a fetched/cached `Verdict` against the user's chosen
@@ -90,13 +101,26 @@ public final class NavigationGuard {
     case .block: return Decision(type: .block, reason: .policyList)
     case .unknown: break
     }
-    if let cached = cache.get(url) {
-      return Self.resolve(cached, blockedCategories: policy.blockedCategories)
+    if let cached = cache.lookup(url, grace: staleGrace) {
+      let decision = Self.resolve(cached.verdict, blockedCategories: policy.blockedCategories)
+      return Decision(
+        type: decision.type, verdict: decision.verdict, reason: decision.reason,
+        matchedCategories: decision.matchedCategories, isStale: cached.isStale)
     }
     if !isReachable() {
       return Self.resolveFailure(policy.failMode)
     }
     return nil
+  }
+
+  /// Re-checks `url` and updates the cache, discarding the decision. For a
+  /// navigation that went ahead on a stale verdict, so the next one is fresh.
+  public func refresh(_ url: URL) async {
+    guard isReachable() else { return }
+    let result = await checker.check(url, timeout: timeout)
+    if result.status == .ok, let v = result.verdict {
+      cache.put(url, v)
+    }
   }
 
   public func decide(_ url: URL) async -> Decision {
