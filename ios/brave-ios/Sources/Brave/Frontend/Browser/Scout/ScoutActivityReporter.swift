@@ -171,6 +171,30 @@ public final class ScoutActivityReporter {
 
   private static let readEndpoint = URL(
     string: "https://many-apps-30-day-challenge.fly.dev/api/kid-safe/navigations/read")!
+  private static let mintEndpoint = URL(
+    string: "https://many-apps-30-day-challenge.fly.dev/api/kid-safe/device-token")!
+  private static let tokenKey = "device-token"
+
+  /// This phone's credential for reading its own record, minted on first use.
+  ///
+  /// Kept in the keychain, not in the app group: the install id used to be the
+  /// credential, and it sat in a plist that travels in a backup.
+  private func deviceToken() async -> String? {
+    if let existing = ScoutCredentials.string(forKey: Self.tokenKey) { return existing }
+    var request = URLRequest(url: Self.mintEndpoint)
+    request.httpMethod = "POST"
+    request.setValue("kid-safe", forHTTPHeaderField: "x-app-id")
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.httpBody = try? JSONSerialization.data(
+      withJSONObject: ["installId": Self.installId])
+    guard let (data, response) = try? await session.data(for: request),
+      let http = response as? HTTPURLResponse, http.statusCode == 200,
+      let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+      let token = object["token"] as? String
+    else { return nil }
+    ScoutCredentials.set(token, forKey: Self.tokenKey)
+    return token
+  }
 
   /// This install's recent activity, newest first.
   ///
@@ -183,8 +207,9 @@ public final class ScoutActivityReporter {
     request.httpMethod = "POST"
     request.setValue("kid-safe", forHTTPHeaderField: "x-app-id")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    guard let token = await deviceToken() else { throw URLError(.userAuthenticationRequired) }
     request.httpBody = try JSONSerialization.data(
-      withJSONObject: ["installId": Self.installId, "limit": limit])
+      withJSONObject: ["deviceToken": token, "limit": limit])
 
     let (data, response) = try await session.data(for: request)
     guard let http = response as? HTTPURLResponse, http.statusCode == 200 else {
