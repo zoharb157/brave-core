@@ -3722,9 +3722,6 @@
 /* Why a site was blocked: the URL scheme is not one Scout opens */
 "scoutProtection.blockedReasonLinkType" = "Scout 不開啟的連結類型";
 
-/* Swipe action that removes a site from an allowed or blocked list */
-"scoutProtection.removeSite" = "移除";
-
 /* Status shown for a site Scout checked and found no problem with */
 "scoutSitePanel.checkedSafe" = "已檢查 — 未發現不安全內容";
 

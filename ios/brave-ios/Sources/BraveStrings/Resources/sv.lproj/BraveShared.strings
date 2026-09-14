@@ -3722,9 +3722,6 @@
 /* Why a site was blocked: the URL scheme is not one Scout opens */
 "scoutProtection.blockedReasonLinkType" = "Länktyp som Scout inte öppnar";
 
-/* Swipe action that removes a site from an allowed or blocked list */
-"scoutProtection.removeSite" = "Ta bort";
-
 /* Status shown for a site Scout checked and found no problem with */
 "scoutSitePanel.checkedSafe" = "Kontrollerad — inget osäkert hittades";
 

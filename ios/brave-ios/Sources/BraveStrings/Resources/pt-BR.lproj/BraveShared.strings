@@ -3722,9 +3722,6 @@
 /* Why a site was blocked: the URL scheme is not one Scout opens */
 "scoutProtection.blockedReasonLinkType" = "Tipo de link que o Scout não abre";
 
-/* Swipe action that removes a site from an allowed or blocked list */
-"scoutProtection.removeSite" = "Remover";
-
 /* Status shown for a site Scout checked and found no problem with */
 "scoutSitePanel.checkedSafe" = "Verificado — nada inseguro";
 

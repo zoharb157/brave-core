@@ -224,13 +224,6 @@ extension Strings {
       value: "Link type Scout doesn't open",
       comment: "Why a site was blocked: the URL scheme is not one Scout opens"
     )
-    public static let removeSite = NSLocalizedString(
-      "scoutProtection.removeSite",
-      tableName: "BraveShared",
-      bundle: .module,
-      value: "Remove",
-      comment: "Swipe action that removes a site from an allowed or blocked list"
-    )
   }
 
   /// Copy for the Scout panel behind the URL bar.

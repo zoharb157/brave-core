@@ -17,6 +17,10 @@ import UIKit
 /// colour isn't worth a new module.
 let scoutViolet = Color(red: 0x54 / 255, green: 0x40 / 255, blue: 0x96 / 255)
 let scoutMint = Color(red: 0x7E / 255, green: 0xC8 / 255, blue: 0xA8 / 255)
+/// For the one thing on the violet status card that needs to read as unfinished
+/// rather than wrong. A design-system orange would be tuned for a page
+/// background, not for sitting on the accent itself.
+let scoutAmber = Color(red: 0xF5 / 255, green: 0xC2 / 255, blue: 0x6B / 255)
 
 /// Everything Scout does to keep sites out, on one screen.
 ///
@@ -38,6 +42,9 @@ struct ScoutProtectionView: View {
   @State private var blockedCount = 0
   @State private var recent: [BlockRecord] = []
   @State private var checkedCount = 0
+  /// Read fresh each time the screen appears: the user may have just come back
+  /// from changing it in iOS Settings.
+  @State private var isDefaultBrowser = false
 
   var body: some View {
     List {
@@ -128,6 +135,12 @@ struct ScoutProtectionView: View {
     blockedCount = services.siteRules.sites(.block).count
     recent = services.blockLog.entries
     checkedCount = services.checkedSiteCount
+    // "Scout is checking every site" is only true when the system hands Scout
+    // the links. Until then this screen says the narrower thing that is
+    // actually true, rather than promising cover the browser doesn't have.
+    let helper = DefaultBrowserHelper()
+    helper.performAccurateDefaultCheckNow()
+    isDefaultBrowser = helper.status == .defaulted
   }
 
   // MARK: - The status card
@@ -140,10 +153,14 @@ struct ScoutProtectionView: View {
   private var statusCard: some View {
     VStack(alignment: .leading, spacing: 14) {
       HStack(spacing: 12) {
-        Image(systemName: "checkmark.shield.fill")
+        Image(systemName: isDefaultBrowser ? "checkmark.shield.fill" : "exclamationmark.shield.fill")
           .font(.system(size: 26))
-          .foregroundStyle(scoutMint)
-        Text(Strings.ScoutProtection.statusHeadline)
+          .foregroundStyle(isDefaultBrowser ? scoutMint : scoutAmber)
+        Text(
+          isDefaultBrowser
+            ? Strings.ScoutProtection.statusHeadline
+            : Strings.ScoutProtection.statusNotDefault
+        )
           .font(.headline)
           .foregroundStyle(.white)
           .fixedSize(horizontal: false, vertical: true)
