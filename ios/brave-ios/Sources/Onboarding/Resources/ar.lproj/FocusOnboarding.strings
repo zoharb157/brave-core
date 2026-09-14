@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "مُفعّل. تتم تصفية كل تطبيق على هذا الهاتف.";
 "scoutBlocking.phoneFilterFailed" = "تعذّر على Scout إعداد ذلك على هذا الجهاز.";
 "scoutBlocking.phoneFilterFootnote" = "تعتمد التصفية على اسم الموقع، لذا فهي أقل دقة من الفحص داخل Scout، وقد تتجاوزها بعض التطبيقات التي لها إعداداتها الخاصة.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "تصفية هذا الهاتف";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "ليس الآن";

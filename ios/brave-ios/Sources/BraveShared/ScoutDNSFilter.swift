@@ -5,10 +5,12 @@
 
 import Foundation
 import NetworkExtension
-import Preferences
-import Shared
 
 /// Filtering for the whole phone, not just what happens inside Scout.
+///
+/// Lives in `BraveShared` rather than beside the browser's other Scout code so
+/// that onboarding — a lower module — can offer it during setup, which is the
+/// only moment most people will ever be asked.
 ///
 /// Scout only sees the pages opened in Scout. Other apps open links in their
 /// own in-app browsers, and a native app never touches a browser at all — so a

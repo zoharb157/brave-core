@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Hidup. Setiap aplikasi pada telefon ini ditapis.";
 "scoutBlocking.phoneFilterFailed" = "Scout tidak dapat menyediakannya pada peranti ini.";
 "scoutBlocking.phoneFilterFootnote" = "Penapisan mengikut nama tapak, jadi ia lebih kasar daripada pemeriksaan dalam Scout, dan beberapa aplikasi dengan tetapan sendiri boleh memintasnya.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Tapis telefon ini";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Bukan sekarang";

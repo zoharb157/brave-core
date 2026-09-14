@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Zapnuté. Každá aplikácia v tomto telefóne je filtrovaná.";
 "scoutBlocking.phoneFilterFailed" = "Scoutu sa to na tomto zariadení nepodarilo nastaviť.";
 "scoutBlocking.phoneFilterFootnote" = "Filtruje sa podľa názvu stránky, takže je to hrubšie než kontroly vnútri Scoutu, a niekoľko aplikácií s vlastnými nastaveniami to môže obísť.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Filtrovať tento telefón";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Teraz nie";

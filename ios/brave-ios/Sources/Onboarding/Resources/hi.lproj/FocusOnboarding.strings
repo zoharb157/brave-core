@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "चालू है। इस फ़ोन का हर ऐप फ़िल्टर हो रहा है।";
 "scoutBlocking.phoneFilterFailed" = "Scout इस डिवाइस पर यह सेट नहीं कर सका।";
 "scoutBlocking.phoneFilterFootnote" = "फ़िल्टर साइट के नाम से होता है, इसलिए यह Scout की जाँचों से मोटा है, और अपनी सेटिंग्स वाले कुछ ऐप्स इसे बायपास कर सकते हैं।";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "इस फ़ोन को फ़िल्टर करें";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "अभी नहीं";

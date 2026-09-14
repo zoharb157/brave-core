@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Ενεργό. Κάθε εφαρμογή σε αυτό το τηλέφωνο φιλτράρεται.";
 "scoutBlocking.phoneFilterFailed" = "Το Scout δεν μπόρεσε να το ρυθμίσει σε αυτή τη συσκευή.";
 "scoutBlocking.phoneFilterFootnote" = "Το φιλτράρισμα γίνεται με βάση το όνομα του ιστότοπου, οπότε είναι πιο χονδρικό από τους ελέγχους μέσα στο Scout, και λίγες εφαρμογές με δικές τους ρυθμίσεις μπορούν να το παρακάμψουν.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Φιλτράρισμα αυτού του τηλεφώνου";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Όχι τώρα";

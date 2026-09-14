@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "På. Alla appar i den här telefonen filtreras.";
 "scoutBlocking.phoneFilterFailed" = "Scout kunde inte ställa in det här på den här enheten.";
 "scoutBlocking.phoneFilterFootnote" = "Filtreringen sker på sajtnamn, så den är grövre än kontrollerna inne i Scout, och några få appar med egna inställningar kan komma runt den.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Filtrera den här telefonen";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Inte nu";

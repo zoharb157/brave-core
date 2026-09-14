@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Đang bật. Mọi ứng dụng trên điện thoại này đều được lọc.";
 "scoutBlocking.phoneFilterFailed" = "Scout không thể thiết lập điều này trên thiết bị này.";
 "scoutBlocking.phoneFilterFootnote" = "Việc lọc dựa trên tên trang web nên thô hơn các kiểm tra bên trong Scout, và một số ứng dụng có cài đặt riêng có thể vượt qua.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Lọc điện thoại này";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Để sau";

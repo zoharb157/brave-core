@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Päällä. Puhelimen jokainen sovellus suodatetaan.";
 "scoutBlocking.phoneFilterFailed" = "Scout ei saanut tätä määritettyä tällä laitteella.";
 "scoutBlocking.phoneFilterFootnote" = "Suodatus perustuu sivuston nimeen, joten se on karkeampaa kuin Scoutin sisäiset tarkistukset, ja muutama omilla asetuksillaan varustettu sovellus voi kiertää sen.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Suodata tämä puhelin";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Ei nyt";

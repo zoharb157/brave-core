@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "已開啟。這支手機上的每個 App 都會被過濾。";
 "scoutBlocking.phoneFilterFailed" = "Scout 無法在這台裝置上完成設定。";
 "scoutBlocking.phoneFilterFootnote" = "過濾依據是網站名稱，因此比 Scout 內的檢查更粗略，少數自帶設定的 App 可能繞過。";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "過濾這支手機";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "暫不";

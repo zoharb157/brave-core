@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Aktif. Setiap aplikasi di ponsel ini difilter.";
 "scoutBlocking.phoneFilterFailed" = "Scout tidak dapat menyiapkan ini di perangkat ini.";
 "scoutBlocking.phoneFilterFootnote" = "Penyaringan dilakukan berdasarkan nama situs, jadi lebih kasar daripada pemeriksaan di dalam Scout, dan beberapa aplikasi dengan pengaturannya sendiri bisa melewatinya.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Filter ponsel ini";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Nanti saja";

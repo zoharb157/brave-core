@@ -87,6 +87,20 @@ extension Strings {
       value: "Scout couldn't set this up on this device.",
       comment: "Shown when the system refuses to install the device-wide filter"
     )
+    public static let phoneFilterTurnOn = NSLocalizedString(
+      "scoutBlocking.phoneFilterTurnOn",
+      tableName: "FocusOnboarding",
+      bundle: .module,
+      value: "Filter This Phone",
+      comment: "Button in onboarding that installs the device-wide filter"
+    )
+    public static let phoneFilterNotNow = NSLocalizedString(
+      "scoutBlocking.phoneFilterNotNow",
+      tableName: "FocusOnboarding",
+      bundle: .module,
+      value: "Not now",
+      comment: "Button in onboarding that skips the device-wide filter"
+    )
     public static let phoneFilterFootnote = NSLocalizedString(
       "scoutBlocking.phoneFilterFootnote",
       tableName: "FocusOnboarding",

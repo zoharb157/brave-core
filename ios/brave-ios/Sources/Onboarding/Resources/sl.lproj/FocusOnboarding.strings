@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Vklopljeno. Vsaka aplikacija v tem telefonu je filtrirana.";
 "scoutBlocking.phoneFilterFailed" = "Scout tega ni mogel nastaviti v tej napravi.";
 "scoutBlocking.phoneFilterFootnote" = "Filtriranje poteka po imenu strani, zato je bolj grobo od preverjanj v Scoutu, nekaj aplikacij z lastnimi nastavitvami pa ga lahko zaobide.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Filtriraj ta telefon";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Ne zdaj";

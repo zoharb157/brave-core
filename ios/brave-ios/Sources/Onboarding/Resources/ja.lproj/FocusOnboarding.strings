@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "オンです。この端末のすべてのアプリがフィルタリングされています。";
 "scoutBlocking.phoneFilterFailed" = "Scout はこの端末で設定できませんでした。";
 "scoutBlocking.phoneFilterFootnote" = "サイト名による判定のため Scout 内の確認より大まかで、独自の設定を持つ一部のアプリは回避できます。";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "この端末をフィルタリング";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "今はしない";

@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Увімкнено. Кожен застосунок на цьому телефоні фільтрується.";
 "scoutBlocking.phoneFilterFailed" = "Scout не зміг налаштувати це на цьому пристрої.";
 "scoutBlocking.phoneFilterFootnote" = "Фільтрування відбувається за назвою сайту, тож воно грубіше за перевірки всередині Scout, і кілька застосунків із власними налаштуваннями можуть його обійти.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Фільтрувати цей телефон";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Не зараз";

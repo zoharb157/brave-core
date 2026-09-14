@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Açık. Bu telefondaki her uygulama filtreleniyor.";
 "scoutBlocking.phoneFilterFailed" = "Scout bunu bu cihazda kuramadı.";
 "scoutBlocking.phoneFilterFootnote" = "Filtreleme site adına göre yapılır; bu yüzden Scout içindeki kontrollerden daha kabadır ve kendi ayarlarını taşıyan birkaç uygulama bunu aşabilir.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Bu telefonu filtrele";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Şimdi değil";

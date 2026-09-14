@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Activado. Todas las apps de este teléfono están filtradas.";
 "scoutBlocking.phoneFilterFailed" = "Scout no ha podido configurarlo en este dispositivo.";
 "scoutBlocking.phoneFilterFootnote" = "Filtra por nombre del sitio, así que es menos preciso que las comprobaciones dentro de Scout, y algunas apps con sus propios ajustes pueden esquivarlo.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Filtrar este teléfono";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Ahora no";

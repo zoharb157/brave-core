@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "פעיל. כל אפליקציה בטלפון הזה מסוננת.";
 "scoutBlocking.phoneFilterFailed" = "Scout לא הצליח להגדיר זאת במכשיר הזה.";
 "scoutBlocking.phoneFilterFootnote" = "הסינון מתבצע לפי שם האתר, ולכן הוא גס יותר מהבדיקות בתוך Scout, ומעט אפליקציות עם הגדרות משלהן עשויות לעקוף אותו.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "סינון הטלפון הזה";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "לא עכשיו";

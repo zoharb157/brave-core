@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Aan. Elke app op deze telefoon wordt gefilterd.";
 "scoutBlocking.phoneFilterFailed" = "Scout kon dit niet instellen op dit apparaat.";
 "scoutBlocking.phoneFilterFootnote" = "Er wordt gefilterd op sitenaam, dus grover dan de controles in Scout, en een paar apps met eigen instellingen kunnen eromheen.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Deze telefoon filteren";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Niet nu";

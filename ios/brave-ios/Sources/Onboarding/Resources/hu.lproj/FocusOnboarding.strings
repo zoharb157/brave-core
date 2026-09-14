@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "Bekapcsolva. A telefon minden alkalmazása szűrve van.";
 "scoutBlocking.phoneFilterFailed" = "A Scout nem tudta ezt beállítani ezen az eszközön.";
 "scoutBlocking.phoneFilterFootnote" = "A szűrés az oldal neve alapján történik, ezért durvább, mint a Scouton belüli ellenőrzés, és néhány saját beállítással érkező alkalmazás megkerülheti.";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "Telefon szűrése";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "Most nem";

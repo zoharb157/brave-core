@@ -49,12 +49,28 @@ let multiPartPublicSuffixes: Set<String> = [
 /// in-flight checks — hangs off this, so treating "co.uk" as a site would let
 /// one checked British site vouch for every other one.
 public func eTLDPlusOne(_ host: String) -> String {
-  let parts = host.lowercased().split(separator: ".").map(String.init)
+  let lowered = host.lowercased()
+  // An address has no registrable domain, and splitting one on dots is worse
+  // than useless: 1.2.3.4 and 9.9.3.4 would both reduce to "3.4" and share a
+  // verdict, so a checked host would vouch for an unrelated one.
+  if isAddressLiteral(lowered) { return lowered }
+  let parts = lowered.split(separator: ".").map(String.init)
   guard parts.count > 2 else { return parts.joined(separator: ".") }
   let lastTwo = parts.suffix(2).joined(separator: ".")
   let suffixLabels = multiPartPublicSuffixes.contains(lastTwo) ? 2 : 1
   guard parts.count > suffixLabels else { return parts.joined(separator: ".") }
   return parts.suffix(suffixLabels + 1).joined(separator: ".")
+}
+
+/// Whether `host` is an IPv4 or IPv6 literal rather than a name.
+private func isAddressLiteral(_ host: String) -> Bool {
+  if host.contains(":") { return true }  // IPv6, bracketed or not
+  let labels = host.split(separator: ".", omittingEmptySubsequences: false)
+  guard labels.count == 4 else { return false }
+  return labels.allSatisfy { label in
+    !label.isEmpty && label.count <= 3 && label.allSatisfy(\.isNumber)
+      && (Int(label).map { $0 <= 255 } ?? false)
+  }
 }
 
 private func globMatch(_ text: String, _ pattern: String) -> Bool {

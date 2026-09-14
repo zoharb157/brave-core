@@ -84,3 +84,9 @@
 "scoutBlocking.phoneFilterOn" = "已开启。这部手机上的每个应用都会被过滤。";
 "scoutBlocking.phoneFilterFailed" = "Scout 无法在此设备上完成设置。";
 "scoutBlocking.phoneFilterFootnote" = "过滤依据是网站名称，因此比 Scout 内部的检查更粗略，少数自带设置的应用可能绕过。";
+
+/* Button in onboarding that installs the device-wide filter */
+"scoutBlocking.phoneFilterTurnOn" = "过滤这部手机";
+
+/* Button in onboarding that skips the device-wide filter */
+"scoutBlocking.phoneFilterNotNow" = "暂不";
