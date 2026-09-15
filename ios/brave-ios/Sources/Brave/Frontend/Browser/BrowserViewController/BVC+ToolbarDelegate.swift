@@ -291,19 +291,6 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       return false
     }
 
-    // The address is already resolved here and the navigation has not begun,
-    // so this is the typed-address half of the same touch-down precheck the
-    // link handler does: fire-and-forget, deduplicating, and a no-op when the
-    // guard can already answer without a network call.
-    //
-    // Mirrors ScoutLinkWarmScriptHandler's private-tab handling: a verdict
-    // fetched for a private tab's typed address must not outlive that tab in
-    // the shared cache.
-    if privateBrowsingManager.isPrivateBrowsing {
-      ScoutServices.shared.notePrivateNavigation(to: fixupURL)
-    }
-    ScoutServices.shared.warm(fixupURL)
-
     // check text is decentralized DNS supported domain
     if let decentralizedDNSHelper = self.decentralizedDNSHelperFor(url: fixupURL) {
       dismissSearchInput()

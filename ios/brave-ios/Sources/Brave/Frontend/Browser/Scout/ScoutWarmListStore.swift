@@ -53,11 +53,17 @@ public final class ScoutWarmListStore: WarmListProviding {
 
   /// The list to use at startup: whatever was downloaded, or the one that
   /// shipped.
+  ///
+  /// Carries the stored confirmation with it, so a list the server has gone on
+  /// re-asserting keeps answering across relaunches rather than starting every
+  /// cold launch from its build date alone.
   private static func loadFromDisk() -> WarmList? {
+    let confirmed = Preferences.Scout.warmListConfirmedCurrentAt.value
     let made = { (data: Data) -> WarmList? in
       let list = WarmList(
         data: data, now: { Date() }, maxAge: maxAge,
-        perPageHosts: ScoutServices.perPageHosts)
+        perPageHosts: ScoutServices.perPageHosts,
+        confirmedCurrentAt: confirmed > 0 ? Date(timeIntervalSince1970: confirmed) : nil)
       return list
     }
     if let fileURL, let data = try? Data(contentsOf: fileURL), let list = made(data) {
@@ -114,10 +120,26 @@ public final class ScoutWarmListStore: WarmListProviding {
       let http = response as? HTTPURLResponse, http.statusCode == 200
     else { return }
 
-    // No `entries` means the version we already have is current.
-    guard let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-      object["entries"] != nil, let fileURL = Self.fileURL
+    guard let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
     else { return }
+
+    // No `entries` means the version we already have is current. That reply
+    // still carries the server's `builtAt`, and it is the only thing keeping
+    // this phone's list alive: the entry set is hash-stable and moves slowly,
+    // so a phone installed weeks after the build sends its bundled version,
+    // hears "you're current" every day, and — if this reply were thrown away —
+    // would sail past `maxAge` and stop answering permanently, with no later
+    // refresh able to repair it.
+    guard let rows = object["entries"] as? [[String: Any]] else {
+      noteStillCurrent(object)
+      return
+    }
+
+    // An empty list is not a list to install. The server returns `[]` only
+    // when nothing is common enough to publish yet, and a phone that already
+    // holds a real list would be trading it for nothing — so keep what is
+    // held and let the next refresh bring something worth having.
+    guard !rows.isEmpty, let fileURL = Self.fileURL else { return }
 
     // `WarmList.init?` requires `builtAt` and is the safety valve that stops
     // a phone trusting a list once it's too old to answer for — that only
@@ -131,7 +153,29 @@ public final class ScoutWarmListStore: WarmListProviding {
         data: data, now: { Date() }, maxAge: Self.maxAge, perPageHosts: ScoutServices.perPageHosts)
     else { return }
 
+    // A freshly downloaded list ages from its own `builtAt`; any confirmation
+    // held for the list it replaces is about a different version.
+    Preferences.Scout.warmListConfirmedCurrentAt.value = 0
     try? data.write(to: fileURL, options: .atomic)
+    lock.lock()
+    current = list
+    lock.unlock()
+  }
+
+  /// Records that the server re-asserted the list this phone already holds,
+  /// and re-stamps the held list so it goes on answering.
+  ///
+  /// Re-stamping is safe here only because the value is the server's own
+  /// timestamp: it says "the list you have is the one I would send you, and I
+  /// built it at X". A mark of this phone's own making would turn the age
+  /// check into "when did I last download something", which is the thing it
+  /// exists not to measure.
+  private func noteStillCurrent(_ object: [String: Any]) {
+    guard let builtAt = object["builtAt"] as? TimeInterval,
+      builtAt > Preferences.Scout.warmListConfirmedCurrentAt.value
+    else { return }
+    Preferences.Scout.warmListConfirmedCurrentAt.value = builtAt
+    guard let list = Self.loadFromDisk() else { return }
     lock.lock()
     current = list
     lock.unlock()

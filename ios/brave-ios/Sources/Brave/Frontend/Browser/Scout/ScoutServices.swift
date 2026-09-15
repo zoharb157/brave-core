@@ -34,10 +34,14 @@ public final class ScoutServices {
   /// An earlier note here proposed 400 ms on the assumption that a precheck
   /// would have warmed the cache first, and observed that precheck did not
   /// exist — so every unknown host timed out and failed open, and the guard
-  /// never blocked on a live verdict. Precheck exists now, and so does the
-  /// warm list; between them this timeout rarely applies at all. When it does,
-  /// a check that runs past it falls to the user's own fail-mode setting
-  /// rather than being waited out.
+  /// never blocked on a live verdict. Precheck exists now and does take the
+  /// wait off a link the user is about to open. The warm list does not yet:
+  /// a site only reaches it once fifty distinct installs have opened it, and
+  /// in production the published list is still empty, so it takes nothing off
+  /// this path today and will not until the install base is large enough.
+  /// Until then this timeout applies exactly as often as it ever did — on
+  /// every first visit to an unknown site. When it fires, the check falls to
+  /// the user's own fail-mode setting rather than being waited out.
   private static let checkTimeout: TimeInterval = 4.0
 
   /// Sites where the pages are written by whoever signs up, so one page's

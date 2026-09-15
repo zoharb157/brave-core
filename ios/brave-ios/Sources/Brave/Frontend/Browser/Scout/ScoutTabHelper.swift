@@ -210,13 +210,16 @@ public class ScoutTabHelper: TabPolicyDecider {
         // The gate is narrower than the swap above, deliberately. Stopping is
         // right for any non-allow, but deleting someone's cookies, storage and
         // saved credentials is only right when something actually judged the
-        // page. `resolveFailure(.closed)` returns a `.warn` with reason
-        // `.unavailable` — a timeout or a lost signal on a phone set to "ask
-        // when a check fails" — and nothing judged that page at all; the
-        // interstitial then offers "Continue anyway", after which the user
-        // would simply be logged out for no reason. Note the asymmetry is only
-        // on this path: the waiting path never deletes anything on a warn
-        // either, because there the page never ran.
+        // page. `type == .block` is what carries that: a check that failed
+        // produces `resolveFailure`, which returns `.allow` or `.warn` and
+        // never `.block` — so a timeout or a lost signal on a phone set to
+        // "ask when a check fails" stops the page and offers "Continue
+        // anyway", without shredding anything, and the user is not logged out
+        // for no reason. The `.unavailable` clause below is belt and braces:
+        // no path produces a `.block` with that reason today, and it is kept
+        // so one cannot be introduced quietly. Note the asymmetry is only on
+        // this path: the waiting path never deletes anything on a warn either,
+        // because there the page never ran.
         guard decision.type == .block, decision.reason != .unavailable,
           let dataStore
         else { return }

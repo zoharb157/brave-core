@@ -1947,6 +1947,27 @@ public class BrowserViewController: UIViewController {
         return
       }
 
+      // The address is resolved and the navigation has not begun, so this is
+      // the typed-address half of the same touch-down precheck the link
+      // handler does: fire-and-forget, deduplicating, and a no-op when the
+      // guard can already answer without a network call.
+      //
+      // Here rather than in `submitValidURL`, which is only one of the ways an
+      // address arrives: Paste and Go, the long-press shortcut, a recent
+      // search, a bookmark, a dropped URL and the Web3 name resolvers all end
+      // up at this one call instead. Every one of them is an address the user
+      // explicitly asked for, which is what makes prechecking it a head start
+      // rather than a crawl.
+      //
+      // Mirrors ScoutLinkWarmScriptHandler's private-tab handling, and cannot
+      // be left to ScoutTabHelper: that runs when the load reaches the policy
+      // decider, by which time this check may already have banked a verdict
+      // for a private tab in the shared cache.
+      if tab.isPrivate {
+        ScoutServices.shared.notePrivateNavigation(to: url)
+      }
+      ScoutServices.shared.warm(url)
+
       tab.loadRequest(URLRequest(url: url))
 
       // Donate Custom Intent Open Website

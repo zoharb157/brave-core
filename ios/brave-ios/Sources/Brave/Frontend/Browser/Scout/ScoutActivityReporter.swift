@@ -26,6 +26,17 @@ extension Preferences.Scout {
   public static let warmListCheckedAt = Preferences.Option<Double>(
     key: "scout.warm-list-checked-at", default: 0)
 
+  /// The `builtAt` from the last "you're current" reply, in seconds since the
+  /// epoch — the server's own timestamp, never this phone's clock.
+  ///
+  /// The list's entry set is hash-stable and moves slowly, so a phone that
+  /// installs weeks after the build sends its bundled version, is told it is
+  /// current, and is handed no new `builtAt` to age from. Held here, that
+  /// reply re-asserts the list this phone already has; without it the list
+  /// ages out for good and the daily refresh can never repair it.
+  public static let warmListConfirmedCurrentAt = Preferences.Option<Double>(
+    key: "scout.warm-list-confirmed-current-at", default: 0)
+
   /// How many links Scout has checked, and how many it stopped, for the life
   /// of this install.
   ///
