@@ -7,12 +7,22 @@ import Foundation
 import Preferences
 import Scout
 
-/// Keeps the warm list on disk and fetches a newer one now and then.
+/// Keeps the warm list on disk, fetches a newer one now and then, and holds
+/// the current list in memory so the guard sees a fresh download the moment
+/// it lands rather than only on the next cold start.
 ///
 /// The request carries a version number and nothing else. That is the whole
 /// privacy story for this feature: the phone never names a site to find out
 /// about it, it downloads the same file everybody downloads.
-public final class ScoutWarmListStore {
+///
+/// `@MainActor`, matching the other Scout singletons in this directory
+/// (`ScoutServices`, `ScoutActivityReporter`, `ScoutSupervision`). The one
+/// exception is `verdict(for:)`: `WarmListProviding` is a synchronous,
+/// non-isolated requirement, and `NavigationGuard` calls it from a plain,
+/// non-actor context — so that single witness is `nonisolated`, and the list
+/// it reads is guarded by `lock` rather than by actor isolation.
+@MainActor
+public final class ScoutWarmListStore: WarmListProviding {
   public static let shared = ScoutWarmListStore()
 
   private static let endpoint = URL(
@@ -23,31 +33,59 @@ public final class ScoutWarmListStore {
   private static let refreshInterval: TimeInterval = 24 * 3600
 
   private let session: URLSession
+  private let lock = NSLock()
+  /// The list `verdict(for:)` answers from. Read and written under `lock`
+  /// rather than through actor isolation, since the sole reader —
+  /// `verdict(for:)` — must stay synchronous and non-isolated to satisfy
+  /// `WarmListProviding` the way `NavigationGuard` calls it.
+  private nonisolated(unsafe) var current: WarmList?
 
   private init(session: URLSession = .shared) {
     self.session = session
+    current = Self.loadFromDisk()
   }
 
-  private var fileURL: URL? {
+  private static var fileURL: URL? {
     FileManager.default
       .urls(for: .applicationSupportDirectory, in: .userDomainMask).first?
       .appendingPathComponent("scout-warm-list.json")
   }
 
-  /// The list to use: whatever was downloaded, or the one that shipped.
-  public func load() -> WarmList? {
+  /// The list to use at startup: whatever was downloaded, or the one that
+  /// shipped.
+  private static func loadFromDisk() -> WarmList? {
     let made = { (data: Data) -> WarmList? in
-      WarmList(
-        data: data, now: { Date() }, maxAge: Self.maxAge,
+      let list = WarmList(
+        data: data, now: { Date() }, maxAge: maxAge,
         perPageHosts: ScoutServices.perPageHosts)
+      return list
     }
     if let fileURL, let data = try? Data(contentsOf: fileURL), let list = made(data) {
       return list
     }
     guard let bundled = Bundle.module.url(forResource: "scout-warm-list", withExtension: "json"),
       let data = try? Data(contentsOf: bundled)
-    else { return nil }
+    else {
+      return nil
+    }
     return made(data)
+  }
+
+  /// A warm verdict for `url`, from whatever list is currently held.
+  ///
+  /// Non-isolated so `NavigationGuard` — a plain, non-actor type — can call it
+  /// synchronously, exactly as it does today. Thread safety for `current`
+  /// comes from `lock`, not from actor isolation.
+  public nonisolated func verdict(for url: URL) -> Verdict? {
+    lock.lock()
+    defer { lock.unlock() }
+    return current?.verdict(for: url)
+  }
+
+  private var currentVersion: String? {
+    lock.lock()
+    defer { lock.unlock() }
+    return current?.version
   }
 
   /// Asks for a newer list, at most once a day.
@@ -58,9 +96,14 @@ public final class ScoutWarmListStore {
   public func refreshIfDue() async {
     let last = Preferences.Scout.warmListCheckedAt.value
     guard Date().timeIntervalSince1970 - last > Self.refreshInterval else { return }
+    // Stamped before the request goes out, not after: this caps attempts at
+    // one a day regardless of outcome. Stamping only on success meant a down
+    // endpoint, or a phone behind a captive portal, got asked again on every
+    // single cold launch.
+    Preferences.Scout.warmListCheckedAt.value = Date().timeIntervalSince1970
 
     var components = URLComponents(url: Self.endpoint, resolvingAgainstBaseURL: false)
-    if let version = load()?.version {
+    if let version = currentVersion {
       components?.queryItems = [URLQueryItem(name: "since", value: version)]
     }
     guard let url = components?.url else { return }
@@ -71,23 +114,26 @@ public final class ScoutWarmListStore {
       let http = response as? HTTPURLResponse, http.statusCode == 200
     else { return }
 
-    Preferences.Scout.warmListCheckedAt.value = Date().timeIntervalSince1970
-
     // No `entries` means the version we already have is current.
-    guard var object = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-      object["entries"] != nil, let fileURL
+    guard let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+      object["entries"] != nil, let fileURL = Self.fileURL
     else { return }
-    // The endpoint's contract (`WarmListContract` in the server) is
-    // deliberately `{ version, entries }` — no build timestamp, because the
-    // server-side cache is rebuilt on its own schedule and that detail isn't
-    // this feature's business. `WarmList.init?` still needs a `builtAt` to
-    // know when a list goes stale, so the phone stamps it with the moment it
-    // finished downloading. That is a reasonable stand-in: staleness only has
-    // to answer "should this phone still be trusting this file", and "since I
-    // last fetched it" answers that as well as "since the server built it"
-    // would.
-    object["builtAt"] = Date().timeIntervalSince1970
-    guard let stamped = try? JSONSerialization.data(withJSONObject: object) else { return }
-    try? stamped.write(to: fileURL, options: .atomic)
+
+    // `WarmList.init?` requires `builtAt` and is the safety valve that stops
+    // a phone trusting a list once it's too old to answer for — that only
+    // works against a timestamp the server actually computed. The server
+    // contract now carries one; a payload that still fails to parse here is
+    // left unwritten rather than stamped with a timestamp of this phone's
+    // own invention, which would measure "when I downloaded this" instead of
+    // "when this was built" and defeat the whole point of the check.
+    guard
+      let list = WarmList(
+        data: data, now: { Date() }, maxAge: Self.maxAge, perPageHosts: ScoutServices.perPageHosts)
+    else { return }
+
+    try? data.write(to: fileURL, options: .atomic)
+    lock.lock()
+    current = list
+    lock.unlock()
   }
 }

@@ -138,8 +138,11 @@ public final class ScoutServices {
       // Verdicts for the sites people open most, shipped as a file and
       // refreshed at most once a day. Consulted after the cache and before
       // the network check, so a verdict this phone fetched for itself always
-      // wins.
-      warmList: ScoutWarmListStore.shared.load())
+      // wins. The store itself is passed, not a snapshot of what it held at
+      // construction — a list downloaded mid-session replaces what the store
+      // holds, and the guard sees that update on its very next lookup rather
+      // than only after the next cold start.
+      warmList: ScoutWarmListStore.shared)
 
     load()
     observeLifecycle()
