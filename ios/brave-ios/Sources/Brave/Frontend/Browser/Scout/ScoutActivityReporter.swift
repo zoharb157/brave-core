@@ -106,7 +106,6 @@ public final class ScoutActivityReporter {
       if decision.type == .block { Preferences.Scout.sitesBlocked.value += 1 }
     }
     var event: [String: Any] = [
-      "installId": Self.installId,
       "url": String(url.absoluteString.prefix(2048)),
       "decision": Self.wire(decision.type),
       "reason": decision.reason.wire,
@@ -131,7 +130,6 @@ public final class ScoutActivityReporter {
   /// rewrites its own history is worse than one with two rows.
   public func recordContinued(_ url: URL, isPrivate: Bool) {
     enqueue([
-      "installId": Self.installId,
       "url": String(url.absoluteString.prefix(2048)),
       "decision": "allow",
       "reason": "policy-list",
@@ -194,6 +192,15 @@ public final class ScoutActivityReporter {
     else { return nil }
     ScoutCredentials.set(token, forKey: Self.tokenKey)
     return token
+  }
+
+  /// Drops the stored token so the next call mints a fresh one.
+  ///
+  /// Tokens expire, and turning sharing off burns this phone's along with the
+  /// parent's links. Neither is an error worth telling anyone about — the
+  /// phone just asks again.
+  public func forgetDeviceToken() {
+    ScoutCredentials.set(nil, forKey: Self.tokenKey)
   }
 
   /// This install's recent activity, newest first.
@@ -283,20 +290,29 @@ public final class ScoutActivityReporter {
     let batch = Array(pending.prefix(50))
     pending.removeFirst(batch.count)
 
-    guard
-      let body = try? JSONSerialization.data(withJSONObject: ["events": batch])
-    else { return }
-    var request = URLRequest(url: Self.endpoint)
-    request.httpMethod = "POST"
-    request.setValue("kid-safe", forHTTPHeaderField: "x-app-id")
-    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.httpBody = body
-
     Task { [session] in
+      // The token says whose record this is. The install id used to travel
+      // with each event and be believed, which made the log writable by
+      // anyone who could name an install.
+      guard let token = await self.deviceToken(),
+        let body = try? JSONSerialization.data(
+          withJSONObject: ["deviceToken": token, "events": batch])
+      else { return }
+      var request = URLRequest(url: Self.endpoint)
+      request.httpMethod = "POST"
+      request.setValue("kid-safe", forHTTPHeaderField: "x-app-id")
+      request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+      request.httpBody = body
+
       // Dropped on failure, deliberately. A retry queue here would mean the
       // browser holding on to a list of everywhere it has been, which is
       // exactly what this should not become.
-      _ = try? await session.data(for: request)
+      guard let (_, response) = try? await session.data(for: request) else { return }
+      // A token can expire, or be burned by turning sharing off. Minting a
+      // fresh one costs nothing and is what the phone would do on next launch
+      // anyway; doing it here means one rejected batch rather than a log that
+      // quietly stops for ninety days.
+      if (response as? HTTPURLResponse)?.statusCode == 401 { await self.forgetDeviceToken() }
     }
   }
 
