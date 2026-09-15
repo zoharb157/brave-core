@@ -20,12 +20,26 @@ public enum ExplicitURL {
   ///
   /// Bare "sex", "nude", "adult" and "breast" are all excluded for that
   /// reason. Judging those is the content check's job, with the page in hand.
+  /// "fetish" and "nsfw" were removed for the same reason: a dictionary
+  /// defining the first and a news piece explaining the second were both being
+  /// blocked outright. "xxx" is not here either — runs of x are judged by
+  /// `hasRunOfX`, which reads a host differently from a path.
   static let markers: Set<String> = [
-    "xxx", "porn", "porno", "pornos", "pornhub", "xvideos", "xnxx", "xhamster",
-    "youporn", "redtube", "brazzers", "hentai", "nsfw", "camgirl", "camgirls",
+    "porn", "porno", "pornos", "pornhub", "xvideos", "xnxx", "xhamster",
+    "youporn", "redtube", "brazzers", "hentai", "camgirl", "camgirls",
     "chaturbate", "onlyfans", "milf", "milfs", "sextape", "sextapes", "sexcam",
     "sexcams", "sexvideo", "sexvideos", "nudes", "cumshot", "cumshots", "creampie",
-    "blowjob", "blowjobs", "deepthroat", "gangbang", "bukkake", "fetish",
+    "blowjob", "blowjobs", "deepthroat", "gangbang", "bukkake",
+  ]
+
+  /// Words that mean little alone but settle what a run of x is doing beside
+  /// them. "xxx" next to any of these is not a number.
+  ///
+  /// Mirrors `X_COMPANIONS` in `packages/cross/utils/url.ts`.
+  static let xCompanions: Set<String> = [
+    "sex", "sexo", "sexe", "video", "videos", "vids", "tube", "cam", "cams",
+    "webcam", "webcams", "anal", "teen", "teens", "hardcore", "nude", "escort",
+    "escorts", "fuck", "fucking", "hentai", "adult", "hd", "4k",
   ]
 
   /// Whether a page's own title names explicit content.
@@ -41,7 +55,11 @@ public enum ExplicitURL {
   /// legislation or health that merely mentions these words is a page someone
   /// may need, and blocking it is recoverable but not free.
   public static func looksExplicit(title: String) -> Bool {
-    containsMarker(title.lowercased())
+    let words = tokens(title.lowercased())
+    if words.contains(where: { markers.contains($0) }) { return true }
+    // A title has no host and no segments, so a run of x counts only when a
+    // word beside it says what it means — "Super Bowl XXX" is a title too.
+    return words.contains(where: isRunOfX) && words.contains(where: { xCompanions.contains($0) })
   }
 
   /// Whether `url`'s address carries an adult marker.
@@ -55,15 +73,33 @@ public enum ExplicitURL {
     // The host and the path are read together: the marker can be in either
     // (`porn.example.com` or `example.com/porn`).
     let address = host + " " + url.path.lowercased() + " " + (url.query?.lowercased() ?? "")
-    return containsMarker(address)
+    let words = tokens(address)
+    if words.contains(where: { markers.contains($0) }) { return true }
+    return hasRunOfX(host: host, path: url.path.lowercased(), words: words)
   }
 
-  private static func containsMarker(_ text: String) -> Bool {
-    for word in text.split(whereSeparator: { !$0.isLetter && !$0.isNumber }) {
-      if markers.contains(String(word)) { return true }
-      // Runs of x are how these spell it: xxx, xxxx, 4k-xxx-hd.
-      if word.count >= 3 && word.allSatisfy({ $0 == "x" }) { return true }
-    }
-    return false
+  private static func tokens(_ text: String) -> [String] {
+    text.split(whereSeparator: { !$0.isLetter && !$0.isNumber }).map(String.init)
+  }
+
+  private static func isRunOfX(_ word: String) -> Bool {
+    word.count >= 3 && word.allSatisfy { $0 == "x" }
+  }
+
+  /// Whether a run of x here is the way those sites spell it.
+  ///
+  /// In a host name it always is — nobody numbers a domain. In a path it is
+  /// far more often thirty: Super Bowl XXX and Olympiad XXX were both being
+  /// blocked outright as pornography. So in a path it counts only when the
+  /// segment is nothing but the run, or a word beside it says what it means.
+  ///
+  /// The path cannot simply be ignored: this check runs so that an injected
+  /// page on a hacked but otherwise clean domain does not inherit that
+  /// domain's clean verdict, and such a page is a path, never a host.
+  private static func hasRunOfX(host: String, path: String, words: [String]) -> Bool {
+    if host.split(separator: ".").contains(where: { isRunOfX(String($0)) }) { return true }
+    guard words.contains(where: isRunOfX) else { return false }
+    if words.contains(where: { xCompanions.contains($0) }) { return true }
+    return path.split(separator: "/").contains { isRunOfX(String($0)) }
   }
 }
