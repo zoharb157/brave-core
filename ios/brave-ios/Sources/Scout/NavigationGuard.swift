@@ -38,6 +38,7 @@ public final class NavigationGuard {
   private let timeout: TimeInterval
   private let isReachable: () -> Bool
   private let staleGrace: TimeInterval
+  private let warmList: WarmListProviding?
 
   /// - Parameter isReachable: whether the network can reach the service at all.
   ///   With no network the check can only time out, so the guard skips it and
@@ -47,14 +48,19 @@ public final class NavigationGuard {
   ///   navigation. Without it the first visit after a verdict expires waits out
   ///   a whole fresh check; within the window the known answer is used and the
   ///   entry is refreshed in the background (`Decision.isStale`).
+  /// - Parameter warmList: verdicts for the sites people open most, shipped as
+  ///   a file. Consulted after the cache and before the network check, so a
+  ///   verdict this phone fetched for itself always wins.
   public init(policy: PolicyProviding, cache: VerdictCache,
               checker: SafetyChecker, timeout: TimeInterval,
               isReachable: @escaping () -> Bool = { true },
-              staleGrace: TimeInterval = 24 * 3600) {
+              staleGrace: TimeInterval = 24 * 3600,
+              warmList: WarmListProviding? = nil) {
     self.policy = policy; self.cache = cache
     self.checker = checker; self.timeout = timeout
     self.isReachable = isReachable
     self.staleGrace = staleGrace
+    self.warmList = warmList
   }
 
   /// Resolves a fetched/cached `Verdict` against the user's chosen
@@ -124,6 +130,12 @@ public final class NavigationGuard {
         type: decision.type, verdict: decision.verdict, reason: decision.reason,
         matchedCategories: decision.matchedCategories, isStale: cached.isStale)
     }
+    // After the cache, never before it. A verdict this phone fetched is newer
+    // and more specific than a list entry, and consulting the cache first is
+    // what makes that true without a rule that says so.
+    if let warm = warmList?.verdict(for: url) {
+      return Self.resolve(warm, blockedCategories: policy.blockedCategories)
+    }
     if !isReachable() {
       return Self.resolveFailure(policy.failMode)
     }
@@ -144,13 +156,12 @@ public final class NavigationGuard {
     if let immediate = decideImmediately(url) {
       return immediate
     }
-    var result = await checker.check(url, timeout: timeout)
-    // A refused connection or a 500 is usually a blip, and failing open on one
-    // is how an unchecked page slips through. A timeout is not retried: the
-    // budget is already spent and the user is waiting.
-    if result.status == .error {
-      result = await checker.check(url, timeout: timeout)
-    }
+    // One attempt. Retrying an error used to be worth it against a twelve
+    // second timeout, where a blip cost less than a wrong answer. Against four
+    // it costs eight seconds of somebody staring at a blank tab, which is the
+    // wait this exists to remove — and a check that fails still has a fail mode
+    // to fall to, which is a user's choice rather than a guess.
+    let result = await checker.check(url, timeout: timeout)
     if result.status == .ok, let v = result.verdict {
       cache.put(url, v)
       return Self.resolve(v, blockedCategories: policy.blockedCategories)

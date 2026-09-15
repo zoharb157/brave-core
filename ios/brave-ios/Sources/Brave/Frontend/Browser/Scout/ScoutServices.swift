@@ -33,10 +33,12 @@ public final class ScoutServices {
   /// every unknown host times out and fails open — the guard would never block
   /// on a live verdict.
   ///
-  /// Until precheck lands this is deliberately generous so the verdict actually
-  /// arrives. It is NOT the shipping value: blocking a navigation for seconds is
-  /// unacceptable UX, and the real fix is precheck plus the verdict cache.
-  private static let checkTimeout: TimeInterval = 12.0
+  /// Measured checks run 1.5–3.1 seconds, so this leaves about a second of
+  /// headroom over the slowest seen. Precheck and the warm list are what make
+  /// the timeout rarely apply at all; when it does apply, a check that runs
+  /// past it falls to the user's own fail-mode setting rather than being
+  /// waited out.
+  private static let checkTimeout: TimeInterval = 4.0
 
   /// Sites where the pages are written by whoever signs up, so one page's
   /// verdict says nothing about the next: a video, a subreddit, an

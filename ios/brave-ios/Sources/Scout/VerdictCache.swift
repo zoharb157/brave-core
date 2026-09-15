@@ -120,7 +120,7 @@ public final class VerdictCache {
   /// of those hosts are subdomains: `docs.google.com` serves whatever a
   /// stranger uploaded, while `google.com` itself does not, and listing
   /// `google.com` to catch the first would take the second with it.
-  private static func isPerPage(host: String, site: String, in hosts: Set<String>) -> Bool {
+  static func isPerPage(host: String, site: String, in hosts: Set<String>) -> Bool {
     if hosts.contains(site) { return true }
     var name = host
     while name.count > site.count {
