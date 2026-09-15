@@ -128,6 +128,7 @@ var package = Package(
       ],
       resources: [
         .copy("Assets/About/AboutHome.html"),
+        .copy("Assets/scout-warm-list.json"),
         .copy("Assets/__firefox__.js"),
         .copy("Assets/AllFramesAtDocumentEnd.js"),
         .copy("Assets/AllFramesAtDocumentEndSandboxed.js"),

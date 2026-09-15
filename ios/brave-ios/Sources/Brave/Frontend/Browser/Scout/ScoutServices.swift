@@ -134,7 +134,12 @@ public final class ScoutServices {
       policy: decisionPolicy, cache: cache, checker: checker, timeout: Self.checkTimeout,
       // With no network the check can only time out, and the page is about to
       // fail to load anyway — don't spend the timeout on a checking screen.
-      isReachable: { Reachability.shared.status.connectionType != .offline })
+      isReachable: { Reachability.shared.status.connectionType != .offline },
+      // Verdicts for the sites people open most, shipped as a file and
+      // refreshed at most once a day. Consulted after the cache and before
+      // the network check, so a verdict this phone fetched for itself always
+      // wins.
+      warmList: ScoutWarmListStore.shared.load())
 
     load()
     observeLifecycle()

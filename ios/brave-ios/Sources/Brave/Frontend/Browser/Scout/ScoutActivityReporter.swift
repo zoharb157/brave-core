@@ -21,6 +21,11 @@ extension Preferences.Scout {
     default: ""
   )
 
+  /// When the warm list was last asked about, so it is asked once a day and
+  /// not once a navigation.
+  public static let warmListCheckedAt = Preferences.Option<Double>(
+    key: "scout.warm-list-checked-at", default: 0)
+
   /// How many links Scout has checked, and how many it stopped, for the life
   /// of this install.
   ///

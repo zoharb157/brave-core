@@ -561,6 +561,12 @@ public class BrowserViewController: UIViewController {
       ScoutSupervision.shared.gate(.relaxCategory, from: self) { proceed() }
     }
 
+    // At most once a day, and never awaited by anything: a slow or failed
+    // fetch must never hold up launch.
+    Task {
+      await ScoutWarmListStore.shared.refreshIfDue()
+    }
+
     NotificationCenter.default.addObserver(
       forName: ScoutSupervision.supervisionDidBegin,
       object: nil,
