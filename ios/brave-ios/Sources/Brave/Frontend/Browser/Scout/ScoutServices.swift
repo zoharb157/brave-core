@@ -27,17 +27,16 @@ public final class ScoutServices {
   private static let checkEndpoint = URL(
     string: "https://many-apps-30-day-challenge.fly.dev/api/kid-safe/check")!
 
-  /// The spec's budget is 400 ms, on the assumption that a precheck warms the
-  /// cache before navigation. Precheck is not built yet, and the live service
-  /// measures 2.7-10.2 s (it fetches and AI-analyses the page), so at 400 ms
-  /// every unknown host times out and fails open — the guard would never block
-  /// on a live verdict.
-  ///
   /// Measured checks run 1.5–3.1 seconds, so this leaves about a second of
-  /// headroom over the slowest seen. Precheck and the warm list are what make
-  /// the timeout rarely apply at all; when it does apply, a check that runs
-  /// past it falls to the user's own fail-mode setting rather than being
-  /// waited out.
+  /// headroom over the slowest seen.
+  ///
+  /// An earlier note here proposed 400 ms on the assumption that a precheck
+  /// would have warmed the cache first, and observed that precheck did not
+  /// exist — so every unknown host timed out and failed open, and the guard
+  /// never blocked on a live verdict. Precheck exists now, and so does the
+  /// warm list; between them this timeout rarely applies at all. When it does,
+  /// a check that runs past it falls to the user's own fail-mode setting
+  /// rather than being waited out.
   private static let checkTimeout: TimeInterval = 4.0
 
   /// Sites where the pages are written by whoever signs up, so one page's
