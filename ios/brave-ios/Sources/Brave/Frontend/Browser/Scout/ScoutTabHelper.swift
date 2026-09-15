@@ -161,32 +161,43 @@ public class ScoutTabHelper: TabPolicyDecider {
     // Unsupervised: this person chose their own blocked categories, for
     // themselves. They get the page now, and lose it if the verdict is bad.
     case .renderOptimistically:
+      // Captured now, synchronously, while the tab is certainly alive — not
+      // read off `tab` when the verdict lands. A private tab's store dies with
+      // the tab, and the tab can be gone by then: closed by the user, or
+      // closed by supervision being switched on, which shuts every private tab
+      // (`ScoutSupervision.supervisionDidBegin`). Reading it late would hand
+      // the shred a nil store; with no store there is nothing to delete, which
+      // is the right answer, and `shredOrigin` refuses to substitute the
+      // default one for it.
+      let dataStore = tab.configuration?.websiteDataStore
+
       Task { @MainActor [weak self, weak tab] in
         let decision = await services.guard_.decide(requestURL)
         Self.settle(decision, for: requestURL, in: tab)
-        // Anything the checking page would have stopped is taken back here.
+        // Anything the checking page would have stopped is stopped here too.
         // `.warn` and `.block` are both stops; letting a warn through only on
         // this path would mean a suspicious site, or a failed check on a phone
         // set to ask, quietly stayed open because the answer happened to be
         // slow.
         guard decision.type != .allow else { return }
 
-        // Swap the view first — but only if the tab is still on this site. If
-        // the user has already moved on, replacing what they went to next
-        // would take back a page nobody judged.
-        //
-        // First, not last, because loading the block page stops the one being
-        // taken back and cancels the requests it still has in flight. Shredding
-        // before that left those requests to land afterwards and write a fresh
-        // cache entry for the site just cleared — observed on williamhill.com,
-        // which came back in Manage Website Data with a cache entry (its
-        // cookies and storage correctly gone) after the swap.
+        // Swap the view — but only if the tab is still on this site. If the
+        // user has already moved on, replacing what they went to next would
+        // take back a page nobody judged.
         //
         // `baseDomain` is nil for an address literal, and two nils comparing
         // equal would match this tab against any other hostless URL.
         if let self, let tab, let site = requestURL.baseDomain,
           tab.visibleURL?.baseDomain == site
         {
+          // Note: this pushes a history entry over the live page rather than
+          // replacing it, so Back returns to the blocked address and the check
+          // runs again. The waiting path can use `location.replace` because it
+          // is scripting its own internal page; here the live page is the
+          // site's, and a web origin cannot `location.replace` to
+          // `internal://`. A cached block simply blocks again on the way back;
+          // an `.unavailable` warn, which is never cached, is re-checked and
+          // — per the gate below — deletes nothing either way.
           showScoutPage(for: requestURL, in: tab)
         }
 
@@ -195,7 +206,34 @@ public class ScoutTabHelper: TabPolicyDecider {
         // and filled its storage — and all of that exists whether or not the
         // tab is still on it. Swapping the view does not undo any of it;
         // deleting it is what makes "taken back" mean something.
-        await services.shredOrigin(requestURL, in: tab?.configuration?.websiteDataStore)
+        //
+        // The gate is narrower than the swap above, deliberately. Stopping is
+        // right for any non-allow, but deleting someone's cookies, storage and
+        // saved credentials is only right when something actually judged the
+        // page. `resolveFailure(.closed)` returns a `.warn` with reason
+        // `.unavailable` — a timeout or a lost signal on a phone set to "ask
+        // when a check fails" — and nothing judged that page at all; the
+        // interstitial then offers "Continue anyway", after which the user
+        // would simply be logged out for no reason. Note the asymmetry is only
+        // on this path: the waiting path never deletes anything on a warn
+        // either, because there the page never ran.
+        guard decision.type == .block, decision.reason != .unavailable,
+          let dataStore
+        else { return }
+
+        // Twice, a beat apart. `showScoutPage` only *starts* a navigation;
+        // nothing awaits its commit, and `dataRecords` → `removeData` is
+        // itself read-then-delete — so a response still in flight can land
+        // between the read and the delete and write a fresh entry for the site
+        // just cleared (observed on williamhill.com, which came back in Manage
+        // Website Data with a cache entry after a shred-then-swap ordering).
+        // The swap-first ordering shrank that window; it did not close it. The
+        // second pass is the same answer `TabManager.forgetDataDelayed` gives
+        // to the same problem, and after it the tab is long since off the site
+        // and has nothing left in flight.
+        await services.shredOrigin(requestURL, in: dataStore)
+        try? await Task.sleep(seconds: 2)
+        await services.shredOrigin(requestURL, in: dataStore)
       }
       return .allow
     }

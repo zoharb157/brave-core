@@ -25,10 +25,14 @@ public final class VerdictCache {
   /// `Dictionary.subscript.setter` with storage that no longer answered its
   /// own selectors.
   ///
-  /// Recursive because some of these methods reach each other: `get` goes
-  /// through `lookup`, `forget(_:)` through `forget(key:)`. A plain lock would
-  /// deadlock on the second acquisition.
-  private let lock = NSRecursiveLock()
+  /// Only the leaf methods take it, and none of them calls another: the two
+  /// methods that do reach a sibling — `get` through `lookup`, `forget(_:)`
+  /// through `forget(key:)` — take no lock themselves, so nothing ever
+  /// acquires this twice. A plain `NSLock`, not a recursive one, on purpose: a
+  /// recursive lock would make `locked { }` look safe to wrap around a
+  /// compound read-modify-write built out of these methods, and it would not
+  /// be atomic — the lock would be re-entered, not held across the sequence.
+  private let lock = NSLock()
 
   /// Runs `body` with the cache to itself.
   private func locked<T>(_ body: () -> T) -> T {
@@ -198,27 +202,27 @@ public final class VerdictCache {
   }
 
   public func deserialize(_ data: Data) {
-    lock.lock()
-    defer { lock.unlock() }
-    entries.removeAll(); lru.removeAll()
-    guard let arr = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]]
-    else { return }
-    for d in arr {
-      guard let k = d["key"] as? String,
-            let securityStr = d["security"] as? String,
-            let security = SecurityStatus(rawValue: securityStr),
-            let storedAt = d["storedAt"] as? TimeInterval else { continue }
-      let categories = ContentCategory.set(fromWire: d["categories"] as? [String] ?? [])
-      let v = Verdict(security: security, categories: categories,
-                      title: d["title"] as? String ?? "",
-                      summary: d["summary"] as? String ?? "",
-                      reasons: d["reasons"] as? [String] ?? [])
-      let entry = Entry(verdict: v, storedAt: Date(timeIntervalSince1970: storedAt))
-      // A stale entry would only be dropped on its next lookup; skip it now so a
-      // reload can't carry more than `maxEntries` worth of dead weight.
-      if isExpired(entry) || entries.count >= maxEntries { continue }
-      entries[k] = entry
-      lru.append(k)
+    locked {
+      entries.removeAll(); lru.removeAll()
+      guard let arr = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]]
+      else { return }
+      for d in arr {
+        guard let k = d["key"] as? String,
+              let securityStr = d["security"] as? String,
+              let security = SecurityStatus(rawValue: securityStr),
+              let storedAt = d["storedAt"] as? TimeInterval else { continue }
+        let categories = ContentCategory.set(fromWire: d["categories"] as? [String] ?? [])
+        let v = Verdict(security: security, categories: categories,
+                        title: d["title"] as? String ?? "",
+                        summary: d["summary"] as? String ?? "",
+                        reasons: d["reasons"] as? [String] ?? [])
+        let entry = Entry(verdict: v, storedAt: Date(timeIntervalSince1970: storedAt))
+        // A stale entry would only be dropped on its next lookup; skip it now so a
+        // reload can't carry more than `maxEntries` worth of dead weight.
+        if isExpired(entry) || entries.count >= maxEntries { continue }
+        entries[k] = entry
+        lru.append(k)
+      }
     }
   }
 }

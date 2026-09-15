@@ -196,7 +196,8 @@ public final class ScoutServices {
       blockedCategories: verdict?.categories.intersection(decisionPolicy.blockedCategories) ?? [])
   }
 
-  /// Clears cookies and storage for one site.
+  /// Clears what a page wrote before its verdict arrived, at the granularity
+  /// the verdict was made at.
   ///
   /// Used when a page was shown before its verdict arrived and the verdict
   /// turned out to be bad. Swapping the view does not undo what the page
@@ -204,26 +205,86 @@ public final class ScoutServices {
   /// written its cookies and filled its local storage. Deleting those is what
   /// makes "taken back" mean something rather than being a change of picture.
   ///
-  /// - Parameter dataStore: the store the page actually loaded in. A private
-  ///   tab has its own; shredding the default one would leave the private
-  ///   tab's cookies sitting there while deleting data from a store the page
-  ///   never touched.
+  /// - Parameter dataStore: the store the page actually loaded in, captured
+  ///   before the check started rather than read off the tab when the verdict
+  ///   lands. It is deliberately non-optional and there is no
+  ///   `WKWebsiteDataStore.default()` fallback: a private tab has its own
+  ///   store, that store dies with the tab, and falling back when it is gone
+  ///   would delete the user's *regular-mode* cookies, storage and saved
+  ///   credentials for a domain they only ever opened privately — silently
+  ///   logging them out of a session no verdict was about, while the private
+  ///   data it meant to delete had already gone with the store. No store, no
+  ///   shred; deleting from the wrong store is worse than deleting nothing.
   ///
-  /// The site is `url.baseDomain` — Chromium's public-suffix list, reached
-  /// through the same property the Shred Site Data menu action uses. The
-  /// deletion is `deleteDataRecords(forDomains:)`, which is that action's own
-  /// code path: it compares whole registrable domains against
-  /// `WKWebsiteDataRecord.displayName`, so no other site's data can be caught.
+  /// ## Granularity
   ///
-  /// Scout's own `eTLDPlusOne` is deliberately *not* used here even though it
-  /// answers the same question elsewhere. It is a short hand-rolled suffix
-  /// table, and WebKit computes `displayName` from the real list: for
-  /// `alice.github.io` the two disagree (`github.io` against
-  /// `alice.github.io`) and the shred would quietly delete nothing. Keying on
-  /// the same list WebKit used is the only way the names line up.
-  public func shredOrigin(_ url: URL, in dataStore: WKWebsiteDataStore?) async {
-    guard let site = url.urlToShred?.baseDomain else { return }
-    await (dataStore ?? WKWebsiteDataStore.default()).deleteDataRecords(forDomains: [site])
+  /// A verdict keyed to a whole domain may shred that domain's records. A
+  /// verdict keyed to one page may not. `VerdictCache.cacheKey` is what draws
+  /// that line — a domain key is a bare eTLD+1, a page key carries a path, so
+  /// the presence of a `/` is the same test the cache itself used — rather
+  /// than re-deriving the `perPageHosts` rule here and letting the two drift.
+  ///
+  /// - **Domain key** → `deleteDataRecords(forDomains:)`, the Shred Site Data
+  ///   menu action's own code path. It compares whole registrable domains
+  ///   against `WKWebsiteDataRecord.displayName`, so `evilexample.com` cannot
+  ///   be caught by `example.com`.
+  /// - **Page key** → only cookies whose domain is exactly this host. A
+  ///   `WKWebsiteDataRecord` is named by registrable domain and aggregates
+  ///   every subdomain under it, so deleting the record for a page verdict
+  ///   would take origins nothing judged: blocking one
+  ///   `docs.google.com/document/d/…` would delete Gmail, Drive and Search;
+  ///   `gist.github.com` would take GitHub; `onedrive.live.com`,
+  ///   `sites.google.com`, `icloud.com` and `sharepoint.com` the same shape.
+  ///   `perPageHosts` exists precisely so one page can be blocked on a host
+  ///   the user otherwise trusts, so the aggregated record is left alone.
+  ///
+  /// The domain name used is `url.baseDomain` — Chromium's public-suffix list,
+  /// the same property the Shred Site Data action uses. Scout's own
+  /// `eTLDPlusOne` is deliberately *not* used even though it answers the same
+  /// question elsewhere: it is a short hand-rolled suffix table, while WebKit
+  /// computes `displayName` from the real list, and for `alice.github.io` the
+  /// two disagree (`github.io` against `alice.github.io`) — the shred would
+  /// quietly delete nothing. Keying on the same list WebKit used is the only
+  /// way the names line up.
+  ///
+  /// `urlToShred` is nil for anything that is not http(s), so a `blob:` or
+  /// `data:` main-frame load is taken back by picture only: nothing is
+  /// deleted. Those loads have no site-scoped store of their own to clear —
+  /// what they touched belongs to the origin that created them, which no
+  /// verdict here judged.
+  public func shredOrigin(_ url: URL, in dataStore: WKWebsiteDataStore) async {
+    guard let site = url.urlToShred?.baseDomain, let host = url.host?.lowercased() else { return }
+    // Keyed off the original URL, not `urlToShred`: that property strips the
+    // path when `kBraveShieldsContentSettings` is off, which would make every
+    // page verdict look like a domain verdict and shred the whole domain.
+    let key = VerdictCache.cacheKey(for: url, perPageHosts: Self.perPageHosts)
+    guard key.contains("/") else {
+      await dataStore.deleteDataRecords(forDomains: [site])
+      return
+    }
+    await Self.deleteCookies(exactlyMatching: host, in: dataStore)
+  }
+
+  /// Deletes the cookies set on exactly `host`, and no others.
+  ///
+  /// Not a suffix test. A cookie scoped to `.google.com` is sent to
+  /// `docs.google.com`, but it is equally Gmail's and Search's, and a verdict
+  /// about one uploaded document does not reach them. Only a cookie whose own
+  /// domain is this host — with or without the leading dot a domain-scoped
+  /// cookie carries — belongs to the page being taken back.
+  private static func deleteCookies(
+    exactlyMatching host: String,
+    in dataStore: WKWebsiteDataStore
+  ) async {
+    let store = dataStore.httpCookieStore
+    for cookie in await store.allCookies() where domain(of: cookie) == host {
+      await store.deleteCookie(cookie)
+    }
+  }
+
+  private static func domain(of cookie: HTTPCookie) -> String {
+    let domain = cookie.domain.lowercased()
+    return domain.hasPrefix(".") ? String(domain.dropFirst()) : domain
   }
 
   /// Drops the verdict for `url` without fetching another.
