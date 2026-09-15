@@ -114,10 +114,27 @@ public final class VerdictCache {
     "solution", "js_challenge", "jsc_token", "jsc_orig_r",
   ]
 
+  /// Whether `host` is one of `perPageHosts`.
+  ///
+  /// Walks the name inwards rather than testing the eTLD+1 alone, because some
+  /// of those hosts are subdomains: `docs.google.com` serves whatever a
+  /// stranger uploaded, while `google.com` itself does not, and listing
+  /// `google.com` to catch the first would take the second with it.
+  private static func isPerPage(host: String, site: String, in hosts: Set<String>) -> Bool {
+    if hosts.contains(site) { return true }
+    var name = host
+    while name.count > site.count {
+      if hosts.contains(name) { return true }
+      guard let dot = name.firstIndex(of: ".") else { break }
+      name = String(name[name.index(after: dot)...])
+    }
+    return false
+  }
+
   public static func cacheKey(for url: URL, perPageHosts: Set<String> = []) -> String {
     guard let host = url.host else { return url.absoluteString }
     let site = eTLDPlusOne(host)
-    guard perPageHosts.contains(site) else { return site }
+    guard isPerPage(host: host.lowercased(), site: site, in: perPageHosts) else { return site }
     // The query is part of the page's identity here (youtube.com/watch?v=...),
     // minus the parts that identify the visit rather than the page. Sorted, so
     // the same page keys the same whatever order the parameters arrive in.

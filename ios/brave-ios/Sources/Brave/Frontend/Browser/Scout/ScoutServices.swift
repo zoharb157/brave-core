@@ -39,9 +39,16 @@ public final class ScoutServices {
   private static let checkTimeout: TimeInterval = 12.0
 
   /// Sites where the pages are written by whoever signs up, so one page's
-  /// verdict says nothing about the next: a video, a subreddit or a free
-  /// hosting subdomain is checked as a page, not as a site. Everywhere else a
-  /// verdict covers the whole domain, which is what keeps browsing fast.
+  /// verdict says nothing about the next: a video, a subreddit, an
+  /// encyclopedia article or a free hosting subdomain is checked as a page,
+  /// not as a site. Everywhere else a verdict covers the whole domain, which
+  /// is what keeps browsing fast.
+  ///
+  /// Mirrors `PER_PAGE_HOSTS` in `packages/cross/utils/url.ts`. The two lists
+  /// key the same URL the same way or the phone and the server disagree about
+  /// what a site is — they had already drifted once, the phone missing every
+  /// shortener, so that `bit.ly/A` lent its verdict to `bit.ly/B` on device
+  /// while the server kept them apart.
   static let perPageHosts: Set<String> = [
     // Social and user-posted content
     "reddit.com", "x.com", "twitter.com", "tumblr.com", "facebook.com", "instagram.com",
@@ -53,6 +60,30 @@ public final class ScoutServices {
     // Publishing and free hosting: anyone can put a page under these
     "medium.com", "substack.com", "blogspot.com", "wordpress.com", "wixsite.com",
     "weebly.com", "github.io", "pages.dev", "netlify.app", "vercel.app", "glitch.me",
+    "sites.google.com", "notion.site", "blogger.com", "tilda.ws", "webflow.io",
+    // Reference and archives written by the public. An encyclopedia is the
+    // clearest case there is of one page not speaking for the next: the first
+    // article anyone checked would otherwise answer for every other one.
+    "wikipedia.org", "wikimedia.org", "wiktionary.org", "wikia.com", "fandom.com",
+    "archive.org", "scribd.com", "slideshare.net", "academia.edu",
+    // Documents and files someone else uploaded, served under a name the
+    // uploader did not have to earn.
+    "docs.google.com", "drive.google.com", "dropbox.com", "onedrive.live.com",
+    "pastebin.com", "ghostbin.com", "gist.github.com", "box.com", "mega.nz",
+    "icloud.com", "sharepoint.com", "wetransfer.com",
+    // Link shorteners and link-in-bio pages. The most important entries here:
+    // the whole point of one is that the address says nothing about where it
+    // goes, so a verdict for bit.ly/A describes a page that has nothing to do
+    // with bit.ly/B. Keyed by domain, the first short link anyone opened would
+    // decide every short link for everyone.
+    "bit.ly", "bitly.com", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "buff.ly",
+    "is.gd", "cutt.ly", "rb.gy", "shorturl.at", "rebrand.ly", "lnkd.in", "amzn.to",
+    "fb.me", "wa.me", "tiny.cc", "v.gd", "trib.al", "dlvr.it", "ift.tt", "t.ly",
+    "short.gy", "shrtco.de", "s.id", "po.st", "adf.ly", "clck.ru", "vk.cc", "u.to",
+    "lc.cx", "kutt.it", "urlz.fr", "snip.ly", "smarturl.it", "lnk.to", "ffm.to",
+    "hyperurl.co", "linktr.ee", "lin.ee", "msha.ke", "beacons.ai", "carrd.co",
+    "apple.co", "spoti.fi", "nyti.ms", "wapo.st", "reut.rs", "bbc.in", "cnn.it",
+    "huff.to", "econ.st", "mzl.la", "red.ht",
   ]
 
   /// Lists, scheme rules and fail mode (server-synced later).
