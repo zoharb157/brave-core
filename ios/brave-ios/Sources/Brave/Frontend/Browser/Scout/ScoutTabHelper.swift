@@ -233,6 +233,25 @@ public class ScoutTabHelper: TabPolicyDecider {
         // and has nothing left in flight.
         await services.shredOrigin(requestURL, in: dataStore)
         try? await Task.sleep(seconds: 2)
+
+        // The second pass exists only to catch a response still in flight
+        // when the first one ran — it is not meant to catch a user who has
+        // since decided, deliberately, to keep browsing this site. If
+        // "Continue anyway" (or "Always allow") fired in the gap, or the tab
+        // is simply sitting on the site again, deleting cookies/storage now
+        // would yank the rug out from under a page the user just chose to
+        // keep, possibly logging them out right after they logged in.
+        //
+        // `baseDomain` is nil for an address literal; as above, two nils
+        // comparing equal would false-match against any other hostless URL,
+        // so the skip only applies when there is an actual domain to compare.
+        if let site = requestURL.baseDomain,
+          tab?.proceedAnywaysDomainList?.contains(site) == true
+            || tab?.visibleURL?.baseDomain == site
+        {
+          return
+        }
+
         await services.shredOrigin(requestURL, in: dataStore)
       }
       return .allow
