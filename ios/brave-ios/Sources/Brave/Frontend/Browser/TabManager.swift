@@ -1714,7 +1714,17 @@ extension WKWebsiteDataStore {
     await deleteDataRecords(forDomains: Set([domain]))
   }
 
-  @MainActor fileprivate func deleteDataRecords(forDomains domains: Set<String>) async {
+  /// Removes every stored record whose registrable domain is in `domains`.
+  ///
+  /// Was `fileprivate`; Scout's take-back of an optimistically rendered page
+  /// needs the same deletion, and a second implementation of "shred one site"
+  /// is exactly the kind of thing that drifts from this one and starts
+  /// deleting either too little or somebody else's data.
+  ///
+  /// Note the comparison: `domains.contains(record.displayName)` is a whole
+  /// registrable-domain match. A suffix test here would match `example.com`
+  /// against `evilexample.com` and shred a site the user never visited.
+  @MainActor func deleteDataRecords(forDomains domains: Set<String>) async {
     let records = await dataRecords(
       ofTypes: WKWebsiteDataStore.allWebsiteDataTypesIncludingPrivate()
     )

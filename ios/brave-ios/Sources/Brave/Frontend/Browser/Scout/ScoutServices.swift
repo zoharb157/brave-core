@@ -10,6 +10,7 @@ import Preferences
 import Scout
 import Shared
 import UIKit
+import WebKit
 
 /// Owns the guard's collaborators for the app.
 ///
@@ -193,6 +194,36 @@ public final class ScoutServices {
       verdict: verdict,
       checkedAt: cache.storedAt(url),
       blockedCategories: verdict?.categories.intersection(decisionPolicy.blockedCategories) ?? [])
+  }
+
+  /// Clears cookies and storage for one site.
+  ///
+  /// Used when a page was shown before its verdict arrived and the verdict
+  /// turned out to be bad. Swapping the view does not undo what the page
+  /// already ran: by the time an answer lands it has executed its scripts,
+  /// written its cookies and filled its local storage. Deleting those is what
+  /// makes "taken back" mean something rather than being a change of picture.
+  ///
+  /// - Parameter dataStore: the store the page actually loaded in. A private
+  ///   tab has its own; shredding the default one would leave the private
+  ///   tab's cookies sitting there while deleting data from a store the page
+  ///   never touched.
+  ///
+  /// The site is `url.baseDomain` — Chromium's public-suffix list, reached
+  /// through the same property the Shred Site Data menu action uses. The
+  /// deletion is `deleteDataRecords(forDomains:)`, which is that action's own
+  /// code path: it compares whole registrable domains against
+  /// `WKWebsiteDataRecord.displayName`, so no other site's data can be caught.
+  ///
+  /// Scout's own `eTLDPlusOne` is deliberately *not* used here even though it
+  /// answers the same question elsewhere. It is a short hand-rolled suffix
+  /// table, and WebKit computes `displayName` from the real list: for
+  /// `alice.github.io` the two disagree (`github.io` against
+  /// `alice.github.io`) and the shred would quietly delete nothing. Keying on
+  /// the same list WebKit used is the only way the names line up.
+  public func shredOrigin(_ url: URL, in dataStore: WKWebsiteDataStore?) async {
+    guard let site = url.urlToShred?.baseDomain else { return }
+    await (dataStore ?? WKWebsiteDataStore.default()).deleteDataRecords(forDomains: [site])
   }
 
   /// Drops the verdict for `url` without fetching another.

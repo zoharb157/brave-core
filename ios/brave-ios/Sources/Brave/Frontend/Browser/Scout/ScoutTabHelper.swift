@@ -124,38 +124,99 @@ public class ScoutTabHelper: TabPolicyDecider {
       return .cancel
     }
 
-    // The service fetches and AI-analyses the page, which takes seconds. Show
-    // that work rather than freezing the tab: cancel, show the checking page,
-    // and resolve when the decision lands.
-    ScoutPages.beginCheck(requestURL)
-    showScoutPage(for: requestURL, in: tab)
+    // Nothing is known about this site, so a check has to run: it fetches and
+    // AI-analyses the page, which takes seconds. What happens during those
+    // seconds is the one place a supervised phone and a self-supervised one
+    // part ways.
+    switch NavigationGuard.missBehaviour(supervised: ScoutSupervision.shared.isOn) {
 
-    Task { @MainActor [weak self, weak tab] in
-      let decision = await services.guard_.decide(requestURL)
-      ScoutActivityReporter.shared.record(
-        decision, for: requestURL, source: .service, isPrivate: tab?.isPrivate ?? false)
-      if decision.type != .allow, let tab {
-        Self.note(decision, for: requestURL, in: tab)
+    // Supervised: nothing renders until the verdict lands. Show that work
+    // rather than freezing the tab — cancel, show the checking page, and hand
+    // the site over only once it has been judged. Not rendering before a
+    // verdict is the promise supervision is sold on, and it is not tradeable
+    // for speed.
+    case .wait:
+      ScoutPages.beginCheck(requestURL)
+      showScoutPage(for: requestURL, in: tab)
+
+      Task { @MainActor [weak self, weak tab] in
+        let decision = await services.guard_.decide(requestURL)
+        Self.settle(decision, for: requestURL, in: tab)
+        // Only act if the tab is still showing this site's checking page; if
+        // the user has moved on, the recorded decision just waits in the cache.
+        guard let self, let tab, ScoutPages.siteURL(fromPageURL: tab.visibleURL) == requestURL
+        else { return }
+
+        if decision.type == .allow {
+          approvedURL = requestURL
+          replaceCheckingPage(with: requestURL, in: tab)
+        } else {
+          // Same URL as the checking page, so it replaces it in history; the
+          // page handler now serves the recorded result.
+          showScoutPage(for: requestURL, in: tab)
+        }
       }
-      ScoutPages.record(decision, for: requestURL)
-      // Only act if the tab is still showing this site's checking page; if the
-      // user has moved on, the recorded decision just waits in the cache.
-      guard let self, let tab, ScoutPages.siteURL(fromPageURL: tab.visibleURL) == requestURL
-      else { return }
+      return .cancel
 
-      // The mark in the URL bar reads the stored verdict; tell it there is one.
-      NotificationCenter.default.post(name: ScoutServices.verdictDidChange, object: nil)
+    // Unsupervised: this person chose their own blocked categories, for
+    // themselves. They get the page now, and lose it if the verdict is bad.
+    case .renderOptimistically:
+      Task { @MainActor [weak self, weak tab] in
+        let decision = await services.guard_.decide(requestURL)
+        Self.settle(decision, for: requestURL, in: tab)
+        // Anything the checking page would have stopped is taken back here.
+        // `.warn` and `.block` are both stops; letting a warn through only on
+        // this path would mean a suspicious site, or a failed check on a phone
+        // set to ask, quietly stayed open because the answer happened to be
+        // slow.
+        guard decision.type != .allow else { return }
 
-      if decision.type == .allow {
-        approvedURL = requestURL
-        replaceCheckingPage(with: requestURL, in: tab)
-      } else {
-        // Same URL as the checking page, so it replaces it in history; the
-        // page handler now serves the recorded result.
-        showScoutPage(for: requestURL, in: tab)
+        // Swap the view first — but only if the tab is still on this site. If
+        // the user has already moved on, replacing what they went to next
+        // would take back a page nobody judged.
+        //
+        // First, not last, because loading the block page stops the one being
+        // taken back and cancels the requests it still has in flight. Shredding
+        // before that left those requests to land afterwards and write a fresh
+        // cache entry for the site just cleared — observed on williamhill.com,
+        // which came back in Manage Website Data with a cache entry (its
+        // cookies and storage correctly gone) after the swap.
+        //
+        // `baseDomain` is nil for an address literal, and two nils comparing
+        // equal would match this tab against any other hostless URL.
+        if let self, let tab, let site = requestURL.baseDomain,
+          tab.visibleURL?.baseDomain == site
+        {
+          showScoutPage(for: requestURL, in: tab)
+        }
+
+        // Then shred, whatever the tab ended up showing. The page ran while
+        // the check was in flight — it executed its scripts, set its cookies
+        // and filled its storage — and all of that exists whether or not the
+        // tab is still on it. Swapping the view does not undo any of it;
+        // deleting it is what makes "taken back" mean something.
+        await services.shredOrigin(requestURL, in: tab?.configuration?.websiteDataStore)
       }
+      return .allow
     }
-    return .cancel
+  }
+
+  /// The bookkeeping a settled check does, whichever path it came down: the
+  /// activity log, the record of what was stopped, the result the page handler
+  /// will serve, and the mark in the URL bar.
+  ///
+  /// The notification is posted even when the user has moved on. It says a
+  /// verdict was stored, which is true regardless of what is on screen, and
+  /// the toolbar simply re-reads the site it is actually showing.
+  private static func settle(_ decision: Scout.Decision, for url: URL, in tab: (any TabState)?) {
+    ScoutActivityReporter.shared.record(
+      decision, for: url, source: .service, isPrivate: tab?.isPrivate ?? false)
+    if decision.type != .allow, let tab {
+      note(decision, for: url, in: tab)
+    }
+    ScoutPages.record(decision, for: url)
+    // The mark in the URL bar reads the stored verdict; tell it there is one.
+    NotificationCenter.default.post(name: ScoutServices.verdictDidChange, object: nil)
   }
 
   /// Records a stopped navigation, so Settings → Protection can show what

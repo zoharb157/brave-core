@@ -12,6 +12,31 @@ public final class VerdictCache {
   private var entries: [String: Entry] = [:]
   private var lru: [String] = []  // most-recent first
 
+  /// Guards `entries` and `lru`.
+  ///
+  /// This cache is read on the main actor — the browser asks
+  /// `decideImmediately` before every navigation — and written off it:
+  /// `NavigationGuard.decide` is a nonisolated `async` function, so everything
+  /// after its `await` runs on the concurrent executor, whatever actor called
+  /// it. One check at a time hid that. Several at once do not: a page that
+  /// renders while its verdict is still coming issues its own redirects, each
+  /// checked, alongside links warmed ahead of a tap — and two of those writes
+  /// landing in the same Dictionary killed the browser inside
+  /// `Dictionary.subscript.setter` with storage that no longer answered its
+  /// own selectors.
+  ///
+  /// Recursive because some of these methods reach each other: `get` goes
+  /// through `lookup`, `forget(_:)` through `forget(key:)`. A plain lock would
+  /// deadlock on the second acquisition.
+  private let lock = NSRecursiveLock()
+
+  /// Runs `body` with the cache to itself.
+  private func locked<T>(_ body: () -> T) -> T {
+    lock.lock()
+    defer { lock.unlock() }
+    return body()
+  }
+
   /// - Parameter perPageHosts: eTLD+1s where a verdict describes one page
   ///   rather than the site. Everywhere else one verdict covers the whole
   ///   domain, which is what keeps browsing fast; on a site where anyone can
@@ -38,13 +63,13 @@ public final class VerdictCache {
   /// How many sites have a verdict on hand. Surfaced in Settings as the work
   /// Scout has already done, which is otherwise invisible: a site that was
   /// checked and passed looks exactly like one nothing happened to.
-  public var count: Int { entries.count }
+  public var count: Int { locked { entries.count } }
 
   /// When the verdict on hand for `url` was fetched, if there is one. Lets
   /// the browser say how fresh its answer is instead of presenting every
   /// verdict as if it had just arrived.
   public func storedAt(_ url: URL) -> Date? {
-    entries[key(url)]?.storedAt
+    locked { entries[key(url)]?.storedAt }
   }
 
   public func get(_ url: URL) -> Verdict? {
@@ -57,26 +82,30 @@ public final class VerdictCache {
   /// user wait out a fresh check, on the understanding that it refreshes the
   /// entry afterwards. Beyond the grace window an expired entry is dropped.
   public func lookup(_ url: URL, grace: TimeInterval) -> (verdict: Verdict, isStale: Bool)? {
-    let k = key(url)
-    guard let e = entries[k] else { return nil }
-    let age = now().timeIntervalSince(e.storedAt)
-    let life = ttl(for: e.verdict.security)
-    if age >= life + grace {
-      entries[k] = nil
-      lru.removeAll { $0 == k }
-      return nil
+    locked {
+      let k = key(url)
+      guard let e = entries[k] else { return nil }
+      let age = now().timeIntervalSince(e.storedAt)
+      let life = ttl(for: e.verdict.security)
+      if age >= life + grace {
+        entries[k] = nil
+        lru.removeAll { $0 == k }
+        return nil
+      }
+      touch(k)
+      return (e.verdict, age >= life)
     }
-    touch(k)
-    return (e.verdict, age >= life)
   }
 
   public func put(_ url: URL, _ verdict: Verdict) {
-    let k = key(url)
-    entries[k] = Entry(verdict: verdict, storedAt: now())
-    touch(k)
-    while entries.count > maxEntries, let last = lru.last {
-      entries[last] = nil
-      lru.removeLast()
+    locked {
+      let k = key(url)
+      entries[k] = Entry(verdict: verdict, storedAt: now())
+      touch(k)
+      while entries.count > maxEntries, let last = lru.last {
+        entries[last] = nil
+        lru.removeLast()
+      }
     }
   }
 
@@ -93,13 +122,17 @@ public final class VerdictCache {
   /// the URLs they came from — dropping everything a private session learned,
   /// where the URLs are exactly what must not be kept around.
   public func forget(key k: String) {
-    entries[k] = nil
-    lru.removeAll { $0 == k }
+    locked {
+      entries[k] = nil
+      lru.removeAll { $0 == k }
+    }
   }
 
   public func removeAll() {
-    entries.removeAll()
-    lru.removeAll()
+    locked {
+      entries.removeAll()
+      lru.removeAll()
+    }
   }
 
   /// The key a URL is cached under — its eTLD+1. Callers need it to name
@@ -151,18 +184,22 @@ public final class VerdictCache {
   public func serialize(excludingKeys excluded: Set<String> = []) -> Data {
     // Most-recent first, so a reload that trims to `maxEntries` keeps the
     // entries most likely to be wanted again.
-    let arr: [[String: Any]] = lru.compactMap { k in
-      guard let e = entries[k], !excluded.contains(k) else { return nil }
-      return ["key": k, "security": e.verdict.security.rawValue,
-              "categories": e.verdict.categories.map(\.rawValue),
-              "title": e.verdict.title, "summary": e.verdict.summary,
-              "reasons": e.verdict.reasons,
-              "storedAt": e.storedAt.timeIntervalSince1970]
+    let arr: [[String: Any]] = locked {
+      lru.compactMap { k in
+        guard let e = entries[k], !excluded.contains(k) else { return nil }
+        return ["key": k, "security": e.verdict.security.rawValue,
+                "categories": e.verdict.categories.map(\.rawValue),
+                "title": e.verdict.title, "summary": e.verdict.summary,
+                "reasons": e.verdict.reasons,
+                "storedAt": e.storedAt.timeIntervalSince1970]
+      }
     }
     return (try? JSONSerialization.data(withJSONObject: arr)) ?? Data()
   }
 
   public func deserialize(_ data: Data) {
+    lock.lock()
+    defer { lock.unlock() }
     entries.removeAll(); lru.removeAll()
     guard let arr = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]]
     else { return }

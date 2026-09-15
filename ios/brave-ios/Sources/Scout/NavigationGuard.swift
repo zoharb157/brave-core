@@ -169,3 +169,28 @@ public final class NavigationGuard {
     return Self.resolveFailure(policy.failMode)
   }
 }
+
+/// What to do while a verdict is still coming.
+public enum MissBehaviour: Equatable, Sendable {
+  /// Show nothing until the answer arrives.
+  case wait
+  /// Open the page now; take it back if the answer is bad.
+  case renderOptimistically
+}
+
+extension NavigationGuard {
+  /// Whether a page may be shown before it has been judged.
+  ///
+  /// Someone who chose their own categories may have the page now and lose it
+  /// if the verdict is bad. A supervised phone may not: not rendering before a
+  /// verdict is the promise supervision is sold on, and it is not tradeable
+  /// for speed.
+  ///
+  /// This is a pure function so the rule can be tested. Be clear about what
+  /// that buys: it pins the rule, not the wiring. Nothing here can tell you
+  /// that the browser actually asks it before letting a page through — only
+  /// reading the call site, and watching a supervised phone, can.
+  public static func missBehaviour(supervised: Bool) -> MissBehaviour {
+    supervised ? .wait : .renderOptimistically
+  }
+}
