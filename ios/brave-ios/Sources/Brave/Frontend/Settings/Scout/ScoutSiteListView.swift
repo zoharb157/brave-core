@@ -118,21 +118,12 @@ struct ScoutSiteListView: View {
 
   /// What the user typed, as a site name — or nil if there isn't one in there.
   ///
-  /// People paste whole addresses into a field like this, so a pasted
-  /// `https://example.com/page?q=1` is accepted and reduced to the site it
-  /// names rather than rejected for not looking like a hostname.
+  /// `SiteInput` lives in the package so it can be tested. The version that
+  /// lived here kept a port ("example.com:8443") and a bare credentialed host
+  /// ("apple.com@evil.example") intact, and both became rule keys that no URL
+  /// could match — the site sat in the list looking blocked and was not.
   private func normalized(_ text: String) -> String? {
-    var candidate = text.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-    if candidate.isEmpty { return nil }
-    if let url = URL(string: candidate), let host = url.host {
-      candidate = host
-    } else {
-      candidate = candidate.components(separatedBy: "/").first ?? candidate
-    }
-    guard candidate.contains("."), !candidate.hasPrefix("."), !candidate.hasSuffix("."),
-      !candidate.contains(" ")
-    else { return nil }
-    return candidate
+    SiteInput.site(from: text)
   }
 
   private func add() {
