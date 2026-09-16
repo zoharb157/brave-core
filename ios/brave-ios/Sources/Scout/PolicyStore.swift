@@ -95,16 +95,40 @@ public protocol PolicyProviding: AnyObject {
 }
 
 public final class PolicyStore {
+  /// Guards `policy`.
+  ///
+  /// `NavigationGuard.decide` is `async` and not actor-bound, so the policy is
+  /// read off the main actor on every navigation, while Settings replaces it
+  /// wholesale from the main actor. Replacing a struct holding Sets and a
+  /// Dictionary while another thread reads it crashes — the same shape that
+  /// already took the browser down once in `VerdictCache`.
+  ///
+  /// Every read takes a snapshot rather than touching `policy` field by field,
+  /// so a decision is made against one coherent policy instead of half of the
+  /// old one and half of the new.
+  private let lock = NSLock()
   private var policy: Policy
   public init(policy: Policy) { self.policy = policy }
 
-  public var blockedCategories: Set<ContentCategory> { policy.blockedCategories }
-  public var failMode: FailMode { policy.failMode }
-  public func setPolicy(_ p: Policy) { policy = p }
+  private var current: Policy {
+    lock.lock()
+    defer { lock.unlock() }
+    return policy
+  }
+
+  public var blockedCategories: Set<ContentCategory> { current.blockedCategories }
+  public var failMode: FailMode { current.failMode }
+
+  public func setPolicy(_ p: Policy) {
+    lock.lock()
+    policy = p
+    lock.unlock()
+  }
 
   public func decideHost(_ url: URL) -> LocalDecision {
     guard let host = url.host else { return .unknown }
     let etld1 = eTLDPlusOne(host)
+    let policy = current
     if policy.allow.contains(where: { hostMatches(host, etld1, $0) }) { return .allow }
     if policy.block.contains(where: { hostMatches(host, etld1, $0) }) { return .block }
     return .unknown
@@ -112,7 +136,7 @@ public final class PolicyStore {
 
   public func schemeDecision(_ url: URL) -> SchemeRule? {
     guard let scheme = url.scheme else { return nil }
-    return policy.schemes[scheme]
+    return current.schemes[scheme]
   }
 }
 

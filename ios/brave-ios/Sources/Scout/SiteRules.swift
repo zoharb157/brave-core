@@ -18,6 +18,18 @@ public enum SiteRule: String, Sendable { case allow, block }
 /// domain) are deliberately no exception — a rule is an explicit human
 /// decision about a site, not an inference from one page.
 public final class SiteRules {
+  /// Guards `rules`.
+  ///
+  /// `NavigationGuard.decide` is `async` and not actor-bound, so every rule it
+  /// consults is read off the main actor, while "always allow this site" and
+  /// the Settings lists write from the main actor. A Dictionary mutated while
+  /// another thread reads it crashes — that exact shape already took the
+  /// browser down once in `VerdictCache`.
+  ///
+  /// Plain, not recursive: nothing here nests, and `onChange` is deliberately
+  /// called after the lock is released, so a callback that comes back in
+  /// cannot deadlock.
+  private let lock = NSLock()
   private var rules: [String: SiteRule]
   /// Called after every change, so the browser can persist without this type
   /// knowing where preferences live.
@@ -30,11 +42,14 @@ public final class SiteRules {
   /// The rule covering `url`, if the user set one.
   public func rule(for url: URL) -> SiteRule? {
     guard let host = url.host else { return nil }
-    return rules[eTLDPlusOne(host)]
+    return rule(forSite: host)
   }
 
   public func rule(forSite site: String) -> SiteRule? {
-    rules[eTLDPlusOne(site)]
+    let key = eTLDPlusOne(site)
+    lock.lock()
+    defer { lock.unlock() }
+    return rules[key]
   }
 
   /// Sets (or with `nil`, clears) the rule for `url`'s site. Setting one
@@ -47,22 +62,38 @@ public final class SiteRules {
   public func set(_ rule: SiteRule?, forSite site: String) {
     let key = eTLDPlusOne(site)
     guard !key.isEmpty else { return }
-    if rules[key] == rule { return }
+    lock.lock()
+    if rules[key] == rule {
+      lock.unlock()
+      return
+    }
     rules[key] = rule
+    lock.unlock()
     onChange?()
   }
 
   /// Every site the user allowed, and every site they blocked — sorted, so
   /// the lists in Settings don't reshuffle between visits.
   public func sites(_ rule: SiteRule) -> [String] {
-    rules.filter { $0.value == rule }.keys.sorted()
+    lock.lock()
+    defer { lock.unlock() }
+    return rules.filter { $0.value == rule }.keys.sorted()
   }
 
-  public var isEmpty: Bool { rules.isEmpty }
+  public var isEmpty: Bool {
+    lock.lock()
+    defer { lock.unlock() }
+    return rules.isEmpty
+  }
 
   public func removeAll() {
-    guard !rules.isEmpty else { return }
+    lock.lock()
+    if rules.isEmpty {
+      lock.unlock()
+      return
+    }
     rules.removeAll()
+    lock.unlock()
     onChange?()
   }
 
@@ -70,7 +101,9 @@ public final class SiteRules {
 
   /// A plain `[site: rule]` dictionary, the shape a preference can hold.
   public func serialize() -> [String: String] {
-    rules.mapValues(\.rawValue)
+    lock.lock()
+    defer { lock.unlock() }
+    return rules.mapValues(\.rawValue)
   }
 
   public static func deserialize(_ wire: [String: String]) -> SiteRules {
