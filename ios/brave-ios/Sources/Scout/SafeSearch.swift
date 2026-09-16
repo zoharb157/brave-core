@@ -85,10 +85,10 @@ public enum RestrictedMode {
 public enum SafeSearch {
   /// The parameter each engine reads, and the value that means "filter".
   private static let rules: [(matches: (String) -> Bool, name: String, value: String)] = [
-    // Scout's own default in most regions, and it was missing — so the
-    // setting was on, said explicit results never reach the page, and did
-    // nothing at all for the engine the majority of users never change away
-    // from.
+    // It was missing, so the setting was on, said explicit results never
+    // reach the page, and did nothing at all for Brave Search. It was the
+    // default in most regions when that was found; it is still offered in
+    // every region, and nobody who picks it should get less than the rest.
     ({ $0 == "brave.com" }, "safesearch", "strict"),
     ({ $0 == "google.com" || $0.hasPrefix("google.") }, "safe", "active"),
     ({ $0 == "bing.com" }, "adlt", "strict"),
@@ -103,9 +103,11 @@ public enum SafeSearch {
     // adult sites. The regional default in Japan, so this closes the gap for
     // everyone there who never changes engine.
     ({ $0 == "yahoo.co.jp" }, "vm", "r"),
-    ({ $0 == "qwant.com" }, "safesearch", "2"),
-    ({ $0 == "ecosia.org" }, "safesearch", "2"),
-    ({ $0.hasPrefix("yandex.") }, "fyandex", "1"),
+    // Qwant parses `safesearch=2` — it even copies it into its own links —
+    // and then filters nothing: explicit results come back unchanged. What its
+    // own Strict switch writes is `s=2`, and with that the settings drawer
+    // reads Strict and the adult results are gone.
+    ({ $0 == "qwant.com" }, "s", "2"),
   ]
 
   /// What Scout can honestly promise about an engine.
@@ -150,7 +152,28 @@ public enum SafeSearch {
   /// endpoint Scout ships. It is exactly the plausible-looking parameter
   /// someone would add from reading the settings page, and adding it would
   /// have been precisely the bug this list exists to prevent.
-  public static let unfiltered: Set<String> = ["startpage.com"]
+  ///
+  /// ecosia.org is the same shape. Its filter is the `f` field of its ECFG
+  /// cookie (y/i/n); with that set to off, neither `safesearch=2` — which was
+  /// shipped here — nor `adultFilter=y` removes a single adult result. A fresh
+  /// visitor gets Moderate by default, but anyone can switch it off in two
+  /// taps, and no URL Scout rewrites would stop that.
+  ///
+  /// Yandex is the one where the rule that used to be here was worse than
+  /// nothing. `fyandex=1` makes Yandex answer "nothing found" to ordinary
+  /// queries — "kittens" included, on yandex.ru and yandex.com alike — while
+  /// an explicit query keeps its adult results. That is not a stray
+  /// parameter misfiring: Yandex's own Family mode, saved through its
+  /// settings page, behaves identically, so this appears to be the URL form
+  /// of a mode that, as tested from outside Yandex's home regions, empties
+  /// ordinary searches and filters nothing. It may behave in the ten regions
+  /// where Yandex is Scout's default; that cannot be checked from here, and a
+  /// filter nobody has seen work is not one to claim. The rule never did harm
+  /// only because Yandex carries the query as `text=`, which the results-page
+  /// check below never looked for, so it never fired.
+  public static let unfiltered: Set<String> = [
+    "startpage.com", "ecosia.org", "yandex.ru", "yandex.com",
+  ]
 
   /// What Scout can promise about the engine serving this address.
   ///
@@ -170,10 +193,45 @@ public enum SafeSearch {
     return .unfiltered
   }
 
+  /// DuckDuckGo's no-JavaScript pages ignore its filter entirely.
+  ///
+  /// html.duckduckgo.com and lite.duckduckgo.com return the same adult results
+  /// with `kp=1` as without it — over GET or POST, and with the settings
+  /// cookie set — while duckduckgo.com itself honours `kp=1` and says "Safe
+  /// search: strict". The rule below matched them anyway, being the same
+  /// registrable domain, so a child typing either address got unfiltered
+  /// results with the setting on. The search is kept and moved to the page
+  /// that filters it.
+  ///
+  /// Every visit is moved, not just ones carrying a query: these pages' own
+  /// search box submits by POST, so the query never appears in the address a
+  /// navigation policy sees. Moving the home page too means the unfiltered
+  /// form is never reached in the first place.
+  private static let unfilterableDuckDuckGoHosts: Set<String> = [
+    "html.duckduckgo.com", "lite.duckduckgo.com",
+  ]
+
+  private static func movedToFilteringEndpoint(_ url: URL, host: String) -> URL? {
+    guard unfilterableDuckDuckGoHosts.contains(host.lowercased()) else { return nil }
+    var components = URLComponents()
+    components.scheme = "https"
+    components.host = "duckduckgo.com"
+    components.path = "/"
+    let query = URLComponents(url: url, resolvingAgainstBaseURL: false)?
+      .queryItems?.first(where: { $0.name == "q" })?.value
+    if let query, !query.isEmpty {
+      components.queryItems = [
+        URLQueryItem(name: "q", value: query), URLQueryItem(name: "kp", value: "1"),
+      ]
+    }
+    return components.url
+  }
+
   /// The same URL with the engine's filter pinned on, or nil when nothing needs
   /// changing — not a search engine, or already filtered.
   public static func enforced(_ url: URL) -> URL? {
     guard let host = url.host else { return nil }
+    if let moved = movedToFilteringEndpoint(url, host: host) { return moved }
     let site = eTLDPlusOne(host)
     guard let rule = rules.first(where: { $0.matches(site) }) else { return nil }
     guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
