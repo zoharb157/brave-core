@@ -156,6 +156,16 @@ public final class ScoutSupervision: ObservableObject {
     return current
   }
 
+  /// "5 minutes", "30 seconds" — enough to know whether to wait or put the
+  /// phone down.
+  private static func spell(_ seconds: TimeInterval) -> String {
+    let formatter = DateComponentsFormatter()
+    formatter.allowedUnits = seconds < 60 ? [.second] : [.minute]
+    formatter.unitsStyle = .full
+    formatter.maximumUnitCount = 1
+    return formatter.string(from: max(seconds, 1)) ?? "a moment"
+  }
+
   /// Asks for the PIN if this action needs one, then runs `perform`.
   ///
   /// Nothing happens on a wrong PIN or a cancel — deliberately silent rather
@@ -171,6 +181,24 @@ public final class ScoutSupervision: ObservableObject {
       return
     }
     guard let presenter = Self.topmost(from: presenter) else { return }
+
+    // Silence is right for a wrong PIN — the person who does not know it is
+    // not the person this protects — but not for a locked one. There the
+    // correct PIN fails too, and someone who knows it would be left tapping
+    // Done at a prompt that does nothing and says nothing.
+    let waiting = pinWait
+    if waiting > 0 {
+      let locked = UIAlertController(
+        title: Strings.ScoutProtection.supervisionEnterPIN,
+        message: String(
+          format: Strings.ScoutProtection.supervisionPINWait, Self.spell(waiting)),
+        preferredStyle: .alert
+      )
+      locked.addAction(UIAlertAction(title: Strings.OKString, style: .default))
+      presenter.present(locked, animated: true)
+      return
+    }
+
     let alert = UIAlertController(
       title: Strings.ScoutProtection.supervisionEnterPIN,
       message: nil,
