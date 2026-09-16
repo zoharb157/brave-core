@@ -251,8 +251,16 @@ public class ScoutTabHelper: TabPolicyDecider {
         // `baseDomain` is nil for an address literal; as above, two nils
         // comparing equal would false-match against any other hostless URL,
         // so the skip only applies when there is an actual domain to compare.
+        //
+        // `continuedPage` is what carries "Continue anyway fired in the gap".
+        // Asking the tab what it is showing is not enough on its own: the
+        // continue only *starts* a navigation, and if that load has not
+        // committed within the two seconds — a slow site, a slow network —
+        // the tab is still on the interstitial and the skip would miss,
+        // deleting the cookies of the page the user just chose to keep.
         if let site = requestURL.baseDomain,
           tab?.visibleURL?.baseDomain == site
+            || continuedPage?.baseDomain == site
             || ScoutServices.shared.siteRules.rule(for: requestURL) == .allow
         {
           return
