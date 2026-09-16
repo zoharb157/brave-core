@@ -20,7 +20,18 @@ public enum RestrictedMode {
   /// alike, since which one you land on depends on the device.
   public static let cookieDomain = ".youtube.com"
 
-  private static let sites: Set<String> = ["youtube.com", "youtube-nocookie.com", "youtu.be"]
+  /// Sites this cookie can actually reach.
+  ///
+  /// youtube-nocookie.com is deliberately not here. It is a separate
+  /// registrable domain, so a .youtube.com cookie is never sent to it — and
+  /// it does not honour the cookie even when one is sent directly: the same
+  /// /embed page answers `enableSafetyMode: true` on youtube.com and does not
+  /// on youtube-nocookie.com. Claiming it cost a wasted reload on every first
+  /// visit and covered nothing.
+  ///
+  /// youtu.be is here and works, but by redirect rather than directly: it
+  /// answers 302 to www.youtube.com/watch, and the cookie applies there.
+  private static let sites: Set<String> = ["youtube.com", "youtu.be"]
 
   /// Whether `url` is a site whose Restricted Mode this cookie governs.
   public static func governs(_ url: URL) -> Bool {
