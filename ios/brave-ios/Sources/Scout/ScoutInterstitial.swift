@@ -263,7 +263,6 @@ public enum ScoutInterstitial {
     switch category {
     case .adult: return "adult content"
     case .gambling: return "gambling"
-    case .ads: return "ads"
     }
   }
 

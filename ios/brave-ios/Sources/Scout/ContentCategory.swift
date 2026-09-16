@@ -3,8 +3,17 @@ import Foundation
 /// A content category the user can choose to block. Distinct from security
 /// (phishing/malware/scam) — there is no parent here, so blocking a category
 /// is always the user's own preference, never enforced on someone else.
+///
+/// There was an `ads` case. It was removed because nothing could decide it:
+/// measured against the rating model, the label landed on 43% of the most
+/// popular sites on the internet — amazon.com, apple.com, microsoft.com — and
+/// no prompt wording moved it. A setting that blocks the ordinary internet for
+/// the person who switches it on is worse than no setting. Ads and trackers
+/// are blocked by Shields, from real filter lists, at the network layer.
+///
+/// A stored preference naming it is dropped on read, like any unknown string.
 public enum ContentCategory: String, CaseIterable, Hashable, Sendable {
-  case adult, gambling, ads
+  case adult, gambling
 
   /// Parses a single wire string from the backend's `categories: [String]`
   /// array, case-insensitively, accepting known synonyms. Unknown strings
@@ -13,7 +22,6 @@ public enum ContentCategory: String, CaseIterable, Hashable, Sendable {
     switch wireString.lowercased() {
     case "adult", "porn", "pornography", "explicit": self = .adult
     case "gambling", "betting", "casino": self = .gambling
-    case "ads", "advertising", "trackers", "tracking": self = .ads
     default: return nil
     }
   }

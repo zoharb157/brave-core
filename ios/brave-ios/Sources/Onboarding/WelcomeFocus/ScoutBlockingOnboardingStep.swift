@@ -164,20 +164,6 @@ extension Strings {
       value: "Betting, casinos, and lotteries.",
       comment: "Description of the gambling category"
     )
-    static let adsTitle = NSLocalizedString(
-      "scoutBlocking.adsTitle",
-      tableName: "FocusOnboarding",
-      bundle: .module,
-      value: "Ad-heavy sites",
-      comment: "Blockable category: whole pages that exist mainly to show ads"
-    )
-    static let adsDetail = NSLocalizedString(
-      "scoutBlocking.adsDetail",
-      tableName: "FocusOnboarding",
-      bundle: .module,
-      value: "Pages that exist mainly to show ads. Ad blocking already removes ads inside pages.",
-      comment: "Description of the ad-heavy sites category"
-    )
   }
 }
 
@@ -186,7 +172,6 @@ extension ContentCategory {
     switch self {
     case .adult: return Strings.ScoutBlocking.adultTitle
     case .gambling: return Strings.ScoutBlocking.gamblingTitle
-    case .ads: return Strings.ScoutBlocking.adsTitle
     }
   }
 
@@ -194,7 +179,6 @@ extension ContentCategory {
     switch self {
     case .adult: return Strings.ScoutBlocking.adultDetail
     case .gambling: return Strings.ScoutBlocking.gamblingDetail
-    case .ads: return Strings.ScoutBlocking.adsDetail
     }
   }
 
@@ -202,7 +186,6 @@ extension ContentCategory {
     switch self {
     case .adult: return "eye.slash"
     case .gambling: return "suit.club"
-    case .ads: return "rectangle.stack.badge.minus"
     }
   }
 }
