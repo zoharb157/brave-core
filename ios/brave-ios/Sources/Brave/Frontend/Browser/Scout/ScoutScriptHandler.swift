@@ -103,7 +103,18 @@ class ScoutScriptHandler: TabContentScript {
 
   private static func applyAllow(_ siteURL: URL, tab: some TabState) {
     MainActor.assumeIsolated {
-      ScoutServices.shared.siteRules.set(.allow, for: siteURL)
+      let rules = ScoutServices.shared.siteRules
+      // The same button reads "Unblock this site" when the block is the
+      // user's own rule, and that means taking the rule away — the site goes
+      // back to being checked like any other. It used to write an allow over
+      // the block instead, so unblocking a site also switched off every
+      // safety and category check on it for good. Nothing else produces a
+      // list block here: the built-in block list is empty.
+      if rules.rule(for: siteURL) == .block {
+        rules.set(nil, for: siteURL)
+      } else {
+        rules.set(.allow, for: siteURL)
+      }
       if let host = siteURL.host {
         ScoutServices.shared.blockLog.noteContinued(site: host)
       }

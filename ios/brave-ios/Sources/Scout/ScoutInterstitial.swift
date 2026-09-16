@@ -145,9 +145,7 @@ public enum ScoutInterstitial {
     // apart, it says what it will do, and it asks twice.
     let alwaysBlock =
       m.alwaysLabel.map { label in
-        let note = host.isEmpty
-          ? "Scout will stop checking this site."
-          : "Scout will stop checking \(htmlEscaped(host))."
+        let note = Self.lastingNote(reason: reason, host: host)
         // Inline, like the two buttons above it: this page's other actions
         // are inline handlers, and a <script> block here did nothing when
         // tapped. Arming lives on the element itself so there is no state to
@@ -269,6 +267,30 @@ public enum ScoutInterstitial {
   /// The site leads. In a tray of tabs the question is which one this is, and
   /// the shield on the thumbnail already says it was stopped — but a title
   /// truncated to "Blocked \u{2026}" would answer neither.
+  /// What the permanent button will actually do, said before it is tapped.
+  ///
+  /// It used to name the host on screen whatever it did. But an allow is
+  /// written for the registrable domain, so "stop checking www.google.com"
+  /// also stopped checking docs.google.com and sites.google.com — the places
+  /// anyone can put a page. And on a site the user blocked, the same note sat
+  /// under "Unblock", which puts the site back under normal checking rather
+  /// than out of it.
+  static func lastingNote(reason: DecisionReason, host: String) -> String {
+    guard !host.isEmpty else {
+      return reason == .policyList
+        ? "Scout will check this site again, like any other."
+        : "Scout will stop checking this site."
+    }
+    if reason == .policyList {
+      return "Scout will check \(htmlEscaped(host)) again, like any other site."
+    }
+    let site = eTLDPlusOne(host)
+    if site == host.lowercased() {
+      return "Scout will stop checking \(htmlEscaped(host))."
+    }
+    return "Scout will stop checking every page on \(htmlEscaped(site)), not only \(htmlEscaped(host))."
+  }
+
   static func tabTitle(blocking: Bool, host: String) -> String {
     guard !host.isEmpty else { return blocking ? "Blocked" : "Not opened" }
     return blocking ? "\(host) — blocked" : "\(host) — not opened"
