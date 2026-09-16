@@ -3,6 +3,11 @@ import Foundation
 public final class VerdictCache {
   public static let safeTTL: TimeInterval = 7 * 24 * 3600
   public static let riskyTTL: TimeInterval = 24 * 3600
+  /// A verdict the service made without reading the page. It keeps one of
+  /// these for an hour, for the good reason that the usual causes — a site
+  /// briefly down, a blocked fetch — pass. Keeping it for a week here turned
+  /// one bad minute into a week-long answer.
+  public static let unreadTTL: TimeInterval = 3600
 
   private struct Entry { let verdict: Verdict; let storedAt: Date }
 
@@ -51,12 +56,13 @@ public final class VerdictCache {
 
   private func key(_ url: URL) -> String { Self.cacheKey(for: url, perPageHosts: perPageHosts) }
 
-  private func ttl(for security: SecurityStatus) -> TimeInterval {
-    security == .safe ? Self.safeTTL : Self.riskyTTL
+  private func ttl(for verdict: Verdict) -> TimeInterval {
+    guard verdict.readPage else { return Self.unreadTTL }
+    return verdict.security == .safe ? Self.safeTTL : Self.riskyTTL
   }
 
   private func isExpired(_ e: Entry) -> Bool {
-    now().timeIntervalSince(e.storedAt) >= ttl(for: e.verdict.security)
+    now().timeIntervalSince(e.storedAt) >= ttl(for: e.verdict)
   }
 
   private func touch(_ k: String) {
@@ -90,7 +96,7 @@ public final class VerdictCache {
       let k = key(url)
       guard let e = entries[k] else { return nil }
       let age = now().timeIntervalSince(e.storedAt)
-      let life = ttl(for: e.verdict.security)
+      let life = ttl(for: e.verdict)
       if age >= life + grace {
         entries[k] = nil
         lru.removeAll { $0 == k }
