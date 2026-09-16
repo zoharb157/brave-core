@@ -214,6 +214,17 @@ extension Strings {
         "Explanation shown when supervision forces the ask-on-failed-check setting on"
     )
 
+    /// Shown instead of "that PIN is wrong" while a wait is running. Saying
+    /// the PIN was wrong would be untrue — it was not read — and would leave
+    /// someone tapping a button that cannot succeed yet.
+    public static let supervisionPINWait = NSLocalizedString(
+      "scoutProtection.supervisionPINWait",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Too many wrong tries. Try again in %@.",
+      comment: "Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes'"
+    )
+
     // MARK: - Supervision
 
     public static let supervisionTitle = NSLocalizedString(

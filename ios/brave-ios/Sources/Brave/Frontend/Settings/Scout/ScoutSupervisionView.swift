@@ -194,6 +194,16 @@ struct ScoutPINSheet: View {
     }
   }
 
+  /// "5 minutes", "1 minute", "30 seconds" — enough to know whether to wait
+  /// or put the phone down.
+  private static func spell(_ seconds: TimeInterval) -> String {
+    let formatter = DateComponentsFormatter()
+    formatter.allowedUnits = seconds < 60 ? [.second] : [.minute]
+    formatter.unitsStyle = .full
+    formatter.maximumUnitCount = 1
+    return formatter.string(from: max(seconds, 1)) ?? "a moment"
+  }
+
   private func submit() {
     switch mode {
     case .set:
@@ -204,6 +214,16 @@ struct ScoutPINSheet: View {
       onDone(first)
       dismiss()
     case .confirm:
+      // Ask about the wait before trying, so the message can be true. A
+      // locked attempt is refused without the PIN being read at all, and
+      // reporting that as "wrong PIN" would both mislead and leave someone
+      // tapping a button that cannot succeed yet.
+      let wait = ScoutSupervision.shared.pinWait
+      guard wait == 0 else {
+        problem = String(
+          format: Strings.ScoutProtection.supervisionPINWait, Self.spell(wait))
+        return
+      }
       guard ScoutSupervision.shared.verify(pin: first) else {
         problem = Strings.ScoutProtection.supervisionWrongPIN
         return

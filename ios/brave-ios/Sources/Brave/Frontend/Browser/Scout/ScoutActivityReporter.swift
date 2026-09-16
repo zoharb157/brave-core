@@ -52,6 +52,11 @@ extension Preferences.Scout {
   /// and is nearly always zero — so the one figure that says protection was
   /// bypassed read zero however often it happened.
   public static let sitesContinued = Preferences.Option<Int>(key: "scout.tally.continued", default: 0)
+  /// Wrong PINs in a row, and when another may be tried. Kept here rather than
+  /// in memory so force-quitting the app does not hand back a clean slate.
+  public static let pinFailures = Preferences.Option<Int>(key: "scout.pin.failures", default: 0)
+  public static let pinLockedUntil = Preferences.Option<Double>(
+    key: "scout.pin.locked-until", default: 0)
 }
 
 /// Sends the browser's decisions to the activity log.

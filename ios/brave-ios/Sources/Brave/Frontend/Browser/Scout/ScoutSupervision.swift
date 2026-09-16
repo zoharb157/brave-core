@@ -37,13 +37,49 @@ public final class ScoutSupervision: ObservableObject {
   /// Compared in full every time rather than bailing on the first wrong digit —
   /// four characters is not worth leaking a timing signal over, and the
   /// constant-time habit is cheaper to keep than to remember to apply.
+  /// Seconds before another PIN may be tried, or zero.
+  ///
+  /// Persisted rather than held in memory: a count that a force-quit clears is
+  /// no count at all, and force-quitting is the first thing anyone working
+  /// through PINs would find.
+  public var pinWait: TimeInterval {
+    PINThrottle.wait(Self.attempts, now: Date())
+  }
+
+  private static var attempts: PINAttempts {
+    get {
+      PINAttempts(
+        failures: Preferences.Scout.pinFailures.value,
+        lockedUntil: Preferences.Scout.pinLockedUntil.value > 0
+          ? Date(timeIntervalSince1970: Preferences.Scout.pinLockedUntil.value) : nil)
+    }
+    set {
+      Preferences.Scout.pinFailures.value = newValue.failures
+      Preferences.Scout.pinLockedUntil.value = newValue.lockedUntil?.timeIntervalSince1970 ?? 0
+    }
+  }
+
+  /// Checks a PIN, counting the attempt.
+  ///
+  /// Refuses outright while a wait is running, so the cost cannot be skipped
+  /// by simply asking again — and the comparison is constant-time, so a wrong
+  /// answer does not say how much of it was right.
   public func verify(pin: String) -> Bool {
+    guard pinWait == 0 else { return false }
     guard let stored = ScoutCredentials.string(forKey: Self.pinKey),
       stored.utf8.count == pin.utf8.count
-    else { return false }
+    else {
+      Self.attempts = PINThrottle.afterFailure(Self.attempts, now: Date())
+      return false
+    }
     var difference: UInt8 = 0
     for (a, b) in zip(stored.utf8, pin.utf8) { difference |= a ^ b }
-    return difference == 0
+    guard difference == 0 else {
+      Self.attempts = PINThrottle.afterFailure(Self.attempts, now: Date())
+      return false
+    }
+    Self.attempts = PINThrottle.afterSuccess()
+    return true
   }
 
   /// Whether this action should ask for the PIN right now.
@@ -53,6 +89,7 @@ public final class ScoutSupervision: ObservableObject {
 
   public func turnOn(pin: String) {
     ScoutCredentials.set(pin, forKey: Self.pinKey)
+    Self.attempts = PINThrottle.afterSuccess()
     Preferences.Scout.supervised.value = true
     objectWillChange.send()
     // Private tabs stop being offered from here on, so any already open would
