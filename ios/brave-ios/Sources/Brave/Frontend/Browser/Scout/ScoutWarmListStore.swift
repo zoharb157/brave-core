@@ -100,8 +100,11 @@ public final class ScoutWarmListStore: WarmListProviding {
   /// optimisation; a stale one is better than none, and it stops answering on
   /// its own once it is too old.
   public func refreshIfDue() async {
-    let last = Preferences.Scout.warmListCheckedAt.value
-    guard Date().timeIntervalSince1970 - last > Self.refreshInterval else { return }
+    guard
+      WarmListResponse.isRefreshDue(
+        lastCheckedAt: Preferences.Scout.warmListCheckedAt.value, now: Date(),
+        interval: Self.refreshInterval)
+    else { return }
     // Stamped before the request goes out, not after: this caps attempts at
     // one a day regardless of outcome. Stamping only on success meant a down
     // endpoint, or a phone behind a captive portal, got asked again on every
@@ -120,35 +123,25 @@ public final class ScoutWarmListStore: WarmListProviding {
       let http = response as? HTTPURLResponse, http.statusCode == 200
     else { return }
 
-    guard let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
-    else { return }
-
-    // No `entries` means the version we already have is current. That reply
-    // still carries the server's `builtAt`, and it is the only thing keeping
-    // this phone's list alive: the entry set is hash-stable and moves slowly,
-    // so a phone installed weeks after the build sends its bundled version,
-    // hears "you're current" every day, and — if this reply were thrown away —
-    // would sail past `maxAge` and stop answering permanently, with no later
-    // refresh able to repair it.
-    guard let rows = object["entries"] as? [[String: Any]] else {
-      noteStillCurrent(object)
+    switch WarmListResponse.read(data) {
+    case .ignore:
       return
+    case .stillCurrent(let builtAt):
+      noteStillCurrent(builtAt: builtAt)
+    case .install:
+      install(data)
     }
+  }
 
-    // An empty list is not a list to install. The server returns `[]` only
-    // when nothing is common enough to publish yet, and a phone that already
-    // holds a real list would be trading it for nothing — so keep what is
-    // held and let the next refresh bring something worth having.
-    guard !rows.isEmpty, let fileURL = Self.fileURL else { return }
-
-    // `WarmList.init?` requires `builtAt` and is the safety valve that stops
-    // a phone trusting a list once it's too old to answer for — that only
-    // works against a timestamp the server actually computed. The server
-    // contract now carries one; a payload that still fails to parse here is
-    // left unwritten rather than stamped with a timestamp of this phone's
-    // own invention, which would measure "when I downloaded this" instead of
-    // "when this was built" and defeat the whole point of the check.
-    guard
+  /// Writes a downloaded list and starts answering from it.
+  ///
+  /// `WarmList.init?` parses the same bytes a second time, and is allowed to
+  /// refuse them: it holds the per-page and category rules that decide which
+  /// rows are usable at all, and a payload that survives `WarmListResponse`
+  /// but yields nothing it will answer from is not worth writing over a list
+  /// that does.
+  private func install(_ data: Data) {
+    guard let fileURL = Self.fileURL,
       let list = WarmList(
         data: data, now: { Date() }, maxAge: Self.maxAge, perPageHosts: ScoutServices.perPageHosts)
     else { return }
@@ -170,10 +163,8 @@ public final class ScoutWarmListStore: WarmListProviding {
   /// built it at X". A mark of this phone's own making would turn the age
   /// check into "when did I last download something", which is the thing it
   /// exists not to measure.
-  private func noteStillCurrent(_ object: [String: Any]) {
-    guard let builtAt = object["builtAt"] as? TimeInterval,
-      builtAt > Preferences.Scout.warmListConfirmedCurrentAt.value
-    else { return }
+  private func noteStillCurrent(builtAt: TimeInterval) {
+    guard builtAt > Preferences.Scout.warmListConfirmedCurrentAt.value else { return }
     Preferences.Scout.warmListConfirmedCurrentAt.value = builtAt
     guard let list = Self.loadFromDisk() else { return }
     lock.lock()
