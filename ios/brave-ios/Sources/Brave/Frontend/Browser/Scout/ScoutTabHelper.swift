@@ -54,12 +54,22 @@ public class ScoutTabHelper: TabPolicyDecider {
       return .allow
     }
 
-    // Reuse Brave's existing per-tab "user proceeded" set rather than adding a
-    // parallel one — the interstitial's proceed action writes into it.
-    if let etldP1 = requestURL.baseDomain,
-      tab.proceedAnywaysDomainList?.contains(etldP1) == true
+    // "Continue anyway" covers the navigation the user chose and the redirects
+    // it follows — nothing further. It used to write the site's registrable
+    // domain into Brave's per-tab "user proceeded" set, which waved through
+    // every later navigation to that domain in that tab: continuing past one
+    // block unchecked the whole site for the life of the tab, and unchecked it
+    // per domain, so continuing on one encyclopedia article unchecked every
+    // article. Choosing to see one page says nothing about the next.
+    switch ContinueApproval.rule(
+      on: continuePermit, requesting: requestURL, origin: Self.origin(of: requestInfo))
     {
+    case .allow(let held):
+      continuePermit = held
+      continuedPage = requestURL
       return .allow
+    case .check:
+      continuePermit = nil
     }
 
     // The navigation we re-issued ourselves after an allow. Let it through
@@ -249,8 +259,8 @@ public class ScoutTabHelper: TabPolicyDecider {
         // comparing equal would false-match against any other hostless URL,
         // so the skip only applies when there is an actual domain to compare.
         if let site = requestURL.baseDomain,
-          tab?.proceedAnywaysDomainList?.contains(site) == true
-            || tab?.visibleURL?.baseDomain == site
+          tab?.visibleURL?.baseDomain == site
+            || ScoutServices.shared.siteRules.rule(for: requestURL) == .allow
         {
           return
         }
@@ -290,6 +300,41 @@ public class ScoutTabHelper: TabPolicyDecider {
 
   /// One-shot pass for the navigation this helper re-issues after an allow.
   private var approvedURL: URL?
+
+  /// Permission to finish the one navigation the user continued into, moving
+  /// with it as it redirects. Dropped the moment the user asks for anything
+  /// else.
+  private var continuePermit: ContinuePermit?
+
+  /// The page the user chose to see despite a block.
+  ///
+  /// Not a permit and never consulted by the guard: it exists so a handler
+  /// that judges a page *after* it renders — the title check — does not
+  /// immediately take back the page the user just asked for. It names one
+  /// address, so the next page is judged normally.
+  private(set) var continuedPage: URL?
+
+  /// Approves exactly this navigation. Called by the interstitial's
+  /// "Continue anyway".
+  func approveContinue(to url: URL) {
+    continuePermit = ContinuePermit(url: url)
+    continuedPage = url
+  }
+
+  /// Who asked for this navigation.
+  ///
+  /// Anything the user did counts as the user asking. A redirect, a meta
+  /// refresh or a script navigation is the page continuing what is already
+  /// under way, and only those extend a permit.
+  private static func origin(of info: WebRequestInfo) -> NavigationOrigin {
+    if info.isUserInitiated { return .user }
+    switch info.navigationType {
+    case .linkActivated, .formSubmitted, .formResubmitted, .backForward, .reload:
+      return .user
+    case .other:
+      return .page
+    }
+  }
 
   /// Navigations already re-issued to carry YouTube's Restricted Mode cookie.
   ///

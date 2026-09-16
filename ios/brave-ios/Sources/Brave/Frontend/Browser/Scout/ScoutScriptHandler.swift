@@ -61,11 +61,16 @@ class ScoutScriptHandler: TabContentScript {
     }
   }
 
+  /// "Continue anyway": open this one page.
+  ///
+  /// The approval covers this address and wherever it redirects, and stops
+  /// there. It used to add the site's registrable domain to a per-tab set that
+  /// the guard treated as a standing allow, so one tap unchecked every page on
+  /// that site for the life of the tab. Someone who wants that has "Always
+  /// allow" below, which says so.
   private func proceed(to siteURL: URL, tab: some TabState) {
     MainActor.assumeIsolated {
-      if let etldP1 = siteURL.baseDomain {
-        tab.proceedAnywaysDomainList?.insert(etldP1)
-      }
+      tab.scoutTabHelper?.approveContinue(to: siteURL)
       if let host = siteURL.host {
         ScoutServices.shared.blockLog.noteContinued(site: host)
       }

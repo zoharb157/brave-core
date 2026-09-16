@@ -79,9 +79,10 @@ class ScoutPageTitleScriptHandler: TabContentScript {
     // and so has someone who just tapped "continue anyway" on it.
     let services = ScoutServices.shared
     guard services.siteRules.rule(for: report.url) != .allow else { return }
-    if let etldP1 = report.url.baseDomain,
-      tab.proceedAnywaysDomainList?.contains(etldP1) == true
-    { return }
+    // The page the user continued into, and only that page. Keyed by domain
+    // this exempted every page on the site, so continuing past one article
+    // turned the title check off for the whole encyclopedia.
+    if tab.scoutTabHelper?.continuedPage == report.url { return }
     // Only act on the page actually on screen: a title arriving late from a
     // page the user has already left must not replace what they moved on to.
     guard tab.visibleURL == report.url else { return }
