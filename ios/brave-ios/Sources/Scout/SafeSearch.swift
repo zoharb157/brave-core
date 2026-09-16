@@ -74,6 +74,11 @@ public enum RestrictedMode {
 public enum SafeSearch {
   /// The parameter each engine reads, and the value that means "filter".
   private static let rules: [(matches: (String) -> Bool, name: String, value: String)] = [
+    // Scout's own default in most regions, and it was missing — so the
+    // setting was on, said explicit results never reach the page, and did
+    // nothing at all for the engine the majority of users never change away
+    // from.
+    ({ $0 == "brave.com" }, "safesearch", "strict"),
     ({ $0 == "google.com" || $0.hasPrefix("google.") }, "safe", "active"),
     ({ $0 == "bing.com" }, "adlt", "strict"),
     ({ $0 == "duckduckgo.com" }, "kp", "1"),
@@ -82,6 +87,27 @@ public enum SafeSearch {
     ({ $0 == "ecosia.org" }, "safesearch", "2"),
     ({ $0.hasPrefix("yandex.") }, "fyandex", "1"),
   ]
+
+  /// Engines Scout ships that nothing here filters.
+  ///
+  /// Named rather than left as an absence, so the gap is a thing someone
+  /// decided rather than a thing nobody noticed. Each needs its filter
+  /// parameter confirmed against the engine before it can be added — a
+  /// parameter that turns out to be wrong is worse than none, because the
+  /// setting would then claim a filter that is not there.
+  ///
+  /// Two of these are regional defaults: naver.com in Korea and yahoo.co.jp
+  /// in Japan. Someone in those regions has the same silent gap Brave Search
+  /// users had everywhere else.
+  public static let unfiltered: Set<String> = [
+    "startpage.com", "naver.com", "daum.net", "yahoo.co.jp",
+  ]
+
+  /// Whether this engine is one nothing here can filter.
+  public static func isUnfiltered(_ url: URL) -> Bool {
+    guard let host = url.host else { return false }
+    return unfiltered.contains(eTLDPlusOne(host))
+  }
 
   /// The same URL with the engine's filter pinned on, or nil when nothing needs
   /// changing — not a search engine, or already filtered.
