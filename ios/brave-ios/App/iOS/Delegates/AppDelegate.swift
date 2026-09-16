@@ -122,6 +122,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     AppState.shared.state = .launching(options: launchOptions ?? [:], active: true)
 
+    // Scout is left-to-right wherever it runs. The Hebrew and Arabic
+    // localizations that came with the upstream browser are gone, so a
+    // right-to-left device falls back to English — but a locale inherited
+    // from a later upstream merge would otherwise flip the whole layout
+    // silently, which is how those two arrived in the first place. Pinning
+    // the direction here means the rule survives the next merge without
+    // anyone having to notice.
+    UIView.appearance().semanticContentAttribute = .forceLeftToRight
+
     // Run migrations that need access to Data
     Migration.postDataLoadMigration()
 
