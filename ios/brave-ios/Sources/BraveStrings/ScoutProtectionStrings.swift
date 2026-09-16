@@ -201,6 +201,19 @@ extension Strings {
       comment: "Explanation of the setting deciding what happens when a safety check cannot complete"
     )
 
+    /// Shown in place of the explanation while the phone is supervised, when
+    /// the setting is forced on and the toggle cannot be moved. Without it the
+    /// row says pages open, which is the opposite of what happens.
+    public static let askWhenCheckFailsSupervised = NSLocalizedString(
+      "scoutProtection.askWhenCheckFailsSupervised",
+      tableName: "BraveShared",
+      bundle: .module,
+      value:
+        "While this phone is supervised, Scout always asks. A check that couldn't finish isn't a verdict, so the page isn't opened.",
+      comment:
+        "Explanation shown when supervision forces the ask-on-failed-check setting on"
+    )
+
     // MARK: - Supervision
 
     public static let supervisionTitle = NSLocalizedString(

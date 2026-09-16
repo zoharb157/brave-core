@@ -49,6 +49,10 @@ struct ScoutProtectionView: View {
   @State private var checkedCount = 0
   @State private var blockedTally = 0
   @State private var continuedTally = 0
+  /// Supervision forces the ask-on-failed-check setting on, so the row has to
+  /// say so rather than offer a choice that is not there. Read on appearance
+  /// like the other state written from outside this screen.
+  @State private var supervised = false
   /// Read fresh each time the screen appears: the user may have just come back
   /// from changing it in iOS Settings.
   @State private var isDefaultBrowser = false
@@ -83,13 +87,16 @@ struct ScoutProtectionView: View {
         }
         .tint(scoutViolet)
 
-        Toggle(isOn: $askWhenCheckFails.value) {
+        Toggle(isOn: supervised ? .constant(true) : $askWhenCheckFails.value) {
           row(
             symbol: "questionmark.circle",
             title: Strings.ScoutProtection.askWhenCheckFails,
-            detail: Strings.ScoutProtection.askWhenCheckFailsDetail
+            detail: supervised
+              ? Strings.ScoutProtection.askWhenCheckFailsSupervised
+              : Strings.ScoutProtection.askWhenCheckFailsDetail
           )
         }
+        .disabled(supervised)
         .tint(scoutViolet)
       }
 
@@ -169,6 +176,7 @@ struct ScoutProtectionView: View {
     // this slot has to be one too, or the row reads as three of a kind and
     // is not.
     continuedTally = Preferences.Scout.sitesContinued.value
+    supervised = Preferences.Scout.supervised.value
     // "Scout is checking every site" is only true when the system hands Scout
     // the links. Until then this screen says the narrower thing that is
     // actually true, rather than promising cover the browser doesn't have.
