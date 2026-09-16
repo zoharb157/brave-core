@@ -83,24 +83,50 @@ public enum SafeSearch {
     ({ $0 == "bing.com" }, "adlt", "strict"),
     ({ $0 == "duckduckgo.com" }, "kp", "1"),
     ({ $0 == "yahoo.com" }, "vm", "r"),
+    // Yahoo! JAPAN is a separate engine on a separate registrable domain, but
+    // it reads the same parameter: its own search settings offer 弱/中/強 as
+    // vm=p/i/r, and `r` is the one that excludes adult data from web results
+    // rather than images alone. Confirmed against the engine — on an explicit
+    // query, vm=r and vm=p share no result host at all, and vm=r returns
+    // reference pages (Wikipedia, Merriam-Webster, NCBI) where vm=p returns
+    // adult sites. The regional default in Japan, so this closes the gap for
+    // everyone there who never changes engine.
+    ({ $0 == "yahoo.co.jp" }, "vm", "r"),
     ({ $0 == "qwant.com" }, "safesearch", "2"),
     ({ $0 == "ecosia.org" }, "safesearch", "2"),
     ({ $0.hasPrefix("yandex.") }, "fyandex", "1"),
   ]
 
-  /// Engines Scout ships that nothing here filters.
+  /// Engines Scout ships that no rule here can pin.
   ///
   /// Named rather than left as an absence, so the gap is a thing someone
-  /// decided rather than a thing nobody noticed. Each needs its filter
-  /// parameter confirmed against the engine before it can be added — a
+  /// decided rather than a thing nobody noticed. Each was checked against the
+  /// engine itself; none of them turned out to take a filter parameter, and a
   /// parameter that turns out to be wrong is worse than none, because the
   /// setting would then claim a filter that is not there.
   ///
-  /// Two of these are regional defaults: naver.com in Korea and yahoo.co.jp
-  /// in Japan. Someone in those regions has the same silent gap Brave Search
-  /// users had everywhere else.
+  /// They are not all unfiltered for the same reason, and the difference
+  /// matters to anyone deciding what to tell the user:
+  ///
+  /// - startpage.com genuinely does not filter. Its Safe Search is a stored
+  ///   preference (a `disable_family_filter` select of heavy/moderate/none,
+  ///   POSTed to /do/settings), and passing that name in the URL changes
+  ///   nothing: on an explicit query, `heavy` returns the same ten adult
+  ///   results as the default, on both /sp/search and the /do/search endpoint
+  ///   Scout ships. Adding the parameter would have been precisely the bug
+  ///   this list exists to prevent.
+  /// - naver.com and daum.net take no parameter because they already filter.
+  ///   Korean law puts them behind real-name age verification, so a
+  ///   signed-out user — which is what a child on a shared phone is — is told
+  ///   "results unsuitable for minors have been excluded" and gets no adult
+  ///   results. The only way past it is a verified account, which Scout
+  ///   cannot pin on and cannot pin off.
+  ///
+  /// So the residual risk on the two Korean engines is narrow: a device
+  /// already signed in to an age-verified account. On startpage.com it is not
+  /// narrow at all.
   public static let unfiltered: Set<String> = [
-    "startpage.com", "naver.com", "daum.net", "yahoo.co.jp",
+    "startpage.com", "naver.com", "daum.net",
   ]
 
   /// Whether this engine is one nothing here can filter.
