@@ -105,7 +105,7 @@ extension Strings {
       "scoutBlocking.phoneFilterFootnote",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "This filters by site name, so it is coarser than the checks inside Scout: it can refuse a site but not one page on it. Apps that bring their own encrypted DNS are not covered, and neither is Safari while iCloud Private Relay is on \u2014 that is on by default with iCloud+, and can be turned off per network in Settings.",
+      value: "This filters by site name, so it is coarser than the checks inside Scout: it can refuse a site but not one page on it. Apps that bring their own encrypted DNS are not covered, and neither is Safari while iCloud Private Relay is on — that is on by default with iCloud+, and can be turned off per network in Settings.",
       comment: "Footnote setting expectations for the device-wide filter"
     )
     public static let settingsFooter = NSLocalizedString(
