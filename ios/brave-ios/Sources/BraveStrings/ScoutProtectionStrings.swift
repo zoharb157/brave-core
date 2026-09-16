@@ -96,7 +96,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "Your search engine, %@, has no safe mode Scout can turn on, so explicit results can still reach the page. Other search engines are filtered.",
+        "Your search engine, %@, has no safe mode Scout can turn on, so explicit results can still reach the page.",
       comment:
         "Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage."
     )
