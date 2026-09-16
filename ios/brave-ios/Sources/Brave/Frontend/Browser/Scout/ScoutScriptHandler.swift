@@ -11,9 +11,10 @@ import WebKit
 
 /// Receives the interstitial's button presses.
 ///
-/// There is no parent and no PIN in this product: the user owns the browser and
-/// may accept the risk. Proceeding records the domain in Brave's existing
-/// per-tab set so the same origin is not re-prompted in that tab.
+/// On an unsupervised phone the user owns the browser and may accept the risk;
+/// on a supervised one the actions that weaken protection ask for the PIN
+/// first. Proceeding covers the navigation the user approved and the redirects
+/// it follows, and nothing after that — see `ContinueApproval`.
 class ScoutScriptHandler: TabContentScript {
   static let scriptName = "ScoutScript"
   static let scriptId = UUID().uuidString
@@ -111,11 +112,30 @@ class ScoutScriptHandler: TabContentScript {
     }
   }
 
+  /// "Go back" — the page's main action, and the only one on it that does not
+  /// weaken protection.
+  ///
+  /// There is often nothing behind a blocked page. A link opened from another
+  /// app, a `target="_blank"`, or an address typed into a fresh tab all land
+  /// with no history, and that is precisely the case this browser exists for —
+  /// the reason given for filtering the whole phone is that other apps open
+  /// links in their own browsers.
+  ///
+  /// It used to do nothing at all there: the button was pressed, the screen
+  /// did not change, and the only controls left that did anything were
+  /// "Continue anyway" and "Always allow". A dead primary button that leaves
+  /// two working ones, both of which give the page up, is worse than no button.
+  ///
+  /// With nothing behind it, the tab itself is what goes — the same path a
+  /// page takes when it calls `window.close()`, which the browser already
+  /// handles by removing the tab and remembering it as recently closed.
   private func goBack(tab: some TabState) {
     MainActor.assumeIsolated {
       if tab.canGoBack {
         tab.goBack()
+        return
       }
+      tab.delegate?.tabWebViewDidClose(tab)
     }
   }
 }
