@@ -63,7 +63,7 @@ extension Strings {
       "scoutBlocking.phoneFilterDetail",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "Other apps open links in their own browsers, where Scout can't check them. Turn this on and adult and unsafe sites are refused everywhere on the phone, in every app.",
+      value: "Other apps open links in their own browsers, where Scout can't check them. This blocks adult and unsafe sites by name for the rest of the phone, and works in most apps.",
       comment: "Explanation of the setting that filters every app on the device"
     )
     public static let phoneFilterApprovalNeeded = NSLocalizedString(
@@ -77,7 +77,7 @@ extension Strings {
       "scoutBlocking.phoneFilterOn",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "On. Every app on this phone is filtered.",
+      value: "On. Most apps on this phone are filtered.",
       comment: "Shown when the device-wide filter is active"
     )
     public static let phoneFilterFailed = NSLocalizedString(
@@ -105,7 +105,7 @@ extension Strings {
       "scoutBlocking.phoneFilterFootnote",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "This filters by site name, so it is coarser than the checks inside Scout, and a few apps that bring their own settings can get around it.",
+      value: "This filters by site name, so it is coarser than the checks inside Scout: it can refuse a site but not one page on it. Apps that bring their own encrypted DNS are not covered, and neither is Safari while iCloud Private Relay is on \u2014 that is on by default with iCloud+, and can be turned off per network in Settings.",
       comment: "Footnote setting expectations for the device-wide filter"
     )
     public static let settingsFooter = NSLocalizedString(
