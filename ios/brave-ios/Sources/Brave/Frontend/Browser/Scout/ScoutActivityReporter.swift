@@ -122,10 +122,20 @@ public final class ScoutActivityReporter {
     // after redirects have been folded together, so a single tap counts once.
     // A private tab is left out: the point of one is that the visit leaves no
     // trace, and a number that moves is a trace.
-    if !isPrivate {
-      Preferences.Scout.sitesChecked.value += 1
-      if decision.type == .block { Preferences.Scout.sitesBlocked.value += 1 }
+    if isPrivate {
+      // Nothing about a private visit is reported. The supervision design
+      // refused "log it and label it" in so many words — logging a private
+      // visit is a worse answer than not offering privacy the product does
+      // not intend to honour — and the report carried the whole URL, kept it
+      // for thirty days, and showed it on the parent's page unlabelled.
+      //
+      // Supervised phones have no private tab, so this is about the other
+      // case: browsing done privately while unsupervised, still sitting in
+      // the log if supervision is turned on afterwards.
+      return
     }
+    Preferences.Scout.sitesChecked.value += 1
+    if decision.type == .block { Preferences.Scout.sitesBlocked.value += 1 }
     var event: [String: Any] = [
       "url": String(url.absoluteString.prefix(2048)),
       "decision": Self.wire(decision.type),
@@ -150,10 +160,10 @@ public final class ScoutActivityReporter {
   /// taps "continue" the original may already be on the server, and a log that
   /// rewrites its own history is worse than one with two rows.
   public func recordContinued(_ url: URL, isPrivate: Bool) {
-    // Counted like the other two, and left uncounted in a private tab for the
-    // same reason: the point of one is that the visit leaves no trace, and a
-    // number that moves is a trace.
-    if !isPrivate { Preferences.Scout.sitesContinued.value += 1 }
+    // Nothing leaves a private tab, the count included: the point of one is
+    // that the visit leaves no trace, and a number that moves is a trace.
+    guard !isPrivate else { return }
+    Preferences.Scout.sitesContinued.value += 1
     enqueue([
       "url": String(url.absoluteString.prefix(2048)),
       "decision": "allow",
