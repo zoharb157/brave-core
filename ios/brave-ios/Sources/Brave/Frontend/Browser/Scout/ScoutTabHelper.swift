@@ -61,15 +61,8 @@ public class ScoutTabHelper: TabPolicyDecider {
     // block unchecked the whole site for the life of the tab, and unchecked it
     // per domain, so continuing on one encyclopedia article unchecked every
     // article. Choosing to see one page says nothing about the next.
-    switch ContinueApproval.rule(
-      on: continuePermit, requesting: requestURL, origin: Self.origin(of: requestInfo))
-    {
-    case .allow(let held):
-      continuePermit = held
-      continuedPage = requestURL
+    if continueApproval.allows(requestURL, origin: Self.origin(of: requestInfo)) {
       return .allow
-    case .check:
-      continuePermit = nil
     }
 
     // The navigation we re-issued ourselves after an allow. Let it through
@@ -301,24 +294,36 @@ public class ScoutTabHelper: TabPolicyDecider {
   /// One-shot pass for the navigation this helper re-issues after an allow.
   private var approvedURL: URL?
 
-  /// Permission to finish the one navigation the user continued into, moving
-  /// with it as it redirects. Dropped the moment the user asks for anything
-  /// else.
-  private var continuePermit: ContinuePermit?
-
-  /// The page the user chose to see despite a block.
+  /// The navigation responded, which spends any "Continue anyway" permit.
   ///
-  /// Not a permit and never consulted by the guard: it exists so a handler
-  /// that judges a page *after* it renders — the title check — does not
-  /// immediately take back the page the user just asked for. It names one
-  /// address, so the next page is judged normally.
-  private(set) var continuedPage: URL?
+  /// This is the whole reason the permit is bounded in time rather than by the
+  /// look of a request. WebKit reports an address typed into the URL bar the
+  /// same way it reports a redirect — programmatic, type `.other` — so nothing
+  /// about the request tells them apart. When they happen does: a redirect
+  /// arrives before the navigation responds, and the next thing the user asks
+  /// for arrives after it. Without this the next address typed inherited the
+  /// permit and opened unchecked, which is exactly what shipped.
+  public func tab(
+    _ tab: some TabState,
+    shouldAllowResponse response: URLResponse,
+    responseInfo: WebResponseInfo
+  ) async -> WebPolicyDecision {
+    continueApproval.noteArrival(isMainFrame: responseInfo.isForMainFrame)
+    return .allow
+  }
+
+  /// What this tab remembers about a "Continue anyway": permission to finish
+  /// that one navigation, and the page the user chose to see.
+  private var continueApproval = ContinueApproval()
+
+  /// The page the user chose to see despite a block, for the title check —
+  /// never permission to navigate.
+  var continuedPage: URL? { continueApproval.chosenPage }
 
   /// Approves exactly this navigation. Called by the interstitial's
   /// "Continue anyway".
   func approveContinue(to url: URL) {
-    continuePermit = ContinuePermit(url: url)
-    continuedPage = url
+    continueApproval.approve(url)
   }
 
   /// Who asked for this navigation.
