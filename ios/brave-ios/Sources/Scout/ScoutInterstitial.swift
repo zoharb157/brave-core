@@ -167,9 +167,16 @@ public enum ScoutInterstitial {
         """
       } ?? ""
 
+    // Without a title the browser falls back to the page's address, and these
+    // pages live at `internal://local/scout…`. Several blocked tabs then read
+    // as the same unreadable string in the tab tray, in history and anywhere
+    // else a title is shown, with no way to tell which site each one was.
+    let pageTitle = htmlEscaped(Self.tabTitle(blocking: m.isBlocking, host: host))
+
     return """
     <!doctype html><html><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>\(pageTitle)</title>
     <style>\(css)</style></head>
     <body class="tone-\(tone)">
       <main class="card">
@@ -194,9 +201,11 @@ public enum ScoutInterstitial {
   /// the page, which takes seconds — showing that work is far better than a
   /// frozen tab followed by a verdict appearing from nowhere.
   public static func checkingHTML(host: String) -> String {
+    let pageTitle = htmlEscaped(host.isEmpty ? "Checking" : "Checking \(host)")
     return """
     <!doctype html><html><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>\(pageTitle)</title>
     <style>\(css)</style></head>
     <body class="tone-check">
       <main class="card">
@@ -253,6 +262,16 @@ public enum ScoutInterstitial {
     escaped = escaped.replacingOccurrences(of: "\"", with: "&quot;")
     escaped = escaped.replacingOccurrences(of: "'", with: "&#39;")
     return escaped
+  }
+
+  /// What the tab is called while one of these pages is showing.
+  ///
+  /// The site leads. In a tray of tabs the question is which one this is, and
+  /// the shield on the thumbnail already says it was stopped — but a title
+  /// truncated to "Blocked \u{2026}" would answer neither.
+  static func tabTitle(blocking: Bool, host: String) -> String {
+    guard !host.isEmpty else { return blocking ? "Blocked" : "Not opened" }
+    return blocking ? "\(host) — blocked" : "\(host) — not opened"
   }
 
   /// Human-readable label for a category as it appears in "This page
