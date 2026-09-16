@@ -52,11 +52,16 @@ extension Preferences.Scout {
   /// and is nearly always zero — so the one figure that says protection was
   /// bypassed read zero however often it happened.
   public static let sitesContinued = Preferences.Option<Int>(key: "scout.tally.continued", default: 0)
-  /// Wrong PINs in a row, and when another may be tried. Kept here rather than
-  /// in memory so force-quitting the app does not hand back a clean slate.
+  /// Wrong PINs in a row, and the wait the latest one earned. Kept here rather
+  /// than in memory so force-quitting the app does not hand back a clean slate.
   public static let pinFailures = Preferences.Option<Int>(key: "scout.pin.failures", default: 0)
-  public static let pinLockedUntil = Preferences.Option<Double>(
-    key: "scout.pin.locked-until", default: 0)
+  /// The wait's length, and `PINThrottle.clock()` when it began. New keys
+  /// rather than the old "locked-until" one: that held a date on the phone's
+  /// own clock, and read as a clock reading it would mean something else.
+  public static let pinLockSeconds = Preferences.Option<Double>(
+    key: "scout.pin.lock-seconds", default: 0)
+  public static let pinLockedAt = Preferences.Option<Double>(
+    key: "scout.pin.locked-at-monotonic", default: 0)
 }
 
 /// Sends the browser's decisions to the activity log.

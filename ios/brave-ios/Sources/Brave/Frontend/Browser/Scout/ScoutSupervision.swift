@@ -42,20 +42,25 @@ public final class ScoutSupervision: ObservableObject {
   /// Persisted rather than held in memory: a count that a force-quit clears is
   /// no count at all, and force-quitting is the first thing anyone working
   /// through PINs would find.
+  ///
+  /// Measured on a clock the phone's user cannot set. It used to be a date on
+  /// the phone's own clock, so moving the date forward in Settings ended the
+  /// wait and every guess after the first five was free.
   public var pinWait: TimeInterval {
-    PINThrottle.wait(Self.attempts, now: Date())
+    PINThrottle.wait(Self.attempts, now: PINThrottle.clock())
   }
 
   private static var attempts: PINAttempts {
     get {
       PINAttempts(
         failures: Preferences.Scout.pinFailures.value,
-        lockedUntil: Preferences.Scout.pinLockedUntil.value > 0
-          ? Date(timeIntervalSince1970: Preferences.Scout.pinLockedUntil.value) : nil)
+        lockSeconds: Preferences.Scout.pinLockSeconds.value,
+        lockedAt: Preferences.Scout.pinLockedAt.value)
     }
     set {
       Preferences.Scout.pinFailures.value = newValue.failures
-      Preferences.Scout.pinLockedUntil.value = newValue.lockedUntil?.timeIntervalSince1970 ?? 0
+      Preferences.Scout.pinLockSeconds.value = newValue.lockSeconds
+      Preferences.Scout.pinLockedAt.value = newValue.lockedAt
     }
   }
 
@@ -69,13 +74,13 @@ public final class ScoutSupervision: ObservableObject {
     guard let stored = ScoutCredentials.string(forKey: Self.pinKey),
       stored.utf8.count == pin.utf8.count
     else {
-      Self.attempts = PINThrottle.afterFailure(Self.attempts, now: Date())
+      Self.attempts = PINThrottle.afterFailure(Self.attempts, now: PINThrottle.clock())
       return false
     }
     var difference: UInt8 = 0
     for (a, b) in zip(stored.utf8, pin.utf8) { difference |= a ^ b }
     guard difference == 0 else {
-      Self.attempts = PINThrottle.afterFailure(Self.attempts, now: Date())
+      Self.attempts = PINThrottle.afterFailure(Self.attempts, now: PINThrottle.clock())
       return false
     }
     Self.attempts = PINThrottle.afterSuccess()
