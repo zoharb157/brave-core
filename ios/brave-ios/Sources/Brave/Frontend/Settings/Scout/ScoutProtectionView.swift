@@ -36,6 +36,9 @@ struct ScoutProtectionView: View {
   /// Set when the screen is presented as a sheet (from the new tab) rather
   /// than pushed inside Settings, where the back button already does this.
   var onDone: (() -> Void)?
+  /// The app's engine list, so the search row can check what the user's own
+  /// default actually supports rather than describing the common case.
+  var searchEngines: SearchEngines?
 
   @State private var blocked = Preferences.ScoutBlocking.chosen
   @ObservedObject private var safeSearch = Preferences.Scout.safeSearch
@@ -56,6 +59,10 @@ struct ScoutProtectionView: View {
   /// Read fresh each time the screen appears: the user may have just come back
   /// from changing it in iOS Settings.
   @State private var isDefaultBrowser = false
+  /// The name of the default search engine when Scout cannot filter it, and
+  /// nil when it can. Read on appearance because the engine is changed on a
+  /// different screen.
+  @State private var unfilterableEngine: String?
 
   var body: some View {
     List {
@@ -81,8 +88,14 @@ struct ScoutProtectionView: View {
         Toggle(isOn: $safeSearch.value) {
           row(
             symbol: "magnifyingglass",
+            // Amber, not rose: nothing is broken and nothing was blocked. The
+            // setting simply cannot reach this one engine, which is the same
+            // kind of unfinished the status card uses amber for.
+            tint: unfilterableEngine == nil ? scoutViolet : scoutAmber,
             title: Strings.ScoutProtection.safeSearchTitle,
-            detail: Strings.ScoutProtection.safeSearchDetail
+            detail: unfilterableEngine.map {
+              String(format: Strings.ScoutProtection.safeSearchUnfilteredDetail, $0)
+            } ?? Strings.ScoutProtection.safeSearchDetail
           )
         }
         .tint(scoutViolet)
@@ -183,6 +196,26 @@ struct ScoutProtectionView: View {
     let helper = DefaultBrowserHelper()
     helper.performAccurateDefaultCheckNow()
     isDefaultBrowser = helper.status == .defaulted
+    unfilterableEngine = unfilterableDefaultEngine()
+  }
+
+  /// The default engine's name when the setting cannot deliver what it
+  /// promises for it, and nil when it can.
+  ///
+  /// Asked of the engine's own search URL rather than of a list of names kept
+  /// here, so an engine added later is judged by the same rules that do the
+  /// filtering, and a second list cannot drift out of step with the first.
+  ///
+  /// An engine that filters itself is deliberately not reported. Naver and
+  /// Daum take no parameter because Korean law already excludes adult results
+  /// for a signed-out user, so warning about them would push people off a
+  /// working default for nothing.
+  private func unfilterableDefaultEngine() -> String? {
+    guard let engine = searchEngines?.defaultEngine(forType: .standard),
+      let url = engine.searchURLForQuery("scout"),
+      SafeSearch.coverage(of: url) == .unfiltered
+    else { return nil }
+    return engine.displayName
   }
 
   // MARK: - The status card
@@ -290,11 +323,13 @@ struct ScoutProtectionView: View {
 
   // MARK: - Row shapes
 
-  private func row(symbol: String, title: String, detail: String) -> some View {
+  private func row(
+    symbol: String, tint: Color = scoutViolet, title: String, detail: String
+  ) -> some View {
     HStack(spacing: 12) {
       Image(systemName: symbol)
         .font(.system(size: 17))
-        .foregroundStyle(scoutViolet)
+        .foregroundStyle(tint)
         .frame(width: 26)
       VStack(alignment: .leading, spacing: 2) {
         Text(title)

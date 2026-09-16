@@ -442,7 +442,7 @@ extension BrowserViewController {
       // exists was otherwise only reachable from the new tab or from three
       // levels into Settings.
       .init(id: .scoutProtection) { @MainActor [unowned self] _ in
-        var view = ScoutProtectionView()
+        var view = ScoutProtectionView(searchEngines: self.profile.searchEngines)
         view.onDone = { [weak self] in self?.dismiss(animated: true) }
         let container = UINavigationController(
           rootViewController: UIHostingController(rootView: view))

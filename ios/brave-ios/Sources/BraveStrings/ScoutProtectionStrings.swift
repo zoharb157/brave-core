@@ -91,6 +91,15 @@ extension Strings {
       value: "Turns on the safe mode built into search engines and YouTube, so explicit results never reach the page.",
       comment: "Explanation of the search filtering setting"
     )
+    public static let safeSearchUnfilteredDetail = NSLocalizedString(
+      "scoutProtection.safeSearchUnfilteredDetail",
+      tableName: "BraveShared",
+      bundle: .module,
+      value:
+        "Your search engine, %@, has no safe mode Scout can turn on, so explicit results can still reach the page. Other search engines are filtered.",
+      comment:
+        "Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage."
+    )
     public static let categoriesSummary = NSLocalizedString(
       "scoutProtection.categoriesSummary",
       tableName: "BraveShared",

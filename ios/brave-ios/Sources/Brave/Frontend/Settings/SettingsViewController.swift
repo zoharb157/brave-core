@@ -789,7 +789,8 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           text: Strings.ScoutProtection.title,
           detailText: Strings.ScoutProtection.settingsSubtitle,
           selection: { [unowned self] in
-            let controller = UIHostingController(rootView: ScoutProtectionView())
+            let controller = UIHostingController(
+              rootView: ScoutProtectionView(searchEngines: self.profile.searchEngines))
             self.navigationController?.pushViewController(controller, animated: true)
           },
           image: UIImage(systemName: "checkmark.shield.fill")?

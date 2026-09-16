@@ -170,10 +170,14 @@ class NewTabPageViewController: UIViewController {
   private let privateBrowsingManager: PrivateBrowsingManager
 
   private let profilePrefs: any PrefService
+  /// Passed through only so the protection screen presented from here can say
+  /// whether the user's own search engine can actually be filtered.
+  private let searchEngines: SearchEngines
 
   init(
     tab: some TabState,
     profilePrefs: any PrefService,
+    searchEngines: SearchEngines,
     dataSource: NTPDataSource,
     feedDataSource: FeedDataSource,
     rewards: BraveRewards,
@@ -181,6 +185,7 @@ class NewTabPageViewController: UIViewController {
   ) {
     self.browserTab = tab
     self.profilePrefs = profilePrefs
+    self.searchEngines = searchEngines
     self.rewards = rewards
     self.feedDataSource = feedDataSource
     self.privateBrowsingManager = privateBrowsingManager
@@ -205,7 +210,7 @@ class NewTabPageViewController: UIViewController {
         // question someone taps a protection summary to answer.
         openProtectionPressed: { [weak self] in
           guard let self, !privateBrowsingManager.isPrivateBrowsing else { return }
-          var view = ScoutProtectionView()
+          var view = ScoutProtectionView(searchEngines: self.searchEngines)
           view.onDone = { [weak self] in self?.dismiss(animated: true) }
           present(
             UINavigationController(rootViewController: UIHostingController(rootView: view)),

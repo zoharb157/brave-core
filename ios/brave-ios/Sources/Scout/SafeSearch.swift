@@ -97,42 +97,66 @@ public enum SafeSearch {
     ({ $0.hasPrefix("yandex.") }, "fyandex", "1"),
   ]
 
-  /// Engines Scout ships that no rule here can pin.
+  /// What Scout can honestly promise about an engine.
+  ///
+  /// The setting says explicit results never reach the page. For most engines
+  /// a rule above makes that true. For the rest it does not, and the two
+  /// reasons it does not are different enough that a screen telling the user
+  /// about it should not merge them.
+  public enum Coverage: Equatable {
+    /// A rule above pins the engine's own filter on.
+    case pinned
+    /// No rule, and none needed: the engine already excludes adult results
+    /// from a signed-out user by itself.
+    case filteredByEngine
+    /// No rule, and no filter of the engine's own. Explicit results arrive.
+    case unfiltered
+  }
+
+  /// Engines that take no parameter because they already filter.
+  ///
+  /// Korean law puts naver.com and daum.net behind real-name age
+  /// verification, so a signed-out user — which is what a child on a shared
+  /// phone is — is told "results unsuitable for minors have been excluded"
+  /// and gets none. The only way past it is a verified account, which Scout
+  /// can pin neither on nor off. So the residual risk here is narrow: a
+  /// device already signed in to one.
+  public static let filteredByEngine: Set<String> = ["naver.com", "daum.net"]
+
+  /// Engines Scout ships that nothing filters.
   ///
   /// Named rather than left as an absence, so the gap is a thing someone
-  /// decided rather than a thing nobody noticed. Each was checked against the
-  /// engine itself; none of them turned out to take a filter parameter, and a
-  /// parameter that turns out to be wrong is worse than none, because the
-  /// setting would then claim a filter that is not there.
+  /// decided rather than a thing nobody noticed. A parameter that turns out
+  /// to be wrong is worse than none, because the setting would then claim a
+  /// filter that is not there — so nothing goes in the rules table above
+  /// until it has been checked against the engine itself.
   ///
-  /// They are not all unfiltered for the same reason, and the difference
-  /// matters to anyone deciding what to tell the user:
-  ///
-  /// - startpage.com genuinely does not filter. Its Safe Search is a stored
-  ///   preference (a `disable_family_filter` select of heavy/moderate/none,
-  ///   POSTed to /do/settings), and passing that name in the URL changes
-  ///   nothing: on an explicit query, `heavy` returns the same ten adult
-  ///   results as the default, on both /sp/search and the /do/search endpoint
-  ///   Scout ships. Adding the parameter would have been precisely the bug
-  ///   this list exists to prevent.
-  /// - naver.com and daum.net take no parameter because they already filter.
-  ///   Korean law puts them behind real-name age verification, so a
-  ///   signed-out user — which is what a child on a shared phone is — is told
-  ///   "results unsuitable for minors have been excluded" and gets no adult
-  ///   results. The only way past it is a verified account, which Scout
-  ///   cannot pin on and cannot pin off.
-  ///
-  /// So the residual risk on the two Korean engines is narrow: a device
-  /// already signed in to an age-verified account. On startpage.com it is not
-  /// narrow at all.
-  public static let unfiltered: Set<String> = [
-    "startpage.com", "naver.com", "daum.net",
-  ]
+  /// startpage.com is the one that was checked and failed. Its Safe Search is
+  /// a stored preference — a `disable_family_filter` select of
+  /// heavy/moderate/none, POSTed to /do/settings — and passing that name in
+  /// the URL changes nothing: on an explicit query, `heavy` returns the same
+  /// ten adult results as the default, on both /sp/search and the /do/search
+  /// endpoint Scout ships. It is exactly the plausible-looking parameter
+  /// someone would add from reading the settings page, and adding it would
+  /// have been precisely the bug this list exists to prevent.
+  public static let unfiltered: Set<String> = ["startpage.com"]
 
-  /// Whether this engine is one nothing here can filter.
-  public static func isUnfiltered(_ url: URL) -> Bool {
-    guard let host = url.host else { return false }
-    return unfiltered.contains(eTLDPlusOne(host))
+  /// What Scout can promise about the engine serving this address.
+  ///
+  /// Anything unrecognised counts as unfiltered. A custom engine someone
+  /// added may well filter itself, but Scout cannot pin it and has no way to
+  /// find out, and claiming cover it does not have is the failure this whole
+  /// type exists to avoid.
+  public static func coverage(of url: URL) -> Coverage {
+    guard let host = url.host else { return .unfiltered }
+    return coverage(ofSite: eTLDPlusOne(host))
+  }
+
+  /// As `coverage(of:)`, for a registrable domain already in hand.
+  public static func coverage(ofSite site: String) -> Coverage {
+    if rules.contains(where: { $0.matches(site) }) { return .pinned }
+    if filteredByEngine.contains(site) { return .filteredByEngine }
+    return .unfiltered
   }
 
   /// The same URL with the engine's filter pinned on, or nil when nothing needs
