@@ -84,7 +84,21 @@ struct ScoutSiteListView: View {
       }
     }
     .onAppear { sites = ScoutServices.shared.siteRules.sites(rule) }
-    .sheet(isPresented: $askingPIN) {
+    // Cleared on dismissal, not only on success. An action that was queued
+    // and then cancelled at the PIN used to stay queued, and the next PIN
+    // entered on this screen — for something else entirely, by whoever knows
+    // it — committed it too. Someone could ask to allow a site, cancel, and
+    // have it allowed later on the back of an unrelated answer.
+    //
+    // This runs after `onDone` on the success path, where it only repeats
+    // what that already did.
+    .sheet(
+      isPresented: $askingPIN,
+      onDismiss: {
+        pendingSite = nil
+        pendingRemoval = []
+      }
+    ) {
       ScoutPINSheet(mode: .confirm) { _ in
         if let pendingSite { commit(pendingSite) }
         if !pendingRemoval.isEmpty { drop(pendingRemoval) }
@@ -127,6 +141,7 @@ struct ScoutSiteListView: View {
     // does not, so only one of them asks.
     if ScoutSupervision.shared.needsPIN(rule == .allow ? .allowSite : .blockSite) {
       pendingSite = site
+      pendingRemoval = []
       askingPIN = true
       return
     }
@@ -148,6 +163,7 @@ struct ScoutSiteListView: View {
     let going = offsets.map { sites[$0] }
     if rule == .block, ScoutSupervision.shared.needsPIN(.allowSite) {
       pendingRemoval = going
+      pendingSite = nil
       askingPIN = true
       // Put the rows back: the list already animated them away, and they are
       // not gone until the PIN says so.
