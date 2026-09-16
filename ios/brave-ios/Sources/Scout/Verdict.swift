@@ -33,11 +33,14 @@ public struct Verdict: Equatable {
 
   public static func parse(_ data: Data) -> Verdict? {
     guard let obj = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else { return nil }
-    // TODO(backend): the live backend does not return a `security` field yet —
-    // content categories work today, security is pending backend work. Until
-    // it ships, treat an absent/unrecognized `security` as `.safe` so a
-    // category-only response still parses as a valid verdict.
-    let security = (obj["security"] as? String).flatMap(SecurityStatus.init(rawValue:)) ?? .safe
+    // Required. It used to default to safe while the service did not send it
+    // yet; the service sends it on every path now, its schema requires it,
+    // and the default meant any other JSON object — an error body answered
+    // with a 200, a proxy's page — was cached as a week of "safe". A reply
+    // without a status this app can read is a failed check, and the user's
+    // fail mode decides what happens next.
+    guard let security = (obj["security"] as? String).flatMap(SecurityStatus.init(rawValue:))
+    else { return nil }
     let categories = ContentCategory.set(fromWire: obj["categories"] as? [String] ?? [])
     return Verdict(
       security: security,

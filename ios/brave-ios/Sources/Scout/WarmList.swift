@@ -24,6 +24,9 @@ public final class WarmList: WarmListProviding {
   private let maxAge: TimeInterval
   private let perPageHosts: Set<String>
 
+  /// How far behind the server that built the list this phone's clock may be.
+  private static let clockSlack: TimeInterval = 24 * 3600
+
   /// - Parameter maxAge: how long the file may answer for before the phone
   ///   goes back to asking. A device that stops updating should ask, not trust
   ///   a file from months ago.
@@ -103,7 +106,12 @@ public final class WarmList: WarmListProviding {
   /// `VerdictCache.storedAt` is used today) would overstate how fresh the
   /// answer is.
   public func verdict(for url: URL) -> Verdict? {
-    guard now().timeIntervalSince(lastAffirmed) < maxAge else { return nil }
+    // A list built ahead of this phone's clock by more than a day means the
+    // clock is wrong, and its age then says nothing — a negative age would
+    // pass the check below for as long as the clock stayed wrong. The list
+    // stops answering and the phone asks instead, which is only ever slower.
+    let age = now().timeIntervalSince(lastAffirmed)
+    guard age > -Self.clockSlack, age < maxAge else { return nil }
     // This is the guard that actually holds regardless of how the file was
     // built: even a wrongly built list — one carrying a per-page-format row
     // like "wikipedia.org/wiki/Cat" — must never answer for a per-page host.

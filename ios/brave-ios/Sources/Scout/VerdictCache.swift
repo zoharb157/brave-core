@@ -61,8 +61,17 @@ public final class VerdictCache {
     return verdict.security == .safe ? Self.safeTTL : Self.riskyTTL
   }
 
+  /// How far in the future a verdict may be filed and still be believed.
+  ///
+  /// Network time nudges the clock back by seconds all the time, and that
+  /// should not throw fresh answers away. A verdict filed further ahead than
+  /// this was filed under a date someone set, and trusting it would keep it
+  /// alive until the real date caught up — years, if they chose.
+  private static let clockSlack: TimeInterval = 60
+
   private func isExpired(_ e: Entry) -> Bool {
-    now().timeIntervalSince(e.storedAt) >= ttl(for: e.verdict)
+    let age = now().timeIntervalSince(e.storedAt)
+    return age < -Self.clockSlack || age >= ttl(for: e.verdict)
   }
 
   private func touch(_ k: String) {
@@ -97,7 +106,7 @@ public final class VerdictCache {
       guard let e = entries[k] else { return nil }
       let age = now().timeIntervalSince(e.storedAt)
       let life = ttl(for: e.verdict)
-      if age >= life + grace {
+      if age < -Self.clockSlack || age >= life + grace {
         entries[k] = nil
         lru.removeAll { $0 == k }
         return nil
@@ -201,6 +210,9 @@ public final class VerdictCache {
                 "categories": e.verdict.categories.map(\.rawValue),
                 "title": e.verdict.title, "summary": e.verdict.summary,
                 "reasons": e.verdict.reasons,
+                // Decides the entry's lifetime. Leaving it out turned every
+                // one-hour guess into a one-week answer on the next launch.
+                "readPage": e.verdict.readPage,
                 "storedAt": e.storedAt.timeIntervalSince1970]
       }
     }
@@ -218,11 +230,16 @@ public final class VerdictCache {
               let security = SecurityStatus(rawValue: securityStr),
               let storedAt = d["storedAt"] as? TimeInterval else { continue }
         let categories = ContentCategory.set(fromWire: d["categories"] as? [String] ?? [])
+        let stored = Date(timeIntervalSince1970: storedAt)
+        // A file written before `readPage` existed says nothing about it, and
+        // every verdict of that era claimed to have read the page.
         let v = Verdict(security: security, categories: categories,
                         title: d["title"] as? String ?? "",
                         summary: d["summary"] as? String ?? "",
-                        reasons: d["reasons"] as? [String] ?? [])
-        let entry = Entry(verdict: v, storedAt: Date(timeIntervalSince1970: storedAt))
+                        reasons: d["reasons"] as? [String] ?? [],
+                        readPage: d["readPage"] as? Bool ?? true,
+                        fetchedAt: stored)
+        let entry = Entry(verdict: v, storedAt: stored)
         // A stale entry would only be dropped on its next lookup; skip it now so a
         // reload can't carry more than `maxEntries` worth of dead weight.
         if isExpired(entry) || entries.count >= maxEntries { continue }
