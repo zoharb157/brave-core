@@ -47,6 +47,11 @@ extension Preferences.Scout {
   /// that look like one series and are not.
   public static let sitesChecked = Preferences.Option<Int>(key: "scout.tally.checked", default: 0)
   public static let sitesBlocked = Preferences.Option<Int>(key: "scout.tally.blocked", default: 0)
+  /// Blocks the user chose to walk through. The Protection card showed the
+  /// size of the standing allow list in this slot, which is a different thing
+  /// and is nearly always zero — so the one figure that says protection was
+  /// bypassed read zero however often it happened.
+  public static let sitesContinued = Preferences.Option<Int>(key: "scout.tally.continued", default: 0)
 }
 
 /// Sends the browser's decisions to the activity log.
@@ -145,6 +150,10 @@ public final class ScoutActivityReporter {
   /// taps "continue" the original may already be on the server, and a log that
   /// rewrites its own history is worse than one with two rows.
   public func recordContinued(_ url: URL, isPrivate: Bool) {
+    // Counted like the other two, and left uncounted in a private tab for the
+    // same reason: the point of one is that the visit leaves no trace, and a
+    // number that moves is a trace.
+    if !isPrivate { Preferences.Scout.sitesContinued.value += 1 }
     enqueue([
       "url": String(url.absoluteString.prefix(2048)),
       "decision": "allow",

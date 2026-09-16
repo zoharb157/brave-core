@@ -48,6 +48,7 @@ struct ScoutProtectionView: View {
   @State private var recent: [BlockRecord] = []
   @State private var checkedCount = 0
   @State private var blockedTally = 0
+  @State private var continuedTally = 0
   /// Read fresh each time the screen appears: the user may have just come back
   /// from changing it in iOS Settings.
   @State private var isDefaultBrowser = false
@@ -162,6 +163,12 @@ struct ScoutProtectionView: View {
     // Not `recent.count`: the list below is capped, so past that cap the card
     // would stop counting while blocks kept happening.
     blockedTally = services.blockedSiteCount
+    // Not `allowedCount`: that is how many sites carry a standing "always
+    // allow" rule, which is a different question and is usually zero. Beside
+    // "Sites checked" and "Blocked" — both lifetime counts of what happened —
+    // this slot has to be one too, or the row reads as three of a kind and
+    // is not.
+    continuedTally = Preferences.Scout.sitesContinued.value
     // "Scout is checking every site" is only true when the system hands Scout
     // the links. Until then this screen says the narrower thing that is
     // actually true, rather than promising cover the browser doesn't have.
@@ -203,7 +210,7 @@ struct ScoutProtectionView: View {
         divider
         statistic(blockedTally, Strings.ScoutProtection.statusBlocked)
         divider
-        statistic(allowedCount, Strings.ScoutProtection.statusAllowed)
+        statistic(continuedTally, Strings.ScoutProtection.statusAllowed)
       }
       .fixedSize(horizontal: false, vertical: true)
     }
