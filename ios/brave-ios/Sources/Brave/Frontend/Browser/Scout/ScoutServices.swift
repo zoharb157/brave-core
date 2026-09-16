@@ -122,7 +122,20 @@ public final class ScoutServices {
       base: policy, blockedCategories: { Preferences.ScoutBlocking.chosen },
       // Read live, like the categories, so changing it in Settings applies to
       // the very next navigation rather than the next launch.
-      failMode: { Preferences.Scout.askWhenCheckFails.value ? .closed : .open })
+      //
+      // A supervised phone always asks. It is already sitting on a checking
+      // screen, and a check that could not finish is not a verdict — opening
+      // the page anyway would be the one thing supervision promises not to do.
+      // Failing open is a choice for someone deciding for themselves, which is
+      // exactly who a supervised phone is not.
+      //
+      // The preference is read directly rather than through
+      // `ScoutSupervision.shared`, which is MainActor-isolated: this closure is
+      // called from `decide`, which is nonisolated and runs off the main actor.
+      failMode: {
+        if Preferences.Scout.supervised.value { return .closed }
+        return Preferences.Scout.askWhenCheckFails.value ? .closed : .open
+      })
     // The user's own per-site decision is the outermost layer: it is the one
     // input that is an explicit human answer about this exact site, so it wins
     // over both the category settings and the check.
