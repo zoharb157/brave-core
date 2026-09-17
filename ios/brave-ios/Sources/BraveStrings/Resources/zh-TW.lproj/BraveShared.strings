@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "私密分頁";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "你的搜尋引擎 %@ 沒有 Scout 可以開啟的安全模式，所以露骨結果仍可能出現在頁面上。";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "輸入網站名稱，例如 example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "未經檢查就開啟";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Scout 檢查和封鎖了什麼，以及去過哪裡";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "檢查無法完成時詢問";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "檢查失敗可能是因為手機沒訊號，而不是因為網站有問題。關閉時，這些頁面會開啟，並在活動紀錄中標出。開啟時，Scout 會停下來詢問。";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "這支手機處於看護狀態時，Scout 總會詢問。沒能完成的檢查不算結論，所以頁面不會開啟。";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "錯誤次數過多。請在 %@後重試。";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "讓家長看護這支手機";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "家長可以在自己的手機上看到 Scout 在這裡檢查和封鎖了什麼。他們無法從那裡更改任何設定，開啟期間無痕分頁會關閉。";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "開啟";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "設定 4 位數 PIN 碼";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "允許被封鎖的網站、關閉某個類別，或再次關閉此功能時需要。繼續瀏覽單次封鎖的頁面則不需要。";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "再輸入一次";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "兩次輸入不一致";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "PIN 碼不正確";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "輸入 PIN 碼";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "把這組代碼給家長";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "家長需在十分鐘內於 %@ 輸入。只能使用一次。";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "新代碼";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout 無法連上網路來產生代碼。請重試。";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "停止分享";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "家長儲存的任何連結都會立即失效。";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "關閉看護";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "已知的釣魚或惡意軟體";

@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "비공개 탭";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "사용 중인 검색 엔진 %@에는 Scout가 켤 수 있는 세이프 모드가 없어서 노골적인 결과가 여전히 페이지에 나타날 수 있습니다.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "example.com처럼 사이트 이름을 입력하세요";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "확인 없이 열림";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Scout가 확인하고 차단하는 것, 그리고 지나온 모든 곳";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "확인을 끝내지 못하면 묻기";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "확인은 사이트가 위험해서가 아니라 휴대폰 신호가 끊겨서 실패할 수도 있습니다. 끄면 그런 페이지는 열리고 활동에 표시됩니다. 켜면 Scout가 멈추고 묻습니다.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "이 휴대폰을 보호자가 지켜보는 동안 Scout는 항상 묻습니다. 끝내지 못한 확인은 판정이 아니므로 페이지를 열지 않습니다.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "잘못 입력한 횟수가 너무 많습니다. %@ 후에 다시 시도하세요.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "보호자가 이 휴대폰을 지켜보게 하기";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "보호자는 자신의 휴대폰에서 Scout가 여기서 무엇을 확인하고 차단했는지 볼 수 있습니다. 거기서는 아무것도 바꿀 수 없고, 이 기능이 켜져 있는 동안 프라이빗 탭은 꺼집니다.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "켜기";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "4자리 PIN 정하기";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "차단된 사이트를 허용하거나, 카테고리를 끄거나, 이 기능을 다시 끌 때 필요합니다. 차단 한 번을 지나 계속하는 데에는 필요하지 않습니다.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "한 번 더 입력하세요";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "서로 다릅니다";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "PIN이 맞지 않습니다";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "PIN 입력";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "이 코드를 보호자에게 알려 주세요";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "보호자가 10분 안에 %@에서 입력합니다. 한 번만 사용할 수 있습니다.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "새 코드";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "코드를 만들기 위한 인터넷 연결에 실패했습니다. 다시 시도하세요.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "공유 중지";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "보호자가 저장한 링크는 바로 작동을 멈춥니다.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "지켜보기 끄기";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "알려진 피싱 또는 악성코드";

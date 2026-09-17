@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "プライベートタブ";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "お使いの検索エンジン %@ には Scout が有効にできるセーフモードがないため、露骨な結果がページに表示されることがあります。";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "example.com のようにサイト名を入力してください";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "確認せずに開きました";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Scout が何を確認してブロックしたか、どこを通ったか";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "確認が終わらないときに尋ねる";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "確認が失敗するのは、サイトが危険だからではなく、端末の電波が途切れたからということもあります。オフのときはそのページが開き、アクティビティに印が付きます。オンのときは Scout がいったん止まって尋ねます。";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "この端末が見守られている間、Scout は必ず尋ねます。終わらなかった確認は判定ではないため、ページは開きません。";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "間違いが多すぎます。%@後にもう一度お試しください。";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "保護者にこの端末を見守ってもらう";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "保護者は自分の端末から、Scout がここで何を確認しブロックしたかを見られます。そこから設定を変えることはできず、これがオンの間はプライベートタブが無効になります。";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "オンにする";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "4 桁の PIN を決めてください";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "ブロックされたサイトの許可、カテゴリのオフ、これをオフに戻すときに必要です。1 回のブロックを続行するだけなら必要ありません。";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "もう一度入力してください";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "一致しません";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "この PIN は一致しません";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "PIN を入力";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "このコードを保護者に伝えてください";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "保護者は 10 分以内に %@ で入力します。1 回だけ使えます。";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "新しいコード";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "コードを作るためのインターネット接続ができませんでした。もう一度お試しください。";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "共有を停止";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "保護者が保存したリンクは、すぐに使えなくなります。";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "見守りをオフにする";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "既知のフィッシングまたはマルウェア";

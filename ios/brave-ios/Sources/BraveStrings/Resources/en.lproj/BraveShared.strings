@@ -1,2 +1,74 @@
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Your search engine, %@, has no safe mode Scout can turn on, so explicit results can still reach the page.";
 
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Enter a site name, like example.com";
 
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Opened without checking";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "What Scout checks and blocks, and everywhere it has been";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Ask if a check can't finish";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "A check can fail because the phone lost signal, not because the site is bad. Off, those pages open and are marked in your activity. On, Scout stops and asks.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "While this phone is supervised, Scout always asks. A check that couldn't finish isn't a verdict, so the page isn't opened.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Too many wrong tries. Try again in %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Let a parent watch this phone";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "A parent can see what Scout checked and blocked here, from their own phone. They can't change anything from there, and private tabs are turned off while this is on.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Turn on";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Choose a 4-digit PIN";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Needed to allow a blocked site, turn a category off, or turn this back off. Continuing past one block does not need it.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Enter it again";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Those don't match";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "That PIN doesn't match";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Enter the PIN";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Give this code to the parent";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "They enter it at %@ within ten minutes. It works once.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "New code";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout couldn't reach the internet to make a code. Try again.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Stop sharing";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Any link a parent saved stops working straight away.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Turn off supervision";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Known phishing or malware";

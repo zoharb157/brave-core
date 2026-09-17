@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Privétabblad";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Je zoekmachine %@ heeft geen veilige modus die Scout kan aanzetten, dus expliciete resultaten kunnen nog steeds de pagina bereiken.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Voer een sitenaam in, zoals example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Geopend zonder controle";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Wat Scout controleert en blokkeert, en overal waar het is geweest";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Vragen als een controle niet lukt";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Een controle kan mislukken doordat de telefoon geen bereik had, niet doordat de site gevaarlijk is. Uit worden die pagina's geopend en gemarkeerd in je activiteit. Aan stopt Scout en vraagt het je.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Zolang deze telefoon onder toezicht staat, vraagt Scout het altijd. Een controle die niet is afgerond, is geen oordeel, dus de pagina wordt niet geopend.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Te veel foute pogingen. Probeer het over %@ opnieuw.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Laat een ouder met deze telefoon meekijken";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Een ouder ziet vanaf de eigen telefoon wat Scout hier heeft gecontroleerd en geblokkeerd. Van daaruit kan er niets worden gewijzigd, en privétabbladen staan uit zolang dit aan is.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Aanzetten";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Kies een pincode van 4 cijfers";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Nodig om een geblokkeerde site toe te staan, een categorie uit te zetten of dit weer uit te zetten. Om door één blokkering heen te gaan is hij niet nodig.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Voer hem nog een keer in";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Die komen niet overeen";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Die pincode klopt niet";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Voer de pincode in";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Geef deze code aan de ouder";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Ze voeren hem binnen tien minuten in op %@. Hij werkt één keer.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Nieuwe code";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout kon het internet niet bereiken om een code te maken. Probeer het opnieuw.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Delen stoppen";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Elke koppeling die een ouder heeft bewaard, werkt meteen niet meer.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Toezicht uitzetten";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Bekende phishing of malware";

@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Yksityinen välilehti";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Hakukoneessasi %@ ei ole turvallista tilaa, jonka Scout voisi ottaa käyttöön, joten rajut tulokset voivat yhä päätyä sivulle.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Kirjoita sivuston nimi, esimerkiksi example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Avattu tarkistamatta";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Mitä Scout tarkistaa ja estää, ja kaikki missä se on käynyt";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Kysy, jos tarkistus ei valmistu";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Tarkistus voi epäonnistua siksi, että puhelimesta katosi kenttä, ei siksi että sivusto olisi vaarallinen. Pois päältä nämä sivut avataan ja merkitään toimintoihisi. Päällä Scout pysähtyy ja kysyy.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Niin kauan kuin tätä puhelinta valvotaan, Scout kysyy aina. Kesken jäänyt tarkistus ei ole tulos, joten sivua ei avata.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Liian monta väärää yritystä. Yritä uudelleen, kun %@ on kulunut.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Anna vanhemman seurata tätä puhelinta";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Vanhempi näkee omasta puhelimestaan, mitä Scout on täällä tarkistanut ja estänyt. Sieltä ei voi muuttaa mitään, ja yksityiset välilehdet ovat pois käytöstä niin kauan kuin tämä on päällä.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Ota käyttöön";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Valitse 4-numeroinen PIN-koodi";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Tarvitaan estetyn sivuston sallimiseen, luokan poistamiseen käytöstä tai tämän poistamiseen käytöstä. Yksittäisen eston ohittamiseen sitä ei tarvita.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Kirjoita se uudelleen";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Nämä eivät täsmää";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "PIN-koodi ei täsmää";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Anna PIN-koodi";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Anna tämä koodi vanhemmalle";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Hän syöttää sen osoitteessa %@ kymmenen minuutin kuluessa. Se toimii kerran.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Uusi koodi";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout ei saanut yhteyttä internetiin koodin luomiseksi. Yritä uudelleen.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Lopeta jakaminen";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Jokainen vanhemman tallentama linkki lakkaa toimimasta heti.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Poista valvonta käytöstä";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Tunnettu tietojenkalastelu tai haittaohjelma";

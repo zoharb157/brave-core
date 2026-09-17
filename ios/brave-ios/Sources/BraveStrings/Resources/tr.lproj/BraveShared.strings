@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Gizli sekme";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Arama motorunuz %@ için Scout'un açabileceği bir güvenli mod yok, bu yüzden müstehcen sonuçlar hâlâ sayfaya ulaşabilir.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Bir site adı yazın, örneğin example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Kontrol edilmeden açıldı";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Scout'un neleri kontrol edip engellediği ve nerelerde bulunduğu";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Bir kontrol tamamlanamazsa sor";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Bir kontrol, site tehlikeli olduğu için değil, telefon çekmediği için de başarısız olabilir. Kapalıyken bu sayfalar açılır ve etkinliğinizde işaretlenir. Açıkken Scout durur ve size sorar.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Bu telefon gözetim altındayken Scout her zaman sorar. Tamamlanamayan bir kontrol bir sonuç değildir, bu yüzden sayfa açılmaz.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Çok fazla hatalı deneme. %@ sonra tekrar deneyin.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Bir ebeveyn bu telefonu izleyebilsin";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Bir ebeveyn, kendi telefonundan Scout'un burada neleri kontrol ettiğini ve engellediğini görür. Oradan hiçbir şeyi değiştiremez ve bu açıkken gizli sekmeler kapalıdır.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Aç";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "4 haneli bir PIN seçin";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Engellenen bir siteye izin vermek, bir kategoriyi kapatmak ya da bunu yeniden kapatmak için gerekir. Tek bir engeli geçip devam etmek için gerekmez.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Tekrar girin";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Bunlar aynı değil";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Bu PIN eşleşmiyor";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "PIN'i girin";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Bu kodu ebeveyne verin";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "On dakika içinde %@ adresinde girer. Bir kez çalışır.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Yeni kod";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout kod oluşturmak için internete ulaşamadı. Tekrar deneyin.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Paylaşmayı durdur";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Bir ebeveynin kaydettiği her bağlantı hemen çalışmayı bırakır.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Gözetimi kapat";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Bilinen kimlik avı veya kötü amaçlı yazılım";

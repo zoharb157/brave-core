@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Filă privată";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Motorul tău de căutare, %@, nu are un mod sigur pe care Scout să îl poată activa, așa că rezultatele explicite pot ajunge în continuare pe pagină.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Scrie un nume de site, de exemplu example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Deschis fără verificare";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Ce verifică și ce blochează Scout, și pe unde a trecut";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Întreabă dacă o verificare nu se termină";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "O verificare poate eșua pentru că telefonul a pierdut semnalul, nu pentru că site-ul e periculos. Oprit, paginile acelea se deschid și sunt marcate în activitatea ta. Pornit, Scout se oprește și te întreabă.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Cât timp acest telefon este supravegheat, Scout întreabă mereu. O verificare care nu s-a încheiat nu este un verdict, așa că pagina nu se deschide.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Prea multe încercări greșite. Încearcă din nou peste %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Lasă un părinte să urmărească acest telefon";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Un părinte poate vedea de pe propriul telefon ce a verificat și ce a blocat Scout aici. De acolo nu poate schimba nimic, iar filele private sunt oprite cât timp această opțiune e pornită.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Pornește";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Alege un PIN din 4 cifre";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Necesar pentru a permite un site blocat, a opri o categorie sau a opri asta la loc. Pentru a trece de o singură blocare nu e nevoie de el.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Scrie-l din nou";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Nu se potrivesc";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "PIN-ul nu se potrivește";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Introdu PIN-ul";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Dă acest cod părintelui";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Îl introduce pe %@ în zece minute. Funcționează o singură dată.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Cod nou";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout nu a putut ajunge la internet ca să creeze un cod. Încearcă din nou.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Oprește partajarea";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Orice legătură salvată de un părinte nu mai funcționează imediat.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Oprește supravegherea";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Phishing sau program periculos cunoscut";

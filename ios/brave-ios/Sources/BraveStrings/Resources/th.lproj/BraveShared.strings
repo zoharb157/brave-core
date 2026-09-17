@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "แท็บส่วนตัว";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "เครื่องมือค้นหาของคุณ %@ ไม่มีโหมดปลอดภัยที่ Scout เปิดให้ได้ ผลลัพธ์ที่โจ่งแจ้งจึงยังไปถึงหน้าเว็บได้";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "พิมพ์ชื่อเว็บไซต์ เช่น example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "เปิดโดยไม่ได้ตรวจ";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "สิ่งที่ Scout ตรวจและบล็อก และทุกที่ที่ผ่านมา";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "ถามเมื่อการตรวจไม่สำเร็จ";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "การตรวจอาจไม่สำเร็จเพราะโทรศัพท์ขาดสัญญาณ ไม่ใช่เพราะเว็บไซต์อันตราย เมื่อปิด หน้าเหล่านั้นจะเปิดและถูกทำเครื่องหมายไว้ในกิจกรรมของคุณ เมื่อเปิด Scout จะหยุดแล้วถาม";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "ขณะที่เครื่องนี้อยู่ใต้การดูแล Scout จะถามเสมอ การตรวจที่ทำไม่สำเร็จไม่ใช่ผลการตัดสิน หน้าเว็บจึงไม่ถูกเปิด";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "ลองผิดหลายครั้งเกินไป ลองใหม่ในอีก %@";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "ให้ผู้ปกครองดูแลเครื่องนี้";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "ผู้ปกครองดูจากโทรศัพท์ของตนเองได้ว่า Scout ตรวจและบล็อกอะไรที่นี่บ้าง จากตรงนั้นเปลี่ยนอะไรไม่ได้ และแท็บส่วนตัวจะปิดอยู่ตราบที่เปิดใช้สิ่งนี้";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "เปิด";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "ตั้ง PIN 4 หลัก";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "ใช้เพื่ออนุญาตเว็บไซต์ที่ถูกบล็อก ปิดหมวดหมู่ หรือปิดสิ่งนี้อีกครั้ง การกดผ่านการบล็อกครั้งเดียวไม่ต้องใช้";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "พิมพ์อีกครั้ง";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "ไม่ตรงกัน";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "PIN ไม่ตรงกัน";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "ใส่ PIN";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "ให้รหัสนี้แก่ผู้ปกครอง";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "ผู้ปกครองกรอกที่ %@ ภายในสิบนาที ใช้ได้ครั้งเดียว";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "รหัสใหม่";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout ต่ออินเทอร์เน็ตเพื่อสร้างรหัสไม่ได้ ลองอีกครั้ง";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "หยุดแบ่งปัน";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "ลิงก์ที่ผู้ปกครองบันทึกไว้จะหยุดทำงานทันที";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "ปิดการดูแล";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "ฟิชชิงหรือมัลแวร์ที่รู้จัก";

@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Pestanya privada";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "El teu cercador, %@, no té cap mode segur que Scout pugui activar, així que els resultats explícits encara poden arribar a la pàgina.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Escriu un nom de lloc, per exemple example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Obert sense comprovar";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Què comprova i bloca Scout, i tot per on ha passat";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Pregunta si una comprovació no acaba";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Una comprovació pot fallar perquè el telèfon ha perdut cobertura, no perquè el lloc sigui perillós. Desactivat, aquestes pàgines s'obren i queden marcades a la teva activitat. Activat, Scout s'atura i pregunta.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Mentre aquest telèfon estigui supervisat, Scout sempre pregunta. Una comprovació que no ha pogut acabar no és un veredicte, així que la pàgina no s'obre.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Massa intents incorrectes. Torna-ho a provar d'aquí a %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Deixa que un pare o una mare segueixi aquest telèfon";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Un pare o una mare pot veure des del seu telèfon què ha comprovat i blocat Scout aquí. Des d'allà no pot canviar res, i les pestanyes privades queden desactivades mentre això estigui activat.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Activa";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Tria un PIN de 4 xifres";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Cal per permetre un lloc blocat, desactivar una categoria o tornar a desactivar això. Continuar més enllà d'un bloqueig concret no el demana.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Torna a escriure'l";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "No coincideixen";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Aquest PIN no coincideix";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Escriu el PIN";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Dona aquest codi al pare o a la mare";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "L'introdueix a %@ abans de deu minuts. Funciona un cop.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Codi nou";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout no s'ha pogut connectar a internet per crear un codi. Torna-ho a provar.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Deixa de compartir";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Qualsevol enllaç que hagi desat un pare o una mare deixa de funcionar a l'instant.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Desactiva la supervisió";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Phishing o programari maliciós conegut";

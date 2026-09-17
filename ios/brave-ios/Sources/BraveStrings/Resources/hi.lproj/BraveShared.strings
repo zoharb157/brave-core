@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "निजी टैब";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "आपके सर्च इंजन %@ में ऐसा कोई सुरक्षित मोड नहीं है जिसे Scout चालू कर सके, इसलिए अश्लील परिणाम अब भी पृष्ठ तक पहुँच सकते हैं।";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "साइट का नाम लिखें, जैसे example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "बिना जाँचे खोला गया";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Scout क्या जाँचता और रोकता है, और वह कहाँ-कहाँ गया";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "जाँच पूरी न हो तो पूछें";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "जाँच इसलिए भी विफल हो सकती है कि फ़ोन का सिग्नल चला गया, इसलिए नहीं कि साइट ख़तरनाक है। बंद होने पर वे पृष्ठ खुल जाते हैं और आपकी गतिविधि में चिह्नित हो जाते हैं। चालू होने पर Scout रुककर पूछता है।";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "जब तक इस फ़ोन पर निगरानी है, Scout हमेशा पूछता है। जो जाँच पूरी न हो सकी वह कोई नतीजा नहीं है, इसलिए पृष्ठ नहीं खोला जाता।";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "बहुत बार ग़लत कोशिश। %@ बाद फिर कोशिश करें।";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "माता-पिता को इस फ़ोन पर नज़र रखने दें";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "माता या पिता अपने फ़ोन से देख सकते हैं कि Scout ने यहाँ क्या जाँचा और क्या रोका। वहाँ से वे कुछ भी बदल नहीं सकते, और जब तक यह चालू है निजी टैब बंद रहते हैं।";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "चालू करें";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "4 अंकों का पिन चुनें";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "किसी रोकी गई साइट को अनुमति देने, कोई श्रेणी बंद करने या इसे वापस बंद करने के लिए ज़रूरी है। किसी एक रोक के आगे बढ़ने के लिए इसकी ज़रूरत नहीं।";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "इसे फिर से लिखें";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "ये मेल नहीं खाते";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "यह पिन मेल नहीं खाता";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "पिन दर्ज करें";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "यह कोड माता-पिता को दें";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "वे इसे दस मिनट के भीतर %@ पर दर्ज करते हैं। यह एक बार काम करता है।";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "नया कोड";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "कोड बनाने के लिए Scout इंटरनेट तक नहीं पहुँच सका। फिर कोशिश करें।";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "साझा करना बंद करें";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "माता-पिता ने जो भी लिंक सहेजा है, वह तुरंत काम करना बंद कर देता है।";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "निगरानी बंद करें";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "ज्ञात फ़िशिंग या मैलवेयर";

@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Zasebni zavihek";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Vaš iskalnik %@ nima varnega načina, ki bi ga Scout lahko vklopil, zato lahko eksplicitni rezultati še vedno pridejo na stran.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Vnesite ime spletnega mesta, na primer example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Odprto brez preverjanja";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Kaj Scout preverja in blokira ter kje vse je bil";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Vprašaj, če se preverjanje ne dokonča";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Preverjanje lahko spodleti, ker je telefon izgubil signal, ne ker bi bilo spletno mesto nevarno. Izklopljeno se te strani odprejo in so označene v vaši dejavnosti. Vklopljeno se Scout ustavi in vpraša.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Dokler je ta telefon pod nadzorom, Scout vedno vpraša. Preverjanje, ki se ni dokončalo, ni izid, zato se stran ne odpre.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Preveč napačnih poskusov. Poskusite znova čez %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Naj starš spremlja ta telefon";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Starš lahko s svojega telefona vidi, kaj je Scout tukaj preveril in blokiral. Od tam ne more ničesar spremeniti, zasebni zavihki pa so izklopljeni, dokler je to vklopljeno.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Vklopi";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Izberite 4-mestno kodo PIN";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Potrebna je za dovolitev blokiranega spletnega mesta, izklop kategorije ali ponoven izklop tega. Za nadaljevanje mimo posamezne blokade je ni treba.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Vnesite jo znova";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Se ne ujemata";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Ta koda PIN se ne ujema";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Vnesite kodo PIN";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Dajte to kodo staršu";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Vnese jo na %@ v desetih minutah. Deluje enkrat.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Nova koda";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout ni mogel do interneta, da bi ustvaril kodo. Poskusite znova.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Prenehaj deliti";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Vsaka povezava, ki jo je starš shranil, takoj preneha delovati.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Izklopi nadzor";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Znano lažno predstavljanje ali zlonamerna programska oprema";

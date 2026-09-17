@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Приватна картица";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Ваш претраживач %@ нема безбедни режим који би Scout могао да укључи, па експлицитни резултати и даље могу да стигну на страницу.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Упишите назив сајта, на пример example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Отворено без провере";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Шта Scout проверава и блокира и где је све био";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Питај ако провера не може да се заврши";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Провера може да не успе зато што је телефон изгубио сигнал, а не зато што је сајт опасан. Искључено, те странице се отварају и означавају у вашој активности. Укључено, Scout стаје и пита.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Док је овај телефон под надзором, Scout увек пита. Провера која се није завршила није пресуда, па се страница не отвара.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Превише погрешних покушаја. Покушајте поново за %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Нека родитељ прати овај телефон";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Родитељ са свог телефона види шта је Scout овде проверио и блокирао. Одатле не може ништа да промени, а приватне картице су искључене док је ово укључено.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Укључи";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Изаберите PIN од 4 цифре";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Потребан је за дозвољавање блокираног сајта, искључивање категорије или поновно искључивање овога. За наставак преко једне блокаде није потребан.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Упишите га поново";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Не подударају се";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Тај PIN се не подудара";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Упишите PIN";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Дајте овај кôд родитељу";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Уписује га на %@ у року од десет минута. Ради једном.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Нови кôд";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout није могао да дође до интернета да направи кôд. Покушајте поново.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Прекини дељење";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Сваки линк који је родитељ сачувао одмах престаје да ради.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Искључи надзор";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Познати фишинг или злонамерни софтвер";

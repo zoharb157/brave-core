@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Anonymní panel";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Váš vyhledávač %@ nemá bezpečný režim, který by Scout mohl zapnout, takže explicitní výsledky se stále mohou dostat na stránku.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Zadejte název webu, například example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Otevřeno bez kontroly";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Co Scout kontroluje a blokuje a kde všude byl";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Zeptat se, když kontrola neproběhne";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Kontrola může selhat proto, že telefon ztratil signál, ne proto, že je web nebezpečný. Vypnuto se tyto stránky otevřou a označí ve vaší aktivitě. Zapnuto se Scout zastaví a zeptá.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Dokud je tento telefon pod dohledem, Scout se ptá vždy. Kontrola, která neproběhla, není výsledek, takže se stránka neotevře.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Příliš mnoho chybných pokusů. Zkuste to znovu za %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Nechte rodiče sledovat tento telefon";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Rodič uvidí ze svého telefonu, co tady Scout zkontroloval a zablokoval. Odtud nemůže nic změnit a anonymní panely jsou vypnuté, dokud je tohle zapnuté.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Zapnout";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Zvolte 4místný PIN";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Potřebný k povolení blokovaného webu, vypnutí kategorie nebo vypnutí tohoto nastavení. Pokračování přes jednu blokaci ho nevyžaduje.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Zadejte ho znovu";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Neshodují se";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Tento PIN nesouhlasí";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Zadejte PIN";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Dejte tento kód rodiči";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Zadá ho na %@ do deseti minut. Funguje jednou.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Nový kód";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout se nedokázal připojit k internetu a vytvořit kód. Zkuste to znovu.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Ukončit sdílení";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Každé propojení, které si rodič uložil, okamžitě přestane fungovat.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Vypnout dohled";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Známý phishing nebo malware";

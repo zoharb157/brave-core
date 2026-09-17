@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Ιδιωτική καρτέλα";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Η μηχανή αναζήτησής σας, %@, δεν έχει ασφαλή λειτουργία που να μπορεί να ενεργοποιήσει το Scout, οπότε ρητά αποτελέσματα μπορούν ακόμα να φτάσουν στη σελίδα.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Γράψτε ένα όνομα ιστότοπου, για παράδειγμα example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Άνοιξε χωρίς έλεγχο";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Τι ελέγχει και τι αποκλείει το Scout, και παντού όπου έχει βρεθεί";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Ερώτηση αν ένας έλεγχος δεν ολοκληρωθεί";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Ένας έλεγχος μπορεί να αποτύχει επειδή το τηλέφωνο έχασε σήμα, όχι επειδή ο ιστότοπος είναι επικίνδυνος. Ανενεργό, αυτές οι σελίδες ανοίγουν και σημειώνονται στη δραστηριότητά σας. Ενεργό, το Scout σταματά και ρωτά.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Όσο αυτό το τηλέφωνο είναι υπό επίβλεψη, το Scout ρωτά πάντα. Ένας έλεγχος που δεν ολοκληρώθηκε δεν είναι ετυμηγορία, οπότε η σελίδα δεν ανοίγει.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Πάρα πολλές λανθασμένες προσπάθειες. Δοκιμάστε ξανά σε %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Αφήστε έναν γονέα να παρακολουθεί αυτό το τηλέφωνο";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Ένας γονέας βλέπει από το δικό του τηλέφωνο τι έχει ελέγξει και αποκλείσει εδώ το Scout. Από εκεί δεν μπορεί να αλλάξει τίποτα, και οι ιδιωτικές καρτέλες είναι απενεργοποιημένες όσο αυτό είναι ενεργό.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Ενεργοποίηση";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Επιλέξτε PIN 4 ψηφίων";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Χρειάζεται για να επιτρέψετε έναν αποκλεισμένο ιστότοπο, να απενεργοποιήσετε μια κατηγορία ή να το απενεργοποιήσετε ξανά. Για να συνεχίσετε πέρα από έναν μεμονωμένο αποκλεισμό δεν χρειάζεται.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Γράψτε το ξανά";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Δεν ταιριάζουν";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Αυτό το PIN δεν ταιριάζει";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Γράψτε το PIN";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Δώστε αυτόν τον κωδικό στον γονέα";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Τον καταχωρεί στο %@ μέσα σε δέκα λεπτά. Λειτουργεί μία φορά.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Νέος κωδικός";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Το Scout δεν μπόρεσε να συνδεθεί στο διαδίκτυο για να φτιάξει κωδικό. Δοκιμάστε ξανά.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Διακοπή κοινής χρήσης";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Κάθε σύνδεσμος που έχει αποθηκεύσει ένας γονέας παύει αμέσως να λειτουργεί.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Απενεργοποίηση επίβλεψης";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Γνωστό ηλεκτρονικό ψάρεμα ή κακόβουλο λογισμικό";

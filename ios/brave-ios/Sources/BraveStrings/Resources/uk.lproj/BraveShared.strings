@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Приватна вкладка";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "У вашій пошуковій системі %@ немає безпечного режиму, який Scout міг би ввімкнути, тож відверті результати все одно можуть потрапляти на сторінку.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Введіть назву сайту, наприклад example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Відкрито без перевірки";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Що Scout перевіряє і блокує та де він побував";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Питати, якщо перевірка не завершилася";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Перевірка може не пройти через те, що телефон втратив зв'язок, а не через те, що сайт небезпечний. Вимкнено — такі сторінки відкриваються і позначаються у вашій активності. Увімкнено — Scout зупиняється і питає.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Поки за цим телефоном наглядають, Scout питає завжди. Перевірка, яка не завершилася, — це не висновок, тож сторінка не відкривається.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Забагато невдалих спроб. Повторіть через %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Нехай хтось із батьків стежить за цим телефоном";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Хтось із батьків зі свого телефона бачить, що Scout тут перевірив і заблокував. Звідти нічого змінити не можна, а приватні вкладки вимкнені, поки це ввімкнено.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Увімкнути";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Виберіть PIN-код із 4 цифр";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Потрібен, щоб дозволити заблокований сайт, вимкнути категорію або знову це вимкнути. Щоб пройти повз одне блокування, він не потрібен.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Введіть його ще раз";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Вони не збігаються";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Цей PIN-код не збігається";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Введіть PIN-код";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Передайте цей код комусь із батьків";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Його вводять на %@ протягом десяти хвилин. Він працює один раз.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Новий код";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout не зміг вийти в інтернет, щоб створити код. Спробуйте ще раз.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Припинити доступ";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Будь-яке посилання, яке зберіг хтось із батьків, одразу перестає працювати.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Вимкнути нагляд";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Відомий фішинг або шкідливе програмне забезпечення";

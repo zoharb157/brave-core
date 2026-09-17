@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Private Tab";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Dini Suechmaschine %@ het kein Sicherheitsmodus, wo Scout chan iischalte, drum chöned explizierti Ergebnis wiiterhin uf d Siite cho.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Gib en Website-Name ii, zum Bispil example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Ohni Prüefig ufgmacht";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Was Scout prüeft und blockiert, und wo's überall gsi isch";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Frooge, wenn e Prüefig nöd fertig wird";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "E Prüefig cha scheitere, wil s Telefon kein Empfang gha het, nöd wil d Website schlächt isch. Us werded die Siite ufgmacht und i dinere Aktivität markiert. Aa haltet Scout aa und frogt naa.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Solang das Telefon beufsichtiget wird, frogt Scout immer naa. E Prüefig, wo nöd fertig worde isch, isch kes Ergebnis, drum wird d Siite nöd ufgmacht.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Z vill falschi Versuech. Probier's i %@ nomal.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "En Elterteil chan das Telefon mitverfolge";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "En Elterteil gseht vom eigene Telefon us, was Scout da prüeft und blockiert het. Vo det chan me nüt ände, und privati Tabs sind us, solang das aa isch.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Iischalte";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Wähl e 4-stelligi PIN";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Bruucht's, zum e blockierti Website erlaube, e Kategorie usschalte oder das da wieder usschalte. Zum bi eim einzelne Block wiiterfahre bruucht's si nöd.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Gib si nomal ii";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Die stimmed nöd überii";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Die PIN stimmt nöd";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "PIN iigee";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Gib de Code em Elterteil";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Er wird innerhalb vo zäh Minute uf %@ iigee. Er funktioniert eimal.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Neue Code";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout het s Internet nöd erreiche chönne, zum en Code mache. Probier's nomal.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Freigab beände";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Jedi Verbindig, wo en Elterteil gspeicheret het, funktioniert sofort nüm.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Ufsicht usschalte";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Bekannts Phishing oder Schadsoftware";

@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Privat faneblad";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Din søgemaskine %@ har ingen sikker tilstand, Scout kan slå til, så eksplicitte resultater kan stadig nå siden.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Skriv et sidenavn, for eksempel example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Åbnet uden tjek";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Hvad Scout tjekker og blokerer, og alle de steder, den har været";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Spørg, hvis et tjek ikke kan gennemføres";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Et tjek kan mislykkes, fordi telefonen mistede signalet, ikke fordi siden er farlig. Slået fra åbnes de sider og markeres i din aktivitet. Slået til stopper Scout og spørger.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Så længe denne telefon er under opsyn, spørger Scout altid. Et tjek, der ikke blev færdigt, er ingen afgørelse, så siden åbnes ikke.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "For mange forkerte forsøg. Prøv igen om %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Lad en forælder følge med på denne telefon";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "En forælder kan fra sin egen telefon se, hvad Scout har tjekket og blokeret her. Der kan ikke ændres noget derfra, og private faner er slået fra, mens dette er slået til.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Slå til";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Vælg en 4-cifret pinkode";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Nødvendig for at tillade en blokeret side, slå en kategori fra eller slå dette fra igen. At fortsætte forbi en enkelt blokering kræver den ikke.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Skriv den igen";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "De er ikke ens";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Den pinkode passer ikke";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Skriv pinkoden";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Giv denne kode til forælderen";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "De indtaster den på %@ inden for ti minutter. Den virker én gang.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Ny kode";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout kunne ikke nå internettet for at lave en kode. Prøv igen.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Stop deling";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Ethvert link, en forælder har gemt, holder op med at virke med det samme.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Slå opsyn fra";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Kendt phishing eller malware";

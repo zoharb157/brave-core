@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Tab pribadi";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Mesin pencari Anda, %@, tidak punya mode aman yang bisa dinyalakan Scout, jadi hasil vulgar masih bisa sampai ke halaman.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Masukkan nama situs, misalnya example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Dibuka tanpa diperiksa";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Apa yang diperiksa dan diblokir Scout, dan ke mana saja ia pernah pergi";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Tanya jika pemeriksaan tidak selesai";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Pemeriksaan bisa gagal karena ponsel kehilangan sinyal, bukan karena situsnya berbahaya. Saat mati, halaman itu tetap dibuka dan ditandai di aktivitas Anda. Saat hidup, Scout berhenti dan bertanya.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Selama ponsel ini diawasi, Scout selalu bertanya. Pemeriksaan yang tidak selesai bukan keputusan, jadi halamannya tidak dibuka.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Terlalu banyak percobaan yang salah. Coba lagi dalam %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Biarkan orang tua mengawasi ponsel ini";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Orang tua bisa melihat dari ponselnya sendiri apa yang diperiksa dan diblokir Scout di sini. Dari sana mereka tidak bisa mengubah apa pun, dan tab pribadi dimatikan selama ini menyala.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Nyalakan";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Pilih PIN 4 digit";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Diperlukan untuk mengizinkan situs yang diblokir, mematikan sebuah kategori, atau mematikan ini kembali. Melanjutkan melewati satu blokir tidak memerlukannya.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Masukkan sekali lagi";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Keduanya tidak sama";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "PIN itu tidak cocok";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Masukkan PIN";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Berikan kode ini kepada orang tua";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Mereka memasukkannya di %@ dalam sepuluh menit. Kode ini berlaku sekali.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Kode baru";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout tidak bisa menjangkau internet untuk membuat kode. Coba lagi.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Berhenti berbagi";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Setiap tautan yang disimpan orang tua langsung berhenti berfungsi.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Matikan pengawasan";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Phishing atau malware yang dikenal";

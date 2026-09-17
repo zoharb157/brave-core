@@ -3793,3 +3793,78 @@
 
 /* Note that the link was opened in a private tab */
 "scoutProtection.activityPrivate" = "Thẻ riêng tư";
+
+/* Replaces the search filtering explanation when the user's default search engine offers no filter Scout can switch on. %@ is the engine's name, such as Startpage. */
+"scoutProtection.safeSearchUnfilteredDetail" = "Công cụ tìm kiếm của bạn, %@, không có chế độ an toàn nào Scout có thể bật, nên kết quả phản cảm vẫn có thể xuất hiện trên trang.";
+
+/* Hint shown when the text typed into the add-a-site field is not a site name */
+"scoutProtection.siteInvalid" = "Nhập tên trang, ví dụ example.com";
+
+/* Shown in the activity log when a page opened because its safety check could not be completed */
+"scoutProtection.activityUnchecked" = "Mở mà không kiểm tra";
+
+/* Subtitle for the Protection row in Settings */
+"scoutProtection.settingsSubtitle" = "Những gì Scout kiểm tra và chặn, và mọi nơi nó đã đi qua";
+
+/* Title of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFails" = "Hỏi nếu không kiểm tra xong";
+
+/* Explanation of the setting deciding what happens when a safety check cannot complete */
+"scoutProtection.askWhenCheckFailsDetail" = "Việc kiểm tra có thể thất bại vì điện thoại mất sóng, chứ không phải vì trang nguy hiểm. Khi tắt, những trang đó sẽ mở và được đánh dấu trong hoạt động của bạn. Khi bật, Scout dừng lại và hỏi.";
+
+/* Explanation shown when supervision forces the ask-on-failed-check setting on */
+"scoutProtection.askWhenCheckFailsSupervised" = "Khi điện thoại này được giám sát, Scout luôn hỏi. Một lần kiểm tra chưa xong không phải là kết luận, nên trang không được mở.";
+
+/* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
+"scoutProtection.supervisionPINWait" = "Sai quá nhiều lần. Thử lại sau %@.";
+
+/* Title of the screen that turns supervision on */
+"scoutProtection.supervisionTitle" = "Để phụ huynh theo dõi điện thoại này";
+
+/* Explanation of what supervision does */
+"scoutProtection.supervisionDetail" = "Phụ huynh xem được từ điện thoại của mình những gì Scout đã kiểm tra và chặn ở đây. Từ đó họ không thay đổi được gì, và thẻ riêng tư bị tắt khi mục này đang bật.";
+
+/* Button that starts supervision */
+"scoutProtection.supervisionTurnOn" = "Bật";
+
+/* Prompt to set the supervision PIN */
+"scoutProtection.supervisionSetPIN" = "Chọn mã PIN 4 chữ số";
+
+/* Explanation of what the PIN is for */
+"scoutProtection.supervisionPINDetail" = "Cần để cho phép một trang bị chặn, tắt một hạng mục, hoặc tắt lại mục này. Đi tiếp qua một lần chặn thì không cần.";
+
+/* Prompt to confirm the PIN */
+"scoutProtection.supervisionConfirmPIN" = "Nhập lại lần nữa";
+
+/* Shown when the two PIN entries differ */
+"scoutProtection.supervisionPINMismatch" = "Hai mã không khớp";
+
+/* Shown when the PIN entered is wrong */
+"scoutProtection.supervisionWrongPIN" = "Mã PIN không khớp";
+
+/* Title of the sheet asking for the PIN */
+"scoutProtection.supervisionEnterPIN" = "Nhập mã PIN";
+
+/* Title above the pairing code */
+"scoutProtection.supervisionCodeTitle" = "Đưa mã này cho phụ huynh";
+
+/* Where and how long the pairing code can be used; %@ is a web address */
+"scoutProtection.supervisionCodeDetail" = "Họ nhập tại %@ trong vòng mười phút. Mã dùng được một lần.";
+
+/* Button that issues a fresh pairing code */
+"scoutProtection.supervisionNewCode" = "Mã mới";
+
+/* Shown when a pairing code could not be issued */
+"scoutProtection.supervisionCodeFailed" = "Scout không kết nối được internet để tạo mã. Hãy thử lại.";
+
+/* Button that revokes every parent link */
+"scoutProtection.supervisionStopSharing" = "Ngừng chia sẻ";
+
+/* What Stop sharing does */
+"scoutProtection.supervisionStopSharingDetail" = "Mọi liên kết phụ huynh đã lưu sẽ ngừng hoạt động ngay.";
+
+/* Button that ends supervision */
+"scoutProtection.supervisionTurnOff" = "Tắt giám sát";
+
+/* Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware */
+"scoutProtection.blockedReasonKnownThreat" = "Lừa đảo hoặc phần mềm độc hại đã biết";
