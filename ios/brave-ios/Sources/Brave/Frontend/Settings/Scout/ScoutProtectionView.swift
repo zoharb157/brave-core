@@ -56,6 +56,8 @@ struct ScoutProtectionView: View {
   /// say so rather than offer a choice that is not there. Read on appearance
   /// like the other state written from outside this screen.
   @State private var supervised = false
+  /// Asking for the PIN before search filtering goes off.
+  @State private var askingPINForSearch = false
   /// Read fresh each time the screen appears: the user may have just come back
   /// from changing it in iOS Settings.
   @State private var isDefaultBrowser = false
@@ -85,7 +87,7 @@ struct ScoutProtectionView: View {
           )
         }
 
-        Toggle(isOn: $safeSearch.value) {
+        Toggle(isOn: searchFilterBinding) {
           row(
             symbol: "magnifyingglass",
             // Amber, not rose: nothing is broken and nothing was blocked. The
@@ -168,9 +170,28 @@ struct ScoutProtectionView: View {
       }
     }
     .onAppear(perform: refresh)
+    .sheet(isPresented: $askingPINForSearch) {
+      ScoutPINSheet(mode: .confirm) { _ in safeSearch.value = false }
+    }
     .onChange(of: blocked) { _, new in
       Preferences.ScoutBlocking.chosen = new
     }
+  }
+
+  /// Switching search filtering off takes away search engines' safe modes and
+  /// YouTube's Restricted Mode at once, so a supervised phone asks for the PIN
+  /// first, as it does for a category. It used to switch with a tap. Turning
+  /// it on is never gated.
+  private var searchFilterBinding: Binding<Bool> {
+    Binding(
+      get: { safeSearch.value },
+      set: { on in
+        if !on, ScoutSupervision.shared.needsPIN(.relaxSearchFilter) {
+          askingPINForSearch = true
+        } else {
+          safeSearch.value = on
+        }
+      })
   }
 
   private func refresh() {

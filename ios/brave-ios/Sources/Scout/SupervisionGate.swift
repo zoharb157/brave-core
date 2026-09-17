@@ -11,6 +11,11 @@ public enum SupervisedAction: CaseIterable, Sendable {
   case relaxCategory
   /// Turning one on. Listed so the gate can say plainly that it is free.
   case tightenCategory
+  /// Switching off "Filter search results" — search engines' safe modes and
+  /// YouTube's Restricted Mode together. It had no gate at all, so on a
+  /// supervised phone one tap on the protection screen removed both while
+  /// every category switch beside it asked for the PIN.
+  case relaxSearchFilter
   /// Adding a site to the always-allow list.
   case allowSite
   /// Adding one to the always-block list.
@@ -36,7 +41,8 @@ public enum SupervisionGate {
   public static func needsPIN(_ action: SupervisedAction, whenSupervised supervised: Bool) -> Bool {
     guard supervised else { return false }
     switch action {
-    case .relaxCategory, .allowSite, .alwaysAllowFromBlockPage, .turnSupervisionOff:
+    case .relaxCategory, .relaxSearchFilter, .allowSite, .alwaysAllowFromBlockPage,
+      .turnSupervisionOff:
       return true
     case .tightenCategory, .blockSite, .continueOnce:
       return false
