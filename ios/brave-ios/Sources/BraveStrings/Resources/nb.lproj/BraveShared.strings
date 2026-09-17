@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Spør hvis en sjekk ikke blir ferdig";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "En sjekk kan mislykkes fordi telefonen mistet signalet, ikke fordi nettstedet er farlig. Av åpnes de sidene og merkes i aktiviteten din. På stopper Scout og spør.";
+"scoutProtection.askWhenCheckFailsDetail" = "En sjekk kan mislykkes fordi telefonen mistet signalet, ikke fordi nettstedet er farlig. Når innstillingen er av, åpnes de sidene og merkes i aktiviteten din. Når den er på, stopper Scout og spør.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Så lenge denne telefonen er under tilsyn, spør Scout alltid. En sjekk som ikke ble ferdig, er ingen dom, så siden åpnes ikke.";

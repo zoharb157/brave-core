@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "जाँच पूरी न हो तो पूछें";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "जाँच इसलिए भी विफल हो सकती है कि फ़ोन का सिग्नल चला गया, इसलिए नहीं कि साइट ख़तरनाक है। बंद होने पर वे पृष्ठ खुल जाते हैं और आपकी गतिविधि में चिह्नित हो जाते हैं। चालू होने पर Scout रुककर पूछता है।";
+"scoutProtection.askWhenCheckFailsDetail" = "जाँच इसलिए भी विफल हो सकती है कि फ़ोन का सिग्नल चला गया, इसलिए नहीं कि साइट ख़तरनाक है। जब यह सेटिंग बंद हो, तब वे पृष्ठ खुल जाते हैं और आपकी गतिविधि में चिह्नित हो जाते हैं। जब यह चालू हो, तब Scout रुककर पूछता है।";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "जब तक इस फ़ोन पर निगरानी है, Scout हमेशा पूछता है। जो जाँच पूरी न हो सकी वह कोई नतीजा नहीं है, इसलिए पृष्ठ नहीं खोला जाता।";

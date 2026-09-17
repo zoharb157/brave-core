@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Питати, якщо перевірка не завершилася";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Перевірка може не пройти через те, що телефон втратив зв'язок, а не через те, що сайт небезпечний. Вимкнено — такі сторінки відкриваються і позначаються у вашій активності. Увімкнено — Scout зупиняється і питає.";
+"scoutProtection.askWhenCheckFailsDetail" = "Перевірка може не пройти через те, що телефон втратив зв'язок, а не через те, що сайт небезпечний. Коли налаштування вимкнене, такі сторінки відкриваються і позначаються у вашій активності. Коли воно ввімкнене, Scout зупиняється і питає.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Поки за цим телефоном наглядають, Scout питає завжди. Перевірка, яка не завершилася, — це не висновок, тож сторінка не відкривається.";

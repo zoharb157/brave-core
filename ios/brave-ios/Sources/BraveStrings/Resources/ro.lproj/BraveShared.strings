@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Întreabă dacă o verificare nu se termină";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "O verificare poate eșua pentru că telefonul a pierdut semnalul, nu pentru că site-ul e periculos. Oprit, paginile acelea se deschid și sunt marcate în activitatea ta. Pornit, Scout se oprește și te întreabă.";
+"scoutProtection.askWhenCheckFailsDetail" = "O verificare poate eșua pentru că telefonul a pierdut semnalul, nu pentru că site-ul e periculos. Când opțiunea este oprită, paginile acelea se deschid și sunt marcate în activitatea ta. Când este pornită, Scout se oprește și te întreabă.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Cât timp acest telefon este supravegheat, Scout întreabă mereu. O verificare care nu s-a încheiat nu este un verdict, așa că pagina nu se deschide.";

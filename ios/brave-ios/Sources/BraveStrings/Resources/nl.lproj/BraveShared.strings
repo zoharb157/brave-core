@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Vragen als een controle niet lukt";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Een controle kan mislukken doordat de telefoon geen bereik had, niet doordat de site gevaarlijk is. Uit worden die pagina's geopend en gemarkeerd in je activiteit. Aan stopt Scout en vraagt het je.";
+"scoutProtection.askWhenCheckFailsDetail" = "Een controle kan mislukken doordat de telefoon geen bereik had, niet doordat de site gevaarlijk is. Staat dit uit, dan worden die pagina's geopend en gemarkeerd in je activiteit. Staat het aan, dan stopt Scout en vraagt het je.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Zolang deze telefoon onder toezicht staat, vraagt Scout het altijd. Een controle die niet is afgerond, is geen oordeel, dus de pagina wordt niet geopend.";

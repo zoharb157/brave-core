@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Питај ако провера не може да се заврши";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Провера може да не успе зато што је телефон изгубио сигнал, а не зато што је сајт опасан. Искључено, те странице се отварају и означавају у вашој активности. Укључено, Scout стаје и пита.";
+"scoutProtection.askWhenCheckFailsDetail" = "Провера може да не успе зато што је телефон изгубио сигнал, а не зато што је сајт опасан. Када је подешавање искључено, те странице се отварају и означавају у вашој активности. Када је укључено, Scout стаје и пита.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Док је овај телефон под надзором, Scout увек пита. Провера која се није завршила није пресуда, па се страница не отвара.";

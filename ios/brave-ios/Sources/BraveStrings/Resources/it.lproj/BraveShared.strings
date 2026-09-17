@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Chiedi se un controllo non si completa";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Un controllo può fallire perché il telefono ha perso il segnale, non perché il sito sia pericoloso. Disattivato, quelle pagine si aprono e restano segnate nella tua attività. Attivato, Scout si ferma e chiede.";
+"scoutProtection.askWhenCheckFailsDetail" = "Un controllo può fallire perché il telefono ha perso il segnale, non perché il sito sia pericoloso. Quando l'opzione è disattivata, quelle pagine si aprono e restano segnate nella tua attività. Quando è attivata, Scout si ferma e chiede.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Finché questo telefono è sorvegliato, Scout chiede sempre. Un controllo che non si è completato non è un responso, quindi la pagina non viene aperta.";

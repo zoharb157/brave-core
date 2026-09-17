@@ -3915,7 +3915,7 @@
 "scoutProtection.askWhenCheckFails" = "Tanya jika pemeriksaan tidak selesai";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Pemeriksaan bisa gagal karena ponsel kehilangan sinyal, bukan karena situsnya berbahaya. Saat mati, halaman itu tetap dibuka dan ditandai di aktivitas Anda. Saat hidup, Scout berhenti dan bertanya.";
+"scoutProtection.askWhenCheckFailsDetail" = "Pemeriksaan bisa gagal karena ponsel kehilangan sinyal, bukan karena situsnya berbahaya. Saat setelan ini dimatikan, halaman itu tetap dibuka dan ditandai di aktivitas Anda. Saat setelan ini dinyalakan, Scout berhenti dan bertanya.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Selama ponsel ini diawasi, Scout selalu bertanya. Pemeriksaan yang tidak selesai bukan keputusan, jadi halamannya tidak dibuka.";

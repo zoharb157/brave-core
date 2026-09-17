@@ -3807,13 +3807,13 @@
 "scoutProtection.settingsSubtitle" = "Was Scout prüeft und blockiert, und wo's überall gsi isch";
 
 /* Title of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFails" = "Frooge, wenn e Prüefig nöd fertig wird";
+"scoutProtection.askWhenCheckFails" = "Frooge, wenn e Prüefig nöd chan abgschlosse werde";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "E Prüefig cha scheitere, wil s Telefon kein Empfang gha het, nöd wil d Website schlächt isch. Us werded die Siite ufgmacht und i dinere Aktivität markiert. Aa haltet Scout aa und frogt naa.";
+"scoutProtection.askWhenCheckFailsDetail" = "E Prüefig cha scheitere, wil s Telefon kein Empfang gha het, nöd wil d Website schlächt isch. Wenn d Option us isch, werded die Siite ufgmacht und i dinere Aktivität markiert. Wenn si aa isch, haltet Scout aa und frogt naa.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
-"scoutProtection.askWhenCheckFailsSupervised" = "Solang das Telefon beufsichtiget wird, frogt Scout immer naa. E Prüefig, wo nöd fertig worde isch, isch kes Ergebnis, drum wird d Siite nöd ufgmacht.";
+"scoutProtection.askWhenCheckFailsSupervised" = "Solang das Telefon beufsichtiget wird, frogt Scout immer naa. E Prüefig, wo nöd het chönne abgschlosse werde, isch kes Ergebnis, drum wird d Siite nöd ufgmacht.";
 
 /* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
 "scoutProtection.supervisionPINWait" = "Z vill falschi Versuech. Probier's i %@ nomal.";

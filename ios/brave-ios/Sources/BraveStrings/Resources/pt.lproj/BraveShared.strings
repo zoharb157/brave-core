@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Perguntar se uma verificação não terminar";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Uma verificação pode falhar porque o telefone perdeu rede, não porque o site seja perigoso. Desligado, essas páginas abrem e ficam assinaladas na sua atividade. Ligado, o Scout para e pergunta.";
+"scoutProtection.askWhenCheckFailsDetail" = "Uma verificação pode falhar porque o telefone perdeu rede, não porque o site seja perigoso. Quando a opção está desligada, essas páginas abrem e ficam assinaladas na sua atividade. Quando está ligada, o Scout para e pergunta.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Enquanto este telefone estiver supervisionado, o Scout pergunta sempre. Uma verificação que não terminou não é um veredito, por isso a página não é aberta.";

@@ -3807,10 +3807,10 @@
 "scoutProtection.settingsSubtitle" = "Какво проверява и блокира Scout и къде е бил";
 
 /* Title of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFails" = "Питане, ако проверка не завърши";
+"scoutProtection.askWhenCheckFails" = "Питане, ако проверката не завърши";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Проверката може да се провали, защото телефонът е загубил сигнал, а не защото сайтът е опасен. Изключено, тези страници се отварят и се отбелязват в активността ви. Включено, Scout спира и пита.";
+"scoutProtection.askWhenCheckFailsDetail" = "Проверката може да се провали, защото телефонът е загубил сигнал, а не защото сайтът е опасен. Когато настройката е изключена, тези страници се отварят и се отбелязват в активността ви. Когато е включена, Scout спира и пита.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Докато този телефон е под наблюдение, Scout пита винаги. Проверка, която не е завършила, не е присъда, затова страницата не се отваря.";

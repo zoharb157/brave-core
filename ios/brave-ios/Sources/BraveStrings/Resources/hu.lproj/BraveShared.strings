@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Kérdezzen, ha egy ellenőrzés nem fejeződik be";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Egy ellenőrzés amiatt is meghiúsulhat, hogy a telefon elvesztette a térerőt, nem csak azért, mert a webhely veszélyes. Kikapcsolva ezek az oldalak megnyílnak, és megjelölve kerülnek a tevékenységébe. Bekapcsolva a Scout megáll és kérdez.";
+"scoutProtection.askWhenCheckFailsDetail" = "Egy ellenőrzés amiatt is meghiúsulhat, hogy a telefon elvesztette a térerőt, nem csak azért, mert a webhely veszélyes. Ha a beállítás ki van kapcsolva, ezek az oldalak megnyílnak, és megjelölve kerülnek a tevékenységébe. Ha be van kapcsolva, a Scout megáll és kérdez.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Amíg ezt a telefont felügyelik, a Scout mindig kérdez. Egy be nem fejezett ellenőrzés nem ítélet, ezért az oldal nem nyílik meg.";

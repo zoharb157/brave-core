@@ -3807,7 +3807,7 @@
 "scoutProtection.settingsSubtitle" = "Những gì Scout kiểm tra và chặn, và mọi nơi nó đã đi qua";
 
 /* Title of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFails" = "Hỏi nếu không kiểm tra xong";
+"scoutProtection.askWhenCheckFails" = "Hỏi khi việc kiểm tra không hoàn tất";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
 "scoutProtection.askWhenCheckFailsDetail" = "Việc kiểm tra có thể thất bại vì điện thoại mất sóng, chứ không phải vì trang nguy hiểm. Khi tắt, những trang đó sẽ mở và được đánh dấu trong hoạt động của bạn. Khi bật, Scout dừng lại và hỏi.";

@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Opýtať sa, keď kontrola neprebehne";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Kontrola môže zlyhať preto, že telefón stratil signál, nie preto, že je stránka nebezpečná. Vypnuté sa tieto stránky otvoria a označia vo vašej aktivite. Zapnuté sa Scout zastaví a opýta.";
+"scoutProtection.askWhenCheckFailsDetail" = "Kontrola môže zlyhať preto, že telefón stratil signál, nie preto, že je stránka nebezpečná. Keď je nastavenie vypnuté, tieto stránky sa otvoria a označia sa vo vašej aktivite. Keď je zapnuté, Scout sa zastaví a opýta sa.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Kým je tento telefón pod dohľadom, Scout sa pýta vždy. Kontrola, ktorá neprebehla, nie je výsledok, takže sa stránka neotvorí.";

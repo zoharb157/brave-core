@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Vprašaj, če se preverjanje ne dokonča";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Preverjanje lahko spodleti, ker je telefon izgubil signal, ne ker bi bilo spletno mesto nevarno. Izklopljeno se te strani odprejo in so označene v vaši dejavnosti. Vklopljeno se Scout ustavi in vpraša.";
+"scoutProtection.askWhenCheckFailsDetail" = "Preverjanje lahko spodleti, ker je telefon izgubil signal, ne ker bi bilo spletno mesto nevarno. Ko je nastavitev izklopljena, se te strani odprejo in so označene v vaši dejavnosti. Ko je vklopljena, se Scout ustavi in vpraša.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Dokler je ta telefon pod nadzorom, Scout vedno vpraša. Preverjanje, ki se ni dokončalo, ni izid, zato se stran ne odpre.";

@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Demander si une vérification n'aboutit pas";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Une vérification peut échouer parce que le téléphone a perdu le réseau, pas parce que le site est dangereux. Désactivé, ces pages s'ouvrent et sont signalées dans votre activité. Activé, Scout s'arrête et vous demande.";
+"scoutProtection.askWhenCheckFailsDetail" = "Une vérification peut échouer parce que le téléphone a perdu le réseau, pas parce que le site est dangereux. Lorsque l'option est désactivée, ces pages s'ouvrent et sont signalées dans votre activité. Lorsqu'elle est activée, Scout s'arrête et vous demande.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Tant que ce téléphone est surveillé, Scout demande toujours. Une vérification qui n'a pas abouti n'est pas un verdict, donc la page n'est pas ouverte.";

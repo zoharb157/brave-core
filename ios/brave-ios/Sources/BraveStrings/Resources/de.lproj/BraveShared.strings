@@ -3807,13 +3807,13 @@
 "scoutProtection.settingsSubtitle" = "Was Scout prüft und blockiert, und wo es überall war";
 
 /* Title of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFails" = "Fragen, wenn eine Prüfung nicht abschließt";
+"scoutProtection.askWhenCheckFails" = "Fragen, wenn eine Prüfung fehlschlägt";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Eine Prüfung kann scheitern, weil das Telefon keinen Empfang hatte, nicht weil die Website schlecht ist. Aus werden diese Seiten geöffnet und in deiner Aktivität markiert. Ein hält Scout an und fragt nach.";
+"scoutProtection.askWhenCheckFailsDetail" = "Eine Prüfung kann fehlschlagen, weil das Telefon keinen Empfang hatte, nicht weil die Website schlecht ist. Ist die Option aus, werden solche Seiten geöffnet und in deiner Aktivität markiert. Ist sie an, hält Scout an und fragt nach.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
-"scoutProtection.askWhenCheckFailsSupervised" = "Solange dieses Telefon beaufsichtigt wird, fragt Scout immer nach. Eine Prüfung, die nicht abschließen konnte, ist kein Ergebnis, deshalb wird die Seite nicht geöffnet.";
+"scoutProtection.askWhenCheckFailsSupervised" = "Solange dieses Telefon beaufsichtigt wird, fragt Scout immer nach. Eine Prüfung, die fehlgeschlagen ist, ist kein Ergebnis, deshalb wird die Seite nicht geöffnet.";
 
 /* Shown when PIN entry is temporarily locked; %@ is a duration like '5 minutes' */
 "scoutProtection.supervisionPINWait" = "Zu viele falsche Versuche. Versuch es in %@ noch einmal.";

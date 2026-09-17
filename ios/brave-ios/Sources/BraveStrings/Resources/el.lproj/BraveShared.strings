@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Ερώτηση αν ένας έλεγχος δεν ολοκληρωθεί";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Ένας έλεγχος μπορεί να αποτύχει επειδή το τηλέφωνο έχασε σήμα, όχι επειδή ο ιστότοπος είναι επικίνδυνος. Ανενεργό, αυτές οι σελίδες ανοίγουν και σημειώνονται στη δραστηριότητά σας. Ενεργό, το Scout σταματά και ρωτά.";
+"scoutProtection.askWhenCheckFailsDetail" = "Ένας έλεγχος μπορεί να αποτύχει επειδή το τηλέφωνο έχασε σήμα, όχι επειδή ο ιστότοπος είναι επικίνδυνος. Όταν η ρύθμιση είναι ανενεργή, αυτές οι σελίδες ανοίγουν και σημειώνονται στη δραστηριότητά σας. Όταν είναι ενεργή, το Scout σταματά και ρωτά.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Όσο αυτό το τηλέφωνο είναι υπό επίβλεψη, το Scout ρωτά πάντα. Ένας έλεγχος που δεν ολοκληρώθηκε δεν είναι ετυμηγορία, οπότε η σελίδα δεν ανοίγει.";

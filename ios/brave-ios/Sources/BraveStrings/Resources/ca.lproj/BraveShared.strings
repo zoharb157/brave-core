@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Pregunta si una comprovació no acaba";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Una comprovació pot fallar perquè el telèfon ha perdut cobertura, no perquè el lloc sigui perillós. Desactivat, aquestes pàgines s'obren i queden marcades a la teva activitat. Activat, Scout s'atura i pregunta.";
+"scoutProtection.askWhenCheckFailsDetail" = "Una comprovació pot fallar perquè el telèfon ha perdut cobertura, no perquè el lloc sigui perillós. Quan l'opció està desactivada, aquestes pàgines s'obren i queden marcades a la teva activitat. Quan està activada, Scout s'atura i pregunta.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Mentre aquest telèfon estigui supervisat, Scout sempre pregunta. Una comprovació que no ha pogut acabar no és un veredicte, així que la pàgina no s'obre.";

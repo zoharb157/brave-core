@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Pytaj, gdy sprawdzenie się nie uda";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Sprawdzenie może się nie udać, bo telefon stracił zasięg, a nie dlatego, że witryna jest niebezpieczna. Wyłączone — te strony się otwierają i są oznaczane w Twojej aktywności. Włączone — Scout zatrzymuje się i pyta.";
+"scoutProtection.askWhenCheckFailsDetail" = "Sprawdzenie może się nie udać, bo telefon stracił zasięg, a nie dlatego, że witryna jest niebezpieczna. Gdy ustawienie jest wyłączone, te strony się otwierają i są oznaczane w Twojej aktywności. Gdy jest włączone, Scout zatrzymuje się i pyta.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Dopóki ten telefon jest nadzorowany, Scout zawsze pyta. Sprawdzenie, które się nie zakończyło, nie jest werdyktem, więc strona nie zostaje otwarta.";

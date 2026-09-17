@@ -3810,7 +3810,7 @@
 "scoutProtection.askWhenCheckFails" = "Bir kontrol tamamlanamazsa sor";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFailsDetail" = "Bir kontrol, site tehlikeli olduğu için değil, telefon çekmediği için de başarısız olabilir. Kapalıyken bu sayfalar açılır ve etkinliğinizde işaretlenir. Açıkken Scout durur ve size sorar.";
+"scoutProtection.askWhenCheckFailsDetail" = "Bir kontrol, site tehlikeli olduğu için değil, telefon çekmediği için de başarısız olabilir. Bu ayar kapalıyken o sayfalar açılır ve etkinliğinizde işaretlenir. Ayar açıkken Scout durur ve size sorar.";
 
 /* Explanation shown when supervision forces the ask-on-failed-check setting on */
 "scoutProtection.askWhenCheckFailsSupervised" = "Bu telefon gözetim altındayken Scout her zaman sorar. Tamamlanamayan bir kontrol bir sonuç değildir, bu yüzden sayfa açılmaz.";

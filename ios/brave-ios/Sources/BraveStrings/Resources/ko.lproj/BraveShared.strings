@@ -3807,7 +3807,7 @@
 "scoutProtection.settingsSubtitle" = "Scout가 확인하고 차단하는 것, 그리고 지나온 모든 곳";
 
 /* Title of the setting deciding what happens when a safety check cannot complete */
-"scoutProtection.askWhenCheckFails" = "확인을 끝내지 못하면 묻기";
+"scoutProtection.askWhenCheckFails" = "확인이 끝나지 않으면 묻기";
 
 /* Explanation of the setting deciding what happens when a safety check cannot complete */
 "scoutProtection.askWhenCheckFailsDetail" = "확인은 사이트가 위험해서가 아니라 휴대폰 신호가 끊겨서 실패할 수도 있습니다. 끄면 그런 페이지는 열리고 활동에 표시됩니다. 켜면 Scout가 멈추고 묻습니다.";
