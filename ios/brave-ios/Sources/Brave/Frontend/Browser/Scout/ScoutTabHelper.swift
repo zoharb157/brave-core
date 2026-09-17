@@ -27,12 +27,16 @@ extension TabDataValues {
 }
 
 @MainActor
-public class ScoutTabHelper: TabPolicyDecider {
+public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
   weak var tab: (any TabState)?
 
   public init(tab: some TabState) {
     self.tab = tab
     tab.addPolicyDecider(self)
+    // For pages that change their address without loading — see
+    // `tabDidCommitSameDocumentNavigation`. The policy decider never hears
+    // about those.
+    tab.addObserver(self)
   }
 
   public func tab(
@@ -297,6 +301,69 @@ public class ScoutTabHelper: TabPolicyDecider {
     guard !tab.isPrivate, let host = url.host else { return }
     ScoutServices.shared.blockLog.record(
       site: host, reason: decision.reason, categories: decision.matchedCategories)
+  }
+
+  // MARK: - Pages that change their address without loading
+
+  /// The page key last looked at in this tab, so a fragment, or a page
+  /// rewriting its own address to the same page, does not ask again.
+  private var lastPageKey: String?
+
+  private static func pageKey(_ url: URL?) -> String? {
+    url.map { VerdictCache.cacheKey(for: $0, perPageHosts: ScoutServices.perPageHosts) }
+  }
+
+  public func tabDidCommitNavigation(_ tab: some TabState) {
+    lastPageKey = Self.pageKey(tab.visibleURL)
+  }
+
+  /// A page changed its address from script: the next short, a subreddit
+  /// opened inside the app. No navigation happened, so the decider above never
+  /// ran, and on the sites Scout checks page by page only the first page of a
+  /// visit was ever checked.
+  ///
+  /// The page is already on screen by the time this runs, so this can only
+  /// take it back, as the optimistic path does — a supervised phone cannot
+  /// hold these the way it holds a load. Unlike that path it does not delete
+  /// the site's data on a block: for one bad short that would sign the user
+  /// out of the whole site.
+  public func tabDidCommitSameDocumentNavigation(_ tab: some TabState) {
+    guard let url = tab.visibleURL,
+      let key = InPageNavigation.keyToCheck(
+        url, perPageHosts: ScoutServices.perPageHosts, lastKey: lastPageKey)
+    else { return }
+    lastPageKey = key
+    // The page the user chose to continue into is theirs to see.
+    if continuedPage == url { return }
+
+    let services = ScoutServices.shared
+    if tab.isPrivate {
+      services.notePrivateNavigation(to: url)
+    }
+
+    if let decision = services.guard_.decideImmediately(url) {
+      ScoutActivityReporter.shared.record(
+        decision, for: url,
+        source: decision.verdict == nil ? .none : .cache, isPrivate: tab.isPrivate)
+      if decision.isStale {
+        Task { await services.guard_.refresh(url) }
+      }
+      guard decision.type != .allow else { return }
+      Self.note(decision, for: url, in: tab)
+      ScoutPages.record(decision, for: url)
+      showScoutPage(for: url, in: tab)
+      return
+    }
+
+    Task { @MainActor [weak self, weak tab] in
+      let decision = await services.guard_.decide(url)
+      Self.settle(decision, for: url, in: tab)
+      // Only if the tab is still on this page: a feed scrolled on while the
+      // check ran must not lose the page the user moved to.
+      guard decision.type != .allow, let self, let tab, Self.pageKey(tab.visibleURL) == key
+      else { return }
+      self.showScoutPage(for: url, in: tab)
+    }
   }
 
   /// One-shot pass for the navigation this helper re-issues after an allow.

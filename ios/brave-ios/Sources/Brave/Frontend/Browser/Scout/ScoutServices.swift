@@ -143,7 +143,11 @@ public final class ScoutServices {
     decisionPolicy = UserSitePolicy(base: categoryPolicy, rules: { rules })
     cache = VerdictCache(maxEntries: 2000, now: { Date() }, perPageHosts: Self.perPageHosts)
     checker = CoalescingSafetyChecker(
-      transport: NetworkSafetyTransport(endpoint: Self.checkEndpoint),
+      // The install's own random id, already what the activity log is filed
+      // under, so the service can ration checks per phone instead of per
+      // network — every phone on a school's Wi-Fi used to share one allowance.
+      transport: NetworkSafetyTransport(
+        endpoint: Self.checkEndpoint, deviceID: ScoutActivityReporter.installId),
       // Same key the cache uses, so two pages that are cached apart are also
       // checked apart rather than sharing one in-flight request.
       key: { VerdictCache.cacheKey(for: $0, perPageHosts: ScoutServices.perPageHosts) })

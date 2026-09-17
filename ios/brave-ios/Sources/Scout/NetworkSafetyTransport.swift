@@ -3,9 +3,14 @@ import Foundation
 public struct NetworkSafetyTransport: SafetyTransport {
   private let endpoint: URL
   private let session: URLSession
+  private let deviceID: String?
 
-  public init(endpoint: URL, session: URLSession = .shared) {
-    self.endpoint = endpoint; self.session = session
+  /// - Parameter deviceID: a random id this install made for itself, sent so
+  ///   the service can ration checks per phone. Without it every copy of the
+  ///   app shares one allowance per network, and a school's worth of phones
+  ///   runs out together. Not a credential: never pass the device token here.
+  public init(endpoint: URL, session: URLSession = .shared, deviceID: String? = nil) {
+    self.endpoint = endpoint; self.session = session; self.deviceID = deviceID
   }
 
   /// `audience: general` asks the service for copy addressed to the user
@@ -16,6 +21,7 @@ public struct NetworkSafetyTransport: SafetyTransport {
     request.timeoutInterval = timeout
     request.setValue("kid-safe", forHTTPHeaderField: "x-app-id")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    if let deviceID { request.setValue(deviceID, forHTTPHeaderField: "x-device-id") }
     request.httpBody = try? JSONSerialization.data(
       withJSONObject: ["url": url.absoluteString, "audience": "general"])
     return request
