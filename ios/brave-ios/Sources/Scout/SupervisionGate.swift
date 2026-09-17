@@ -23,6 +23,10 @@ public enum SupervisedAction: CaseIterable, Sendable {
   /// "Always allow this site" on a block page.
   case alwaysAllowFromBlockPage
   case turnSupervisionOff
+  /// Handing a configuration profile to the system to install. A profile can
+  /// carry a DNS setting, a proxy or a root certificate, so it can undo the
+  /// filtering supervision is for — from a web page, with two taps.
+  case installProfile
   /// "Continue anyway" on a block page — this visit only.
   case continueOnce
 }
@@ -42,7 +46,7 @@ public enum SupervisionGate {
     guard supervised else { return false }
     switch action {
     case .relaxCategory, .relaxSearchFilter, .allowSite, .alwaysAllowFromBlockPage,
-      .turnSupervisionOff:
+      .turnSupervisionOff, .installProfile:
       return true
     case .tightenCategory, .blockSite, .continueOnce:
       return false

@@ -9,6 +9,7 @@ import BraveStrings
 import Foundation
 import OSLog
 import PassKit
+import Scout
 import SafariServices
 import Shared
 import UniformTypeIdentifiers
@@ -64,7 +65,14 @@ extension BrowserViewController: TabDownloadDelegate {
       )
       alert.addAction(
         UIAlertAction(title: Strings.OBContinueButton, style: .default) { [weak self] _ in
-          self?.handleLinkWithSafariViewController(url, tab: tab)
+          guard let self else { return }
+          // A profile can set the phone's DNS, a proxy or a root certificate,
+          // so on a supervised phone it is the PIN's to allow: a page offering
+          // one is otherwise two taps from undoing the filtering.
+          let action: SupervisedAction = mimeType == .mobileConfiguration ? .installProfile : .continueOnce
+          ScoutSupervision.shared.gate(action, from: self) { [weak self] in
+            self?.handleLinkWithSafariViewController(url, tab: tab)
+          }
         }
       )
 

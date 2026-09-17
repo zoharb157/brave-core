@@ -66,7 +66,17 @@ extension Preferences {
     )
 
     private static let defaultBlockAdsAndTrackingLevel: ShieldLevel = .standard
-    private static let defaultHTTPsUpgradeLevel: HTTPSUpgradeLevel = .standard
+    /// Strict, where upstream ships standard.
+    ///
+    /// Standard upgrades only sites absent from an exceptions list, and that
+    /// list arrives as a component from an update server that refuses this app
+    /// — so the service holds `is_ready_` false and, to avoid breaking sites it
+    /// has no list for, upgrades nothing at all. The setting read "on" and no
+    /// address was ever upgraded. Strict needs no list: every http address is
+    /// upgraded, and a site that genuinely has no https shows the blocked page
+    /// with the choice to go on, which is also the only place that choice gets
+    /// recorded.
+    private static let defaultHTTPsUpgradeLevel: HTTPSUpgradeLevel = .strict
 
     /// Get the level of the adblock and tracking protection as a stored preference
     /// - Warning: You should not access this directly but  through ``blockAdsAndTrackingLevel``
