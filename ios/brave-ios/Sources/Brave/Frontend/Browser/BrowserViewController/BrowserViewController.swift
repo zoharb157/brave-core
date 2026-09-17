@@ -567,6 +567,12 @@ public class BrowserViewController: UIViewController {
       await ScoutWarmListStore.shared.refreshIfDue()
     }
 
+    // The same bargain for the phishing and malware lists: once a day, in the
+    // background, and a download that fails leaves the last good copy alone.
+    Task {
+      await ScoutThreatListStore.shared.refreshIfDue()
+    }
+
     NotificationCenter.default.addObserver(
       forName: ScoutSupervision.supervisionDidBegin,
       object: nil,

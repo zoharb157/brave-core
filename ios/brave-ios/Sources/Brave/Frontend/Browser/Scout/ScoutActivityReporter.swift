@@ -37,6 +37,12 @@ extension Preferences.Scout {
   public static let warmListConfirmedCurrentAt = Preferences.Option<Double>(
     key: "scout.warm-list-confirmed-current-at", default: 0)
 
+  /// When the phishing and malware lists were last asked about, so they are
+  /// asked once a day rather than once a launch. Stamped whatever the outcome,
+  /// so a publisher that is down does not get asked again every cold start.
+  public static let threatListCheckedAt = Preferences.Option<Double>(
+    key: "scout.threat-list-checked-at", default: 0)
+
   /// How many links Scout has checked, and how many it stopped, for the life
   /// of this install.
   ///

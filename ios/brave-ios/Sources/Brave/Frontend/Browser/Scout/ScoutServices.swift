@@ -167,7 +167,14 @@ public final class ScoutServices {
       // construction — a list downloaded mid-session replaces what the store
       // holds, and the guard sees that update on its very next lookup rather
       // than only after the next cold start.
-      warmList: ScoutWarmListStore.shared)
+      warmList: ScoutWarmListStore.shared,
+      // Hosts publicly known to be phishing or serving malware, downloaded at
+      // most once a day. Read before both the cache and the warm list: those
+      // two only ever say a site looked fine when it was last looked at, and
+      // neither can hear that it has since been compromised or sold. Like the
+      // warm list, the store itself is passed rather than a snapshot, so a
+      // download that lands mid-session is used on the very next navigation.
+      threatList: ScoutThreatListStore.shared)
 
     load()
     observeLifecycle()
