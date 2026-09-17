@@ -217,6 +217,12 @@ public final class ScoutActivityReporter {
   private static let mintEndpoint = URL(
     string: "https://many-apps-30-day-challenge.fly.dev/api/kid-safe/device-token")!
   private static let tokenKey = "device-token"
+  /// The token the server last turned down, kept as proof this is the same
+  /// phone when asking for the next one.
+  private static let previousTokenKey = "device-token-previous"
+
+  /// A mint in flight, so callers that need a token at once share one request.
+  private var minting: Task<String?, Never>?
 
   /// This phone's credential for reading its own record, minted on first use.
   ///
@@ -224,27 +230,78 @@ public final class ScoutActivityReporter {
   /// credential, and it sat in a plist that travels in a backup.
   public func deviceToken() async -> String? {
     if let existing = ScoutCredentials.string(forKey: Self.tokenKey) { return existing }
+    if let minting { return await minting.value }
+    let task = Task { await self.mint() }
+    minting = task
+    let token = await task.value
+    minting = nil
+    return token
+  }
+
+  /// Asks for a token, showing the last one when there is one.
+  ///
+  /// The server no longer mints on the install id alone for an install that
+  /// already has a token — anyone could name the install. It answers 409
+  /// instead, which for this phone means its own token is gone for good (a
+  /// restore that left the keychain behind, say). The only way on is a new
+  /// install id: the record under the old one stays unreadable, which is the
+  /// point.
+  private func mint() async -> String? {
+    let previous = ScoutCredentials.string(forKey: Self.previousTokenKey)
+    switch await requestToken(installId: Self.installId, currentToken: previous) {
+    case .issued(let token):
+      store(token)
+      return token
+    case .refused:
+      Preferences.Scout.installId.value = UUID().uuidString
+      guard case .issued(let token) = await requestToken(installId: Self.installId, currentToken: nil)
+      else { return nil }
+      store(token)
+      return token
+    case .failed:
+      return nil
+    }
+  }
+
+  private enum MintResult {
+    case issued(String)
+    case refused
+    case failed
+  }
+
+  private func requestToken(installId: String, currentToken: String?) async -> MintResult {
     var request = URLRequest(url: Self.mintEndpoint)
     request.httpMethod = "POST"
     request.setValue("kid-safe", forHTTPHeaderField: "x-app-id")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.httpBody = try? JSONSerialization.data(
-      withJSONObject: ["installId": Self.installId])
+    var body: [String: Any] = ["installId": installId]
+    if let currentToken { body["currentToken"] = currentToken }
+    request.httpBody = try? JSONSerialization.data(withJSONObject: body)
     guard let (data, response) = try? await session.data(for: request),
-      let http = response as? HTTPURLResponse, http.statusCode == 200,
+      let http = response as? HTTPURLResponse
+    else { return .failed }
+    if http.statusCode == 409 { return .refused }
+    guard http.statusCode == 200,
       let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
       let token = object["token"] as? String
-    else { return nil }
-    ScoutCredentials.set(token, forKey: Self.tokenKey)
-    return token
+    else { return .failed }
+    return .issued(token)
   }
 
-  /// Drops the stored token so the next call mints a fresh one.
+  private func store(_ token: String) {
+    ScoutCredentials.set(token, forKey: Self.tokenKey)
+    ScoutCredentials.set(nil, forKey: Self.previousTokenKey)
+  }
+
+  /// Sets the stored token aside so the next call mints a fresh one.
   ///
   /// Tokens expire, and turning sharing off burns this phone's along with the
   /// parent's links. Neither is an error worth telling anyone about — the
-  /// phone just asks again.
+  /// phone just asks again, showing this one as proof it is the same phone.
   public func forgetDeviceToken() {
+    if let current = ScoutCredentials.string(forKey: Self.tokenKey) {
+      ScoutCredentials.set(current, forKey: Self.previousTokenKey)
+    }
     ScoutCredentials.set(nil, forKey: Self.tokenKey)
   }
 
