@@ -264,13 +264,17 @@ class BraveSearchTabHelper: TabObserver, TabPolicyDecider, BraveSearchMakeDefaul
       return .allow
     }
 
+    // Scout: Quick View's tab is not guarded the way a tab is, and this
+    // decider runs before the one that is — a result opened here was never
+    // checked. Only a page Scout already allows goes to Quick View; anything
+    // else loads in this tab, where it is checked as usual.
     if await shouldOpenInQuickView(
       requestURL: requestURL,
       isMainFrame: requestInfo.isMainFrame,
       navigationType: requestInfo.navigationType,
       isUserInitiated: requestInfo.isUserInitiated,
       tab: tab
-    ) {
+    ), ScoutDetachedTabGate.admits(requestURL, isPrivate: tab.isPrivate) {
       presentInQuickView?(requestURL, tab)
       return .cancel
     }

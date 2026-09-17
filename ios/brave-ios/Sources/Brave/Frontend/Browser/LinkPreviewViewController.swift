@@ -18,6 +18,10 @@ class LinkPreviewViewController: UIViewController {
   private weak var policyDecider: (any TabPolicyDecider)?
   private weak var tabDelegate: (any TabDelegate)?
   private weak var downloadDelegate: (any TabDownloadDelegate)?
+  /// Scout's guard for the preview. The tab holds it weakly, so it is kept
+  /// here. A preview has nowhere to show a checking or block page, so a load
+  /// Scout has not already allowed simply does not happen.
+  private let scoutGate = ScoutDetachedTabGate()
 
   init(
     url: URL,
@@ -52,6 +56,8 @@ class LinkPreviewViewController: UIViewController {
       with: .init(profile: parentTab.profile, initialConfiguration: initialConfiguration)
     )
     tab.createWebView()
+    // First, so nothing else acts on a load it stops.
+    tab.addPolicyDecider(scoutGate)
     if let policyDecider {
       tab.addPolicyDecider(policyDecider)
     }
@@ -92,6 +98,7 @@ class LinkPreviewViewController: UIViewController {
   }
 
   deinit {
+    currentTab?.removePolicyDecider(scoutGate)
     if let policyDecider {
       currentTab?.removePolicyDecider(policyDecider)
     }

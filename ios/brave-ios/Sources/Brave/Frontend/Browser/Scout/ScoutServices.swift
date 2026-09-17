@@ -416,13 +416,11 @@ public final class ScoutServices {
   ///
   /// `isPrivate` is the tab the long-press happened in. The check started here
   /// is a private visit like any other and its verdict stays off disk.
+  ///
+  /// The preview's own tab is guarded the same way, by `ScoutDetachedTabGate`,
+  /// so a page that redirects somewhere Scout has not allowed stops there.
   public func mayPreview(_ url: URL, isPrivate: Bool) -> Bool {
-    if isPrivate {
-      notePrivateNavigation(to: url)
-    }
-    if guard_.decideImmediately(url)?.type == .allow { return true }
-    warm(url, isPrivate: isPrivate)
-    return false
+    ScoutDetachedTabGate.admits(url, isPrivate: isPrivate)
   }
 
   /// Posted once a decision for a page has been recorded.

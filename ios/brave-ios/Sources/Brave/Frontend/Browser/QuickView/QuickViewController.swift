@@ -39,6 +39,12 @@ class QuickViewController: UIViewController {
     estimatedTransitionDistance: 110
   )
   private var toolbarVisibilityCancellable: AnyCancellable?
+  /// Scout's guard for this tab, kept here because the tab holds it weakly.
+  /// Quick View cannot show Scout's checking or block pages, so a load Scout
+  /// has not already allowed is handed to a real tab, which checks it.
+  private lazy var scoutGate = ScoutDetachedTabGate { [weak self] request, isPrivate in
+    self?.handleUnsupportedRequest(request, isPrivate)
+  }
   private let onOpenInNewTab: ((URLRequest, Bool) -> Void)?
   private let onOpenInNewWindow: ((URL, Bool) -> Void)?
   private let onAttachTab: ((any TabState) -> Void)?
@@ -132,6 +138,8 @@ class QuickViewController: UIViewController {
     )
     tab.addObserver(toolbarViewModel)
     tab.addObserver(self)
+    // First, so nothing else acts on a load it stops.
+    tab.addPolicyDecider(scoutGate)
     tab.browserData = TabBrowserData(tab: tab)
     if FeatureList.kUseProfileWebViewConfiguration.enabled {
       let braveShieldsHelper: BraveShieldsTabHelper = .init(
