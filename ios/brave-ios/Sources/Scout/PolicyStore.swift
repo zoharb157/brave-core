@@ -16,7 +16,7 @@ public enum LocalDecision { case allow, block, unknown }
 /// list serves the safety service, so the two must agree on what a site is.
 let multiPartPublicSuffixes: Set<String> = [
   // United Kingdom
-  "co.uk", "org.uk", "gov.uk", "ac.uk", "me.uk", "net.uk", "sch.uk",
+  "co.uk", "org.uk", "gov.uk", "ac.uk", "me.uk", "net.uk",
   // Australia
   "com.au", "net.au", "org.au", "edu.au", "gov.au",
   // New Zealand
@@ -41,7 +41,7 @@ let multiPartPublicSuffixes: Set<String> = [
   // Israel
   "co.il", "org.il", "gov.il", "ac.il",
   // Poland, Ukraine, Russia
-  "com.pl", "com.ua", "com.ru",
+  "com.pl", "com.ua",
   // Thailand, Egypt, Saudi Arabia, Nigeria, Pakistan, Bangladesh
   "co.th", "com.eg", "com.sa", "com.ng", "com.pk", "com.bd",
 ]
