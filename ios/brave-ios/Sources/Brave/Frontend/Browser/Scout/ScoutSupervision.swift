@@ -120,13 +120,25 @@ public final class ScoutSupervision: ObservableObject {
   }
 
   /// A fresh code for a parent to type, or nil if the phone can't reach Scout.
+  ///
+  /// A token the server no longer knows is dropped and replaced once. Tokens
+  /// expire, and a phone that kept asking with a dead one told the person it
+  /// had no internet.
   public func pairingCode() async -> String? {
-    guard let token = await ScoutActivityReporter.shared.deviceToken() else { return nil }
-    guard let body = try? JSONSerialization.data(withJSONObject: ["deviceToken": token]),
-      let object = await post("supervision/code", body: body),
-      let code = object["code"] as? String
-    else { return nil }
-    return code
+    for attempt in 0..<2 {
+      guard let token = await ScoutActivityReporter.shared.deviceToken(),
+        let body = try? JSONSerialization.data(withJSONObject: ["deviceToken": token])
+      else { return nil }
+      switch await post("supervision/code", body: body) {
+      case .ok(let object):
+        return object["code"] as? String
+      case .unauthorized where attempt == 0:
+        ScoutActivityReporter.shared.forgetDeviceToken()
+      case .unauthorized, .failed:
+        return nil
+      }
+    }
+    return nil
   }
 
   /// Revokes every link a parent holds for this phone, at once.
@@ -134,20 +146,35 @@ public final class ScoutSupervision: ObservableObject {
     guard let token = await ScoutActivityReporter.shared.deviceToken(),
       let body = try? JSONSerialization.data(withJSONObject: ["deviceToken": token])
     else { return }
-    _ = await post("supervision/revoke", body: body)
+    // The server deletes this phone's token along with the parent's links.
+    // Keeping it would make the next code request, and the next batch of
+    // activity, fail on a token that no longer exists.
+    if case .ok = await post("supervision/revoke", body: body) {
+      ScoutActivityReporter.shared.forgetDeviceToken()
+    }
   }
 
-  private func post(_ path: String, body: Data) async -> [String: Any]? {
-    guard let url = URL(string: "\(Self.host)/\(path)") else { return nil }
+  private enum Reply {
+    case ok([String: Any])
+    case unauthorized
+    case failed
+  }
+
+  private func post(_ path: String, body: Data) async -> Reply {
+    guard let url = URL(string: "\(Self.host)/\(path)") else { return .failed }
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.setValue("kid-safe", forHTTPHeaderField: "x-app-id")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     request.httpBody = body
     guard let (data, response) = try? await session.data(for: request),
-      let http = response as? HTTPURLResponse, http.statusCode == 200
-    else { return nil }
-    return try? JSONSerialization.jsonObject(with: data) as? [String: Any]
+      let http = response as? HTTPURLResponse
+    else { return .failed }
+    if http.statusCode == 401 { return .unauthorized }
+    guard http.statusCode == 200,
+      let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
+    else { return .failed }
+    return .ok(object)
   }
 
   /// The controller actually on screen, starting from `presenter`.
