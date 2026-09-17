@@ -581,21 +581,27 @@ class TopToolbarView: UIView, ToolbarProtocol {
       currentURL.flatMap({ ScoutServices.shared.siteRules.rule(for: $0) }) == nil
     {
       let scout = Self.scoutIcon(for: showing)
-      shieldsButton.setImage(scout.image, for: .normal)
-      shieldsButton.tintColor = scout.tint
-      shieldsButton.accessibilityLabel = scout.label
+      showShieldsMark(scout.image, tint: scout.tint, label: scout.label)
       return
     }
     if !isShieldsOff, let currentURL, let scout = Self.scoutIcon(for: currentURL) {
-      shieldsButton.setImage(scout.image, for: .normal)
-      shieldsButton.tintColor = scout.tint
-      shieldsButton.accessibilityLabel = scout.label
+      showShieldsMark(scout.image, tint: scout.tint, label: scout.label)
       return
     }
 
-    shieldsButton.tintColor = nil
-    shieldsButton.accessibilityLabel = Strings.bravePanel
-    shieldsButton.setImage(UIImage(sharedNamed: shieldIcon), for: .normal)
+    showShieldsMark(UIImage(sharedNamed: shieldIcon), tint: nil, label: Strings.bravePanel)
+  }
+
+  /// Sets the mark through the button's own tint slots. Setting `tintColor`
+  /// alone lasted until the button was pressed: `ToolbarButton` re-tints from
+  /// those slots on every highlight change, and with them empty the mark came
+  /// back in the system blue after opening the panel.
+  private func showShieldsMark(_ image: UIImage?, tint: UIColor?, label: String) {
+    shieldsButton.setImage(image, for: .normal)
+    shieldsButton.primaryTintColor = tint
+    shieldsButton.selectedTintColor = tint
+    shieldsButton.tintColor = tint
+    shieldsButton.accessibilityLabel = label
   }
 
   private static func mark(
