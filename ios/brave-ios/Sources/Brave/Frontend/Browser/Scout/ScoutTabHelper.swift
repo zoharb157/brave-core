@@ -233,17 +233,20 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
         // The gate is narrower than the swap above, deliberately. Stopping is
         // right for any non-allow, but deleting someone's cookies, storage and
         // saved credentials is only right when something actually judged the
-        // page. `type == .block` is what carries that: a check that failed
-        // produces `resolveFailure`, which returns `.allow` or `.warn` and
-        // never `.block` — so a timeout or a lost signal on a phone set to
-        // "ask when a check fails" stops the page and offers "Continue
-        // anyway", without shredding anything, and the user is not logged out
-        // for no reason. The `.unavailable` clause below is belt and braces:
-        // no path produces a `.block` with that reason today, and it is kept
-        // so one cannot be introduced quietly. Note the asymmetry is only on
-        // this path: the waiting path never deletes anything on a warn either,
-        // because there the page never ran.
-        guard decision.type == .block, decision.reason != .unavailable,
+        // page. A timeout or a lost signal on a phone set to "ask when a check
+        // fails" stops the page and offers "Continue anyway", without
+        // shredding anything, and the user is not logged out for no reason.
+        //
+        // `type == .block` used to carry that on its own, because a failed
+        // check could only come back `.allow` or `.warn`. It can come back a
+        // block now: `resolveFailure` reads the address, and a trap-shaped one
+        // is refused whatever the fail mode says. That is still a page nothing
+        // read — the address was recognised, not judged — so it is named here
+        // beside `.unavailable` rather than left to fall through. Note the
+        // asymmetry is only on this path: the waiting path never deletes
+        // anything on a warn either, because there the page never ran.
+        guard decision.type == .block,
+          decision.reason != .unavailable, decision.reason != .uncheckedAddress,
           let dataStore
         else { return }
 

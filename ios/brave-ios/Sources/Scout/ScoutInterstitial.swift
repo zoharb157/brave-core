@@ -104,6 +104,26 @@ public enum ScoutInterstitial {
         "This address is on a public list of sites caught stealing passwords or "
         + "spreading malware. Scout stopped it without opening the page."
       reasons = []
+    case .uncheckedAddress:
+      // Two things went wrong at once and the page has to say both, in that
+      // order: the check not finishing is why this screen is here at all, and
+      // the address is why it is not the soft `.unavailable` copy above. Said
+      // the other way round it reads as an accusation the check never made.
+      //
+      // What the address gave away is not listed. The signals are named for
+      // the service's scoring — "excessive-subdomains", "credentials-in-url" —
+      // and rewriting each into a sentence would be a second vocabulary for
+      // this screen to keep true. The address is printed under the summary
+      // already, which is the thing a reader can actually check.
+      chipText = type == .block ? "NOT SAFE" : "CAUTION"
+      title = "Couldn't check this — and the address looks wrong"
+      summary =
+        type == .block
+        ? "Scout couldn't reach its safety check, so nothing has looked at this page. "
+          + "The address itself is built the way trick links are built."
+        : "Scout couldn't reach its safety check, so nothing has looked at this page. "
+          + "There is something odd about the address itself."
+      reasons = []
     case .unfilteredSearch:
       chipText = "BLOCKED"
       title = "This search engine can't be filtered"
@@ -127,7 +147,12 @@ public enum ScoutInterstitial {
     // exception for a site that is phishing on purpose — and the one tap that
     // would do it is exactly the tap somebody being phished has already been
     // talked into making.
-    case .security, .scheme, .unavailable, .unfilteredSearch, .knownThreat: alwaysLabel = nil
+    // And nothing lasting on an address nobody could check. A standing
+    // exception written now would be written on the strength of a check that
+    // did not happen, and it would outlive the minute the network was down.
+    case .security, .scheme, .unavailable, .unfilteredSearch, .knownThreat,
+      .uncheckedAddress:
+      alwaysLabel = nil
     }
 
     return ScoutInterstitialModel(
@@ -139,7 +164,10 @@ public enum ScoutInterstitial {
       primaryLabel: "Go back",
       secondaryLabel: reason == .unfilteredSearch
         ? nil : type == .block ? "Continue anyway" : "Continue",
-      retryLabel: reason == .unavailable ? "Try again" : nil,
+      // Offered here as well as on `.unavailable`, because half of what this
+      // page says is that the check could not be reached — and reaching it is
+      // what would settle the other half.
+      retryLabel: reason == .unavailable || reason == .uncheckedAddress ? "Try again" : nil,
       alwaysLabel: alwaysLabel)
   }
 

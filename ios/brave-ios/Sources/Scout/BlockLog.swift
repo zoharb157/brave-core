@@ -130,6 +130,7 @@ extension DecisionReason {
     case .unavailable: return "unavailable"
     case .unfilteredSearch: return "unfiltered-search"
     case .knownThreat: return "known-threat"
+    case .uncheckedAddress: return "unchecked-address"
     }
   }
 
@@ -143,6 +144,7 @@ extension DecisionReason {
     case "unavailable": self = .unavailable
     case "unfiltered-search": self = .unfilteredSearch
     case "known-threat": self = .knownThreat
+    case "unchecked-address": self = .uncheckedAddress
     default: return nil
     }
   }

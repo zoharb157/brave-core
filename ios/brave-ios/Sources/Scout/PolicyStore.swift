@@ -104,7 +104,10 @@ public func eTLDPlusOne(_ host: String) -> String {
 }
 
 /// Whether `host` is an IPv4 or IPv6 literal rather than a name.
-private func isAddressLiteral(_ host: String) -> Bool {
+///
+/// Internal rather than private because `AddressRisk` asks the same question
+/// of the same host, and two answers to it would eventually differ.
+func isAddressLiteral(_ host: String) -> Bool {
   if host.contains(":") { return true }  // IPv6, bracketed or not
   let labels = host.split(separator: ".", omittingEmptySubsequences: false)
   guard labels.count == 4 else { return false }

@@ -425,7 +425,12 @@ struct BlockRecordRow: View {
     // This one was never opened: its address is already on a public list.
     case .knownThreat: return Strings.ScoutProtection.blockedReasonKnownThreat
     case .policyList: return Strings.ScoutProtection.blockedReasonYourList
-    case .unavailable: return Strings.ScoutProtection.blockedReasonUnchecked
+    // Both of these are "couldn't be checked", and they are one row here on
+    // purpose. The difference between them is what the address looked like
+    // while nothing was checking it, which is a thing to say on the page that
+    // stopped it, in the moment — not a second entry in a list whose job is to
+    // tell a parent, at a glance, what their settings have been doing.
+    case .unavailable, .uncheckedAddress: return Strings.ScoutProtection.blockedReasonUnchecked
     case .scheme: return Strings.ScoutProtection.blockedReasonLinkType
     // The setting that stopped it, by the name it has on this screen.
     case .unfilteredSearch: return Strings.ScoutProtection.safeSearchTitle

@@ -21,6 +21,12 @@ public enum DecisionReason: Equatable, Sendable {
   /// called it an attack" and "this address is already publicly known to be
   /// one" are different facts about how much is known.
   case knownThreat
+  /// The check could not be completed *and* the address itself reads as a
+  /// trap. Two facts, and the reason has to carry both: on its own the first
+  /// is `.unavailable`, which is a shrug, and the second was never a reason
+  /// for anything because the address was only ever scored by the service.
+  /// See `AddressRisk`.
+  case uncheckedAddress
 }
 
 public struct Decision {
@@ -104,10 +110,33 @@ public final class NavigationGuard {
     return Decision(type: .allow, verdict: verdict, reason: .security)
   }
 
-  public static func resolveFailure(_ failMode: FailMode) -> Decision {
-    switch failMode {
-    case .open: return Decision(type: .allow, reason: .unavailable)
-    case .closed: return Decision(type: .warn, reason: .unavailable)
+  /// What to do when the check produced no answer at all.
+  ///
+  /// The fail mode is the user's choice and it decides this, with one thing
+  /// read first: the address. A check that could not finish is the only moment
+  /// nothing whatsoever has looked at the page — no verdict, no cache, no
+  /// list — and "open, marked" is a default an unsupervised phone is left on.
+  /// An address that reads as a trap is not a page to apply that default to,
+  /// so a `.dangerous` shape is blocked whatever the fail mode says, and a
+  /// `.doubtful` one is at least asked about.
+  ///
+  /// It cannot go the other way: nothing here ever opens a page the fail mode
+  /// would have stopped. A quiet-looking address is not evidence of anything —
+  /// it is the absence of evidence, which is what `.unavailable` already means.
+  ///
+  /// This runs only where the check failed. Where it answered, the service
+  /// scored the address too, and its answer is the one that stands.
+  public static func resolveFailure(_ failMode: FailMode, for url: URL?) -> Decision {
+    switch url.map(AddressRisk.judge)?.level {
+    case .dangerous:
+      return Decision(type: .block, reason: .uncheckedAddress)
+    case .doubtful:
+      return Decision(type: .warn, reason: .uncheckedAddress)
+    case .ordinary, nil:
+      switch failMode {
+      case .open: return Decision(type: .allow, reason: .unavailable)
+      case .closed: return Decision(type: .warn, reason: .unavailable)
+      }
     }
   }
 
@@ -170,7 +199,7 @@ public final class NavigationGuard {
       return Self.resolve(warm, blockedCategories: policy.blockedCategories)
     }
     if !isReachable() {
-      return Self.resolveFailure(policy.failMode)
+      return Self.resolveFailure(policy.failMode, for: url)
     }
     return nil
   }
@@ -199,7 +228,7 @@ public final class NavigationGuard {
       cache.put(url, v)
       return Self.resolve(v, blockedCategories: policy.blockedCategories)
     }
-    return Self.resolveFailure(policy.failMode)
+    return Self.resolveFailure(policy.failMode, for: url)
   }
 }
 
