@@ -183,7 +183,42 @@ public enum SafeSearch {
   /// type exists to avoid.
   public static func coverage(of url: URL) -> Coverage {
     guard let host = url.host else { return .unfiltered }
-    return coverage(ofSite: eTLDPlusOne(host))
+    return coverage(ofSite: engineSite(host))
+  }
+
+  /// The site an engine rule is matched against.
+  ///
+  /// Google runs its search on `google.` plus nearly every country's suffix,
+  /// and most of those suffixes — com.co, co.id, com.pe, co.ke — are not in
+  /// the hand-made list `eTLDPlusOne` falls back on. There, www.google.com.co
+  /// came out as "com.co", the Google rule never matched, and search filtering
+  /// did nothing for everyone searching from those countries. So Google is
+  /// recognised from the host's own labels, whether or not a full suffix list
+  /// is available.
+  static func engineSite(_ host: String) -> String {
+    googleSite(host) ?? eTLDPlusOne(host)
+  }
+
+  /// `google.<suffix>` when `host` is Google's search domain for some country:
+  /// a `google` label followed by a single top-level label, or by `com` or
+  /// `co` and a two-letter country code. That is the shape of every one of
+  /// them, and it does not match a site that merely has "google" in a
+  /// subdomain (google.example.com).
+  static func googleSite(_ host: String) -> String? {
+    let labels = host.lowercased().split(separator: ".").map(String.init)
+    guard let index = labels.lastIndex(of: "google") else { return nil }
+    let suffix = labels[(index + 1)...]
+    switch suffix.count {
+    case 1:
+      break
+    case 2:
+      guard ["com", "co"].contains(suffix.first!), suffix.last!.count == 2,
+        suffix.last!.allSatisfy(\.isLetter)
+      else { return nil }
+    default:
+      return nil
+    }
+    return labels[index...].joined(separator: ".")
   }
 
   /// The parameters the engines in `unfiltered` carry a search in: Startpage
@@ -203,7 +238,7 @@ public enum SafeSearch {
   ///   in. An added engine can be any site, so only that parameter counts.
   public static func isUnfilteredResults(_ url: URL, customEngines: [String: String] = [:]) -> Bool {
     guard let host = url.host else { return false }
-    let site = eTLDPlusOne(host)
+    let site = engineSite(host)
     let names: Set<String>
     if unfiltered.contains(site) {
       names = unfilteredQueryNames
@@ -265,7 +300,7 @@ public enum SafeSearch {
   public static func enforced(_ url: URL) -> URL? {
     guard let host = url.host else { return nil }
     if let moved = movedToFilteringEndpoint(url, host: host) { return moved }
-    let site = eTLDPlusOne(host)
+    let site = engineSite(host)
     guard let rule = rules.first(where: { $0.matches(site) }) else { return nil }
     guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
       return nil
