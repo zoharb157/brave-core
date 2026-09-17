@@ -348,6 +348,19 @@ public final class ScoutServices {
     }
   }
 
+  /// Whether a long-press may show a live preview of `url`.
+  ///
+  /// A preview loads the page in a web view Scout does not gate, so a link
+  /// nobody had checked rendered in full inside the preview — on a supervised
+  /// phone too. It is only offered for a page Scout has already allowed.
+  /// Anything else gets the menu without a preview, and its check starts so a
+  /// second long-press can have one.
+  public func mayPreview(_ url: URL) -> Bool {
+    if guard_.decideImmediately(url)?.type == .allow { return true }
+    warm(url)
+    return false
+  }
+
   /// Posted once a decision for a page has been recorded.
   ///
   /// The URL bar's mark is drawn from the stored verdict, and nothing told it

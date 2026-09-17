@@ -192,7 +192,9 @@ extension BrowserViewController: TabDelegate {
       )
     }
 
-    let linkPreviewProvider = Preferences.General.enableLinkPreview.value ? linkPreview : nil
+    let linkPreviewProvider =
+      Preferences.General.enableLinkPreview.value && ScoutServices.shared.mayPreview(url)
+      ? linkPreview : nil
     return UIContextMenuConfiguration(
       identifier: nil,
       previewProvider: linkPreviewProvider,
