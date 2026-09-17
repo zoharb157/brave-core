@@ -70,7 +70,7 @@ struct ShieldsPanelView: View {
         // browser exists, and it is the part that is otherwise invisible when
         // the answer is "this is fine". Brave's ad and tracker controls stay
         // below, unchanged.
-        ScoutSitePanelView(url: url) { _ in
+        ScoutSitePanelView(url: url, isPrivate: tab.isPrivate) { _ in
           actionCallback(.changedSiteRule)
         }
 

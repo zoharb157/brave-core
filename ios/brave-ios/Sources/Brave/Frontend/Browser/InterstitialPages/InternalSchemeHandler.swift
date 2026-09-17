@@ -18,6 +18,14 @@ enum InternalPageSchemeHandlerError: Error {
 
 public protocol InternalSchemeResponse {
   func response(forRequest: URLRequest) async -> (URLResponse, Data)?
+  /// As `response(forRequest:)`, told whether the page is for a private tab.
+  func response(forRequest: URLRequest, isPrivate: Bool) async -> (URLResponse, Data)?
+}
+
+extension InternalSchemeResponse {
+  public func response(forRequest request: URLRequest, isPrivate: Bool) async -> (URLResponse, Data)? {
+    await response(forRequest: request)
+  }
 }
 
 public class InternalSchemeHandler: NSObject, WKURLSchemeHandler {
@@ -113,6 +121,9 @@ public class InternalSchemeHandler: NSObject, WKURLSchemeHandler {
     }
 
     let path = url.path.starts(with: "/") ? String(url.path.dropFirst()) : url.path
+    // A private tab's store keeps nothing, which is the one thing here that
+    // says which kind of tab asked.
+    let isPrivate = !webView.configuration.websiteDataStore.isPersistent
 
     if activeTasks.object(forKey: urlSchemeTask) != nil {
       // Already a task ongoing, technically this shouldn't happen.
@@ -148,7 +159,10 @@ public class InternalSchemeHandler: NSObject, WKURLSchemeHandler {
         return
       }
 
-      let responderResult = await responder.response(forRequest: urlSchemeTask.request)
+      let responderResult = await responder.response(
+        forRequest: urlSchemeTask.request,
+        isPrivate: isPrivate
+      )
 
       if activeTasks.object(forKey: urlSchemeTask) == nil || Task.isCancelled {
         return

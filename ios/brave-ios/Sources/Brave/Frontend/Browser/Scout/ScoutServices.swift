@@ -350,9 +350,9 @@ public final class ScoutServices {
   /// Drops what Scout knows about `url` and checks it again. For the "Check
   /// again" action: a site that changed since its verdict was cached is
   /// otherwise stuck with the old answer for up to a week.
-  public func recheck(_ url: URL) async {
+  public func recheck(_ url: URL, isPrivate: Bool) async {
     cache.forget(url)
-    await guard_.refresh(url)
+    await refresh(url, isPrivate: isPrivate)
   }
 
   /// Links being checked ahead of a tap, by cache key. Bounded so a page that

@@ -81,14 +81,16 @@ enum ScoutPages {
   /// Being checked: the checking page — the live flow reloads this URL once
   /// the decision lands. Neither (back/forward or restore after the cache
   /// dropped it): check now, then answer.
-  static func html(for siteURL: URL) async -> String {
+  static func html(for siteURL: URL, isPrivate: Bool) async -> String {
     if let decision = knownDecision(for: siteURL) {
       return settled(decision, siteURL: siteURL)
     }
     if inFlight.contains(siteURL) {
       return checkingHTML(for: siteURL)
     }
-    let decision = await ScoutServices.shared.guard_.decide(siteURL)
+    // Through the services, which keep a private tab's verdict off disk; the
+    // page can be served again for a private tab on Back or restore.
+    let decision = await ScoutServices.shared.decide(siteURL, isPrivate: isPrivate)
     record(decision, for: siteURL)
     return settled(decision, siteURL: siteURL)
   }
@@ -154,10 +156,14 @@ public class ScoutPageHandler: InternalSchemeResponse {
   public init() {}
 
   public func response(forRequest request: URLRequest) async -> (URLResponse, Data)? {
+    await response(forRequest: request, isPrivate: false)
+  }
+
+  public func response(forRequest request: URLRequest, isPrivate: Bool) async -> (URLResponse, Data)? {
     guard let url = request.url, let internalURL = InternalURL(url),
       let siteURL = ScoutPages.siteURL(fromPageURL: url)
     else { return nil }
-    let html = await ScoutPages.html(for: siteURL)
+    let html = await ScoutPages.html(for: siteURL, isPrivate: isPrivate)
     return (InternalSchemeHandler.response(forUrl: internalURL.url), Data(html.utf8))
   }
 }

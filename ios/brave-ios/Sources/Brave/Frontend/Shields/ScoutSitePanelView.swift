@@ -19,6 +19,8 @@ import SwiftUI
 /// Scout found, when, and gives the standing decision a home.
 struct ScoutSitePanelView: View {
   let url: URL
+  /// Whether the panel is for a private tab, so a recheck keeps its verdict off disk.
+  var isPrivate = false
   /// Called after a rule changes, so the page can be reloaded under it.
   var onRuleChanged: (URL) -> Void
 
@@ -135,7 +137,7 @@ struct ScoutSitePanelView: View {
   private func recheck() {
     isRechecking = true
     Task { @MainActor in
-      await ScoutServices.shared.recheck(url)
+      await ScoutServices.shared.recheck(url, isPrivate: isPrivate)
       status = ScoutServices.shared.status(for: url)
       isRechecking = false
     }
