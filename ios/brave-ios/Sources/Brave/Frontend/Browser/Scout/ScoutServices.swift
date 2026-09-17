@@ -208,12 +208,17 @@ public final class ScoutServices {
   }
 
   public func status(for url: URL) -> SiteStatus {
-    let verdict = cache.get(url)
+    // The list of already-checked sites answers navigations when this phone
+    // has no verdict of its own, so it answers here too. Without it a site
+    // opened straight from the list read "Not checked yet" beside the plain
+    // logo, while it had been checked and let through on that answer.
+    let cached = cache.get(url)
+    let verdict = cached ?? ScoutWarmListStore.shared.verdict(for: url)
     return SiteStatus(
       site: eTLDPlusOne(url.host ?? ""),
       rule: siteRules.rule(for: url),
       verdict: verdict,
-      checkedAt: cache.storedAt(url),
+      checkedAt: cached == nil ? verdict?.fetchedAt : cache.storedAt(url),
       blockedCategories: verdict?.categories.intersection(decisionPolicy.blockedCategories) ?? [])
   }
 
