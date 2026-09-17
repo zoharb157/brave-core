@@ -72,7 +72,10 @@ class ScoutScriptHandler: TabContentScript {
   private func proceed(to siteURL: URL, tab: some TabState) {
     MainActor.assumeIsolated {
       tab.scoutTabHelper?.approveContinue(to: siteURL)
-      if let host = siteURL.host {
+      // A private tab's block was never logged, so there is nothing to mark;
+      // marking the entry a normal tab left for the same site would record
+      // what was done privately.
+      if !tab.isPrivate, let host = siteURL.host {
         ScoutServices.shared.blockLog.noteContinued(site: host)
       }
       ScoutActivityReporter.shared.recordContinued(siteURL, isPrivate: tab.isPrivate)
@@ -115,7 +118,9 @@ class ScoutScriptHandler: TabContentScript {
       } else {
         rules.set(.allow, for: siteURL)
       }
-      if let host = siteURL.host {
+      // The rule itself is a standing setting and applies everywhere; the
+      // log entry is a trace of this visit, and a private one leaves none.
+      if !tab.isPrivate, let host = siteURL.host {
         ScoutServices.shared.blockLog.noteContinued(site: host)
       }
       ScoutActivityReporter.shared.recordContinued(siteURL, isPrivate: tab.isPrivate)

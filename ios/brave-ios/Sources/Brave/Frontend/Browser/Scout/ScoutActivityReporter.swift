@@ -124,12 +124,6 @@ public final class ScoutActivityReporter {
     isPrivate: Bool,
     continued: Bool = false
   ) {
-    // Typing a bare host loads `http://…`, the site redirects to `https://…`,
-    // and both come through here — the first checked, the second answered from
-    // the cache a moment later. That is one attempt, and the log says one.
-    guard coalescer.shouldReport(url: url, decision: decision.type) else { return }
-    // Counted here because this is the one place every decision passes through
-    // after redirects have been folded together, so a single tap counts once.
     // A private tab is left out: the point of one is that the visit leaves no
     // trace, and a number that moves is a trace.
     if isPrivate {
@@ -142,8 +136,19 @@ public final class ScoutActivityReporter {
       // Supervised phones have no private tab, so this is about the other
       // case: browsing done privately while unsupervised, still sitting in
       // the log if supervision is turned on afterwards.
+      //
+      // Checked before the coalescer, not after it. The coalescer remembers
+      // what it last let through, so a private visit it saw would swallow a
+      // normal tab's report of the same page a moment later — the private
+      // visit leaving its mark as a gap in the log.
       return
     }
+    // Typing a bare host loads `http://…`, the site redirects to `https://…`,
+    // and both come through here — the first checked, the second answered from
+    // the cache a moment later. That is one attempt, and the log says one.
+    guard coalescer.shouldReport(url: url, decision: decision.type) else { return }
+    // Counted here because this is the one place every decision passes through
+    // after redirects have been folded together, so a single tap counts once.
     Preferences.Scout.sitesChecked.value += 1
     if decision.type == .block { Preferences.Scout.sitesBlocked.value += 1 }
     var event: [String: Any] = [
