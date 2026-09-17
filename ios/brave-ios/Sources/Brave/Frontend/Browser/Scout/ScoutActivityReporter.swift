@@ -341,7 +341,14 @@ public final class ScoutActivityReporter {
       // anyone who could name an install.
       guard let token = await self.deviceToken(),
         let body = try? JSONSerialization.data(
-          withJSONObject: ["deviceToken": token, "events": batch])
+          withJSONObject: [
+            "deviceToken": token,
+            "events": batch,
+            // The parent's page shows each visit on this phone's clock. The
+            // server runs in UTC and has no other way to know which day a
+            // late-evening visit belongs to.
+            "timeZone": TimeZone.current.identifier,
+          ])
       else { return }
       var request = URLRequest(url: Self.endpoint)
       request.httpMethod = "POST"
