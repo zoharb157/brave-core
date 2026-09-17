@@ -36,7 +36,7 @@ public struct ContinuePermit: Equatable, Sendable {
 /// The rule it encodes: continuing past a block is a decision about one page,
 /// not about a site, a tab or an afternoon. It covers the address the user
 /// approved and wherever that address redirects to, and it ends when that
-/// navigation arrives.
+/// navigation arrives, fails, or gives way to one the user asks for.
 ///
 /// Ending it on arrival is the part that matters, and the part a first attempt
 /// got wrong. At the WebKit layer an address typed into the bar is a
@@ -46,6 +46,10 @@ public struct ContinuePermit: Equatable, Sendable {
 /// responds, and whatever the user asks for next arrives after it.
 public struct ContinueApproval: Equatable, Sendable {
   private var permit: ContinuePermit?
+  /// Whether the permit has let its navigation through yet. Until it has, a
+  /// failure the tab reports belongs to whatever was loading before, and must
+  /// not take away a permit granted a moment ago.
+  private var admitted = false
 
   /// The page the user chose to see despite a block.
   ///
@@ -60,6 +64,7 @@ public struct ContinueApproval: Equatable, Sendable {
   /// Records "Continue anyway" on `url`.
   public mutating func approve(_ url: URL) {
     permit = ContinuePermit(url: url)
+    admitted = false
     chosenPage = url
   }
 
@@ -75,6 +80,7 @@ public struct ContinueApproval: Equatable, Sendable {
       return false
     }
     if held.url == url {
+      admitted = true
       chosenPage = url
       return true
     }
@@ -83,8 +89,33 @@ public struct ContinueApproval: Equatable, Sendable {
       return false
     }
     permit = ContinuePermit(url: url, hops: held.hops + 1)
+    admitted = true
     chosenPage = url
     return true
+  }
+
+  /// The user asked for a page from the browser's own controls: the address
+  /// bar, a bookmark, a favourite. That is a new navigation, whatever WebKit
+  /// calls it, so it ends the permit.
+  ///
+  /// Arrival alone does not cover this. A continued page that has not
+  /// responded yet still holds its permit, and the address typed over it
+  /// would otherwise arrive as `.other` and be taken for its redirect.
+  public mutating func noteNewRequest() {
+    permit = nil
+  }
+
+  /// The navigation failed or was stopped before it responded — a lookup that
+  /// failed, a timeout, the stop button. It is not coming, so nothing may
+  /// inherit its permit; without this the next address typed would be let
+  /// through unchecked in its place.
+  ///
+  /// Ignored until the permit has admitted its navigation: the page being
+  /// left can report its own end after "Continue anyway" was pressed, and
+  /// that is not the continued navigation failing.
+  public mutating func noteFailure() {
+    guard admitted else { return }
+    permit = nil
   }
 
   /// The navigation responded. A permit lives only while its own navigation is

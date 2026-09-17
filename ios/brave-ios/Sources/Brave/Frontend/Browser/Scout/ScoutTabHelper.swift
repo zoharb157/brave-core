@@ -411,6 +411,24 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
     return .allow
   }
 
+  /// The navigation failed or was stopped, so any permit it held is spent.
+  ///
+  /// A continued page that never responds — no DNS, a timeout — never
+  /// reaches the response check above, and its permit used to outlive it:
+  /// the next address typed arrived as `.other`, was taken for its redirect,
+  /// and opened unchecked. A user stop is reported here too, as a cancelled
+  /// navigation.
+  public func tab(_ tab: some TabState, didFailNavigationWithError error: Error) {
+    continueApproval.noteFailure()
+  }
+
+  /// A load that ends without a response and without an error still ends.
+  /// Only the continued navigation's own end counts: `noteFailure` ignores
+  /// anything before the permit has let its navigation through.
+  public func tabDidStopLoading(_ tab: some TabState) {
+    continueApproval.noteFailure()
+  }
+
   /// What this tab remembers about a "Continue anyway": permission to finish
   /// that one navigation, and the page the user chose to see.
   private var continueApproval = ContinueApproval()
@@ -423,6 +441,14 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
   /// "Continue anyway".
   func approveContinue(to url: URL) {
     continueApproval.approve(url)
+  }
+
+  /// The user asked for a page from the address bar or a bookmark. WebKit
+  /// reports that load the way it reports a redirect, so without this a
+  /// continued page still loading would hand its permit to the address typed
+  /// over it.
+  func userDidRequestPage() {
+    continueApproval.noteNewRequest()
   }
 
   /// Who asked for this navigation.

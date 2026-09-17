@@ -1974,6 +1974,8 @@ public class BrowserViewController: UIViewController {
       }
       ScoutServices.shared.warm(url)
 
+      // A new ask, so a "Continue anyway" still in flight does not cover it.
+      tab.scoutTabHelper?.userDidRequestPage()
       tab.loadRequest(URLRequest(url: url))
 
       // Donate Custom Intent Open Website
