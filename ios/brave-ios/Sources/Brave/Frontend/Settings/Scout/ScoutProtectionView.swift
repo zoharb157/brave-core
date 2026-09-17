@@ -421,6 +421,9 @@ struct BlockRecordRow: View {
       return names.isEmpty ? Strings.ScoutProtection.blockedReasonUnsafe : ListFormatter
         .localizedString(byJoining: names)
     case .security: return Strings.ScoutProtection.blockedReasonUnsafe
+    // Said apart from "Unsafe", which is the check's own reading of a page.
+    // This one was never opened: its address is already on a public list.
+    case .knownThreat: return Strings.ScoutProtection.blockedReasonKnownThreat
     case .policyList: return Strings.ScoutProtection.blockedReasonYourList
     case .unavailable: return Strings.ScoutProtection.blockedReasonUnchecked
     case .scheme: return Strings.ScoutProtection.blockedReasonLinkType

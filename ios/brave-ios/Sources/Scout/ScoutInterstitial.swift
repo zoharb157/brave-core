@@ -88,6 +88,22 @@ public enum ScoutInterstitial {
       title = "Can't verify right now"
       summary = "We couldn't check this page."
       reasons = []
+    case .knownThreat:
+      // "NOT SAFE" rather than "BLOCKED", which is the word the other
+      // settings-driven blocks use. This one is not a setting: it would stop
+      // this page for anybody, and the reader should be able to tell the
+      // difference at a glance before reading a word of it.
+      chipText = "NOT SAFE"
+      title = "This site is known to be dangerous"
+      // No verdict was fetched, so there is nothing to say about the page
+      // itself — only about the address, which is all that was recognised.
+      // Saying where it comes from matters more here than anywhere else on
+      // this screen: a block nobody can attribute reads as the browser having
+      // an opinion, and this one is a matter of public record.
+      summary =
+        "This address is on a public list of sites caught stealing passwords or "
+        + "spreading malware. Scout stopped it without opening the page."
+      reasons = []
     case .unfilteredSearch:
       chipText = "BLOCKED"
       title = "This search engine can't be filtered"
@@ -106,7 +122,12 @@ public enum ScoutInterstitial {
     switch reason {
     case .category, .address: alwaysLabel = "Always allow this site"
     case .policyList: alwaysLabel = "Unblock this site"
-    case .security, .scheme, .unavailable, .unfilteredSearch: alwaysLabel = nil
+    // A known attack site sits with `.security` rather than with the settings:
+    // going on is offered once, and only once. Nobody sets up a standing
+    // exception for a site that is phishing on purpose — and the one tap that
+    // would do it is exactly the tap somebody being phished has already been
+    // talked into making.
+    case .security, .scheme, .unavailable, .unfilteredSearch, .knownThreat: alwaysLabel = nil
     }
 
     return ScoutInterstitialModel(

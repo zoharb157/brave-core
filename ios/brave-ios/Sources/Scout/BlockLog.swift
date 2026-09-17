@@ -129,6 +129,7 @@ extension DecisionReason {
     case .address: return "address"
     case .unavailable: return "unavailable"
     case .unfilteredSearch: return "unfiltered-search"
+    case .knownThreat: return "known-threat"
     }
   }
 
@@ -141,6 +142,7 @@ extension DecisionReason {
     case "address": self = .address
     case "unavailable": self = .unavailable
     case "unfiltered-search": self = .unfilteredSearch
+    case "known-threat": self = .knownThreat
     default: return nil
     }
   }

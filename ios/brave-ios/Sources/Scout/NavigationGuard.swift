@@ -14,6 +14,13 @@ public enum DecisionReason: Equatable, Sendable {
   /// A results page from a search engine Scout cannot put into safe mode, on
   /// a supervised phone. See `SafeSearch.isUnfilteredResults`.
   case unfilteredSearch
+  /// The host is on a public list of sites caught phishing or serving
+  /// malware. Kept apart from `security` for the same reason `address` is: no
+  /// page was fetched and no verdict was made, so this was not judged — it
+  /// was recognised. Reading the log back, "the check read this page and
+  /// called it an attack" and "this address is already publicly known to be
+  /// one" are different facts about how much is known.
+  case knownThreat
 }
 
 public struct Decision {
@@ -42,6 +49,7 @@ public final class NavigationGuard {
   private let isReachable: () -> Bool
   private let staleGrace: TimeInterval
   private let warmList: WarmListProviding?
+  private let threatList: ThreatListProviding?
 
   /// - Parameter isReachable: whether the network can reach the service at all.
   ///   With no network the check can only time out, so the guard skips it and
@@ -54,16 +62,21 @@ public final class NavigationGuard {
   /// - Parameter warmList: verdicts for the sites people open most, shipped as
   ///   a file. Consulted after the cache and before the network check, so a
   ///   verdict this phone fetched for itself always wins.
+  /// - Parameter threatList: hosts publicly known to be phishing or serving
+  ///   malware. Consulted before both the cache and the warm list — see
+  ///   `decideImmediately` for why that order is the whole point of it.
   public init(policy: PolicyProviding, cache: VerdictCache,
               checker: SafetyChecker, timeout: TimeInterval,
               isReachable: @escaping () -> Bool = { true },
               staleGrace: TimeInterval = 24 * 3600,
-              warmList: WarmListProviding? = nil) {
+              warmList: WarmListProviding? = nil,
+              threatList: ThreatListProviding? = nil) {
     self.policy = policy; self.cache = cache
     self.checker = checker; self.timeout = timeout
     self.isReachable = isReachable
     self.staleGrace = staleGrace
     self.warmList = warmList
+    self.threatList = threatList
   }
 
   /// Resolves a fetched/cached `Verdict` against the user's chosen
@@ -126,6 +139,23 @@ public final class NavigationGuard {
     // site" has answered this question already.
     if policy.blockedCategories.contains(.adult), ExplicitURL.looksExplicit(url) {
       return Decision(type: .block, reason: .address, matchedCategories: [.adult])
+    }
+    // Before the cache and before the warm list, and that ordering is the
+    // reason this list is worth having at all. Both of those say a site was
+    // fine when somebody last looked, and neither can ever change its mind on
+    // its own: a site checked clean is cached clean for a week, and a site on
+    // the warm list is one lots of people opened safely. Sites are compromised
+    // and domains change hands inside those windows, and when that happens the
+    // public lists are what hears about it first. A rule that consulted them
+    // after a cached "safe" would hear about it and then not act on it.
+    //
+    // Still behind the user's own rules, though, and behind the address check.
+    // Someone who said "always allow this site" has answered a question about
+    // a site they know, and taking that away on a downloaded file would be
+    // Scout overruling its own user — the honest place to argue with them is
+    // the block page, which they will see on any site they have not allowed.
+    if threatList?.listsAsThreat(url) == true {
+      return Decision(type: .block, reason: .knownThreat)
     }
     if let cached = cache.lookup(url, grace: staleGrace) {
       let decision = Self.resolve(cached.verdict, blockedCategories: policy.blockedCategories)

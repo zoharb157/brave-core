@@ -484,6 +484,14 @@ extension Strings {
       value: "Unsafe",
       comment: "Why a site was blocked: the safety check found it dangerous"
     )
+    public static let blockedReasonKnownThreat = NSLocalizedString(
+      "scoutProtection.blockedReasonKnownThreat",
+      tableName: "BraveShared",
+      bundle: .module,
+      value: "Known phishing or malware",
+      comment:
+        "Why a site was blocked: its address is on a public list of sites caught phishing or spreading malware"
+    )
     public static let blockedReasonYourList = NSLocalizedString(
       "scoutProtection.blockedReasonYourList",
       tableName: "BraveShared",
