@@ -7,8 +7,10 @@ public enum LocalDecision { case allow, block, unknown }
 ///
 /// Curated rather than the full Public Suffix List: the list is thousands of
 /// entries and needs updating, while these cover the overwhelming majority of
-/// real browsing. A suffix missing from here degrades to the last two labels,
-/// which is what every host used to get.
+/// real browsing. It is the fallback, not the answer: an app that has the full
+/// list sets `RegistrableDomain.resolver`, and this is used only when that is
+/// unset or has no answer. A suffix missing from here degrades to the last two
+/// labels, which is what every host used to get.
 ///
 /// Mirrors MULTI_PART_PUBLIC_SUFFIXES in packages/cross/utils/url.ts — the same
 /// list serves the safety service, so the two must agree on what a site is.
@@ -44,6 +46,40 @@ let multiPartPublicSuffixes: Set<String> = [
   "co.th", "com.eg", "com.sa", "com.ng", "com.pk", "com.bd",
 ]
 
+/// Where the full Public Suffix List comes in.
+///
+/// The hand-made list above misses most of the world's two-label suffixes, and
+/// a miss is not a small error: adult.co.id and tokopedia.co.id both came out
+/// as "co.id", so they shared one cached verdict, one site rule and one warm
+/// list entry, and whichever was checked first answered for the other. The
+/// package does not carry the list itself — it is large and changes — but the
+/// browser it runs in already has one, and sets this at launch to look a host
+/// up in it.
+public enum RegistrableDomain {
+  private static let lock = NSLock()
+  private static var current: (@Sendable (String) -> String?)?
+
+  /// Given a lower-cased host name, its registrable domain from a full public
+  /// suffix list, or nil when the list has no answer (the host is itself a
+  /// suffix, or its suffix is unknown). A nil or empty answer falls back to
+  /// the hand-made list.
+  ///
+  /// Read on every navigation from whatever thread decides it, so it is
+  /// guarded; set it once, before browsing starts.
+  public static var resolver: (@Sendable (String) -> String?)? {
+    get {
+      lock.lock()
+      defer { lock.unlock() }
+      return current
+    }
+    set {
+      lock.lock()
+      defer { lock.unlock() }
+      current = newValue
+    }
+  }
+}
+
 /// The registrable domain: the name someone actually registered, plus its
 /// public suffix. Everything keyed per site — verdicts, allow and block lists,
 /// in-flight checks — hangs off this, so treating "co.uk" as a site would let
@@ -54,6 +90,11 @@ public func eTLDPlusOne(_ host: String) -> String {
   // than useless: 1.2.3.4 and 9.9.3.4 would both reduce to "3.4" and share a
   // verdict, so a checked host would vouch for an unrelated one.
   if isAddressLiteral(lowered) { return lowered }
+  if let resolve = RegistrableDomain.resolver,
+    let domain = resolve(lowered)?.lowercased(), !domain.isEmpty
+  {
+    return domain
+  }
   let parts = lowered.split(separator: ".").map(String.init)
   guard parts.count > 2 else { return parts.joined(separator: ".") }
   let lastTwo = parts.suffix(2).joined(separator: ".")

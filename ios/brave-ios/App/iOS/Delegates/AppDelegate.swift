@@ -68,6 +68,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     AppState.shared.state = .launching(options: launchOptions ?? [:], active: false)
 
+    // Before anything Scout keeps is keyed by site.
+    ScoutServices.useBrowserSuffixList()
+
     // Set the Safari UA for browsing.
     setUserAgent()
 

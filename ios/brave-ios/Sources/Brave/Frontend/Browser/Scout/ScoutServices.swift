@@ -3,6 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import BraveCore
 import BraveShared
 import Foundation
 import Onboarding
@@ -170,6 +171,28 @@ public final class ScoutServices {
 
     load()
     observeLifecycle()
+  }
+
+  // MARK: - What a site is
+
+  /// Hands the package the browser's own Public Suffix List.
+  ///
+  /// Everything Scout keys by site — verdicts, site rules, the warm list,
+  /// checks in flight — asks the package what a host's registrable domain is,
+  /// and on its own the package knows only a short hand-made list of suffixes.
+  /// Any suffix missing from it merged whole countries' sites: adult.co.id and
+  /// tokopedia.co.id were both "co.id". Chromium's list is already in the app.
+  ///
+  /// Called once at launch, before anything is keyed by site. ICANN suffixes
+  /// only: the private ones (github.io, pages.dev) are already handled page
+  /// by page through `perPageHosts`, which names them as sites, and counting
+  /// each subdomain as a site of its own would change what a standing rule
+  /// covers — a separate decision from this one.
+  public static func useBrowserSuffixList() {
+    RegistrableDomain.resolver = { host in
+      let domain = NSURL.domainAndRegistryExcludingPrivateRegistries(host: host)
+      return domain.isEmpty ? nil : domain
+    }
   }
 
   // MARK: - Keeping verdicts between launches
