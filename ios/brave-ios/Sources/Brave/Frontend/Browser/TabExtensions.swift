@@ -28,9 +28,11 @@ extension TabState {
       return shownUrl
     }
 
-    guard let lastTitle = data.browserData?.lastTitle, !lastTitle.isEmpty else {
+    guard let lastTitle = data.browserData?.lastTitle, !lastTitle.isEmpty,
+      !Self.isInternalAddress(lastTitle)
+    else {
       // FF uses url?.displayURL?.absoluteString ??  ""
-      if let title = visibleURL?.absoluteString {
+      if let title = addressTitle {
         return title
       } else if let tab = SessionTab.from(tabId: id) {
         if tab.title.isEmpty {
@@ -43,6 +45,25 @@ extension TabState {
     }
 
     return lastTitle
+  }
+
+  /// The tab's address, as a title of last resort.
+  ///
+  /// An internal page — a Scout block or checking page, an error page — stands
+  /// in for a site, and its own address means nothing to the person looking
+  /// at the tab list. A restored tab that had not loaded yet was listed as
+  /// `internal://local/scout?url=…`.
+  private var addressTitle: String? {
+    guard let url = visibleURL else { return nil }
+    if InternalURL.isValid(url: url), let shown = url.displayURL {
+      return shown.absoluteDisplayString
+    }
+    return url.absoluteString
+  }
+
+  /// Restoring a tab can store its internal address as its title.
+  private static func isInternalAddress(_ title: String) -> Bool {
+    URL(string: title).map { InternalURL.isValid(url: $0) } ?? false
   }
 
   /// This property is for fetching the actual URL for the Tab
