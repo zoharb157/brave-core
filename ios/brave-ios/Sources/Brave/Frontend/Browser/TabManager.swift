@@ -512,6 +512,10 @@ class TabManager: NSObject {
   ) -> any TabState {
     assert(Thread.isMainThread)
 
+    // Every way of opening a tab ends here, so this is where a supervised
+    // phone stops making private ones. Hiding the menu items alone left
+    // shortcuts, links and bookmarks that still asked for one.
+    let isPrivate = isPrivate && !ScoutSupervision.shared.isOn
     let tabId = id ?? UUID()
     var initialConfiguration: WKWebViewConfiguration?
     if !FeatureList.kUseProfileWebViewConfiguration.enabled {

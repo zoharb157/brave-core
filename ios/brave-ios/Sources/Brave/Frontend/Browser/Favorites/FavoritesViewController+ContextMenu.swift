@@ -46,7 +46,7 @@ extension FavoritesViewController {
         )
 
         var urlChildren: [UIAction] = [openInNewTab]
-        if !self.privateBrowsingManager.isPrivateBrowsing {
+        if !self.privateBrowsingManager.isPrivateBrowsing, !ScoutSupervision.shared.isOn {
           let openInNewPrivateTab = UIAction(
             title: Strings.openNewPrivateTabButtonTitle,
             handler: UIAction.deferredActionHandler { _ in

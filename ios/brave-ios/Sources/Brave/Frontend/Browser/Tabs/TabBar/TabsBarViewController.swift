@@ -218,7 +218,7 @@ class TabsBarViewController: UIViewController {
 
     newTabMenu.append(openNewTab)
 
-    if !isPrivateBrowsing {
+    if !isPrivateBrowsing, !ScoutSupervision.shared.isOn {
       let openNewPrivateTab = UIAction(
         title: Strings.Hotkey.newPrivateTabTitle,
         image: UIImage(braveSystemNamed: "leo.product.private-window"),

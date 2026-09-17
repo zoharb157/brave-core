@@ -96,6 +96,9 @@ public final class ScoutSupervision: ObservableObject {
     ScoutCredentials.set(pin, forKey: Self.pinKey)
     Self.attempts = PINThrottle.afterSuccess()
     Preferences.Scout.supervised.value = true
+    // "Private browsing only" would otherwise keep the whole browser in a
+    // mode supervision does not offer.
+    Preferences.Privacy.privateBrowsingOnly.value = false
     objectWillChange.send()
     // Private tabs stop being offered from here on, so any already open would
     // otherwise sit there unreachable by the control that made them.

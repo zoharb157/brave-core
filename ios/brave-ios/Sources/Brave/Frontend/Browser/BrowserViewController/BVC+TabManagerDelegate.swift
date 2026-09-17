@@ -505,7 +505,7 @@ extension BrowserViewController: TabManagerDelegate {
     var newTabMenuChildren: [UIAction] = []
     var addTabMenuChildren: [UIAction] = []
 
-    if !privateBrowsingManager.isPrivateBrowsing {
+    if !privateBrowsingManager.isPrivateBrowsing, !ScoutSupervision.shared.isOn {
       let openNewPrivateTab = UIAction(
         title: Strings.Hotkey.newPrivateTabTitle,
         image: UIImage(braveSystemNamed: "leo.product.private-window"),

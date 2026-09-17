@@ -96,6 +96,11 @@ struct OtherPrivacySettingsSectionView: View {
           }
         }
       )
+      // Supervised phones do not offer private tabs, so this cannot be the way
+      // to get them. Disabled rather than switched back: turning it on at all
+      // restores the saved tabs a second time, and the tab tray then crashes
+      // on the duplicates.
+      .disabled(ScoutSupervision.shared.isOn)
       .alert(
         isPresented: $showPrivateBrowsingConfirmation,
         content: {

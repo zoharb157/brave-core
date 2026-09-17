@@ -640,7 +640,9 @@ extension QuickViewController: TabDelegate {
         }
         openNewPrivateTabAction.accessibilityLabel = "linkContextMenu.openInNewPrivateTab"
 
-        actions.append(openNewPrivateTabAction)
+        if !ScoutSupervision.shared.isOn {
+          actions.append(openNewPrivateTabAction)
+        }
 
         if UIApplication.shared.supportsMultipleScenes {
           if !isPrivate {

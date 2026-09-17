@@ -572,7 +572,10 @@ public class BrowserViewController: UIViewController {
       object: nil,
       queue: .main
     ) { [weak self] _ in
-      MainActor.assumeIsolated { self?.tabManager.closePrivateTabsForSupervision() }
+      MainActor.assumeIsolated {
+        self?.tabManager.closePrivateTabsForSupervision()
+        self?.updateApplicationShortcuts()
+      }
     }
 
     pageZoomListener = NotificationCenter.default.addObserver(
@@ -1899,8 +1902,10 @@ public class BrowserViewController: UIViewController {
     }
 
     UIApplication.shared.shortcutItems =
-      Preferences.Privacy.privateBrowsingOnly.value
-      ? [privateTabItem] : [newTabItem, privateTabItem]
+      ScoutSupervision.shared.isOn
+      ? [newTabItem]
+      : Preferences.Privacy.privateBrowsingOnly.value
+        ? [privateTabItem] : [newTabItem, privateTabItem]
 
     if let scanQRCodeItem {
       UIApplication.shared.shortcutItems?.append(scanQRCodeItem)
