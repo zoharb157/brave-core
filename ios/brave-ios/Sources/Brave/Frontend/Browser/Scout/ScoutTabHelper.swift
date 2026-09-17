@@ -132,7 +132,8 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
       // The verdict was past its life but inside the grace window: it decided
       // this navigation, and a fresh one lands before the next.
       if decision.isStale {
-        Task { await services.guard_.refresh(requestURL) }
+        let isPrivate = tab.isPrivate
+        Task { await services.refresh(requestURL, isPrivate: isPrivate) }
       }
       if decision.type == .allow { return .allow }
       Self.note(decision, for: requestURL, in: tab)
@@ -156,9 +157,12 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
       ScoutPages.beginCheck(requestURL)
       showScoutPage(for: requestURL, in: tab)
 
+      // Read now, while the tab is certainly alive: a private tab closed
+      // during the check must still have its visit treated as private.
+      let isPrivate = tab.isPrivate
       Task { @MainActor [weak self, weak tab] in
-        let decision = await services.guard_.decide(requestURL)
-        Self.settle(decision, for: requestURL, in: tab)
+        let decision = await services.decide(requestURL, isPrivate: isPrivate)
+        Self.settle(decision, for: requestURL, in: tab, isPrivate: isPrivate)
         // Only act if the tab is still showing this site's checking page; if
         // the user has moved on, the recorded decision just waits in the cache.
         guard let self, let tab, ScoutPages.siteURL(fromPageURL: tab.visibleURL) == requestURL
@@ -187,10 +191,12 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
       // is the right answer, and `shredOrigin` refuses to substitute the
       // default one for it.
       let dataStore = tab.configuration?.websiteDataStore
+      // The same goes for whether the visit was private.
+      let isPrivate = tab.isPrivate
 
       Task { @MainActor [weak self, weak tab] in
-        let decision = await services.guard_.decide(requestURL)
-        Self.settle(decision, for: requestURL, in: tab)
+        let decision = await services.decide(requestURL, isPrivate: isPrivate)
+        Self.settle(decision, for: requestURL, in: tab, isPrivate: isPrivate)
         // Anything the checking page would have stopped is stopped here too.
         // `.warn` and `.block` are both stops; letting a warn through only on
         // this path would mean a suspicious site, or a failed check on a phone
@@ -293,11 +299,17 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
   /// The notification is posted even when the user has moved on. It says a
   /// verdict was stored, which is true regardless of what is on screen, and
   /// the toolbar simply re-reads the site it is actually showing.
-  private static func settle(_ decision: Scout.Decision, for url: URL, in tab: (any TabState)?) {
+  ///
+  /// `isPrivate` is read when the navigation was decided, never off `tab`
+  /// here. The tab is held weakly and a private tab closed during the check is
+  /// nil by now; reading it then reported the visit as a normal one.
+  private static func settle(
+    _ decision: Scout.Decision, for url: URL, in tab: (any TabState)?, isPrivate: Bool
+  ) {
     ScoutActivityReporter.shared.record(
-      decision, for: url, source: .service, isPrivate: tab?.isPrivate ?? false)
-    if decision.type != .allow, let tab {
-      note(decision, for: url, in: tab)
+      decision, for: url, source: .service, isPrivate: isPrivate)
+    if decision.type != .allow, tab != nil {
+      note(decision, for: url, isPrivate: isPrivate)
     }
     ScoutPages.record(decision, for: url)
     // The mark in the URL bar reads the stored verdict; tell it there is one.
@@ -317,7 +329,11 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
   /// happened. A private tab is excluded: the point of one is that the visit
   /// leaves no trace, and a log naming the site would be exactly that trace.
   private static func note(_ decision: Scout.Decision, for url: URL, in tab: some TabState) {
-    guard !tab.isPrivate, let host = url.host else { return }
+    note(decision, for: url, isPrivate: tab.isPrivate)
+  }
+
+  private static func note(_ decision: Scout.Decision, for url: URL, isPrivate: Bool) {
+    guard !isPrivate, let host = url.host else { return }
     ScoutServices.shared.blockLog.record(
       site: host, reason: decision.reason, categories: decision.matchedCategories)
   }
@@ -370,7 +386,8 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
         decision, for: url,
         source: decision.verdict == nil ? .none : .cache, isPrivate: tab.isPrivate)
       if decision.isStale {
-        Task { await services.guard_.refresh(url) }
+        let isPrivate = tab.isPrivate
+        Task { await services.refresh(url, isPrivate: isPrivate) }
       }
       guard decision.type != .allow else { return }
       Self.note(decision, for: url, in: tab)
@@ -379,9 +396,10 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
       return
     }
 
+    let isPrivate = tab.isPrivate
     Task { @MainActor [weak self, weak tab] in
-      let decision = await services.guard_.decide(url)
-      Self.settle(decision, for: url, in: tab)
+      let decision = await services.decide(url, isPrivate: isPrivate)
+      Self.settle(decision, for: url, in: tab, isPrivate: isPrivate)
       // Only if the tab is still on this page: a feed scrolled on while the
       // check ran must not lose the page the user moved to.
       guard decision.type != .allow, let self, let tab, Self.pageKey(tab.visibleURL) == key

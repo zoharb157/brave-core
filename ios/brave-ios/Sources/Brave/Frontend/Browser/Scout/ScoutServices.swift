@@ -109,6 +109,9 @@ public final class ScoutServices {
   /// private session doesn't re-check the same page over and over, and are
   /// dropped the moment that session ends — see `forgetPrivateVerdicts()`.
   private var privateOnlyKeys: Set<String> = []
+  /// Moves on each time the private keys are dropped, so a private check that
+  /// lands afterwards can tell its session is over.
+  private var privateSession = 0
   private let checker: SafetyChecker
   public let guard_: NavigationGuard
 
@@ -340,7 +343,13 @@ public final class ScoutServices {
   /// coalescing checker keys in-flight requests the same way the cache keys
   /// entries, so the navigation that follows joins this request instead of
   /// starting a second one — which is the whole point.
-  public func warm(_ url: URL) {
+  ///
+  /// `isPrivate` is the tab's, read when the user acted: a check started from a
+  /// private tab keeps its verdict off disk, as the navigation itself would.
+  public func warm(_ url: URL, isPrivate: Bool) {
+    if isPrivate {
+      notePrivateNavigation(to: url)
+    }
     // Anything already decidable — a rule, a cached verdict, a scheme — needs
     // no work, and that is the common case on a site already visited.
     guard guard_.decideImmediately(url) == nil else { return }
@@ -348,8 +357,52 @@ public final class ScoutServices {
     guard warming.count < Self.maxConcurrentWarms, !warming.contains(key) else { return }
     warming.insert(key)
     Task { @MainActor in
-      _ = await guard_.decide(url)
+      _ = await decide(url, isPrivate: isPrivate)
       warming.remove(key)
+    }
+  }
+
+  /// Checks `url`, keeping a private tab's verdict private however late it
+  /// lands.
+  ///
+  /// A check takes seconds, and the private session can end inside them — the
+  /// last private tab closed mid-check. The verdict is written to the cache
+  /// when the check returns, which is after `forgetPrivateVerdicts()` has
+  /// emptied the list of keys to keep off disk, so it used to be saved with
+  /// the normal verdicts and outlive the session it came from. `isPrivate` is
+  /// passed in, read while the tab was certainly alive, for the same reason:
+  /// by now the tab may be gone.
+  public func decide(_ url: URL, isPrivate: Bool) async -> Scout.Decision {
+    guard isPrivate else { return await guard_.decide(url) }
+    notePrivateNavigation(to: url)
+    let session = privateSession
+    let decision = await guard_.decide(url)
+    privateVerdictLanded(for: url, session: session)
+    return decision
+  }
+
+  /// `NavigationGuard.refresh`, with the same care for a private tab as
+  /// `decide(_:isPrivate:)`.
+  public func refresh(_ url: URL, isPrivate: Bool) async {
+    guard isPrivate else {
+      await guard_.refresh(url)
+      return
+    }
+    notePrivateNavigation(to: url)
+    let session = privateSession
+    await guard_.refresh(url)
+    privateVerdictLanded(for: url, session: session)
+  }
+
+  /// A private check has written its verdict. If the session it belonged to
+  /// is still running, the verdict is kept off disk with the rest; if it has
+  /// ended, everything else it learned is already gone, and so is this.
+  private func privateVerdictLanded(for url: URL, session: Int) {
+    let key = VerdictCache.cacheKey(for: url, perPageHosts: Self.perPageHosts)
+    if session == privateSession {
+      privateOnlyKeys.insert(key)
+    } else {
+      cache.forget(key: key)
     }
   }
 
@@ -362,7 +415,7 @@ public final class ScoutServices {
   /// second long-press can have one.
   public func mayPreview(_ url: URL) -> Bool {
     if guard_.decideImmediately(url)?.type == .allow { return true }
-    warm(url)
+    warm(url, isPrivate: false)
     return false
   }
 
@@ -403,6 +456,7 @@ public final class ScoutServices {
   public func forgetPrivateVerdicts() {
     for key in privateOnlyKeys { cache.forget(key: key) }
     privateOnlyKeys.removeAll()
+    privateSession += 1
   }
 
   /// The cache keys are the sites the user visited, so clearing history clears
@@ -410,6 +464,9 @@ public final class ScoutServices {
   public func forgetVerdicts() {
     cache.removeAll()
     privateOnlyKeys.removeAll()
+    // A private check still running would otherwise land in a cache that no
+    // longer knows to keep it off disk.
+    privateSession += 1
     if let url = Self.storeURL {
       try? FileManager.default.removeItem(at: url)
     }

@@ -61,10 +61,7 @@ class ScoutLinkWarmScriptHandler: TabContentScript {
     MainActor.assumeIsolated {
       // A private tab's verdicts stay out of the store on disk, the same as
       // one the user navigated to.
-      if tab.isPrivate {
-        ScoutServices.shared.notePrivateNavigation(to: warm.url)
-      }
-      ScoutServices.shared.warm(warm.url)
+      ScoutServices.shared.warm(warm.url, isPrivate: tab.isPrivate)
     }
   }
 }

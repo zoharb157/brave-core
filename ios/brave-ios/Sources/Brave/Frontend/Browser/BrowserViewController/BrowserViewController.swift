@@ -1969,10 +1969,7 @@ public class BrowserViewController: UIViewController {
       // be left to ScoutTabHelper: that runs when the load reaches the policy
       // decider, by which time this check may already have banked a verdict
       // for a private tab in the shared cache.
-      if tab.isPrivate {
-        ScoutServices.shared.notePrivateNavigation(to: url)
-      }
-      ScoutServices.shared.warm(url)
+      ScoutServices.shared.warm(url, isPrivate: tab.isPrivate)
 
       // A new ask, so a "Continue anyway" still in flight does not cover it.
       tab.scoutTabHelper?.userDidRequestPage()
