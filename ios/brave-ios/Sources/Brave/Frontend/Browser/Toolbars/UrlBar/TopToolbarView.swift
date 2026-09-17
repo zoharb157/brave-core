@@ -577,6 +577,23 @@ class TopToolbarView: UIView, ToolbarProtocol {
     // the checking page on a supervised phone.
     //
     // A site the user blocks themselves keeps its own mark, below.
+    // The browser's own warning pages stand in for their site the same way,
+    // and a green tick beside "your connection is not private" says the
+    // opposite of the page under it. Nothing has been checked on one of these:
+    // the site was never opened.
+    if let loaded = delegate?.topToolbarLoadedURL(self), let internalURL = InternalURL(loaded),
+      internalURL.isHTTPBlockedPage || internalURL.isBlockedPage
+    {
+      showShieldsMark(
+        UIImage(
+          systemName: "questionmark.circle.fill",
+          withConfiguration: UIImage.SymbolConfiguration(pointSize: 17, weight: .semibold)
+        )?.withRenderingMode(.alwaysTemplate),
+        tint: UIColor(braveSystemName: .systemfeedbackWarningIcon),
+        label: Strings.ScoutSitePanel.notChecked
+      )
+      return
+    }
     if let showing = ScoutPages.showing(onPage: delegate?.topToolbarLoadedURL(self)),
       currentURL.flatMap({ ScoutServices.shared.siteRules.rule(for: $0) }) == nil
     {
