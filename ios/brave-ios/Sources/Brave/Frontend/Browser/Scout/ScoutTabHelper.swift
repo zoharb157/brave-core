@@ -353,6 +353,33 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
 
   public func tabDidCommitNavigation(_ tab: some TabState) {
     lastPageKey = Self.pageKey(tab.visibleURL)
+    takeBackIfCertificateIsWrong(tab)
+  }
+
+  /// Takes the page back when it loaded over a certificate that did not check
+  /// out, on a supervised phone.
+  ///
+  /// A certificate that fails brings up the browser's own warning, and behind
+  /// "Advanced" is a button that goes on anyway — the exact tap that makes an
+  /// intercepted connection or a fake hotspot work. Nothing is asked of the
+  /// guard along that path: the page commits, and this is the first thing to
+  /// hear about it. So it is taken back here, the way the optimistic path
+  /// takes back a page whose verdict arrived late.
+  ///
+  /// Only while supervised. On a phone that is its own, the warning and the
+  /// choice behind it are the browser's own and stay as they are.
+  private func takeBackIfCertificateIsWrong(_ tab: some TabState) {
+    guard ScoutSupervision.shared.isOn,
+      tab.visibleSecureContentState == .invalidCertificate,
+      let url = tab.visibleURL, InternalURL(url) == nil
+    else { return }
+
+    let decision = Scout.Decision(type: .block, reason: .insecureCertificate)
+    ScoutActivityReporter.shared.record(
+      decision, for: url, source: .none, isPrivate: tab.isPrivate)
+    Self.note(decision, for: url, in: tab)
+    ScoutPages.record(decision, for: url)
+    showScoutPage(for: url, in: tab)
   }
 
   /// A page changed its address from script: the next short, a subreddit

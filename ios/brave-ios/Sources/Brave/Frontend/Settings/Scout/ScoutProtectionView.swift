@@ -432,6 +432,9 @@ struct BlockRecordRow: View {
     // tell a parent, at a glance, what their settings have been doing.
     case .unavailable, .uncheckedAddress: return Strings.ScoutProtection.blockedReasonUnchecked
     case .scheme: return Strings.ScoutProtection.blockedReasonLinkType
+    // A certificate that does not check out is the site failing to prove it is
+    // itself, which is what "unsafe" means on this screen.
+    case .insecureCertificate: return Strings.ScoutProtection.blockedReasonUnsafe
     // The setting that stopped it, by the name it has on this screen.
     case .unfilteredSearch: return Strings.ScoutProtection.safeSearchTitle
     }

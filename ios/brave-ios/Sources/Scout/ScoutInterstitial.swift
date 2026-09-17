@@ -124,6 +124,14 @@ public enum ScoutInterstitial {
         : "Scout couldn't reach its safety check, so nothing has looked at this page. "
           + "There is something odd about the address itself."
       reasons = []
+    case .insecureCertificate:
+      chipText = "NOT SAFE"
+      title = "This site's certificate is wrong"
+      summary =
+        "A certificate is how a site proves it is itself and keeps what you send private. "
+        + "This one does not check out, so somebody could be reading or changing what goes "
+        + "between this phone and the site."
+      reasons = []
     case .unfilteredSearch:
       chipText = "BLOCKED"
       title = "This search engine can't be filtered"
@@ -151,7 +159,7 @@ public enum ScoutInterstitial {
     // exception written now would be written on the strength of a check that
     // did not happen, and it would outlive the minute the network was down.
     case .security, .scheme, .unavailable, .unfilteredSearch, .knownThreat,
-      .uncheckedAddress:
+      .uncheckedAddress, .insecureCertificate:
       alwaysLabel = nil
     }
 
@@ -162,7 +170,12 @@ public enum ScoutInterstitial {
       summary: summary,
       reasons: reasons,
       primaryLabel: "Go back",
-      secondaryLabel: reason == .unfilteredSearch
+      // No way on for either of these. A search engine that cannot be
+      // filtered returns the same unfiltered results however many times it is
+      // asked, and going on past a certificate that does not check out is the
+      // whole of what the warning was about — on a phone somebody else is
+      // meant to be watching, that is not this screen's to offer.
+      secondaryLabel: reason == .unfilteredSearch || reason == .insecureCertificate
         ? nil : type == .block ? "Continue anyway" : "Continue",
       // Offered here as well as on `.unavailable`, because half of what this
       // page says is that the check could not be reached — and reaching it is

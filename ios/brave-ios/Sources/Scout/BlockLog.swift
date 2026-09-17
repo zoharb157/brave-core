@@ -128,6 +128,7 @@ extension DecisionReason {
     case .category: return "category"
     case .address: return "address"
     case .unavailable: return "unavailable"
+    case .insecureCertificate: return "invalid-certificate"
     case .unfilteredSearch: return "unfiltered-search"
     case .knownThreat: return "known-threat"
     case .uncheckedAddress: return "unchecked-address"
@@ -142,6 +143,7 @@ extension DecisionReason {
     case "category": self = .category
     case "address": self = .address
     case "unavailable": self = .unavailable
+    case "invalid-certificate": self = .insecureCertificate
     case "unfiltered-search": self = .unfilteredSearch
     case "known-threat": self = .knownThreat
     case "unchecked-address": self = .uncheckedAddress

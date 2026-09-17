@@ -11,6 +11,11 @@ public enum DecisionType { case allow, warn, block }
 /// traceable.
 public enum DecisionReason: Equatable, Sendable {
   case policyList, scheme, security, category, address, unavailable
+  /// The site's certificate does not check out and the person went on past
+  /// the warning anyway, on a supervised phone. Not a decision the guard
+  /// reaches: the browser reports it once the page has committed, because
+  /// nothing is asked of the guard before the warning is shown.
+  case insecureCertificate
   /// A results page from a search engine Scout cannot put into safe mode, on
   /// a supervised phone. See `SafeSearch.isUnfilteredResults`.
   case unfilteredSearch
