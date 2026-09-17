@@ -320,7 +320,9 @@ extension UIViewController {
     }
 
     // Add Search Engine Activity
+    // Not while a supervised phone filters search: see `ScoutSearchFilter`.
     if let onAddSearchEngine = callbacks.onAddSearchEngine,
+      !ScoutSearchFilter.isEnforced,
       tab?.pageMetadataHelper?.metadata?.search != nil,
       tab?.visibleURL?.isSecureWebPage() == true
     {

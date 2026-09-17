@@ -31,6 +31,9 @@ extension BrowserViewController {
   /// - Parameter webView: webview triggered open seach engine
   @discardableResult
   func evaluateWebsiteSupportOpenSearchEngine(in tab: some TabState) -> Bool {
+    // A supervised phone that filters search does not take new engines: see
+    // `ScoutSearchFilter`.
+    if ScoutSearchFilter.isEnforced { return false }
     if let openSearchMetaData = tab.pageMetadataHelper?.metadata?.search,
       let url = tab.visibleURL,
       url.isSecureWebPage()
@@ -199,6 +202,7 @@ extension BrowserViewController {
   }
 
   private func addSearchEngine(_ engine: OpenSearchEngine) {
+    if ScoutSearchFilter.isEnforced { return }
     var customEngineAlert: UIAlertController
 
     // Checking existance of search engine with same name

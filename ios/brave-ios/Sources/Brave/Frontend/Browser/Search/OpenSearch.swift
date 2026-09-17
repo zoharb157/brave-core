@@ -65,6 +65,9 @@ class OpenSearchEngine: NSObject, NSSecureCoding {
 
   fileprivate lazy var searchQueryComponentKey: String? = self.getQueryArgFromTemplate()
 
+  /// The query parameter this engine's search template puts the search in.
+  var queryParameterName: String? { searchQueryComponentKey }
+
   init(
     engineID: String? = nil,
     shortName: String,

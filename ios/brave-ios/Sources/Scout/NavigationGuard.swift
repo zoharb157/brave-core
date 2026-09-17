@@ -11,6 +11,9 @@ public enum DecisionType { case allow, warn, block }
 /// traceable.
 public enum DecisionReason: Equatable, Sendable {
   case policyList, scheme, security, category, address, unavailable
+  /// A results page from a search engine Scout cannot put into safe mode, on
+  /// a supervised phone. See `SafeSearch.isUnfilteredResults`.
+  case unfilteredSearch
 }
 
 public struct Decision {

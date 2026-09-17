@@ -17,7 +17,9 @@ public struct ScoutInterstitialModel: Equatable {
   public let summary: String
   public let reasons: [String]
   public let primaryLabel: String
-  public let secondaryLabel: String
+  /// Nil where going on is not offered: a search engine that cannot filter
+  /// would show the same unfiltered results after any number of continues.
+  public let secondaryLabel: String?
   /// Offered when the check could not be completed, where trying it again is
   /// the thing the reader actually wants. `nil` everywhere else — a verdict
   /// that came back does not become different by asking twice.
@@ -86,6 +88,13 @@ public enum ScoutInterstitial {
       title = "Can't verify right now"
       summary = "We couldn't check this page."
       reasons = []
+    case .unfilteredSearch:
+      chipText = "BLOCKED"
+      title = "This search engine can't be filtered"
+      summary =
+        "Scout can't turn on safe search here, so its results could show explicit images. "
+        + "Search with Google, Bing or DuckDuckGo instead."
+      reasons = []
     }
 
     // Continuing past a block should be able to stick. Repeating the same
@@ -97,7 +106,7 @@ public enum ScoutInterstitial {
     switch reason {
     case .category, .address: alwaysLabel = "Always allow this site"
     case .policyList: alwaysLabel = "Unblock this site"
-    case .security, .scheme, .unavailable: alwaysLabel = nil
+    case .security, .scheme, .unavailable, .unfilteredSearch: alwaysLabel = nil
     }
 
     return ScoutInterstitialModel(
@@ -107,7 +116,8 @@ public enum ScoutInterstitial {
       summary: summary,
       reasons: reasons,
       primaryLabel: "Go back",
-      secondaryLabel: type == .block ? "Continue anyway" : "Continue",
+      secondaryLabel: reason == .unfilteredSearch
+        ? nil : type == .block ? "Continue anyway" : "Continue",
       retryLabel: reason == .unavailable ? "Try again" : nil,
       alwaysLabel: alwaysLabel)
   }
@@ -136,6 +146,11 @@ public enum ScoutInterstitial {
     let retryBlock =
       m.retryLabel.map {
         "<button class=\"primary\" onclick=\"webkit.messageHandlers.scout.postMessage('retry')\">\(htmlEscaped($0))</button>"
+      } ?? ""
+
+    let proceedBlock =
+      m.secondaryLabel.map {
+        "<button class=\"quiet\" onclick=\"webkit.messageHandlers.scout.postMessage('proceed')\">\(htmlEscaped($0))</button>"
       } ?? ""
 
     // "Continue anyway" lasts for this visit; this one lasts forever. They
@@ -187,7 +202,7 @@ public enum ScoutInterstitial {
         <div class="actions">
           \(retryBlock)
           <button class="\(m.retryLabel == nil ? "primary" : "quiet")" onclick="webkit.messageHandlers.scout.postMessage('back')">\(m.primaryLabel)</button>
-          <button class="quiet" onclick="webkit.messageHandlers.scout.postMessage('proceed')">\(m.secondaryLabel)</button>
+          \(proceedBlock)
           \(alwaysBlock)
         </div>
       </main>

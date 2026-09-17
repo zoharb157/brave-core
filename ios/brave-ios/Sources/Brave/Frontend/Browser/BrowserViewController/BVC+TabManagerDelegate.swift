@@ -229,7 +229,7 @@ extension BrowserViewController: TabManagerDelegate {
       self.present(quickViewController, animated: true)
     }
     tab.blockedDomainTabHelper = .init(tab: tab)
-    tab.scoutTabHelper = .init(tab: tab)
+    tab.scoutTabHelper = .init(tab: tab, searchEngines: profile.searchEngines)
   }
 
   func tabManager(

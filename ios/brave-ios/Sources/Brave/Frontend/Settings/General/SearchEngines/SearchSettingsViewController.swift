@@ -77,8 +77,18 @@ class SearchSettingsViewController: UITableViewController {
         }
     }
 
+    // Not offered while a supervised phone filters search: their results
+    // would only be blocked.
+    if ScoutSearchFilter.isEnforced {
+      orderedEngines.removeAll(where: ScoutSearchFilter.cannotFilter)
+    }
+
     return orderedEngines
   }
+
+  /// Adding an engine is not offered while a supervised phone filters
+  /// search: Scout cannot filter an engine it does not know.
+  private var offersAddEngine: Bool { !ScoutSearchFilter.isEnforced }
 
   private var customSearchEngines: [OpenSearchEngine] {
     searchEngines.orderedEngines.filter { $0.isCustomEngine }
@@ -238,7 +248,7 @@ class SearchSettingsViewController: UITableViewController {
       return CurrentEngineType.allCases.count
     } else {
       // Adding an extra row for Add Search Engine Entry
-      return customSearchEngines.count + 1
+      return customSearchEngines.count + (offersAddEngine ? 1 : 0)
     }
   }
 
@@ -355,8 +365,11 @@ class SearchSettingsViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
   {
-    return section == Section.current.rawValue
-      ? Strings.currentlyUsedSearchEngines : Strings.customSearchEngines
+    if section == Section.current.rawValue { return Strings.currentlyUsedSearchEngines }
+    // No heading over a section with nothing in it, which is what a supervised
+    // phone with no added engines has once the add row is gone.
+    return self.tableView(tableView, numberOfRowsInSection: section) == 0
+      ? nil : Strings.customSearchEngines
   }
 }
 
@@ -387,7 +400,7 @@ extension SearchSettingsViewController {
       let quickSearchEnginesViewController = SearchQuickEnginesViewController(profile: profile)
       navigationController?.pushViewController(quickSearchEnginesViewController, animated: true)
     } else if indexPath.section == Section.customSearch.rawValue
-      && indexPath.item == customSearchEngines.count
+      && indexPath.item == customSearchEngines.count && offersAddEngine
     {
       presentAddEditSearchEngine()
     }

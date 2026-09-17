@@ -29,9 +29,12 @@ extension TabDataValues {
 @MainActor
 public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
   weak var tab: (any TabState)?
+  /// For the engines someone added, which Scout cannot filter.
+  weak var searchEngines: SearchEngines?
 
-  public init(tab: some TabState) {
+  public init(tab: some TabState, searchEngines: SearchEngines?) {
     self.tab = tab
+    self.searchEngines = searchEngines
     tab.addPolicyDecider(self)
     // For pages that change their address without loading — see
     // `tabDidCommitSameDocumentNavigation`. The policy decider never hears
@@ -101,6 +104,13 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
       // supposed to be protecting.
       noteRestricted(requestURL)
       tab.loadRequest(request)
+      return .cancel
+    }
+
+    // Results from an engine whose filter Scout cannot pin on. Nothing about
+    // the address can be changed to fix them, so there is no way on offered.
+    if let decision = ScoutSearchFilter.block(for: requestURL, engines: searchEngines) {
+      stopUnfilteredSearch(decision, for: requestURL, in: tab)
       return .cancel
     }
 
@@ -294,6 +304,15 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
     NotificationCenter.default.post(name: ScoutServices.verdictDidChange, object: nil)
   }
 
+  private func stopUnfilteredSearch(
+    _ decision: Scout.Decision, for url: URL, in tab: some TabState
+  ) {
+    ScoutActivityReporter.shared.record(decision, for: url, source: .none, isPrivate: tab.isPrivate)
+    Self.note(decision, for: url, in: tab)
+    ScoutPages.record(decision, for: url)
+    showScoutPage(for: url, in: tab)
+  }
+
   /// Records a stopped navigation, so Settings → Protection can show what
   /// happened. A private tab is excluded: the point of one is that the visit
   /// leaves no trace, and a log naming the site would be exactly that trace.
@@ -328,8 +347,13 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
   /// the site's data on a block: for one bad short that would sign the user
   /// out of the whole site.
   public func tabDidCommitSameDocumentNavigation(_ tab: some TabState) {
-    guard let url = tab.visibleURL,
-      let key = InPageNavigation.keyToCheck(
+    guard let url = tab.visibleURL else { return }
+    // A results page that searches again without loading.
+    if let decision = ScoutSearchFilter.block(for: url, engines: searchEngines) {
+      stopUnfilteredSearch(decision, for: url, in: tab)
+      return
+    }
+    guard let key = InPageNavigation.keyToCheck(
         url, perPageHosts: ScoutServices.perPageHosts, lastKey: lastPageKey)
     else { return }
     lastPageKey = key

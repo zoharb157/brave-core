@@ -128,6 +128,7 @@ extension DecisionReason {
     case .category: return "category"
     case .address: return "address"
     case .unavailable: return "unavailable"
+    case .unfilteredSearch: return "unfiltered-search"
     }
   }
 
@@ -139,6 +140,7 @@ extension DecisionReason {
     case "category": self = .category
     case "address": self = .address
     case "unavailable": self = .unavailable
+    case "unfiltered-search": self = .unfilteredSearch
     default: return nil
     }
   }

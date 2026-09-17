@@ -186,6 +186,39 @@ public enum SafeSearch {
     return coverage(ofSite: eTLDPlusOne(host))
   }
 
+  /// The parameters the engines in `unfiltered` carry a search in: Startpage
+  /// uses `query` (and `q` on older paths), Ecosia `q`, Yandex `text`.
+  private static let unfilteredQueryNames: Set<String> = ["q", "query", "text"]
+
+  /// Whether `url` is a page of results from an engine Scout cannot filter.
+  ///
+  /// Search filtering promises that explicit results never reach the page, and
+  /// for these engines nothing Scout can do to the address keeps it — so on a
+  /// supervised phone their results are not shown at all. Choosing one as the
+  /// default engine, or typing its address, used to be a way round the filter
+  /// that needed no PIN.
+  ///
+  /// - Parameter customEngines: for each engine the user added, its
+  ///   registrable domain and the parameter its search template puts the query
+  ///   in. An added engine can be any site, so only that parameter counts.
+  public static func isUnfilteredResults(_ url: URL, customEngines: [String: String] = [:]) -> Bool {
+    guard let host = url.host else { return false }
+    let site = eTLDPlusOne(host)
+    let names: Set<String>
+    if unfiltered.contains(site) {
+      names = unfilteredQueryNames
+    } else if let name = customEngines[site], coverage(ofSite: site) == .unfiltered {
+      names = [name]
+    } else {
+      return false
+    }
+    let items = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems ?? []
+    return items.contains {
+      names.contains($0.name)
+        && !($0.value ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+  }
+
   /// As `coverage(of:)`, for a registrable domain already in hand.
   public static func coverage(ofSite site: String) -> Coverage {
     if rules.contains(where: { $0.matches(site) }) { return .pinned }

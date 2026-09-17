@@ -424,6 +424,8 @@ struct BlockRecordRow: View {
     case .policyList: return Strings.ScoutProtection.blockedReasonYourList
     case .unavailable: return Strings.ScoutProtection.blockedReasonUnchecked
     case .scheme: return Strings.ScoutProtection.blockedReasonLinkType
+    // The setting that stopped it, by the name it has on this screen.
+    case .unfilteredSearch: return Strings.ScoutProtection.safeSearchTitle
     }
   }
 }
