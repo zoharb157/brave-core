@@ -481,6 +481,23 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
       return
     }
     tab.evaluateJavaScriptUnsafe("location.replace(\(literal))")
+
+    // The script does not always take. Once a link preview has been opened in
+    // a tab, the web view drops navigations the checking page starts itself —
+    // before any decider sees them — and the page sat on "Checking" for good
+    // while the site had long been allowed. If the tab is still idle on this
+    // checking page a moment later, reload it: it is now served as the result,
+    // whose immediate refresh also takes the checking page's place in history.
+    Task { @MainActor [weak tab] in
+      try? await Task.sleep(for: Self.handOffGrace)
+      guard let tab, !tab.isLoading,
+        ScoutPages.siteURL(fromPageURL: tab.visibleURL) == siteURL
+      else { return }
+      tab.reload()
+    }
   }
+
+  /// How long the page's own hand-off gets before it is taken as lost.
+  private static let handOffGrace = Duration.seconds(1.5)
 }
 
