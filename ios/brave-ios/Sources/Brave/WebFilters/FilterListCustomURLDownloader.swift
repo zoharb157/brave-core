@@ -48,6 +48,7 @@ import Foundation
     guard !startedService else { return }
     self.startedService = true
     await CustomFilterListStorage.shared.loadCachedFilterLists()
+    ScoutFilterLists.subscribeIfNeeded(CustomFilterListStorage.shared)
 
     for customURL in CustomFilterListStorage.shared.filterListsURLs {
       startFetching(filterListCustomURL: customURL)

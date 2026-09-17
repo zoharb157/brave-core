@@ -799,7 +799,16 @@ extension AdBlockEngineManager.FileInfo {
   /// Return an array of all sources that are enabled according to user's settings
   /// - Note: This does not take into account the domain or global adblock toggle
   var enabledSources: [GroupedAdBlockEngine.Source] {
-    var enabledSources = FilterListStorage.shared.enabledSources
+    // Scout: component filter lists come from the upstream update server,
+    // which refuses this app (see `ScoutFilterLists`), so none of them ever
+    // arrives. An engine compiles only once every enabled source has a file,
+    // so one that can never have one kept every engine from compiling at all
+    // — no element hiding, and a blocked count stuck at zero. They are left
+    // out; the lists Scout subscribes to by URL stand in for them.
+    var enabledSources = FilterListStorage.shared.enabledSources.filter {
+      if case .filterList = $0 { return false }
+      return true
+    }
     enabledSources.append(contentsOf: CustomFilterListStorage.shared.enabledSources)
     return enabledSources
   }
