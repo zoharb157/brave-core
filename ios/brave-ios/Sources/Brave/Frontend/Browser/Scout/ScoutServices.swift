@@ -413,9 +413,15 @@ public final class ScoutServices {
   /// phone too. It is only offered for a page Scout has already allowed.
   /// Anything else gets the menu without a preview, and its check starts so a
   /// second long-press can have one.
-  public func mayPreview(_ url: URL) -> Bool {
+  ///
+  /// `isPrivate` is the tab the long-press happened in. The check started here
+  /// is a private visit like any other and its verdict stays off disk.
+  public func mayPreview(_ url: URL, isPrivate: Bool) -> Bool {
+    if isPrivate {
+      notePrivateNavigation(to: url)
+    }
     if guard_.decideImmediately(url)?.type == .allow { return true }
-    warm(url, isPrivate: false)
+    warm(url, isPrivate: isPrivate)
     return false
   }
 
