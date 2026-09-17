@@ -170,7 +170,7 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
 
         if decision.type == .allow {
           approvedURL = requestURL
-          replaceCheckingPage(with: requestURL, in: tab)
+          handOver(request, in: tab)
         } else {
           // Same URL as the checking page, so it replaces it in history; the
           // page handler now serves the recorded result.
@@ -535,6 +535,55 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
   private func showScoutPage(for siteURL: URL, in tab: some TabState) {
     guard let request = ScoutPages.pageRequest(for: siteURL) else { return }
     tab.loadRequest(request)
+  }
+
+  /// Makes the navigation the checking page stood in for, now that it is
+  /// allowed.
+  ///
+  /// A plain page load is handed over by address, in place of the checking
+  /// page. A form post cannot be: an address carries no method and no body, so
+  /// re-issuing one by address turned it into a GET, and the sign-in, payment
+  /// check or OAuth step it was posting to got an empty request and failed.
+  /// Those are made again from the original request, method, body and
+  /// headers intact. The checking page then stays behind it in history, which
+  /// is the lesser cost; Back from a posted page asks to resend it anyway.
+  private func handOver(_ request: URLRequest, in tab: some TabState) {
+    guard let url = request.url else { return }
+    let method = request.httpMethod?.uppercased() ?? "GET"
+    guard method != "GET" || request.httpBody != nil || request.httpBodyStream != nil else {
+      replaceCheckingPage(with: url, in: tab)
+      return
+    }
+    var replay = request
+    // The web view takes a body as data only, and asserts on a stream. The
+    // original request was cancelled, so nothing else will read this one;
+    // read it here. A stream that cannot be read is dropped rather than left
+    // to crash the tab, and the load then goes out without a body, as every
+    // allowed post did before.
+    if let stream = replay.httpBodyStream {
+      replay.httpBodyStream = nil
+      replay.httpBody = Self.readAll(stream)
+    }
+    tab.loadRequest(replay)
+  }
+
+  /// A request body handed over as a stream, as data. Capped, since it is
+  /// held in memory: a form post is small, and one that is not is better
+  /// failed than read without limit.
+  private static func readAll(_ stream: InputStream) -> Data? {
+    let limit = 32 * 1024 * 1024
+    stream.open()
+    defer { stream.close() }
+    var data = Data()
+    var buffer = [UInt8](repeating: 0, count: 64 * 1024)
+    while stream.hasBytesAvailable {
+      let count = stream.read(&buffer, maxLength: buffer.count)
+      if count < 0 { return nil }
+      if count == 0 { break }
+      data.append(buffer, count: count)
+      if data.count > limit { return nil }
+    }
+    return data.isEmpty ? nil : data
   }
 
   /// Hand the allowed site over in place of the checking page, so Back skips
