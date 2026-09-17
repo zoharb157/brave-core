@@ -356,6 +356,12 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
     takeBackIfCertificateIsWrong(tab)
   }
 
+  /// The certificate's standing is settled after the page commits, not with
+  /// it, so this is where a page that went on past the warning is caught.
+  public func tabDidChangeVisibleSecurityState(_ tab: some TabState) {
+    takeBackIfCertificateIsWrong(tab)
+  }
+
   /// Takes the page back when it loaded over a certificate that did not check
   /// out, on a supervised phone.
   ///
