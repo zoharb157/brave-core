@@ -271,6 +271,10 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
     }
   }
 
+  func topToolbarLoadedURL(_ topToolbar: TopToolbarView) -> URL? {
+    tabManager.selectedTab?.visibleURL
+  }
+
   func topToolbarIsShieldsEnabled(_ topToolbar: TopToolbarView, for url: URL?) -> Bool {
     guard let url, let currentTab = self.tabManager.selectedTab else { return false }
     return currentTab.braveShieldsHelper?.isBraveShieldsEnabled(for: url) ?? false

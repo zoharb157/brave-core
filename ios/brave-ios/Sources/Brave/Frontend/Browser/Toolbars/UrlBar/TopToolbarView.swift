@@ -43,6 +43,9 @@ protocol TopToolbarDelegate: AnyObject {
   ) -> OrderedSet<WidgetShortcut>
   func topToolbarDidTapShortcutButton(_ topToolbar: TopToolbarView)
   func topToolbarDidTapBraveShieldsButton(_ topToolbar: TopToolbarView)
+  /// The address the selected tab has actually loaded. `currentURL` is the one
+  /// shown, which for a Scout page is the site it stands in for.
+  func topToolbarLoadedURL(_ topToolbar: TopToolbarView) -> URL?
   func topToolbarDidTapBraveRewardsButton(_ topToolbar: TopToolbarView)
   func topToolbarDidTapMenuButton(_ topToolbar: TopToolbarView)
   func topToolbarDidPressVoiceSearchButton(_ urlBar: TopToolbarView)
@@ -566,6 +569,23 @@ class TopToolbarView: UIView, ToolbarProtocol {
     // mark on a site it checked and one it has never seen. Brave's own
     // shields-off state still wins: that is a state of this button's other
     // half, and hiding it would leave ad blocking silently switched off.
+    //
+    // A Scout page is shown under its site's address, so without asking what
+    // is loaded the mark described the site: a blocked page showed the
+    // ordinary logo — a globe with a green tick — whenever the block was not
+    // a stored verdict (an explicit address, a check that failed), and so did
+    // the checking page on a supervised phone.
+    //
+    // A site the user blocks themselves keeps its own mark, below.
+    if let showing = ScoutPages.showing(onPage: delegate?.topToolbarLoadedURL(self)),
+      currentURL.flatMap({ ScoutServices.shared.siteRules.rule(for: $0) }) == nil
+    {
+      let scout = Self.scoutIcon(for: showing)
+      shieldsButton.setImage(scout.image, for: .normal)
+      shieldsButton.tintColor = scout.tint
+      shieldsButton.accessibilityLabel = scout.label
+      return
+    }
     if !isShieldsOff, let currentURL, let scout = Self.scoutIcon(for: currentURL) {
       shieldsButton.setImage(scout.image, for: .normal)
       shieldsButton.tintColor = scout.tint
@@ -578,18 +598,45 @@ class TopToolbarView: UIView, ToolbarProtocol {
     shieldsButton.setImage(UIImage(sharedNamed: shieldIcon), for: .normal)
   }
 
+  private static func mark(
+    _ symbol: String, _ tint: UIColor, _ label: String
+  ) -> (image: UIImage?, tint: UIColor, label: String) {
+    let configuration = UIImage.SymbolConfiguration(pointSize: 17, weight: .semibold)
+    return (
+      UIImage(systemName: symbol, withConfiguration: configuration)?
+        .withRenderingMode(.alwaysTemplate),
+      tint, label
+    )
+  }
+
+  /// The mark for a Scout page: what it stopped, or that it is still checking.
+  private static func scoutIcon(
+    for showing: ScoutPages.Showing
+  ) -> (image: UIImage?, tint: UIColor, label: String) {
+    switch showing {
+    case .checking:
+      return mark(
+        "shield", UIColor(braveSystemName: .iconDefault), Strings.ScoutSitePanel.checking)
+    case .stopped(let decision) where decision.type == .block:
+      return mark(
+        "exclamationmark.shield.fill", UIColor(braveSystemName: .systemfeedbackErrorIcon),
+        Strings.ScoutSitePanel.checkedUnsafe)
+    case .stopped(let decision) where decision.reason == .unavailable:
+      // The check did not finish; nothing was found.
+      return mark(
+        "questionmark.circle.fill", UIColor(braveSystemName: .systemfeedbackWarningIcon),
+        Strings.ScoutSitePanel.notChecked)
+    case .stopped:
+      return mark(
+        "exclamationmark.shield.fill", UIColor(braveSystemName: .systemfeedbackWarningIcon),
+        Strings.ScoutSitePanel.checkedSuspicious)
+    }
+  }
+
   /// The mark for what Scout knows about `url`, or nil when it knows nothing
   /// and the ordinary icon should stand.
   private static func scoutIcon(for url: URL) -> (image: UIImage?, tint: UIColor, label: String)? {
     let status = ScoutServices.shared.status(for: url)
-    let configuration = UIImage.SymbolConfiguration(pointSize: 17, weight: .semibold)
-    func mark(_ name: String, _ tint: UIColor, _ label: String) -> (UIImage?, UIColor, String) {
-      (
-        UIImage(systemName: name, withConfiguration: configuration)?
-          .withRenderingMode(.alwaysTemplate),
-        tint, label
-      )
-    }
 
     switch status.rule {
     case .allow:

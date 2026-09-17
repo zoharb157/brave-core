@@ -82,14 +82,7 @@ enum ScoutPages {
   /// the decision lands. Neither (back/forward or restore after the cache
   /// dropped it): check now, then answer.
   static func html(for siteURL: URL) async -> String {
-    if let recorded = recent[siteURL], let verdict = recorded.verdict {
-      // Re-resolve against the current choice: the user may have changed
-      // what Scout blocks since this was recorded.
-      let current = NavigationGuard.resolve(
-        verdict, blockedCategories: ScoutServices.shared.decisionPolicy.blockedCategories)
-      return settled(current, siteURL: siteURL)
-    }
-    if let decision = recent[siteURL] ?? ScoutServices.shared.guard_.decideImmediately(siteURL) {
+    if let decision = knownDecision(for: siteURL) {
       return settled(decision, siteURL: siteURL)
     }
     if inFlight.contains(siteURL) {
@@ -98,6 +91,37 @@ enum ScoutPages {
     let decision = await ScoutServices.shared.guard_.decide(siteURL)
     record(decision, for: siteURL)
     return settled(decision, siteURL: siteURL)
+  }
+
+  /// The decision a page for `siteURL` would serve now, or nil when none is
+  /// known yet.
+  private static func knownDecision(for siteURL: URL) -> Scout.Decision? {
+    if let recorded = recent[siteURL], let verdict = recorded.verdict {
+      // Re-resolve against the current choice: the user may have changed
+      // what Scout blocks since this was recorded.
+      return NavigationGuard.resolve(
+        verdict, blockedCategories: ScoutServices.shared.decisionPolicy.blockedCategories)
+    }
+    return recent[siteURL] ?? ScoutServices.shared.guard_.decideImmediately(siteURL)
+  }
+
+  /// What a Scout page is showing in place of its site.
+  enum Showing {
+    case checking
+    case stopped(Scout.Decision)
+  }
+
+  /// What the page at `pageURL` shows, or nil when it is not a Scout page or
+  /// is only handing over to an allowed site.
+  ///
+  /// For the address bar, which is handed the site's address rather than the
+  /// page's and so cannot tell a blocked page from the site itself.
+  static func showing(onPage pageURL: URL?) -> Showing? {
+    guard let siteURL = siteURL(fromPageURL: pageURL) else { return nil }
+    if let decision = knownDecision(for: siteURL) {
+      return decision.type == .allow ? nil : .stopped(decision)
+    }
+    return inFlight.contains(siteURL) ? .checking : nil
   }
 
   private static func settled(_ decision: Scout.Decision, siteURL: URL) -> String {
