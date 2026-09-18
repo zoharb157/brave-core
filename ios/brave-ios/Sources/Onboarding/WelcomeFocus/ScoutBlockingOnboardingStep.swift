@@ -202,7 +202,7 @@ public enum ScoutBlockingChoices {
   public static var confirmRelax: (@escaping () -> Void) -> Void = { $0() }
 }
 
-private let scoutViolet = Color(red: 0x54 / 255, green: 0x40 / 255, blue: 0x96 / 255)
+private let scoutViolet = Color.scoutAccent
 private let scoutMint = Color(red: 0x7E / 255, green: 0xC8 / 255, blue: 0xA8 / 255)
 /// Text that sits on `scoutMint` itself. Deep enough to clear 4.5:1 against it.
 private let scoutBadgeInk = Color(red: 0x0E / 255, green: 0x2E / 255, blue: 0x22 / 255)

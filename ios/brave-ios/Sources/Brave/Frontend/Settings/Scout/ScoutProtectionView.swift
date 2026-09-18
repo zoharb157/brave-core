@@ -13,10 +13,11 @@ import Strings
 import SwiftUI
 import UIKit
 
-/// Scout's colours. Defined here as well as in the onboarding module because
-/// the two live in separate targets and a shared design token for one brand
-/// colour isn't worth a new module.
-let scoutViolet = Color(red: 0x54 / 255, green: 0x40 / 255, blue: 0x96 / 255)
+/// Scout's colours. The accent itself now lives in DesignSystem, which both
+/// this target and the onboarding module already import — it had been written
+/// out four times, and four copies of one brand colour is three chances for a
+/// screen to drift.
+let scoutViolet = Color.scoutAccent
 /// The lighter violet the app icon starts from, so the one card on this
 /// screen that is a solid block of colour is the same block of colour the
 /// icon is. It read as a flat swatch that happened to be purple.

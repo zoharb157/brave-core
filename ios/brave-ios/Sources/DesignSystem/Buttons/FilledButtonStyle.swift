@@ -17,7 +17,12 @@ public struct FilledButtonStyle: ButtonStyle {
       .foregroundStyle(Color(braveSystemName: isEnabled ? .schemesOnPrimary : .textDisabled))
       .background {
         if isEnabled {
-          Color(braveSystemName: .buttonBackground)
+          // Scout's accent, not Nala's `buttonBackground`. That token is
+          // Brave's blurple and ships in a generated xcframework, so it could
+          // not be retinted — which left the largest, loudest control in
+          // onboarding wearing the old brand's colour directly beneath
+          // Scout's own mark.
+          Color.scoutAccent
             .mix(
               with: Color(braveSystemName: .fixedForeground),
               by: configuration.isPressed ? 0.2 : 0
