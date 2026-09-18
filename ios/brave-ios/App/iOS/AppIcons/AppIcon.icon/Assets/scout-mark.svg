@@ -1,14 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
-  <!-- Scout: a globe (this is a browser) with a verified badge (every link is checked). -->
-  <g fill="none" stroke="#FFF6E8" stroke-width="51" stroke-linecap="round">
-    <circle cx="466" cy="466" r="225"/>
-    <line x1="241" y1="466" x2="691" y2="466"/>
-    <path d="M466 241 C 376 316, 376 616, 466 691"/>
-    <path d="M466 241 C 556 316, 556 616, 466 691"/>
-  </g>
-  <g>
-    <circle cx="753" cy="302" r="154" fill="#7EC8A8"/>
-    <path d="M677 300 L 733 358 L 831 238" fill="none" stroke="#183A2D"
-          stroke-width="41" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Scout's mark: the shield the block pages show, with the globe cut out
+       of it — protection and a browser in one form rather than two objects.
+
+       Solid rather than drawn in outline. An outlined shield holding an
+       outlined globe is two thin concentric lines, and at 29pt on a home
+       screen that is a smudge; a single cream mass is still legible there. -->
+  <defs>
+    <mask id="scout-globe">
+      <rect x="0" y="0" width="48" height="48" fill="#fff"/>
+      <g fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round">
+        <circle cx="24" cy="21.6" r="9.2"/>
+        <line x1="14.8" y1="21.6" x2="33.2" y2="21.6"/>
+        <path d="M24 12.4 C 20.3 15.4, 20.3 27.8, 24 30.8"/>
+        <path d="M24 12.4 C 27.7 15.4, 27.7 27.8, 24 30.8"/>
+      </g>
+    </mask>
+  </defs>
+  <g transform="translate(128,128) scale(16.0)">
+    <path d="M24 4 L42 11 v13 c0 11-8 17-18 20 C14 41 6 35 6 24 V11 Z"
+          fill="#FFF6E8" mask="url(#scout-globe)"/>
   </g>
 </svg>
