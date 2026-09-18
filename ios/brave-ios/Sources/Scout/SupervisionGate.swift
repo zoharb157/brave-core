@@ -29,6 +29,15 @@ public enum SupervisedAction: CaseIterable, Sendable {
   case installProfile
   /// "Continue anyway" on a block page — this visit only.
   case continueOnce
+  /// The same tap, on a page the check or a public list called an attack.
+  ///
+  /// Apart from `continueOnce` because the argument for leaving that one free
+  /// does not reach this far. A category block is a matter of settings and is
+  /// wrong often enough that asking every time makes the browser unusable. A
+  /// phishing page is neither: it is rare, so the gate costs almost nothing,
+  /// and the tap past it is the one the attack is built to obtain — somebody
+  /// has usually been talked into it by the time they reach this screen.
+  case continuePastAttack
 }
 
 /// Which actions a supervised phone asks for the PIN before doing.
@@ -38,7 +47,7 @@ public enum SupervisedAction: CaseIterable, Sendable {
 ///
 /// - `continueOnce` lasts one visit and is already recorded. Gating it makes
 ///   the browser unusable, and an unusable filter is one that gets switched
-///   off altogether.
+///   off altogether. `continuePastAttack` is the exception it does not cover.
 /// - `tightenCategory` and `blockSite` only ever add protection. A PIN there
 ///   is friction with nothing behind it.
 public enum SupervisionGate {
@@ -46,7 +55,7 @@ public enum SupervisionGate {
     guard supervised else { return false }
     switch action {
     case .relaxCategory, .relaxSearchFilter, .allowSite, .alwaysAllowFromBlockPage,
-      .turnSupervisionOff, .installProfile:
+      .turnSupervisionOff, .installProfile, .continuePastAttack:
       return true
     case .tightenCategory, .blockSite, .continueOnce:
       return false

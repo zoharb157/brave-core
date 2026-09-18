@@ -71,6 +71,22 @@ class ScoutScriptHandler: TabContentScript {
   /// allow" below, which says so.
   private func proceed(to siteURL: URL, tab: some TabState) {
     MainActor.assumeIsolated {
+      // Free on a category block: those are a matter of settings, wrong often
+      // enough that a PIN every time makes the browser unusable. Not free on
+      // a page a public list or the check called an attack — that is rare, so
+      // the gate costs nothing, and this tap is the one phishing is built to
+      // obtain from whoever it has already talked to.
+      let action: SupervisedAction =
+        ScoutPages.knownDecision(for: siteURL)?.isAttack == true
+        ? .continuePastAttack : .continueOnce
+      ScoutSupervision.shared.gate(action, from: tab.view.window?.rootViewController) {
+        Self.applyProceed(to: siteURL, tab: tab)
+      }
+    }
+  }
+
+  private static func applyProceed(to siteURL: URL, tab: some TabState) {
+    MainActor.assumeIsolated {
       tab.scoutTabHelper?.approveContinue(to: siteURL)
       // A private tab's block was never logged, so there is nothing to mark;
       // marking the entry a normal tab left for the same site would record

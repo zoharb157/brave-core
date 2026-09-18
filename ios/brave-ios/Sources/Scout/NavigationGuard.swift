@@ -43,6 +43,22 @@ public enum DecisionReason: Equatable, Sendable, CaseIterable {
   case unspecified
 }
 
+extension Decision {
+  /// Whether this stopped the page because something found it to be an
+  /// attack, rather than because of a setting or a check that could not be
+  /// finished.
+  ///
+  /// A block with `.security` is always that finding: `resolve` reaches it
+  /// only when the service called the page malicious, and a merely suspicious
+  /// one warns instead. `.knownThreat` is a public report of the same thing.
+  /// `.uncheckedAddress` is deliberately not here — nothing examined that
+  /// page, and the screen for it offers "Try again" because the honest answer
+  /// is that Scout does not know.
+  public var isAttack: Bool {
+    type == .block && (reason == .security || reason == .knownThreat)
+  }
+}
+
 public struct Decision {
   public let type: DecisionType
   public let verdict: Verdict?

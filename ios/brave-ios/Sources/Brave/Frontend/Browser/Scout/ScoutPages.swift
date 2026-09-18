@@ -97,7 +97,11 @@ enum ScoutPages {
 
   /// The decision a page for `siteURL` would serve now, or nil when none is
   /// known yet.
-  private static func knownDecision(for siteURL: URL) -> Scout.Decision? {
+  ///
+  /// Not private: the block page's own buttons need to know what stopped the
+  /// page. "Continue anyway" past a phishing site is gated on a supervised
+  /// phone and past a category block is not, and this is where that is read.
+  static func knownDecision(for siteURL: URL) -> Scout.Decision? {
     if let recorded = recent[siteURL], let verdict = recorded.verdict {
       // Re-resolve against the current choice: the user may have changed
       // what Scout blocks since this was recorded.
