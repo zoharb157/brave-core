@@ -183,17 +183,19 @@ extension BrowserViewController {
     // on a blank tab — and wrong for a feature the build does not have, which can never become
     // enabled. Switching one off in `ScoutFeatures` therefore left its menu item behind, greyed
     // out, on every page, for good.
-    var pageActivitiesNotOffered: Set<Action.Identifier> = []
+    // One rule, in `Action.Identifier.pageActivitiesNotOffered`, so the test
+    // beside it can state it once. Brave News stays an `and`: the feature flag
+    // decides whether Scout ships it at all, and the pref can still take it
+    // away by admin policy in a build that does.
+    var pageActivitiesNotOffered = Action.Identifier.pageActivitiesNotOffered(
+      .init(
+        webcompatReporter: ScoutFeatures.webcompatReporter,
+        sync: ScoutFeatures.sync,
+        braveNews: ScoutFeatures.braveNews
+      )
+    )
     if !profileController.profile.prefs.isBraveNewsAvailable {
       pageActivitiesNotOffered.insert(.addSourceNews)
-    }
-    if !ScoutFeatures.webcompatReporter {
-      // Filed with Brave's webcompat service, so Scout does not offer it.
-      pageActivitiesNotOffered.insert(.reportBrokenSite)
-    }
-    if !ScoutFeatures.sync {
-      // "Send To Your Devices" needs Brave Sync, which Scout does not run.
-      pageActivitiesNotOffered.insert(.sendURL)
     }
     let remainingPageActivities: [Action] = Action.ID.allPageActivites
       .subtracting(pageActivities.map(\.id))
