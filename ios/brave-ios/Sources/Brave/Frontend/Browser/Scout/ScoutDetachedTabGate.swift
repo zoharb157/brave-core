@@ -45,10 +45,21 @@ final class ScoutDetachedTabGate: TabPolicyDecider {
     shouldAllowRequest request: URLRequest,
     requestInfo: WebRequestInfo
   ) async -> WebPolicyDecision {
-    guard let url = request.url, requestInfo.isMainFrame,
-      ["http", "https", "data", "blob", "file"].contains(url.scheme),
-      InternalURL(url) == nil
+    guard let url = request.url, requestInfo.isMainFrame, InternalURL(url) == nil
     else { return .allow }
+
+    // A scheme this does not understand is stopped, not waved through. It
+    // read the other way round: anything that was not http, https, data, blob
+    // or file skipped the gate entirely and loaded, which is the opposite of
+    // what Scout decides for those elsewhere — `decideImmediately` blocks a
+    // scheme no rule names. A preview or a Quick View is the last place to be
+    // the lenient one, since neither can show a block page to say what
+    // happened. Quick View hands it to a real tab, which handles it the way
+    // the browser normally does.
+    guard ["http", "https", "data", "blob", "file"].contains(url.scheme) else {
+      onStopped?(request, tab.isPrivate)
+      return .cancel
+    }
 
     if Self.admits(url, isPrivate: tab.isPrivate) {
       return .allow
