@@ -35,6 +35,7 @@ public enum AddressRisk {
   /// signal codes, so a phone-side reason reads the same as the server's.
   public enum Reason: String, Equatable, Sendable, CaseIterable {
     case brandInSubdomain = "brand-in-subdomain"
+    case brandLabelInSubdomain = "brand-label-in-subdomain"
     case credentialsInURL = "credentials-in-url"
     case punycodeHost = "punycode-host"
     case ipAddressHost = "ip-address-host"
@@ -47,6 +48,7 @@ public enum AddressRisk {
     public var weight: Int {
       switch self {
       case .brandInSubdomain: return 60
+      case .brandLabelInSubdomain: return 15
       case .credentialsInURL: return 50
       case .punycodeHost: return 30
       case .ipAddressHost: return 25
@@ -125,8 +127,8 @@ public enum AddressRisk {
     if url.scheme?.lowercased() != "https" {
       reasons.append(.noHTTPS)
     }
-    if hasBrandInSubdomain(host) {
-      reasons.append(.brandInSubdomain)
+    if let brand = brandSignal(host) {
+      reasons.append(brand)
     }
 
     return score(reasons)
@@ -148,53 +150,51 @@ public enum AddressRisk {
     return Assessment(level: level, reasons: reasons, score: score)
   }
 
-  /// Whether a protected brand's name is sitting in a subdomain of somewhere
-  /// that is not the brand — `apple.com.login.evil.ru`, the shape a phishing
-  /// link has worn for twenty years, because the part of a long host a phone
-  /// actually shows is the beginning of it.
+  /// What a protected brand's name in somebody else's subdomain amounts to,
+  /// or nil when there is none. Mirrors `detectBrandAbuse` in `typosquat.ts`,
+  /// which raises the same two signals for the same two shapes.
   ///
-  /// The trap here is the brand's own country sites. `www.google.com.co` and
-  /// `www.apple.com.pe` are the brand, but only a complete public suffix list
-  /// knows that `com.co` and `com.pe` are suffixes — and the list this package
-  /// falls back on when the browser has not supplied one does not. Read with a
-  /// short list, those hosts come out as a subdomain "google" of a site
-  /// "com.co", which is precisely the false positive this signal must not
-  /// make: it is the heaviest of them, enough to block a page on its own.
+  /// They are not the same claim, and reading them as one was a bug on both
+  /// sides. The brand's *whole* registrable domain buried in a subdomain —
+  /// `apple.com` inside `apple.com.login.evil.ru` — is a decoy and nothing
+  /// else: no service hands a tenant a name with a dot-com in it, and the part
+  /// of a long host a phone shows is the beginning of it. That is
+  /// `.brandInSubdomain`, and it is heavy enough to stop a page on its own.
   ///
-  /// So a brand's own country site is recognised from the labels themselves,
-  /// the way `SafeSearch.googleSite` recognises Google's: the brand's name
-  /// followed by one label, or by `com`/`co` and a two-letter country. Every
-  /// one of them has that shape, and a decoy subdomain never does — there is
-  /// always something else after the brand's name.
-  static func hasBrandInSubdomain(_ host: String) -> Bool {
+  /// The brand as a plain *label* is what every multi-tenant service looks
+  /// like. `apple.stackexchange.com`, `apple.slack.com`, `amazon.workday.com`
+  /// and `paypal.myshopify.com` all wear it, and scored as the decoy they were
+  /// hard-blocked. It is still half of the classic shape, so it is kept as
+  /// `.brandLabelInSubdomain` — at a weight that has to find company before it
+  /// means anything.
+  ///
+  /// A brand's own country site needs no special case any more. Only a
+  /// complete public suffix list knows that `com.co` and `com.pe` are
+  /// suffixes, so read with the short list this package falls back on,
+  /// `www.google.com.co` comes out as a subdomain "google" of a site "com.co"
+  /// — a bare label, which is now 15 points and no verdict. The dot-com shape
+  /// a country site can never have is the only one that still blocks.
+  static func brandSignal(_ host: String) -> Reason? {
     let labels = host.split(separator: ".").map(String.init).filter { !$0.isEmpty }
-    guard labels.count > 1 else { return false }
+    guard labels.count > 1 else { return nil }
     let site = eTLDPlusOne(host)
     let siteLabelCount = site.split(separator: ".").count
-    guard labels.count > siteLabelCount else { return false }
-    let subdomainLabels = Set(labels.dropLast(siteLabelCount))
+    guard labels.count > siteLabelCount else { return nil }
+    let subdomainLabels = Array(labels.dropLast(siteLabelCount))
 
-    for brand in protectedBrands {
+    for brand in protectedBrands where site != brand {
+      let brandLabels = brand.split(separator: ".").map(String.init)
+      let buried = subdomainLabels.indices.contains { at in
+        brandLabels.enumerated().allSatisfy { offset, label in
+          at + offset < subdomainLabels.count && subdomainLabels[at + offset] == label
+        }
+      }
+      if buried { return .brandInSubdomain }
+    }
+    for brand in protectedBrands where site != brand {
       let name = brand.split(separator: ".").first.map(String.init) ?? brand
-      guard subdomainLabels.contains(name), site != brand else { continue }
-      if isBrandCountrySite(labels: labels, name: name) { continue }
-      return true
+      if subdomainLabels.contains(name) { return .brandLabelInSubdomain }
     }
-    return false
-  }
-
-  /// Whether `labels` is the brand's own site under some country's suffix.
-  private static func isBrandCountrySite(labels: [String], name: String) -> Bool {
-    guard let index = labels.lastIndex(of: name) else { return false }
-    let suffix = Array(labels[(index + 1)...])
-    switch suffix.count {
-    case 1:
-      return true
-    case 2:
-      return ["com", "co"].contains(suffix[0]) && suffix[1].count == 2
-        && suffix[1].allSatisfy(\.isLetter)
-    default:
-      return false
-    }
+    return nil
   }
 }
