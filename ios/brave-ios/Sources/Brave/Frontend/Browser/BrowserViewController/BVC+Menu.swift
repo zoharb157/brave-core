@@ -175,15 +175,29 @@ extension BrowserViewController {
         )
       )
     }
-    // Sets up empty actions for any page actions that weren't setup as UIActivity's excluding any
-    // that should be hidden due to admin policies
-    var pageActivitiesRemovedByAdminPolicies: Set<Action.Identifier> = []
+    // Sets up empty actions for any page actions that weren't setup as UIActivity's, excluding
+    // any that are not on offer at all.
+    //
+    // Anything left in `allPageActivites` that `ShareActivity` did not supply is rendered here as
+    // a permanently disabled row. That is right for an action the current page cannot do — Print
+    // on a blank tab — and wrong for a feature the build does not have, which can never become
+    // enabled. Switching one off in `ScoutFeatures` therefore left its menu item behind, greyed
+    // out, on every page, for good.
+    var pageActivitiesNotOffered: Set<Action.Identifier> = []
     if !profileController.profile.prefs.isBraveNewsAvailable {
-      pageActivitiesRemovedByAdminPolicies.insert(.addSourceNews)
+      pageActivitiesNotOffered.insert(.addSourceNews)
+    }
+    if !ScoutFeatures.webcompatReporter {
+      // Filed with Brave's webcompat service, so Scout does not offer it.
+      pageActivitiesNotOffered.insert(.reportBrokenSite)
+    }
+    if !ScoutFeatures.sync {
+      // "Send To Your Devices" needs Brave Sync, which Scout does not run.
+      pageActivitiesNotOffered.insert(.sendURL)
     }
     let remainingPageActivities: [Action] = Action.ID.allPageActivites
       .subtracting(pageActivities.map(\.id))
-      .subtracting(pageActivitiesRemovedByAdminPolicies)
+      .subtracting(pageActivitiesNotOffered)
       .map { .init(id: $0, attributes: .disabled) }
     actions.append(contentsOf: pageActivities)
     actions.append(contentsOf: remainingPageActivities)
