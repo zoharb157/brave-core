@@ -104,7 +104,15 @@ public enum AddressRisk {
     var reasons: [Reason] = []
     let labels = host.split(separator: ".").map(String.init).filter { !$0.isEmpty }
 
-    if isAddressLiteral(host) {
+    // A bare address on this phone's own network is not the signal. It is a
+    // router's settings page, a printer, a NAS, or the sign-in page a café's
+    // captive portal redirects to — and that last one is the worst case there
+    // is: behind a portal nothing can reach the service, so every check fails,
+    // and the one page the user must open to get online is the one page that
+    // is questioned. Those addresses are never reachable from outside the
+    // network either, so they cannot be somebody else's phishing host.
+    let privateLiteral = isAddressLiteral(host) && isPrivateAddressLiteral(host)
+    if isAddressLiteral(host), !privateLiteral {
       reasons.append(.ipAddressHost)
     }
     if labels.contains(where: { $0.hasPrefix("xn--") }) {
@@ -124,7 +132,10 @@ public enum AddressRisk {
     if let tld = labels.last, suspiciousTLDs.contains(tld) {
       reasons.append(.suspiciousTLD)
     }
-    if url.scheme?.lowercased() != "https" {
+    // Nor is plain http, on one of those. A router does not have a
+    // certificate, a portal answers before any name resolves, and http is the
+    // only way either of them is ever reached.
+    if url.scheme?.lowercased() != "https", !privateLiteral {
       reasons.append(.noHTTPS)
     }
     if let brand = brandSignal(host) {
@@ -148,6 +159,39 @@ public enum AddressRisk {
       level = .ordinary
     }
     return Assessment(level: level, reasons: reasons, score: score)
+  }
+
+  /// Whether `host` is an address literal that can only mean this phone or the
+  /// network it is on: loopback, the RFC 1918 private ranges, the carrier-grade
+  /// NAT range a portal often sits in, link-local, and their IPv6 equivalents.
+  ///
+  /// Read off the text, like everything else here — there is no lookup and no
+  /// interface to ask. A range that cannot be routed across the internet can
+  /// only have been reached from inside, which is what makes it uninteresting
+  /// rather than merely common.
+  static func isPrivateAddressLiteral(_ host: String) -> Bool {
+    let bare = host.hasPrefix("[") && host.hasSuffix("]") ? String(host.dropFirst().dropLast()) : host
+    if bare.contains(":") {
+      // An IPv6 literal, possibly with a zone id. `::1` is this phone; `fc00::/7`
+      // is a unique local address and `fe80::/10` a link-local one.
+      let address = bare.split(separator: "%").first.map(String.init) ?? bare
+      if address == "::1" || address == "::" { return true }
+      let prefix = address.prefix(4).lowercased()
+      if prefix.hasPrefix("fc") || prefix.hasPrefix("fd") { return true }
+      return ["fe80", "fe90", "fea0", "feb0"].contains(String(prefix))
+    }
+    let parts = bare.split(separator: ".", omittingEmptySubsequences: false).map(String.init)
+    guard parts.count == 4, let first = Int(parts[0]), let second = Int(parts[1]) else {
+      return false
+    }
+    switch first {
+    case 0, 10, 127: return true
+    case 100: return (64...127).contains(second)
+    case 169: return second == 254
+    case 172: return (16...31).contains(second)
+    case 192: return second == 168
+    default: return false
+    }
   }
 
   /// What a protected brand's name in somebody else's subdomain amounts to,
