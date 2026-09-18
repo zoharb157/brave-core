@@ -12,6 +12,7 @@ import BraveVPN
 import BraveWallet
 import Combine
 import Data
+import DesignSystem
 import DataImporter
 import Growth
 import LocalAuthentication
@@ -165,7 +166,16 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
 
     view.backgroundColor = .systemGroupedBackground
-    view.tintColor = UIColor(braveSystemName: .textInteractive)
+    // Scout's accent, not Nala's `textInteractive`. This one line is the tint
+    // the whole screen inherits — every blue link on it — so Settings arrived
+    // in the old brand's blurple while the Protection row it sits above was
+    // violet. The switches do not follow this; they are set where they are
+    // built, in `SwitchAccessoryView`.
+    //
+    // Set here rather than on the eighty-odd call sites that read the token
+    // directly: this is the surface a person actually opens, and it is one
+    // place that can be looked at afterwards to see whether it worked.
+    view.tintColor = .scoutAccent
     navigationController?.view.backgroundColor = .systemGroupedBackground
 
     setUpSections()

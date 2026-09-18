@@ -2,6 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import DesignSystem
 import Foundation
 import Preferences
 import Static
@@ -16,7 +17,9 @@ public class SwitchAccessoryView: UISwitch {
     self.valueChange = valueChange
     super.init(frame: .zero)
     isOn = initialValue
-    onTintColor = UIColor(braveSystemName: .primitivePrimary40)
+    // Scout's accent. `primitivePrimary40` is Brave's blurple, and this one
+    // line is every switch on every settings screen in the app.
+    onTintColor = .scoutAccent
     addTarget(self, action: #selector(valueChanged), for: .valueChanged)
   }
 

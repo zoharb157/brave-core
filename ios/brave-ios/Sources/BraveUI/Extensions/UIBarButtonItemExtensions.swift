@@ -3,6 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import DesignSystem
 import UIKit
 
 extension UIBarButtonItem {
@@ -16,8 +17,9 @@ extension UIBarButtonItem {
     )
     if #available(iOS 26.0, *) {
       // Liquid Glass will turn this bar button into a prominent glass button by default, so we
-      // want to use an explicit tint color
-      item.tintColor = UIColor(braveSystemName: .primitivePrimary40)
+      // want to use an explicit tint color. Scout's accent — `primitivePrimary40` is Brave's
+      // blurple, and on iOS 26 this is the filled circle in the corner of every sheet.
+      item.tintColor = .scoutAccent
     }
     return item
   }
@@ -26,8 +28,9 @@ extension UIBarButtonItem {
     let item = UIBarButtonItem(barButtonSystemItem: .done, target: target, action: action)
     if #available(iOS 26.0, *) {
       // Liquid Glass will turn this bar button into a prominent glass button by default, so we
-      // want to use an explicit tint color
-      item.tintColor = UIColor(braveSystemName: .primitivePrimary40)
+      // want to use an explicit tint color. Scout's accent — `primitivePrimary40` is Brave's
+      // blurple, and on iOS 26 this is the filled circle in the corner of every sheet.
+      item.tintColor = .scoutAccent
     }
     return item
   }
