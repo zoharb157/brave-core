@@ -35,8 +35,19 @@ public enum ScoutInterstitial {
   /// summary, reasons, and button labels to show for the given decision
   /// type/verdict/reason. Pure content — no HTML or escaping.
   ///
-  /// There is no parent and no PIN in this product: a blocked page always
-  /// offers "continue anyway", because it is the user's own browser.
+  /// Scout is the user's own browser by default, so a blocked page offers
+  /// "continue anyway" — but no longer always, and the exceptions are decided
+  /// elsewhere:
+  ///
+  /// - This function withholds the offer entirely for an unfilterable search
+  ///   and a certificate that does not check out, where going on is the whole
+  ///   of what the warning was about.
+  /// - On a supervised phone the browser asks for the PIN before continuing
+  ///   past a page found to be an attack (`SupervisedAction`), which this
+  ///   function cannot see and does not decide.
+  ///
+  /// This comment used to say there was no parent and no PIN in the product
+  /// at all. Supervision arrived after it was written.
   public static func model(type: DecisionType, verdict: Verdict?, reason: DecisionReason,
                             matchedCategories: Set<ContentCategory> = []) -> ScoutInterstitialModel {
     let chipText: String

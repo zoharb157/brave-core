@@ -265,12 +265,22 @@ extension Strings {
       value: "Choose a 4-digit PIN",
       comment: "Prompt to set the supervision PIN"
     )
+    /// The key changed under this sentence. Continuing past a block used to
+    /// never need the PIN; it now does when the page was found to be an
+    /// attack, so the old wording — "Continuing past one block does not need
+    /// it" — promised something no longer true on the one screen whose job is
+    /// to say what the PIN protects.
+    ///
+    /// New key, not an edited value: the old one is translated into forty
+    /// languages and every one of those translations is now wrong. A fresh key
+    /// falls back to this English until they are redone, which is better than
+    /// confidently saying the wrong thing in thirty-nine languages.
     public static let supervisionPINDetail = NSLocalizedString(
-      "scoutProtection.supervisionPINDetail",
+      "scoutProtection.supervisionPINDetailV2",
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "Needed to allow a blocked site, turn a category off, or turn this back off. Continuing past one block does not need it.",
+        "Needed to allow a blocked site, turn a category off, turn this back off, or open a page that was found to be an attack. Continuing past an ordinary block does not need it.",
       comment: "Explanation of what the PIN is for"
     )
     public static let supervisionConfirmPIN = NSLocalizedString(
