@@ -63,7 +63,8 @@ struct OnboardingStepView: View {
             matchedGeometryInfo: .init(
               namespace: namespace ?? fallbackNamespace,
               isSource: !isSplashVisible
-            )
+            ),
+            showsTile: false
           )
         }
       }

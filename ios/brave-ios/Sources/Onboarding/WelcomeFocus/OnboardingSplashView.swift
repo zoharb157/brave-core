@@ -60,7 +60,8 @@ struct OnboardingSplashView: View {
         .overlay {
           BraveAppIcon(
             size: logoSize,
-            matchedGeometryInfo: .init(namespace: namespace ?? fallbackNamespace)
+            matchedGeometryInfo: .init(namespace: namespace ?? fallbackNamespace),
+            showsTile: false
           )
           .padding(.bottom, logoSize / 1.4)
         }
