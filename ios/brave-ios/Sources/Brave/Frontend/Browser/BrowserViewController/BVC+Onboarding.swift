@@ -49,6 +49,20 @@ extension BrowserViewController {
   }
 
   private func showPrivacyReportsOnboardingIfNeeded() {
+    // Not shown in Scout at all.
+    //
+    // This popover is Brave's promotion of Privacy Hub, and it points at the
+    // card on the new tab page — which in Scout is the Protection card, and
+    // already opens Scout's own Protection screen when tapped. So it arrived
+    // as an advertisement, in another product's words about trackers and ads,
+    // for a differently named screen, attached to a control that goes
+    // somewhere else. It also carried the app icon from before the rebrand.
+    //
+    // There is nothing here to translate into Scout's terms: the card it
+    // interrupts is the feature, and it is one tap away without being told.
+    return
+    // swift-format-ignore
+    #if false
     if Preferences.PrivacyReports.ntpOnboardingCompleted.value
       || privateBrowsingManager.isPrivateBrowsing
     {
@@ -106,6 +120,7 @@ extension BrowserViewController {
         }
       }
     )
+    #endif
   }
 
   func completeOnboarding(_ controller: UIViewController) {
