@@ -1,3 +1,10 @@
+/* Scout: the action colours and the warning mark on this page were Brave's.
+   The mark carried their brand gradient — orange through hot pink to
+   lavender — and was the most prominent thing on a page a Scout user is
+   shown. It is Scout's ochre now, the same colour the block pages use for
+   "something is uncertain here", and the buttons are Scout's violet.
+
+   Shared by HTTPBlocked.html and BlockedDomain.html, so both move together. */
 /*
  Copyright (c) 2023 The Brave Authors. All rights reserved.
  This Source Code Form is subject to the terms of the Mozilla Public
@@ -100,14 +107,14 @@ button {
 
 .main-action {
   color: white;
-  background: #3F39E8;
-  border: 1px solid #3F39E8;
+  background: #544096;
+  border: 1px solid #544096;
 }
 
 .secondary-action {
-  color: #3F39E8;
+  color: #544096;
   background: #545FF800;
-  border: 1px solid #545FF866;
+  border: 1px solid #54409666;
 }
 
 /** Center the content for iPads **/
@@ -162,6 +169,12 @@ button {
 }
 
 
+/* Links had no rule at all, so they fell back to the browser's default blue —
+   the one colour left on the page belonging to neither brand. */
+.description a {
+  color: #544096;
+}
+
 @media (prefers-color-scheme: dark) {
   .background {
     background-color: #0D0F14;
@@ -176,6 +189,10 @@ button {
   }
 
   .secondary-action {
-    color: #7C91FF;
+    color: #9F8BE6;
+  }
+
+  .description a {
+    color: #9F8BE6;
   }
 }
