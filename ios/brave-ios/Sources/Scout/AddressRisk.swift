@@ -16,7 +16,8 @@ import Foundation
 /// no network, no registry and no page fetch. The codes, the weights and the
 /// two thresholds are copied from `signal-weights.ts` rather than reinvented,
 /// because the phone and the server describing the same address differently is
-/// a bug a parent would have to referee.
+/// a bug a parent would have to referee. One weight is knowingly not the
+/// server's — `punycodeHost`, and the case for it is made where it is set.
 ///
 /// It is not a second opinion. `NavigationGuard` asks it only where the real
 /// check produced no answer; where the service answered, the service scored
@@ -50,7 +51,23 @@ public enum AddressRisk {
       case .brandInSubdomain: return 60
       case .brandLabelInSubdomain: return 15
       case .credentialsInURL: return 50
-      case .punycodeHost: return 30
+      // The one weight that is deliberately not the server's, which is 30.
+      //
+      // Foundation hands this code the punycode form of every host, so a name
+      // written in its own script — 中国.中国, münchen.de, 例え.jp — arrives
+      // looking exactly like the lookalike trick the signal is for, and
+      // nothing in the text tells them apart. At 30 it landed precisely on the
+      // doubtful line, which meant that for anyone who browses in a non-Latin
+      // script, every address warned whenever a check could not finish.
+      //
+      // Telling a homograph from an ordinary name needs the decoded host and
+      // its scripts, which this pass has no way to get. So it is weighted as
+      // what it honestly is: one weak hint the size of the other shape hints.
+      // Alone it decides nothing; beside a suspicious suffix, a brand's label
+      // or a subdomain chain it still reaches doubt. The server keeps its 30,
+      // because the server also knows the page, the registration date and the
+      // reputation of the host, and never has to rule on the address alone.
+      case .punycodeHost: return 15
       case .ipAddressHost: return 25
       case .excessiveSubdomains: return 15
       case .suspiciousTLD: return 15
