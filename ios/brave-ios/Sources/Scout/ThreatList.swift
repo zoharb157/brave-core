@@ -30,6 +30,7 @@ public final class ThreatList: ThreatListProviding {
   public var count: Int { hosts.count }
 
   private let hosts: Set<String>
+  private let perPageHosts: Set<String>
   private let builtAt: Date
   private let now: () -> Date
   private let maxAge: TimeInterval
@@ -58,9 +59,16 @@ public final class ThreatList: ThreatListProviding {
   ///   compromised, cleaned up and delisted would otherwise stay blocked for
   ///   as long as the phone kept the file, with nothing on the page to explain
   ///   why and nothing the user could do about it.
+  /// - Parameter perPageHosts: the sites where one host name covers thousands
+  ///   of unrelated people's pages, as `VerdictCache` and `WarmList` are given
+  ///   them. The browser owns that list; nothing is hard-coded here.
   public init(hosts: Set<String>, builtAt: Date, now: @escaping () -> Date,
-              maxAge: TimeInterval) {
-    self.hosts = hosts
+              maxAge: TimeInterval, perPageHosts: Set<String> = []) {
+    // Refused here as well as at parse time, because a set can also be built
+    // by hand. A bare shared-hosting domain in this list blocks every tenant
+    // of it, and no report about one tenant justifies that.
+    self.hosts = hosts.subtracting(perPageHosts)
+    self.perPageHosts = perPageHosts
     self.builtAt = builtAt
     self.now = now
     self.maxAge = maxAge
@@ -81,6 +89,15 @@ public final class ThreatList: ThreatListProviding {
   /// only, so `notbad-example.com` is not a child of `bad-example.com`: it is
   /// a different registration that merely reads like one, which is exactly the
   /// trick these sites are built on.
+  ///
+  /// It stops at a `perPageHosts` site too, and for the same reason one label
+  /// higher. `weebly.com`, `pages.dev` and `vercel.app` are one registration
+  /// shared by everybody who signed up for one, so the registrable domain is
+  /// not a boundary there — it is the landlord. The lists carry over four
+  /// thousand `weebly.com` subdomains today, each named for the page it was
+  /// reported for; a single bare `weebly.com` line appearing upstream one
+  /// morning would otherwise take every tenant down with it, on every phone
+  /// that downloaded the file, with nothing on the page to explain it.
   public func listsAsThreat(_ url: URL) -> Bool {
     let age = now().timeIntervalSince(builtAt)
     guard age > -Self.clockSlack, age < maxAge else { return false }
@@ -98,6 +115,9 @@ public final class ThreatList: ThreatListProviding {
       // A host that ran out of labels without ever reaching `site` means the
       // two disagree about what a site is. Stop rather than loop.
       if candidate.isEmpty { return false }
+      // Walking into a shared-hosting name would be asking about the landlord
+      // rather than the tenant, so the walk ends one step short of it.
+      if perPageHosts.contains(candidate) { return false }
     }
   }
 
@@ -197,7 +217,10 @@ public final class ThreatList: ThreatListProviding {
   /// correct outcome, but it has to come back as "there is no list here" so
   /// the store keeps looking rather than installing a list of no hosts and
   /// calling it current.
-  public convenience init?(data: Data, now: @escaping () -> Date, maxAge: TimeInterval) {
+  public convenience init?(
+    data: Data, now: @escaping () -> Date, maxAge: TimeInterval,
+    perPageHosts: Set<String> = []
+  ) {
     let text = String(decoding: data, as: UTF8.self)
     var lines = text.split(separator: "\n", omittingEmptySubsequences: true)
     guard let first = lines.first, first.hasPrefix(Self.header),
@@ -215,7 +238,8 @@ public final class ThreatList: ThreatListProviding {
       hosts.insert(host)
     }
     self.init(
-      hosts: hosts, builtAt: Date(timeIntervalSince1970: stamp), now: now, maxAge: maxAge)
+      hosts: hosts, builtAt: Date(timeIntervalSince1970: stamp), now: now, maxAge: maxAge,
+      perPageHosts: perPageHosts)
   }
 
   private static let header = "# scout-threat-list 1"

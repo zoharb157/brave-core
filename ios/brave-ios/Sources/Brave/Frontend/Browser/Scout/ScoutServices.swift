@@ -56,7 +56,7 @@ public final class ScoutServices {
   /// what a site is — they had already drifted once, the phone missing every
   /// shortener, so that `bit.ly/A` lent its verdict to `bit.ly/B` on device
   /// while the server kept them apart.
-  static let perPageHosts: Set<String> = [
+  nonisolated static let perPageHosts: Set<String> = [
     // Social and user-posted content
     "reddit.com", "x.com", "twitter.com", "tumblr.com", "facebook.com", "instagram.com",
     "tiktok.com", "snapchat.com", "vk.com", "pinterest.com", "quora.com", "discord.com",

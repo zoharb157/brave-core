@@ -141,7 +141,8 @@ public final class ScoutThreatListStore: ThreatListProviding {
 
   nonisolated private static func cached(_ name: String) -> ThreatList? {
     guard let url = fileURL(name), let data = try? Data(contentsOf: url) else { return nil }
-    return ThreatList(data: data, now: { Date() }, maxAge: maxAge)
+    return ThreatList(
+      data: data, now: { Date() }, maxAge: maxAge, perPageHosts: ScoutServices.perPageHosts)
   }
 
   nonisolated private static func loadFromDisk() -> [ThreatList] {
@@ -232,7 +233,12 @@ public final class ScoutThreatListStore: ThreatListProviding {
     // looking like it had worked.
     guard !hosts.isEmpty else { return nil }
 
-    let list = ThreatList(hosts: hosts, builtAt: Date(), now: { Date() }, maxAge: Self.maxAge)
+    // The shared-hosting names are handed in, not written down again here:
+    // a bare entry for one of them would block every tenant of it, and the
+    // browser's list of them is the one the cache and the warm list use.
+    let list = ThreatList(
+      hosts: hosts, builtAt: Date(), now: { Date() }, maxAge: Self.maxAge,
+      perPageHosts: ScoutServices.perPageHosts)
     if let url = Self.fileURL(source.name) {
       try? list.serialize().write(to: url, options: .atomic)
     }
