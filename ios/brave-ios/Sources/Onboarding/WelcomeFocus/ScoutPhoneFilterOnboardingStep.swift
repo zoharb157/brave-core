@@ -43,7 +43,7 @@ extension OnboardingStep where Self == ScoutPhoneFilterOnboardingStep {
 // MARK: - Graphic
 
 private let scoutViolet = Color.scoutAccent
-private let scoutMint = Color(red: 0x7E / 255, green: 0xC8 / 255, blue: 0xA8 / 255)
+private let scoutMint = Color.scoutMint
 
 /// What the filter does, drawn: other apps sit outside Scout, and the filter is
 /// the ring that goes around all of them.

@@ -13,9 +13,9 @@ import SwiftUI
 
 private enum ScoutArt {
   static let appName = "Scout"
-  static let violet = Color(red: 0x54 / 255, green: 0x40 / 255, blue: 0x96 / 255)
-  static let violetLight = Color(red: 0x85 / 255, green: 0x70 / 255, blue: 0xD2 / 255)
-  static let mint = Color(red: 0x7E / 255, green: 0xC8 / 255, blue: 0xA8 / 255)
+  static let violet = Color.scoutAccent
+  static let violetLight = Color.scoutAccentLight
+  static let mint = Color.scoutMint
   static let placeholder = Color(braveSystemName: .textSecondary).opacity(0.18)
   static let card = Color(braveSystemName: .containerBackground)
   static let ink = Color(braveSystemName: .textPrimary)

@@ -13,28 +13,24 @@ import Strings
 import SwiftUI
 import UIKit
 
-/// Scout's colours. The accent itself now lives in DesignSystem, which both
-/// this target and the onboarding module already import — it had been written
-/// out four times, and four copies of one brand colour is three chances for a
-/// screen to drift.
+/// Scout's colours all live in DesignSystem now, which every target that had
+/// a hand-written copy already imports. These are the local names the screens
+/// in this file already read by.
 let scoutViolet = Color.scoutAccent
-/// The lighter violet the app icon starts from, so the one card on this
-/// screen that is a solid block of colour is the same block of colour the
-/// icon is. It read as a flat swatch that happened to be purple.
-let scoutVioletLight = Color(red: 0x85 / 255, green: 0x70 / 255, blue: 0xD2 / 255)
-let scoutMint = Color(red: 0x7E / 255, green: 0xC8 / 255, blue: 0xA8 / 255)
+let scoutVioletLight = Color.scoutAccentLight
+let scoutMint = Color.scoutMint
 /// For the one thing on the violet status card that needs to read as unfinished
 /// rather than wrong. A design-system orange would be tuned for a page
 /// background, not for sitting on the accent itself.
-let scoutAmber = Color(red: 0xF5 / 255, green: 0xC2 / 255, blue: 0x6B / 255)
+let scoutAmber = Color.scoutAmber
 /// What a block looks like. The same rose the block page uses, so the page
 /// that stopped a site and the list that records it agree on sight; the brand
 /// violet cannot do this job because everything else on the screen is violet.
-let scoutRose = Color(red: 0xB3 / 255, green: 0x62 / 255, blue: 0x6B / 255)
+let scoutRose = Color.scoutRose
 /// The same rose lifted for dark, translucent surfaces — the new tab card
 /// floats on whatever wallpaper is behind it, and the settings rose is tuned
 /// to sit on a white list row.
-let scoutRoseOnDark = Color(red: 0xE0 / 255, green: 0x8F / 255, blue: 0x98 / 255)
+let scoutRoseOnDark = Color.scoutRoseOnDark
 
 /// Everything Scout does to keep sites out, on one screen.
 ///
@@ -360,9 +356,8 @@ struct ScoutProtectionView: View {
   @ViewBuilder private var recentSection: some View {
     Section {
       if recent.isEmpty {
-        Text(Strings.ScoutProtection.nothingBlocked)
-          .font(.subheadline)
-          .foregroundStyle(Color(braveSystemName: .textSecondary))
+        ScoutNothingBlocked()
+          .listRowBackground(Color.clear)
       } else {
         ForEach(recent.prefix(5)) { BlockRecordRow(record: $0) }
         if recent.count > 5 {
@@ -430,6 +425,36 @@ struct ScoutProtectionView: View {
 }
 
 // MARK: - One blocked navigation
+
+/// What this screen shows before anything has been stopped.
+///
+/// It was one line of grey text in a list row, which reads as something
+/// missing — a list that failed to load. Nothing blocked is the good outcome
+/// and the most likely state of a new install, so it is the first thing this
+/// screen says to most people, and it should look deliberate.
+///
+/// No new words: the line is the one that was already there and already
+/// translated into forty languages. What changed is that it is given room and
+/// a mark, rather than being set as a failed table row.
+struct ScoutNothingBlocked: View {
+  var body: some View {
+    VStack(spacing: 12) {
+      Image(systemName: "checkmark.shield.fill")
+        .font(.system(size: 28, weight: .medium))
+        .foregroundStyle(scoutMint)
+        .padding(18)
+        .background(scoutMint.opacity(0.15), in: .circle)
+      Text(Strings.ScoutProtection.nothingBlocked)
+        .font(.subheadline)
+        .foregroundStyle(Color(braveSystemName: .textSecondary))
+        .multilineTextAlignment(.center)
+        .fixedSize(horizontal: false, vertical: true)
+    }
+    .frame(maxWidth: .infinity)
+    .padding(.vertical, 24)
+    .accessibilityElement(children: .combine)
+  }
+}
 
 struct BlockRecordRow: View {
   let record: BlockRecord
@@ -505,9 +530,8 @@ struct ScoutBlockLogView: View {
     List {
       Section {
         if recent.isEmpty {
-          Text(Strings.ScoutProtection.nothingBlocked)
-            .font(.subheadline)
-            .foregroundStyle(Color(braveSystemName: .textSecondary))
+          ScoutNothingBlocked()
+            .listRowBackground(Color.clear)
         } else {
           ForEach(recent) { BlockRecordRow(record: $0) }
         }
@@ -533,6 +557,6 @@ struct ScoutBlockLogView: View {
 
 extension UIColor {
   /// Scout's brand colours for UIKit surfaces (the URL bar's status mark).
-  static let scoutViolet = UIColor(red: 0x54 / 255, green: 0x40 / 255, blue: 0x96 / 255, alpha: 1)
+  static let scoutViolet = UIColor.scoutAccent
   static let scoutMint = UIColor(red: 0x4E / 255, green: 0xA3 / 255, blue: 0x80 / 255, alpha: 1)
 }

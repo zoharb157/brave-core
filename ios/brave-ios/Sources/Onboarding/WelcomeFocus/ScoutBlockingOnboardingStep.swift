@@ -203,7 +203,7 @@ public enum ScoutBlockingChoices {
 }
 
 private let scoutViolet = Color.scoutAccent
-private let scoutMint = Color(red: 0x7E / 255, green: 0xC8 / 255, blue: 0xA8 / 255)
+private let scoutMint = Color.scoutMint
 /// Text that sits on `scoutMint` itself. Deep enough to clear 4.5:1 against it.
 private let scoutBadgeInk = Color(red: 0x0E / 255, green: 0x2E / 255, blue: 0x22 / 255)
 
