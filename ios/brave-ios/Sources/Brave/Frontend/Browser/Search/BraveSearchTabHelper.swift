@@ -274,7 +274,10 @@ class BraveSearchTabHelper: TabObserver, TabPolicyDecider, BraveSearchMakeDefaul
       navigationType: requestInfo.navigationType,
       isUserInitiated: requestInfo.isUserInitiated,
       tab: tab
-    ), ScoutDetachedTabGate.admits(requestURL, isPrivate: tab.isPrivate) {
+    ),
+      ScoutDetachedTabGate.admits(
+        requestURL, isPrivate: tab.isPrivate, engines: tab.scoutTabHelper?.searchEngines)
+    {
       presentInQuickView?(requestURL, tab)
       return .cancel
     }

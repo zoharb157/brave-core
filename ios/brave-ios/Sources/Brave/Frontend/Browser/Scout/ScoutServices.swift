@@ -449,8 +449,8 @@ public final class ScoutServices {
   ///
   /// The preview's own tab is guarded the same way, by `ScoutDetachedTabGate`,
   /// so a page that redirects somewhere Scout has not allowed stops there.
-  public func mayPreview(_ url: URL, isPrivate: Bool) -> Bool {
-    ScoutDetachedTabGate.admits(url, isPrivate: isPrivate)
+  public func mayPreview(_ url: URL, isPrivate: Bool, engines: SearchEngines?) -> Bool {
+    ScoutDetachedTabGate.admits(url, isPrivate: isPrivate, engines: engines)
   }
 
   /// Posted once a decision for a page has been recorded.

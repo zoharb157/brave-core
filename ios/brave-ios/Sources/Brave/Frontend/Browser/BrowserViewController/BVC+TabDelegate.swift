@@ -186,6 +186,7 @@ extension BrowserViewController: TabDelegate {
       return LinkPreviewViewController(
         url: url,
         for: tab,
+        searchEngines: profile.searchEngines,
         policyDecider: self,
         tabDelegate: self,
         downloadDelegate: self
@@ -194,7 +195,8 @@ extension BrowserViewController: TabDelegate {
 
     let linkPreviewProvider =
       Preferences.General.enableLinkPreview.value
-        && ScoutServices.shared.mayPreview(url, isPrivate: tab.isPrivate)
+        && ScoutServices.shared.mayPreview(
+          url, isPrivate: tab.isPrivate, engines: profile.searchEngines)
       ? linkPreview : nil
     return UIContextMenuConfiguration(
       identifier: nil,

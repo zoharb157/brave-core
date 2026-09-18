@@ -21,15 +21,17 @@ class LinkPreviewViewController: UIViewController {
   /// Scout's guard for the preview. The tab holds it weakly, so it is kept
   /// here. A preview has nowhere to show a checking or block page, so a load
   /// Scout has not already allowed simply does not happen.
-  private let scoutGate = ScoutDetachedTabGate()
+  private let scoutGate: ScoutDetachedTabGate
 
   init(
     url: URL,
     for tab: some TabState,
+    searchEngines: SearchEngines?,
     policyDecider: (any TabPolicyDecider)?,
     tabDelegate: any TabDelegate,
     downloadDelegate: (any TabDownloadDelegate)?
   ) {
+    self.scoutGate = ScoutDetachedTabGate(searchEngines: searchEngines)
     self.url = url
     self.parentTab = tab
     self.policyDecider = policyDecider

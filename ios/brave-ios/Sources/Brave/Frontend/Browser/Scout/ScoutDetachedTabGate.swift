@@ -35,8 +35,12 @@ final class ScoutDetachedTabGate: TabPolicyDecider {
   /// Called with each load this gate stopped, and whether it came from a
   /// private tab.
   private let onStopped: ((URLRequest, Bool) -> Void)?
+  /// For the engines someone added, which Scout cannot filter. Held the way
+  /// `ScoutTabHelper` holds it, and from the same profile.
+  private weak var searchEngines: SearchEngines?
 
-  init(onStopped: ((URLRequest, Bool) -> Void)? = nil) {
+  init(searchEngines: SearchEngines?, onStopped: ((URLRequest, Bool) -> Void)? = nil) {
+    self.searchEngines = searchEngines
     self.onStopped = onStopped
   }
 
@@ -61,7 +65,7 @@ final class ScoutDetachedTabGate: TabPolicyDecider {
       return .cancel
     }
 
-    if Self.admits(url, isPrivate: tab.isPrivate) {
+    if Self.admits(url, isPrivate: tab.isPrivate, engines: searchEngines) {
       return .allow
     }
     onStopped?(request, tab.isPrivate)
@@ -75,7 +79,7 @@ final class ScoutDetachedTabGate: TabPolicyDecider {
   /// Only a known allow will do. A page that needs its address changed first
   /// — a search pinned to its safe mode, YouTube's Restricted Mode — is also a
   /// no: a real tab makes that change on the way in, and nothing here can.
-  static func admits(_ url: URL, isPrivate: Bool) -> Bool {
+  static func admits(_ url: URL, isPrivate: Bool, engines: SearchEngines?) -> Bool {
     let services = ScoutServices.shared
     if isPrivate {
       services.notePrivateNavigation(to: url)
@@ -85,7 +89,12 @@ final class ScoutDetachedTabGate: TabPolicyDecider {
     {
       return false
     }
-    if ScoutSearchFilter.block(for: url, engines: nil) != nil {
+    // The engines the user added are named in `engines` and nowhere else, so
+    // asking without them says "nothing here to filter" about exactly the
+    // engines that cannot be filtered. An engine added before supervision
+    // began would then render its unfiltered results inside a preview or a
+    // Quick View, on a phone where the same results are blocked in a tab.
+    if ScoutSearchFilter.block(for: url, engines: engines) != nil {
       return false
     }
     guard let decision = services.guard_.decideImmediately(url) else {

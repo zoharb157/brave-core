@@ -166,6 +166,7 @@ extension BrowserViewController: TabManagerDelegate {
       let quickViewController = QuickViewController(
         url: url,
         profile: tab.profile,
+        searchEngines: profile.searchEngines,
         syncAPI: profileController.syncAPI,
         sendTabAPI: profileController.sendTabAPI,
         historyAPI: profileController.historyAPI,

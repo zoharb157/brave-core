@@ -21,6 +21,9 @@ class QuickViewController: UIViewController {
   private let url: URL
   private var currentTab: (any TabState)?
   private let profile: any Profile
+  /// The app's engine list, for the one Scout check that needs to know which
+  /// engines the user added.
+  private weak var searchEngines: SearchEngines?
   private let syncAPI: BraveSyncAPI
   private let sendTabAPI: BraveSendTabAPI
   private let historyAPI: BraveHistoryAPI
@@ -42,7 +45,8 @@ class QuickViewController: UIViewController {
   /// Scout's guard for this tab, kept here because the tab holds it weakly.
   /// Quick View cannot show Scout's checking or block pages, so a load Scout
   /// has not already allowed is handed to a real tab, which checks it.
-  private lazy var scoutGate = ScoutDetachedTabGate { [weak self] request, isPrivate in
+  private lazy var scoutGate = ScoutDetachedTabGate(searchEngines: searchEngines) {
+    [weak self] request, isPrivate in
     self?.handleUnsupportedRequest(request, isPrivate)
   }
   private let onOpenInNewTab: ((URLRequest, Bool) -> Void)?
@@ -67,6 +71,7 @@ class QuickViewController: UIViewController {
   init(
     url: URL,
     profile: any Profile,
+    searchEngines: SearchEngines?,
     syncAPI: BraveSyncAPI,
     sendTabAPI: BraveSendTabAPI,
     historyAPI: BraveHistoryAPI,
@@ -78,6 +83,7 @@ class QuickViewController: UIViewController {
   ) {
     self.url = url
     self.profile = profile
+    self.searchEngines = searchEngines
     self.syncAPI = syncAPI
     self.sendTabAPI = sendTabAPI
     self.historyAPI = historyAPI
@@ -765,6 +771,7 @@ extension QuickViewController: TabDelegate {
       return LinkPreviewViewController(
         url: url,
         for: tab,
+        searchEngines: searchEngines,
         policyDecider: currentTab?.detachedPrivacyHelper,
         tabDelegate: self,
         downloadDelegate: nil
@@ -773,7 +780,8 @@ extension QuickViewController: TabDelegate {
 
     let linkPreviewProvider =
       Preferences.General.enableLinkPreview.value
-        && ScoutServices.shared.mayPreview(url, isPrivate: tab.isPrivate)
+        && ScoutServices.shared.mayPreview(
+          url, isPrivate: tab.isPrivate, engines: searchEngines)
       ? linkPreview : nil
     return UIContextMenuConfiguration(
       identifier: nil,
