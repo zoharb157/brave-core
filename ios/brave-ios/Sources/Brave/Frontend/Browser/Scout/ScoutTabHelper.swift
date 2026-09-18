@@ -606,13 +606,21 @@ public class ScoutTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
   /// A request body handed over as a stream, as data. Capped, since it is
   /// held in memory: a form post is small, and one that is not is better
   /// failed than read without limit.
+  ///
+  /// Read until the stream says it has ended, which is `read` returning zero
+  /// — not until `hasBytesAvailable` goes false, which only says no bytes are
+  /// ready *yet*. WebKit hands over a bound pair whose producer is still
+  /// filling it, and such a stream commonly starts out not-ready: looping on
+  /// that read the body as empty and the upload this whole hand-over exists
+  /// to preserve went out with nothing in it, which is the failure it was
+  /// written to fix.
   private static func readAll(_ stream: InputStream) -> Data? {
     let limit = 32 * 1024 * 1024
     stream.open()
     defer { stream.close() }
     var data = Data()
     var buffer = [UInt8](repeating: 0, count: 64 * 1024)
-    while stream.hasBytesAvailable {
+    while true {
       let count = stream.read(&buffer, maxLength: buffer.count)
       if count < 0 { return nil }
       if count == 0 { break }
