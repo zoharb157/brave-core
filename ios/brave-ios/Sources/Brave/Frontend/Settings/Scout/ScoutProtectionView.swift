@@ -3,6 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import BraveShared
 import DesignSystem
 import Onboarding
 import Preferences
@@ -65,6 +66,8 @@ struct ScoutProtectionView: View {
   /// nil when it can. Read on appearance because the engine is changed on a
   /// different screen.
   @State private var unfilterableEngine: String?
+  /// Whether the phone-wide filter is actually the one in force.
+  @State private var phoneFilter: ScoutDNSFilter.State = .off
 
   var body: some View {
     List {
@@ -128,10 +131,18 @@ struct ScoutProtectionView: View {
         NavigationLink {
           ScoutDeviceFilterView()
         } label: {
+          // The phone-wide filter can be installed and still not be the one
+          // the phone is using — only one app at a time may set the DNS, so
+          // another browser's own profile takes it away silently. Said here,
+          // where a parent looks, rather than only on the screen behind this
+          // row.
           row(
             symbol: "iphone.gen3",
+            tint: phoneFilter == .needsApproval ? scoutAmber : scoutViolet,
             title: Strings.ScoutBlocking.phoneFilterTitle,
-            detail: Strings.ScoutBlocking.phoneFilterDetail
+            detail: phoneFilter == .needsApproval
+              ? Strings.ScoutBlocking.phoneFilterApprovalNeeded
+              : Strings.ScoutBlocking.phoneFilterDetail
           )
         }
       }
@@ -218,6 +229,10 @@ struct ScoutProtectionView: View {
     helper.performAccurateDefaultCheckNow()
     isDefaultBrowser = helper.status == .defaulted
     unfilterableEngine = unfilterableDefaultEngine()
+    Task {
+      await ScoutDNSFilter.shared.refresh()
+      phoneFilter = ScoutDNSFilter.shared.state
+    }
   }
 
   /// The default engine's name when the setting cannot deliver what it

@@ -13,6 +13,7 @@ import SwiftUI
 /// and doesn't cover.
 struct ScoutDeviceFilterView: View {
   @StateObject private var filter = ScoutDNSFilter.shared
+  @Environment(\.scenePhase) private var scenePhase
   @State private var isWorking = false
 
   private var isOn: Binding<Bool> {
@@ -57,6 +58,13 @@ struct ScoutDeviceFilterView: View {
     .navigationTitle(Strings.ScoutBlocking.phoneFilterTitle)
     .navigationBarTitleDisplayMode(.inline)
     .task { await filter.refresh() }
+    // Choosing Scout happens in Settings, so the answer changes while this
+    // screen is off-screen. Without this it kept saying "almost there" after
+    // the person had already done it.
+    .onChange(of: scenePhase) { _, phase in
+      guard phase == .active else { return }
+      Task { await filter.refresh() }
+    }
   }
 
   @ViewBuilder private var status: some View {
