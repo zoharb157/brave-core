@@ -1,23 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
-  <!-- Scout's mark: the shield the block pages show, with the globe cut out
-       of it — protection and a browser in one form rather than two objects.
+  <!-- Scout's mark: a round browser mark — an outer ring, a light separating
+       ring, and a strong centre disc with the globe cut out of it.
 
-       Solid rather than drawn in outline. An outlined shield holding an
-       outlined globe is two thin concentric lines, and at 29pt on a home
-       screen that is a smudge; a single cream mass is still legible there. -->
+       The structure a browser icon has worn since Chrome, in Scout's own
+       colours and with Scout's own centre. Not the tri-colour wheel: that
+       segmented ring with a contrasting centre is Google's, and an icon that
+       reads as a copy of it fails App Review's copycat rule whatever the
+       palette.
+
+       The centre is deliberately large against a thin ring. An earlier draft
+       split the diameter evenly and the concentric bands closed up at 29pt in
+       a Spotlight result, which is where an icon has to work hardest. -->
   <defs>
+    <linearGradient id="scout-ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9F8BE6"/><stop offset="1" stop-color="#54408F"/>
+    </linearGradient>
+    <linearGradient id="scout-core" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#6E58B8"/><stop offset="1" stop-color="#3C2D70"/>
+    </linearGradient>
     <mask id="scout-globe">
-      <rect x="0" y="0" width="48" height="48" fill="#fff"/>
-      <g fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round">
-        <circle cx="24" cy="21.6" r="9.2"/>
-        <line x1="14.8" y1="21.6" x2="33.2" y2="21.6"/>
-        <path d="M24 12.4 C 20.3 15.4, 20.3 27.8, 24 30.8"/>
-        <path d="M24 12.4 C 27.7 15.4, 27.7 27.8, 24 30.8"/>
+      <rect x="0" y="0" width="1024" height="1024" fill="#fff"/>
+      <g fill="none" stroke="#000" stroke-width="44" stroke-linecap="round">
+        <circle cx="512" cy="512" r="196"/>
+        <line x1="316" y1="512" x2="708" y2="512"/>
+        <path d="M512 316 C 434 382, 434 642, 512 708"/>
+        <path d="M512 316 C 590 382, 590 642, 512 708"/>
       </g>
     </mask>
   </defs>
-  <g transform="translate(128,128) scale(16.0)">
-    <path d="M24 4 L42 11 v13 c0 11-8 17-18 20 C14 41 6 35 6 24 V11 Z"
-          fill="#FFF6E8" mask="url(#scout-globe)"/>
-  </g>
+  <circle cx="512" cy="512" r="452" fill="url(#scout-ring)"/>
+  <circle cx="512" cy="512" r="368" fill="#FFF6E8"/>
+  <circle cx="512" cy="512" r="330" fill="url(#scout-core)" mask="url(#scout-globe)"/>
 </svg>

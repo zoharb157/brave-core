@@ -17,6 +17,10 @@ import UIKit
 /// the two live in separate targets and a shared design token for one brand
 /// colour isn't worth a new module.
 let scoutViolet = Color(red: 0x54 / 255, green: 0x40 / 255, blue: 0x96 / 255)
+/// The lighter violet the app icon starts from, so the one card on this
+/// screen that is a solid block of colour is the same block of colour the
+/// icon is. It read as a flat swatch that happened to be purple.
+let scoutVioletLight = Color(red: 0x85 / 255, green: 0x70 / 255, blue: 0xD2 / 255)
 let scoutMint = Color(red: 0x7E / 255, green: 0xC8 / 255, blue: 0xA8 / 255)
 /// For the one thing on the violet status card that needs to read as unfinished
 /// rather than wrong. A design-system orange would be tuned for a page
@@ -303,7 +307,22 @@ struct ScoutProtectionView: View {
     }
     .padding(18)
     .frame(maxWidth: .infinity, alignment: .leading)
-    .background(scoutViolet, in: .rect(cornerRadius: 18, style: .continuous))
+    .background {
+      // The icon's own gradient, at the icon's own angle. Three surfaces show
+      // Scout's colour — the home screen, the block page and this card — and
+      // this was the only one of them flat.
+      RoundedRectangle(cornerRadius: 18, style: .continuous)
+        .fill(
+          LinearGradient(
+            colors: [scoutVioletLight, scoutViolet],
+            startPoint: .topLeading, endPoint: .bottomTrailing))
+        // A hairline of the lighter violet, so the card keeps an edge against
+        // a dark grouped background instead of bleeding into it.
+        .overlay {
+          RoundedRectangle(cornerRadius: 18, style: .continuous)
+            .strokeBorder(.white.opacity(0.14), lineWidth: 1)
+        }
+    }
   }
 
   /// Stretches to the tallest column rather than a fixed 28pt, which at
@@ -321,8 +340,11 @@ struct ScoutProtectionView: View {
         .font(.title2.weight(.semibold).monospacedDigit())
         .foregroundStyle(.white)
       Text(label)
-        .font(.caption2)
-        .foregroundStyle(.white.opacity(0.75))
+        // caption2 is 11pt. These three labels are the only explanation the
+        // numbers above them get, and they were the smallest text on the
+        // screen.
+        .font(.caption)
+        .foregroundStyle(.white.opacity(0.8))
         .multilineTextAlignment(.center)
     }
     .frame(maxWidth: .infinity)

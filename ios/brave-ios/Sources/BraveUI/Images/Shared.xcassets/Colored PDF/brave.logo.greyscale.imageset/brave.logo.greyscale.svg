@@ -1,11 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
-  <g fill="none" stroke="#8A8598" stroke-width="58" stroke-linecap="round">
-    <circle cx="466" cy="466" r="225"/>
-    <line x1="241" y1="466" x2="691" y2="466"/>
-    <path d="M466 241 C 376 316, 376 616, 466 691"/>
-    <path d="M466 241 C 556 316, 556 616, 466 691"/>
-  </g>
-  <circle cx="753" cy="302" r="154" fill="#B8B4C2"/>
-  <path d="M677 300 L 733 358 L 831 238" fill="none" stroke="#4A4653"
-        stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- The same mark with the colour taken out, for the places that show it
+       inactive. -->
+  <defs>
+    <mask id="grey-globe">
+      <rect x="0" y="0" width="1024" height="1024" fill="#fff"/>
+      <g fill="none" stroke="#000" stroke-width="44" stroke-linecap="round">
+        <circle cx="512" cy="512" r="196"/>
+        <line x1="316" y1="512" x2="708" y2="512"/>
+        <path d="M512 316 C 434 382, 434 642, 512 708"/>
+        <path d="M512 316 C 590 382, 590 642, 512 708"/>
+      </g>
+    </mask>
+  </defs>
+  <circle cx="512" cy="512" r="452" fill="#A9A4B5"/>
+  <circle cx="512" cy="512" r="368" fill="#F2F0F5"/>
+  <circle cx="512" cy="512" r="330" fill="#8A8598" mask="url(#grey-globe)"/>
 </svg>
