@@ -169,13 +169,21 @@ struct StatsNTPWidget: View {
           }
           LabeledContent {
             Text(blocked.kFormattedNumber)
-              .foregroundStyle(Color(braveSystemName: .primitiveOrange70))
+              // Rose, not the design system's orange. These three figures are
+              // the same three the block page and the parent's page report,
+              // and those two already agree on what a block looks like; this
+              // card was still wearing the colours Brave's tracker counter
+              // used, so the first screen of the browser disagreed with every
+              // other place the same number appears.
+              .foregroundStyle(scoutRoseOnDark)
           } label: {
             Text(Strings.ScoutProtection.statusBlocked)
           }
           LabeledContent {
             Text(allowed.kFormattedNumber)
-              .foregroundStyle(Color(braveSystemName: .primitiveBlurple70))
+              // Amber is what Scout uses for protection bypassed rather than
+              // applied — "opened anyway". Blurple said nothing at all.
+              .foregroundStyle(scoutAmber)
           } label: {
             Text(Strings.ScoutProtection.statusAllowed)
           }

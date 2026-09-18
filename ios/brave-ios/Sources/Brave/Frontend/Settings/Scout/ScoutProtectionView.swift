@@ -30,6 +30,10 @@ let scoutAmber = Color(red: 0xF5 / 255, green: 0xC2 / 255, blue: 0x6B / 255)
 /// that stopped a site and the list that records it agree on sight; the brand
 /// violet cannot do this job because everything else on the screen is violet.
 let scoutRose = Color(red: 0xB3 / 255, green: 0x62 / 255, blue: 0x6B / 255)
+/// The same rose lifted for dark, translucent surfaces — the new tab card
+/// floats on whatever wallpaper is behind it, and the settings rose is tuned
+/// to sit on a white list row.
+let scoutRoseOnDark = Color(red: 0xE0 / 255, green: 0x8F / 255, blue: 0x98 / 255)
 
 /// Everything Scout does to keep sites out, on one screen.
 ///
