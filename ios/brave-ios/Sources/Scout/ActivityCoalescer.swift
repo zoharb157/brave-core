@@ -45,16 +45,25 @@ public struct ActivityCoalescer: Sendable {
     return true
   }
 
-  /// The address as a person would recognise it: no scheme, no trailing slash.
+  /// The address as a person would recognise it: no scheme, no `www.`, no
+  /// trailing slash.
   ///
   /// The scheme is dropped because an http→https upgrade is the same page, and
   /// the trailing slash because `example.com` and `example.com/` are too.
+  ///
+  /// `www.` goes for the same reason, and it was missing: typing a bare host
+  /// and being redirected to the canonical one is one attempt, and it logged
+  /// as two. Worse, the log shows the registrable domain, so both rows read
+  /// identically — a parent saw their child trying a blocked site twice when
+  /// they had tried it once. Only the leading label is dropped;
+  /// `wwwexample.com` is a different site.
   static func pageKey(_ url: URL) -> String {
     var text = url.absoluteString
     for scheme in ["https://", "http://"] where text.hasPrefix(scheme) {
       text.removeFirst(scheme.count)
       break
     }
+    if text.hasPrefix("www.") { text.removeFirst(4) }
     if text.hasSuffix("/") { text.removeLast() }
     return text.lowercased()
   }
