@@ -207,8 +207,8 @@ public enum ScoutInterstitial {
       .map { "<li>\(isRemoteSourced ? htmlEscaped($0) : $0)</li>" }
       .joined()
     let reasonsBlock = m.reasons.isEmpty ? "" : "<ul class=\"reasons\">\(reasonsHTML)</ul>"
-    let hostBlock = host.isEmpty ? "" : "<p class=\"host\">\(htmlEscaped(host))</p>"
-    let tone = m.isBlocking ? "block" : "warn"
+    let hostBlock = host.isEmpty ? "" : "<p class=\"host\">\(Self.hostLine(host))</p>"
+    let tone = Self.tone(type: type, reason: reason)
     // When nothing could be established, checking again is the action the
     // page was already telling people to take — it just had no button. It
     // leads, because going back or continuing unchecked are both worse
@@ -263,7 +263,7 @@ public enum ScoutInterstitial {
     <style>\(css)</style></head>
     <body class="tone-\(tone)">
       <main class="card">
-        <div class="glyph">\(m.isBlocking ? shieldGlyph : warnGlyph)</div>
+        <div class="glyph">\(Self.glyph(type: type, reason: reason))</div>
         <span class="chip">\(m.chipText)</span>
         <h1>\(title)</h1>
         <p class="lede">\(summary)</p>
@@ -319,12 +319,77 @@ public enum ScoutInterstitial {
     """
   }
 
-  private static let shieldGlyph = """
-  <svg viewBox="0 0 48 48"><path d="M24 4 L42 11 v13 c0 11-8 17-18 20 C14 41 6 35 6 24 V11 Z"/>  <path class="x" d="M17 17 L31 31 M31 17 L17 31"/></svg>
-  """
-  private static let warnGlyph = """
-  <svg viewBox="0 0 48 48"><path d="M24 5 L45 41 H3 Z"/>  <path class="x" d="M24 18 v11 M24 34 v.5"/></svg>
-  """
+  /// The page's temperature, from what actually happened rather than from
+  /// whether it stopped.
+  ///
+  /// It used to be "blocking or not", so three different events wore the same
+  /// alarm: a confirmed phishing page, a page nobody could reach to check,
+  /// and a page refused because the user had switched gambling off. Those are
+  /// not the same news, and a child who meets the settings block every day
+  /// learns that the red screen means nothing — which is the screen that has
+  /// to mean something on the day it is phishing.
+  ///
+  /// Rose is a finding that this page is dangerous. Ochre is uncertainty.
+  /// Violet is Scout's own colour, for "your settings refused this", where
+  /// nothing is wrong with the page at all.
+  private static func tone(type: DecisionType, reason: DecisionReason) -> String {
+    switch (type, reason) {
+    case (_, .security), (_, .knownThreat), (_, .insecureCertificate): return "block"
+    case (_, .unavailable), (_, .uncheckedAddress): return "warn"
+    case (.warn, _): return "warn"
+    default: return "rule"
+    }
+  }
+
+  /// The shield is Scout's mark and it does not change; what sits inside it
+  /// says which of four things happened.
+  ///
+  /// One silhouette, one grid, one stroke weight. Four unrelated pictures
+  /// would make four unrelated screens — this way the page is recognisably
+  /// the same object every time, and only the finding differs.
+  private static let shieldOutline =
+    "M24 4 L42 11 v13 c0 11-8 17-18 20 C14 41 6 35 6 24 V11 Z"
+
+  private static func glyph(type: DecisionType, reason: DecisionReason) -> String {
+    let inner: String
+    switch (type, reason) {
+    // Nothing was established — a question, not a verdict. This is the mark
+    // that was missing: a page nobody could check used to show the same cross
+    // as a page that was judged and refused, which are opposite facts.
+    case (_, .unavailable), (_, .uncheckedAddress):
+      inner = #"<path class="x" d="M20.2 20.5 a4 4 0 1 1 3.8 5 v1.8"/><circle class="dot" cx="24" cy="31.5" r="1.8"/>"#
+    // A warning is a finding that may still be opened past.
+    case (.warn, _):
+      inner = #"<path class="x" d="M24 16 v9.5"/><circle class="dot" cx="24" cy="31.5" r="1.8"/>"#
+    // Refused. Whether by a setting or by a finding that the page is an
+    // attack, the mark is the same: an earlier draft gave the attack its own
+    // clever glyph and it read as a letter. What tells the two apart is the
+    // chip, the title and the evidence under it, which say it in words.
+    default:
+      inner = #"<path class="x" d="M18.5 18.5 L29.5 29.5 M29.5 18.5 L18.5 29.5"/>"#
+    }
+    return #"<svg viewBox="0 0 48 48" aria-hidden="true"><path d="\#(shieldOutline)"/>\#(inner)</svg>"#
+  }
+
+  /// The address, with the registered domain told apart from everything in
+  /// front of it.
+  ///
+  /// This is the one fact on the page that decides the question, and it was
+  /// the quietest thing on it. A phishing address works by burying its real
+  /// domain behind a long, reassuring prefix — `freegiftcards-claim.example`
+  /// wants to be read as "freegiftcards". Setting the registered part in full
+  /// ink and the prefix in grey is how a person is supposed to read a URL,
+  /// and it is what the address bar of every serious browser does.
+  static func hostLine(_ host: String) -> String {
+    let lowered = host.lowercased()
+    let domain = eTLDPlusOne(lowered)
+    guard !domain.isEmpty, lowered != domain, lowered.hasSuffix(domain) else {
+      return #"<span class="host-domain">\#(htmlEscaped(host))</span>"#
+    }
+    let prefix = String(lowered.dropLast(domain.count))
+    return #"<span class="host-prefix">\#(htmlEscaped(prefix))</span>"#
+      + #"<span class="host-domain">\#(htmlEscaped(domain))</span>"#
+  }
 
   /// Escapes text that originates from the remote check response (title,
   /// summary, reasons) before it is interpolated into the interstitial's
@@ -402,79 +467,123 @@ public enum ScoutInterstitial {
   }
 
   private static let css = """
+  /* No webfont: this page has to render with no network at all — it is often
+     the reply to a navigation that was stopped before it began. Everything
+     here is the system stack, worked by weight and spacing rather than by
+     buying a typeface. */
   :root {
     --violet: #8570D2; --violet-deep: #544096; --ink: #1E1830;
     --ground: #F6F4FB; --card: #FFFFFF; --muted: #6B6382;
     --rose: #B3626B; --ochre: #B08A3E; --mint: #7EC8A8;
     --tone: var(--violet-deep);
+    --hairline: rgba(107,99,130,.18);
   }
   body.tone-block { --tone: var(--rose); }
   body.tone-warn  { --tone: var(--ochre); }
+  body.tone-rule  { --tone: var(--violet-deep); }
   body.tone-check { --tone: var(--violet-deep); }
   @media (prefers-color-scheme: dark) {
-    :root { --ground:#141020; --card:#1E1830; --ink:#EFEAF8; --muted:#A79DC0; }
+    :root {
+      --ground:#141020; --card:#1E1830; --ink:#EFEAF8; --muted:#A79DC0;
+      --hairline: rgba(167,157,192,.20);
+    }
   }
   * { box-sizing: border-box; }
   html, body { height: 100%; }
   body {
     margin: 0; display: flex; align-items: center; justify-content: center;
-    padding: 24px; background: var(--ground); color: var(--ink);
+    padding: 24px 16px; color: var(--ink);
+    /* The ground carries the state too, not only the glyph. A blocked page
+       and a warned one used to differ by one small icon; now the whole
+       surface is a different temperature the moment it appears. */
+    background:
+      radial-gradient(120% 70% at 50% 0%,
+        color-mix(in srgb, var(--tone) 12%, var(--ground)) 0%,
+        var(--ground) 62%);
     font: 16px/1.55 -apple-system, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   .card {
-    width: 100%; max-width: 30rem; background: var(--card);
-    border-radius: 26px; padding: 34px 26px 26px; text-align: center;
-    box-shadow: 0 1px 2px rgba(20,10,50,.05), 0 18px 48px -12px rgba(40,20,90,.18);
-    animation: rise .42s cubic-bezier(.2,.7,.3,1) both;
+    width: 100%; max-width: 27rem; background: var(--card);
+    border-radius: 24px; padding: 30px 22px 22px; text-align: center;
+    box-shadow: 0 1px 2px rgba(20,10,50,.05), 0 18px 48px -14px rgba(40,20,90,.20);
+    /* Entrance moves, it does not fade in from nothing. The card used to
+       start at opacity 0, so the first painted frame of a page whose whole
+       job is to stop someone was blank. */
+    animation: rise .34s cubic-bezier(.2,.7,.3,1) both;
   }
-  @keyframes rise { from { opacity:0; transform: translateY(10px) scale(.985);} }
+  @keyframes rise { from { transform: translateY(8px) scale(.99); } }
 
-  .glyph { width: 62px; height: 62px; margin: 0 auto 14px; }
+  .glyph { width: 60px; height: 60px; margin: 0 auto 14px; }
   .glyph svg { width: 100%; height: 100%; }
-  .glyph path { fill: color-mix(in srgb, var(--tone) 14%, transparent); stroke: var(--tone); stroke-width: 2.4; stroke-linejoin: round; }
-  .glyph .x { fill: none; stroke: var(--tone); stroke-width: 3.4; stroke-linecap: round; }
+  .glyph path { fill: color-mix(in srgb, var(--tone) 13%, transparent); stroke: var(--tone); stroke-width: 2.4; stroke-linejoin: round; }
+  .glyph .x { fill: none; stroke: var(--tone); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+  .glyph .dot { fill: var(--tone); stroke: none; }
 
   .chip {
     display: inline-block; padding: .3rem .8rem; border-radius: 999px;
-    font-size: .7rem; font-weight: 800; letter-spacing: .09em;
+    font-size: .68rem; font-weight: 800; letter-spacing: .1em;
     color: #fff; background: var(--tone);
   }
   h1 {
-    margin: .7rem 0 .35rem; font-size: 1.55rem; line-height: 1.2;
-    font-weight: 750; letter-spacing: -.02em; text-wrap: balance;
+    margin: .75rem 0 .4rem; font-size: 1.6rem; line-height: 1.16;
+    font-weight: 750; letter-spacing: -.022em; text-wrap: balance;
   }
-  .lede { margin: 0 auto; max-width: 26rem; color: var(--muted); }
+  /* Left-aligned from here down. Centred running text is harder to read at
+     every line, and this page is read by someone who has just been stopped
+     and wants to know why. The title stays centred under the mark; the
+     evidence reads like evidence. */
+  .lede {
+    margin: 0; color: var(--muted); text-align: left;
+    text-wrap: pretty; font-size: 1rem;
+  }
   .host {
-    margin: .9rem 0 0; font-size: .82rem; color: var(--muted);
+    margin: 1rem 0 0; padding: .6rem .7rem; text-align: left;
+    background: color-mix(in srgb, var(--tone) 7%, transparent);
+    border-radius: 10px;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    word-break: break-all; opacity: .85;
+    font-size: .95rem; line-height: 1.4; word-break: normal;
   }
+  /* The prefix may break wherever it likes — it is the part designed to be
+     long and to be skimmed past. The registered domain may not: breaking
+     `sn24x.example` across two lines undoes the one thing this treatment is
+     for. `break-word` still lets a domain that cannot fit on a line of its
+     own break rather than overflow the card. */
+  .host-prefix { color: var(--muted); overflow-wrap: anywhere; }
+  /* An inline-block that never breaks internally: it wraps to the next line
+     whole, or not at all. `keep-all` was not enough — a hyphen is its own
+     break opportunity, so `auth-check.example` split across two lines at the
+     dash, which is exactly the read this treatment exists to prevent. */
+  .host-domain {
+    color: var(--ink); font-weight: 600;
+    display: inline-block; white-space: nowrap; max-width: 100%;
+  }
+
   .reasons {
-    list-style: none; margin: 1.1rem 0 0; padding: 0;
-    display: flex; flex-direction: column; gap: .4rem; text-align: left;
+    list-style: none; margin: 1rem 0 0; padding: 0 0 0 .9rem;
+    display: flex; flex-direction: column; gap: .55rem; text-align: left;
+    border-left: 2px solid color-mix(in srgb, var(--tone) 45%, transparent);
   }
-  .reasons li {
-    font-size: .87rem; color: var(--ink); background: color-mix(in srgb, var(--tone) 9%, transparent);
-    border-radius: 12px; padding: .5rem .75rem .5rem 2rem; position: relative;
-  }
-  .reasons li::before {
-    content: ""; position: absolute; left: .78rem; top: 50%;
-    width: 6px; height: 6px; border-radius: 50%; background: var(--tone);
-    transform: translateY(-50%);
-  }
+  .reasons li { font-size: .9rem; line-height: 1.45; color: var(--ink); }
+
   .actions { display: flex; flex-direction: column; gap: .3rem; margin-top: 1.5rem; }
-  button { font: inherit; border: 0; cursor: pointer; border-radius: 15px; }
+  button { font: inherit; border: 0; cursor: pointer; border-radius: 14px; }
+  /* The safe way out keeps Scout's own colour rather than the state's. It is
+     the calm choice on the page and should not be dressed as the alarm. */
   .primary {
     background: var(--violet-deep); color: #fff; font-weight: 650;
-    padding: .92rem 1.2rem; transition: transform .12s ease, opacity .12s ease;
+    padding: .92rem 1.2rem; min-height: 44px;
+    transition: transform .12s ease, opacity .12s ease;
   }
   .primary:active { transform: scale(.985); opacity: .92; }
-  .quiet { background: transparent; color: var(--muted); padding: .72rem; font-size: .92rem; }
-  .lasting { margin-top: .9rem; padding-top: .9rem; border-top: 1px solid rgba(107,99,130,.22); }
+  .quiet {
+    background: transparent; color: var(--muted); padding: .72rem;
+    font-size: .92rem; min-height: 44px;
+  }
+  .lasting { margin-top: .9rem; padding-top: .9rem; border-top: 1px solid var(--hairline); }
   .lasting-btn {
     background: transparent; color: var(--muted); font-size: .86rem;
-    padding: .5rem .72rem; width: 100%;
+    padding: .5rem .72rem; width: 100%; min-height: 44px;
   }
   .lasting-btn.armed { color: var(--rose); font-weight: 600; }
   .lasting-note { margin: .15rem 0 0; font-size: .76rem; color: var(--muted); opacity: .85; }
@@ -482,7 +591,7 @@ public enum ScoutInterstitial {
   button:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; }
 
   /* ---- checking state ---- */
-  .scanner { width: 128px; height: 128px; margin: 4px auto 16px; }
+  .scanner { width: 124px; height: 124px; margin: 4px auto 16px; }
   .globe { width: 100%; height: 100%; overflow: visible; }
   .globe .mark circle, .globe .mark line, .globe .mark path {
     fill: none; stroke: var(--violet-deep); stroke-width: 3.2; stroke-linecap: round;
@@ -518,10 +627,14 @@ public enum ScoutInterstitial {
   .steps .s3 { animation-delay: 2.2s; }
   @keyframes lightUp { to { opacity: 1; } }
 
+  /* Movement is the part to drop, not the page. The sweep still turns —
+     slowly, and it is the only thing saying work is happening — and the
+     steps still light up, because a fade is not what makes someone ill. */
   @media (prefers-reduced-motion: reduce) {
-    .card, .steps li { animation: none; opacity: 1; }
-    .sweep, .ring-a, .ring-b { animation: none; }
-    .globe .ring { opacity: .22; }
+    .card { animation: none; }
+    .ring-a, .ring-b { animation: none; opacity: .22; }
+    .sweep { animation-duration: 6s; }
+    .primary { transition: none; }
   }
   """
 
