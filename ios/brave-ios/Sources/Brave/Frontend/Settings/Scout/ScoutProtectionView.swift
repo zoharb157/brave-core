@@ -68,6 +68,7 @@ struct ScoutProtectionView: View {
   @State private var unfilterableEngine: String?
   /// Whether the phone-wide filter is actually the one in force.
   @State private var phoneFilter: ScoutDNSFilter.State = .off
+  @Environment(\.scenePhase) private var scenePhase
 
   var body: some View {
     List {
@@ -181,6 +182,15 @@ struct ScoutProtectionView: View {
       }
     }
     .onAppear(perform: refresh)
+    // Approving the filter, and choosing Scout as the default browser, both
+    // happen in iOS Settings — so the answers change while this screen is
+    // still on screen behind them, and coming back does not count as
+    // appearing. Without this the row went on saying "almost there" after the
+    // parent had already done it, which reads as the thing being broken.
+    .onChange(of: scenePhase) { _, phase in
+      guard phase == .active else { return }
+      refresh()
+    }
     .sheet(isPresented: $askingPINForSearch) {
       ScoutPINSheet(mode: .confirm) { _ in safeSearch.value = false }
     }
