@@ -200,6 +200,15 @@ public final class ScoutServices {
       let domain = NSURL.domainAndRegistryExcludingPrivateRegistries(host: host)
       return domain.isEmpty ? nil : domain
     }
+    // The same list, counting the hosting services this time, so a rule the
+    // user wrote lands on the tenant rather than on everyone sharing the
+    // host. `alice.github.io` answers as itself here and as `github.io`
+    // above; which of the two is right depends on what is being asked, and
+    // `siteOwner` asks this one.
+    RegistrableDomain.ownerResolver = { host in
+      let owner = NSURL.domainAndRegistry(host: host)
+      return owner.isEmpty ? nil : owner
+    }
   }
 
   // MARK: - Keeping verdicts between launches

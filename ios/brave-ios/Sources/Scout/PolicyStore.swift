@@ -78,6 +78,45 @@ public enum RegistrableDomain {
       current = newValue
     }
   }
+
+  private static var owner: (@Sendable (String) -> String?)?
+
+  /// The same question asked of a list that counts the hosting services:
+  /// `alice.github.io` is answered as itself, not as `github.io`.
+  ///
+  /// Two boundaries, because two different things are being asked. A verdict
+  /// is keyed by `resolver`'s answer so the phone and the service agree on
+  /// what was checked. A rule the user wrote is about whoever controls the
+  /// pages — and on a free host that is a tenant, not the host. Answering the
+  /// second question with the first made every tenant of `github.io`,
+  /// `pages.dev` or `blogspot.com` one site.
+  ///
+  /// Falls back to `resolver` when unset, so nothing needs both.
+  public static var ownerResolver: (@Sendable (String) -> String?)? {
+    get {
+      lock.lock()
+      defer { lock.unlock() }
+      return owner
+    }
+    set {
+      lock.lock()
+      defer { lock.unlock() }
+      owner = newValue
+    }
+  }
+}
+
+/// Who controls the pages at `host` — the key a rule the user wrote is stored
+/// under. See `RegistrableDomain.ownerResolver`.
+public func siteOwner(_ host: String) -> String {
+  let lowered = host.lowercased()
+  if isAddressLiteral(lowered) { return lowered }
+  if let resolve = RegistrableDomain.ownerResolver,
+    let owner = resolve(lowered)?.lowercased(), !owner.isEmpty
+  {
+    return owner
+  }
+  return eTLDPlusOne(lowered)
 }
 
 /// The registrable domain: the name someone actually registered, plus its

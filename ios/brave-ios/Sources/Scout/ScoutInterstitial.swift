@@ -355,11 +355,16 @@ public enum ScoutInterstitial {
   /// What the permanent button will actually do, said before it is tapped.
   ///
   /// It used to name the host on screen whatever it did. But an allow is
-  /// written for the registrable domain, so "stop checking www.google.com"
-  /// also stopped checking docs.google.com and sites.google.com — the places
+  /// written for the site as a whole, so "stop checking www.google.com" also
+  /// stopped checking docs.google.com and sites.google.com — the places
   /// anyone can put a page. And on a site the user blocked, the same note sat
   /// under "Unblock", which puts the site back under normal checking rather
   /// than out of it.
+  ///
+  /// It has to name the same boundary the rule is written against, which is
+  /// `siteOwner` and not `eTLDPlusOne`: on a free host those differ, and the
+  /// wider of the two would promise to stop checking every tenant's pages
+  /// when the rule reaches only this one's.
   static func lastingNote(reason: DecisionReason, host: String) -> String {
     guard !host.isEmpty else {
       return reason == .policyList
@@ -369,7 +374,7 @@ public enum ScoutInterstitial {
     if reason == .policyList {
       return "Scout will check \(htmlEscaped(host)) again, like any other site."
     }
-    let site = eTLDPlusOne(host)
+    let site = siteOwner(host)
     if site == host.lowercased() {
       return "Scout will stop checking \(htmlEscaped(host))."
     }

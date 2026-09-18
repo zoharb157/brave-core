@@ -12,11 +12,15 @@ public enum SiteRule: String, Sendable { case allow, block }
 /// only lever is a whole category. A rule here is the user's answer, so it is
 /// consulted before anything else and never expires.
 ///
-/// Rules are keyed by registrable domain: allowing `example.com` allows its
-/// subdomains too, which is what someone picking "always allow" on a page
-/// means. `perPageHosts` sites (where one verdict can't speak for the whole
-/// domain) are deliberately no exception — a rule is an explicit human
-/// decision about a site, not an inference from one page.
+/// Rules are keyed by whoever controls the pages: allowing `example.com`
+/// allows its subdomains too, which is what someone picking "always allow" on
+/// a page means.
+///
+/// On a free host that owner is the tenant. `siteOwner` is asked rather than
+/// `eTLDPlusOne` because the latter answers `github.io` for every project page
+/// on it, and a rule is consulted before the threat list, the address check
+/// and the cache. Allowing one person's pages therefore allowed everyone's,
+/// ahead of the list naming the phishing kits these hosts are picked for.
 public final class SiteRules {
   /// Guards `rules`.
   ///
@@ -46,10 +50,17 @@ public final class SiteRules {
   }
 
   public func rule(forSite site: String) -> SiteRule? {
-    let key = eTLDPlusOne(site)
+    let key = siteOwner(site)
     lock.lock()
     defer { lock.unlock() }
-    return rules[key]
+    if let here = rules[key] { return here }
+    // A rule written by an older build is stored under the wider name. Only a
+    // block is honoured from there: that one is a protection the user asked
+    // for, and losing it because the key moved underneath is the failure this
+    // narrowing exists to prevent. An allow is not read back — an allow on the
+    // wider name is exactly the hole.
+    let wider = eTLDPlusOne(site)
+    return wider == key ? nil : rules[wider] == .block ? .block : nil
   }
 
   /// Sets (or with `nil`, clears) the rule for `url`'s site. Setting one
@@ -60,7 +71,7 @@ public final class SiteRules {
   }
 
   public func set(_ rule: SiteRule?, forSite site: String) {
-    let key = eTLDPlusOne(site)
+    let key = siteOwner(site)
     guard !key.isEmpty else { return }
     lock.lock()
     if rules[key] == rule {
