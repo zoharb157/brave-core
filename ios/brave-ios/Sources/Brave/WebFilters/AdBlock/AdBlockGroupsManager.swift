@@ -805,6 +805,15 @@ extension AdBlockEngineManager.FileInfo {
     // so one that can never have one kept every engine from compiling at all
     // — no element hiding, and a blocked count stuck at zero. They are left
     // out; the lists Scout subscribes to by URL stand in for them.
+    //
+    // This drops them whatever the user's settings say, so their rows in
+    // Settings would have been switches that did nothing; the Default filter
+    // lists section is hidden there for as long as this line stands. To undo
+    // both, one thing has to change: this app has to be able to fetch
+    // components — either granted its own key for the upstream update server,
+    // or pointed at a catalogue of our own that serves the same files. Once a
+    // component can actually arrive, delete this filter and unhide that
+    // section; nothing else here depends on it.
     var enabledSources = FilterListStorage.shared.enabledSources.filter {
       if case .filterList = $0 { return false }
       return true

@@ -136,11 +136,10 @@ struct OtherPrivacySettingsSectionView: View {
           )
         }
       )
-      ToggleView(
-        title: Strings.Shields.blockMobileAnnoyances,
-        subtitle: nil,
-        toggle: $settings.blockMobileAnnoyances
-      )
+      // Scout: "Block mobile annoyances" switches one component filter list
+      // on and off, and this app cannot fetch components — see
+      // `DefaultSourceProvider.enabledSources`, which drops them all and says
+      // what would have to change. The switch moved and nothing followed it.
       OptionToggleView(
         title: Strings.followUniversalLinks,
         subtitle: nil,

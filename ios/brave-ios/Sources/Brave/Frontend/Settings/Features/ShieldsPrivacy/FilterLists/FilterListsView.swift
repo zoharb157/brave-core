@@ -64,14 +64,12 @@ struct FilterListsView: View {
     }
   }
 
-  @ObservedObject private var filterListStorage = FilterListStorage.shared
   @ObservedObject private var customFilterListStorage = CustomFilterListStorage.shared
   @Environment(\.editMode) private var editMode
   @State private var showingAddSheet = false
   @State private var showingCustomFiltersSheet = false
   @State private var customRules: String?
   @State private var rulesError: Error?
-  @State private var filterListsUpdateStatus = FilterListUpdateStatus.unknown
   @State private var customFilterListsUpdateStatus = FilterListUpdateStatus.unknown
   @State private var customFilterListsUpdateError: Error? = nil
   @State private var searchText = ""
@@ -116,24 +114,12 @@ struct FilterListsView: View {
         }
       }
 
-      Section {
-        if searchText.isEmpty {
-          updateFilterListsButton(status: filterListsUpdateStatus, error: nil) {
-            filterListsUpdateStatus = .updating
-            Task {
-              await updateFilterLists()
-              filterListsUpdateStatus = .updated
-            }
-          }
-        }
-        defaultFilterListRows
-      } header: {
-        SectionHeaderView(
-          title: Strings.Shields.defaultFilterLists,
-          description: Strings.Shields.filterListsDescription
-        )
-      }
-      .tint(Color(braveSystemName: .primitivePrimary40))
+      // Scout: the default filter lists are components, and this app cannot
+      // fetch components — `DefaultSourceProvider.enabledSources` drops every
+      // one of them, so these switches would turn nothing on or off and the
+      // update button would have nothing to update. The comment there says
+      // what has to change before this section can come back. The lists Scout
+      // does use are in the section above, where they can be switched off.
     }
     .fullScreenCover(
       isPresented: $showingCustomFiltersSheet,
@@ -213,42 +199,6 @@ struct FilterListsView: View {
         customRules != nil
           ? Strings.Shields.editCustomFiltersLabel : Strings.Shields.customFiltersPlaceholder
       )
-    }
-  }
-
-  @ViewBuilder private var defaultFilterListRows: some View {
-    let searchText = searchText
-    #if DEBUG
-    let allEnabled = Binding {
-      filterListStorage.filterLists.allSatisfy({
-        $0.isEnabled || !$0.satisfies(searchText: searchText)
-      })
-    } set: { isEnabled in
-      filterListStorage.filterLists.enumerated().forEach { index, filterList in
-        guard filterList.satisfies(searchText: searchText) else { return }
-        let isEnabled = filterList.entry.hidden ? filterList.entry.defaultEnabled : isEnabled
-        filterListStorage.filterLists[index].isEnabled = isEnabled
-      }
-    }
-
-    Toggle(isOn: allEnabled) {
-      VStack(alignment: .leading) {
-        Text("All")
-      }
-    }
-    #endif
-
-    ForEach($filterListStorage.filterLists) { $filterList in
-      if !filterList.isHidden && filterList.satisfies(searchText: searchText) {
-        Toggle(isOn: $filterList.isEnabled) {
-          VStack(alignment: .leading) {
-            Text(filterList.entry.title)
-            Text(filterList.entry.desc)
-              .font(.caption)
-              .foregroundColor(.secondary)
-          }
-        }
-      }
     }
   }
 
@@ -373,11 +323,6 @@ struct FilterListsView: View {
     }
   }
 
-  private func updateFilterLists() async {
-    _ = await FilterListStorage.shared.updateFilterLists()
-    await AdblockResourceDownloader.shared.updateResources()
-    await AdBlockGroupsManager.shared.compileEngines()
-  }
 }
 
 #if DEBUG
@@ -390,14 +335,6 @@ struct FilterListsView_Previews: PreviewProvider {
   }
 }
 #endif
-
-extension FilterList {
-  fileprivate func satisfies(searchText: String) -> Bool {
-    guard !searchText.isEmpty else { return true }
-    return entry.title.localizedCaseInsensitiveContains(searchText)
-      || entry.desc.localizedCaseInsensitiveContains(searchText)
-  }
-}
 
 extension FilterListCustomURL {
   @MainActor fileprivate func satisfies(searchText: String) -> Bool {
