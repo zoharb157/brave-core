@@ -346,7 +346,7 @@ public final class ScoutActivityReporter {
     return rows.compactMap { row -> ActivityRecord? in
       guard let url = row["url"] as? String,
         let decision = (row["decision"] as? String).flatMap(Self.decision(fromWire:)),
-        let reason = (row["reason"] as? String).flatMap(DecisionReason.init(wire:)),
+        let reason = (row["reason"] as? String).map(DecisionReason.init(wire:)),
         let stamp = row["createdAt"] as? String
       else { return nil }
       let date = formatter.date(from: stamp) ?? plain.date(from: stamp)

@@ -103,7 +103,7 @@ public final class BlockLog {
   public func load(_ wire: [[String: Any]]) {
     records = wire.compactMap { item in
       guard let site = item["site"] as? String,
-        let reason = (item["reason"] as? String).flatMap(DecisionReason.init(wire:)),
+        let reason = (item["reason"] as? String).map(DecisionReason.init(wire:)),
         let seconds = item["date"] as? TimeInterval
       else { return nil }
       return BlockRecord(
@@ -132,10 +132,13 @@ extension DecisionReason {
     case .unfilteredSearch: return "unfiltered-search"
     case .knownThreat: return "known-threat"
     case .uncheckedAddress: return "unchecked-address"
+    case .unspecified: return "unspecified"
     }
   }
 
-  public init?(wire: String) {
+  /// Never fails: an unrecognised word reads as `.unspecified` rather than
+  /// taking the whole record down with it.
+  public init(wire: String) {
     switch wire {
     case "policy-list": self = .policyList
     case "scheme": self = .scheme
@@ -147,7 +150,7 @@ extension DecisionReason {
     case "unfiltered-search": self = .unfilteredSearch
     case "known-threat": self = .knownThreat
     case "unchecked-address": self = .uncheckedAddress
-    default: return nil
+    default: self = .unspecified
     }
   }
 }

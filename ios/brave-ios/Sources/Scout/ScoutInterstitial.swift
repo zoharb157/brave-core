@@ -139,6 +139,13 @@ public enum ScoutInterstitial {
         "Scout can't turn on safe search here, so its results could show explicit images. "
         + "Search with Google, Bing or DuckDuckGo instead."
       reasons = []
+    // Only ever read back off a stored record, never decided live — but the
+    // screen has to have words for it rather than none.
+    case .unspecified:
+      chipText = "BLOCKED"
+      title = "Blocked"
+      summary = "Scout stopped this page."
+      reasons = []
     }
 
     // Continuing past a block should be able to stick. Repeating the same
@@ -158,8 +165,9 @@ public enum ScoutInterstitial {
     // And nothing lasting on an address nobody could check. A standing
     // exception written now would be written on the strength of a check that
     // did not happen, and it would outlive the minute the network was down.
+    // Nothing standing on a block whose grounds this build cannot name.
     case .security, .scheme, .unavailable, .unfilteredSearch, .knownThreat,
-      .uncheckedAddress, .insecureCertificate:
+      .uncheckedAddress, .insecureCertificate, .unspecified:
       alwaysLabel = nil
     }
 

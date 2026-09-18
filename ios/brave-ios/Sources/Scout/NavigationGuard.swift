@@ -9,7 +9,7 @@ public enum DecisionType { case allow, warn, block }
 /// different ways: one means the check judged the page, the other means the
 /// check never got a say — and telling them apart is what makes an escape
 /// traceable.
-public enum DecisionReason: Equatable, Sendable {
+public enum DecisionReason: Equatable, Sendable, CaseIterable {
   case policyList, scheme, security, category, address, unavailable
   /// The site's certificate does not check out and the person went on past
   /// the warning anyway, on a supervised phone. Not a decision the guard
@@ -32,6 +32,15 @@ public enum DecisionReason: Equatable, Sendable {
   /// for anything because the address was only ever scored by the service.
   /// See `AddressRisk`.
   case uncheckedAddress
+  /// A reason this build does not have a name for.
+  ///
+  /// Never decided here — only read back. The activity log is written by the
+  /// browser and stored by the server, and the three of them are updated on
+  /// their own schedules: a row can name a reason older code has never heard
+  /// of. Parsing used to answer nil for those, and every reader dropped the
+  /// row, so a record went missing rather than losing its label. The address,
+  /// the decision and the time are the row; the reason is a note on it.
+  case unspecified
 }
 
 public struct Decision {

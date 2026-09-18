@@ -462,6 +462,10 @@ struct BlockRecordRow: View {
     case .insecureCertificate: return Strings.ScoutProtection.blockedReasonUnsafe
     // The setting that stopped it, by the name it has on this screen.
     case .unfilteredSearch: return Strings.ScoutProtection.safeSearchTitle
+    // A record written by a newer Scout than this one. The row still says
+    // which site and when; only the grounds are a word this build has no
+    // name for, so it reads as the most general thing that is still true.
+    case .unspecified: return Strings.ScoutProtection.blockedReasonUnsafe
     }
   }
 }
