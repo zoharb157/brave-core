@@ -81,8 +81,11 @@ public class MultilineButtonCell: ButtonCell {
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     textLabel?.numberOfLines = 0
-    textLabel?.textColor = UIColor(braveSystemName: .textInteractive)
-    imageView?.tintColor = UIColor(braveSystemName: .iconInteractive)
+    // The icon reads a different token from the text — `iconInteractive`, not
+    // `textInteractive` — which is why it stayed Brave's blue through a fix
+    // that turned everything around it violet.
+    textLabel?.textColor = .scoutAccent
+    imageView?.tintColor = .scoutAccent
     imageView?.preferredSymbolConfiguration = .init(scale: .large)
   }
 
@@ -95,7 +98,7 @@ public class CenteredButtonCell: ButtonCell, TableViewReusable {
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     textLabel?.textAlignment = .center
-    textLabel?.textColor = UIColor(braveSystemName: .textInteractive)
+    textLabel?.textColor = .scoutAccent
   }
 
   required init?(coder aDecoder: NSCoder) {
